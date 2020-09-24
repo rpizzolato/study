@@ -4,4 +4,8 @@
 >Alguns repositórios escrevi em inglês para treinar, me reporte se achar algum erro por favor,
 
 ## Conteúdo
-1. <a href="./es6/">JavaScript ES6</a><br>
+1. <a href="./android-basics-in-kotlin/">Android Basics in Kotlin</a><br>
+2. <a href="./android-programming-4th-edition/">Android Programming 4th Edition</a><br>
+3. <a href="./english-new-words/">English New Words</a><br>
+4. <a href="./es6/">JavaScript ES6</a><br>
+5. <a href="./skylab-rocketseat/">Skylab Rocketseat</a><br>

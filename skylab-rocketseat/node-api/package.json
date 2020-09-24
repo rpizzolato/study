@@ -1,0 +1,23 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "- it is a platform that uses the v8 engine of the Google Chrome, used to treat requests on a back-end server API Rest, like accessing data bases and etc;\r - it is strongly recommended to install NodeJS through package manager. In caso of you need to unistall or upgrade it in tests;\r - to test it, type:\r     ```js\r     node -v //it brings the node version\r     npm -v //it brings the npm version\r     ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.23",
+    "mongoose-paginate": "^5.0.3",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
