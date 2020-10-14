@@ -98,4 +98,31 @@ export default Routes;
 - faz parte do pacote _react-router-dom_, faz com o uso de âncoras/links sejam realizados sem o _reload_ da página completa. Comece importando:
 ```ts
 import { Link } from 'react-router-dom';
+
+<Link to="/app" className="enter-app">
+  <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
+</Link>
 ``` 
+
+### Mapas
+- existem algumas alternativas como o Google Maps, no entanto é um solução paga, embora haja plano gratuíto, é necessário o cadastro de um cartão de crédito;
+- uma alternativa gratuíta é o uso do [Leaflet](https://leafletjs.com/), que nada mais é que a inserção de mapas no JS. Para uso no React, há o [React Leaflet](https://react-leaflet.js.org/) para integração do mapa;
+- para instalar o Leaflet, execute: `npm install leaflet react-leaflet` ou `yarn add leaflet react-leaflet`. Utilizando TS, use `@types/react-leaflet -D`;
+- importe o `Map` do `react-leaflet`. Importe também o `TileLayer`, que seria a imagem do Mapa. Como _Tile_ padrão, irá ser utilizado o [OpenStreetMap](https://www.openstreetmap.org/#map=4/-15.13/-53.19) que é gratuíto:
+```ts
+import { Map, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
+<Map
+  center={[-22.7244976,-47.6352641]}
+  zoom={15}
+  style={{ width: '100%', height: '100%' }}
+  >
+  <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+</Map>
+```
+Na propriedade `center`, o valor esperado é um array, logo é colocado entre colchetes `[]`. Em `style` usa-se duas chaves `{{}}` pois o estilo aqui precisa ser escrito como um **objeto**, logo o primeiro par de chaves é da própria propriedade de `style`, e o segundo é para indicar que se trata de um **objeto**.
+- outra alternativa é utilizar o [MapBox](https://www.mapbox.com/), que possui um plano gratuíto generoso e não precisa cadastrar cartão, sendo o único adendo ter que criar uma conta para uso. Ao criar a conta, é gerado um token privado para seu uso, não sendo aconselhável guardá-lo em qualquer arquivo que vá ficar público. Para isso é recomendável guardar em um **arquivo de ambiente**. Crie um arquivo chamado `.env` na raíz do projeto e preencha da seguinte forma: `REACT_APP_MAPBOX_TOKEN=token_copiado_do_mapbox`. É importante salientar que toda variável de ambiente no React deve começar com `REACT_APP_`, sendo seu final customizável. No código, mudaremos apenas o `<TileLayer>`, conforme abaixo:
+```ts
+<TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_tokens=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
+```
