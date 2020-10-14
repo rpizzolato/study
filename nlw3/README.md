@@ -54,3 +54,48 @@ function App() {
 
 export default App;
 ```
+### Ícones
+- rode: `npm install react-icons` ou `yarn add react-icons`;
+- importe os ícones desejados, no caso do exemplo abaixo, estará usando [Feather Icons](https://feathericons.com/):
+```ts
+import { FiArrowRight } from 'react-icons/fi';
+
+<FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
+```
+
+### Roteamento
+- será utilizado o [react-router-dom](https://reactrouter.com/web/guides/quick-start). Utilize `npm install react-router-dom` ou `yarn add react-router-dom`. Por estarmos ligando com TS, será necessário ainda instalar como *dependência*, o seguinte pacote: `npm install @types/react-router-dom -D` ou `yarn add @types/react-router-dom -D`, para que possamos, ao apertar `Ctrl + Espaço`, listar o conteúdo do _react-router-dom_;
+- dentro de `src`, crie um arquivo chamado `routes.tsx` para ligar com as rotas. Dentro dele, comece importando o _react-router-dom_:
+```ts
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Landing from './pages/Landing';
+import OrphanagesMap from './pages/OrphanagesMap';
+
+function Routes() {
+  return(
+    <BrowserRouter>
+      <Route path="/" exact component={Landing} />
+      <Route path="/app" component={OrphanagesMap} />
+    </BrowserRouter>
+  );
+}
+
+export default Routes;
+```
+**observação**: caso utilize o <Route /> sem a propriedade `exact`, será chamado as duas rotas configuradas acima. Para outros caso que possam ser chamadas duas ou mais rotas, as colocamos em volta do <Switch>, pois assim será chamado apenas uma rota por vez.
+```ts
+<BrowserRouter>
+  <Switch>
+    <Route path="/" exact component={Landing} />
+    <Route path="/app" component={OrphanagesMap} />
+  </Switch>
+</BrowserRouter>
+```
+
+### Link
+- faz parte do pacote _react-router-dom_, faz com o uso de âncoras/links sejam realizados sem o _reload_ da página completa. Comece importando:
+```ts
+import { Link } from 'react-router-dom';
+``` 
