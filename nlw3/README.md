@@ -180,8 +180,47 @@ response.json({ message: "Hello World" })
 - será utilizado `sqlite`, para instalar, use `npm install typeorm sqlite3` ou `yarn add typeorm sqlite3`. Há 3 formas de uso: __driver nativo__, __Query builder__ e __ORM (Object Relational Mapping)__:
   - __driver nativo__: é um modo direto, sem muita abstração, usado como seria usado diretamente lá no _SQL_, utilizando como por exemplo, um `SELECT * FROM users` diretamente.
   - __query builder__: exemplo, o [Knex.js](http://knexjs.org/), como em `knex('users').select('*').where('name', 'Rodrigo')` ou seja, conseguimos escrever as queries do BD com JS, no entanto no final das contas o _knex_ converte para formato SQL;
-  - __ORM__: possui uma classe no JS que simboliza a tabela no BD, assim cada resultado que voltar do BD será uma instância da classe definida em JS.
+  - __ORM__: possui uma classe no JS que simboliza a tabela no BD, assim cada resultado que voltar do BD será uma instância da classe definida em JS.<br />
+  **observação**: uma vantagem de utilizar _query builder_ e _ORM_ é que se necessário alterar o BD, como passar de MySQL para MSSQL, a codificação não muda, diferente de utilizar diretamente o _driver nativo_.
 - criar uma pasta `src/databases` para armazenar tudo que seja relacionado à BD. Na raíz do projeto, crie um arquivo chamado `ormconfig.json` para tratarmos tudo que seja referente a conexão com o BD. Dentro de `database` crie um arquivo chamado `database.sqlite`;
 - dentro de `ormconfig.json` configure conforme abaixo:
 ```json
+{
+  "type": "sqlite",
+  "database": "./src/database/database.sqlite"
+}
 ```
+- crie um arquivo `database/connection.ts` e crie a conexão com o BD conforme abaixo:
+```ts
+import { createConnection } from 'typeorm';
+
+createConnection();
+```
+- crie um import do arquivo `connection.js` dentro de `server.js`: `import './database/connection';` (não precisa utilizar a extensão `.ts`)
+- rode a aplicação para ver se não algum erro: `npm run dev` ou `yarn dev`.
+
+### Criando as tabelas
+- pode-se criar diretamente ao se conectar na interface do BD, no entanto será utilizado o conceito de _migrations_, cujo é possível criar versões do BD, ótimo quando desenvolvido por uma equipe grande de programadores.
+- as _migrations_ não precisam ser criadas manualmente, há um comando para isso, o `typeorm`. No entanto esse comando apenas executa arquivos JS, para que possamos executar TS, é preciso fazer uma inclusão de `scripts` dentro do arquivo `package.json`, conforme segue abaixo:
+```json
+"scripts:" {
+  "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+  "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+},
+```
+- crie um pasta para as _migrations_ em `src/database/migrations`;
+- no arquivo `ormconfig.json`, inclua a propriedade `migration`, informando o caminho onde estarão as _migrations_, delimitando pela extensão `.ts`. Crie também uma propriedade chamada `cli` e dentro dela, `migrationsDir`, a qual indicará onde as novas _migrations_ serão criadas:
+```json
+{
+  "type": "sqlite",
+  "database": "./src/database/database.sqlite",
+  "migration": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
+```
+- para criar a primeira _migration_, usamos: `npm run typeorm migration:create -n create_orphanages` ou `yarn typeorm migration:create -n create_orphanages`. A flag `-n` indica o nome da _migration_. **alerta**: comigo precise instalar o [yarn](https://classic.yarnpkg.com/en/docs/install#alternatives-stable) via `npm install --global yarn` para conseguir funcionar.
+- 
