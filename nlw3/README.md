@@ -126,3 +126,29 @@ Na propriedade `center`, o valor esperado é um array, logo é colocado entre co
 ```ts
 <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_tokens=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
 ```
+**observação**: caso seja necessário estilizar a tag que fica em volta do mapa, use a marcação `.leaflet-container`, caso seja necessário utilizar `z-index` por exemplo.
+
+### Trilha OmniStack: Workshop 02
+#### 2º Dia: Back-end com Node.js
+
+- primeiro passo é diferenciarmos a pasta `web` da nova pasta a ser criada, a `backend`. Dentro de `backend` execute via terminal `npm init -y` ou `yarn init -y` para criar o arquivo `package.json`;
+- instale o [express](https://expressjs.com/pt-br/) com `npm install express` ou `yarn add express`. Instale também a variação `@types` para que o TS;
+- criar um arquivo em `src/server.ts` cujo será o arquivo inicial da aplicação, com a seguinte configuração:
+```ts
+import express from 'express';
+
+const app = express();
+
+app.listen(3333);
+```
+**observação**: para que o TS funcione ao executar o arquivo `server.ts` com o Node, instale `npm install typescript -D` ou `yarn add typescript -D`. Execute `npm tsc --init` ou `yarn tsc --init` para gerar o arquivo `tsconfig.json`. Caso os dois últimos comandos não funcionem, tente rodar ` npx tsc --init`.
+- no arquivo `tsconfig.json` altere a parte que está como ` "target": "es5",` para ` "target": "es2017",`. Dessa forma a conversão no TS será menor;
+- para finalizar, instale o pacote `npm install ts-node-dev -D` ou `yarn add is-node-dev -D` para que possamos executar TS no Node.js;
+- em `package.json`, após a propriedade `license`, crie uma propriedade `scripts`, como mostrado abaixo:
+```json
+"scripts": {
+  "dev": "ts-node-dev --transpile-only src/server.ts"
+}
+```
+**observação**: se deixarmos sem o `--transpile-only` toda vez o `ts-node-dev` ficará ouvindo e procurando por erros, o que o próprio editor com o _Lint_ já faz, assim deixando o processo mais rápido.
+- por fim, execute `npm run dev` ou `yarn dev` e acesse `http://localhost:3333` para testar a aplicação. Lembrando que como ainda não há uma rota criada, será retornado um `error`.
