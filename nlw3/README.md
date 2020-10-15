@@ -147,8 +147,41 @@ app.listen(3333);
 - em `package.json`, após a propriedade `license`, crie uma propriedade `scripts`, como mostrado abaixo:
 ```json
 "scripts": {
-  "dev": "ts-node-dev --transpile-only src/server.ts"
+  "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
 }
 ```
-**observação**: se deixarmos sem o `--transpile-only` toda vez o `ts-node-dev` ficará ouvindo e procurando por erros, o que o próprio editor com o _Lint_ já faz, assim deixando o processo mais rápido.
+**observação**: se deixarmos sem o `--transpile-only` toda vez o `ts-node-dev` ficará ouvindo e procurando por erros, o que o próprio editor com o _Lint_ já faz, assim deixando o processo mais rápido. `--ignore-watch node_modules` faz com que a pasta `node_modules` não seja observada, fazendo o desempenho melhorar também.
 - por fim, execute `npm run dev` ou `yarn dev` e acesse `http://localhost:3333` para testar a aplicação. Lembrando que como ainda não há uma rota criada, será retornado um `error`.
+
+### request x response
+- considerando a rota abaixo:
+```ts
+import express from 'express';
+
+const app = express();
+
+app.get('/test', (request, response) => {
+  response.send('Hello World');
+})
+
+app.listen(3333);
+```
+Toda aplicação RESTFull possui `request` e `response`. `request` diz respeito a toda requisição vinda lá do front-end, vindo em forma de cabeçalho. É onde, por exemplo, ao cadastrar um usuário, os dados vêm por esse caminho. `response` é como o back-end vai devolver uma resposta para o front-end, qual o tipo de resposta, qual o status, se haverá erro ou não. Nas respostas o ideal seria devolver um objeto/array em vez de um texto, como acontece com o método `send()`, logo poderíamos devolver um JSON, como mostrado abaixo:
+```ts
+response.json({ message: "Hello World" })
+```
+
+### Params
+- `query params` são os parâmetros que vão diretamente na url, utilizados para filtros, paginação, etc. Exemplo: `http://localhost:3333/users?search=rodrigo&page=2`. Para obter um `query param` use `request.query`;
+- `route params` são parâmetros que identificam algum recurso. Veja o exemplo: `http://localhost:3333/users/1` essa rota identificaria o usuário com ID igual a 1. Para obter um `route param` use `request.params`, no entanto no recurso da rota, precisa haver o parâmetro, como em `/users/:id`;
+- `body params` normalmente são parâmetros vindo de um formulário, mais complexas, com mais fluxo de dados. Para obter o `body param` use `request.body`. No entanto dessa forma o valor retornado será `undefined`. Isso ocorre devido ao retorno vir como JSON, mas o express por si só não compreende JSON por padrão, logo, incluia `app.use(express.json())` na aplicação.
+
+### Banco de dados
+- será utilizado `sqlite`, para instalar, use `npm install typeorm sqlite3` ou `yarn add typeorm sqlite3`. Há 3 formas de uso: __driver nativo__, __Query builder__ e __ORM (Object Relational Mapping)__:
+  - __driver nativo__: é um modo direto, sem muita abstração, usado como seria usado diretamente lá no _SQL_, utilizando como por exemplo, um `SELECT * FROM users` diretamente.
+  - __query builder__: exemplo, o [Knex.js](http://knexjs.org/), como em `knex('users').select('*').where('name', 'Rodrigo')` ou seja, conseguimos escrever as queries do BD com JS, no entanto no final das contas o _knex_ converte para formato SQL;
+  - __ORM__: possui uma classe no JS que simboliza a tabela no BD, assim cada resultado que voltar do BD será uma instância da classe definida em JS.
+- criar uma pasta `src/databases` para armazenar tudo que seja relacionado à BD. Na raíz do projeto, crie um arquivo chamado `ormconfig.json` para tratarmos tudo que seja referente a conexão com o BD. Dentro de `database` crie um arquivo chamado `database.sqlite`;
+- dentro de `ormconfig.json` configure conforme abaixo:
+```json
+```
