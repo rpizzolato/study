@@ -214,7 +214,7 @@ createConnection();
 {
   "type": "sqlite",
   "database": "./src/database/database.sqlite",
-  "migration": [
+  "migrations": [
     "./src/database/migrations/*.ts"
   ],
   "cli": {
@@ -222,5 +222,62 @@ createConnection();
   }
 }
 ```
-- para criar a primeira _migration_, usamos: `npm run typeorm migration:create -n create_orphanages` ou `yarn typeorm migration:create -n create_orphanages`. A flag `-n` indica o nome da _migration_. **alerta**: comigo precise instalar o [yarn](https://classic.yarnpkg.com/en/docs/install#alternatives-stable) via `npm install --global yarn` para conseguir funcionar.
-- 
+- para criar a primeira _migration_, usamos: `npm run typeorm migration:create -n create_orphanages` ou `yarn typeorm migration:create -n create_orphanages`. A flag `-n` indica o nome da _migration_. **alerta**: comigo precisei instalar o [yarn](https://classic.yarnpkg.com/en/docs/install#alternatives-stable) via `npm install --global yarn` para conseguir funcionar;
+- um arquivo é criado, usando uma _timestamp_ com dois métodos, `up()` e `down()`. O método `up()` geralmente é usado para realizar alterações, como criar tabela, criar um novo campo, excluir algum campo, etc. O método `down()` é possível desfazer o que foi feito no método `up()`. Resumidamente, o que `up()` faz, `down()` fará o contrário;
+- de forma a criar a tabela `orphanages` criamos o seguinte conteúdo para o arquivo _migration_:
+```ts
+import {MigrationInterface, QueryRunner} from "typeorm";
+
+export class createOrphanages1602805060658 implements MigrationInterface {
+
+  public async up(queryRunner: QueryRunner, Table): Promise<void> {
+    await queryRunner.createTable(new Table({
+      name: 'orphanages',
+      columns: [
+        {
+          name: 'id',
+          type: 'integer',
+          unsigned: true,
+          isPrimary: true,
+          isGenerated: true,
+          generationStrategy: 'increment',
+        },
+        {
+          name: 'name',
+          type: 'varchar'
+        },
+        {
+          name: 'latitude',
+          type: 'decimal',
+          scale: 10,
+          precision: 2,
+        },
+        {
+          name: 'longitude',
+          type: 'decimal',
+          scale: 10,
+          precision: 2,
+        },
+        {
+          name: 'about',
+          type: 'text',
+        },
+        {
+          name: 'instructions',
+          type: 'text',
+        },
+        {
+          name: 'open_on_weekends',
+          type: 'boolean',
+          default: false,
+        }
+      ]
+    }))
+  }
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('orphanages');
+  }
+}
+```
+- para executar a _migration_, usamos `yarn typeorm migration:run`;
+- para visualizar no arquivo `database.sqlite` se realmente foi criado a tabela, o uso do [Beekeeper Studio](https://www.beekeeperstudio.io/) é recomendado.
