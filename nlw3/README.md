@@ -1,5 +1,28 @@
 ## NLW#3
 
+## Sumário
+1. Trilha OmniStack: Workshop 01
+  - [1º Dia: Conceitos e estrutura web](#1º-Dia:-Conceitos-e-estrutura-web)
+  - [Tecnologias utilizadas](#Tecnologias-utilizadas)
+  - [Criando a estrutura do projeto](#Criando-a-estrutura-do-projeto)
+  - [Componentes](#Componentes)
+  - [Propriedades](#Propriedades)
+  - [Ícones](#Ícones)
+  - [Roteamento](#Roteamento)
+  - [Link](#Link)
+  - [Mapas](#Mapas)
+2. Trilha OmniStack: Workshop 01
+  - [2º Dia: Back-end com Node.js](#2º-Dia:-Back-end-com-Node.js)
+  - [request x response](#request-x-response)
+  - [Params](#Params)
+  - [Banco de dados](#Banco-de-dados)
+  - [Criando as tabelas](#Criando-as-tabelas)
+  - [Models](#Models)
+  - [Enviando os dados via POST](#Enviando-os-dados-via-POST)
+  - [Abstraindo o código](#Abstraindo-o-código)
+  - [Listagem de orfanatos](#Listagem-de-orfanatos)
+  - [Armazenamento de imagens para os orfanatos](#Armazenamento-de-imagens-para-os-orfanatos)
+  
 ### Trilha OmniStack: Workshop 01
 #### 1º Dia: Conceitos e estrutura web
 
@@ -8,7 +31,7 @@
 - TypeScript
 - ReactJS
 
-## Criando a estrutura do projeto
+### Criando a estrutura do projeto
 - utilizando `npx create-react-app my-app --template typescript` ou `yarn create react-app my-app --template typescript`
 - depois é excluído alguns conteúdos não importantes como:
   - deixar a pasta `public` somente com o arquivo `index.html`;
@@ -209,13 +232,16 @@ createConnection();
 },
 ```
 - crie um pasta para as _migrations_ em `src/database/migrations`;
-- no arquivo `ormconfig.json`, inclua a propriedade `migration`, informando o caminho onde estarão as _migrations_, delimitando pela extensão `.ts`. Crie também uma propriedade chamada `cli` e dentro dela, `migrationsDir`, a qual indicará onde as novas _migrations_ serão criadas:
+- no arquivo `ormconfig.json`, inclua a propriedade `migration`, informando o caminho onde estarão as _migrations_, delimitando pela extensão `.ts`. Crie também uma propriedade chamada `cli` e dentro dela, `migrationsDir`, a qual indicará onde as novas _migrations_ serão criadas. Cri também uma propriedade `entities`, para informar onde ficam os _models_:
 ```json
 {
   "type": "sqlite",
   "database": "./src/database/database.sqlite",
   "migrations": [
     "./src/database/migrations/*.ts"
+  ],
+  "entities": [
+    "./src/models/*.ts"
   ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
@@ -279,5 +305,170 @@ export class createOrphanages1602805060658 implements MigrationInterface {
   }
 }
 ```
-- para executar a _migration_, usamos `yarn typeorm migration:run`;
+- para executar a _migration_, usamos `yarn typeorm migration:run`. Para **desfazer** o que a _migration_ fez, use `yarn typeorm migration:revert`
 - para visualizar no arquivo `database.sqlite` se realmente foi criado a tabela, o uso do [Beekeeper Studio](https://www.beekeeperstudio.io/) é recomendado.
+
+### Models
+- como no modelo _ORM_ é representado por uma classe, vamos criar os _models_ dessas classes, começando a criar um pasta `src/models`. Dentro crie o primeiro _model_, chamado `Orphanage.ts`, com o seguinte conteúdo:
+```ts
+export default class Orphanage {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  about: string;
+  instructions: string;
+  opening_hours: string;
+  open_on_weekends: boolean;
+}
+```
+**observação**: os tipos acima listados são primitivos do TS. Para remover os alertas emitidos em cada tipo de dado, altere o arquivo `tsconfig.json`, removendo o comentário em `strictPropertyInicialization`, e alterando o valor para `false`, assim eliminando ter que inicializar algum valor na classe ou tendo que ter algum construtor nela. Ainda em `tsconfig.json`, remova os comentários de `Experimental Options`, deixando `experimentalDecorators: true` e `forceConsistentCasingInFileNames: true`, para habilitar a _API Decorator_;
+- dentro da classe `Orphanage.ts`, importe por meio do `typeorm` o seguinte: `import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';`. Para ativarmos o _decorator_, usamos a anotação `@Entity()`, a qual irá associar nossa classe com a tabela no BD e `@Column()` indicando cada coluna no BD. `@PrimaryGeneratedColumn('increment')` representa como uma chave primária incremental, conforme abaixo:
+```ts
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+
+@Entity('orphanages')
+export default class Orphanage {
+  @PrimaryGeneratedColumn('increment')
+  id: number;
+  @Column()
+  name: string;
+  @Column()
+  latitude: number;
+  @Column()
+  longitude: number;
+  @Column()
+  about: string;
+  @Column()
+  instructions: string;
+  @Column()
+  opening_hours: string;
+  @Column()
+  open_on_weekends: boolean;
+}
+```
+### Enviando os dados via POST
+- Primeiro passo é criar uma rota _POST_ para a aplicação lá em `server.ts` e desestruturar o que vêm de `request.body`, lembrando que o que vêm de `request.body` é alimentado por um JSON lá vindo da requisição _POST_, por meio do Postman ou Imsominia, por exemplo.
+- para gravarmos no banco de dados, ainda no arquivo `server.ts`, importe o `getRepository` da seguinte forma `import { getRepository } from 'typeorm';`, assim toda mudança no BD irá passar por esse repositório. Importe também o _model_  `Orphanages.ts`. O `getRepository()` possui as funções de criar, atualizar, listar, contar, etc no BD. Lembre-se que para gravar algo no BD, pode ser uma tarefa demorada, logo é recomendado usar `async/await`. O arquivo `server.js` ficaria dessa forma:
+```ts
+import express from 'express';
+import { getRepository } from 'typeorm';
+
+import './database/connection';
+import Orphanage from './models/Orphanage';
+
+const app = express();
+
+app.use(express.json());
+
+app.post('/orphanages', async (request, response) => {
+  const {
+    name,
+    latitude,
+    longitude,
+    about,
+    instructions,
+    opening_hours,
+    open_on_weekends
+  } = request.body;
+
+  const orphanageRepository = getRepository(Orphanage);
+
+  //cria o orfanato
+  const orphanage = orphanageRepository.create({
+    name,
+    latitude,
+    longitude,
+    about,
+    instructions,
+    opening_hours,
+    open_on_weekends
+  })
+
+  //grava no BD
+  await orphanageRepository.save(orphanage);
+
+  //retorna o obj orphanage e retorna o status code 201 created
+  return response.status(201).json(orphanage);
+})
+
+app.listen(3333);
+```
+- execute o projeto `yarn dev` e verifique no BD se realmente inseriu o registro.
+
+### Abstraindo o código
+- primeiro passo, é criar um arquivo chamado `src/routes.ts` para lidar somente com as rodas. Migre a rota criada para cadastro para dentro desse arquivo. Importe `getRepository` e `Orphanage` para esse arquivo, importe também o `Router` do pacote do `express`. Crie uma nova variável `routes` recebendo `Router()` para trocar a variável `app`. Exporte as rotas no final do arquivo (`export default`) e importe no arquivo `server.js`. Por fim, coloque `app.use(routes);` logo após `app.use(express.json());`. **Importante que seja logo após `app.use(express.json());`**;
+- a fim de adequar o projeto ao modelo MVC (Model View Controller), criaremos uma arquivo `controllers/OrphanagesController.ts` para organizar. Dentro do arquivo `OrphanagesController.ts` irá retornar um objeto com toda a lógica de criação de um registro de orfanato, logo, ficará da seguinte forma (lembrando que iremos pegar a lógica presenta lá no arquivo `routes.ts`, inclusive fazer os imports `import { getRepository } from 'typeorm';` e `import Orphanage from './models/Orphanage';`):
+```ts
+import { Request, Response } from 'express';
+import { getRepository } from 'typeorm';
+import Orphanage from '../models/Orphanage';
+
+export default {
+  async create(request: Request, response: Response) {
+    const {
+      name,
+      latitude,
+      longitude,
+      about,
+      instructions,
+      opening_hours,
+      open_on_weekends
+    } = request.body;
+  
+    const orphanageRepository = getRepository(Orphanage);
+  
+    //cria o orfanato
+    const orphanage = orphanageRepository.create({
+      name,
+      latitude,
+      longitude,
+      about,
+      instructions,
+      opening_hours,
+      open_on_weekends
+    })
+  
+    //grava no BD
+    await orphanageRepository.save(orphanage);
+  
+    //retorna o obj orphanage e retorna o status code 201 created
+    return response.status(201).json(orphanage);
+  }
+}
+```
+- em `routes.ts` importe o controller acima, ficando assim `import OrphanagesController from './controllers/OrphanagesController';`;
+- a rota de cadastro de orfanatos ficará dessa forma `routes.post('/orphanages', OrphanagesController.create)`, fazendo referencia ao método `create()` do controller `OrphanagesController.ts`;
+
+### Listagem de orfanatos
+- No arquivo `OrphanagesController.js` crie um novo método, com o nome de `index()`, conforme abaixo:
+```ts
+async index(request: Request, response: Response) {
+  const orphanagesRepository = getRepository(Orphanage);
+  const orphanages = await orphanagesRepository.find();
+}
+```
+**observação**: caso quiséssemos [colocar mais algumas condições](https://github.com/typeorm/typeorm/blob/master/docs/find-options.md), basta usar o `find()` e adicionar um objeto no argumento, como por exemplo:
+```js
+find({ 
+  order: {
+    name: "ASC",
+    id: "DESC"
+  } 
+});
+```
+- para listar somente um orfanato, criaremos uma função nos mesmos moldes de `index()`, mas essa será chamada de `show()`:
+```ts
+async show(request: Request, response: Response) {
+    //pega o id que vem lá do Root Params
+    const { id } = request.params;
+
+    const orphanagesRepository = getRepository(Orphanage);
+
+    const orphanage = await orphanagesRepository.findOneOrFail(id);
+
+    return response.status(200).json(orphanage);  
+  }
+```
+
+### Armazenamento de imagens para os orfanatos
