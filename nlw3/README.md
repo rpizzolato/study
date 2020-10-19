@@ -471,4 +471,70 @@ async show(request: Request, response: Response) {
   }
 ```
 
-### Armazenamento de imagens para os orfanatos
+### Armazenamento/Upload de imagens para os orfanatos
+- é uma boa prática armazenar apenas o nome da imagem no BD, e não a imagem em si, cuja será armazenada em uma pasta local;
+- primeiro passo é criar a _migration_ `yarn typeorm migration:create -n create_images`. Na função `up()` usaremos o seguinte código:
+```ts
+public async up(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.createTable(new Table({
+			name: 'images',
+			columns: [
+				{
+					name: 'id',
+          type: 'integer',
+          unsigned: true,
+          isPrimary: true,
+          isGenerated: true,
+          generationStrategy: 'increment',
+				},
+				{
+					name: 'path',
+					type: 'varchar',
+				},
+				{
+					name: 'orphanage_id',
+					type: 'integer',
+				}
+			],
+			foreignKeys: [
+				{
+					name: 'ImageOrphanage',
+					columnNames: ['orphanage_id'],
+					referencedTableName: 'orphanages',
+					referencedColumnNames: ['id'],
+					onUpdate: 'CASCADE',
+					onDelete: 'CASCADE',
+				}
+			]
+		}))
+	}
+```
+**observação**: em `foreignKeys` faremos referência a tabela `Orphanages` e em `onUpdate` e `onDelete`, usaremos como `CASCADE`, assim, caso o orfanato mude o `id`, o mesmo será atualizado, e caso seja excluído, as fotos relacionadas a ele, serão excluídas também. No método `down()` resta somente excluir a tabela (`await queryRunner.dropTable('images')`). Execute a _migration_  `yarn typeorm migration:run`;
+- para ligar com o upload de imagens (ou arquivos em geral), será utilizado a biblioteca [Multer](https://www.npmjs.com/package/multer), instalá-la no seguinte comando: `yarn add multer`;
+- crie um arquivo de configuração em `src/config/upload.ts` e importe o _multer_ `import multer from 'multer';`. Considere instalar também `@types/multer` como dependência de desenvolvimento, devido ao uso do TS;
+- importe o `path` do próprio Node.js `import path from 'path';` para lidarmos com os caminhos relativos na aplicação (como por exemplo a barra que é alterada em diferentes Sistemas Operacionais). A configuração de `upload.ts` ficará desta forma:
+```ts
+import multer from 'multer';
+import path from 'path';
+
+export default {
+  storage: multer.diskStorage({
+    //path relativo está separado devido SOs diferentes uso da barra
+    destination: path.join(__dirname, '..', '..', 'uploads'),
+    filename: (request, file, cb) => {
+      //cria um timestamp da data atual + o nome original do arquivo
+      const fileName = `${Date.now()}-${file.originalname}`;
+      //callback caso haja erro
+      cb(null, fileName);
+    }
+  })
+};
+```
+**observação**: `path.join(__dirname, '')`: `__dirname` retorna o caminho de onde se encontra o arquivo que fez tal chamada.
+- crie na raíz do projeto uma pasta com nome `uploads`;
+- no arquivo de rotas, `routes.ts` importe o _multer_ e o arquivo `upload.ts` como `uploadConfig`. Crie uma variável `upload` que irá receber `multer(uploadconfig)`. Na rota de cadastro `/orphanages`, criaremos outra configuração antes do cadastro:
+```ts
+routes.post('/orphanages', upload.array('images'), OrphanagesController.create);
+```
+**observação**: utilizamos o método `array()` pois será mais de uma imagem, se fosse apenas uma, poderia usar o método `single()`. `images` é apenas o nome do campo.
+- o envio de imagens não pode ser feito em _JSON_, tem que ser feito em _Multipart Form_ e vá preenchendo campo a campo. No campo _images_ troque para tipo _File_, podendo ser mais de um campo _images_.
