@@ -537,4 +537,62 @@ export default {
 routes.post('/orphanages', upload.array('images'), OrphanagesController.create);
 ```
 **observação**: utilizamos o método `array()` pois será mais de uma imagem, se fosse apenas uma, poderia usar o método `single()`. `images` é apenas o nome do campo.
-- o envio de imagens não pode ser feito em _JSON_, tem que ser feito em _Multipart Form_ e vá preenchendo campo a campo. No campo _images_ troque para tipo _File_, podendo ser mais de um campo _images_.
+- o envio de imagens não pode ser feito em _JSON_, tem que ser feito em _Multipart Form_ e vá preenchendo campo a campo. No campo _images_ troque para tipo _File_, podendo ser mais de um campo _images_;
+- agora vamos criar o _model_ para _images_, criando um arquivo `Images.ts` dentro de `models`. No entanto como orfanatos pode ter diversas imagens, voltando em `Orphanages.ts`, vamos incluir na importação `OneToMany` e `JoinColumn` para referenciar nossa chave estrangeira em `images`, importe também `Images.ts`, e no final do arquivo `Orphanages.ts` inclua um campo _images_, mas sem o `@Column`, que irá receber um array de Images, faça o mesmo em `Images.ts`, no entanto usando `ManytoOne`, ficando os _models_ da seguinte forma:
+
+`Orphanages.ts`
+```ts
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 'typeorm';
+
+import Image from './Images';
+
+@Entity('orphanages')
+export default class Orphanage {
+  @PrimaryGeneratedColumn('increment')
+  id: number;
+
+  @Column()
+  name: string;
+
+  @Column()
+  latitude: number;
+
+  @Column()
+  longitude: number;
+
+  @Column()
+  about: string;
+
+  @Column()
+  instructions: string;
+
+  @Column()
+  opening_hours: string;
+
+  @Column()
+  open_on_weekends: boolean;
+  
+  @OneToMany(() => Image, image => image.orphanage)
+  @JoinColumn({ name: 'orphanage_id' })
+  images: Image[];
+}
+```
+`Images.ts`
+```ts
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+
+import Orphanage from './Orphanage';
+
+@Entity('images')
+export default class Image {
+  @PrimaryGeneratedColumn('increment')
+  id: number;
+
+  @Column()
+  path: string;
+
+  @ManyToOne(() => Orphanage, orphanage => orphanage.images)
+  @JoinColumn({ name: 'orphanage_id' })
+  orphanage: Orphanage;
+}
+```
