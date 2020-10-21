@@ -598,3 +598,23 @@ export default class Image {
   orphanage: Orphanage;
 }
 ```
+- as imagens, por padrão, vêm por meio do `request.files`, e para armazenarmos as imagens, precisamos usar o _hack_ `as` para forçar a tipagem como array, ficando assim: `const requestImages = request.files as Express.Multer.File[];`;
+- por fim mapeie esse array e insira a variável `images` no método `create()`:
+```ts
+const images = requestImages.map(image => {
+      return { path: image.filename }
+    })
+```
+- para listar as imagens, altere o método `find()` e `findOneOrFail()` colocando um _relations_ para as imagens:
+```ts
+const orphanages = await orphanagesRepository.find({
+      relations: ['images']
+    });
+    //...
+const orphanage = await orphanagesRepository.findOneOrFail(id, {
+      relations: ['images']
+    });
+```
+
+### trabalhando com views
+- crie um pasta `src/views`

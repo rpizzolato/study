@@ -7,7 +7,9 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanages = await orphanagesRepository.find();
+    const orphanages = await orphanagesRepository.find({
+      relations: ['images']
+    });
 
     return response.status(200).json(orphanages);
   },
@@ -18,7 +20,9 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanage = await orphanagesRepository.findOneOrFail(id);
+    const orphanage = await orphanagesRepository.findOneOrFail(id, {
+      relations: ['images']
+    });
 
     return response.status(200).json(orphanage);  
   },
@@ -36,7 +40,13 @@ export default {
     } = request.body;
   
     const orphanageRepository = getRepository(Orphanage);
-  
+
+    const requestImages = request.files as Express.Multer.File[];
+
+    const images = requestImages.map(image => {
+      return { path: image.filename }
+    })
+
     //cria o orfanato
     const orphanage = orphanageRepository.create({
       name,
@@ -45,7 +55,8 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends
+      open_on_weekends,
+      images
     })
   
     //grava no BD
