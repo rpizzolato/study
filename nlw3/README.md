@@ -617,4 +617,63 @@ const orphanage = await orphanagesRepository.findOneOrFail(id, {
 ```
 
 ### trabalhando com views
-- crie um pasta `src/views`
+- crie um pasta `src/views` e dentro crie dois arquivos:<br />
+
+`orphanages_views.ts`
+```ts
+import Orphanage from '../models/Orphanage';
+import ImagesView from './images_view';
+
+export default {
+  render(orphanage: Orphanage) {
+    return {
+      id: orphanage.id,
+      name: orphanage.name,
+      latitude: orphanage.latitude,
+      longitude: orphanage.longitude,
+      about: orphanage.about,
+      instructions: orphanage.instructions,
+      opening_hours: orphanage.opening_hours,
+      open_on_weekends: orphanage.open_on_weekends,
+      images: ImagesView.renderMany(orphanage.images)
+    };
+  },
+
+  renderMany(orphanages: Orphanage[]) {
+    return orphanages.map(orphanage => this.render(orphanage));
+  }
+};
+```
+`images_view.ts`
+```ts
+import Image from '../models/Image';
+
+export default {
+  render(image: Image) {
+    return {
+      id: image.id,
+      url: `http://localhost:3333/uploads/${image.path}`
+      
+    };
+  },
+
+  renderMany(images: Image[]) {
+    return images.map(image => this.render(image));
+  }
+};
+```
+em `OrphanagesController.ts` troque nos métodos `index()`:
+```ts
+return response.status(200).json(orphanageView.renderMany(orphanages));
+```
+ e `show()`:
+ ```ts
+ return response.status(200).json(orphanageView.render(orphanage));
+ ```
+ - para a listagem de imagens funcionar, conforme configurado na propriedade `url` no arquivo `image_view.ts`, via `http://localhost:3333/uploads`, vá até o arquivo `server.ts` e adicione o seguinte trecho de código abaixo, logo após `app.use(routes)`:
+ ```ts
+ import path from 'path';
+ //...
+ app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
+ ```
+ **observação**: o ideal para urls, em vez de ser exibido explicitamente lá a propriedade, seria mostrar via variáveis de ambiente, para mais info, consultar no [blog](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/).
