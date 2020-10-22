@@ -677,3 +677,24 @@ return response.status(200).json(orphanageView.renderMany(orphanages));
  app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
  ```
  **observação**: o ideal para urls, em vez de ser exibido explicitamente lá a propriedade, seria mostrar via variáveis de ambiente, para mais info, consultar no [blog](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/).
+
+ ### Tratamento de erros
+ - por padrão, o Express não consegue tratar os erros nos métodos `async/await`. Para tratar isso, instale `yarn add express-async-errors`. No arquivo `server.ts`, importe `import 'express-async-errors'` logo depois da importação do express. Dessa forma será retornado os possíveis erros da aplicação.
+ - esses erros são muito complexos de ficar mostrando na API, o correto seria tratá-los e exibir apenas para gente, logo, crie um pasta em `src/errors`, dentro crie um arquivo chamado `handler.ts`:
+ ```ts
+import { ErrorRequestHandler } from 'express';
+
+const errorHandler: ErrorRequestHandler = (error, request, response, next) => {
+  //nos mostra o erro real
+  console.error(error);
+  
+  //retorna ao user uma msg de error genérica
+  return response.status(500).json({ message: 'Internal Server Error' });
+}
+
+export default errorHandler;
+ ```
+- dentro de `server.js` importe o `errorHandler` e use o `app.use(errorHandler);`
+
+### Validação de dados
+- para validar, instalar o módulo `yarn add yup`
