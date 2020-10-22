@@ -697,4 +697,48 @@ export default errorHandler;
 - dentro de `server.js` importe o `errorHandler` e use o `app.use(errorHandler);`
 
 ### Validação de dados
-- para validar, instalar o módulo `yarn add yup`
+- para validar, instalar o módulo `yarn add yup`;
+- no `OrphanagesController.ts`, antes da criação do orfanato, abstraia os dados do orfanato para uma variável `data`:
+```ts
+const data = {
+      name,
+      latitude,
+      longitude,
+      about,
+      instructions,
+      opening_hours,
+      open_on_weekends,
+      images
+    };
+
+    //cria o orfanato
+    const orphanage = orphanageRepository.create(data);
+```
+- importe o `yup`, no entanto o `yup` não tem um `export default`, logo use: `import * as Yup from 'yup';`. Provavelmente será preciso instalar o `@types/yup -D` também. Após o `data`, insira:
+```ts
+//esquema para validar os campos
+    const schema = Yup.object().shape({
+      name: Yup.string().required(),
+      latitude: Yup.number().required(),
+      longitude: Yup.number().required(),
+      about: Yup.string().required().max(300),
+      instructions: Yup.string().required(),
+      opening_hours: Yup.string().required(),
+      open_on_weekends: Yup.boolean().required(),
+      images: Yup.array(
+        Yup.object().shape({
+          path: Yup.string().required()
+        })
+      )
+    });
+
+    //valida os campos
+    await schema.validate(data, {
+      //retorna todos os erros de validação que encontrar
+      abortEarly: false
+    })
+```
+**observação**: desta forma, todos os erros ainda são retornados o _status_ 500, configurado lá em `handler.ts`. Ainda em `handler.ts`, inclua:
+```ts
+
+```
