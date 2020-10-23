@@ -738,7 +738,34 @@ const data = {
       abortEarly: false
     })
 ```
-**observação**: desta forma, todos os erros ainda são retornados o _status_ 500, configurado lá em `handler.ts`. Ainda em `handler.ts`, inclua:
+**observação**: desta forma, todos os erros ainda são retornados o _status_ 500, configurado lá em `handler.ts`. Ainda em `handler.ts`, deixe dessa forma:
 ```ts
+import { ErrorRequestHandler } from 'express';
+import { ValidationError } from 'yup';
 
+interface ValidationErrors {
+  [key: string]: string[];
+}
+
+const errorHandler: ErrorRequestHandler = (error, request, response, next) => {
+  if (error instanceof ValidationError) {
+    let errors: ValidationErrors = {};
+
+    error.inner.forEach(err => {
+      errors[err.path] = err.errors;
+    });
+
+    return response.status(400).json({ message: 'Validation fails', errors })
+  }
+  //nos mostra o erro real
+  console.error(error);
+  
+  //retorna ao user uma msg de error genérica
+  return response.status(500).json({ message: 'Internal Server Error' });
+}
+
+export default errorHandler;
 ```
+
+### CORS
+- usado para permitir acesso a todos os front-ends que irão consumir o back-end. Instale com `yarn add cors` e `yarn add @types/cors`. No arquivo `server.js`, importe o cors `import cors from 'cors';` e use-o como `app.use(cors());`
