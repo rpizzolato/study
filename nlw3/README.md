@@ -11,7 +11,7 @@
   - [Roteamento](#Roteamento)
   - [Link](#Link)
   - [Mapas](#Mapas)
-2. Trilha OmniStack: Workshop 01
+2. Trilha OmniStack: Workshop 02
   - [2º Dia: Back-end com Node.js](#2º-Dia:-Back-end-com-Node.js)
   - [request x response](#request-x-response)
   - [Params](#Params)
@@ -22,6 +22,8 @@
   - [Abstraindo o código](#Abstraindo-o-código)
   - [Listagem de orfanatos](#Listagem-de-orfanatos)
   - [Armazenamento de imagens para os orfanatos](#Armazenamento-de-imagens-para-os-orfanatos)
+3. Trilha Oministack: Workshop 03
+  - [3º Dia: Finalizando front-end](#3º-Dia:-Finalizando-front-end)
   
 ### Trilha OmniStack: Workshop 01
 #### 1º Dia: Conceitos e estrutura web
@@ -769,3 +771,30 @@ export default errorHandler;
 
 ### CORS
 - usado para permitir acesso a todos os front-ends que irão consumir o back-end. Instale com `yarn add cors` e `yarn add @types/cors`. No arquivo `server.js`, importe o cors `import cors from 'cors';` e use-o como `app.use(cors());`
+
+#### 3º Dia: Finalizando front-end
+### Marcação no mapa
+- cada marcação no mapa, usaremos a biblioteca do `leaflet`, adicionando o módulo `Marker` na importação. Coloque `<Marker />` logo após `<TileLayer>`. Importe o `leaflet` (`import Leaflet from 'leaflet';`). Crie uma variável para armazenar o ícone, se baseando no `leaflet`:
+```ts
+import '../styles/pages/orphanages-map.css';
+//...
+const mapIcon = Leaflet.icon({
+  iconUrl: mapMarkerImg,
+})
+//...
+<Map
+  center={[-22.7244976,-47.6352641]}
+  zoom={15}
+  style={{ width: '100%', height: '100%' }}
+>
+  <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+  <Marker 
+    icons
+    position={[-22.7244976,-47.6381184]}
+  />
+
+  {/* <TileLayer
+    url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} /> */}
+</Map>
+```
