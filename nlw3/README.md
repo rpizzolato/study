@@ -790,7 +790,7 @@ const mapIcon = Leaflet.icon({
   <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
   <Marker 
-    icons
+    icons={mapIcon}
     position={[-22.7244976,-47.6381184]}
   />
 
@@ -798,3 +798,25 @@ const mapIcon = Leaflet.icon({
     url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} /> */}
 </Map>
 ```
+**observação**: no entanto há um problema, a imagem deveria apontar as coordenadas no mapa na sua parte inferior, e no momento o ponto central é no meio da imagem (proximo ao sorriso). Para corrigir isso usamos a propriedade `iconAnchor`. Usando a propriedade `iconSize: [width, height]` em conjunto com `iconAnchor` definimos uma altura de 58 e largura de 68 para o `iconSize`, e no `iconAnchor`, colocamos o valor `[29, 68]`, ou seja, no eixo x, será metade do `width`, corrigindo o ponto central no desenho:
+```ts
+const mapIcon = Leaflet.icon({
+  iconUrl: mapMarkerImg,
+  iconSize: [58, 68],
+  iconAnchor: [29, 68]
+})
+```
+- para abrir um _popup_ ao clicar no desenho, importaremos `Popup` do pacote _leaflet_. Dentro do `<Marker></Marker>` colocaremos `<Popup></Popup>`. Adicione também a propriedade `popupAnchor: [170, 2]`:
+```ts
+const mapIcon = Leaflet.icon({
+  iconUrl: mapMarkerImg,
+  iconSize: [58, 68],
+  iconAnchor: [29, 68],
+  popupAnchor: [170, 2]
+})
+//...
+<Popup closeButton={false} minWidth={240} maxHeight={240}>
+  Lar das meninas
+</Popup>
+```
+- para melhorar o CSS do popup, vamos adicionar a classe `className="map-popup"` em `<Popup>`
