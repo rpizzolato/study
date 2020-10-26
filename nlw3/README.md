@@ -819,4 +819,8 @@ const mapIcon = Leaflet.icon({
   Lar das meninas
 </Popup>
 ```
-- para melhorar o CSS do popup, vamos adicionar a classe `className="map-popup"` em `<Popup>`
+- para melhorar o CSS do popup, vamos adicionar a classe `className="map-popup"` em `<Popup>` e alterar o CSS em `orphanagesMap.css`:
+```css
+
+```
+**observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_.
