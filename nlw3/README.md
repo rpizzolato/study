@@ -823,4 +823,4 @@ const mapIcon = Leaflet.icon({
 ```css
 
 ```
-**observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_.
+**observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_. `.leaflet-popup-tip-container`é para formatar aquela flecha pequena na parte inferior, colocando `display=none` 
