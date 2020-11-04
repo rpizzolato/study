@@ -24,6 +24,8 @@
   - [Armazenamento de imagens para os orfanatos](#Armazenamento-de-imagens-para-os-orfanatos)
 3. Trilha Oministack: Workshop 03
   - [3º Dia: Finalizando front-end](#3º-Dia:-Finalizando-front-end)
+  - [Marcação no mapa](#Marcação-no-mapa)
+  - [abstração com componentes](#abstração-com-componentes)
   
 ### Trilha OmniStack: Workshop 01
 #### 1º Dia: Conceitos e estrutura web
@@ -49,7 +51,7 @@
 - rodando o projeto: `npm start`
 
 ### Componentes
-- um componente é uma função que retorna um conteúdo HTML ou conteúdo JSX
+- um componente é uma função que retorna um conteúdo HTML ou conteúdo JSX, um conteúdo que pode ser reaproveitado.
 
 ### Propriedades
 - `props` são acessados pelo componente filho, conforme exemplo abaixo:
@@ -823,4 +825,90 @@ const mapIcon = Leaflet.icon({
 ```css
 
 ```
-**observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_. `.leaflet-popup-tip-container`é para formatar aquela flecha pequena na parte inferior, colocando `display=none` 
+**observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_. `.leaflet-popup-tip-container`é para formatar aquela flecha pequena na parte inferior, colocando `display=none`
+
+### abstração com componentes
+- lembrando que componentes são códigos que podem ser reaproveitados, logo, no cadastro de orfanatos e na listagem dos detalhes do orfanatos, há uma _sidebar_ que pode ser reaproveitada, criando um componente que a represente. Crie um pasta `src/components` e dentro crie um arquivo chamado `Sidebar.tsx` que irá representar o componente _sidebar_:
+```ts
+import React from 'react';
+import { FiArrowLeft } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
+
+import mapMarkerImg from '../images/map-marker.svg';
+import '../styles/components/Sidebar.css';
+
+export default function Sidebar() {
+  const { goBack } = useHistory();
+  
+  return (
+    <aside className="app-sidebar">
+      <img src={mapMarkerImg} alt="Happy" />
+
+      <footer>
+        <button type="button" onClick={goBack}>
+          <FiArrowLeft size={24} color="#FFF" />
+        </button>
+      </footer>
+    </aside>
+  );
+}
+```
+crie também um arquivo `Sidebar.css` em `src/styles/components`:
+```css
+#page-create-orphanage aside {
+  position: fixed;
+  height: 100%;
+  padding: 32px 24px;
+  background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside.app-sidebar img {
+  width: 48px;
+}
+
+aside.app-sidebar footer a,
+aside.app-sidebar footer button {
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+
+  background: #12AFCB;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside.app-sidebar footer a:hover,
+aside.app-sidebar footer button:hover {
+  background: #17D6EB;
+}
+```
+**observação:** use `useHistory()`, importando `import { useHistory } from 'react-router-dom';` para criar o botão voltar.
+Por fim, importe o `<Sidebar />` em `createOrphanage.tsx` e `Orphanage.tsx` no lugar da tag `<aside>`.
+- Nos arquivos dentro de `src/pages` há a utilização do mesmo ícone entre os arquivos, outro ponto que poderia ser abstraído. Para isso, criaremos umas pasta `src/utils` que armazenará o arquivo `mapIcon.ts` (pode ser `.ts` em vez de `.tsx`, pois não será um componente realmente):
+```ts
+import Leaflet from 'leaflet';
+
+import mapMarkerImg from '../images/map-marker.svg';
+
+const mapIcon = Leaflet.icon({
+  iconUrl: mapMarkerImg,
+  iconSize: [58, 68],
+  iconAnchor: [29, 68],
+  popupAnchor: [170, 2]
+})
+
+export default mapIcon;
+```
