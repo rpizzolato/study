@@ -912,3 +912,19 @@ const mapIcon = Leaflet.icon({
 
 export default mapIcon;
 ```
+
+### Interligando o front com o back-end
+- instalação do axios: `yarn add axios`. Crie um pasta `src/services`, a qual será utilizada para toda comunicação do front com o mundo externo, seja ele banco de dados, para uma API, para envio de algo, para _localStorage_, etc. Crie um arquivo chamado `api.ts`, que servirá para conectar o front com o back-end. Uma das vantagens de utilizar o axios, é poder criar uma baseURL, que no caso, será `http://localhost:3333`, conforme configuração abaixo:
+```ts
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://localhost:3333',
+
+})
+
+export default api;
+```
+
+### Listando os orfanatos no mapa
+- 
