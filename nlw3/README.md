@@ -927,4 +927,28 @@ export default api;
 ```
 
 ### Listando os orfanatos no mapa
-- 
+- será utilizado o _Hooks_, mais especificamente o `useEffect(()=> {}, [])`, o qual recebe 2 parâmetros, sendo o primeiro **o que** será executado, e o segundo é **quando** o primeiro será executado. Normalmente **quando** é colocado em um vetor, e deixando-o vazio, significa que será executado somente uma vez. Começe importando o `{ useEffect } from 'react';`:
+```ts
+//...
+function OrphanagesMap() {
+  //inicia o state orphanages com uma lista vazia
+  const [orphanages, setOrphanages] = useState([]);
+
+  console.log(orphanages);
+
+  useEffect(() => {
+    api.get('orphanages').then(response => {
+      //setOrphanages atualiza a variável orphanages (que está desestruturado)
+      setOrphanages(response.data);
+    });
+  }, []);
+  
+  return (
+    //...
+```
+- Toda manipulação de informação entre os componentes é feito por meio do estado (_state_), pois se armazenássemos da maneira convencional, por meio de uma variável por exemplo, toda vez que essa variável mudasse, o componente não seria atualizado, diferentemente quando armazenamos no _state_, qualquer mudança no mesmo, haverá uma nova renderização do componente. Assim usaremos o `useState`, do próprio _React_.
+- o uso do `useState` é feito por meio de uma desestruturação, deixando a primeira o array desejado, e a segunda, uma função que atualiza o array (normalmente com o prefixo `set`). Tomando o exemplo de orfanatos, ficaria da seguinte forma:
+```ts
+const [orphanages, setOrphanages] = useState([]);
+```
+**observação**: se colocarmos um `console.log()` entre o momento que `useState` é declarado e alterado de valor(`setOrphanages()`), podemos notar no console do navegador que `console.log()` é chamado duas vezes, consequentemente são duas vezes que a tela é renderizada. Há casos que pode ocorrer de duplicidade, sendo essa mesma chamada, executada 4 vezes. Para corrigir isso, remova o `<React.StrictMode>` do arquivo `index.tsx`, deixe somente com `<>`
