@@ -951,4 +951,46 @@ function OrphanagesMap() {
 ```ts
 const [orphanages, setOrphanages] = useState([]);
 ```
-**observação**: se colocarmos um `console.log()` entre o momento que `useState` é declarado e alterado de valor(`setOrphanages()`), podemos notar no console do navegador que `console.log()` é chamado duas vezes, consequentemente são duas vezes que a tela é renderizada. Há casos que pode ocorrer de duplicidade, sendo essa mesma chamada, executada 4 vezes. Para corrigir isso, remova o `<React.StrictMode>` do arquivo `index.tsx`, deixe somente com `<>`
+**observação**: se colocarmos um `console.log()` entre o momento que `useState` é declarado e alterado de valor(`setOrphanages()`), podemos notar no console do navegador que `console.log()` é chamado duas vezes, consequentemente são duas vezes que a tela é renderizada. Há casos que pode ocorrer de duplicidade, sendo essa mesma chamada, executada 4 vezes. Para corrigir isso, remova o `<React.StrictMode>` do arquivo `index.tsx`, deixe somente com `<>`;
+- agora será necessário replicar o `<Map />` usando a função `map()`. Será utilizado o `map()` pois ele percorre uma lista (_array_) e retorna algo, já utilizando o `forEach`, apenas a lista é percorrida. Logo faça da seguinte forma:
+```ts
+{orphanages.map(orphanage => {
+        return(
+          <Map
+            center={[-22.7244976,-47.6352641]}
+            zoom={15}
+            style={{ width: '100%', height: '100%' }}
+          >
+            <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+            <Marker
+              icon={mapIcon}
+              position={[-22.7244976,-47.6381184]}
+            >
+              <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
+                Lar das meninas
+                <Link to="/orphanages/1">
+                  <FiArrowRight size={20} color="#fff" />
+                </Link>
+              </Popup>
+            </Marker>
+
+            {/* <TileLayer
+              url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} /> */}
+          </Map>
+        );
+      })}
+```
+- agora resta ir substituindo os dados que irão renderizar na tela, como por exemplo, trocar os valores de latitude e longitude por `orphanage.latitude` e `orphanage.longitude`. É necessário destacar que desta forma irá ser retornado um alerta (`const orphanage: never[];`), devido o _front_ não saber especificamente o que são os valores `latitude` e `longitude`, e para contornar isso, crie uma _interface_ especificando:
+```ts
+interface Orphanage {
+  id: number;
+  latitude: number;
+  longitude: number;
+  name: string;
+}
+```
+**observação**: é preciso lá em `useState` especificar o tipo da lista que será recebido, no caso, `Orphanages`, e atentar a colocar que é um vetor `[]`, ficando assim:
+```ts
+const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+```
