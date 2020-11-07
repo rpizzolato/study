@@ -46,33 +46,36 @@ function OrphanagesMap() {
         </footer>
       </aside>
 
+      <Map
+        center={[-22.7379621, -47.6564462]}
+        zoom={13}
+        style={{ width: '100%', height: '100%' }}>
 
-      {orphanages.map(orphanage => {
-        return(
-          <Map
-            center={[orphanage.latitude, orphanage.longitude]}
-            zoom={15}
-            style={{ width: '100%', height: '100%' }}
-          >
-            <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-            <Marker
-              icon={mapIcon}
-              position={[-22.7244976,-47.6381184]}
-            >
-              <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
-                Lar das meninas
-                <Link to="/orphanages/1">
-                  <FiArrowRight size={20} color="#fff" />
-                </Link>
-              </Popup>
-            </Marker>
+        {/* <TileLayer
+                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} /> */}
 
-            {/* <TileLayer
-              url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} /> */}
-          </Map>
-        );
-      })}
+        {orphanages.map(orphanage => {
+          return(
+              <Marker
+                icon={mapIcon}
+                position={[orphanage.latitude,orphanage.longitude]}
+                key={orphanage.id}>
+
+                <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
+                  {orphanage.name}
+                  <Link to={`/orphanages/${orphanage.id}`}>
+                    <FiArrowRight size={20} color="#fff" />
+                  </Link>
+                </Popup>
+
+              </Marker>
+
+          );
+        })}
+
+      </Map>
 
       <Link to="/orphanages/create" className="create-orphanage" >
         <FiPlus size={32} color="#FFF" />

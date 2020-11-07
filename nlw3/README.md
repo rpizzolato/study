@@ -994,3 +994,4 @@ interface Orphanage {
 ```ts
 const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 ```
+- ao fazer um `map()` para fazer um _looping_ dos orfanatos, precisamos adicionar uma propriedade chamada `key={orphanage.id}` no primeiro elemento HTML (no caso seria um `<Marker />`) que fica repetindo.
