@@ -994,4 +994,9 @@ interface Orphanage {
 ```ts
 const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 ```
-- ao fazer um `map()` para fazer um _looping_ dos orfanatos, precisamos adicionar uma propriedade chamada `key={orphanage.id}` no primeiro elemento HTML (no caso seria um `<Marker />`) que fica repetindo.
+- ao fazer um `map()` para fazer um _looping_ dos orfanatos, precisamos adicionar uma propriedade chamada `key={orphanage.id}` no primeiro elemento HTML (no caso seria um `<Marker />`) que fica repetindo;
+- agora na página `Orphanage.tsx`, vamos copiar o `useState` e `useEffect` igual a página `OrphanageMap.tsx`, e acrescentar os campos a mais que teremos dentro da _interface_. Algumas mudanças no _Hooks_ deverão ser feitas, conforme código:
+```ts
+
+```
+**observação**: um `if` deverá ser feito para testar se há um orfanato adicionado, senão podemos colocar algo avisando que está carregando ainda. Recomendado utilizar [shimmer effect](https://blog.rocketseat.com.br/react-native-shimmer/)

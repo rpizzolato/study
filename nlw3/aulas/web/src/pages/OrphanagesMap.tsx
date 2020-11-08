@@ -20,7 +20,6 @@ function OrphanagesMap() {
   //inicia o state orphanages com uma lista vazia
   const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 
-  console.log(orphanages);
 
   useEffect(() => {
     api.get('orphanages').then(response => {
