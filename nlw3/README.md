@@ -26,6 +26,9 @@
   - [3º Dia: Finalizando front-end](#3º-Dia:-Finalizando-front-end)
   - [Marcação no mapa](#Marcação-no-mapa)
   - [abstração com componentes](#abstração-com-componentes)
+  - [Interligando o front com o back-end](#Interligando-o-front-com-o-back-end)
+  - [Listando os orfanatos no mapa](#Listando-os-orfanatos-no-mapa)
+  - [detalhes do orfanato](#detalhes-do-orfanato)
   
 ### Trilha OmniStack: Workshop 01
 #### 1º Dia: Conceitos e estrutura web
@@ -994,9 +997,41 @@ interface Orphanage {
 ```ts
 const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 ```
-- ao fazer um `map()` para fazer um _looping_ dos orfanatos, precisamos adicionar uma propriedade chamada `key={orphanage.id}` no primeiro elemento HTML (no caso seria um `<Marker />`) que fica repetindo;
+- ao fazer um `map()` para fazer um _looping_ dos orfanatos, precisamos adicionar uma propriedade chamada `key={orphanage.id}` no primeiro elemento HTML (no caso seria um `<Marker />`) que fica repetindo.
+
+### detalhes do orfanato
 - agora na página `Orphanage.tsx`, vamos copiar o `useState` e `useEffect` igual a página `OrphanageMap.tsx`, e acrescentar os campos a mais que teremos dentro da _interface_. Algumas mudanças no _Hooks_ deverão ser feitas, conforme código:
 ```ts
+//...
+import { useParams } from "react-router-dom";
 
+interface Orphanage {
+  latitude: number;
+  longitude: number;
+  name: string;
+  description: string;
+  instructions: string;
+  opening_hours: string;
+  open_on_weekends: string;
+}
+
+interface OrphanageParams {
+  id: string;
+}
+
+export default function Orphanage() {
+  const params = useParams<OrphanageParams>();
+
+  const [orphanage, setOrphanage] = useState<Orphanage[]>();
+
+  useEffect(() => {
+    api.get(`orphanages/${params.id}`).then(response => {
+      setOrphanage(response.data);
+    });
+  }, [params.id]);
+
+  if (!orphanage) {
+    return <p>Carregando...</p>
+  }
 ```
-**observação**: um `if` deverá ser feito para testar se há um orfanato adicionado, senão podemos colocar algo avisando que está carregando ainda. Recomendado utilizar [shimmer effect](https://blog.rocketseat.com.br/react-native-shimmer/)
+**observação**: um `if` deverá ser feito para testar se há um orfanato adicionado, senão podemos colocar algo avisando que está carregando ainda. Recomendado utilizar [shimmer effect](https://blog.rocketseat.com.br/react-native-shimmer/). Os osfatanos estão vindo do backend no formato `http://localhost:3333/orphanages/1`, logo precisamos pegar esse numeral `1` via parâmetro. Para isso importe o `useParams` do pacote `react-router-dom`.
