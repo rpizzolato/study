@@ -1009,10 +1009,14 @@ interface Orphanage {
   latitude: number;
   longitude: number;
   name: string;
-  description: string;
+  about: string;
   instructions: string;
   opening_hours: string;
   open_on_weekends: string;
+  images: Array<{
+    id: number,
+    url: string
+  }>;
 }
 
 interface OrphanageParams {
@@ -1034,4 +1038,52 @@ export default function Orphanage() {
     return <p>Carregando...</p>
   }
 ```
-**observação**: um `if` deverá ser feito para testar se há um orfanato adicionado, senão podemos colocar algo avisando que está carregando ainda. Recomendado utilizar [shimmer effect](https://blog.rocketseat.com.br/react-native-shimmer/). Os osfatanos estão vindo do backend no formato `http://localhost:3333/orphanages/1`, logo precisamos pegar esse numeral `1` via parâmetro. Para isso importe o `useParams` do pacote `react-router-dom`.
+**observação**: um `if` deverá ser feito para testar se há um orfanato adicionado, senão podemos colocar algo avisando que está carregando ainda. Recomendado utilizar [shimmer effect](https://blog.rocketseat.com.br/react-native-shimmer/). Os orfanatos estão vindo do backend no formato `http://localhost:3333/orphanages/1`, logo precisamos pegar esse numeral `1` via parâmetro. Para isso importe o `useParams` do pacote `react-router-dom`.
+- para listar as imagens, crie um map para retornar imagem por imagem:
+```ts
+{orphanage.images.map(image => {
+  return(
+    <button key={image.id} className="active" type="button">
+      <img src={image.url} alt={orphanage.name} />
+    </button>
+  );
+})}
+```
+- para listar se o orfanato abre aos finais de semana, criaremos um `if` ternário (`?`,`:`):
+```ts
+<div className="open-details">
+  <div className="hour">
+    <FiClock size={32} color="#15B6D6" />
+    Segunda à Sexta <br />
+    {orphanage.opening_hours}
+  </div>
+  {orphanage.open_on_weekends ? (
+    <div className="open-on-weekends">
+      <FiInfo size={32} color="#39CC83" />
+      Atendemos <br />
+      fim de semana
+    </div>
+  ) : (
+    <div className="open-on-weekends dont-open">
+      <FiInfo size={32} color="#FF669D" />
+      Não atendemos <br />
+      fim de semana
+    </div>
+  )}
+</div>
+```
+**observação**: é criado um novo estilo chamado `dont-open` para tratar o CSS caso não o orfanato não atenda aos finais de semana:
+```css
+.orphanage-details .orphanage-details-content .open-details div.open-on-weekends.dont-open {
+  background: linear-gradient(154.16deg, #FDF8F5 7.85%, #FFFFFF 91.03%);
+  border: 1px solid #FFBCD4;
+  color: #FF669D;
+}
+```
+- para definir uma rota no Google Maps, utilizamos:
+```ts
+<footer>
+  <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/dir/?api=1&destination=${orphanage.latitude},${orphanage.longitude}`}>Ver rotas no Google Maps</a>
+</footer>
+```
+**observação**: lembre-se, quando utilizar a propriedade `_blank`, use também `rel="noopener noreferrer"` para evitar [essa](https://blog.saninternet.com/vulnerabilidade-tag-target_blank) vulnerabilidade.
