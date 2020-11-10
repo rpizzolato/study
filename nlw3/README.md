@@ -1087,3 +1087,30 @@ export default function Orphanage() {
 </footer>
 ```
 **observação**: lembre-se, quando utilizar a propriedade `_blank`, use também `rel="noopener noreferrer"` para evitar [essa](https://blog.saninternet.com/vulnerabilidade-tag-target_blank) vulnerabilidade.
+
+### Imagem ativa do orfanato
+- para definirmos isso, será necessário criar outro estado no código, agora para controlar a imagem ativa, logo crie:
+```ts
+//inicia activeImageIndex = 0
+const [activeImageIndex, setActiveImageIndex] = useState(0);
+```
+- agora lá na renderização da imagem, troque o valor `0` do array `images` para `activeImageIndex`, assim na mudança via `button`, ao trocar o valor da array `images`, será renderizado uma nova imagem. No `button` adicionamos o evento `onClick` e dentro uma _arrow function_ recebendo `setActiveImageIndex`. Vale lembrar que na função `map()`, o primeiro parâmetro em o _array_ em si, e o segundo é seu _index_.
+```ts
+<img src={orphanage.images[activeImageIndex].url} alt={orphanage.name} />
+//...
+<div className="images">
+  {orphanage.images.map((image, index) => {
+    return(
+      <button 
+        key={image.id} 
+        className={} 
+        type="button"
+        onClick={() => {
+          setActiveImageIndex(index);
+        }}>
+        <img src={image.url} alt={orphanage.name} />
+      </button>
+    );
+  })}
+</div>
+```
