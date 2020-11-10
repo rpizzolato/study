@@ -1114,3 +1114,53 @@ const [activeImageIndex, setActiveImageIndex] = useState(0);
   })}
 </div>
 ```
+
+### Criação de orfanato
+- primeiro é necessário recuperar a latitude e longitude no mapa assim que o usuário clicar. Para isso vamos importa `import { LeafletMouseEvent } from 'leaflet';` e criar uma função para ligar com a recuperação da localização. Também é necessário criar um novo `useState()` para ligar com o armazenamento das posições, as quais irão começar zerados:
+```ts
+const [position, setPosition] = useState({ latitude: 0, longitude: 0});
+
+function handleMapClick(event: LeafletMouseEvent) {
+  const { lat, lng } = event.latlng;
+
+  setPosition({
+    latitude: lat,
+    longitude: lng
+  }) 
+}
+```
+- agora em `<Map>` vamos incluir a função `onClick`, que receberá a função `handleMapClick()` e enviará via `event` as informações de latitude e longitude. Na marcação do ícone no mapa, por meio do `<Marker>`, criaremos uma condição `true`/`false` utilizando `&&` (basicamente é um operador ternário sem a última condição `:`, que serve como se fosse um `else`):
+```ts
+<Map 
+  center={[-22.7244976,-47.6381184]} 
+  style={{ width: '100%', height: 280 }}
+  zoom={14}
+  onclick={handleMapClick}
+>
+  <TileLayer 
+    url={`https://a.tile.openstreetmap.org/{z}/{x}/{y}.png`}
+  />
+
+  //caso latitude seja diferente de 0, renderize <Marker>
+  { position.latitude !== 0 && (
+    <Marker 
+      interactive={false} 
+      icon={mapIcon} 
+      position={[
+        position.latitude,
+        position.longitude
+      ]} 
+    />
+  )}
+
+</Map>
+```
+- os campos `name`, `about`, `instructions` e `opening_hours` seguem o preenchimento comum de um formulários, existindo diversas formas de criá-lo, no entanto no React é cada campo pertencer a um `useState`, começando como vazio (`''`), como por exemplo:
+```ts
+const [name, setName] = useState('');
+```
+já no `input` referente a esse campo, inserimos as propriedades `value={name}` e `onChange={event => setName(event.target.value)}`, ficando:
+```ts
+<input id="name" value={name} onChange={event => setName(event.target.value)} />
+```
+- para ligar com o `submit` do formulário, criaremos uma função `handleSubmit()`. Na tag `<form>`, o `onSubmit` r
