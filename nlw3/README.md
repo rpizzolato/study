@@ -1163,4 +1163,11 @@ já no `input` referente a esse campo, inserimos as propriedades `value={name}` 
 ```ts
 <input id="name" value={name} onChange={event => setName(event.target.value)} />
 ```
-- para ligar com o `submit` do formulário, criaremos uma função `handleSubmit()`. Na tag `<form>`, o `onSubmit` r
+- para ligar com o `submit` do formulário, criaremos uma função `handleSubmit()`. Na tag `<form>`, o `onSubmit` receberá essa função. Dessa forma, no entanto, temos um problema, que quando o formulário é submetido, toda a página é recarregada. Para contornarmos isso, importaremos `FormEvent` do componente `react`, e na função `handleSubmit()` usaremos o parâmetro `event: FormEvent`, prevenindo o funcionamento padrão do formulário (quando preenchido um `input` por exemplo, ao submeter o `<form>`, não é apagado o que foi preenchido), ficando:
+```ts
+import React, { useState, FormEvent } from "react";
+//...
+function handleSubmit(event: FormEvent) {
+  event.preventDefault();
+}
+```
