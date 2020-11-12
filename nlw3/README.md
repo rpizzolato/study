@@ -1171,3 +1171,28 @@ function handleSubmit(event: FormEvent) {
   event.preventDefault();
 }
 ```
+### Upload das imagens
+- usaremos um campo `input` do  tipo `file`, em seu CSS ele estará com `display: none;`. Mudaremos o botão de adicionar imagens para um `<label>`, utilizando a propriedade `htmlFor` para referenciar o `input` do tipo `file`. No `input` em si, chamaremos a função `handleSelectImage` via `onChange`. Segurando `ctrl` em cima do `onChange` perceberemos que ele é do tipo `ChangeEvent<HTMLInputElement>`, mesmo tipo que daremos ao chamar a função `handleSelectImage(event: ChangeEvent<HTMLInputElement>)` com o parâmetro `event`. Lembrando que `ChangeEvent` é importado do _REACT_. Em `event` podemos chegar até o `files`, por meio de `event.target.files`.
+```ts
+function handleSelectImage(event: ChangeEvent<HTMLInputElement>) {
+    console.log(event.target.files);
+  }
+
+//...
+
+<div className="images-container">
+  <label
+    htmlFor="image[]"
+    className="new-image">
+    <FiPlus size={24} color="#15b6d6" />
+  </label>
+</div>
+
+<input 
+  multiple
+  type="file"
+  name="" 
+  id="image[]"
+  onChange={handleSelectImage}
+/>
+```
