@@ -1220,3 +1220,32 @@ function handleSelectImage(event: ChangeEvent<HTMLInputElement>) {
 
 </div>
 ```
+### Enviando os dados para o backend
+- como para inserção do orfanato o formato utilizado é o _multipart_ (e não _JSON_), teremos que criar um `FormData()` e usar o método `append`:
+```ts
+import { useHistory } from "react-router-dom";
+import api from "../services/api";
+//...
+const history = useHistory();
+
+const data = new FormData();
+
+    data.append('name', name);
+    data.append('about', about);
+    data.append('latitude', String(latitude));
+    data.append('longitude', String(longitude));
+    data.append('instructions', instructions);
+    data.append('opening_hours', opening_hours);
+    data.append('open_on_weekends', String(open_on_weekends));
+    
+    images.forEach(image => {
+      data.append('images', image);
+    })
+
+    await api.post('orphanages', data);
+
+    alert('Cadastro efetuado com sucesso!');
+
+    history.push('/app');
+```
+**observação**: o método `append()` apenas aceita valores `String()`. É utilizado `useHistory();` para redirecionarmos com o método `push()`. Quando enviamos `String(open_on_weekends)`, por ser do tipo _boolean_, mesmo colocando como `true`, irá retornar `false`.
