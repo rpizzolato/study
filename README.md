@@ -15,4 +15,4 @@
 9. <a href="./mao-no-codigo">Mão no Código</a><br>
 10. <a href="./nlw3">NLW#3 Rocketseat</a><br>
 11. <a href="./dicas-windows">Dicas Windows Baboo</a><br>
-12. <a href="./dicas-windows">Dicas Git/Github</a><br>
+12. <a href="./dicas-git">Dicas Git/Github</a><br>
