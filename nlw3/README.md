@@ -808,7 +808,8 @@ const mapIcon = Leaflet.icon({
 const mapIcon = Leaflet.icon({
   iconUrl: mapMarkerImg,
   iconSize: [58, 68],
-  iconAnchor: [29, 68]
+  iconAnchor: [29, 68],
+  popupAnchor: [58, 68]
 })
 ```
 - para abrir um _popup_ ao clicar no desenho, importaremos `Popup` do pacote _leaflet_. Dentro do `<Marker></Marker>` colocaremos `<Popup></Popup>`. Adicione também a propriedade `popupAnchor: [170, 2]`:
@@ -826,7 +827,16 @@ const mapIcon = Leaflet.icon({
 ```
 - para melhorar o CSS do popup, vamos adicionar a classe `className="map-popup"` em `<Popup>` e alterar o CSS em `orphanagesMap.css`:
 ```css
+#page-map .map-popup .leaflet-popup-content {
+  color: #0089a5;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 12px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 ```
 **observação**: a classe `.leaflet-popup-content-wrapper` é a padrão do _leaflet_ para alterarmos o _popup_. `.leaflet-popup-tip-container`é para formatar aquela flecha pequena na parte inferior, colocando `display=none`
 
