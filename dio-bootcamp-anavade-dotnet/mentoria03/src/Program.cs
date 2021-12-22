@@ -6,7 +6,8 @@ namespace mentoria03
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string nome = "rodrigo";
+            Console.WriteLine("Hello World, " + nome);
         }
     }
 }
