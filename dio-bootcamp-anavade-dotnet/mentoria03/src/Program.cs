@@ -1,4 +1,5 @@
 ﻿using System;
+using src.Entities;
 
 namespace mentoria03
 {
@@ -6,8 +7,11 @@ namespace mentoria03
     {
         static void Main(string[] args)
         {
-            string nome = "rodrigo";
-            Console.WriteLine("Hello World, " + nome);
+            Heroi arus = new Heroi();
+            arus.Nome = "Arus";
+            arus.PontosDeVida = 100;
+            arus.PontosDeMagia = 5;
+            Console.WriteLine("Hello World");
         }
     }
 }
