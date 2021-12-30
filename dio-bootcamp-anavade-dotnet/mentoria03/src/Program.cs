@@ -7,11 +7,11 @@ namespace mentoria03
     {
         static void Main(string[] args)
         {
-            Heroi arus = new Heroi();
-            arus.Nome = "Arus";
+            Heroi arus = new Heroi("Arus", "Mago");
             arus.PontosDeVida = 100;
             arus.PontosDeMagia = 5;
-            Console.WriteLine("Hello World");
+
+            Console.WriteLine("O nome do herói é: " + arus.Nome);
         }
     }
 }
