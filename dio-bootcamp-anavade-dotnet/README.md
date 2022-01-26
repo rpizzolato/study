@@ -3,8 +3,8 @@
 - Bootcamp disponível em [https://web.dio.me/track/decola-tech-2a-edicao](https://web.dio.me/track/decola-tech-2a-edicao)
 
 ### Sumário
-- [Primeiros passos com .NET](#Primeiros-passos-com-.NET)
-- [ Programando com Orientação a Objeto com C#](#Programando-com-Orientação-a-Objeto-com-C#)
+- [Primeiros passos com .NET](#primeiros-passos-com-.net)
+- [ Programando com Orientação a Objeto com C#](#programando-com-orientação-a-objeto-com-c#)
 
 # MENTORIA #3
 - Link da [mentoria](https://www.youtube.com/watch?v=bTgGQrU-WXU).
@@ -658,8 +658,7 @@ public void CriarArquivoTextoStream(String caminho, List<String> conteudo) {
     }
 }
 ```
-[revisão do using](#instruções-auxiliares)
-(testar se esse link funciona no github)
+- [revisão do using](#declaração-de-variáveis-e-constantes-locais)
 - o uso de **stream** é interessante e recomendado quando for fazer uma gravação de muitos dados (milhões talvez) para termos uma melhor consistência, o que não seria recomendado gravar de forma direta.
 
 #### Adicionar novas linhas em um arquivo
