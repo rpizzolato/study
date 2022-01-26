@@ -7,11 +7,26 @@ namespace mentoria03
     {
         static void Main(string[] args)
         {
-            Heroi arus = new Heroi("Arus", "Mago");
-            arus.PontosDeVida = 100;
-            arus.PontosDeMagia = 5;
+            Heroi arus = new Heroi("Arus", "Guerreiro");
+            Mago wedge = new Mago("Wedge", "Mago");
+            Inimigo kingMummy = new Inimigo("kingMummy", "Zumbi");
 
-            Console.WriteLine("O nome do herói é: " + arus.Nome);
+            Console.WriteLine("Arus " + arus.Atacar());
+            Console.WriteLine("King Mummy " + kingMummy.Atacar() + "\n");
+
+
+
+            if (arus.VAlorUltimoAtaque == kingMummy.VAlorUltimoAtaque)
+            {
+                Console.WriteLine("Empate, ambos deram dano de " + arus.VAlorUltimoAtaque);
+            } else if (arus.VAlorUltimoAtaque > kingMummy.VAlorUltimoAtaque)
+            {
+                kingMummy.ReceberDano(arus.VAlorUltimoAtaque - kingMummy.VAlorUltimoAtaque);
+                Console.WriteLine(arus.Nome + " venceu esse round");
+            } else {
+                arus.ReceberDano(kingMummy.VAlorUltimoAtaque - arus.VAlorUltimoAtaque);
+                Console.WriteLine(kingMummy.Nome + " venceu esse round");
+            }
         }
     }
 }

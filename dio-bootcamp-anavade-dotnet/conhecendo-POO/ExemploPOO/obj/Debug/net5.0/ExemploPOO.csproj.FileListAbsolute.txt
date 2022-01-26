@@ -1,0 +1,16 @@
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.exe
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.deps.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.runtimeconfig.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.runtimeconfig.dev.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ref\ExemploPOO.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\bin\Debug\net5.0\ExemploPOO.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.csproj.AssemblyReference.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.AssemblyInfoInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.AssemblyInfo.cs
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.csproj.CoreCompileInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ref\ExemploPOO.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\conhecendo-POO\ExemploPOO\obj\Debug\net5.0\ExemploPOO.genruntimeconfig.cache

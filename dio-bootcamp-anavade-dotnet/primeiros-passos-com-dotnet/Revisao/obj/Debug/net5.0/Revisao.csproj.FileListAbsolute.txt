@@ -1,0 +1,16 @@
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.exe
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.deps.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.runtimeconfig.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.runtimeconfig.dev.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\ref\Revisao.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\bin\Debug\net5.0\Revisao.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.csproj.AssemblyReference.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.AssemblyInfoInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.AssemblyInfo.cs
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.csproj.CoreCompileInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\ref\Revisao.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\primeiros-passos-com-dotnet\Revisao\obj\Debug\net5.0\Revisao.genruntimeconfig.cache
