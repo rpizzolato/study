@@ -764,3 +764,296 @@ FileHelper helper = new FileHelper();
 
 helper.DeletarArquivo(caminhoArquivoCopia);
 ```
+
+# Construtores, Propriedades, Delegates e Eventos em .NET
+## Construtures
+- Um construtor é um método especial, que contém o mesmo nome do seu tipo de classe, e tem o objetivo de definir valores padrão, limitar uma instância e facilitar a instanciação de um objeto.
+    - um construtor não possui um retorno
+    - um contrutor padrão é sempre definido quando não declaramos nenhum para sua classe
+    -uma classe pode ter mais de um construtor
+- quando você define um construtor, automaticamente o construtor padrão deixa de valor, ou seja, você não poderá usar um construtor sem parâmetros (ao menos que você defina isso)
+### Construtor privado
+- usado quando é necessário ter e garantir apenas uma instância da classe, também chamado de [singleton](https://pt.wikipedia.org/wiki/Singleton#:~:text=Singleton%20%C3%A9%20um%20(anti%2D),de%20acesso%20ao%20seu%20objeto.&text=Alguns%20projetos%20necessitam%20que%20algumas%20classes%20tenham%20apenas%20uma%20inst%C3%A2ncia.)
+
+`Log.cs` 
+```C#
+using System;
+
+namespace ExemploConstrutores.Models
+{
+    public class Log
+    {
+        private static Log _log;
+
+        public string PropriedadeLog { get; set; }
+
+        private Log()
+        {
+            
+        }
+
+        public static Log GetInstance()
+        {
+            if (_log == null)
+            {
+                _log = new Log();
+            }
+            return _log;
+        }
+    }
+}
+```
+
+`Program.cs`
+```C#
+static void Main(string[] args)
+{
+    Log log = Log.GetInstance();
+    log.PropriedadeLog = "Teste instancia";
+
+    Log log2 = Log.GetInstance();
+    System.Console.WriteLine(log2.PropriedadeLog);
+
+    //imorime "Teste instancia", mesmo sendo declarado outra variável
+}
+```
+
+### Chamando o contrutor da herança
+- quando, por exemplo, você cria o seu próprio construtor em uma determinada classe, e essa classe irá herdar suas informações para outra classe (classe Pessoa herda para classe Aluno, por exemplo), obrigatoriamente na classe que herdou as informações, você precisará criar um construtor com as mesmas regras do construtor da classe pai, e ainda usar a notação `base()`. **A ordem de executação dos construtores** SEMPRE será do que está na classe Pai e depois na classe filho. Vejamos um exemplo abaixo:
+
+`Pessoa.cs`
+```C#
+using System;
+
+namespace ExemploConstrutores.Models
+{
+    public class Pessoa
+    {
+        private string nome;
+        private string sobrenome;
+
+        //construtor definido manualmente
+        public Pessoa(string nome, string sobrenome)
+        {
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            System.Console.WriteLine("Construtor classe Pessoa");
+        }
+
+        public void Apresentar()
+        {
+            System.Console.WriteLine($"Olá, meu nome é: {nome} {sobrenome}");
+        }
+    }
+}
+```
+
+`Aluno.cs`
+```C#
+using System;
+
+namespace ExemploConstrutores.Models
+{
+    public class Aluno : Pessoa
+    {
+        //definimos o construtor a partir da classe Pessoa, usando base e os atributos necessários
+        //colocamos mais um atributo, disciplina. No entanto não é preciso usá-lo, pois é pertencente a classe filho, no caso Aluno
+        public Aluno(string nome, string sobrenome, string disciplina) : base(nome, sobrenome)
+        {
+            System.Console.WriteLine("Construtor classe Aluno");
+        }
+```
+
+## Getters e Setters
+- Get e Set serve para que você possa atribuir um valor em uma variável de maneira controlada e com validações. Se deixá-la publica e recevendo qualquer valor, há possibilidade de inserção de dados que não fazem sentido (como receve mês 13 na descrição de meses, por exemplo).
+```C#
+namespace ExemploConstrutores.Models
+{
+    public class Data
+    {
+        private int mes;
+
+        public int GetMes() {
+            return this.mes;
+        }
+
+        public void SetMes(int mes)
+        {
+            if (mes > 0 && mes <= 12)
+            {
+                this.mes = mes;
+            }
+        }
+    }
+}
+```
+### Propriedades
+- Em vez de criarmos métodos get e set, podemos usar a propriedade diretamente
+
+`Data.cs`
+```C#
+using System;
+
+namespace ExemploConstrutores.Models
+{
+    public class Data
+    {
+        private int mes;
+        private bool mesValido;
+
+        //value (lá no set) é pego quando depois de instanciado, na atribuição de valor, no caso lá na classe Program.cs
+        //data.Mes = 22;
+        //value no caso é o 22
+        public int Mes 
+        {
+            get 
+            {
+                return this.mes;
+            }
+            set
+            {
+                if (value > 0 && value <= 12)
+                {
+                    this.mes = value;
+                    this.mesValido = true;
+                }
+            }
+        }
+
+        public void ApresentarMes() {
+            if (this.mesValido)
+            {
+                System.Console.WriteLine(this.mes);
+            } else {
+                System.Console.WriteLine("Mês inválido");
+            }
+        }
+    }
+}
+```
+
+`Program.cs`
+```C#
+Data data = new Data();
+
+//na realidade aqui está fazendo o set definido lá na classe Data.cs, inclusive implantando a validação
+data.Mes = 22;
+
+//data.Mes é o mesmo que o GetMes
+System.Console.WriteLine(data.Mes);
+data.ApresentarMes();
+```
+```C#
+```
+## Modificadores
+#### Readonly
+- o modificador readonly (somente leitura) bloqueia um campo contra alterações que não sejam em sua inicialização ou pelo próprio construtor
+```C#
+public class Pessoa
+{
+    private readonly string nome = "Rodrigo";
+    private readonly string sobrenome;
+
+    public Pessoa(string nome, string sobrenome)
+    {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
+    public void AlterarNome()
+    {
+        //essa linha irá retornar erro, pois só podemos declarar algo no readonly na inicilização ou no construtor.
+        this.nome = "Nome alterado";
+    }
+}
+```
+#### Constante
+- uma constante representa uma valor que somente pode ser atribuído no momento de sua inicialização, e não pode ser modificado posteriormente (contrário de uma variável). **Não é possível declarar uma constante sem atribuir valor a ela**
+```C#
+static void Main(string[] args) {
+    cost double pi = 3.14;
+    System.Console.WriteLine(pi);
+
+    //essa linha irá retornar erro
+    pi = 0;
+}
+```
+
+## Delegates
+- Um delegate é uma maneira de passar um método como referência, podendo ser usado como um callback, aceitando qualquer método que contenha a mesma assinatura.
+```C#
+public class Calculadora
+{
+    public static void Somar(int num1, int num2)
+    {
+        System.Console.WriteLine($"Adição: {num1 + num2}");
+    }
+
+    public static void Subtrair(int num1, int num2)
+    {
+        System.Console.WriteLine($"Subtração: {num1 - num2}");
+    }
+}
+```
+```C#
+public delegate void operacao(int x, int y);
+
+static void Main(string[] args)
+{
+    //há duas maneiras de chamar o delegate, uma direto e outra usando new
+    Operacao op = new Operacao(Calculadora.Somar);
+    operacao op = Calculadora.Somar;
+
+    //ao chamar o delegate, também é possível de duas formas
+    op.Invoke(10, 10);
+    op(10, 10);
+}
+```
+### Multi Cast Delegate
+- uma maneira de realizar várias chamadas de métodos em um único delegate.
+```C#
+static void Main(string[] args)
+{
+    //há duas maneiras de chamar o delegate, uma direto e outra usando new
+    Operacao op = new Operacao(Calculadora.Somar);
+
+    //multi cast delegate. usa-se += para que op não perca a referêcia anterior
+    op += Calculadora.Subtrair;
+
+    operacao op = Calculadora.Somar;
+
+    //ao chamar o delegate, também é possível de duas formas
+    op.Invoke(10, 10);
+    op(10, 10);
+
+    //o resultado será: (sim, irá chamar ambos os métodos)
+    //Adição: 20
+    //Subtração: 0
+}
+```
+**lembrando que o multi cast delegate obedece uma ordem FIFO, o primeiro a entrar, é o primeiro a sair**
+
+## Eventos
+- eventos é um mecanismo de comunicação entre objetos, onde existe um publisher, que realiza o evento e o sbuscriver, que inscreve em um evento. Basicamente funciona quando você se inscreve para receber notícias de algum site. Após inscrito, todas novidades que são publicadas por esse determinado site, são disparados aos inscritos, as atualizações.
+```C#
+public class Calculadora
+{
+    //Delegate
+    public delegate void DelegateCalculadora();
+
+    //Evento
+    public static event DelegateCalculadora EventoCalculadora;
+
+    public static void Somar(int x, int y)
+    {
+        if (EventoCalculadora != null)
+        {
+            System.Console.WriteLine($"Adição: {x + y}");
+            EventoCalculadora();
+        } else {
+            System.Console.WriteLine("Nenhum inscrito");
+        }
+    }
+}
+
+```
