@@ -1055,5 +1055,782 @@ public class Calculadora
         }
     }
 }
+```
+
+# Fundamentos de Coleções e LINQ com .NET
+## Arrays
+- o array é uma estrutura de dados que armazena valores do mesmo tipo, com tamanho fixo. Conhecido também como **vetor**, **matriz** e **arranjo**.
+    - `int[] array = new int[4]`;
+    - `int[] array = new int[] { 42, 75, 77, 61};`(já coloca a capacidade do array como 4 posições)
+    - `string[] nomes = {"Jan", "Fev"}`;
+>**Observação**
+>
+>- tem que ser do mesmo tipo, e ter um tamanho fixo
+>- caso precise aumentar o tamanho, precisa-se criar um novo array com a capacidade desejada e copiar os dados do array anterior. **NÃO** pode mudar o tamanho quando já está em memória, seja para aumentar como para diminuir
+>- o que você pode, é alterar os valores, mas diminuir/aumentar seu tamanho, não é permitido
+>- para acessar a posição de um array, sempre use **n - 1**, sendo **n** a capacidade do array
+### Array Multidimensional
+- o array pode possuir mais de uma dimensão (semelhante ao Excel):
+```C#
+int[,] array = new int[4,2];
+```
+- 4 = número de linhas
+- 2 - número de colunas
+- ficando dessa forma:
+
+c1|c2   
+--|--
+1 | 2
+3 | 4
+5 | 6
+7 | 8
+
+- Acessar um valor: array[1,1]
+
+### Percorrendo um array
+```C#
+static void Main(string[] args)
+{
+    int[] arrayInteiros = new int[3];
+    
+    arrayInteiros[0] = 10;
+    arrayInteiros[1] = 20;
+    arrayInteiros[2] = 30;
+
+    //percorrer array com for
+    System.Console.WriteLine("Percorrendo o array pelo for");
+    for (int i = 0; i <arrayInteiros.Length; i++)
+    {
+        System.Console.WriteLine(arrayInteiros[i]);
+    }
+
+    //percorrer array com foreach
+    System.Console.WriteLine("Percorrendo o array pelo foreach");
+    foreach (var item in arrayInteiros)
+    {
+        System.Console.WriteLine(item);
+    }
+}
+```
+>**Observação**
+>
+>Caso você precise ter um controle nas posições em que o array está, é recomendável que use a condição **for**, pois com ela você consegue usar colchetes `[]` para indicar a posição com um contador.
+### Debugando um array
+- para debugar, tenha certeza que a extensão do C# esteja rodando, caso não esteja, apertar **F1** para escolher o projeto por meio do **OmniSharp: Select Project** e escolhendo a **sln**.
+- depois aperte **F5**, selecione o ambiente **.NET Core**, e irá ser criado um arquivo **json** automaticamente.
+- aperte **F10** para ir debugando passo a passo
+
+### Acessando um array de forma segura
+```C#
+int[] arrayInteiros = new int[3];
+
+arrayInteiros[0] = 10;
+arrayInteiros[1] = 20;
+
+//se for um número mesmo sendo string, o método int.Parse() tenta corrigir
+arrayInteiros[2] = int.Parse("30");
+
+//aqui dará uma excessão que excedeu os limites do array, e quebrará o programa
+arrayInteiros[3] = 40;
+```
+
+### Array Multidimensional (prática)
+- inserindo e percorrendo os elementos:
+```C#
+//array multidimensional com 4 linhas e 2 colunas
+int[,] matriz = new int[4,2]
+{
+    { 8, 8 },//linha e coluna respectivamente
+    { 10, 20 },
+    { 50, 100 },
+    { 90, 200 },
+};
+
+//for para percorrer as linhas
+for (int i = 0; i < matriz.GetLength(0); i++)
+{
+    //for para percorrer as colunas
+    for (int j = 0; j < matriz.GetLength(1); j++)
+    {
+        System.Console.WriteLine(matriz[i, j]);
+    }
+}
+```
+
+## Manipulando Arrays
+### Ordenando Arrays
+- para ordernar um array, existem diversos algoritmos de ordenação, diferentes técnicas e casos a serem considerados
+
+⠀|⠀|⠀|⠀|⠀|⠀|⠀|⠀|⠀|
+-|-|-|-|-|-|-|-|-|
+valores não ordenados|12|5|15|14|1|18|4|15
+valores ordenados|1|4|5|12|14|15|15|18
+
+#### Bubble sort
+- usando o *bubble sort*, será feito diversos laços comparando o valor atual com o próximo, e invertendo as posições caso o valor anterior seja maior que o ulterior. O *bubble sort* é recomendado para arrays pequenos:
+
+`OperacoesArray.cs`
+```C#
+using System;
+
+namespace Colecoes.Helper
+{
+    public class OperacoesArray
+    {
+        //passaremos como ref para garantirmos que o retorno será o mesmo array
+        public void OrdenarBubbleSort(ref int[] array)
+        {
+            int temp = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array.Length -1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        temp = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+        }
+
+        public void ImprimirArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                System.Console.WriteLine(array[i]);
+            }
+        }
+    }
+}
+```
+
+`Program.cs`
+```C#
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+
+OperacoesArray op = new OperacoesArray();
+
+System.Console.WriteLine("Array original");
+op.ImprimirArray(array);
+
+op.OrdenarBubbleSort(ref array);
+
+System.Console.WriteLine("Array ordenado");
+op.ImprimirArray(array);
+```
+
+#### Debugando o Bubble sort
+- como melhoria, vamos transformar a impressão do array em uma única linha, usando:
+```C#
+public void ImprimirArray(int[] array)
+{
+    //usamos Join(), colocamos vírgula e um espaço em branco + a nossa array
+    var linha = string.Join(", ", array);
+    System.Console.WriteLine(linha);
+}
+```
+
+#### Classe Array
+- a classe Array é uma classe do C# que nos oferece diversos métodos que nos auxiliam a trabalhar com arrays
+
+#### Ordenação pela Classe Array
+```C#
+using System;
+
+public void Ordenar(ref int[] array)
+{
+    Array.Sort(array);
+}
+```
+
+#### Copiar um array para outro
+- usaremos o método `void Array.Copy(Array sourceArray, Array destinationArray, int length)`. No terceiro argumento geralmente usamos `array.Length` para usar todo o tamanho do array
+```C#
+public void Copiar(ref int[] array, ref int[]arrayDestino)
+{
+    Array.Copy(array, arrayDestino, array.Length);
+}
+```
+```C#
+OperacoesArray op = new OperacoesArray();
+
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+int[] arrayCopia = new int[10];
+
+System.Console.WriteLine("Array antes da cópia:");
+op.ImprimirArray(arrayCopia);
+
+op.Copiar(ref array, ref arrayCopia);
+System.Console.WriteLine("Array após a cópia");
+op.ImprimirArray(arrayCopia)
+```
+#### Verificando um elemento existente (retornando true ou false)
+```C#
+public bool Existe(int[] array, int valor)
+{
+    //pode-se usar a expressão quer for necessária >=, !=, por exemplo
+    //essa expressão é um Predicate
+    return Array.Exists(array, elemento => elemento == valor);
+}
+```
+```C#
+OperacoesArray op = new OperacoesArray();
+
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+int[] arrayCopia = new int[10];
+
+var valorProcurado = 1;
+bool existe = op.Existe(array, valorProcurado);
+if (existe)
+{
+    System.Console.WriteLine("Encontrei o valor: {0}", valorProcurado);
+} else {
+    System.Console.WriteLine("Não encontrei o valor: {0}", valorProcurado);
+}
+```
+
+#### verificando todos os elementos do array
+```C#
+public bool TodosMaiorQue(int[] array, int valor)
+{
+    return Array.TrueForAll(array, elemento => elemento > valor);
+}
+```
+```C#
+OperacoesArray op = new OperacoesArray();
+
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+int[] arrayCopia = new int[10];
+
+var valorProcurado = 0;
+
+bool todosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
+
+if (todosMaiorQue)
+{
+    System.Console.WriteLine("Todos os valores são maior que {0}", valorProcurado);
+} else {
+    System.Console.WriteLine("Existe valores que não são maiores do que {0}", valorProcurado);
+}
+```
+
+#### Encontrando um elemento no array
+```C#
+public int ObterValor(int[] array, int valor)
+{
+    return Array.Find(array, elemento => elemento == valor);
+}
+```
+```C#
+OperacoesArray op = new OperacoesArray();
+
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+int[] arrayCopia = new int[10];
+
+var valorProcurado = 9;
+                //se ObterValor não encontrar o valor, será retornado 0 (zero), que é o valo padrão de int
+int valorAchado = op.ObterValor(array, valorProcurado);
+
+//se na condição não achar o valor procurado, é retornado o valor padrão do tipo, que o caso é 0 (zero)
+if (valorAchado > 0)
+{
+    System.Console.WriteLine("Encontrei o valor");
+} else {
+    System.Console.WriteLine("Não encontrei o valor");
+}
+```
+
+#### Encontrando o índice de um valor
+- podemos usar tanto `int Array.FindIndex<T>(T[] array, int startIndex, int count, Predicate<T> match)`, que é possível usar um `Predicate` para formularmos a expressão que desejamos. Como também é possível usar `int Array.IndexOf(Array array, object? value)` que vai receber diretamente o valor a ser comparado, sempre buscando a igualdade.
+- caso o `int Array.IndexOf(Array array, object? value)` não encontre o valor que procuramos, ele irá retornar `-1` (retorna `-1` pois se retornasse `0`, é uma posição no array)
+```C#
+public int ObterIndice(int[] array, int valor)
+{
+    return Array.IndexOf(array, valor);
+}
+```
+```C#
+OperacoesArray op = new OperacoesArray();
+
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+int[] arrayCopia = new int[10];
+
+var valorProcurado = 9;
+
+int indice = op.ObterIndice(array, valorProcurado);
+//é retornado -1, pois 0 poderia ser uma posição no array
+if (indice > -1)
+{
+    System.Console.WriteLine("O índice do elemento {0} é: {1}", valorProcurado, indice);
+} else {
+    System.Console.WriteLine("Valor não existente no array");
+}
+```
+
+#### Redimensionando um array
+- usaremos `void Array.Resize<int>(ref int[]? array, int newSize)`
+```C#
+public void RedimencionarArray(ref int[] array, int novoTamanho)
+{
+    Array.Resize(ref array, novoTamanho);
+}
+```
+```C#
+int[] array = new int[5] { 6, 3, 8, 1, 9};
+
+System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+
+//vamos dobrar o tamanho do array
+op.RedimencionarArray(ref array, array.Length * 2);
+
+System.Console.WriteLine($"Capacidade atual do array após redimencionar: {array.Length}");
+```
+>**Observação**
+>
+>É importante ressaltar que por trás dos panos, o que o método `Resize()` faz é criar um novo array e passa a referenciá-lo.
+
+#### Converter um array (de um tipo para outro | int para string, por exemplo)
+- usaremos `TOutput[] Array.ConvertAll<TInput, TOutput>(TInput[] array, Converter<TInput, TOutput> converter)`
+```C#
+public string[] ConverterParaArrayString(int[] array)
+{
+    return Array.ConvertAll(array, elemento => elemento.ToString());
+}
+```
+```C#
+string[] arrayString = op.ConverterParaArrayString(array);
+```
+## Coleções genéricas
+- No C#, existem classes de coleções que agrupam valores, e essas classes são padronizadas para as operações mais comuns, como:
+    - Ordenação
+    - Obter valor por índice
+    - Obter valor com expressões
+    - Trabalhar com tamanhos dinâmicos
+- Classes `System.Collections.Generic`
+    - você pode criar uma coleção genérica usando uma das classes no namespace `System.Collections.Generic`. Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. Uma coleção genérica impões tipagem forte, permitindo que apenas o tipo de dados desejado seja adicionao.
+- Vejamos algumas das classes frequentemente usadas no namespace `System.Collections.Generic`:
+
+Classe | Descrição
+-------|----------
+`Dictionary<TKey,TValue>` | Representa uma coleção de pares chave-valor organizadas com base na chave
+`List<T>` | Representa uma lista de objetos que podem ser acessados por índice. Fornece métodos para pesquisar, classificar e modificar listas
+`Queue<T>` | Representa uma coleção de objetos PEPS(primeiro a entrar, primeiro a sair)
+`SortedList<TKey,TValue>` | Representa uma coleção de pares chave/valor que são classificados por chave com base na implementação de `IComparer<T>` associada.
+
+### Coleção List<T>
+```C#
+using System;
+using System.Collections.Generic;
+using Colecoes.Helper;
+
+namespace Colecoes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> estados = new List<string>();
+
+            //adicionar itens
+            estados.Add("SP");
+            estados.Add("RJ");
+            estados.Add("MG");
+
+            //Count para obter quantidade de itens na lista
+            System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}\n");
+
+            //exibir os elementos da lista com foreach
+            System.Console.WriteLine("Impressão pelo foreach");
+            foreach (var item in estados)
+            {
+                System.Console.WriteLine(item);
+            }
+
+            System.Console.WriteLine("\nImpressão usando for");
+            for (int i = 0; i < estados.Count; i++)
+            {
+                System.Console.WriteLine($"Índice {i}, Valor: {estados[i]}");
+            }
+        }
+    }
+}
 
 ```
+
+### Remoção de elementos List<T>
+- vamos dar uma melhorada na classe `OperacoesLista.cs` colocando um método para impressão da lista:
+```C#
+public void ImprimirListaString(List<string> lista)
+{
+    for (int i = 0; i < lista.Count; i++)
+    {
+        System.Console.WriteLine($"Índice {i}, Valor: {lista[i]}");
+    }
+}
+```
+```C#
+OperacoesLista opLista = new OperacoesLista();
+List<string> estados = new List<string>();
+estados.Add("SP");
+estados.Add("MG");
+estados.Add("RJ");
+
+System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}\n");
+
+opLista.ImprimirListaString(estados);
+
+estados.Remove("MG");
+
+System.Console.WriteLine("Removendo o elemento");
+
+opLista.ImprimirListaString(estados);
+```
+>**Observação**
+>
+>Apesar de `MG` estar na posição `[1]`, quando o excluímos com `estados.Remove("MG")`, `RJ` passa ocupar a posição `[1]`, remanejando toda a lista, inclusive atualizando seu tamanho retornado pelo `Count` 
+
+### Adicionando coleções na lista
+- podemos incluir valores na lista já na sua inicialização, dessa forma `List<string> estados = new List<string> { "SP", "MG", "BA" };`
+- caso seja necessário adicionar novos valores a essa lista (sem apagar os anteriores), podemos usar o métodos `void List<string>.AddRange(IEnumerable<string> collection)`, da seguinte forma:
+```C#
+OperacoesLista opLista = new OperacoesLista();
+List<string> estados = new List<string> { "SP", "MG", "BA" };
+string[] estadosArray = new string[2] { "SC", "MT" };//novos valores
+
+System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}\n");
+
+opLista.ImprimirListaString(estados);
+
+estados.AddRange(estadosArray);
+System.Console.WriteLine("Adicionado novos valores");
+
+opLista.ImprimirListaString(estados);
+```
+
+### Adicionar elemento por índice (em um ponto específico)
+- usaremos `void List<string>.Insert(int index, string item)`, como abaixo:
+```C#
+OperacoesLista opLista = new OperacoesLista();
+List<string> estados = new List<string> { "SP", "MG", "BA" };
+string[] estadosArray = new string[2] { "SC", "MT" };
+
+System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}\n");
+
+opLista.ImprimirListaString(estados);
+
+//repectivamente, 1 é o índice que queremos adicionar, e "RJ" é o elemento
+estados.Insert(1, "RJ");
+System.Console.WriteLine("Adicionado novos valores");
+
+opLista.ImprimirListaString(estados);
+```
+>**Observação**
+>
+>A capacidade da lista, ou seja, o seu `Count` já é atualizado automaticamente
+
+
+## Coleções específicas
+- as coleções específicas implementam regras para sua ordem de acesso e manupilação de seus elementos, são elas
+    - **Queue (Fila)**: Obedece a ordem FIFO (Fist In First Out)
+    - **Stack (Pilha)**: Obedece a ordem LIFO (Last In First Out)
+
+### Implementando uma Queue
+- utilizaremos a classe `Queue<T>` pertencente a `System.Collections.Generic`
+```C#
+using System;
+using System.Collections.Generic;
+using Colecoes.Helper;
+
+namespace Colecoes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> fila = new Queue<string>();
+
+            //Enqueue() adiciona elemento à fila
+            fila.Enqueue("Rodrigo");
+            fila.Enqueue("Fulano");
+            fila.Enqueue("Ciclano");
+
+            System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+
+            //while para percorrermos e remover elementos da fila
+            while (fila.Count > 0)
+            {
+                //Peek() pega o primeiro elemento da fila (o que está na frente da fila)
+                System.Console.WriteLine($"Vez de: {fila.Peek()}");
+
+                //Dequeue() mostra e remove o elemento da fila (o que está na frente da fila)
+                System.Console.WriteLine($"{fila.Dequeue()} atendido!");
+            }
+
+            System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+        }
+    }
+}
+
+```
+>**Observação**
+>
+>Não há um método para remover elemento da fila por posição, pois a fila precisa obedecer a ordem FIFO.
+
+### Implementando uma Stack
+```C#
+using System;
+using System.Collections.Generic;
+using Colecoes.Helper;
+
+namespace Colecoes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<string> pilhaLivros = new Stack<string>();
+
+            //insere o objeto no topo da pilha
+            pilhaLivros.Push(".NET");
+            pilhaLivros.Push("DDD");
+            pilhaLivros.Push("Código Limpo");
+
+            //retorna 3
+            System.Console.WriteLine($"Livros para a leitura: {pilhaLivros.Count}");
+
+            //Leitura da pilha
+            while(pilhaLivros.Count > 0) //enquanto houver elementos
+            {
+                 //exibe o objeto no topo da pilha, mas sem removê-lo
+                System.Console.WriteLine($"Próximo livro para leitura: {pilhaLivros.Peek()}");
+
+                //obtem o livro no topo da pilha e o remove da pilha
+                System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso!");
+            }
+
+            //retorna 0
+            System.Console.WriteLine($"Livros para a leitura: {pilhaLivros.Count}");
+        }
+    }
+}
+
+```
+
+## Dicionários
+- um dicionário é uma coleção de chave e valor, permitindo que você recupere rapidamente seus itens baseado em sua chave.
+- o dicionário armazena a sua chave em hash
+- criação: `Dictionary<string, string> estados = new Dictionary<string,string>()`
+```C#
+using System;
+using System.Collections.Generic;
+using Colecoes.Helper;
+
+namespace Colecoes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, string> estados = new Dictionary<string, string>();
+
+            //adicionar (NÃO pode repetir chaves, apenas os valores)
+            estados.Add("SP", "São Paulo");
+            estados.Add("MG", "Minas Gerais");
+            estados.Add("BA", "Bahia");
+
+            //percorrer o dicionário
+            foreach (KeyValuePair<string, string> item in estados)
+            {
+                System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            }
+        }
+    }
+}
+```
+>**Observação**
+>
+>Não podemos ter chaves repetidas! Os valores podem, mas as chaves, **NÃO**!
+
+### Acessando um valor do Dictionary
+```C#
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+//adicionar (NÃO pode repetir chaves)
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
+
+string valorProcurado = "BA";
+//passar o valor a ser procurado pela chave (entre colchete)
+//apesar de estar passando a chave, o retorno SEMPRE será o valor
+System.Console.WriteLine(estados[valorProcurado]);
+
+//retornará Bahia
+```
+
+### Atualizando um valor do Dictionary
+```C#
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+//adicionar (NÃO pode repetir chaves)
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
+
+string valorProcurado = "BA";
+
+System.Console.WriteLine($"Valor original");
+System.Console.WriteLine(estados[valorProcurado]);
+
+//Atualização do valor
+estados[valorProcurado] = "BA - Teste Atualização";
+
+System.Console.WriteLine($"Valor atualizado");
+System.Console.WriteLine(estados[valorProcurado]);
+```
+
+### Removendo um valor do Dictionary
+```C#
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+//adicionar (NÃO pode repetir chaves)
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
+
+//percorrer o dicionário
+foreach (KeyValuePair<string, string> item in estados)
+{
+    System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+//valor original
+string valorProcurado = "BA";
+
+System.Console.WriteLine($"Removendo o valor: {valorProcurado}");
+
+//para remover basta informarmos a chave desejada
+estados.Remove(valorProcurado);
+
+foreach (KeyValuePair<string, string> item in estados)
+{
+    System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+```
+
+### Acessando de maneira segura o Dictionary
+- sempre que tentarmos acessar uma chave que não exista, retornará uma excessão, e nosso programa será interrompido (semelhante a quando tentamos acessar um índice que está fora da delimitação de um array, por exemplo)
+- para evitar isso, e termos um acesso mais seguro, usaremos `bool Dictionary<string, string>.TryGetValue(string key, out string value)`. Esse método tenta obter o valor do Dictionary, e caso encontre algo, conforme informando no primeiro argumento, ele retorna no segundo argumento o que encontrou.
+```C#
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+//adicionar (NÃO pode repetir chaves)
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
+
+//valor original
+string valorProcurado = "BA";
+
+//tentar acessar diretamente um estado que não existe, o programa quebra
+//var teste = estados["SC"];
+
+//mesmo que não exista o valor, dessa forma não deixa o programa quebrar
+if (estados.TryGetValue(valorProcurado, out string estadoEncontrado))
+{
+    System.Console.WriteLine(estadoEncontrado);
+    //retorna Bahia
+} else {
+    System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionário");
+}
+```
+## Operações LINQ
+- recurso presente desde 2008 no C#, mas bem útil até os dias de hoje.
+- significa **L**anguage-**IN**tegrated **Q**uery (LINQ)
+- LINQ é uma maneira de você utilizar uma sintaxe de consulta padronizada para coleções de objetos
+Exemplo
+```C#
+int[] numbers = { 5, 10, 8, 3, 6, 12 };
+
+//Query syntax:
+IEnumerable<int> numQuery1 =
+    from num in numbers
+    where num % 2 ==0
+    orderby num
+    select num;
+
+//Method syntax:
+IEnumerable<int> numQuery2 = numbers.Where(num => num % 2 == 0).OrderBy(n => n).ToList();
+```
+>**Observação**
+>
+>1. Ambos os casos são idênticos em relação ao tratamento e a performance
+>2. Lembre-se de adicionar `using System.Linq;`
+
+### Exemplo na prática de como obter números pares de uma lista (array)
+`Program.cs`
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Colecoes.Helper;
+
+namespace Colecoes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arrayNumeros = new int[5] { 1, 4, 8, 15, 19 };
+
+            //Query syntax:
+            var numerosPares = 
+                from num in arrayNumeros
+                where num % 2 == 0
+                orderby num
+                select num;
+
+            //Method syntax:
+            var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+
+            System.Console.WriteLine("Números pares query: " + string.Join(", ", numerosPares));
+            System.Console.WriteLine("Números pares método: " + string.Join(", ", numerosParesMetodo));
+        }
+    }
+}
+```
+
+### Obtendo valores mínimo, máximo e médio com LINQ
+```C#
+int[] arrayNumeros = new int[7] { 100, 1, 4, 0, 8, 15, 19 };
+
+var minimo = arrayNumeros.Min();
+var maximo = arrayNumeros.Max();
+var medio = arrayNumeros.Average();
+
+System.Console.WriteLine($"Mínimo: {minimo}");
+System.Console.WriteLine($"Máximo: {maximo}");
+System.Console.WriteLine($"Médio: {medio}");
+```
+
+### Sum e Distinct
+- `Sum()` somar todos os elementos presentes na coleção
+- `Distinct()` retorna uma nova coleção com valores únicos
+```C#
+int[] arrayNumeros = new int[10] { 100, 1, 4, 0, 8, 15, 19, 19, 4, 100 };
+
+var soma = arrayNumeros.Sum();
+var arrayUnico = arrayNumeros.Distinct().ToArray();
+
+System.Console.WriteLine($"Soma: {soma}");
+System.Console.WriteLine($"Array original: {string.Join(", ", arrayNumeros)}");
+System.Console.WriteLine($"Array distinto: {string.Join(", ", arrayUnico)}");
+```
+>**Resultado**
+><br>
+>Soma: 270<br>
+>Array original: 100, 1, 4, 0, 8, 15, 19, 19, 4, 100<br>
+>Array distinto: 100, 1, 4, 0, 8, 15, 19

@@ -1,0 +1,16 @@
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.exe
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.deps.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.runtimeconfig.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.runtimeconfig.dev.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\ref\Colecoes.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\bin\Debug\net5.0\Colecoes.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.csproj.AssemblyReference.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.AssemblyInfoInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.AssemblyInfo.cs
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.csproj.CoreCompileInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\ref\Colecoes.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\FundamentosColecoesLINQ\Colecoes\obj\Debug\net5.0\Colecoes.genruntimeconfig.cache
