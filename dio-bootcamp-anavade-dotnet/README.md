@@ -6,6 +6,9 @@
 - [Primeiros passos com .NET](#primeiros-passos-com-.net)
 - [ Programando com Orientação a Objeto com C#](#programando-com-orientação-a-objeto-com-c#)
 
+# MENTORIA #2
+- 
+
 # MENTORIA #3
 - Link da [mentoria](https://www.youtube.com/watch?v=bTgGQrU-WXU).
 
@@ -1834,3 +1837,100 @@ System.Console.WriteLine($"Array distinto: {string.Join(", ", arrayUnico)}");
 >Soma: 270<br>
 >Array original: 100, 1, 4, 0, 8, 15, 19, 19, 4, 100<br>
 >Array distinto: 100, 1, 4, 0, 8, 15, 19
+
+# Introdução a microserviços com .NET
+## por que microserviços?
+- analogia com uma colméia, que "uma junta a outra"
+- monolitos (sistema grande único):
+    - rápido e fácil para iniciar
+    - infraestrutura simples
+    - debug rápido, fascinante<br/>
+    **Problemas**
+    - problemas com merge-conflicts
+    - conexões simultâneas TCP é limitada
+    - deadlock e concorrência
+    - bugs e defeitos colaterais(único ponto de falha)
+    - build/deploy longos e pesados
+    - **Baixa escalabidade**
+    - agregação de tecnologia
+    - demora de aculturamento
+    - etc
+
+## pensando em escalabidade vertical x horizontal
+- escalabilidade vertical (a longo prazo, tudo vai ficando mais pesado e caro)
+    - mais memória
+    - mais processamento
+- escalabidade horizontal (mais micros, também vai ficando mais caro e pesado)
+    - load balancer (micro que também precisa de escalabidade)
+    - escalar verticalmente nesses computadores também
+- [https://martinfowler.com/articles/microservices.html](https://martinfowler.com/articles/microservices.html)
+>- A monolithic application puts all its functionality into a single process...and scales by replicanting the monolith on multiple servers<br/>
+>- A microservices architecture puts each element of functionality into a separate service... and scales by distributing these services across servers, replcating as needed.
+- escalabidade horizontal com microsserviços
+    - API manager Load Balancer para os vários microserviços
+    - uma anologia ao e-comerce, seria um microsserviço para o carrinho de compras, uma outro para descrição do produto, etc. Nisso vai escalando o que for preciso considerando a demanda.
+
+## Metodologia Ágil
+- microserviço em si, é uma forma de metodologia ágil
+
+## Ecossistema de Microsserviços
+- a cada microsserviço, eu preciso de um BD, pois se precisar escalar, escala o BD junto.
+- dentro de um **Shopping Cart UI** (podemos segregar)
+    - **User Account**
+        - Web Pages
+        - Classes
+        - Config Files
+        - e o BD
+    - **Product Catalog**
+        - Web Pages
+        - Classes
+        - Config Files
+        - e o BD
+    - **Inventory**
+        - Web Pages
+        - Classes
+        - Config Files
+        - e o BD
+    - **Order**
+        - Web Pages
+        - Classes
+        - Config Files
+        - e o BD
+
+## O que é uma API Pública e como se interagem
+- microsserviços dependem apenas um do outro via APIs públicas
+- microsserviços podem (e devem) ser poliglotas em seus stacks
+- microsserviços encapsulam estado e comportamento
+    - **Estados (Dados)** e **Comportamento (Regras de Negócio)** = **Business Capability**
+- microsserviços **devem** possuir deploy independentes
+- microsserviços devem ter tratamentos isolados à falhas
+
+# Design Patterns em C#
+- **Design Patters**: "Alguém já resolveu o seu problema!"
+- São soluções elegantes, testadas e aprovadas para problemas recorrentes que temos no design e implementação de software
+- Surgiram da experimentação e repetição
+- Não é um padrão pronto para ser aplicado no seu código, é uma descrição/template de como resolver o seu problema nas mais diferentes situações
+- GOF - Gang of Four: criaram a "bíblia" sobre o assunto
+    - Catalogaram 23 patterns divididos em 3 grupos:
+    1. Creational Pattern
+    2. Structural Pattern
+    3. Behavioral Pattern
+
+## Design Patterns - Hands On
+
+Singleton | Repository | Facade
+----------|------------|-------
+Garante uma única instância da classe e acesso global para ela, ou seja, centraliza e compartilha recursos | Faz a abstração ("meio de campo") entre o seu domínio e sua camada de dados, ou seja, contribui para o isolamento da camada de acesso a dados | Define uma interface que abstrai a complexidade de interface de subsistemas, ou seja, simplifica a utilização de subsistemas  complexos
+
+# Criando um APP simples de cadastro de séries em .NET - Parte 1
+- **Classes Abstratas**
+    - Classes que podem conter métodos abstratos
+        - um método abstrato é um método que é declarado, porém não contém implementação
+    - Não pode ser instanciada
+    - Exite subclasses que tenham implementação dos métodos abstratos
+- **Interfaces**
+    - Interface é muito semelhante a uma classe abstrata, mas não possui atributos e não pode definir como os métodos devem ser implementados
+    - Em vez disso, é simplesmente uma lista de métodos que **devem** ser implementados
+
+# Criando um APP simples de cadastro de séries em .NET - Parte 2
+- 

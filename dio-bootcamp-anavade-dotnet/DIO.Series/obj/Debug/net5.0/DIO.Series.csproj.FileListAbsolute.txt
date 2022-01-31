@@ -1,0 +1,16 @@
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.csproj.AssemblyReference.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.AssemblyInfoInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.AssemblyInfo.cs
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.csproj.CoreCompileInputs.cache
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.exe
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.deps.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.runtimeconfig.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.runtimeconfig.dev.json
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\ref\DIO.Series.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\bin\Debug\net5.0\DIO.Series.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\ref\DIO.Series.dll
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.pdb
+D:\Dev\study\dio-bootcamp-anavade-dotnet\DIO.Series\obj\Debug\net5.0\DIO.Series.genruntimeconfig.cache
