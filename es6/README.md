@@ -56,7 +56,7 @@
             }
         }
         ```
-        run again `yarn dev`. Now it has a huge change on `bundle.js` file, because this is a new feature of JavaScript, and Babel transpile the `Class` into `Function` code, allowwing the web browser understand it;
+        run again `yarn dev`. Now it has a huge change on `bundle.js` file, because this is a new feature of JavaScript, and Babel transpile the `Class` into `Function` code, allowing the web browser understand it;
     5. finally, in order to use the code, add it in your `index.html` file, right before the closing `</body>` tag:
         ```html
         <script src="./bundle.js"></script>
