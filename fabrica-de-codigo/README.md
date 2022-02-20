@@ -48,8 +48,15 @@ namespace ToDoApi
     }
 }
 ```
->**Observação**
+>**Observação 1**
 >
 >Lembrando para os *IntelliSense* funcionarem, é necessário ativar a extensão do C# aperte **F1**, digite **OminiSharp: Select Project** e escolha a sua `sln`
 
+>**Observação 2**
+>
+>Para que alguma propriedade possa receber o valor `null`, usamos um ponto de interrogação `?` no tipo da propriedade, como por exemplo `public string? Title`. Ou podemos usar dessa forma `public Nullable<string> Title`, que teremos o mesmo efeito
+
 - criaremos um arquivo `.editorconfig` na raiz do projeto e colocaremos o conteúdo disponível na documentação da [Microsoft](https://docs.microsoft.com/pt-br/dotnet/fundamentals/code-analysis/code-style-rule-options). Logo após, faz o reload do Visual Studio (**F1** digita **Reload Window**)
+
+### Conexão com o Banco de dados
+- necessário instalar a biblioteca `dotnet add package Microsoft.EntityFrameworkCore.InMemory` e importar em `TodoContext.cs` a linha `using Microsoft.EntityFrameworkCore;`. O `InMemory` é um banco de dados para teste apenas, que fica em memória. Para outros tipos de banco de dados, pode ser consultado [aqui](https://docs.microsoft.com/pt-br/ef/core/providers/?tabs=dotnet-core-cli)

@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ToDoApi.src.Database;
+using ToDoApi.src.Database.Repositories;
 
 namespace ToDoApi
 {
@@ -18,7 +21,13 @@ namespace ToDoApi
         public void ConfigureServices(IServiceCollection services)
         {
             services
+                .AddDbContext<TodoContext>(option => option.UseInMemoryDatabase("TodoDatabase"));
+
+            services
                 .AddGraphQLServer();
+
+                services
+                    .AddScoped<ITaskRepository, ITaskRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
