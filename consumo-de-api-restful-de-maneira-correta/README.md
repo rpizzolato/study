@@ -205,4 +205,96 @@ function App() {
 export default App
 ```
 ## Explorando outras bibliotecas
-### SWR (da VERCEL)
+### SWR (da VERCEL) e react query
+- instalação do react query `npm i react-query`. O arquivo `hooks/useFetch.ts` não será mais necessário.
+- criaremos `src/services/queryClient.ts`
+```ts
+import { QueryClient } from "react-query"
+
+export const queryClient = new QueryClient
+```
+- Em `main.tsx`, precisamos colocar o `<App />` dentro de `<QueryClientProvider>`, dessa forma:
+```ts
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { QueryClientProvider } from 'react-query'
+import App from './App'
+import { queryClient } from './services/queryClient'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+```
+- e por fim, no arquivo `App.tsx`:
+```ts
+import axios from 'axios'
+import { useQuery } from 'react-query'
+
+type Repository = {
+  full_name: string;
+  description: string;
+}
+
+function App() {
+  const { data, isFetching } = useQuery<Repository[]>('repos', async () => {
+    const response = await axios.get('https://api.github.com/users/rpizzolato/repos')
+
+    return response.data
+  })
+
+  return (
+    <ul>
+      { isFetching && <p>Carregando...</p>}
+      {data?.map(repo => {
+        return (
+          <li key={repo.full_name}>
+            <strong>{repo.full_name}</strong>
+            <p>{repo.description}</p>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+export default App
+```
+>Dessa forma, ao mudarmos a descrição de algum repositório, o 'react-query' detecta a mudança e atualiza a tela quando a mesma recebe o focus do usuário. Basicamente a lib faz:
+```ts
+useEffect(() => {
+    window.addEventListener('focus', () => {
+        //refetching
+    })
+}, [])
+```
+>Mas utilizando a lib, não precisamos escrever esse código. Podemos **desabilitar** essa funcionalidade colocando:
+```ts
+function App() {
+  const { data, isFetching } = useQuery<Repository[]>('repos', async () => {
+    const response = await axios.get('https://api.github.com/users/rpizzolato/repos')
+
+    return response.data
+  }, {
+        //setando para false
+        refetchOnWindowFocus: false,
+  })
+
+  return (
+    <ul>
+      { isFetching && <p>Carregando...</p>}
+      {data?.map(repo => {
+        return (
+          <li key={repo.full_name}>
+            <strong>{repo.full_name}</strong>
+            <p>{repo.description}</p>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+```
