@@ -1,0 +1,12 @@
+/* Sempre use camelcase ou underline para nomear as propriedades*/
+.formCabecalho {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #111;
+}
+
+.formBotao {
+  color: #fff;
+  background-color: #333;
+  margin: 0;
+}
