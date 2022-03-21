@@ -1,6 +1,17 @@
 # Anotações do vídeo Aprenda Flexbox em 20 minutos com o Matheus Batistti
 [vídeo](https://www.youtube.com/watch?v=P9TrFDNwor4)
 
+>**Observação importante**
+>
+>Como o github bloqueia formatação CSS no arquivo `README.md`, recomendo que faça o download desse arquivo, abra com o *VSCode*, e abra o *Preview*, que assim verá as formatações do CSS dos exemplos abaixo
+
+### Sumário
+1. [Alinhando horizontalmente](#Alinhando-horizontalmente)
+2. [Alinhando verticalmente ](#Alinhando-verticalmente )
+3. [Limitação de Elementos](#Limitação-de-Elementos)
+4. [flex-basis](#flex-basis)
+5. [Alterando a ordem dos elementos](#Alterando-a-ordem-dos-elementos)
+
 Primeiro passo é criar uma estrutura básica HTML e CSS. Criaremos uma `<div>` que será o *container* dos demais itens (filhos).
 
 >`index.html`
@@ -151,7 +162,8 @@ Primeiro passo é criar uma estrutura básica HTML e CSS. Criaremos uma `<div>` 
 >Nesse momento, os elementos já passam a se comportar com **flex**. Se notar, não serão mais blocos e sim *inline*
 
 ## Alterando o alinhamento
-### Alinhando horizontalmente (row - linha - eixo X)
+### Alinhando horizontalmente
+**(row - linha - eixo X)**
 
 - `justify-content: center;` ► centralizar horizontalmente
   <div class="container" style="
@@ -241,7 +253,8 @@ Primeiro passo é criar uma estrutura básica HTML e CSS. Criaremos uma `<div>` 
   </div>
   <br />
 
-### Alinhando verticalmente (col - coluna - eixo Y)
+### Alinhando verticalmente 
+**(col - coluna - eixo Y)**
 - `align-items: center;` ► centralizar verticalmente
   <div class="container" style="
     background-color: #eee;
@@ -602,51 +615,89 @@ flex-wrap: wrap;"
     background-color: #ccc;
     border: 2px solid blue;
     height: 50px;
-  ">4</div>    <div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">5</div>    <div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">6</div>    <div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">7</div>    <div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">8</div><div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">9</div><div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">10</div><div class="item" style="
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-  ">11</div>
+  ">4</div>
 </div>
 <br />
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
-- `justify-content: center;` ► centralizar horizontalmente
+
+## flex-basis
+- `flex-basis: 10px;` ► define um valor base para o elemento que ele é aplicado. Caso ele seja reduzido devido ao tamanho da tela, ele manterá uma base de `10px`.
+
+
+- `flex-grow: 2;` ► define um peso em que o elemento ocupará em termos de espaço em tela (ou o espaço disponível dentro de algum container)
+
+<div class="container" style="
+background-color: #eee;
+border: 2px solid red;
+padding: 15px;
+max-width: 300px;
+height: 300px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;"
+>
+  <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 30px;
+    flex-grow: 2;
+  ">1</div>
+  <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 10px;
+    flex-grow: 1;
+  ">2</div>    <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 10px;
+    flex-grow: 1;
+  ">3</div>
+</div>
+<br />
+
+- `flex-shrink: 2;` ► controlará a intensidade quando o elemento diminui, no caso vai diminuir 2x mais proporcionalmente do que os outros elementos que não possuem essa propriedade. Por exemplo, se removermos o `flex-wrap: wrap;` (que evitará o elemento ir para outra linha) e deixarmos `flex-basis: 100px`, `flex-grow: 1;` e `flex-shrink: 1;` dentro da classe `.box` (fazendo com que todos os itens tenham essa propriedade e fiquem iguais e mantenham a proporção ao diminuírem de tamanho - limitado ao `basis` de **100px**, é claro) e colocar `flex-shrink: 2` no `#item-3` e diminuirmos a tela, o `#item-3` irá diminuir sempre o **dobro** dos outros elementos. Resumidamente, trabalha de forma contrária ao `flex-grow`
+
+>**Observação**
+>
+>Podemos usar um *shorthand* para o *grow*, *shrink* e o *basis* de uma vez só: ► ficando dessa forma: `flex: 1 1 50px;` (respectivamente grow, shrink e basis)
+
+## Alterando a ordem dos elementos
+
+- `order: 1` ► faz o elemento selecionado ficar na primeira posição.
+<div class="container" style="
+background-color: #eee;
+border: 2px solid red;
+padding: 15px;
+max-width: 300px;
+height: 300px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+"
+>
+  <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 100px;
+    order: 3;
+  ">1</div>
+  <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 100px;
+    order: 1;
+  ">2</div>    <div class="item" style="
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    flex-basis: 100px;
+    order: 2;
+  ">3</div>
+</div>
+<br />
