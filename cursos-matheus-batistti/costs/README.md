@@ -23,7 +23,7 @@ Ir no Google Fonts e copiar o código da fonte `Open Sans` dentro do `public/ind
 Adicionar as imagens em um diretório `src/img`, se tiver `favicon.ico` podemos fazer a substituição
 
 ## Roteamento
-Criaremos as páginas `Home.js`, `Company.js`, `Contact.js` e `NewProject.js` dentro de `src/components/pages`
+Criaremos as páginas `Home.js`, `Company.js`, `Contact.js`, `Projects.js` e `NewProject.js` dentro de `src/components/pages`, com o conteúdo básico dentro de uma tag `<h1>`.
 
 Dentro do arquivo `App.js` importaremos os componentes criados no passo anterior e criaremos o roteamento, da seguinte forma:
 
@@ -32,43 +32,40 @@ Dentro do arquivo `App.js` importaremos os componentes criados no passo anterior
 import { 
   BrowserRouter as Router,
   Routes, 
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 import Home from './components/pages/Home'
 import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
 import NewProject from './components/pages/NewProject'
+import Projects from './components/pages/Projects'
+
+import Container from './components/layout/Container'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
     <Router>
+      <Navbar />
+        <Container customClass="minHeight">
+          <Routes>
+            
+            <Route path='/' element={<Home />} />
+            <Route path='/company' element={<Company />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/newproject' element={<NewProject />} />
 
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/contact">Contato</Link></li>
-        <li><Link to="/company">Empresa</Link></li>
-        <li><Link to="/newproject">Novo Projeto</Link></li>
-      </ul>
-
-      <Routes>
-
-        {/* na v6 do roteamento muda um pouco a declaração */} 
-        <Route path='/' element={<Home />} />
-        <Route path='/company' element={<Company />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/newproject' element={<NewProject />} />
-
-      </Routes>
-
-
+          </Routes>
+        </Container>     
+      <Footer />
     </Router>
   );
 }
 
 export default App;
-
 ```
 >Observação
 >
@@ -101,6 +98,7 @@ import Container from './components/layout/Container'
   <Routes>   
     <Route path='/' element={<Home />} />
     <Route path='/company' element={<Company />} />
+    <Route path='/projects' element={<Projects />} />
     <Route path='/contact' element={<Contact />} />
     <Route path='/newproject' element={<NewProject />} />
   </Routes>
@@ -115,4 +113,134 @@ import styles from './Container.module.css'
 <div className={`${styles.container} ${styles[props.customClass]}`}>
   {props.children}
 </div>
+```
+
+### Navbar e Footer
+Será necessário criar os arquivos `Navbar.js` e `Footer.js`. Como terão o uso do CSS para estilização, usaremos mais dois arquivos `Navbar.module.css` e `Footer.module.css`
+
+`Navbar.js`
+```js
+import { Link } from "react-router-dom"
+
+import Container from "./Container"
+
+import styles from './Navbar.module.css'
+import logo from '../../img/costs_logo.png'
+
+export default function Navbar() {
+  return (
+    <nav className={styles.navbar}>
+      <Container>
+
+        <Link to="/">
+          <img src={logo} alt="Costs" />
+        </Link>
+
+        <ul className={styles.list}>
+          <li className={styles.item}><Link to="/">Home</Link></li>
+          <li className={styles.item}><Link to="/projects">Projetos</Link></li>
+          <li className={styles.item}><Link to="/company">Empresa</Link></li>
+          <li className={styles.item}><Link to="/contact">Contato</Link></li>
+        </ul>
+
+      </Container>
+    </nav>
+  )
+}
+```
+
+`Navbar.module.css`
+```css
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 1em;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.item {
+  margin-right: 1em;
+}
+
+.item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.item a:hover {
+  color: #FFBB33;
+}
+```
+
+`Footer.js`
+```js
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+
+import styles from './Footer.module.css'
+
+export default function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <ul className={styles.social_list}>
+        <li>
+          <FaFacebook />
+        </li>
+        <li>
+          <FaInstagram />
+        </li>
+        <li>
+          <FaLinkedin />
+        </li>
+      </ul>
+      <p className={styles.copy_right}>
+        <span>Costs</span> &copy; 2022
+      </p>
+    </footer>
+  )
+}
+```
+
+`Footer.module.css`
+```css
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 3em;
+  text-align: center;
+}
+
+.social_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.social_list li {
+  margin: 0 1em;
+}
+
+.social_list li:hover {
+  color: #ffbb22;
+}
+
+.social_list svg {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.copy_right {
+  margin-top: 2em;
+}
+
+.copy_right span {
+  font-weight: bold;
+  color: #ffbb22
+}
 ```
