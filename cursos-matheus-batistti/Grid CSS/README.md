@@ -102,5 +102,111 @@ Basicamente o conceito de o elemento pai controlar os demais elementos pertencen
 ## Template areas
 Útil quando iremos dividir um site em diversas áreas, como por exemplo, cabeçalho, sidebar, conteúdo e rodapé.
 
-Usaremos 
+Usaremos a seguinte estrutura:
 
+`index.html` 
+```html
+<div class="container" id="template-areas">
+  <div id="header">
+    <p>Cabeçalho</p>
+  </div>
+
+  <div id="sidebar">
+    <p>Sidebar</p>
+  </div>
+
+  <div id="content">
+    <p>Conteúdo</p>
+  </div>
+
+  <div id="footer">
+    <p>Rodapé</p>
+  </div>
+</div>
+```
+
+`style.css`
+```css
+/* Template area */
+.container {
+  background-color: #333;
+  border: 3px solid red;
+  padding: 15px;
+
+  display: grid;
+  gap: 5px;
+
+  grid-template-areas: 
+    'header header header'
+    'sidebar content content'
+    'footer footer footer';
+}
+
+.container div {
+  background-color: #ccc;  
+  padding: 20px;
+  border: 1px solid blue;
+}
+
+#header {
+  grid-area: header;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+#content {
+  grid-area: content;
+}
+
+#footer {
+  grid-area: f
+```
+
+E teremos o seguinte resultado:
+
+<img src="./assets/estrutura-template-area.png">
+
+## Alinhamento
+Utilizamos parecido com o Flexbox, usando `justify-content: center;` para **alinhamento horizontal** e `align-items: center;` para alinhamento vertical.
+
+## Itens separados
+Usaremos a seguinte estrutura (será utilizado **id** em vez de **class**)
+
+`index.html`
+```html
+<!-- Itens Individuais -->
+<div class="container">
+  <div id="item-1">1</div>
+  <div id="item-2">2</div>
+  <div id="item-3">3</div>
+  <div id="item-4">4</div>
+  <div id="item-5">5</div>
+  <div id="item-6">6</div>
+</div> 
+```
+
+`styles.css`
+```css
+/* Itens */
+.container {
+  background-color: #333;
+  border: 3px solid red;
+  padding: 15px;
+  display: grid;
+
+  /* iremos utilizar 3 colunas */
+  grid-template-columns: auto auto auto;
+}
+
+.container div {
+  background-color: #ccc;  
+  padding: 20px;
+  border: 1px solid blue;
+}
+```
+
+Caso quisermos que o **item-1** um ocupe todas as três colunas, usaremos o `grid-column-start: 1;` e  `grid-column-end: 4;`, tendo o resultado:
+
+<img src="./assets/estrutura-item-separado.png">
