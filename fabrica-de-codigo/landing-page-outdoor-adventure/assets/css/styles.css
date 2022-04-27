@@ -33,7 +33,23 @@ p {
 }
 
 .btn {
+    border-radius: 30px;
+    padding: 17px 40px;
+    font-weight: 700;
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 20px 0;
+}
 
+.btn:hover,
+.btn:focus {
+    border-color: var(--color-primary-hover);
+    background-color: var(--color-primary-hover);
+    transition: all 0.3s;
 }
 
 /* page header start */
