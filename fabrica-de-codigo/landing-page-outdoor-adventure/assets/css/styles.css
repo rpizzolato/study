@@ -50,12 +50,21 @@ p {
     border-color: var(--color-primary-hover);
     background-color: var(--color-primary-hover);
     transition: all 0.3s;
+
+    /* transition separado */
+    /* transition-property: all;
+    transition-duration: 0.3s; */
 }
 
 /* page header start */
 
 #page-header {
+    position: relative;
     background-color: var(--color-light-black);
+    background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     padding: 20px;
 }
 
