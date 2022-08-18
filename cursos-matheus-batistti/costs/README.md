@@ -244,3 +244,32 @@ export default function Footer() {
   color: #ffbb22
 }
 ```
+
+### Página NewProject.js
+
+Para facilitar, é recomendado usar a característica de componentização do React, como teremos um formulário, iremos abstrair tudo para componentes.
+
+Em `NewProject.js` criaremos um componente chamado <ProjectForm />, dentro de uma nova pasta chamada `project`, que ficará apenas para incluirmos itens relacionados a criação de um novo projeto.
+
+`NewProject.js`
+```js
+import ProjectForm from '../project/ProjectForm'
+...
+return (
+    <div className={styles.newproject_container}>
+      <h1>Criar Projeto</h1>
+      <p>Crie seu projeto para depois adicionar os serviços</p>
+      <ProjectForm />
+    </div>
+  )
+```
+
+Dentro de `ProjectForm` iremos também abstrair em componentes, os `inputs` e demais itens relacionados ao formulário. 
+
+>**Dica**
+>
+>Podemos primeiramente desenhar como será o formulário, usando diretamente HTML, e depois ir abstraindo item a item.
+
+#### Abstraindo o input
+
+Criaremos um arquivo chamado `Input.js`, dentro de uma nova pasta chamada `form`, que será utilizada para armazenarmos o que for referente aos componentes do formulário.
