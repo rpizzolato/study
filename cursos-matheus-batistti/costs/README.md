@@ -270,6 +270,23 @@ Dentro de `ProjectForm` iremos também abstrair em componentes, os `inputs` e de
 >
 >Podemos primeiramente desenhar como será o formulário, usando diretamente HTML, e depois ir abstraindo item a item.
 
-#### Abstraindo o input
+#### Abstraindo o input, Select e Botão Submit
 
-Criaremos um arquivo chamado `Input.js`, dentro de uma nova pasta chamada `form`, que será utilizada para armazenarmos o que for referente aos componentes do formulário.
+Criaremos um arquivo chamado `Input.js`, dentro de uma nova pasta chamada `form`, que será utilizada para armazenarmos o que for referente aos componentes do formulário. Da mesma forma criaremos `Select.js` e `SubmitButton.js`. Podemos criar os respectivos arquivos CSS para eles, usando o sufixo `COMPONENTE.module.css`
+
+Especificamente no `SubmitButton.js` voltaremos dois níves da abstração, lá no arquivo `NewProject.js` e informaremos, por meio de props, no componente `<ProjectForm />` qual o tipo de formulário que estamos utilizando, apenas para termos uma referência se é um formulário de cadastro, alteração, etc. Ficando da seguinte forma:
+```js
+<ProjectForm btnText="Criar Projeto" />
+```
+
+Subindo um nível, em `ProjectForm.js`, resgataremos essa props por meio da desestruturação, e usaremos no componente `<SubmitButton />`, dessa forma:
+```js
+function ProjectForm({ btnText }) {
+  ...
+  <SubmitButton text={btnText} />
+}
+```
+
+>**Dica**
+>
+>Para acessarmos o `placeholder` do `input` via CSS, usamos a classe utilizada seguido de `::` como em `.btn::placeholder { color: #fff }`
