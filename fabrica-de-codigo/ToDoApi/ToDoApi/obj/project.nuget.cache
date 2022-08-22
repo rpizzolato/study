@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mEm70YNf5RmT+S3dBpuZSLIxFjUmQsqa57vz2kh+S4LD8jvtuEdV+xft5+qMjhxSVO8LNgW3ttRjtfMA9R1hOQ==",
+  "dgSpecHash": "u70hFXYsvXeQYOIQBx0LmMyZAjcN9/9PPHmUXoBwpHqdfHvDhMIwLG2FjN6Ejg2pCaenGEGeLCgpn6PgmgCwcg==",
   "success": true,
   "projectFilePath": "D:\\Dev\\study\\fabrica-de-codigo\\ToDoApi\\ToDoApi\\ToDoApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\usuario\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\greendonut\\12.6.0\\greendonut.12.6.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\hotchocolate\\12.6.0\\hotchocolate.12.6.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\hotchocolate.abstractions\\12.6.0\\hotchocolate.abstractions.12.6.0.nupkg.sha512",

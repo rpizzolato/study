@@ -290,3 +290,126 @@ function ProjectForm({ btnText }) {
 >**Dica**
 >
 >Para acessarmos o `placeholder` do `input` via CSS, usamos a classe utilizada seguido de `::` como em `.btn::placeholder { color: #fff }`
+
+### Criando um backend fake para testes (conectando com API pelo React)
+
+Lá no começo do projeto instalamos o `json-server` para podermos criar uma API fake para trabalharmos com acesso aos dados. Para podermos usar esse recurso, criaremos um arquivo `db.json` em `src` do projeto.
+
+Dentro de `db.json` por enquanto, colocaremos um array vazio chamado `projects`, dessa forma:
+```json
+{
+  "projects": []
+}
+```
+
+Lá no arquivo `package.json` teremos que criar uma nova entrada em scripts, habilitando um comando para chamarmos o json-server:
+```json
+"scripts": {
+    "start": "react-scripts start",
+    "backend": "json-server --watch db.json --port 5000", //nova linha
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+```
+
+Podemos testar executando o comando `npm run backend` e acessando no navegador `http://localhost:5000/projects`
+
+Podemos também criar as categorias do projeto, inserindo da seguinte forma no arquivo `db.json`:
+```json
+{
+  "projects": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
+```
+
+Para testarmos, podemos executar o backend (`npm run backend`) e acessar `http://localhost:5000/categories` para listarmos as categorias.
+
+#### fetch das categorias
+
+No arquivo `ProjectForm.js`, faremos uso do `useState()` para guardar os estados das categorias. Normalmente criamos uma constante dessa forma: `const [categories, setCategories] = useState([])`. Dessa forma iniciamos a constante com um array vazio (`[]`). Posteriormente podemos fazer o `fetch` da API mostrada anteriormente, da seguinte forma:
+```js
+const [categories, setCategories] = useState([])
+
+  fetch('http://localhost:5000/categories', {
+    method: 'GET', //requisição do tipo GET
+    headers: {
+      'Content-Type': 'application/json', //força retornar um json
+    },
+  })
+    .then((resp) => resp.json())
+    .then((data) => {
+      setCategories(data) //preenche a constante com o json
+    })
+    .catch((err) => console.log(err)) //caso retorne erro, mostra no console
+    ...
+    <Select 
+          name="category_id" 
+          text="Selecione a categoria"
+          options={categories} //informamos ao componente Select via props as categorias que vieram da API no formato json
+        />
+```
+
+No nosso componente `Select.js` iremos utilizar a função `map()` do Javascript para renderizar as opções de categorias:
+```js
+function Select({ text, name, options, handleOnChange, value }) { //props já desmembradas
+  return (
+    <div className={styles.form_control}>
+      <label htmlFor={name}>{text}:</label>
+      <select name={name} id={name}>
+        <option>Selecione uma opção</option>
+        {
+          options.map((option) => (
+            <option value={option.id} key={option.id}>{option.name}</option>
+          ))
+        }
+      </select>
+    </div>
+  )
+}
+```
+
+Irá funcionar dessa forma, no entanto o `useState()` fica constantemente atualizando o componente buscando por alterações (vide aba de network do DevTools do Navegador). O recomendável é utilizarmos o Hook `useEffect()`, que executa uma vez depois de tudo carregado (similar ao `ComponentDidMount` e `ComponentDidUpdate`). Para isso, declaramos o `useEffect()` dessa forma:
+```js
+  useEffect(()=>{
+
+  }, [])
+```
+
+Agora resta apenas adicionar toda a lógica do `fetch` dentro do `useEffect()`, dessa forma:
+```js
+useEffect(() => {
+    fetch('http://localhost:5000/categories', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setCategories(data)
+      })
+      .catch((err) => console.log(err))
+  }, [])
+```
+
+>Observação
+>
+>Lembre-se que `useState()` e `useEffect()` precisam ser importados
