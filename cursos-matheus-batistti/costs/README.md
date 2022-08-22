@@ -413,3 +413,37 @@ useEffect(() => {
 >Observação
 >
 >Lembre-se que `useState()` e `useEffect()` precisam ser importados
+
+### Inserindo dados via API
+
+Em `NewProject.js` iremos importar o `useHistory` do `react-router-dom` e criaremos uma constante chamada *history* da seguinte forma: `const history = useHistory()`. [Olhar o comentário pois o react dom em sua nova versão mudou]
+
+Criaremos uma função para lidar com a criação de projetos, e que irá inicializar a propriedade custo e serviços zerados/vazios. Lembrando que a função `createPost` irá receber o projeto como argumento. Dentro da função também usaremos o fetch com os cabeçalhos e corpo (body) para enviar os dados.
+```js
+  const history = useHistory();
+...
+function createPost(project) {
+    //initialize cost and services
+    project.cost = 0
+    project.services = []
+
+    fetch('http://localhost:5000/projects', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(project)
+    })
+    .then(((resp) => resp.json())
+    .then((data) => {
+      console.log(data);
+      //redirect
+    })
+    ).catch(err => console.log(err))
+  }
+```
+
+Dentro de `ProjectForm.js` criaremos mais um `useState()`, agora para armazenar o projeto, e será inicializado pelo objeto projeto ou por um objeto vazio (`projectData || {}`)
+
+
+
