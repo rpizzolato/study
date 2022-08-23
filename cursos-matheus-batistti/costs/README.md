@@ -495,3 +495,31 @@ E por fim, na tag `<form>`, adicionamos a propriedade `onSubmit={submit}`
 >**Importante!**
 >
 >Devido as alterações do react router v6, devemos trocar, dentro do arquivo `NewProject.js`, o import de `useHistory` para `useNavigate`, e em vez de usar `history.push`, usar apenas `history`. No meu caso, por nomenclatura, eu alterei `history` por `navigate`, por ficar mais legível e fazer mais sentido.
+
+### Mensagens
+
+Dentro de layout, iremos criar um componente chamado `Message.js`, e seu respectivo CSS. Dentro dos parâmetros teremos dois argumentos desestruturados, sendo `type` e `msg`. `type` irá referenciar ao tipo da mensagem, como sucesso ou erro, por exemplo. A `msg` é a mensagem mesmo em si que queremos exibir.
+
+Iremos usar esse componente `<Message>` dentro da página `Projects.js`, onde por meio das props, já configurar algum valor para `msg` e `type`.
+```js
+<Message msg="Alguma mensagem" type="success"/>
+```
+
+Voltando em `Message.js`, podemos combinar o CSS para exibir alguma estilização conforme o tipo de mensagem (erro ou sucesso, por exemplo), usando a seguinte forma de código:
+
+```js
+<div className={`${styles.message} ${styles[type]}`}>{msg}</div>
+```
+
+Para deixarmos a mensagem por padrão invisível, podemos usar os fragmentos do React `<>` `</>` e criar uma lógica para que por padrão fique invisível. Isso atrelado ao uso do `useState()`, para controlarmos a visibilidade, ficando dessa forma, no arquivo `Message.js`
+```js
+const [visible, setVisible] = useState(false)
+  return (
+    <>
+      {visible && (
+        <div className={`${styles.message} ${styles[type]}`}>{msg}</div>
+      )} //dessa forma, por padrão a mensagem ficará invisível
+    </>
+  )
+```
+
