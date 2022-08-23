@@ -445,5 +445,53 @@ function createPost(project) {
 
 Dentro de `ProjectForm.js` criaremos mais um `useState()`, agora para armazenar o projeto, e será inicializado pelo objeto projeto ou por um objeto vazio (`projectData || {}`)
 
+Criaremos uma função submit, que trata o `preventDefault()` e passa por props o `handleSumit(project)` informando o projeto.
+```js
+  const submit = (e) => {
+    e.preventDefault()
+    handleSubmit(project)
+  }
+```
 
+Criaremos a função `handleChange(e)`, a qual iremos adicionar valor no Hook do `useEffect` de `setProject`, e adicionar a propriedade `handleOnChange` em cada `input`. Aproveitando, iremos criar também a função `handleCategory(e)`, para lidar com as categorias na tag `<select>`, e claro, informar a propriedade `handleOnChange={handleCategory}`
+```js
+function handleChange(e) {
+    setProject({ ...project, [e.target.name]: e.target.value })
+    console.log(project)
+  }
 
+  function handleCategory(e) {
+    setProject({
+      ...project, category: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text //busca o texto da opção baseado no Index
+      }
+    })
+  }
+```
+
+Em cada `input` dentro de `ProjectForm.js`, colocaremos o value de acordo com cada campo. No campo name, usaremos `value={project.name ? project.name : ''}`, e no campo budget, usaremos `value={project.budget ? project.budget : ''}`. Dessa forma, com operador ternário, caso venha com dados, usaremos esses dados, ou deixamos o campo vazio ('')
+
+Dentro do componente `<Select>` precisamos informar a propriedade `onChange`, juntamente com o valor do value, que recebe o próprio valor, ou um valor vazio.
+```js
+...
+<select name={name} id={name} onChange={handleOnChange} value={value || ''}>
+...
+```
+
+Em `ProjectForm.js` teremos que informar o value no componente `<Select>`, em uma forma que se a categoria do projeto existir, incluímos o id do projeto, ou então, um valor vazio.
+```js
+<Select
+  name="category_id"
+  text="Selecione a categoria"
+  options={categories}
+  handleOnChange={handleCategory}
+  value={project.category ? project.id : ''}
+/>
+```
+
+E por fim, na tag `<form>`, adicionamos a propriedade `onSubmit={submit}`
+
+>**Importante!**
+>
+>Devido as alterações do react router v6, devemos trocar, dentro do arquivo `NewProject.js`, o import de `useHistory` para `useNavigate`, e em vez de usar `history.push`, usar apenas `history`. No meu caso, por nomenclatura, eu alterei `history` por `navigate`, por ficar mais legível e fazer mais sentido.
