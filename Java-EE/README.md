@@ -116,10 +116,80 @@ Agora dentro de `src/main/webapp`, criaremos um novo arquivo JSP (JSP File), com
 		<%-- Uso do elemento expressão --%>
 		<p>Data: <%=new Date()%></p> <!-- para Date() funcionar, precisa importar no começo do documento usando Diretivas -->
 
-		<%!int contador=0%>
+		<%!int contador=0;%>
 		<p>Visitas: <%=contador++%></p><!-- como é um comando de expressão, ele vai diretamente para o formato documento html -->
 
 	</body>
 </html>
 ```
 Por fim, executar o projeto no servidor Tomcat
+
+# Projeto Agenda de Contatos
+## Tecnologias utilizadas
+- Servidor Tomcat
+- Java EE - Servlet e JSP
+- IDE Eclipse
+- MySQL (CRUD - Create Read Update Delete)
+- MVC (Model View Controller)
+- JavaBeans (Classe Java que segue um conjunto de especificações, relacionadas à segurança e utilização do código)
+- JDBC (Java Database Connectivity): conjunto de classes e interfaces escritas em Java usadas para envios de instruções SQL ao BD
+- iText (utilizada para gerar relatórios no formato `.pdf`)
+- além de html, css e javascript
+
+## Banco de Dados
+No desenvolvimento de um projeto, devemos:
+1. definir a necessidade do cliente
+2. desenvolver o BD de forma a atender os requisitos do sistema
+
+Iremos armazenar os campos **nome**, **fone**, **e-mail** dos contatos. Sendo os campos **nome** e **fone**, sendo `not null`, ou seja, eles são obrigatórios. Além de que cada contato será gerado um código, para posteriormente haver atualização de dados e exclusão.
+
+Dentro do MySQL Workbench, iremos executar os scripts de criação da base de dados e da tabela **contatos**:
+```sql
+create database dbagenda;
+show databases;
+use dbagenda;
+create table contatos(
+	idcon int primary key auto_increment,
+    nome varchar(50) not null,
+    fone varchar(15) not null,
+    email varchar(50)
+);
+
+show tables;
+desc contatos;
+```
+
+Para conexão posteriormente com o Java, precisaremos de algumas informações, tais como:
+- **url**: 127.0.0.1:3306/dbagenda
+- **user**: root
+- **password**: a senha que foi definido na instalação do MySQL
+
+## MVC (Model View Controller)
+Visa principalmente separar, organizar, e melhorar o desempenho e segurança do sistema, além de permitir a reutilização do código. Esse padrão ainda permite que uma equipe trabalhe separadamente em pontos distintos do sistema
+
+- Model: fica com o processamento pesado, que é a camada que tem acesso ao banco de dados (são duas classes: JavaBeans, para tratar da segurança, e a classe DAO, para tratar acesso e conexão com o bando de dados)
+
+- View: é responsável pela interface com o usuário, ou seja, é a visualização do documento de forma dinâmica. Em um projeto Web, são os arquivos que podem ser renderizados pelo navegador, ou seja, o html, o css e o javascript. (geralmente arquivos html, css, js e até mesmo jsp)
+
+- Controller: coordena e controla o fluxo de dados, que basicamente trabalha com requisições e respostas (por exemplo, o servlet)
+
+## Criando a estrutura MVC no Eclipse
+- Iremos em File > New > Dynamic Web Project. O nome do projeto poderá ser **agenda**.
+- Dentro de `src/main/java`, criaremos um package chamado `controller` e um package chamado `model`.
+- Dentro do package `controller`, criaremos um novo Servlet chamado `Controller`, desmarcando o método `doPost`
+- Agora dentro do package `model` criaremos duas novas classes chamadas `DAO` e `JavaBeans`
+- Criaremos um arquivo `index.html` dentro da pasta `src/main/webapp` com o conteúdo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Agenda Contatos</title>
+</head>
+<body>
+	<h1>Agenda Contatos</h1>
+	<a href="">Acessar</a>
+</body>
+</html>
+```
+- Agora podemos executar o projeto no servidor Tomcat para testar.
