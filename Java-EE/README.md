@@ -67,3 +67,59 @@ PrintWriter out = response.getWriter();
 		out.println("</html>");
 ```
 >Caso precise importar alguma classe, use o atalho **Ctrl + Shift + O** no Eclipse.
+
+# JSP (Java Server Pages)
+Foram criados para resolução de algumas limitações que tem no Servlet, no que diz respeito a formatação do documento HTML. A diferença do servlet para JSP, é que no JSP podemos executar código Java por meio de uma tag especial chamada `scriplet` (se assemelha bastante ao funcionamento do PHP)
+
+Por trás dos panos, uma página JSP é automaticamente transformada em um servlet pelo servidor Tomcat
+
+## Servlet X JSP`
+Uma recomendação é utilizar JSP para interface do sistema, e servlet para cuidar da parte de lógica do sistema, ficando uma arquitetura flexível e fácil de manipular
+
+## Sintaxe dos elementos JSP
+
+|   |  |
+| ------------- | ------------- |
+| Scriplet | `<%     %>`  |
+| Comentários | `<%--     --%>`  |
+| Diretivas | `<%@     %>`  |
+| Declarações | `<%!     %>`  |
+| Expressões | `<%=     %>`  |
+
+>**Importante!**
+>
+>Apenas o elemento de expressões que não fecha comando com `;`<br />
+>Exemplo: `<p>Data: <%=new Date()%></p>`
+
+## Exemplo prático
+Criaremos um novo Dynamic Web Project, chamado *Hello JSP*, no final, marcaremos o checkbox *Generate web.xml deployment descriptor*.
+
+Agora dentro de `src/main/webapp`, criaremos um novo arquivo JSP (JSP File), com o nome `hello.jsp`, aceitar a utilização de um template html5, e clique em *Finish*. Lembrar de mudar os *charset* para `utf-8`. Colocar também a propriedade `lang="pt-br"` para que possamos acertar a questão de acentos e outras características do idioma Português do Brasil, ficando da seguinte forma:
+
+`hello.jsp`
+```html
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8">
+
+<%@ page import="java.util.Date"%>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Hello JSP</title>
+	</head>
+	<body>
+		<h1>Hello JSP</h1>
+
+		<% out.println("Impressao texto usando Java - Scriplet"); %>
+
+		<%-- Uso do elemento expressão --%>
+		<p>Data: <%=new Date()%></p> <!-- para Date() funcionar, precisa importar no começo do documento usando Diretivas -->
+
+		<%!int contador=0%>
+		<p>Visitas: <%=contador++%></p><!-- como é um comando de expressão, ele vai diretamente para o formato documento html -->
+
+	</body>
+</html>
+```
+Por fim, executar o projeto no servidor Tomcat
