@@ -193,3 +193,76 @@ Visa principalmente separar, organizar, e melhorar o desempenho e segurança do 
 </html>
 ```
 - Agora podemos executar o projeto no servidor Tomcat para testar.
+
+## Criando o estilo (CSS)
+Primeiro vamos criar um pasta `images` dentro de `src/main/webapp`, e inserir duas imagens, uma será o favicon, e a outra ficará na página inicial. (`agenda.png` e `favicon.png`)
+
+Agora no arquivo `index.html`, vamos adicionar as seguintes linhas logo após a tag `<title>`:
+```html
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+```
+e dentro da tag `<body>`, antes da tag `<h1>`, vamos adicionar a imagem da agenda e adicionar uma classe chamada **Botao1** ao link chamado **Acessar**
+```html
+<img src="images/agenda.png">
+...
+<a href="" class="Botao1">Acessar</a>
+```
+
+Agora criaremos um arquivo chamado `style.css` no mesmo nível de pasta do arquivo `index.html`, e importaremos dentro de `style.css` a fonte *Open Sans* diretamente do Google Fonts, e já formatando a tag **body** , a tag **h1** e por fim a tag de link **a href**
+```css
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+h1 {
+	color: #66bbff;
+}
+
+.Botao1 {
+	text-decoration: none;
+	background-color: #66bbff;
+	padding: 5px 10px 5px 10px;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-radius: 5px;
+}
+```
+>**Observação**
+>
+>A medida **1em** equivale a **16px** ou fonte de tamanho **12**
+
+## Chamando o Servlet
+Em `index.html`, lá na tag `<a href="">`, ao qual aponta a lugar algum, pois a propriedade `href` está em branco (`""`), inseriremos o valor `main`, ficando `<a href="main"class="Botao1">Acessar</a>`. Esse valor `main` será recebido pela classe `Controller.java`, então vamos abri-la.
+
+Assim que clicarmos em "Acessar", um erro 404 será disparado, com as informações:
+```
+HTTP Status 404 – Não Encontrado
+Type Status Report
+
+Message The requested resource [/agenda/main] is not available
+
+Description The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.
+
+Apache Tomcat/10.0.27
+```
+Isso ocorre pois ainda não tratamos a requisição na camada Controller. Iremos adicionar o código abaixo antes da declaração da classe Controller:
+
+`Controller.java`
+```java
+@WebServlet(urlPatterns = {"/Controller", "/main"})
+```
+
+Ao executarmos novamente o projeto, o retorno deverá ser igual o abaixo demonstrado:
+```
+Served at: /agenda
+```
+
+## Camada Model (que tem acesso ao BD)
+Nessa camada trabalharemos com as classes `JavaBeans.java` e a classe `DAO.java`:
