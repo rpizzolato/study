@@ -167,7 +167,7 @@ Para conexão posteriormente com o Java, precisaremos de algumas informações, 
 ## MVC (Model View Controller)
 Visa principalmente separar, organizar, e melhorar o desempenho e segurança do sistema, além de permitir a reutilização do código. Esse padrão ainda permite que uma equipe trabalhe separadamente em pontos distintos do sistema
 
-- Model: fica com o processamento pesado, que é a camada que tem acesso ao banco de dados (são duas classes: JavaBeans, para tratar da segurança, e a classe DAO, para tratar acesso e conexão com o bando de dados)
+- Model: fica com o processamento pesado, que é a camada que tem acesso ao banco de dados (são duas classes: JavaBeans, para tratar da segurança, e a classe DAO que significa Data Access Object, para tratar acesso e conexão com o bando de dados)
 
 - View: é responsável pela interface com o usuário, ou seja, é a visualização do documento de forma dinâmica. Em um projeto Web, são os arquivos que podem ser renderizados pelo navegador, ou seja, o html, o css e o javascript. (geralmente arquivos html, css, js e até mesmo jsp)
 
@@ -265,4 +265,286 @@ Served at: /agenda
 ```
 
 ## Camada Model (que tem acesso ao BD)
-Nessa camada trabalharemos com as classes `JavaBeans.java` e a classe `DAO.java`:
+Nessa camada trabalharemos com as classes `JavaBeans.java` e a classe `DAO.java`
+
+Em `JavaBeans.java`, iremos criar as variáveis `idcon`, `nome`, `fone` e `email`, seguindo o padrão do banco de dados, com os modificadores de acesso com valor `private`
+
+No Eclipse, em Source > Generate Getters and Setters, criaremos os métodos Getters e Setters.
+
+Ainda no Eclipse, vamos em Source > Generate Constructors from Superclass para criar um Construtor, e posteriormente vamos em Source novamente > Generate Constructor using Fields e criar um novo Construtor com todos os campos.
+
+## Conectando com o Banco de Dados
+- **JDBC** (Java™ EE Database Connectivity): reúne um conjunto de classes o qual possibilita se conectar através de um driver específico ao banco de dados desejado
+	- DriverManager: classe que usaremos para gerenciar o driver
+	- Connection: interface para conectar ao BD, irá estabelecer uma conexão entre o Java e o BD
+
+No modelo, depois do JavaBeans, temos o `DAO.java` (Data Access Object - Padrão de Projeto que encapsula os mecanismos de acesso aos dados, escondendo os detalhes da execução). A classe `DAO.java` é a única classe capaz de estabelecer uma conexão com o Banco de Dados, com o módulo de conexão, utilizando:
+
+	- Driver: é uma espécie de tradutor na troca de mensagens entre o banco de dados e o Java (tipo de banco de dados)
+	- URL (IP ou domínio do servidor)
+	- Banco (Nome do banco de dados)
+	- Autenticação (Usuário e senha)
+
+Agora vamos até [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/), e vamos escolher o Connector (o connector vai ser referente ao driver) referente [Connector/J](https://dev.mysql.com/downloads/connector/j/) e faça o download utilizando a plataforma independente na escola do Sistema Operacional, pois assim poderemos baixar a versão `.zip`. Faça o download conforme versão do MySQL que tiver instalado.
+Após descompactar, usaremos o arquivo `mysql-connector-j-8.0.31.jar`, que no caso é o nosso driver. Arquivo `.jar` é um arquivo executável do Java.
+Iremos copiar o arquivo `mysql-connector-j-8.0.31.jar` dentro da pasta `src/main/webapp/WEB-INF/lib`, no caso, a pasta `lib`, que é uma abreviação de *library*.
+
+Agora no arquivo `DAO.java` vamos criar efetivamente a nossa conexão com o Banco de Dados.
+Iremos dividir em duas partes, sendo os **parâmetros de conexão** e o **método de conexão**
+
+Criaremos as variáveis driver, url, user e password, todas do tipo String e com modificações de acesso private, criaremos também um método conectar(), ficando dessa forma:
+```java
+package model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DAO {
+	//Módulo de conexão
+	//Parâmetros de conexão
+	private String driver = "com.mysql.cj.jdbc.Driver";
+	private String url = "jdbc:mysql://127.0.0.1:3306/dbagenda?useTimezone=true&serverTimeZone=UTC";
+	private String user = "root";
+	private String password = "senha_mysql";
+	
+	//Método de conexão
+	private Connection conectar() {
+		Connection conn = null;
+		
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, password);
+			return conn;			
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+		
+	}
+	//teste conexão
+	public void testeConexao() {
+		try {
+			Connection conn = conectar();
+			System.out.println(conn);
+			conn.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}
+```
+Agora para testarmos a conexão, iremos até o arquivo Controller.java, e dentro do método Controller, criamos uma instância de DAO.java, lembrando que precisamos importar DAO.java para a classe Controller.java. Dentro do método doGet(), usaremos a instância de DAO.java e executamos o método testeConexao().
+```java
+import model.DAO;
+...
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	DAO dao = new DAO();
+	...
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//teste de conexão
+		dao.testeConexao();
+	}
+```
+Se tudo correr bem, devemos ver a instância da conexão lá no console no Eclipse
+```
+com.mysql.cj.jdbc.ConnectionImpl@3b323d9b
+```
+
+Caso retorne erro, será impresso **null** e mostra a Exception. O método testeConexao() dentro da classe `DAO.java` pode ser removido ou comentado, pois o utilizamos apenas por uma questão didática, assim como a instância dele utilizada (`dao.testeConexao();`) dentro de `Controller.java`.
+
+## Controller
+Dentro de `index.html`, temos um botão que irá fazer uma consulta ao servlet, e esse por sua vez, irá nos trazer o arquivo `agenda.jsp`, arquivo esse que contém elementos de HTML e também é capaz de executar a linguagem Java, ou seja, ele possui um conteúdo que é gerado de forma dinâmica.
+
+Dentro de `/src/main/webapp` criaremos o arquivo `agenda.jsp`, com o seguinte conteúdo
+```jsp
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Agenda de contatos</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Agenda de Contatos</h1>
+	<a href="" class="Botao1">Novo contato</a>
+</body>
+</html>
+```
+Note que reaproveitamos os estilos padrão que foi usado em `index.html`, agora, quando iniciamos o aplicativo, após clicarmos em **Acessar**, chamamos o servlet, mas ele ainda não sabe tratar e chamar o arquivo `agenda.jsp`. Para isso, precisamos configurar nosso `Controller.java`.
+No `controller.java`, iremos reaproveitar o método doGet(), reescrevendo-o logo abaixo com o nome de `contatos()`.
+No método `doGet()`, criaremos uma action, que pega o caminho do servlet, e compararemos com o `/main`, e chamaremos esse segundo método (que foi baseado no método `doGet`), o qual usa o método `sendRedirect()` para redirecionar para `agenda.jsp`, ficando dessa forma:
+```java
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String action = request.getServletPath();
+		
+		if (action.equals("/main")) {
+			contatos(request, response);			
+		}
+	}
+	
+	//Lista contatos
+	protected void contatos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.sendRedirect("agenda.jsp");
+	}
+```
+Dessa forma, o redirecionamento já vai funcionar.
+
+>**Dicas de formatação do código**
+>
+>**Shift + Alt + Y** = faz a quebra automática de linha<br>
+>**Ctrl + Shift + F** = para indentar o código
+
+# CRUD
+
+## Validação do formulário
+Iremos criar um arquivo chamado `novo.html`, e um arquivo `validador.js`. Esse validador ficará em uma pasta chamada `scripts`, dentro de `/src/main/webapp/`
+
+`novo.html`
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Agenda Contatos</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Criar novo contato</h1>
+	<form name="frmContato" action="insert">
+		<table>
+		<tr>
+			<td><input type="text" name="nome" placeholder="Nome" class="Caixa1"></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="fone" placeholder="Fone" class="Caixa2"></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="email" placeholder="Email" class="Caixa1"></td>
+		</tr>
+		</table>
+		<input type="button" value="Adicionar" class="Botao1" onClick="validar()">
+	</form>
+	<script src="scripts/validador.js"></script>
+</body>
+</html>
+```
+
+Dentro de style.css, faremos algumas modificações na classe Botao1, e adicionaremos as classes para cuidar do formulário, conforme abaixo:
+
+`style.css`
+```css
+.Botao1 {
+	text-decoration: none;
+	background-color: #66bbff;
+	padding: 5px 10px 5px 10px;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer; 
+}
+
+.Caixa1 {
+	width: 320px;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #66bbff;
+	border-radius: 5px;
+}
+
+.Caixa2 {
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #66bbff;
+	border-radius: 5px;
+}
+```
+
+O arquivo `validador.js` ficará da seguinte forma:
+```js
+/**
+ * Validação de formulário
+ @autor Rodrigo
+ */
+
+ function validar() {
+	let nome = frmContato.nome.value;
+	let fone = frmContato.fone.value;
+	
+	if(nome === "") {
+		alert('Preencha o campo nome');
+		frmContato.nome.focus();
+		return false;
+	} else if (fone === '') {
+		alert('Preencha o campo fone');
+		frmContato.fone.focus();
+		return false;
+	} else {
+		document.forms["frmContato"].submit();
+	}
+}
+```
+
+Dentro de `agenda.jsp`, preencheremos a propriedade `href` para buscar a página `novo.html`: `<a href="novo.html" class="Botao1">Novo contato</a>`
+
+## Inserindo os dados
+
+No arquivo `novo.html`, na tag `form`, preencheremos a propriedade `action` com o valor **insert**, ficando assim: `<form name="frmContato" action="insert">`
+
+Agora, boa parte das ações, será feito pela classe `Controller.java`, logo, iremos nela e na linha que descreve os padrões de **url**, adicionaremos `/insert` para que `Controller.java` seja capaz de lidar com esse novo padrão.
+
+```java
+@WebServlet(urlPatterns = {"/Controller", "/main", "/insert"})
+```
+
+Agora vamos criar um novo `else if` para lidar com o padrão `insert`, que irá chamar um novo método, e inserimos algumas informações para testarmos se os parâmetros `nome`, `fone` e `email` estão chegando corretamente.
+
+`Controller.java`
+```java
+if (action.equals("/main")) {
+			contatos(request, response);			
+		} else if (action.equals("/insert")) {
+			novoContato(request, response);
+		} else {
+			response.sendRedirect("agenda.jsp");
+		}
+
+	//Novo contato
+	protected void novoContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(request.getParameter("nome"));
+		System.out.println(request.getParameter("fone"));
+		System.out.println(request.getParameter("email"));
+```
+
+Próximo passo é armazenarmos essas variáveis (`nome`, `fone` e `email`) na classe `JavaBens.java`, que por sua vez estão encapsulados, logo, teremos que importar `JavaBeans.java` lá na classe `Controller.java`, e por fim, instanciar um novo objeto JavaBens, para termos acesso aos métodos públicos (**getters** and **setters**) e armazenar nas variáveis `private`
+
+`Controller.java`
+
+```java
+...
+import model.JavaBeans;
+...
+    
+	DAO dao = new DAO();
+	JavaBeans contato = new JavaBeans();
+	...
+		//teste de recebimento dos dados do formulário
+		System.out.println(request.getParameter("nome"));
+		System.out.println(request.getParameter("fone"));
+		System.out.println(request.getParameter("email"));
+		
+		//setar as variáveis JavaBeans
+		contato.setNome(request.getParameter("nome"));
+		contato.setFone(request.getParameter("fone"));
+		contato.setEmail(request.getParameter("email"));
+...
+```
