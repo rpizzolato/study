@@ -548,3 +548,46 @@ import model.JavaBeans;
 		contato.setEmail(request.getParameter("email"));
 ...
 ```
+## Inserindo dados efetivamente no BD (exemplo com MySQL e diretamente na classe DAO.java)
+
+Abrindo o MySQL Workbench, conseguimos inserir dados na tabela contatos usando o comando `insert into contatos (nome, fone, email) values ('Bill Gates','9999-1111','bill@outlook.com');` e posteriormente conseguimos ler esse dados por meio do comando `select * from contatos;`
+
+Agora, para efetuarmos essa inserção por meio da classe `DAO.java`, no final da classe, antes do último fechamento de chaves `}`, iremos inserir:
+
+```java
+	/* CRUD CREATE */
+	public void inserirContato(JavaBeans contato) {
+		String create = "INSERT INTO contatos (nome, fone, email) VALUES (?,?,?)";
+		try {
+			// abrir conexão com o BD
+			Connection conn = conectar();
+
+			// Preparar a query para execução no BD
+			PreparedStatement pst = conn.prepareStatement(create);
+
+			// Substituir os parâmetros (?) pelo conteúdo das variáveis JavaBeans
+			pst.setString(1, contato.getNome()); // o 1 é ref. ao 1º parametro (?) em create na linha String create, primeira declaração do método inserirContato()
+			pst.setString(2, contato.getFone());
+			pst.setString(3, contato.getEmail());
+
+			// Executar a query (efetivamente insere os dados no BD)
+			pst.executeUpdate();
+
+			// encerrar a conexão com o BD
+			conn.close();
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+```
+
+Em controller.java, logo após setar as variáveis nome, fone e email, iremos adicionar o seguinte código:
+
+```java
+	//invocar o método inserirContato passando o objeto cotato
+	dao.inserirContato(contato);
+	
+	//redirecionar para o documento agenda.jsp
+	response.sendRedirect("main");
+```
