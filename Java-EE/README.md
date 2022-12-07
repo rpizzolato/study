@@ -582,12 +582,173 @@ Agora, para efetuarmos essa inserção por meio da classe `DAO.java`, no final d
 	}
 ```
 
-Em controller.java, logo após setar as variáveis nome, fone e email, iremos adicionar o seguinte código:
+Em `Controller.java`, logo após setar as variáveis `nome`, `fone` e `email`, iremos adicionar o seguinte código:
 
 ```java
-	//invocar o método inserirContato passando o objeto cotato
+	//invocar o método inserirContato passando o objeto contato
 	dao.inserirContato(contato);
 	
 	//redirecionar para o documento agenda.jsp
 	response.sendRedirect("main");
+```
+
+Após isso podemos rodar o projeto e testar o cadastro, assim como checar posteriormente no MySQL com o comando `select`.
+
+## Listando os contatos com ArrayList
+
+Em `DAO.java`, criaremos o método `listarContatos()`, do tipo `ArrayList<JavaBeans>`:
+```java
+	/* CRUD READ */
+	public ArrayList<JavaBeans> listarContatos() {
+		// Criando objeto para acessar a classe JavaBeans
+		ArrayList<JavaBeans> contatos = new ArrayList<>();
+		
+		String read = "SELECT * FROM contatos ORDER BY nome";
+
+		try {
+			Connection conn = conectar();
+			PreparedStatement pst = conn.prepareStatement(read);
+			ResultSet rs = pst.executeQuery();// ResultSet armazena temporariamente o retorno do BD (faz parte do JDBC)
+
+			// o laço abaixo será executado enquanto houver contatos
+			while (rs.next()) {
+				// variáveis de apoio que recebem os dados do BD
+				String idcon = rs.getString(1);
+				String nome = rs.getString(2);
+				String fone = rs.getString(3);
+				String email = rs.getString(4);
+
+				// populando o ArrayList
+				contatos.add(new JavaBeans(idcon, nome, fone, email));
+			}
+			conn.close();
+			return contatos;
+
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+```
+
+E no `Controller.java`, criaremos um método chamado `contatos`, o qual pegará as informações diretamente da classe `DAO.java`, e os exibirá, por enquanto, utilizando `System.out.println` apenas para testarmos.
+
+`Controller.java`
+```java
+//Lista contatos
+	protected void contatos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//response.sendRedirect("agenda.jsp");
+		
+		//Criando um objeto que irá receber os dados JavaBeans
+		ArrayList<JavaBeans> lista = dao.listarContatos();
+		
+		//teste de recebimento da lista		
+		for (int i = 0; i < lista.size(); i++) {
+			System.out.println(lista.get(i).getIdcon());
+			System.out.println(lista.get(i).getNome());
+			System.out.println(lista.get(i).getFone());
+			System.out.println(lista.get(i).getEmail());
+		}
+	}
+```
+
+Como retorno no console, devemos ter a listagem do contatos cadastrados no BD.
+
+## Listagem por meio do JSP
+
+Agora o que precisamos fazer é redirecionar ao arquivo `agenda.jsp` levando consigo os dados armazenados no `ArrayList`
+
+Podemos comentar o teste de recebimento da lista, logo, iniciaremos o encaminhamento desses dados para `agenda.jsp`, utilizando o `RequestDispacher`, o qual importaremos de `import jakarta.servlet.RequestDispatcher;`, da seguinte forma:
+
+`Controller.java`
+
+```java
+	// Encaminhar a lista ao documento agenda.jsp		
+		request.setAttribute("contatos", lista);
+		RequestDispatcher rd = request.getRequestDispatcher("agenda.jsp");
+		rd.forward(request, response);
+```
+
+Agora iremos em `agenda.jsp` e iniciaremos algumas importações que teremos que ter:
+
+`agenda.jsp`
+```jsp
+<%@ page import="model.JavaBeans"%>
+<%@ page import="java.util.ArrayList"%>
+```
+
+Para testarmos se está tudo OK, iremos exibir os dados vindo do `ArrayList`, da seguinte forma:
+
+```jsp
+<%
+	//recebe o objeto lista
+	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos");
+
+	//lista os dados
+	for (int i = 0; i < lista.size(); i++) {
+		out.println(lista.get(i).getIdcon());
+		out.println(lista.get(i).getNome());
+		out.println(lista.get(i).getFone());
+		out.println(lista.get(i).getEmail());
+	}
+%>
+```
+
+Se tudo der certo, é para retornar os dados no cabeçalho da página web, agora basta apenas colocarmos em um formato de tabela.
+
+## Colocando os dados em uma tabela
+
+Aqui iremos misturar Java com o documento HTML, da seguinte forma:
+
+`agenda.jsp`
+
+```jsp
+<body>
+	<h1>Agenda de Contatos</h1>
+	<a href="novo.html" class="Botao1">Novo contato</a>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Fone</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%for (int i = 0; i < lista.size(); i++) {%>
+				<tr>
+					<td><%=lista.get(i).getIdcon() %></td><!-- quando usa %= geralmente é para obter algum valor, e não usa ; (ponto e vírgula)-->
+					<<td><%=lista.get(i).getNome() %></td>
+					<td><%=lista.get(i).getFone() %></td>
+					<td><%=lista.get(i).getEmail() %></td>
+				</tr>
+			<%} %>
+		</tbody>
+	</table>
+</body>
+```
+
+Por fim, basta criarmos um estilo para a tabela. Na tag `<table>` criaremos uma propriedade `id="tabela"` para identificar a tabela perante ao CSS. No arquivo `style.css`, criaremos a seguinte formatação:
+
+`style.css`
+```css
+#tabela {
+	margin-top: 30px;
+	border-collapse: collapse;/*une as bordas da tabela*/
+}
+
+#tabela th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	background-color: #66bbff;
+	color: #fff;
+}
+
+#tabela td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
 ```

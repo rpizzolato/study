@@ -26,3 +26,8 @@ desc contatos;
 describe contatos;
 
 /* CRUD - Aula 11 Parte 3*/
+/* CRUD Create*/
+insert into contatos (nome, fone, email) values ('Bill Gates','9999-1111','bill@outlook.com');
+
+/* CRUD Read*/
+select * from contatos;
