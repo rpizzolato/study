@@ -31,3 +31,5 @@ insert into contatos (nome, fone, email) values ('Bill Gates','9999-1111','bill@
 
 /* CRUD Read*/
 select * from contatos;
+
+select nome, fone, email from contatos order by nome;

@@ -752,3 +752,220 @@ Por fim, basta criarmos um estilo para a tabela. Na tag `<table>` criaremos uma 
 	padding: 10px;
 }
 ```
+
+## Edição do contato
+
+Primeiro passo é criarmos uma nova coluna na tabela que exibe os contatos, com o conteúdo chamado **Opções**, no arquivo `agenda.jsp`, dessa forma: `th>Opções</th>`. Dessa mesma forma, criaremos um novo campo contendo um link com conteúdo chamado **Editar**, dessa forma `<td><a href="" class="Botao1">Editar</a></td>`. Com isso, se executarmos o projeto, será mostrado essa nova coluna, e com um botão (que na verdade é um link) Editar para cada contato.
+
+Agora para tratarmos a requisição com o id do contato, dentro do link criado anteriormente, colocaremos o conteúdo `select`, ficando assim: `<a href="select" class="Botao1">`, e no arquivo `Controller.java`, lá em `@WebServlet`, criaremos um novo padrão (pattern) chamado `"/select"`, ficando essa linha em questão, da seguinte forma: `@WebServlet(urlPatterns = {"/Controller", "/main", "/insert", "/select"})`. Ainda em `Controller.java`, onde verificamos a String `action`, criaremos um novo `else if` para tratar requisições para `"/select"`, assim como criar um novo método para tratar essa requisição, que se chamará `listarContato()`, ficando dessa forma:
+```java
+	//Editar contato
+	protected void listarContato(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//conteúdo método listarContato()
+	}
+```
+
+Nesse ponto podemos rodar o nosso projeto, e clicar no botão "Editar" para testarmos se a requisição está sendo enviada ao sevlet, no caso, a essa URL `http://localhost:8080/agenda/select`.
+
+Agora precisamos enviar o id a classe `Controller.java`, pode meio do formulário em `agenda.jsp`. Para o arquivo `agenda.jsp` enviar essa id, precisaremos editar o link utilizando variável por meio do ponto de interrogação (?), ficando dessa forma:
+```jsp
+<a href="select?idcon=<%=lista.get(i).getIdcon()%>" class="Botao1">Editar</a>
+```
+
+Agora em `Controller.java`, no método `listarContato()`, criaremos uma String que receberá esse id, e irá alocar (setar) na classe `JavaBeans.java` por meio do `SetIdcon(idcon)`, ficando da seguinte forma:
+```jsp
+	//recebimetno do id do contato que será editado
+	String idcon = request.getParameter("idcon");	
+	
+	//imprime no console como teste se recebeu realmente a variável vinda de agenda.jsp
+	System.out.println(idcon);
+	
+	contato.setIdcon(idcon);
+```
+
+Como somente nossa classe `DAO.java` que faz acesso ao BD, criaremos um novo método para buscar no Banco de Dados o contato que será feito a atualização de dados, essa busca deve ser por Id, para evitar puxar o dado incorreto ou não desejado. O método selecionar contato, dentro de `DAO.java`, ficará da seguinte forma:
+```java
+	/* CRUD UPDATE */
+	// selecionar o contato
+	public void selecionarContato(JavaBeans contato) {
+		
+		String read2 = "SELECT * FROM contatos WHERE idcon = ?";
+		
+		try {
+			Connection conn = conectar();
+			PreparedStatement pst = conn.prepareStatement(read2);
+			pst.setString(1, contato.getIdcon());
+			ResultSet rs = pst.executeQuery();
+			
+			while(rs.next()) {
+				//setar as variáveis JavaBeans
+				contato.setIdcon(rs.getString(1));
+				contato.setNome(rs.getString(2));
+				contato.setFone(rs.getString(3));
+				contato.setEmail(rs.getString(4));
+			}
+			
+			conn.close();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+```
+
+Depois, dentro de `Controller.java`, daremos continuidade ao método `listarContato()`, o qual chamaremos ao método `selecionarContato()` lá da classe `DAO.java`, e iremos imprimir, para fins de teste, as variáveis contidas no BD.
+```java
+//Editar contato
+	protected void listarContato(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//recebimetno do id do contato que será editado
+		String idcon = request.getParameter("idcon");	
+		
+		//imprime no console como teste se recebeu realmente a variável vinda de agenda.jsp
+		System.out.println(idcon);
+		
+		contato.setIdcon(idcon);
+		
+		//Executar o método selecionarContato() da classe DAO.java
+		dao.selecionarContato(contato);
+		
+		//teste de recebimento
+		System.out.println(contato.getIdcon());
+		System.out.println(contato.getNome());
+		System.out.println(contato.getFone());
+		System.out.println(contato.getEmail());
+	}
+```
+
+Agora precisaremos criar um formulário que irá receber esses dados, para posteriormente serem alterados e gravados no BD. Dessa forma, criaremos um novo arquivo em `\src\main\webapp` chamado `editar.jsp`. Como o formulário é muito semelhante ao formulário anterior, copiaremos o formulário do arquivo `novo.html` e colaremos dentro de `editar.jsp`. Iremos retirar as propriedades `placeholder`, mudar o valor do botão **Adicionar** para **Salvar**, assim como removeremos o conteúdo da propriedade action da tag `<form>`. A validação dos campos podemos deixar por conta do arquivo `validador.js`, que já está na tag `<script>`.
+Teremos que criar um novo campo para visualizarmos o id do contato, assim, podemos copiar a linha do campo nome e replicá-lo logo acima, e alterar a propriedade name para `idcon`, mudaremos também a classe para estilos, no caso mudaremos para o uso da propriedade `id`, que chamaremos de `caixa3`, ficando da seguinte forma: `<input type="text" name="idcon" id="caixa3" readonly>` (perceba que está com a propriedade readonly, pois não queremos que esse campo seja editável)
+No estilo, criaremos esse identificador, utilizando `#` (apenas classes usamos o ponto `.`), e incluiremos os seguintes valores:
+```css
+#caixa3 {
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ff0000;
+}
+```
+
+Em `Controller.java` iremos setar os atributos e direcioná-los para o arquivo `editar.jsp`, ficando assim:
+```java
+		// setar os atributos do formulário com o conteúdo JavaBeans
+		request.setAttribute("idcon", contato.getIdcon());
+		request.setAttribute("nome", contato.getNome());
+		request.setAttribute("fone", contato.getFone());
+		request.setAttribute("email", contato.getEmail());
+		
+		// encaminhar ao documento editar.jsp
+		RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+		rd.forward(request, response);
+```
+
+E por fim, em `editar.jsp`, adicionaremos a propriedade value, trazendo as informações para o preenchimento automático dos campos, ficando dessa forma:
+```jsp
+<form name="frmContato" action="">
+		<table>
+			<tr>
+				<td><input type="text" name="idcon" id="caixa3" readonly
+					value="<%out.print(request.getAttribute("idcon"));%>"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="nome" class="Caixa1"
+					value="<%out.print(request.getAttribute("nome"));%>"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="fone" class="Caixa2"
+					value="<%out.print(request.getAttribute("fone"));%>"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="email" class="Caixa1"
+					value="<%out.print(request.getAttribute("email"));%>"></td>
+			</tr>
+		</table>
+		<input type="button" value="Salvar" class="Botao1" onClick="validar()">
+	</form>
+```
+
+Agora iremos no `Controller.java`, e criaremos o *urlPatterns* chamado `/update`, assim como no *form action*, do arquivo `editar.jsp`, colocaremos com o valor `update`, ficando assim: `<form name="frmContato" action="update">`. Em Controller.java, criaremos um método `editarContato()`, o qual irá setar as variáveis no JavaBeans e chamar o método `alterarContato()`, que fica dentro do arquivo `DAO.java`, e por fim, é redirecionado para o documento `agenda.jsp` por meio do `sendRedirect("main");`. O método `editarContato()` ficará da seguinte forma:
+```java
+// Editar contato
+	protected void editarContato(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// teste recebimento
+		/*
+		 * System.out.println(request.getParameter("idcon"));
+		 * System.out.println(request.getParameter("nome"));
+		 * System.out.println(request.getParameter("fone"));
+		 * System.out.println(request.getParameter("email"));
+		 */
+
+		// setar as variáveis JavaBeans
+		contato.setIdcon(request.getParameter("idcon"));
+		contato.setNome(request.getParameter("nome"));
+		contato.setFone(request.getParameter("fone"));
+		contato.setEmail(request.getParameter("email"));
+		
+		//executar o método alterarContato()
+		dao.alterarContato(contato);
+		
+		//redirecionar para o documento agenda.jsp (atualizando as alterações)
+		response.sendRedirect("main");
+		
+	}
+```
+
+Método `alterarContato()`, que fica dentro de `DAO.java`:
+```java
+public void alterarContato(JavaBeans contato) {
+		String create = "UPDATE contatos SET nome=?,fone=?,email=? WHERE idcon=?";
+		
+		try {
+			Connection conn = conectar();
+			PreparedStatement pst = conn.prepareStatement(create);
+			pst.setString(1, contato.getNome());
+			pst.setString(2, contato.getFone());
+			pst.setString(3, contato.getEmail());
+			pst.setString(4, contato.getIdcon());
+			
+			pst.executeUpdate();
+			
+			conn.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+```
+
+## CRUD Delete (Exclusão de contato)
+
+Primeiro passo, em `agenda.jsp` iremos duplicar a última coluna para criarmos um botão excluir, com a propriedade do link `href` vazio (`""`). Depois iremos criar um arquivo para validar a exclusão, chamado `confirmador.js`, que ficará na pasta `src\main\webapp\scripts`. Dentro do `confirmador.js`, criaremos o seguinte conteúdo, que por enquanto é apenas um teste:
+```js
+ function confirmar(idcon) {
+	let resposta = confirm("Confirma a exclusão deste contato?")
+	if (resposta === true) {
+		alert(idcon)
+	}
+}
+```
+No arquivo `agenda.jsp` teremos que criar um link entre esses arquivos (`agenda.jsp` e `confirmador.js`), utilizando a tag `<script>`, dessa forma `<script src="scripts/confirmador.js"></script>`
+
+Agora na propriedade `href` que deixamos em branco anteriormente, referente à exclusão do contato, preencheremos chamando o método `confirmar()`, por meio da propriedade do javascript usado diretamente no link, ficando dessa forma `<a href="javascript: confirmar(<%=lista.get(i).getIdcon()%>)" class="Botao2">Excluir</a>`. Agora podemos testar para vermos se o método `alert()` será chamado corretamente, com o argumento idcon.
+Para finalizarmos essa primeira etapa, comentaremos o `alert()` no arquivo `confirmador.js` e usaremos a propriedade `window.location.href`, para nos redirecionar até o padrão que usaremos para excluir o contato, ficando o arquivo `confirmador.js` da seguinte forma:
+```js
+ function confirmar(idcon) {
+	let resposta = confirm("Confirma a exclusão deste contato?")
+	if (resposta === true) {
+		//alert(idcon)
+		window.location.href = "delete?idcon=" + idcon
+	}
+}
+```
+
+Agora lá em Controller.java, criaremos um novo `urlPatterns` para tratar requisições de `/delete`, assim como nas outras vezes, criaremos um `else if` e um método para tratar, chamado `removerContato()`. Como das outras vezes, criaremos uma variável para receber o idcon por `getParameter()` e imprimiremos para testar, ficando dessa forma o conteúdo do método `removerContato()`:
+```java
+String idcon = request.getParameter("idcon");
+System.out.println(idcon);
+```
