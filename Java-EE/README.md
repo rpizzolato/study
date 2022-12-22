@@ -964,8 +964,125 @@ Para finalizarmos essa primeira etapa, comentaremos o `alert()` no arquivo `conf
 }
 ```
 
-Agora lá em Controller.java, criaremos um novo `urlPatterns` para tratar requisições de `/delete`, assim como nas outras vezes, criaremos um `else if` e um método para tratar, chamado `removerContato()`. Como das outras vezes, criaremos uma variável para receber o idcon por `getParameter()` e imprimiremos para testar, ficando dessa forma o conteúdo do método `removerContato()`:
+Agora lá em `Controller.java`, criaremos um novo `urlPatterns` para tratar requisições de `/delete`, assim como nas outras vezes, criaremos um `else if` e um método para tratar, chamado `removerContato()`. Como das outras vezes, criaremos uma variável para receber o idcon por `getParameter()` e imprimiremos para testar, ficando dessa forma o conteúdo do método `removerContato()`:
 ```java
 String idcon = request.getParameter("idcon");
 System.out.println(idcon);
 ```
+
+Em `DAO.java`, ficará dessa forma:
+```java
+/* CRUD DELETE */
+	public void deletarContato(JavaBeans contato) {
+		String delete = "DELETE FROM contatos WHERE idcon=?";
+		try {
+			Connection conn = conectar();
+			PreparedStatement pst = conn.prepareStatement(delete);
+			pst.setString(1, contato.getIdcon());
+			pst.executeUpdate();
+			conn.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+```
+
+Em Controller.java, ficará da seguinte forma:
+```java
+// Remover um contato
+	protected void removerContato(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// recebimento do id do contato a ser excluído (validador.js)
+		String idcon = request.getParameter("idcon");
+
+		// setar a variável idcon JavaBeans
+		contato.setIdcon(idcon);
+
+		// executar o método deletarContato (DAO) passando o objeto contato
+		dao.deletarContato(contato);
+
+		// redirecionar para o documento agenda.jsp (atualizando as alterações)
+		response.sendRedirect("main");
+	}
+```
+
+Agora podemos testar a exclusão de um contato.
+
+## Gerando um relatório PDF de todos os contatos
+
+Iremos utilizar a biblioteca [itextpdf](https://github.com/itext/itextpdf/releases/tag/5.5.13.3), que é de código aberto. Iremos fazer o download da [versão 5](https://github.com/itext/itextpdf/releases/download/5.5.13.3/itextpdf-5.5.13.3.zip) dele.
+Agora basta extrair o conteúdo, e copiar o arquivo `itextpdf-5.5.13.3.jar` para a pasta `src/main/webapp/WEB-INF/lib` (a mesma pasta que está o driver do BD MySQL).
+
+Agora iremos criar um botão de gerar o relatório no arquivo `agenda.jsp`, logo após o botão "Novo Contato", ficando dessa forma:
+```html
+<a href="report" class="Botao2">Relatório</a>
+```
+
+Em Controller.java, criaremos um novo `urlPattern` para ligar com o padrão `report` colocado no link anterior, e assim como nos demais métodos, criaremos um novo `else if` e um novo método para lidar com a geração do relatório, no caso, irá se chamar `gerarRelatorio()`
+
+No método `gerarRelatorio()` criaremos um objeto `Document`, para termos acesso aos métodos da biblioteca `itextpdf`. Apertando Ctrl + Shift + O, podemos escolher de onde importar Document, no caso será de `com.itextpdf.text.Document`. A criação do objeto ficará da seguinte forma: `Document documento = new Document();`. A importação ficará assim: `import com.itextpdf.text.Document;`
+
+Assim como vimos em BD, podem ocorrer exceções, no caso da criação de um arquivo PDF, também podem ocorrer exceções, portanto devemos usar um `try catch` para tratar isso. No catch, podemos imprimir a exceção, juntamente iremos fechar (`close();`) o documento.
+
+Devemos agora criar:<br />
+1. tipo de conteúdo: `response.setContentType("application/pdf");`<br />
+2. nome do documento: `response.addHeader("Content-Disposition", "inline; filename="+"contatos.pdf");`<br />
+3. criar efetivamente o documento: `PdfWriter.getInstance(documento, response.getOutputStream());`<br />
+4. agora iremos abrir o documento para manipular seu conteúdo:<br />
+	4.1. `documento.open();` e logo em seguida `documento.add(new Paragraph("Lista de contatos:"));`. Lembrando que precisamos importar `Paragraph`, da seguinte forma: `import com.itextpdf.text.Paragraph;`<br />
+
+Para testarmos se está tudo ok, podemos fechar o documento (`documento.close()`) e executar o projeto para ver se está sendo gerado o arquivo PDF com o conteúdo do Parágrafo "Lista de contatos:".
+
+Agora iremos adicionar a listagem de contatos ao documento PDF. Essa listagem é uma tabela, portanto usaremos o `itextpdf` da seguinte forma:
+```java
+//criar uma tabela
+				PdfPTable tabela = new PdfPTable(3); //3 = 3 colunas
+
+				PdfPCell col1 = new PdfPCell(new Paragraph("Nome"));
+				PdfPCell col2 = new PdfPCell(new Paragraph("Fone"));
+				PdfPCell col3 = new PdfPCell(new Paragraph("Email"));
+
+				tabela.addCell(col1);
+				tabela.addCell(col2);
+				tabela.addCell(col3);
+
+				documento.add(tabela);
+```
+
+A partir desse ponto, já podemos, dinamicamente, "popular" os dados por meio do Java, ficando dessa forma:
+```java
+//popular a tabela com os contatos
+ArrayList<JavaBeans> lista = dao.listarContatos();
+
+for (int i = 0; i < lista.size(); i++) {
+	tabela.addCell(lista.get(i).getNome());
+	tabela.addCell(lista.get(i).getFone());
+	tabela.addCell(lista.get(i).getEmail());
+}
+
+documento.add(tabela);
+
+documento.close();
+```
+
+## Documentação
+A documentação é muito importante para a comunicação e a transferência do conhecimento. Será desenvolvido em 4 etapas, sendo a primeira, a documentação do BD, a segunda etapa será a revisão do código fonte, revisão essa relacionada a remoção de comentários que foram usados por questões didáticas, indentação do código, padronização de nome usados em variáveis e métodos, assim como simplificação do código. Na terceira etapa será gerado documentação específica das classes Java, por meio de um plugin que será instalado no Eclise, e gerar a documentação no formato HMTL usando o Java Doc. Na última etapa será mostrado como enviar essa documentação ao github.
+### Documentação do BD e Revisão do código fonte
+#### BD
+No MySQL Workbench, faremos um dump do BD, para isso iremos na aba na lateral esquerda, escolhemos a opção `Administration`, vamos em `Data Export`, e selecionamos o BD **dbagenda**. Na seleção ao lado, podemos escolher entre fazer o dump dos dados e da estrutura, somente a estrutura, e somente os dados. Iremos fazer apenas da estrutura, e posteriormente clicar em **Start Export**.
+
+Agora iremos criar o diagrama do BD, por meio do menu **Database** > **Reverse Engineer**, posteriormente poderá ser salvo como arquivo PDF, por meio do **arquivo** > **exportar**.
+
+#### Revisão do código
+Agora iremos fazer a revisão do código, que em teoria removeríamos os comentários, segundo essa aula do professor, no entanto vou manter por questão didática para caso necessite estudar o código futuramente.
+
+No arquivo `agenda.jsp` há um *warning* na criação do vetor de lista, que devemos inserir um comando para que seja ignorado o aviso que é dado, usando acima `@ SuppressWarnings ("unchecked")`
+### Documentação das classes Java
+
+Iremos utilizar uma extensão do Eclipse para criar a documentação Java Doc. Vamos no menu **Help** > **Eclipse Marketplace** e pesquisar por `jautodoc` e instalar o plugin. O Eclipse pedirá para reiniciar. Agora em cada classe, na última linha, devemos clicar com o botão direito do mouse e ir em `JAutodoc` e ir em `Add Javadoc`.
+
+Agora vamos fazer a documentação de todo o projeto. Para isso, vamos clicar com o botão direito do mouse no projeto `agenda` e vamos em `Export`, vamos expandir a pasta `Java` e selecionar a opção `Javadoc`. Após a criação dessa documentação, uma nova pasta `doc` é criada em `eclipse-workspace\agenda\doc`. Então podemos navegar até essa pasta e abrir o arquivo `index.html`
+
+## Hospedagem (WAR)
+Para hospedagem, no servidor que ficará disponível para, teremos um banco de dados, o qual importaremos os dados do nosso criado no decorrer do curso. Após importado, iremos modificar a classe `DAO.java` para mudanças de usuário e senha do banco, e após isso, criaremos um pacote **War**, que contém todos os componentes do projeto Java, que é executado no servidor Tomcat.
+Para gerarmos o arquivo **War**, vamos até a pasta principal do projeto, botão direito > Export > Web > War File e nomear o arquivo, assim como escolher o local para salvá-lo.
