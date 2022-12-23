@@ -213,6 +213,12 @@ Para conexão posteriormente com o Java, precisaremos de algumas informações, 
 - **user**: root
 - **password**: a senha que foi definido na instalação do MySQL
 
+>Comentários no MySQL
+>
+>**single line (primeira forma)**: # comment<br />
+>**single line (segunda forma)**: -- comment<br />
+>**multi line**: /* comment */<br />
+
 ## MVC (Model View Controller)
 Visa principalmente separar, organizar, e melhorar o desempenho e segurança do sistema, além de permitir a reutilização do código. Esse padrão ainda permite que uma equipe trabalhe separadamente em pontos distintos do sistema:
 
@@ -241,10 +247,18 @@ Visa principalmente separar, organizar, e melhorar o desempenho e segurança do 
 </body>
 </html>
 ```
+>Comentários em HTML
+>
+>**single line** e **multi line**: `<!-- Comment -->`. <br />
+
 - Agora podemos executar o projeto no servidor Tomcat para testar (sempre selecionando o arquivo `index.html`).
 
 ## Criando o estilo (CSS)
 Primeiro vamos criar um pasta `images` dentro de `src/main/webapp`, e inserir duas imagens, uma será o favicon, e a outra ficará na página inicial. (`agenda.png` e `favicon.png`)
+
+>Comentários no CSS
+>
+>**single line e multi line**: /* comment */<br />
 
 Agora no arquivo `index.html`, vamos adicionar as seguintes linhas logo após a tag `<title>`:
 ```html
@@ -413,9 +427,9 @@ Caso retorne erro, será impresso **null** e será mostrado a `exception`. O mé
 
 >Comentário em Java
 >
->**single line**: // comment<br />
->**multi line**: /* comment */<br />
->**documentation**: /** comment **/<br />
+>**single line**: // comment <br />
+>**multi line**: /* comment */ <br />
+>**documentation**: /** comment **/ <br />
 
 ## Controller
 Dentro de `index.html`, temos um botão que irá fazer uma consulta ao servlet, e esse por sua vez, irá nos trazer o arquivo `agenda.jsp`, arquivo esse que contém elementos de HTML e também é capaz de executar a linguagem Java, ou seja, ele possui um conteúdo que é gerado de forma dinâmica.
@@ -554,6 +568,11 @@ O arquivo `validador.js` ficará da seguinte forma:
 	}
 }
 ```
+
+>Comentário em Javascript
+>
+>**single line**: // comment <br />
+>**multi line**: /* comment */ <br />
 
 Dentro de `agenda.jsp`, preencheremos a propriedade `href` para buscar a página `novo.html`:<br />
 `<a href="novo.html" class="Botao1">Novo contato</a>`
