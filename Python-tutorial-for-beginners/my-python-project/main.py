@@ -1,22 +1,14 @@
-from helper import validate_and_execute, user_input_message
-import os
+from user import User
+from post import Post
+app_user_one = User("ro@pira.com", "Rodrigo", "pwd", "Developer")
+app_user_one.get_user_info()
 
-print(os.name)
-print(os.cpu_count())
+app_user_one.change_job_title("DevOps Trainer")
+app_user_one.get_user_info()
 
-"""user_input = ""
-while user_input != "exit":
-    user_input = input(user_input_message)
+app_user_two = User("aa@aa.com", "James Bond", "supersecret", "Agent")
+app_user_two.get_user_info()
 
-    # this line converts the format 45:hours to a list ["45", "hours"]
-    days_and_unit = user_input.split(":")
-
-    print(days_and_unit)
-
-    days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
-    print(days_and_unit_dictionary)
-
-    print(type(days_and_unit_dictionary))
-
-    validate_and_execute(days_and_unit_dictionary)"""
+new_post = Post("on a secret mission today", app_user_two.name)
+new_post.get_post_info()
 

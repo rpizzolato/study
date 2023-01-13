@@ -245,6 +245,13 @@ In this way, the looping will be infinite, because the condition is always **Tru
 - **Lists**: used to store multiple items in a single variable
 - **For Loop**: is used iterating over a sequence (like a list), so we can execute something for each item in a list
 
+Example for
+```python
+# we iterate or break each project in the list my_project into a sinple project
+for projetc in my_projects:
+    print(project)
+```
+
 To turn a string into a slit, we need to "split" it, using the method `split()`. We need to provide a list without commas, because `split()` changes the spaces by default. If you want to use comma, for example, we need to declare split method in the following way: `split(",")`
 
 For example, let's say a string value equals to `"10, 22, 50, 100"` (**comma** separated, or it could be **space** separated). Split this list is equals to `[10, 22, 50, 100]`
@@ -862,4 +869,214 @@ inv_file.save("inventory_with_total_value.xlsx")
 
 The `inv_file.save("inventory_with_total_value.xlsx")` creates a new file with the name in the parameter.
 
-## Classes and Objects
+## Classes and Objects (Object-oriented programming)
+- Classes is like an object constructor
+- all classes have a \__init\__() function
+- \__init\__() is executed automatically, whenever we create the objects from this class
+- \__init\__() is like a constructor if we compare to others programming languages
+- **self** is a reference to the current instance of the class
+- **\__init\__(self)** we can pass the parameters we need (again, like in others programming languages)
+
+Here's an example of a Class and a constructor
+```python
+class User:
+    def __init__(self, user_email, name, password, current_job_title):
+        self.email = user_email
+        self.name = name
+        self.password = password
+        self.current_job_title = current_job_title
+
+    def change_password():
+        # do smth
+
+    def change_job_title():
+        # do smth
+```
+
+Now, an object can be created with initial values, like `tom = User("tt@tt.com", "Tom", "pwd", "Developer")`
+
+And at this point, if the user needs to change password, we call function on that object to change it, like `tom.change_password("better pwd")`
+
+The function responsible to change the password, could be like this. We must use the parameter **self** to indicate that it belongs to the constructor.
+```python
+    def change_password(self, new_password):
+        self.password = new_password
+```
+
+Our Class will be in this way:
+
+user.py (Class User)
+```python
+class User:
+    def __init__(self, user_email, name, password, current_job_title):
+        self.email = user_email
+        self.name = name
+        self.password = password
+        self.current_job_title = current_job_title
+
+    def change_password(self, new_password):
+        self.password = new_password
+
+    def change_job_title(self, new_job_title):
+        self.current_job_title = new_job_title
+        
+    def get_user_info(self):
+        print(f"User {self.name} currently works as a {self.current_job_title}. You can contact them at {self.email}")
+
+```
+
+### Create an Object
+
+To construct a new object, we use the following code (very similar to call a function):
+```python
+User("ro@pira.com", "Rodrigo", "pwd", "Developer")
+```
+
+> **Observation**
+> 
+> Functions that belong to an object are called **methods**
+
+Creating an object is very simple, we call `User()` like a function, but we need to store it into a variable, and then use this variable followed by a dot (`.`) to call the methods.
+
+```python
+app_user_one = User("ro@pira.com", "Rodrigo", "pwd", "Developer")
+app_user_one.get_user_info()
+
+app_user_one.change_job_title("DevOps Trainer")
+app_user_one.get_user_info()
+```
+
+In the example above we changed the job title, and called again the method to print out the information, and as we can see, the information was updated successfully. When we call a method, we do not need to reference the **self**
+
+It's very common to separate class in different files. In our example, the class `user.py` is a class to deal only with the users. We can create a new class called `post.py` to deal with user's posts. `post.py` is a very simple class, with the following content:
+```python
+class Post:
+    def __init__(self, message, author):
+        self.message = message
+        self.author = author
+
+    def get_post_info(self):
+        print(f"Post: {self.message} written by {self.author}")
+        
+```
+
+It's also very common to concentrate the object creation in the `main.py` file, where we are going to create the object **user** and **post**
+```python
+from user import User
+from post import Post
+
+app_user_two = User("aa@aa.com", "James Bond", "supersecret", "Agent")
+app_user_two.get_user_info()
+
+new_post = Post("on a secret mission today", app_user_two.name)
+new_post.get_post_info()
+```
+
+Remembering that we need to import the class. We could only use directly `import user` and declare like `user.User()` or simply use the `from user import User` statement. 
+
+### Object Oriented Programming
+
+Python is an object-oriented programming language. Almost everything in Python is an object. For example, when we use the function `type()` it returns the class of something, like string, integer, list, etc.
+```python
+# a string
+print(type("a string"))
+
+# a integer
+print(type(5))
+
+# float
+print(type(18.5))
+
+# list
+print(type([1, 2, 3]))
+
+# set
+print(type({1, 2, 3}))
+
+# dictionary
+print(type({"name": "rodrigo"}))
+
+```
+Will return
+```
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'list'>
+<class 'set'>
+<class 'dict'>
+```
+
+In Python almost everything is an object because `str()`, `int()`,... are the constructor function
+
+```python
+x = int(1)      # x will be 1
+x = int(2.8)    # x will be 2
+x = int("3")    # x will be 3
+```
+
+# Project: API Request to GitLab
+
+In this project we are going to see how to use Python to communicate with external applications, like GitLab, using API.
+
+To communicate using API, we need a module called [requests](https://pypi.org/project/requests/). It is necessary to install it using `pip install requests`
+
+A simple test or implementation we can do, is the following code:
+```python
+import requests
+
+response = requests.get("https://gitlab.com/api/v4/users/nanuchi/projects")
+
+print(response.text)
+
+```
+
+Although the response for `type(response.text)` is `<class 'str'>`, meaning that it is a string, actually it is returned a **list** of several **dictionaries**. It returns as string because we are accessing the `.text` attribute.
+
+So instead of using `.text`, we are going to use `.json`, because JSON is a lightweight format for **transporting data**. JSON is often used to send data over the web.
+
+`.json()` function converts the data from json into Python data type
+
+So the same previous example, we change to `json()`
+```python
+import requests
+
+response = requests.get("https://gitlab.com/api/v4/users/nanuchi/projects")
+
+print(response.json())
+print(type(response.json()))
+
+# access the first element of the list
+print(response.json()[0])
+
+```
+
+Will return `<class 'list'>`, which means, now it will return us a **list**
+
+The project will be like this:
+```python
+import requests
+
+response = requests.get("https://gitlab.com/api/v4/users/nanuchi/projects")
+my_projects = response.json()
+
+for project in my_projects:
+    print(f"Project Name: {project['name']}\nProject Url: {project['web_url']}\n")
+
+```
+
+This will return a list of the projects, similar to this:
+```
+Project Name: docker-in-1-hour
+Project Url: https://gitlab.com/nanuchi/docker-in-1-hour
+
+Project Name: IT-beginners-course
+Project Url: https://gitlab.com/nanuchi/it-beginners-course
+
+Project Name: vue-js-test
+Project Url: https://gitlab.com/nanuchi/vue-js-test
+```
+
+An important observation is on the line that prints out the information `print(f"Project Name: {project['name']}\nProject Url: {project['web_url']}\n")`.
+
+As the dictionary **name** and **web_url** are both string, we need use single quotes (`'`) to access the dictionary. We cannot use double quotes inside double quotes, so is necessary to use single quotes inside double quotes.
