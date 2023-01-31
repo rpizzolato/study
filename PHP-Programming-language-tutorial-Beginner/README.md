@@ -202,7 +202,7 @@ In order to get information from a form, we use `$_GET["name_from_field"]`, like
   ?>
 </body>
  ```
- >**Observation**
+ >****Note****
  >
  >When we want the checkbox to be an array, in the input properties name, we name it using brackets: `name="fruits[]"`
 
@@ -227,7 +227,7 @@ It is a special type of array, that not only we can store data values, but we ca
   echo $grades["Oscar"];
   ?>
 ```
- >**Observation**
+ >****Note****
  >
  >The keys must be unique. It's ok the values is similar, but cannot have similar key.
 
@@ -417,7 +417,7 @@ The PHP conditional assignment operators are used to set a value depending on co
 </body>
 ```
 
->**Observation**
+>****Note****
 >
 >In the previous example, we cannot use floating point because `number` filed does not accept it. To fix this, we use `step="0.1"` property.
 
@@ -612,7 +612,7 @@ $book1->pages = 400;
 echo $book1->title;
 ```
 
-> Curiosity
+> **Note**
 >
 > `->` is used to call a method, or access a property, on the object of a class<br>
 > `=>` is used to assign values to the keys of an array. See [more](https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or)
