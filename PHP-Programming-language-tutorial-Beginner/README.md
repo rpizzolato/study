@@ -784,6 +784,21 @@ $avengers->setRating("Dog");
 echo $avengers->getRating();
 ```
 
+## Regular Expression
+
+In the previous example, we use an if statement to check if the user typed the correct "pattern" of the movie rating. Instead of using a very large if statement, we could use Regular Expression:
+
+```php
+$exp = "/learning/i";
+```
+Regarding the code above, `/` is the delimiter, `learning` is the pattern we are searching for, and `i` is a modifier that makes the search case-**i**nsensitive.
+
+We are going to separate every pattern by brackets `[]`, in this way:
+
+```php
+"/[R][o][a-g]{2}/";
+```
+
 ## Inheritance
 
 We can extends other Class to a new Class with all information from the previous Class, using the `extends` statement. Here's an example:
