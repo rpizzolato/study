@@ -1,8 +1,35 @@
 # Expressões Regulares
 
+## Disclaimer
+
 Esse é uma anotação do vídeo JavaScript #10 - Expressões Regulares do Rodrigo Branas, disponível [aqui](https://www.youtube.com/watch?v=9r48XuOB4DA&t). Como por infelizmente não estar trabalhando diariamente com programação, acabo por vezes tendo que recorrer ao vídeo, e a ideia é deixar aqui como uma consulta rápida para estudos e aprimoramento de alguns projetos. Gostaria de deixar um grande obrigado ao Branas, por estar sempre contribuindo com a comunidade de forma gratuita, sou imensamente grato, e acredito que por meio do estudo e muito trabalho, conseguimos alcançar nossos objetivos, no meu caso, atualmente, é me tornar Dev Full Time!
 
-## O que são
+# Sumário
+1. [Expressões Regulares, o que são](#expressões-regulares-o-que-são)
+2. [Criando a expressão](#criando-a-expressão)
+3. [API de retorno](#api-de-retorno)
+4. [Passo 1](#passo-1)
+5. [Passo 2](#passo-2)
+6. [Passo 3](#passo-3)
+7. [Passo 4](#passo-4)
+8. [Grupos de caracteres](#grupos-de-caracteres)
+9. [Passo 5](#passo-5)
+10. [Quantificadores - Parte 1](#quantificadores---parte-1)
+11. [Passo 6](#passo-6)
+12. [Passo 7](#passo-7)
+13. [Quantificadores - Parte 2](#quantificadores---parte-2)
+14. [Passo 8](#passo-8)
+15. [Passo 9 (Metacharacters)](#passo-9-metacharacters)
+16. [String API](#string-api)
+17. [Passo 10](#passo-10)
+18. [Passo 11](#passo-11)
+19. [Modificadores](#modificadores)
+20. [Retornando somente os prefixos](#retornando-somente-os-prefixos)
+21. [Retornando somente os telefones sem o prefixo](#retornando-somente-os-telefones-sem-o-prefixo)
+22. [Passo 12](#passo-12)
+23. [Fontes para estudo recomendado](#fontes-para-estudo-recomendado)
+
+## Expressões Regulares, o que são
 
 São estruturas formadas por uma sequência de caracteres que especificam um padrão formal. Utilizado muito em:
 - validação de campos

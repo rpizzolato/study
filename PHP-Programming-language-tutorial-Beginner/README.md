@@ -1,7 +1,43 @@
 # PHP Programming Language Tutorial - Full Course
 
+## Disclaimer
+
 This is a repository with annotations from the Course **PHP Programming Language Tutorial** of the YouTube channel **freeCodeCamp.org**. The Course is available here
 [https://www.youtube.com/watch?v=OK_JCtrrv-c](https://www.youtube.com/watch?v=t8pPdKYpowI). I'd like to Thank Mike Dane so much for providing free content with so much quality!
+
+# Sumary
+
+1. [Working with Strings](#working-with-strings)
+2. [Working with numbers](#working-with-numbers)
+3. [Getting User Input](#getting-user-input)
+4. [Building a basic (very simple) calculator](#building-a-basic-very-simple-calculator)
+5. [Building a Mad Libs Game](#building-a-mad-libs-game)
+6. [Array](#array)
+7. [Using checkboxes](#using-checkboxes)
+8. [Associative Arrays](#associative-arrays)
+9. [Functions](#functions)
+10. [Operators (from [w3schools](w3schools.com/php/php_operators.asp))](#operators-from-w3schools)
+  - [PHP Arithmetic Operators](#php-arithmetic-operators)
+  - [PHP Assignment Operators](#php-assignment-operators)
+  - [PHP Comparison Operators](#php-comparison-operators)
+  - [PHP Increment / Decrement Operators](#php-increment--decrement-operators)
+  - [PHP Logical Operators](#php-logical-operators)
+  - [PHP String Operators](#php-string-operators)
+  - [PHP Array Operators](#php-array-operators)
+  - [PHP Conditional Assignment Operators](#php-conditional-assignment-operators)
+11. [if statement](#if-statement)
+12. [Switch Statement](#switch-statement)
+13. [While Loops](#while-loops)
+14. [For Loops](#for-loops)
+15. [foreach Loop](#foreach-loop)
+16. [Comments](#comments)
+17. [include](#include)
+18. [Include PHP](#include-php)
+19. [Classes and Objects](#classes-and-objects)
+20. [Constructor](#constructor)
+21. [Getters and Setters](#getters-and-setters)
+22. [Regular Expression](#regular-expression)
+23. [Inheritance](#inheritance)
 
 ## Working with Strings
 
@@ -455,6 +491,7 @@ The PHP conditional assignment operators are used to set a value depending on co
 ```
 
 ## While Loops
+
 ```php
 <?php
   $index = 1;
@@ -498,7 +535,7 @@ for ($i=1; $i < 5; $i++) {
 
 Printing out an array
 ```php
-$luchyNumbers = array(4, 8, 14, 16, 23, 42);
+$luckyNumbers = array(4, 8, 14, 16, 23, 42);
 
 for ($i=0; $i < count($luchyNumbers); $i++) { 
     echo "$luchyNumbers[$i] <br>";
@@ -786,17 +823,17 @@ echo $avengers->getRating();
 
 ## Regular Expression
 
-In the previous example, we use an if statement to check if the user typed the correct "pattern" of the movie rating. Instead of using a very large if statement, we could use Regular Expression:
+In the previous example, we use an if statement to check if the user typed the correct "pattern" of the movie rating. Instead of using a very large if statement, we could use Regular Expression and rewrite the `setRating` function like this:
 
 ```php
-$exp = "/learning/i";
-```
-Regarding the code above, `/` is the delimiter, `learning` is the pattern we are searching for, and `i` is a modifier that makes the search case-**i**nsensitive.
-
-We are going to separate every pattern by brackets `[]`, in this way:
-
-```php
-"/[R][o][a-g]{2}/";
+function setRating($rating) {
+    $regExp = "/^G$|^PG$|^PG-13$|^R$/";
+    if (preg_match($regExp, $rating) == 1) {
+        $this->rating =  $rating;
+    } else {
+        $this->rating = "NR";
+    }
+}
 ```
 
 ## Inheritance
