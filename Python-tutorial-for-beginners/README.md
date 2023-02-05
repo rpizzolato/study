@@ -678,7 +678,7 @@ The package we're going to use is called **openpyxl**, available in the PyPI web
 - `range()` also starts from 0 by default, and creates a list:
 - it stays like this: `range(75)` ➡️`[0, 1, 2, 3 ... 74]`
 - **in a valid loop** we can iterate over and do something for each item in this list `[0, 1, 2, 3 ... 74]`
-- we can also use `range()` with a parameter informing the starting number we want, in this case will be tue number 2: `for product_row in range(2, product_list.max_row)`. This will start the list in this way: `[2, 3, 4...]`
+- we can also use `range()` with a parameter informing the starting number we want, in this case will be the number 2: `for product_row in range(2, product_list.max_row)`. This will start the list in this way: `[2, 3, 4...]`
 
 ### Select the value in a cell
 
