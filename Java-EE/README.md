@@ -5,6 +5,7 @@
 ### Sumário
 - [Java EE](#java-ee)
 - [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)
+- [Tipo de dados primitivo](#tipos-de-dados-primitivos)
 - [Atualização estrutura pastas Eclipse](#atualização-na-estrutura-de-pastas-novas-versões-da-ide-eclipse)
 - [Setup do ambiente de desenvolvimento](#setup-do-ambiente-de-desenvolvimento-jdk-eclipse-tomcat-MySQL)
 	- [JDK](#jdk)
@@ -55,6 +56,23 @@ JSP (Java Server Pages): além do Servlet, é possível desenvolver páginas par
 - Eclipse IDE Enterprise Edition
 - Apache tomcat
 - MySQL
+
+### Tipos de dados primitivos
+
+Um tipo de dado primitivo especifica o tamanho e o tipo do valor da variável, e não tem método adicional.
+
+Exitem oito tipos de dado primitivo em Java:
+
+| Tipo de Dado | Tamanho | Descrição |
+|---|---|---|
+| byte | 1 byte | Armazena números inteiros de -128 to 127 |
+| short | 2 bytes |	Armazena números inteiros de -32,768 to 32,767 |
+| int |	4 bytes | Armazena números inteiros de -2,147,483,648 to 2,147,483,647 |
+| long | 8 bytes | Armazena números inteiros de -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| float | 4 bytes |	Armazena números fracionários. Suficiente para armazenar de 6 a 7 dígitos decimais |
+| double | 8 bytes | Armazena números fracionários. Suficiente para armazenar 15 dígitos decimais |
+| boolean |	1 bit |	Armazena valores verdadeiros (**true**) ou falsos (**false**) |
+| char | 2 bytes | Armazena um único caractere/letra ou valores ASCII |
 
 ### Atualização na estrutura de pastas novas versões da IDE Eclipse
 
