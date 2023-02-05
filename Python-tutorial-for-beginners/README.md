@@ -680,6 +680,47 @@ The package we're going to use is called **openpyxl**, available in the PyPI web
 - **in a valid loop** we can iterate over and do something for each item in this list `[0, 1, 2, 3 ... 74]`
 - we can also use `range()` with a parameter informing the starting number we want, in this case will be tue number 2: `for product_row in range(2, product_list.max_row)`. This will start the list in this way: `[2, 3, 4...]`
 
+### application of range (another example)
+
+For a full understand of `range()`, I decided to bring a question of a test I'm studying, that brings a very interesting situation of the use:
+
+- Consider the following code, written in Python 3 (range came from Python version 3)
+```python
+x = 0
+for i in range(1,5,2):
+    for j in range(2,4,4):
+        x = x + i + j
+print(x)
+```
+What's going to be the printed value of `x`?
+
+When we set `range(1,5,2)` like this, it's going to start at `1`, and goes until `5`, but it WON'T count `5` really, it goes until 4 only, `2` by `2` (third param, referring to **step**). If we print this range:
+
+```python
+for i in range(1,5,2):
+    print(i)
+```
+
+It will print:
+```
+1
+3
+```
+
+And 
+
+```python
+for j in range(2,4,4):
+    print(i)
+```
+
+It will print:
+```
+2
+```
+
+It's important to notice that the value of `i` and `j`, will be the first value of the `range`, so first scenario `i` is equal to `1`, and `j` is equal to `2`. So in the first passage of the `for loop`, `x` will receive `x` (that values `0` at moment), + `i` (that values `1`), + `j` (that initially values `2`). The `j` for loop becomes `false`, once `range` is `4` by `4`, and we come back to first `for` (the `i` one). The first `for` is 2 by 2, so now it values `3` (instead of `1`, initially), and we enter again in `j` for loop, with `j` valuing `2` (first time loop, again). `x` was valuing `3`, now it receives `3` again (from itself), + `3` of the `i`, and `2` of the `j`. After this step, `x` is valuing `8`. So our answer is that it will print the number `8`.
+
 ### Select the value in a cell
 
 In order to select a value in a cell, we are going to use a function called `cell(row, column)`. For the project, we're going to use like this:
