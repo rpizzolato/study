@@ -3,6 +3,58 @@
 This is a repository with annotations from the Course **Python Tutorial for Beginners - Learn Python in 5 Hours [FULL COURSE]** of the YouTube channel **TechWorld with Nana**. The Course is available here 
 [https://www.youtube.com/watch?v=t8pPdKYpowI](https://www.youtube.com/watch?v=t8pPdKYpowI). I'd like to Thank Nana Janashia so much for the channel for providing free content with so much quality!
 
+## Sumary
+
+- [Data Types](#data-types)
+- [String concatenation](#string-concatenation)
+- [Function](#function)
+- [Scope](#scope)
+- [User input](#user-input)
+- [Function with return value](#function-with-return-value)
+    - [Here's an example, with full code containing Function and User input](#heres-an-example-with-full-code-containing-function-and-user-input)
+- [Conditionals (if / else) and Boolean Data Type](#conditionals-if--else-and-boolean-data-type)
+    - [Expressions that evaluate to either **true** or **false**](#expressions-that-evaluate-to-either-true-or-false)
+    - [Python Atithmetic Operators](#python-atithmetic-operators)
+    - [Boolean](#boolean)
+    - [Clean Up The Code](#clean-up-the-code)
+    - [Nested Function Execution](#nested-function-execution)
+- [Error Handling with try/except](#error-handling-with-tryexcept)
+- [While Loops](#while-loops)
+    - [Let user exit the program](#let-user-exit-the-program)
+- [Lists and For Loop](#lists-and-for-loop)
+    - [Basic List Operations](#basic-list-operations)
+- [Comments in Python](#comments-in-python)
+- [Set](#set)
+    - [Basic Set Operation and Syntax](#basic-set-operation-and-syntax)
+        - [Unordered and unchangeable](#unordered-and-unchangeable)
+- [Built-In Functions](#built-in-functions)
+    - [Built-In Functions on Data Types](#built-in-functions-on-data-types)
+- [Dictionary Data Type](#dictionary-data-type)
+    - [Accessing Items in a Dictionary](#accessing-items-in-a-dictionary)
+    - [Summary of Data Types](#summary-of-data-types)
+        - [Why do we need all these data types?](#why-do-we-need-all-these-data-types)
+- [Modules](#modules)
+    - [import statement](#import-statement)
+- [Built-In Python Module](#built-in-python-module)
+- [Projetc: Countdown App](#projetc-countdown-app)
+- [Build-In vs. Third-Party](#build-in-vs-third-party)
+    - [PyPI](#pypi)
+    - [Module vs Package](#module-vs-package)
+    - [Pip](#pip)
+- [Project: Automation with Python](#project-automation-with-python)
+    - [Different ways to work with files](#different-ways-to-work-with-files)
+    - [Implementation](#implementation)
+    - [application of range (another example)](#application-of-range-another-example)
+    - [Select the value in a cell](#select-the-value-in-a-cell)
+    - [Exercise: List each company with respective product count](#exercise-list-each-company-with-respective-product-count)
+    - [Exercise: List each company with respective total inventory value](#exercise-list-each-company-with-respective-total-inventory-value)
+    - [Exercise: List products with inventory less than 10](#exercise-list-products-with-inventory-less-than-10)
+    - [Exercise: Write to Spreadsheet: Calculate and write inventory value for each product into spreadsheet](#exercise-write-to-spreadsheet-calculate-and-write-inventory-value-for-each-product-into-spreadsheet)
+- [Classes and Objects (Object-oriented programming)](#classes-and-objects-object-oriented-programming)
+- [Create an Object](#create-an-object)
+    - [Object Oriented Programming](#object-oriented-programming)
+    - [Project: API Request to GitLab](#project-api-request-to-gitlab)
+
 ## Data Types
 - Text Type: String (str)
 - Number Types:
@@ -103,6 +155,27 @@ Arithmetic operators are used with numeric values to perform common mathematical
 | `%`      | Modulus        | `x % y`  |
 | `**`     | Exponentiation | `x ** y` |
 | `//`     | Floor division | `x // y` |
+
+### Assignment operator
+
+| Operator| Example| Same As |
+|---------|--------|---------|
+| = | x = 5 | x = 5	|
+| += | x += 3 |	x = x + 3 |
+| -= | x -= 3 |	x = x - 3 |
+| *= | x *= 3 |	x = x * 3 |
+| /= | x /= 3 |	x = x / 3 |
+| %= | x %= 3 |	x = x % 3 |
+| //= | x //= 3 | x = x // 3 [[1]](#1)|
+| **= |	x **= 3 | x = x ** 3 |	
+| &= | x &= 3 |	x = x & 3 |
+| \|= | x \|= 3 |	x = x \| 3 |
+| ^= | x ^= 3 |	x = x ^ 3 |
+| >>= |	x >>= 3 | x = x >> 3 |
+| <<= |	x <<= 3 | x = x << 3 |
+
+><a id="1">[1]</a>
+>In Python, you use the double slash `//` operator to perform floor division. This `//` operator divides the first number by the second number and rounds the result down to the nearest integer (or whole number).
 
 ### Boolean
 Boolean Data Type can only have 2 values: **true** or **false**
@@ -245,7 +318,7 @@ In this way, the looping will be infinite, because the condition is always **Tru
 - **Lists**: used to store multiple items in a single variable
 - **For Loop**: is used iterating over a sequence (like a list), so we can execute something for each item in a list
 
-Example for
+**Example for**
 ```python
 # we iterate or break each project in the list my_project into a sinple project
 for projetc in my_projects:
@@ -1056,7 +1129,7 @@ x = int(2.8)    # x will be 2
 x = int("3")    # x will be 3
 ```
 
-# Project: API Request to GitLab
+### Project: API Request to GitLab
 
 In this project we are going to see how to use Python to communicate with external applications, like GitLab, using API.
 
