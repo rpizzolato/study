@@ -123,3 +123,204 @@ Route::get('/', function () {
 ```
 
 ## Explorando o Blade
+
+- é possível criar estruturas de repetição no Blade (como `for` e `foreach`)
+- executar PHP puro
+- escrever comentários nos arquivos de view
+- o Blade realmente é muito versártil e nos permite chegar em um resultado excelente de renderização de views
+
+### For e foreach
+
+Consideremos que tenhamos as seguintes arrays, lá no arquivo `web.php`:
+
+```php
+    $arr = [10,22,30,40,50];
+
+    $nomes = ["Matheus", "Maria", "João", "Saulo"];
+
+return view('welcome', 
+    [
+        'nome' => $nome, 
+        'idade' => $idade,
+        'profissao' => "Programador",
+        'arr' => $arr,
+        'nomes' => $nomes
+    ]);
+});
+```
+
+Para que possamos imprimir seus valores, usaremos o for e o foreach, lembrando sempre que é necessário fechar a diretiva.
+
+```php
+@for($i = 0; $i < count($arr); $i++)
+    <p>{{ $arr[$i] }} - {{ $i }}</p>
+    @if($i == 2)
+        <p>O i é 2</p>
+    @endif
+@endfor
+
+@foreach($nomes as $nome)
+
+    <p>{{ $loop->index }}</p>
+    <p>{{ $nome }}</p>
+
+@endforeach
+```
+
+>Observação
+>
+>No foreach, há uma variável injetada, chamada de `$loop`, o qual podemos extrair os índices do array.
+
+### Inserindo PHP puro
+
+Há algumas situações que teremos que incluir PHP puro no código, para isso usaremos a diretiva `@php`:
+
+```php
+@php
+
+    $name = "João";
+
+    echo $name;
+
+@endphp
+```
+
+Lembrando sempre de fechar a diretiva, com `@endphp`.
+
+### Comentários
+
+As vezes é interessante os comentários não aparecerem na hora de inspecionar código, para isso podemos utilizar os comentários em Laravel.
+
+```html
+    <!-- Comentário em HTML, que aparece no inspecionar código -->
+
+    {{-- Este é o comentário do Blade, não aparece em inspicionar, não é renderizado, etc --}}
+```
+
+## Arquivos estáticos (CSS, JS e Imagens)
+
+- Esses arquivos/recursos ficam na pasta `public`, e tem acesso direto nas tags que trabalham com arquivos estáticos
+
+Podemos criar uma pasta `css`, `js` e `img`. Para acessar, a partir da view, usaremos o caminho `css/style.css`, por exemplo.
+
+## Layouts com Blade
+
+Se percebermos, toda página/view criada, teremos que repetir código, seja ele de um header ou de um footer, por exemplo.
+
+Para evitar essa situação, podemos utilizar os Layouts com Blade
+
+- essa funcionalidade permite o reaproveitamento de código (exemplo header e footer)
+- é possível criar seções do site por meio do layout e também mudar o title da página
+
+Vamos criar uma nova view chamada `view/layout/main.blade.php`, e nela criaremos nosso layout inicial:
+
+```html
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>@yield('title')</title>
+
+        <link rel="stylesheet" href="/css/style.css">  
+        <script src="/js/script.js"></script>
+
+    </head>
+
+    <body>
+    @yield('content')
+    <footer>
+        <p>HDC Events &copy; 2023</p>
+    </footer>
+    </body>
+</html>
+```
+
+Agora lá em `welcome.blade.php` vamos apagar tudo até a tag `<body>`, deixando apenas o conteúdo das outras aulas.
+
+Vamos começar extendendo o layout criado anteriormente, adicionando no topo do documento, o valor `@extends('layouts.main')`.
+
+Agora podemos adicionar as sections, que irão completar as `@yield,` criadas em `main.blade.php`
+
+Ficando o exemplo dessa maneira:
+
+```php
+@extends('layouts.main')
+
+@section('title', 'HDC Events')
+
+@section('content')
+<h1>Algum título</h1>
+<img src="img/banner.jpg" alt="">
+
+@if(10 > 5)
+    <p>A condição é true</p>
+@endif
+
+<p>{{ $nome }}</p>
+
+@if($nome == "Pedro")
+    <p>O nome é Pedro</p>
+@elseif($nome == "Rodrigo")
+    <p>O nome é {{ $nome }} e ele tem {{ $idade }} anos e trabalha como {{ $profissao }}</p>
+@else
+    <p>O nome não é Pedro</p>
+@endif
+
+@for($i = 0; $i < count($arr); $i++)
+    <p>{{ $arr[$i] }} - {{ $i }}</p>
+    @if($i == 2)
+        <p>O i é 2</p>
+    @endif
+@endfor
+
+@foreach($nomes as $nome)
+
+    <p>{{ $loop->index }}</p>
+    <p>{{ $nome }}</p>
+
+@endforeach
+
+@php
+
+$name = "João";
+
+echo $name;
+
+@endphp
+
+<!-- Comentário em HTML, que aparece no inspecionar código -->
+
+{{-- Este é o comentário do Blade, não aparece em inspicionar, não é renderizado, etc --}}
+    
+@endsection
+```
+
+> Observação
+>
+> Não esquecer que precisa fechar o @section com @endsection
+
+Para finalizar, vamos adicionar o Google Fontes, fonte Roboto, e o Bootstrap (aproveitei para deixarmos o CSS e o Javascript com um comentário também).
+
+`main.blade.php`
+
+```html
+<!-- Fonte do Google -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+<!-- CSS do Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<!-- CSS da aplicação -->
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Javascript -->
+<script src="/js/script.js"></script>
+```
+
+## Parâmetros nas rotas
+- Podemos mudar como uma view nos responde adicionando parâmetros a uma rota;
+- Ao definir a rota devemos colocar o parâmetro desta maneira: `{id}`
+- Podemos ter parâmetros opcionais também, adicionando uma `?`
+- O Laravel aceita também query parameters, utilizando a seguinte sintaxe: `?nome=Matheus&idade=29`
