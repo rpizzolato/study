@@ -881,3 +881,47 @@ Agora é só testar se está cadastrando o evento com sucesso
 - Podemos adicionar com o método `with` nos Controllers
 - Utilizadas para apresentar um feedback ao usuário
 - No blade podemos verificar a presença da mensagem pela diretiva `@session`
+
+1. Vamos até o nosso Controller, o `EventController.php`, e no redirect que fizemos anteriormente, para quando foi efetuado o cadastro de evento, vamos invocar o método `with`:
+
+```php
+return redirect('/')->with('msg', 'Evento criado com sucesso!');
+```
+
+2. Agora lá no nosso layout principal, `main.blade.php`, vamos criar a mensagem de retorno, entre as tags `</header>` e `<footer>`, colocando uma nova tag chamada `<main>`, e nela faremos uma verificação se a mensagem foi recebida:
+
+```html
+</header>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+                @if(session('msg'))
+                    <p class="msg">{{ session('msg') }}</p>
+                @endif
+                @yield('content')
+          </div>
+        </div>
+      </main>
+      <footer>
+```
+
+Para ficar mais apresentável essa mensagem, mudaremos o CSS dela para:
+
+```css
+.msg {
+  background-color: #D4EDDA;
+  color: #155724;
+  border: 1px solid #C3E6CB;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+}
+```
+
+## Salvando imagem no Laravel
+
+- Para fazer o upload de imagens precisamos mudar o **enctype** do form e também **criar um input** de envio das mesmas
+- No Controller vamos fazer um **tratamento de verificação da imagem** que foi enviada
+- E depois vamos salvar ela com um **nome único** em um diretório do projeto
+- No banco salvamos apenas o **path** para a imagem
