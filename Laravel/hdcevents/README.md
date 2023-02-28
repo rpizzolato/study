@@ -925,3 +925,101 @@ Para ficar mais apresentável essa mensagem, mudaremos o CSS dela para:
 - No Controller vamos fazer um **tratamento de verificação da imagem** que foi enviada
 - E depois vamos salvar ela com um **nome único** em um diretório do projeto
 - No banco salvamos apenas o **path** para a imagem
+
+1. Iremos adicionar uma nova propriedade ao form, chamada `enctype`, com valor `multipart/form-data`. Também iremos criar um novo campo do tipo `file`:
+
+`create.blade.php`
+
+```html
+<form action="/events" method="POST" enctype="multipart/form-data">
+  @csrf
+  <div class="form-group">
+    <label for="image">Imagem do Evento:</label>
+    <input type="file" id="image" name="image" class="form-control-file">
+  </div>
+```
+
+2. Agora temos que, no Controller `EventController.php`, criar um `if` para armazenarmos a nossa imagem de evento. Nesse `if` basicamente cerificamos se temos e se a imagem é válida. Pegamos a imagem, a extensão dela, e transformamos em uma hash md5, concatenado com a hora atual e sua extensão. Posteriormente pegamos esse arquivo e movemos ele para a pasta `img/events`, ficando o arquivo dessa forma:
+
+```php
+public function store(Request $request) {
+    $event = new Event;
+
+    $event->title = $request->title;
+    $event->city = $request->city;
+    $event->private = $request->private;
+    $event->description = $request->description;
+
+    // Image Upload
+    if($request->hasFile('image') && $request->file('image')->isValid()){
+
+      $requestImage = $request->image;
+
+      $extension = $requestImage->extension();
+
+      $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+      $request->image->move(public_path('img/events'), $imageName);
+
+      $event->image = $imageName;
+    }
+```
+
+3. Teremos que criar uma nova migration para criar o campo que irá armazenar o *path* da imagem. Como **já temos dados na tabela**, é interessante usarmos esse tipo de migration, como já vimos anteriormente:
+
+```
+php artisan make:migration add_image_to_events_table
+```
+
+4. Após rodarmos o comando de criação da migration, vamos preencher o arquivo criado por ela com a informação da coluna que queremos, no caso, o arquivo ficará da seguinte forma:
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+  /**
+   * Run the migrations.
+   */
+  public function up(): void
+  {
+    Schema::table('events', function (Blueprint $table) {
+      $table->string('image');
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   */
+  public function down(): void
+  {
+    Schema::table('events', function (Blueprint $table) {
+      $table->dropColumn('image');
+    });
+  }
+};
+```
+
+5. Agora vamos "migra" essa alteração, com o comando `php artisan migrate`. Com isso, podemos acessar a tabela diretamente no BD, e nosso campo "image" estará criado com sucesso!
+
+6. Podemos testar o envio, e repare que será criado a pasta `img/events`, com nosso arquivo criado por meio da hash concatenado com hora atual e extensão.
+
+7. Agora vamos até `welcome.blade.php`, e vamos atualizar a tag img para puxar o caminho no BD e na pasta local, ficando dessa forma:
+
+```php
+<img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
+```
+#### ==> Solve the css fit issue
+
+
+## Resgatando um registro
+
+- Será feito uma view exclusiva do evento
+- E com isso, aprender como resgatar **apenas um registro** pelo Eloquent
+- Vamos utilizar o método **findOfFail**
+- E também criar uma nova view e rota para esta função
+- Esta tela tem a função de exibir todas as informações do evento e também o botão de participar
