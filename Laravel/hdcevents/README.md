@@ -1023,3 +1023,27 @@ return new class extends Migration
 - Vamos utilizar o método **findOfFail**
 - E também criar uma nova view e rota para esta função
 - Esta tela tem a função de exibir todas as informações do evento e também o botão de participar
+
+Vamos no arquivo de rotas, `web.php` e vamos criar uma rota que recebe um número de id e nos envia para o método `show()`:
+
+```php
+Route::get('/events/{id}', [EventController::class, 'show']);
+```
+
+Depois disso, vamos até o arquivo `welcome.blade.php`, e vamos mudar o link do botão "Saiba Mais", para começar a buscar o id do evento, ficando dessa forma:
+
+```html
+<a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
+```
+
+Feito isso, temos que adicionar o método `show()` no nosso Controller `EventController.php`:
+
+```php
+public function show($id) {
+
+  $event = Event::findOrFail($id);
+
+  return view('events.show', ['event' => $event]);
+
+}
+```
