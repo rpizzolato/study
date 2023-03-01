@@ -194,7 +194,7 @@ As vezes é interessante os comentários não aparecerem na hora de inspecionar 
 ```html
   <!-- Comentário em HTML, que aparece no inspecionar código -->
 
-  {{-- Este é o comentário do Blade, não aparece em inspicionar, não é renderizado, etc --}}
+  {{-- Este é o comentário do Blade, não aparece em inspecionar, não é renderizado, etc --}}
 ```
 
 ## Arquivos estáticos (CSS, JS e Imagens)
@@ -1013,8 +1013,7 @@ return new class extends Migration
 ```php
 <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
 ```
-#### ==> Solve the css fit issue
-
+#### ==> Solve the css fit issue (Bootstrap course)
 
 ## Resgatando um registro
 
@@ -1047,3 +1046,10 @@ public function show($id) {
 
 }
 ```
+
+## Salvando JSON
+
+- Podemos salvar um conjunto de dados no BD para itens de múltipla escolha;
+- Vamos criar um campo determinado de json via migrations
+- No front-end podemos utilizar inputs com checkbox
+- Após o envio para Controller, apenas recebemos do request os itens e o resto do processo é igual ao dos outros dados do nosso Model
