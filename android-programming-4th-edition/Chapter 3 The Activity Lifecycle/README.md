@@ -8,7 +8,7 @@
   | stopped     | yes        | no               | no             |
   | paused      | yes        | yes/partially*   | no             |
   | resumed     | yes        | yes              | yes            |
-  *depending on circumstances, a paused activity may be fully ou partially visible
+  *depending on circumstances, a paused activity may be fully or partially visible
   - more about lifecycle [here](https://developer.android.com/guide/components/-activities/activity-lifecycle)
 
 - **override**: it asks the compiler to ensure that the class actually has the function that it's necessary to override. In this way, the compiler may alert for misspelled function name;
