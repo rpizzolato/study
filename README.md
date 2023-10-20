@@ -19,4 +19,5 @@
 14. <a href="./php-programming-language-tutorial-beginner/">PHP Beginner</a><br>
 15. <a href="./python-tutorial-for-beginners/">Python Beginner</a><br>
 16. <a href="./rocketseat/">Lives/Vídeos Rocketseat</a><br>
+17. <a href="./redes-basico-mao-na-massa/">Curso de Redes de Computadores Básico Mão na Massa</a><br>
 
