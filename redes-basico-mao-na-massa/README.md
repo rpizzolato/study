@@ -222,3 +222,23 @@ Repare nesse summary que tem uma legenda **SU**. O **S** é de camada 2 (Layer 2
 Podemos ver também mais informações no `show interfaces trunk`. Repare que caso queira fazer qualquer configuração nas portas 1/0/1 e 1/0/2, deverá acessar o port-channel, como por exemplo: `interface port-channel 1`
 
 Se executarmos o comando `show interfaces port-channel 1`, é exibido o link de 2000Mbps.
+
+### Aula 9 - STP Spanning tree Protocol
+
+Agora vamos ligar o CORE2 nos SWs de acesso. Começando pelo quarto SW de acesso. Vamos ligar a porta **g1/0/6** do SW CORE2 na porta **g0/2** do quarto SW de acesso.
+
+Temos que colocar a porta **g1/0/6** em modo trunk:<br>
+`interface g1/0/6`<br>
+`switchport mode trunk`<br>
+`end`<br>
+`wr`<br>
+
+Se perceber na topologia, temos um looping acontecendo, entre os SW CORE2, O SW de acesso AC4 e o CORE1. Podemos verificar se o spanning tree está funcionando, indo no AC4, e digitando:
+`show spanning-tree summary`<br>
+
+Isso vai nos retornar algumas informações, como por exemplo a linha `Switch is in pvst mode`, que nos informa que o SW está rodando uma spanning-tree em modo pvst ( Per VLAN Spanning Tree Protocol). É como se houvesse um software/instrução em cada vlan. No AC4, temos duas vlans, logo, o pvst está ativo em ambas.
+
+Para verificarmos o spanning-tree na vlan, usamos o comando (tomando o exemplo na vlan 100):<br>
+`show spanning-tree vlan 100`<br>
+
+Repare que o State (abreviado em Sts), está em modo FWD (modo de encaminhamento - Foward) em todas as portas, logo não temos nenhuma porta bloqueada. Temos que olhar em todos os equipamento em que está gerando looping. Em algum deles devemos ter um Status BLK (Blocked)
