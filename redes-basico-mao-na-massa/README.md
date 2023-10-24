@@ -241,4 +241,34 @@ Isso vai nos retornar algumas informações, como por exemplo a linha `Switch is
 Para verificarmos o spanning-tree na vlan, usamos o comando (tomando o exemplo na vlan 100):<br>
 `show spanning-tree vlan 100`<br>
 
-Repare que o State (abreviado em Sts), está em modo FWD (modo de encaminhamento - Foward) em todas as portas, logo não temos nenhuma porta bloqueada. Temos que olhar em todos os equipamento em que está gerando looping. Em algum deles devemos ter um Status BLK (Blocked)
+Repare que o **State** (abreviado em Sts), está em modo **FWD** (modo de encaminhamento - Foward) em todas as portas, logo não temos nenhuma porta bloqueada. Temos que olhar em todos os equipamentos que estão gerando looping. Em algum deles devemos ter um Status **BLK** (Blocked)
+
+Essa definição é basicamente feita pela priority, que quanto menos tem mais prioridade, e quando a priority for igual, é definido pelo menor númeore mac. Podemos pegar os retornos do comando `show spanning-tree vlan 100` e montar uma tabela:
+|SW|Priory e MAC|É Root STP?|
+|-----|---------|-----|
+|AC4: |  BID = 32868-0004.9A85.7EB8 |Sim, é o Root STP |
+|CORE2: | BID = 32868-0005.5E78.4320 |Não, **NÃO** é o Root STP |
+>Repare na tabela que a prioridade (antes do traço) são iguais. E o começo do MAC Address pertencente ao AC4 é menor (0004) que o CORE2 (0005), logo o AC4 que está fazendo o papel de Root, para evitar o looping.
+
+Essa não é uma situação ideal, pois não é legal atribuir essa função para um SW de acesso. O ideal é defenirmos o Root STP no SW CORE. Portanto definiremos manualmente que o Root STP será o CORE1, e o CORE2 será um backup.
+
+Para definir isso, vamos até o CORE1, e executar:<br>
+`spanning-tree vlan 100 priority 0` (0 é a menor prioridade possível!)<br>
+Precisamos definir na vlan 200 também:
+`spanning-tree vlan 200 priority 0`<br>
+`end`<br>
+`wr`<br>
+
+No SW CORE2, vamos definir:
+`spanning-tree vlan 100 priority 4096` (4096 é o menor valor depois do 0)<br>
+`spanning-tree vlan 200 priority 4096`<br>
+`end`<br>
+`wr`<br>
+
+Podemos confirmar, no CORE1, com o comando `show spanning-tree vlan 100` e procurar pela linha com o seguinte conteúdo: `This bridge is the root`.
+
+No CORE2, podemos verificar também com o comando `show spanning-tree vlan 100` e vermos que o priority está com o valor 100. Mas colocamos o valor de 0 para ser o Root, por que aparece 100? Esse é um comportamento padrão, pois ele soma o 0 mais o valor da vlan, que no caso é 100, resultando em 100.
+
+Rorando o comando `show spanning-tree vlan 100` no AC4, ele nos informa, por meio de uma tabela, que a porta G0/1 está ligada diretamente no Root, no caso o CORE1.
+
+Tarefa: ligar as demais vlans com backup, mas usando o Core1 como Root.
