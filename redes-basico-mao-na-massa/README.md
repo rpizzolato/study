@@ -2,39 +2,61 @@
 
 Anotações que fiz durante o Curso do Gustavo Kalau, disponível no [YouTube](https://www.youtube.com/playlist?list=PL6BTdBqzl1oY9EQ4151rGNEbATMNgX8vK).
 
-## Configurações em dispositivos Cisco, criação de Vlans
+## Tabela Mac (Aula 02)
+Para comunicar dois computadores conectados por meio de um switch (comutador), é criado uma tabela Mac no switch, pois ele trabalha basicamente na camada 2 (Layer 2). Se conectarmos dois pcs em um SW, e dermos um ping um no outro, dentro do sw, por meio do comando `show mac-address-table`, podemos ver a tabela mac que o sw montou para localizar esses dispositivos na rede.
+> Lembrando que essa tabela montada fica apenas por alguns minutos se não houver comunicação, depois ela é desfeita. Isso ocorre pois podemos mudar os dispositivos conectados a ela, e assim o sw recria um novo endereçamento se for preciso.
+
+## Configurações em dispositivos Cisco, criação de Vlans (Aula 3)
 
 `en` ou `enable` e depois `conf t` ou `conf terminal`
 
 ### Configuração/criação de Vlan em uma porta específica do SW
 
-`interface fastEthernet 0/1` (porta 1 do sw a 100Mbps)<br>
-`switchport mode access` (modo de acesso)<br>
-`switchport access vlan 100` (indica em qual vlan a porta 0/1 vai ficar)<br>
+### Criando a vlan 100 (FINANANCEIRO)
+
+Primeiro criamos a vlan com o comando `vlan 100` (que efetivamente cria a vlan 100). No terminal notamos que ficará `switch(config-vlan)`, indicando que estamos dentro da configuração da vlan 100. Damos um nome a ela, com o comando `name FINANCEIRO`. Logo podemos ver que foi criado a vlan 100 de nome FINANCEIRO por meio do comando `show vlan brief`.
+
+Devemos criar a vlan 100 por todo o caminho que ela irá percorrer. Se criarmos no sw de acesso, teremos que criar também no sw core, ou algum outro equipamento que seja necessário passar durante a transmissão na rede, até o seu destino.
+
+Apenas criar a vlan não é ainda suficiente, precisamos adicioná-la a alguma porta do sw. Podemos fazer isso da seguinte forma:<br>
+
+`interface fastEthernet 0/1` (selecionamos a porta 1 do sw a 100Mbps - note que no terminal ficará dessa forma: `switch(config-if)#` - indicando que selecionamos a interface/porta desejada)<br>
+`switchport mode access` (modo de acesso - onde passará apenas 1 vlan, também conhecida como **untagged**)<br>
+`switchport access vlan 100` (indica em qual vlan a porta `0/1` vai passar)<br>
 
 >Para selecionar um range de portas, como por exemplo, porta 1 e 2, usamos:
 `interface range fastEthernet 0/1-2`
+
+### Excluir uma vlan
+
+Para remover uma VLAN, precisamos ir no modo de configuração (`conf t`) e colocar o comando `no` antes, ficando, por exemplo, a exclusão da vlan 900, da seguinte forma: `no vlan 900`.
 
 ### Visualizar as vlans criadas/existentes
 
 `show vlan brief` (mostra as portas/vlans)
 
 
->**lembrando que as vlans precisam estar em todos os switches, assim como no Core que interliga os switches. No Core, as portas que interligam os switches são especiais, chamadas de portas de transporte, pois muito provavelmente teremos que ter mais de uma vlan passando por elas (ou simplesmente todas as vlans). Essas portas são conhecidas como porta tronco (trunk).**
+>**lembrando que as vlans precisam estar em todos os switches, assim como no Core que interliga os switches. No Core, as portas que interligam os switches são especiais, chamadas de portas de transporte, pois muito provavelmente teremos que ter mais de uma vlan passando por elas (ou simplesmente todas as vlans). Essas portas são também conhecidas como porta tronco (trunk). Os pacotes serão equiquetados (tagged)**
 
 
+### Configuração no SW Core (deixar as portas trunk) 
 
-### No SW Core (deixar as portas trunk)
-`interface gigabitEthernet 1/0/3` (porta 3 gigabit 1000Mbps)<br>
+No SW Core, como muito corriqueiramente, irá passar mais de uma vlan por porta (ou até mesmo todas as vlans em uma única porta), teremos que configurá-la como modo tronco (trunk), também conhecido como tagged. A criação da vlan é similar ao do sw de acesso, no entanto, após selecionarmos a porta/interface que desejamos utilizar, usaremos os comandos:
+
+`interface gigabitEthernet 1/0/3` (selecionamos a porta 3 a 1000Mbps. Lembrando que 1000Mbps é igual a 1Gbps)<br>
 `switchport mode trunk` (faz o encapsulation dot1q. Esse trunk mode evita que apenas uma vlan funcione por acesso, como é feito no modo access)
 
 `int gi1/0/6` (maneira abreviada do mesmo comando anterior, apenas utilizando a porta 6)
 
->Ao chegar um frame do switch para o Core, esse frame chega com uma etiqueta (tag) informando de qual vlan ele está vindo. E o Core verificando que tem a vlan desejada, ele encaminha para a vlan de destino.
+>Ao chegar um frame do switch para o Core, esse frame chega com uma etiqueta (tagged) informando de qual vlan ele está vindo. E o Core verificando que tem a vlan desejada, ele encaminha para a vlan de destino.
 
-`show interfaces trunk` (Nos mostra quais portas estão em tronco, e as vlans que estão configuradas nas portas)
+`show interfaces trunk` (exibe quais portas estão em tronco (trunk), e as vlans que estão configuradas nas portas)
 
-Se executarmos o comando `sh interfaces trunk` no switch de acesso, percebemos que foi automaticamente criado um tronco na porta gigabit que interconecta o SW Core, isso graças ao [DTP (Dynamic Trunking Protocol)](https://ccna.network/protocolo-trunking-dinamico/), um protocolo proprietário da Cisco.
+### DTP (Dynamic Trunking Protocol) da Cisco
+
+Se executarmos o comando `sh interfaces trunk` no switch de acesso, percebemos que foi automaticamente criado um tronco na porta gigabit que interconecta o SW Core, isso graças ao [DTP (Dynamic Trunking Protocol)](https://ccna.network/protocolo-trunking-dinamico/), um protocolo proprietário da Cisco. Em outros fabricantes, muito provavelmente teríamos que configurar manualmente o tronco no sw de acesso.
+
+## Gateway entre as vlans
 
 No Core, como ele normalmente trabalha na camada 3 (L3), há nele um Router virtual embutido, que podemos interligar as vlans, por meio de um Gateway.
 Para interligar a vlan 100 e 200, por exemplo:
