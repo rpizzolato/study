@@ -56,27 +56,30 @@ No SW Core, como muito corriqueiramente, irá passar mais de uma vlan por porta 
 
 Se executarmos o comando `sh interfaces trunk` no switch de acesso, percebemos que foi automaticamente criado um tronco na porta gigabit que interconecta o SW Core, isso graças ao [DTP (Dynamic Trunking Protocol)](https://ccna.network/protocolo-trunking-dinamico/), um protocolo proprietário da Cisco. Em outros fabricantes, muito provavelmente teríamos que configurar manualmente o tronco no sw de acesso.
 
-## Gateway entre as vlans
+## Gateway entre as vlans (Aula 4)
 
 No Core, como ele normalmente trabalha na camada 3 (L3), há nele um Router virtual embutido, que podemos interligar as vlans, por meio de um Gateway.
 Para interligar a vlan 100 e 200, por exemplo:
 
-`interface vlan 100` (é como um SW Virtual Interface, que colocaremos uma interface nela)<br>
+`interface vlan 100` (é como um SW Virtual Interface, que colocaremos uma interface nela) - nesse caso selecionamos a vlan 100 para que ela tenha o gateway definido abaixo<br>
 `ip address 172.16.0.1 255.255.255.0` (indicamos o endereço do Gateway)<br>
 `no shutdown` (para ligar a porta - normalmente já vem ligada por padrão, diferentemente de Routers)<br>
-`show ip interface brief` (nos mostra o gateway da vlan que acabamos de definir - é o portão da casa)<br>
+`show ip interface brief` (nos mostra o gateway da vlan que acabamos de definir - fazendo uma analogia, é o portão da casa)<br>
 
-Depois, caso não esteja utilizando DHCP, colocar o Gateway manualmente no computador conectado no SW.
+>O ip do gateway normalmente é o primeiro ip ou o último (254), mas é só uma questão de boa prática. Poderíamos usar qualquer outro ip sem problemas.
 
-Por fim, temos que concluir o roteamento, com o comando:<br>
+Depois, caso não esteja utilizando DHCP, devemos colocar o Gateway manualmente no computador conectado no SW.
+
+Com dois gateways configurados, ainda não é possível um conseguir dar ping no outro, pois as redes ainda não se conhecem. Para resolver isso temos que concluir o roteamento, com o comando:<br>
 `ip routing`
 
-## Servidor DHCP
-O ideal é termos uma nova vlan para o servidor DHCP, um switch (o 2960, por exemplo), e interligar esse switch ao switch core, por meio das interfaces gigabit.
+## Servidor DHCP (Aula 5)
+
+O ideal é termos uma nova vlan para o servidor DHCP, que será a vlan do DataCenter, um switch (o 2960, por exemplo), e interligar esse switch ao switch core, por meio das interfaces gigabit.
 
 `vlan 400`<br>
 `name DC` (DC = Data Center)<br>
-`interface fastEthernet 0/1`<br>
+`interface fastEthernet 0/1` (adiciona a porta 1 para a vlan 400)<br>
 `switchport mode access`<br>
 `switchport access vlan 400`<br>
 
@@ -84,8 +87,8 @@ O próximo passo é criarmos um tronco (trunk) nessa porta. Mas iremos fazer por
 `interface gigabitEthernet 1/0/7`<br>
 `switchport mode trunk`
 
-Assim dessa forma, utilizando o DTP, é criado o trunk na porta lá do switch DC.
-Precisamos criar a vlan 400 no Core, e um Gateway
+Dessa forma, utilizando o DTP, é criado o trunk na porta lá do switch DC.
+Precisamos criar a vlan 400 no Core, e um Gateway para essa vlan:<br>
 `vlan 400`<br>
 `name DC`<br>
 `interface vlan 400`<br>
@@ -101,7 +104,8 @@ Para que o servidor DHCP seja alcançado, temos que acessar o CORE e colocar uma
 
 >Lembrando que se adicionar um novo PC na rede, precisamos atribuir a porta que esse novo PC está usando no switch, a uma vlan que ele irá pertencer.
 
-### Adicionando um ISP
+### Adicionando um ISP (Aula 6)
+
 Adicionar o Router-PT e instalar uma placa de rede gigabit, conectar as interfaces no switch CORE.
 Mudar o hostname, e adicionar um ip a ele, na porta GigabitEthernet6/0
 `interface g6/0`<br>
