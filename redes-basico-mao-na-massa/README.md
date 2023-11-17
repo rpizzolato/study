@@ -100,17 +100,20 @@ Precisamos criar a vlan 400 no Core, e um Gateway para essa vlan:<br>
 
 Para que o servidor DHCP seja alcançado, temos que acessar o CORE e colocar uma instrução na interface de vlan 100, que vai para o servidor DHCP:
 `interface vlan 100`<br>
-`ip helper 10.0.0.20` (10.0.20 é o ip do servidor DHCP)
+`ip helper-address 10.0.0.20` (10.0.20 é o ip do servidor DHCP)
 
 >Lembrando que se adicionar um novo PC na rede, precisamos atribuir a porta que esse novo PC está usando no switch, a uma vlan que ele irá pertencer.
 
 ### Adicionando um ISP (Aula 6)
 
-Adicionar o Router-PT e instalar uma placa de rede gigabit, conectar as interfaces no switch CORE.
-Mudar o hostname, e adicionar um ip a ele, na porta GigabitEthernet6/0
+Adicionar o PT-Router e instalar uma placa de rede gigabit, conectar as interfaces no switch CORE. É necessário desligar o Router para instalar a placa de rede.
+
+Conectamos com um cabo na porta G1/0/9 do Core 1 até a porta G6/0 do Router.
+
+Mudar o hostname, e adicionar um IP a ele, na porta GigabitEthernet6/0
 `interface g6/0`<br>
 `ip address 10.99.99.1 255.255.255.0`<br>
-`no shudown` (comando para ligar as portas, ao contrário do SW que já vem ligado, no Router precisamos ligar)
+`no shutdown` (comando para ligar as portas, ao contrário do SW que já vem ligado, no Router precisamos ligar)
 
 No SW CORE, precisamos criar a vlan 500 e adicionar essa vlan na interface gigabit 1/0/9:
 `interface vlan 500`<br>
@@ -126,7 +129,7 @@ Agora devemos pegar todo o tráfego que chegar até o Core, que for direcionado 
 `ip route 0.0.0.0 0.0.0.0 10.99.99.1`<br>
 `show ip route` (vai nos mostrar a rota default criada. Se, por exemplo, chega um pacote para encaminhar para a rede 172.16.0.0, vai ser encaminhado para a vlan 100, a qual ela faz parte dessa rota. Caso algum pacote chegue e não tenha a rota especificado, o pacote será encaminhado para a rota padrão, no caso, essa que acabamos de criar **0.0.0.0**. Ela é uma rota genérica, caso não exista uma rota específica, será utilizado essa rota default. Na tabela de roteamento, as demais rotas sempre terão preferência, apenas quando não houver opção, a rota **default** é utilizada)
 
-### Aula 7 - configurando a Internet
+### Configurando a Internet (Aula 7)
 Iremos adicionar outro Router-PT. Nele teremos que adicionar mais 2 placas gigabitEthernet, assim como adicionar uma nova placa de rede no Router-ISP BATATA. Iremos interligar ambos Router-PT com um cabeamento na interface 7/0 (no packet só aceita cabo cross, pois são equipamentos iguais, na vida real não tem problema).
 No Router batata colocamos:
 #int g7/0
