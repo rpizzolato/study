@@ -2157,3 +2157,1050 @@ Principais operações (comandos) cobrados em prova do protocolo LDAP:
 - **Modify** DN: move ou renomeioa uma entrada;
 - **Abandon**: aborta uma requisição prévia;
 - **Unbind**: fecha a conexão;
+
+---
+---
+A virtualização
+<ol type="A">
+    <li>apresenta como uma desvantagem, o fato de que a falha em uma máquina virtual paralisa todas as outras máquinas virtuais que estejam presentes no computador.</li>
+    <li>permite executar aplicações legadas em sistemas operacionais (ou suas versões) desde que estes ainda possuam suporte de seus fabricantes, e que ainda funcionem no hardware atual do computador.</li>
+    <li><mark>permite executar múltiplos sistemas operacionais diferentes no mesmo hardware.</mark></li>
+    <li>permite que um único computador seja o hospedeiro de múltiplas máquinas virtuais, desde que todas as máquinas virtuais executem um mesmo sistema operacional.</li>
+    <li>requer uma camada de software sobre o hardware, denominada Monitor de Máquina Virtual, que cria a ilusão para que uma única máquina virtual possa ser criada para cada hardware físico, não sendo possível mais de uma máquina virtual por hardware.</li>
+</ol>
+
+Hypervisors, também conhecidos como monitores de máquina virtual, são classificados principalmente em dois tipos ou níveis com base em como eles interagem com o hardware e o sistema operacional. Esses são:
+
+### Tipo 1: Hypervisors Bare-Metal
+
+Os hypervisors de tipo 1 são instalados diretamente no hardware físico, sem a necessidade de um sistema operacional subjacente. Eles fornecem uma camada de abstração que gerencia diretamente os recursos de hardware e permite a criação e execução de múltiplas máquinas virtuais (VMs).
+
+#### Exemplos de Hypervisors de Tipo 1
+- **VMware ESXi**: Amplamente utilizado em ambientes corporativos por sua robustez e eficiência.
+- **Microsoft Hyper-V**: Pode ser instalado como um hypervisor bare-metal com o Windows Server.
+- **Xen**: Um hypervisor open-source, popular em ambientes Linux.
+- **KVM (Kernel-based Virtual Machine)**: Integrado ao kernel do Linux, transformando-o em um hypervisor bare-metal.
+
+#### Vantagens dos Hypervisors de Tipo 1
+- **Desempenho**: Menor overhead porque não há sistema operacional subjacente.
+- **Segurança**: Menos camadas significam menos vulnerabilidades potenciais.
+- **Gerenciamento de Recursos**: Mais eficiente na alocação de recursos de hardware.
+
+#### Desvantagens dos Hypervisors de Tipo 1
+- **Complexidade**: Requer um entendimento mais profundo para instalação e gerenciamento.
+- **Hardware Específico**: Pode exigir hardware compatível específico.
+
+### Tipo 2: Hypervisors Hospedados
+
+Os hypervisors de tipo 2 são instalados sobre um sistema operacional existente. Eles dependem desse sistema operacional para acessar os recursos de hardware e fornecer uma camada de abstração para a criação e gerenciamento de VMs.
+
+#### Exemplos de Hypervisors de Tipo 2
+- **VMware Workstation/Fusion**: Workstation é para Windows e Linux, enquanto Fusion é para macOS.
+- **Oracle VirtualBox**: Um hypervisor open-source conhecido por sua facilidade de uso e flexibilidade.
+- **Parallels Desktop**: Popular para executar sistemas operacionais Windows em computadores Mac.
+
+#### Vantagens dos Hypervisors de Tipo 2
+- **Facilidade de Uso**: Mais fácil de instalar e configurar.
+- **Versatilidade**: Pode ser executado em qualquer máquina que já tenha um sistema operacional.
+- **Desenvolvimento e Teste**: Ideal para ambientes de desenvolvimento onde múltiplos sistemas operacionais precisam ser testados.
+
+#### Desvantagens dos Hypervisors de Tipo 2
+- **Desempenho**: Menor desempenho devido à sobrecarga do sistema operacional hospedeiro.
+- **Recursos**: Menos eficiente na utilização dos recursos de hardware.
+
+### Comparação Rápida
+
+| Característica      | Tipo 1 (Bare-Metal)       | Tipo 2 (Hospedado)           |
+|---------------------|---------------------------|------------------------------|
+| **Instalação**      | Direto no hardware        | Sobre um sistema operacional |
+| **Desempenho**      | Alto                      | Moderado                     |
+| **Segurança**       | Alta                      | Moderada                     |
+| **Facilidade de Uso**| Complexa                  | Fácil                        |
+| **Ambientes Típicos**| Data centers, produção    | Desenvolvimento, testes      |
+
+### Conclusão
+
+A escolha entre um hypervisor de tipo 1 e tipo 2 depende das necessidades específicas do ambiente. Para data centers e produção, onde desempenho e segurança são críticos, os hypervisors bare-metal são a melhor escolha. Para desenvolvimento, teste e uso em desktop, os hypervisors hospedados oferecem a flexibilidade e a facilidade de uso necessárias.
+
+---
+---
+Suponha um computador com um sistema operacional que suporte threads, e um de seus processos, de nome P1, possui também alguns threads. Quando um desses threads abre um arquivo do computador, esse arquivo 
+<ol type="A">
+    <li>fica visível a outros processos, que podem ler e escrever nesse arquivo, mas não fica visível aos threads do processo P1.</li>
+    <li>fica visível a outros processos, que podem ler o arquivo, mas não podem alterá-lo, e não fica visível aos threads do processo P1.</li>
+    <li>fica visível aos outros threads do processo P1, que podem ler o arquivo, mas não podem alterá-lo.</li>
+    <li><mark>fica visível aos outros threads do processo P1, que podem ler e escrever nesse arquivo.</mark></li>
+    <li>não fica visível aos outros threads do processo P1</li>
+</ol>
+
+### Threads em Sistemas Operacionais
+
+Uma thread é a menor unidade de processamento que pode ser executada de forma independente por um sistema operacional. Threads permitem que os programas realizem múltiplas tarefas simultaneamente dentro do mesmo processo, aproveitando ao máximo os recursos da CPU.
+
+### Características das Threads
+
+1. **Compartilhamento de Memória**:
+   - Todas as threads dentro de um processo compartilham o mesmo espaço de memória, incluindo variáveis globais, segmentos de código e dados do processo.
+   - Threads têm seus próprios registros, pilha de execução e contadores de programa.
+
+2. **Contexto de Execução**:
+   - Cada thread possui seu próprio contexto de execução, incluindo o estado da CPU e as informações da pilha.
+
+3. **Ciclo de Vida**:
+   - Threads passam por estados de criação, execução, espera e término. Um thread pode ser suspenso (bloqueado) e posteriormente retomado.
+
+### Vantagens das Threads
+
+1. **Eficiência**:
+   - Criar e gerenciar threads é mais barato do que processos, pois threads compartilham recursos dentro do mesmo processo.
+   - Trocas de contexto entre threads são mais rápidas do que entre processos.
+
+2. **Responsividade**:
+   - Aplicações podem continuar a responder ao usuário enquanto executam outras tarefas em segundo plano.
+
+3. **Melhor Utilização da CPU**:
+   - Threads podem ser distribuídas entre múltiplos núcleos de CPU, melhorando a performance em sistemas multicore.
+
+4. **Simplificação do Modelo de Programação**:
+   - Permitem um modelo de programação natural para aplicações que executam múltiplas tarefas simultaneamente (como servidores web).
+
+### Desvantagens das Threads
+
+1. **Complexidade de Programação**:
+   - Programação com múltiplas threads pode ser complexa devido à necessidade de sincronização e gerenciamento de concorrência.
+   - Erros como deadlocks e condições de corrida podem ocorrer.
+
+2. **Segurança e Isolamento**:
+   - Falhas em uma thread podem afetar outras threads dentro do mesmo processo, uma vez que compartilham o mesmo espaço de memória.
+
+3. **Depuração**:
+   - Depurar aplicações multithreaded pode ser difícil, pois a execução não determinística das threads pode levar a comportamentos imprevisíveis.
+
+### Exemplos de Código
+
+#### Exemplo em Python com Threading
+
+```python
+import threading
+import time
+
+def worker(name):
+    print(f'Thread {name} começando')
+    time.sleep(2)
+    print(f'Thread {name} terminando')
+
+threads = []
+
+for i in range(5):
+    t = threading.Thread(target=worker, args=(i,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+
+print('Todas as threads terminaram')
+```
+
+#### Exemplo em Java com Threading
+
+```java
+class Worker extends Thread {
+    private String name;
+
+    public Worker(String name) {
+        this.name = name;
+    }
+
+    public void run() {
+        System.out.println("Thread " + name + " começando");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Thread " + name + " terminando");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Worker[] workers = new Worker[5];
+        
+        for (int i = 0; i < 5; i++) {
+            workers[i] = new Worker("Worker-" + i);
+            workers[i].start();
+        }
+
+        for (Worker worker : workers) {
+            try {
+                worker.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("Todas as threads terminaram");
+    }
+}
+```
+
+### Sincronização entre Threads
+
+Um aspecto crítico da programação multithreaded é a sincronização. Para evitar problemas como condições de corrida, é importante sincronizar o acesso aos recursos compartilhados.
+
+#### Exemplo de Sincronização em Python
+
+```python
+import threading
+
+counter = 0
+lock = threading.Lock()
+
+def increment():
+    global counter
+    with lock:
+        local_counter = counter
+        local_counter += 1
+        time.sleep(0.1)  # Simular um atraso
+        counter = local_counter
+
+threads = []
+
+for i in range(10):
+    t = threading.Thread(target=increment)
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+
+print(f'Contador final: {counter}')
+```
+
+#### Exemplo de Sincronização em Java
+
+```java
+class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        int localCount = count;
+        localCount++;
+        try {
+            Thread.sleep(100); // Simular um atraso
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        count = localCount;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+class Worker extends Thread {
+    private Counter counter;
+
+    public Worker(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        counter.increment();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+        Worker[] workers = new Worker[10];
+
+        for (int i = 0; i < 10; i++) {
+            workers[i] = new Worker(counter);
+            workers[i].start();
+        }
+
+        for (Worker worker : workers) {
+            try {
+                worker.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("Contador final: " + counter.getCount());
+    }
+}
+```
+
+### Conclusão
+
+Threads são uma ferramenta poderosa para melhorar a eficiência e responsividade dos programas, especialmente em sistemas multicore. No entanto, a programação multithreaded requer cuidado extra para evitar problemas de concorrência, e a sincronização adequada é crucial para garantir a integridade dos dados.
+
+### Erros em Programação Concorrente: Deadlocks e Condições de Corrida
+
+Quando trabalhamos com programação concorrente usando threads, dois dos erros mais comuns que podem ocorrer são **deadlocks** e **condições de corrida**. Vamos entender o que são esses erros, como eles ocorrem, e como podemos mitigá-los.
+
+### Deadlock
+
+Um deadlock (ou impasse) ocorre quando duas ou mais threads estão bloqueadas para sempre, cada uma esperando por um recurso que a outra possui. É como uma situação onde dois carros estão em um beco sem saída, cada um esperando que o outro se mova.
+
+#### Exemplo de Deadlock
+
+Imagine duas threads, T1 e T2, e dois recursos, R1 e R2:
+
+1. T1 adquire o bloqueio em R1.
+2. T2 adquire o bloqueio em R2.
+3. T1 tenta adquirir o bloqueio em R2, mas não pode porque T2 já o possui.
+4. T2 tenta adquirir o bloqueio em R1, mas não pode porque T1 já o possui.
+5. Ambas as threads ficam bloqueadas indefinidamente.
+
+#### Código Exemplo em Python
+
+```python
+import threading
+
+lock1 = threading.Lock()
+lock2 = threading.Lock()
+
+def thread1():
+    with lock1:
+        print('Thread 1: Acquired lock1')
+        with lock2:
+            print('Thread 1: Acquired lock2')
+
+def thread2():
+    with lock2:
+        print('Thread 2: Acquired lock2')
+        with lock1:
+            print('Thread 2: Acquired lock1')
+
+t1 = threading.Thread(target=thread1)
+t2 = threading.Thread(target=thread2)
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+```
+
+#### Mitigação de Deadlocks
+
+- **Ordem Fixa de Aquisição**: A principal técnica para evitar deadlocks é garantir que todos os threads adquiram os bloqueios na mesma ordem.
+- **Timeouts**: Implementar timeouts ao tentar adquirir bloqueios.
+- **Detectar e Resolver**: Monitorar o sistema para detectar deadlocks e resolver matando ou reiniciando threads.
+
+### Condição de Corrida
+
+Uma condição de corrida ocorre quando o resultado de um programa depende da ordem em que threads acessam e manipulam recursos compartilhados. Se duas threads tentam modificar uma variável ao mesmo tempo, o valor final pode depender de quem escreve por último, levando a resultados imprevisíveis e erros difíceis de detectar.
+
+#### Exemplo de Condição de Corrida
+
+Imagine que duas threads incrementam um contador compartilhado.
+
+#### Código Exemplo em Python
+
+```python
+import threading
+
+counter = 0
+
+def increment():
+    global counter
+    local_counter = counter
+    local_counter += 1
+    counter = local_counter
+
+threads = []
+
+for i in range(1000):
+    t = threading.Thread(target=increment)
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+
+print(f'Contador final: {counter}')
+```
+
+Neste exemplo, a expectativa é que o valor final do contador seja 1000, mas devido a condições de corrida, o resultado pode ser menor.
+
+#### Mitigação de Condições de Corrida
+
+- **Bloqueios (Locks)**: Usar mecanismos de bloqueio para garantir que apenas uma thread possa acessar um recurso compartilhado por vez.
+
+#### Código Corrigido com Bloqueios
+
+```python
+import threading
+
+counter = 0
+lock = threading.Lock()
+
+def increment():
+    global counter
+    with lock:
+        local_counter = counter
+        local_counter += 1
+        counter = local_counter
+
+threads = []
+
+for i in range(1000):
+    t = threading.Thread(target=increment)
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+
+print(f'Contador final: {counter}')
+```
+
+### Resumo
+
+- **Deadlocks**: Ocorrem quando duas ou mais threads ficam bloqueadas esperando por recursos que a outra thread possui, resultando em uma situação de bloqueio mútuo.
+  - **Mitigação**: Ordem fixa de aquisição de bloqueios, uso de timeouts, e detecção e resolução de deadlocks.
+
+- **Condições de Corrida**: Ocorrem quando o resultado de um programa depende da ordem não-determinística de execução de threads que acessam e manipulam recursos compartilhados.
+  - **Mitigação**: Uso de bloqueios para garantir exclusão mútua ao acessar recursos compartilhados.
+
+Entender e lidar com esses problemas é crucial para escrever programas concorrentes robustos e eficientes.
+
+---
+---
+Considerando os sistemas gerenciadores de bancos de dados, a maioria deles contém um módulo denominado otimizador, cuja função principal é
+<ol type="A">
+    <li>implementar mecanismos de segurança dos dados contidos no banco de dados.</li>
+    <li>realizar a conexão mais eficiente com a rede de comunicação de dados.</li>
+    <li>duplicar o conteúdo dos dados a serem utilizados em uma consulta.</li>
+    <li>determinar a forma mais adequada para que os dados do banco de dados ocupem menos espaço de armazenamento permanente.</li>
+    <li><mark>determinar o(s) modo(s) mais eficiente(s) para que o sistema gerenciador execute a consulta solicitada pelo usuário.</mark></li>
+</ol>
+
+O módulo otimizador em um banco de dados (BD), também conhecido como otimizador de consultas (query optimizer), é uma parte crucial do sistema de gerenciamento de banco de dados (SGBD). Seu principal objetivo é melhorar o desempenho das consultas ao determinar a maneira mais eficiente de executar uma consulta SQL. Ele faz isso através das seguintes funções:
+
+### Funções do Otimizador de Consultas
+
+1. **Análise da Consulta**:
+   - O otimizador começa analisando a consulta SQL fornecida. Ele verifica a sintaxe e a semântica da consulta para garantir que seja válida.
+
+2. **Tradução da Consulta**:
+   - A consulta SQL é traduzida em uma estrutura interna que o otimizador pode manipular. Esta estrutura interna geralmente é uma árvore de expressão ou um grafo.
+
+3. **Estimativa de Custo**:
+   - O otimizador avalia diferentes planos de execução possíveis para a consulta, estimando o custo de cada plano em termos de tempo de CPU, operações de E/S, uso de memória e outros recursos.
+   - Ele usa estatísticas sobre os dados, como o número de registros em uma tabela, a distribuição dos valores de coluna e a presença de índices.
+
+4. **Geração de Planos de Execução**:
+   - O otimizador gera vários planos de execução para a consulta. Um plano de execução especifica a ordem em que as operações da consulta serão realizadas e os métodos de acesso aos dados (por exemplo, varredura de tabela completa, uso de índices).
+
+5. **Escolha do Plano Ótimo**:
+   - Com base na estimativa de custo, o otimizador escolhe o plano de execução que ele acredita ser o mais eficiente.
+   - O plano de execução escolhido é então passado para o executor de consultas, que o implementa para obter os resultados.
+
+### Exemplos de Otimizações Comuns
+
+- **Uso de Índices**:
+  - Se a consulta inclui uma cláusula WHERE ou JOIN que pode se beneficiar de um índice, o otimizador pode escolher usar esse índice para acelerar a recuperação dos dados.
+
+- **Reordenação de JOINs**:
+  - O otimizador pode reordenar as operações JOIN para minimizar o número de registros processados em cada etapa.
+
+- **Projeção de Colunas**:
+  - Selecionar apenas as colunas necessárias em vez de todos os campos de uma tabela para reduzir a quantidade de dados processados.
+
+- **Eliminação de Subconsultas Desnecessárias**:
+  - Reescrever subconsultas como JOINs ou aplicar outras transformações para melhorar a eficiência.
+
+### Exemplos de Planos de Execução
+
+A seguir, alguns exemplos simplificados de como um otimizador pode transformar e escolher planos de execução para uma consulta SQL:
+
+#### Consulta SQL
+```sql
+SELECT name, age
+FROM employees
+WHERE department_id = 10 AND age > 30;
+```
+
+#### Plano de Execução 1: Varredura de Tabela Completa
+- Ler todas as linhas da tabela `employees`.
+- Filtrar linhas onde `department_id = 10` e `age > 30`.
+
+#### Plano de Execução 2: Uso de Índice em `department_id`
+- Usar um índice em `department_id` para encontrar as linhas onde `department_id = 10`.
+- Filtrar essas linhas para `age > 30`.
+
+#### Escolha do Plano Ótimo
+- O otimizador estima que o Plano de Execução 2 é mais eficiente devido ao uso do índice, resultando em menos leituras de disco.
+
+### Benefícios do Otimizador de Consultas
+
+- **Desempenho Melhorado**: A otimização pode resultar em consultas que são executadas muito mais rapidamente, especialmente em grandes bancos de dados com muitas tabelas e registros.
+- **Uso Eficiente de Recursos**: Reduz a carga no sistema ao minimizar o uso de CPU, memória e E/S.
+- **Execução Automática**: Os usuários e desenvolvedores não precisam otimizar manualmente as consultas; o otimizador de consultas lida com isso automaticamente.
+
+### Exemplo Prático em SQL com Explanação do Plano de Execução
+
+Você pode usar comandos específicos no SQL para ver o plano de execução que o otimizador escolheu. Por exemplo, no MySQL, o comando `EXPLAIN` pode ser usado:
+
+```sql
+EXPLAIN SELECT name, age FROM employees WHERE department_id = 10 AND age > 30;
+```
+
+A saída deste comando mostrará como a consulta será executada, incluindo se um índice será usado, qual índice, a estimativa de número de registros a serem processados, etc.
+
+### Conclusão
+
+O otimizador de consultas desempenha um papel vital na eficiência de um sistema de banco de dados, automaticamente determinando a melhor maneira de executar consultas SQL. Ele utiliza estatísticas, índices e várias heurísticas para gerar e escolher o plano de execução mais eficiente, aliviando desenvolvedores e administradores de banco de dados da necessidade de ajustar manualmente cada consulta para desempenho.
+
+---
+---
+Considere a seguinte representação de um modelo hierárquico de dados: <br><img src="./q49.jpg"><br>
+De acordo com essa figura, os itens indicados como I e II representam, respectivamente, registro
+<ol type="A">
+    <li>principal e registro secundário.</li>
+    <li>inicial e registro final.</li>
+    <li><mark>proprietário e registro membro.</mark></li>
+    <li>principal e registro auxiliar</li>
+    <li>total e registro parcial.</li>
+</ol>
+
+Em um banco de dados hierárquico, os termos **registro proprietário** (ou **registro pai**) e **registro membro** (ou **registro filho**) são usados para descrever a relação entre os registros na estrutura de árvore hierárquica. Vamos explorar esses conceitos em detalhes.
+
+### Registro Proprietário (Registro Pai)
+
+O **registro proprietário** é um registro que possui um ou mais registros subordinados a ele. Este registro é chamado de "proprietário" porque é responsável por um conjunto de registros membros (filhos). Na estrutura hierárquica, o registro proprietário está em um nível superior em relação aos registros membros.
+
+#### Características:
+- **Nível Superior**: Está localizado em um nível superior na hierarquia.
+- **Relação de Contenção**: Contém ou é responsável por um ou mais registros membros.
+- **Único Proprietário**: Um registro membro geralmente tem um único proprietário na hierarquia.
+
+#### Exemplo:
+Em um sistema de gerenciamento de funcionários, uma tabela pode ter registros proprietários representando departamentos:
+- **Departamento de TI**
+- **Departamento de RH**
+
+### Registro Membro (Registro Filho)
+
+O **registro membro** é um registro que está subordinado a um registro proprietário. Este registro é chamado de "membro" porque faz parte de um grupo de registros que estão relacionados ao mesmo proprietário. Na estrutura hierárquica, o registro membro está em um nível inferior em relação ao registro proprietário.
+
+#### Características:
+- **Nível Inferior**: Está localizado em um nível inferior na hierarquia.
+- **Relação de Dependência**: Depende de um registro proprietário para seu contexto.
+- **Dependência Única**: Um registro membro geralmente está associado a um único registro proprietário.
+
+#### Exemplo:
+Continuando com o exemplo anterior, os registros membros poderiam representar funcionários:
+- **Funcionário A** (pertence ao Departamento de TI)
+- **Funcionário B** (pertence ao Departamento de RH)
+
+### Exemplo com Diagrama
+
+Vamos ilustrar a relação entre registros proprietários e membros com um diagrama:
+
+```
+Departamento de TI (Proprietário)
+│
+├── Funcionário A (Membro)
+├── Funcionário B (Membro)
+└── Funcionário C (Membro)
+
+Departamento de RH (Proprietário)
+│
+├── Funcionário D (Membro)
+└── Funcionário E (Membro)
+```
+
+### Explicação com Exemplos em SQL
+
+Embora SQL seja mais comumente associado a bancos de dados relacionais, podemos criar uma analogia para entender a relação entre registros proprietários e membros:
+
+#### Exemplo de Estrutura de Tabelas
+
+```sql
+CREATE TABLE Departamentos (
+    departamento_id INT PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE Funcionarios (
+    funcionario_id INT PRIMARY KEY,
+    nome VARCHAR(100),
+    departamento_id INT,
+    FOREIGN KEY (departamento_id) REFERENCES Departamentos(departamento_id)
+);
+```
+
+#### Inserção de Dados
+
+```sql
+-- Inserir departamentos (proprietários)
+INSERT INTO Departamentos (departamento_id, nome) VALUES (1, 'Departamento de TI');
+INSERT INTO Departamentos (departamento_id, nome) VALUES (2, 'Departamento de RH');
+
+-- Inserir funcionários (membros)
+INSERT INTO Funcionarios (funcionario_id, nome, departamento_id) VALUES (1, 'Funcionário A', 1);
+INSERT INTO Funcionarios (funcionario_id, nome, departamento_id) VALUES (2, 'Funcionário B', 1);
+INSERT INTO Funcionarios (funcionario_id, nome, departamento_id) VALUES (3, 'Funcionário C', 1);
+INSERT INTO Funcionarios (funcionario_id, nome, departamento_id) VALUES (4, 'Funcionário D', 2);
+INSERT INTO Funcionarios (funcionario_id, nome, departamento_id) VALUES (5, 'Funcionário E', 2);
+```
+
+#### Consulta de Dados
+
+Para ver a relação entre departamentos e funcionários, você pode fazer uma consulta SQL que junta as tabelas:
+
+```sql
+SELECT d.nome AS Departamento, f.nome AS Funcionario
+FROM Departamentos d
+JOIN Funcionarios f ON d.departamento_id = f.departamento_id;
+```
+
+### Vantagens e Desvantagens da Estrutura Hierárquica
+
+#### Vantagens:
+- **Organização Natural**: Reflete uma organização natural e intuitiva de dados, facilitando a visualização das relações hierárquicas.
+- **Acesso Rápido**: Pode proporcionar acesso rápido aos registros filhos associados a um registro pai específico.
+
+#### Desvantagens:
+- **Flexibilidade Limitada**: A estrutura hierárquica é rígida e pode ser difícil de modificar se a organização dos dados mudar.
+- **Redundância de Dados**: Pode haver redundância de dados se registros filhos precisarem estar relacionados a múltiplos registros pai.
+
+### Conclusão
+
+Os registros proprietário e membro são conceitos fundamentais na organização de bancos de dados hierárquicos. O registro proprietário atua como um "pai", contendo e gerenciando registros membros que dependem dele. Esta estrutura facilita a organização dos dados em uma hierarquia clara e definida, mas também apresenta desafios em termos de flexibilidade e redundância de dados. Em sistemas de banco de dados modernos, esses conceitos ajudam a compreender como os dados podem ser estruturados e acessados de forma eficiente.
+
+### Resumidamente
+**Registro Proprietário**: Um registro proprietário, também conhecido como registro pai ou registro mestre, é um registro que possui um ou mais registros filhos associados a ele. Ele desempenha o papel principal na relação hierárquica e tem controle sobre os registros membros.
+
+**Registro Membro**: Um registro membro, também chamado de registro filho ou registro dependente, é um registro que está associado a um registro proprietário específico. Ele depende do registro proprietário para existir na estrutura hierárquica. Um registro membro não pode existir independentemente e deve estar vinculado a um registro proprietário.
+
+---
+---
+Dentre as funções de hash a seguir, assinale aquela que pertence à família de funções conhecida como SHA-2.
+<ol type="A">
+    <li>MD5.</li>
+    <li>SHA-0.</li>
+    <li>SHA-1.</li>
+    <li><mark>SHA-384.</mark></li>
+    <li>RIPEMD-160.</li>
+</ol>
+
+Claro, vamos responder à questão e depois fornecer uma explicação detalhada sobre funções hash.
+
+### Questão
+**Dentre as funções de hash a seguir, assinale aquela que pertence à família de funções conhecida como SHA-2.**
+
+Alternativas:
+A) MD5.
+B) SHA-0.
+C) SHA-1.
+D) SHA-384.
+E) RIPEMD-160.
+
+**Resposta: D) SHA-384.**
+
+### Explicação Detalhada sobre Funções Hash
+
+#### O que são Funções Hash?
+Funções hash são algoritmos que transformam uma entrada (ou "mensagem") de comprimento arbitrário em uma saída de comprimento fixo, conhecida como "valor hash" ou "digest". Essas funções têm várias propriedades importantes:
+
+1. **Determinística**: A mesma entrada sempre produzirá a mesma saída.
+2. **Rápida de Computar**: A função deve ser capaz de produzir um hash rapidamente.
+3. **Resistente a Colisões**: Deve ser difícil encontrar duas diferentes entradas que resultem no mesmo hash.
+4. **Resistente a Pré-imagem**: Dado um hash, deve ser difícil encontrar qualquer entrada que mapeie para esse hash.
+5. **Resistente à Segunda Pré-imagem**: Dada uma entrada e seu hash, deve ser difícil encontrar uma diferente entrada que produza o mesmo hash.
+
+#### Principais Funções Hash
+
+1. **MD5 (Message Digest Algorithm 5)**
+   - Comprimento do hash: 128 bits.
+   - Desenvolvida por Ronald Rivest em 1991.
+   - Largamente utilizada no passado, mas agora considerada insegura devido a vulnerabilidades que permitem colisões.
+
+2. **SHA-0 e SHA-1 (Secure Hash Algorithm 0 e 1)**
+   - SHA-0: Publicada pela NSA em 1993, mas retirada devido a uma falha.
+   - SHA-1: Publicada em 1995, produz um hash de 160 bits. Atualmente considerada insegura devido a ataques de colisão bem-sucedidos.
+
+3. **SHA-2 (Secure Hash Algorithm 2)**
+   - Inclui várias versões: SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256.
+   - SHA-256: Produz um hash de 256 bits.
+   - SHA-384: Produz um hash de 384 bits.
+   - SHA-512: Produz um hash de 512 bits.
+   - Muito mais seguro comparado ao SHA-1 e amplamente utilizado em aplicações modernas.
+
+4. **RIPEMD-160 (RACE Integrity Primitives Evaluation Message Digest)**
+   - Desenvolvida como parte do projeto europeu RIPE.
+   - Produz um hash de 160 bits.
+   - Mais seguro que o MD5 e SHA-1, mas menos utilizado que SHA-2.
+
+#### Família SHA-2
+
+A família SHA-2 foi projetada pela NSA e publicada pelo NIST (National Institute of Standards and Technology) em 2001. Inclui várias funções hash com diferentes tamanhos de digest:
+
+- **SHA-224**: 224 bits.
+- **SHA-256**: 256 bits.
+- **SHA-384**: 384 bits.
+- **SHA-512**: 512 bits.
+- **SHA-512/224**: Uma versão de SHA-512 truncada para 224 bits.
+- **SHA-512/256**: Uma versão de SHA-512 truncada para 256 bits.
+
+#### Usos das Funções Hash
+
+1. **Verificação de Integridade**: Garantir que os dados não foram alterados.
+2. **Armazenamento Seguro de Senhas**: Hashes de senhas são armazenados em vez das senhas em texto claro.
+3. **Assinaturas Digitais e Certificados SSL/TLS**: Verificar a autenticidade e integridade de mensagens e documentos.
+4. **Geração de Endereços de Criptomoedas**: Utilização em sistemas como Bitcoin para gerar endereços.
+
+#### Conclusão
+
+Na questão apresentada, **SHA-384** é a única opção que pertence à família de funções hash SHA-2, que inclui várias versões mais seguras e mais robustas que as funções hash mais antigas como MD5 e SHA-1. 
+
+A alternativa correta é: **D) SHA-384**.
+
+Claro! Algoritmos de hash têm uma ampla variedade de aplicações em sistemas operacionais e sistemas de software. Vamos ver alguns exemplos específicos de como eles são usados:
+
+### 1. **Verificação de Integridade de Arquivos**
+
+**Sistemas Operacionais**:
+- **Linux**: Ferramentas como `md5sum`, `sha256sum`, e `sha512sum` são usadas para gerar e verificar hashes de arquivos. 
+- **Windows**: Comandos como `CertUtil` podem ser usados para gerar e verificar hashes.
+
+**Exemplo no Linux**:
+```bash
+# Gerar o hash SHA-256 de um arquivo
+sha256sum exemplo.txt
+
+# Verificar a integridade de um arquivo comparando o hash
+echo "abc123hash exemplo.txt" | sha256sum -c
+```
+
+**Exemplo no Windows**:
+```cmd
+# Gerar o hash SHA-256 de um arquivo
+CertUtil -hashfile exemplo.txt SHA256
+```
+
+### 2. **Armazenamento Seguro de Senhas**
+
+**Sistemas e Aplicações**:
+- Sistemas de gerenciamento de senhas e bases de dados armazenam hashes de senhas em vez das senhas em texto claro. Isso aumenta a segurança ao proteger senhas contra roubo.
+
+**Exemplo em Python (geração de hashes para senhas)**:
+```python
+import hashlib
+import os
+
+def hash_password(password):
+    # Gera um salt
+    salt = os.urandom(16)
+    # Gera o hash da senha concatenado com o salt
+    hashed_password = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)
+    # Armazena o salt junto com o hash
+    return salt + hashed_password
+
+def verify_password(stored_password, provided_password):
+    salt = stored_password[:16]
+    stored_hash = stored_password[16:]
+    provided_hash = hashlib.pbkdf2_hmac('sha256', provided_password.encode(), salt, 100000)
+    return stored_hash == provided_hash
+
+# Uso
+senha = "minha_senha_secreta"
+hash_da_senha = hash_password(senha)
+print(verify_password(hash_da_senha, "minha_senha_secreta"))  # Deve retornar True
+print(verify_password(hash_da_senha, "senha_errada"))  # Deve retornar False
+```
+
+### 3. **Assinaturas Digitais e Certificados SSL/TLS**
+
+**Sistemas e Protocolos**:
+- Certificados digitais utilizam hashes para garantir a integridade e autenticidade dos dados transmitidos. SSL/TLS usa funções hash para criar assinaturas digitais que verificam a identidade de sites e servidores.
+
+**Exemplo de Verificação de Certificado SSL no Linux**:
+```bash
+# Verificar um certificado SSL utilizando OpenSSL
+openssl s_client -connect example.com:443 -servername example.com < /dev/null 2>/dev/null | openssl x509 -noout -text
+
+# Verificar o hash do certificado
+openssl x509 -noout -fingerprint -sha256 -inform pem -in certificado.pem
+```
+
+### 4. **Geração de Endereços de Criptomoedas**
+
+**Sistemas e Aplicações**:
+- Criptomoedas como Bitcoin utilizam funções hash (SHA-256 e RIPEMD-160) para gerar endereços a partir de chaves públicas.
+
+**Exemplo em Python (simplificado)**:
+```python
+import hashlib
+
+# Simulação de geração de endereço Bitcoin
+def generate_bitcoin_address(public_key):
+    # Primeiro passo: SHA-256 no public key
+    sha256_hash = hashlib.sha256(public_key.encode()).hexdigest()
+    # Segundo passo: RIPEMD-160 no resultado do SHA-256
+    ripemd160 = hashlib.new('ripemd160')
+    ripemd160.update(bytes.fromhex(sha256_hash))
+    return ripemd160.hexdigest()
+
+# Exemplo de uso
+public_key = "minha_chave_publica"
+address = generate_bitcoin_address(public_key)
+print(address)
+```
+
+### 5. **Deduplicação de Dados**
+
+**Sistemas de Armazenamento**:
+- Sistemas de arquivos e softwares de backup utilizam hashes para identificar e eliminar duplicatas de arquivos, economizando espaço de armazenamento.
+
+**Exemplo (em um sistema de backup hipotético)**:
+```python
+import hashlib
+
+def file_hash(file_path):
+    hasher = hashlib.sha256()
+    with open(file_path, 'rb') as f:
+        buf = f.read()
+        hasher.update(buf)
+    return hasher.hexdigest()
+
+# Supomos que estamos gerenciando uma lista de arquivos para backup
+file_list = ['arquivo1.txt', 'arquivo2.txt', 'arquivo3.txt']
+hashes = {}
+
+for file in file_list:
+    hash_val = file_hash(file)
+    if hash_val in hashes:
+        print(f"Arquivo duplicado encontrado: {file} é um duplicado de {hashes[hash_val]}")
+    else:
+        hashes[hash_val] = file
+```
+
+Esses exemplos mostram como algoritmos de hash são usados em várias aplicações práticas para garantir segurança, integridade e eficiência em sistemas operacionais e aplicações de software.
+
+é possível reverter uma hash de senha de banco de dados?
+
+Reverter uma hash de senha (ou seja, encontrar a entrada original que produziu um determinado hash) é projetado para ser impraticável devido às propriedades de segurança das funções de hash criptográficas. Vamos explorar isso em mais detalhes.
+
+### Propriedades das Funções de Hash Criptográficas
+
+1. **Determinística**: A mesma entrada sempre produz a mesma saída.
+2. **Rápida de Computar**: A função pode gerar o hash rapidamente.
+3. **Resistente a Colisões**: Difícil encontrar duas diferentes entradas que resultem no mesmo hash.
+4. **Resistente a Pré-imagem**: Dado um hash, deve ser difícil encontrar qualquer entrada que mapeie para aquele hash.
+5. **Resistente à Segunda Pré-imagem**: Dada uma entrada e seu hash, deve ser difícil encontrar uma diferente entrada que produza o mesmo hash.
+
+### Por Que Reverter uma Hash é Impraticável?
+
+Funções de hash são projetadas para serem unidirecionais. Isso significa que, uma vez que uma entrada é transformada em um hash, não há maneira direta de reverter o processo para recuperar a entrada original. As razões incluem:
+
+- **Complexidade Computacional**: Funções de hash são construídas de tal forma que tentar todas as possíveis entradas até encontrar a original (um ataque de força bruta) é computacionalmente inviável para hashes robustos e complexos.
+- **Espaço de Saída Fixo**: O hash sempre tem um comprimento fixo, independentemente do comprimento da entrada. Assim, há uma quantidade massiva de entradas possíveis que podem resultar no mesmo hash, tornando a reversão ainda mais difícil.
+
+### Métodos Utilizados para "Reverter" um Hash
+
+Embora não seja possível reverter diretamente um hash, existem métodos que podem ser usados para tentar encontrar a entrada original, embora todos tenham suas limitações:
+
+1. **Ataques de Força Bruta**:
+   - Testar todas as possíveis entradas até encontrar uma que produza o hash desejado.
+   - Este método é extremamente demorado e impraticável para senhas fortes.
+
+2. **Ataques de Dicionário**:
+   - Usar uma lista predefinida de senhas comuns e suas variações para ver se alguma delas gera o hash desejado.
+   - Este método é mais eficiente que a força bruta, mas depende da senha estar no dicionário.
+
+3. **Ataques de Rainbow Tables**:
+   - Usar tabelas pré-calculadas de hashes para possíveis senhas para encontrar correspondências.
+   - Rainbow tables podem ser mitigadas com o uso de "salts".
+
+### Mitigação de Ataques
+
+Para aumentar a segurança contra esses tipos de ataques, técnicas adicionais são usadas:
+
+1. **Salting**:
+   - Adicionar um valor aleatório (salt) a cada senha antes de hasheá-la.
+   - Isso garante que a mesma senha não resulte no mesmo hash em diferentes instâncias.
+   - Exemplo em Python:
+     ```python
+     import hashlib
+     import os
+
+     def hash_password(password):
+         salt = os.urandom(16)  # Gera um salt aleatório
+         hashed_password = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)
+         return salt + hashed_password
+
+     def verify_password(stored_password, provided_password):
+         salt = stored_password[:16]
+         stored_hash = stored_password[16:]
+         provided_hash = hashlib.pbkdf2_hmac('sha256', provided_password.encode(), salt, 100000)
+         return stored_hash == provided_hash
+
+     # Uso
+     senha = "minha_senha_secreta"
+     hash_da_senha = hash_password(senha)
+     print(verify_password(hash_da_senha, "minha_senha_secreta"))  # Deve retornar True
+     ```
+
+2. **Algoritmos de Hash Fortes e Lentos**:
+   - Usar algoritmos como bcrypt, scrypt ou Argon2 que são computacionalmente mais intensivos e, portanto, mais resistentes a ataques de força bruta.
+   - Exemplo usando bcrypt em Python:
+     ```python
+     import bcrypt
+
+     def hash_password(password):
+         hashed = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+         return hashed
+
+     def verify_password(hashed, password):
+         return bcrypt.checkpw(password.encode(), hashed)
+
+     # Uso
+     senha = "minha_senha_secreta"
+     hash_da_senha = hash_password(senha)
+     print(verify_password(hash_da_senha, "minha_senha_secreta"))  # Deve retornar True
+     print(verify_password(hash_da_senha, "senha_errada"))  # Deve retornar False
+     ```
+
+### Conclusão
+
+Reverter diretamente um hash de senha armazenado em um banco de dados é projetado para ser impraticável devido às propriedades de segurança das funções de hash criptográficas. No entanto, métodos como ataques de força bruta e dicionários podem ser usados para tentar encontrar a senha original, especialmente se senhas fracas ou mal protegidas forem usadas. A aplicação de técnicas como salting e o uso de algoritmos de hash mais robustos e lentos são essenciais para mitigar esses ataques e proteger melhor as senhas armazenadas.
+
+---
+---
+Uma certa transmissão de dados via Internet foi monitorada em nível da camada de rede e observou-se que foram transmitidos 320.000.000 bytes em 4 minutos, mas 25% desses dados não são considerados úteis do ponto de vista da camada de aplicação, correspondendo a dados de cabeçalhos de protocolos, retransmissões, etc.
+O goodput medido nesses 4 minutos é de:
+<ol type="A">
+    <li>1.000.000 bps.</li>
+    <li>1.333.333 bps.</li>
+    <li>6.000.000 bps.</li>
+    <li><mark>8.000.000 bps.</mark></li>
+    <li>60.000.000 bps.</li>
+</ol>
+
+### O que é Goodput?
+
+**Goodput** é uma métrica utilizada para medir a eficiência da transmissão de dados em uma rede. Diferente de throughput, que inclui todos os bits transmitidos (incluindo overhead, retransmissões e pacotes de controle), goodput considera apenas os dados úteis entregues ao destinatário.
+
+**Definição**:
+- **Goodput** é a taxa de bits úteis recebidos com sucesso no destino em um dado intervalo de tempo. Em outras palavras, é a quantidade de dados aplicáveis recebidos por segundo.
+
+### Medindo Goodput
+
+Para medir goodput, você pode seguir estes passos:
+
+1. **Capture o Tráfego**:
+   - Utilize ferramentas como Wireshark, tcpdump, ou outras ferramentas de captura de pacotes para registrar o tráfego de rede.
+   
+2. **Filtre os Dados Úteis**:
+   - Exclua os pacotes de controle, retransmissões e overhead da camada de protocolo. Concentre-se apenas nos pacotes de dados úteis (dados da aplicação).
+
+3. **Calcule o Goodput**:
+   - **Determine o intervalo de tempo**: Identifique o intervalo de tempo durante o qual você deseja medir o goodput.
+   - **Calcule o total de bytes úteis**: Some o tamanho de todos os pacotes de dados úteis capturados durante o intervalo de tempo.
+   - **Calcule o Goodput**: Divida o total de bytes úteis pelo intervalo de tempo.
+
+### Fórmula do Goodput
+
+\[ \text{Goodput} = \frac{\text{Total de dados úteis (em bytes)}}{\text{Intervalo de tempo (em segundos)}} \]
+
+Para converter o resultado de bytes por segundo (Bps) para bits por segundo (bps), multiplique por 8 (já que 1 byte = 8 bits).
+
+### Exemplo de Cálculo
+
+1. **Capture o tráfego durante 10 segundos** e suponha que você tenha capturado 1,000,000 bytes de dados úteis.
+
+2. **Calcule o Goodput**:
+   \[
+   \text{Goodput} (Bps) = \frac{1,000,000 \text{ bytes}}{10 \text{ segundos}} = 100,000 \text{ Bps}
+   \]
+
+3. **Converta para bits por segundo**:
+   \[
+   \text{Goodput} (bps) = 100,000 \text{ Bps} \times 8 = 800,000 \text{ bps}
+   \]
+
+### Ferramentas e Comandos para Medir Goodput
+
+- **Wireshark**: 
+  - Capture pacotes e use filtros para analisar apenas os dados úteis.
+  - Acesse "Statistics" -> "Summary" para visualizar o tráfego total e calcular o goodput.
+
+- **Iperf**:
+  - Iperf é uma ferramenta de teste de rede que pode ser usada para medir throughput e pode fornecer uma estimativa próxima ao goodput, dependendo da configuração e dos dados enviados.
+  - Comando básico:
+    ```bash
+    iperf -c <server> -t <duration> -i <interval>
+    ```
+  - No servidor:
+    ```bash
+    iperf -s
+    ```
+
+### Considerações
+
+- **Retransmissões e Overhead**: Ao medir o goodput, é crucial filtrar pacotes de retransmissão e overhead, que podem ser identificados e excluídos usando filtros apropriados em ferramentas de captura de pacotes.
+- **Latência e Jitter**: Além do goodput, considere a latência e o jitter da rede, que também afetam a qualidade da transmissão de dados.
+
+### Conclusão
+
+Goodput é uma métrica essencial para avaliar a eficiência real da transmissão de dados em uma rede. Medindo apenas os dados úteis que chegam ao destino, fornece uma visão mais precisa da performance da rede do que o throughput bruto. Ferramentas como Wireshark e Iperf podem ser usadas para capturar e analisar tráfego de rede, permitindo o cálculo de goodput em ambientes reais.
+
+PRIMEIRA OPÇÃO:
+
+1 byte = 8 bits
+
+Se quiser transformar bytes/segundo para bits/segundo multiplique por 8
+
+O goodput é a quantidade de dados úteis transmitidos por unidade de tempo, descontando dados não úteis, como cabeçalhos de protocolos, retransmissões, etc.
+
+Nesse caso, 25% dos dados transmitidos não são considerados úteis. Portanto, o goodput pode ser calculado da seguinte forma:
+
+Goodput = (Quantidade total de dados - Percentual de dados não úteis) / Tempo
+
+Onde:
+
+Quantidade total de dados = 320.000.000 bytes
+Percentual de dados não úteis = 25% (ou 0,25)
+Tempo = 4 minutos
+Substituindo os valores na fórmula:
+
+Goodput = (0,25 * 320.000.000 bytes) / (4 minutos)
+
+Goodput (Simplificado): 240 / 240 (segundos) = 1.000.000 BYTES/segundo
+
+Como precisamos transformar para bits multiplica por 8 que vai dar a alternativa D.
+
+SEGUNDA OPÇÃO (SIMPLIFICADO)
+
+Se tiver dificuldade com conversões faz diretão:
+
+240.000.000 (já descontado os 25%) / 4 minutos
+
+Resultado: 60.000.000 bytes por MINUTO e o exercício quer bits por SEGUNDO (BPS)
+
+Então divida esse resultado por 60 (cada minuto tem 60 segundos)
+
+e teremos 1.000.000 bytes por segundos (mas precisamos saber o BITS por segundo BPS)
+
+multiplique por 8 e já era.
+
+
+
+<ol type="A">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
