@@ -3194,7 +3194,134 @@ e teremos 1.000.000 bytes por segundos (mas precisamos saber o BITS por segundo 
 
 multiplique por 8 e já era.
 
+Os registros DNS (Domain Name System) são utilizados para mapear nomes de domínio a várias informações, como endereços IP. Aqui estão alguns dos tipos mais comuns de registros DNS e suas funções:
 
+### 1. **A (Address) Record**
+- **Descrição:** Mapeia um nome de domínio a um endereço IPv4.
+- **Exemplo:** `example.com A 192.0.2.1`
+
+### 2. **AAAA (IPv6 Address) Record**
+- **Descrição:** Mapeia um nome de domínio a um endereço IPv6.
+- **Exemplo:** `example.com AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7334`
+
+### 3. **CNAME (Canonical Name) Record**
+- **Descrição:** Mapeia um nome de domínio para outro nome de domínio (alias). Não pode ser usado com outros registros para o mesmo nome.
+- **Exemplo:** `www.example.com CNAME example.com`
+
+### 4. **MX (Mail Exchange) Record**
+- **Descrição:** Direciona o correio eletrônico para servidores de e-mail do domínio.
+- **Exemplo:** `example.com MX 10 mail.example.com`
+
+### 5. **TXT (Text) Record**
+- **Descrição:** Usado para armazenar informações de texto arbitrárias, como verificações SPF, DKIM, e informações de segurança.
+- **Exemplo:** `example.com TXT "v=spf1 include:_spf.example.com ~all"`
+
+### 6. **NS (Name Server) Record**
+- **Descrição:** Especifica os servidores de nome autoritativos para o domínio.
+- **Exemplo:** `example.com NS ns1.example.com`
+
+### 7. **PTR (Pointer) Record**
+- **Descrição:** Usado para mapeamento reverso de endereços IP para nomes de domínio.
+- **Exemplo:** `1.2.0.192.in-addr.arpa PTR example.com`
+
+### 8. **SRV (Service) Record**
+- **Descrição:** Define localização de serviços específicos, como SIP, LDAP, etc., em um domínio.
+- **Exemplo:** `_sip._tcp.example.com SRV 10 60 5060 sipserver.example.com`
+
+### 9. **SOA (Start of Authority) Record**
+- **Descrição:** Fornece informações sobre a zona DNS, incluindo o servidor primário, o email do administrador e os parâmetros de controle de zona.
+- **Exemplo:**
+  ```
+  example.com SOA ns1.example.com admin.example.com (
+                2024061401 ; Serial
+                7200       ; Refresh
+                3600       ; Retry
+                1209600    ; Expire
+                86400 )    ; Minimum TTL
+  ```
+
+### 10. **CAA (Certification Authority Authorization) Record**
+- **Descrição:** Especifica quais autoridades de certificação estão autorizadas a emitir certificados para um domínio.
+- **Exemplo:** `example.com CAA 0 issue "letsencrypt.org"`
+
+### 11. **DS (Delegation Signer) Record**
+- **Descrição:** Utilizado em DNSSEC (DNS Security Extensions) para delegar a assinatura de um domínio.
+- **Exemplo:** `example.com DS 12345 8 2 49FD46E6C4B45C55D4AC`
+
+### 12. **NAPTR (Naming Authority Pointer) Record**
+- **Descrição:** Usado para implementar sistemas de reescrita de endereço, como o ENUM, que traduz números de telefone em endereços URI.
+- **Exemplo:** `example.com NAPTR 100 10 "U" "E2U+sip" "!^.*$!sip:info@example.com!" .`
+
+Cada tipo de registro DNS serve a um propósito específico e é usado em diferentes contextos para garantir que os nomes de domínio sejam resolvidos corretamente em endereços IP, servidores de e-mail, ou outras informações relevantes para o funcionamento da internet.
+
+O registro PTR (Pointer) é um tipo de registro DNS usado para resolução reversa de endereços IP. Enquanto os registros A e AAAA mapeiam nomes de domínio para endereços IP, o registro PTR faz o inverso: mapeia endereços IP para nomes de domínio. Isso é útil para diversas aplicações, incluindo verificação de identidade de servidores de e-mail e outros serviços de rede que necessitam confirmar a origem de uma conexão.
+
+### Detalhes sobre o Registro PTR
+
+- **Função Principal:** Realiza a resolução reversa, associando um endereço IP a um nome de domínio.
+- **Formato:** O registro PTR usa um formato específico, em que o endereço IP é invertido e seguido por `.in-addr.arpa` para IPv4 ou `.ip6.arpa` para IPv6.
+
+### Exemplo de Registro PTR
+
+#### IPv4
+Para um endereço IP, como 192.0.2.1, o registro PTR seria configurado da seguinte maneira:
+
+- **Endereço IP:** 192.0.2.1
+- **Formato Invertido:** 1.2.0.192.in-addr.arpa
+- **Registro PTR:**
+  ```
+  1.2.0.192.in-addr.arpa PTR example.com
+  ```
+
+#### IPv6
+Para um endereço IPv6, como 2001:0db8:85a3:0000:0000:8a2e:0370:7334, o registro PTR seria configurado da seguinte maneira:
+
+- **Endereço IP:** 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+- **Formato Invertido:** 4.3.3.7.0.7.3.0.2.e.a8.0.0.0.0.0.0.0.0.3.a5.8.b.d.0.1.0.0.2.ip6.arpa
+- **Registro PTR:**
+  ```
+  4.3.3.7.0.7.3.0.2.e.a8.0.0.0.0.0.0.0.0.3.a5.8.b.d.0.1.0.0.2.ip6.arpa PTR example.com
+  ```
+
+### Importância e Aplicações dos Registros PTR
+
+1. **Verificação de E-mail:**
+   - Servidores de e-mail frequentemente usam registros PTR para verificar a identidade dos servidores remetentes. Isso ajuda a prevenir spam, pois um servidor de e-mail legítimo deve ter um registro PTR correspondente ao seu endereço IP.
+   
+2. **Auditoria e Segurança:**
+   - Registros PTR são úteis para auditoria de segurança e monitoramento de rede, permitindo que administradores identifiquem dispositivos e máquinas na rede por seus nomes de domínio, em vez de apenas por endereços IP.
+   
+3. **Configurações de Rede:**
+   - Em ambientes corporativos e de data centers, registros PTR são utilizados para facilitar a gestão e o diagnóstico de redes complexas.
+
+### Como Configurar um Registro PTR
+
+Para configurar um registro PTR, você geralmente precisa acessar a interface de administração do seu servidor DNS ou do serviço de hospedagem DNS. A configuração típica envolve:
+
+1. **Identificar o Bloco IP:** Certifique-se de que você tem controle sobre o bloco de endereços IP para o qual está criando registros PTR.
+2. **Criar a Zona Reversa:** Para IPv4, crie uma zona com o formato `x.x.x.in-addr.arpa`, onde `x.x.x` representa os três primeiros octetos do endereço IP.
+3. **Adicionar o Registro PTR:** Dentro da zona reversa, adicione um registro PTR associando o IP invertido ao nome de domínio desejado.
+
+### Exemplo de Configuração no BIND (Berkeley Internet Name Domain)
+Para configurar um registro PTR no BIND, você pode adicionar as seguintes linhas ao arquivo de zona reversa:
+
+```bash
+$TTL 86400
+@   IN  SOA ns1.example.com. admin.example.com. (
+        2024061401 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        1209600    ; Expire
+        86400 )    ; Minimum TTL
+
+@   IN  NS  ns1.example.com.
+
+1   IN  PTR example.com.
+```
+
+### Conclusão
+
+Os registros PTR desempenham um papel crucial na infraestrutura DNS, permitindo a resolução reversa de endereços IP e suportando a verificação de identidade para diversos serviços de rede.
 
 <ol type="A">
     <li></li>
