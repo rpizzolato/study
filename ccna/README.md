@@ -1354,7 +1354,249 @@ Podemos fazer dessa forma, observando o primeiro bit ZERO que aparecer, ou por m
   </tr>
 </table>
 
+### Endereços Privados x Públicos
+
+A RFC 1918 determina que um intervalo de endereços para cada uma das classes (A,B e C) seja reservado para uso interno, não sendo roteáveis na internet:
+
+- **10.0.0.0** a **10.255.255.255** = 1 rede Classe A
+- **172.16.0.0** a **172.31.255.255** = 16 redes Classe B
+- **192.168.0.0** a **192.168.255.255** = 256 redes Classe C
+
+- **127.0.0.0** a **127.255.255.255** - 1 rede Classe A - Loopback
+- **169.254.0.0** a **169.254.255.255** - 1 rede Classe B - APIPA
+
+Ex. A rede interna 10.0.0.0 a 10.255.255.255, classe A, quer sair para internet por meio de um IP público, denominado 201.54.208.5 (sabemos que é público pois não está na descrição dos IPs privados)
+
+### Subnetting
+
+São as divisões em classes, devido às classes gerarem um enorme desperdício de endereços, conhecidas também como **Redes Classful**. Visando a otimização do uso das redes classful, o conceito de sub-redes foi criado, basicamente criar redes dentro de redes.
+
+Ex. a rede classe A, que gera até 16777216 de hosts, sendo inviável sua utilização, pois ficaremos com um domínio de broadcast absurdo, sendo algo impensável de utilizar.
+
+As sub-redes são criadas da forma que isolamos um ou mais bits da porção de hosts do endereço e os utilizamos para definir redes adicionais.
+
+#### Máscara de rede
+
+Os dispositivos de rede precisam distinguir, no endereço IP, a porção de rede da porção de host. Se pensarmos em redes classful, de acordo com cada classe de rede, temos basicamente que (como já vimos anteriormente):
+- a <u>CLASSE A</u>:
+  - o <u>primeiro octeto</u> representa a **REDE**
+  - os <u>últimos três octetos</u> representam **HOST**
+- a <u>CLASSE B</u>:
+  - os <u>dois primeiros octetos</u> representam a **REDE**
+  - os <u>últimos dois octetos</u> representam o **HOST**
+- a <u>CLASSE C</u>:
+  - os <u>três primeiros octetos</u> representam a **REDE**
+  - o <u>último octeto</u> representa o **HOST**
+
+Os dispositivos de rede precisam distinguir, no endereço IP, a porção de REDE da porção de HOST. Sendo:
+
+ - bit 1 = REDE
+ - bit 0 = HOST
+
+ Ex. O IP de classe A 10.30.20.5, com a máscara 255.0.0.0
+ 
 <table border="1">
+  <tr>
+    <td style="border-right-style: dotted;">10.</td>
+    <td>30.20.5</td>
+  </tr>
+  <tr>
+    <td style="border-right-style: dotted;">255.</td>
+    <td>0.0.0</td>
+  </tr>
+  <tr>
+    <td style="border-right-style: dotted;">REDE</td>
+    <td>HOST</td>
+  </tr>
+</table>
+
+Portanto, se tivermos os IPs:
+- 10.1.2.3
+- 10.0.200.3
+- 10.6.5.20
+- 10.7.8.9
+
+Eles são da mesma rede, pois a rede 10.x.x.x é determinada pelos 8 octetos ligados (com valor = 1 sendo 255.0.0.0)
+
+Lembrando novamente que bit 1 é = REDE e bit 0 é = a HOST, temos que:
+
+- 11111111 00000000 00000000 00000000 = **/8** (são 8 bits ligados (255.0.0.0) - classful **CLASSE A**)
+- 11111111 11111111 00000000 00000000 = **/16** (são 16 bits ligados (255.255.0.0) - classful **CLASSE B**)
+- 11111111 11111111 11111111 00000000 = **/24** (são 24 bits ligados (255.255.255.0) - classful **CLASSE C**)
+
+> Importante
+>
+> Os bits ligados precisam e devem ser sequenciais, não podemos "pular" os bits ligados!
+
+A máscara de rede funciona como um filtro, que quando o IP passar por ela, será filtrado o que é REDE e o que é HOST.
+
+Ex. Temos o IP 10.32.16.1 (sabemos que é CLASSE A, e que possui máscara /8 - que são os 8 primeiros bits ligados). Portanto temos que será dividido da seguinte forma:
+- 10.0.0.0 = REDE
+- 10.<u>32.16.1</u> = HOST (varia de **10.0.0.1** até **10.255.255.254**)
+- 10.255.255.255 = BROADCAST (último endereço disponível)
+
+Os elementos de rede realizam uma operação lógica "AND" entre **máscara e o IP**. Essa operação é basicamente um filtro, que com ele descobrimos a rede e o broadcast.
+
+Pegando o Ex. do IP 10.32.16.1 (0 - 127 - CLASS A /8 - 255.0.0.0) se dividirmos os octetos em binário teremos:
+
+| | | | | |
+|---|---|---|---|---|
+|IP  |  00001010 | 00100000 | 00010000 | 00000001 |
+|MASK | 11111111 | 00000000 | 00000000 | 00000000 |
+|AND entre IP e MASK | 00001010 | 00000000 | 00000000 | 00000000 |
+|REDE     | 10    | 0     | 0     | 0     |
+|BROADCAST | 10   | 255   | 255   | 255   |
+
+Resumidamente, temos que:
+|IP|MASK|CIDR|CLASS|
+|---|---|---|---|
+|7.5.3.2 | 255.0.0.0 | /8 | (CLASS A = 0 - 127)|
+|135.50.1.7 | 255.255.0.0 | /16 | (CLASS B = 128 - 191)|
+|200.30.1.2 | 255.255.255.0 | /24 | (CLASS C = 192 - 223)|
+
+### Cáculo endereçamento de IPv4 (mais leve)
+
+Supõe o IP <u>192.168.50.0</u> com a máscara <u>255.255.255.0</u>, pertencentes à classe C (192 a 223 - /24)
+
+Temos que a divisão de REDE e HOST, seguindo a máscara é:
+
+|REDE|REDE|REDE|HOST|
+|---|---|---|---|
+|11111111|11111111|11111111|00000000|
+
+Como temos 8 bits disponíveis para HOST, podemos fazer 2^8 que dá 256. Mas precisamos considerar 256-2 = 254 hosts disponíveis para uso, pois:
+- 0 (zero) é reservado para identificar a REDE
+- 255 é reservado para o enredeço de BROADCAST
+
+Portanto no IP <u>192.168.50.0</u> com a máscara <u>255.255.255.0</u>, temos 254 HOSTS disponíveis para uso! 
+
+Resumidamente, para descobrir o númere hosts, devemos:
+1. Descobrir a classe que o IP pertence (observando os intervalos);
+2. Sabendo a classe, saberemos a máscara classful do IP, e a partir daí basta fazer as contas de acordo com os bit para HOST.
+
+### Cáculo endereçamento de IPv4 - Criando SUB-REDE
+
+- Basicamente a criação de sub-redes "quebra" domínios de broadcast (**novas redes são criadas**), gerando menor tráfego por rede;
+- sendo mais fácil a identificação e isolamento de problemas em redes menores do que em uma rede grande;
+
+Vamos trabalhar com seguinte IP/Máscara:
+- 192.168.50.0
+- 255.255.255.0
+- ou podemos denotar como 192.168.50.0/24 = 254 hosts (2⁸ = 256 - 2 = 254)
+
+Vamos "quebrar" essa rede **classe C** em **duas** sub-redes:
+
+- Para criarmos SUB-REDES, empurramos os bits da porção de REDE da máscara (os "1s") da ESQUERDA para a DIREITA. (Sim, a porção de HOSTS da máscara - bits "0s" - será invadida, ou seja, alguns dos bits "0s" serão transformados em bits "1s" )
+
+- Como queremos "quebrar" e criar 2 sub-redes, usaremos a fórmula para descobrir quantos bits teremos que mudar:<br>`2^x >= nº de redes que precisamos`, como precisamos de 2 redes, usamos a notação `2^x >= 2`, logo x=1, para termos duas sub-redes. Portanto precisamos andar 1 bit da esquerda para direita, ficando:
+
+|||||
+|---|---|---|---|
+||||SUB-REDE|
+|11111111|11111111|11111111|10000000|
+|REDE|REDE|REDE|HOST|
+
+Logo, teremos a seguinte configuração de IP/Máscara
+
+ <table border="1">
+  <tr>
+    <td>192.168.50.0</td>
+    <td rowspan="2">/25</td>
+  </tr>
+  <tr>
+    <td>255.255.255.128</td>
+  </tr>
+</table>
+
+Lembrando que, caso tenhamos o último octeto com os bits desligados, ou seja 00000000, teremos o final da máscara igual a zero (ex. 255.255.255.0 - o último octeto = 00000000).
+
+Mas como ligamos o primeiro bit do último octeto, ou seja, ficamos com 10000000, teremos o final da máscara igual a 128 (ex. 255.255.255.128 - pois o primeiro bit do último octeto está ligado)
+
+Temos a nossa máscara de sub-rede definida, resta identificar quais são as novas sub-redes geradas a partir dela.
+
+Para identificar é muito simples, como os HOSTS são definidos pelos "0s", basta identificarmos quantos "0s" a máscara nos traz e podemos determinar a quantidade de hosts possíveis elevando 2 ao número de "0s" existentes:
+
+`2^Y - 2 = HOSTS` sendo `2^7 - 2 = HOSTS`, que no caso é `128 -2 = HOSTS`, que são `126` HOSTS no total.
+
+Assim temos que:
+
+|REDE 1 (0 a 127)|REDE 2 (128 a 255)|
+|----|----|
+|192.168.50.0/25 (identifica **REDE**)|192.168.50.128/25(identifica **REDE**)|
+|192.168.50.127/25 (identifica **BROADCAST**)|192.168.50.255/25(identifica **BROADCAST**)|
+|Podemos usar (**HOSTS**)|Podemos usar (**HOSTS**)|
+|192.168.50.1/25 a<br> 192.168.50.126/25|192.168.50.129/25 a<br> 192.168.50.254/25|
+
+### Cáculo endereçamento de IPv4 - Criando SUB-REDE - PARTE 2
+
+Agora vamos dividir a rede 192.168.50.0 com máscara 255.255.255.0 em quatro sub-redes:
+
+Aplicamos a formula para descobrir quantos bits teremos que deslocar:<br>
+`2^x >= 4` (4 é o número de sub-redes que queremos), logo `x=2`, pois temos que `2^2=4`
+
+Portanto teremos que deslocar 2 bits para direita, para formar uma nova máscara, ficando `255.255.255.192` (192 é devido ao deslocamento, logo fica 128 + 64 = **192**) = 11111111 11111111 11111111 11000000
+
+Nos sobra uma sequencia de seis "0s", logo aplicamos no lugar de `y`, na fórmula: `2^y - 2=nº HOSTS`. Então temos que `y=6`, ficando `2x2x2x2x2x2=64`. Logo temos que `2^6 - 2 = 62 HOSTS` que podemos utilizar.
+
+Agora para montarmos as redes, que são 4, em uma tabela escrevemos as REDES de 64 em 64, até chegarmos na quarta rede. Identificação da REDE é PAR, enquanto **BROADCAST** é **ÍMPAR** (e SEMPRE <u>1 a menos que a PRÓXIMA rede</u>).
+
+||REDE|BROADCAST|
+|---|---|---|
+|REDE 1|192.168.50.0|192.168.50.63|
+|REDE 2|192.168.50.64|192.168.50.127|
+|REDE 3|192.168.50.128|192.168.50.191|
+|REDE 4|192.168.50.192|192.168.50.255|
+
+||REDE|HOSTS|BROADCAST|
+|---|---|---|---|
+|REDE 1|192.168.50.0|192.168.50.1 a<br>192.168.50.62|192.168.50.63|
+|REDE 2|192.168.50.64|192.168.50.65 a<br>192.168.50.126|192.168.50.127|
+|REDE 3|192.168.50.128|192.168.50.129 a<br>192.168.50.190|192.168.50.191|
+|REDE 4|192.168.50.192|192.168.50.193 a<br>192.168.50.254|192.168.50.255|
+
+> **IMPORTANTE**
+>
+> Lembrando que antes de realizarmos as conversões e os cáculos, É DE SUMA IMPORTÂNCIAS SABERMOS a CLASSE da Rede que estamos ligando, pois dependendo da Classe, a máscara acaba mudando (Ex. Classe B = 255.255.0.0, Classe A = 255.0.0.0, etc). Portante é bom decorar os intervalos.
+
+### Cáculo endereçamento de IPv4 - Criando SUB-REDE - PARTE 3
+
+Dado um enredeço de rede classe C, com a máscara de 255.255.255.224, apresente o intervalo de redes, hosts, broadcast e tudo mais.
+
+O final da máscara é 244, sabemos que nesse caso, `128+64+32 = 224`, o que nos dá 3 bits deslocados para compor a máscara de rede, ficando `11111111 11111111 11111111 11100000`
+
+Como foram 3 bits deslocados, podemos aplicar a formulá para achar a quantidade de sub-redes que iremos ter. `2^3 = 8 sub-redes`. Bom, teremos 8 sub-redes com essa máscara. Agora vamos achar a quantidade de hosts por sub-rede, aplicando a fórmula `2^5 -2 = 30 hosts`. Lembrando que ^5 é referente as cinco sequências de "0s" que irão compor os hosts.
+
+||REDE|BROADCAST|
+|---|---|---|
+|REDE 1|192.168.50.0|192.168.50.31|
+|REDE 2|192.168.50.32|192.168.50.63|
+|REDE 3|192.168.50.64|192.168.50.95|
+|REDE 4|192.168.50.96|192.168.50.127|
+|REDE 5|192.168.50.128|192.168.50.159|
+|REDE 6|192.168.50.160|192.168.50.191|
+|REDE 7|192.168.50.192|192.168.50.223|
+|REDE 8|192.168.50.224|192.168.50.255|
+
+> **Observação**
+>
+> Note que a última REDE (192.168.50.224) será o mesmo número da máscara modificada (255.255.255.224). E novamente, a questão da REDE sempre ser um número PAR e o BROADCAST sempre ser ÍMPAR continua valendo.
+
+Quanto as HOSTS temos:
+
+||REDE|HOSTS|BROADCAST|
+|---|---|---|---|
+|REDE 1|192.168.50.0|192.168.50.1 a<br>192.168.50.30|192.168.50.31|
+|REDE 2|192.168.50.32|192.168.50.33 a<br>192.168.50.62|192.168.50.63|
+|REDE 3|192.168.50.64|192.168.50.65 a<br>192.168.50.94|192.168.50.95|
+|REDE 4|192.168.50.96|192.168.50.97 a<br>192.168.50.126|192.168.50.127|
+|REDE 5|192.168.50.128|192.168.50.129 a<br>192.168.50.158|192.168.50.159|
+|REDE 6|192.168.50.160|192.168.50.161 a<br>192.168.50.190|192.168.50.191|
+|REDE 7|192.168.50.192|192.168.50.193 a<br>192.168.50.222|192.168.50.223|
+|REDE 8|192.168.50.224|192.168.50.225 a<br>192.168.50.254|192.168.50.255|
+
+### Cáculo endereçamento de IPv4 - Criando SUB-REDE - PARTE 4 (Modo Direto)
+
+ <table border="1">
   <tr>
     <td></td>
     <td></td>
