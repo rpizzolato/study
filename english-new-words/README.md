@@ -55,4 +55,74 @@ This is a repo intended to list and describe new English words from diversified 
 - **well-lit**: bem iluminado
 - **attire**: clothes, especially of a particular or formal type (traje)
   - I hardly think jeans are appropriate 
+- **akin**: related, parent, connected (aparentado)
+  - a connectionless protocol is more akin to a postcard sent through
+the mail
+- **presumably**: likely, like, belike (presumivelmente - de modo presumido, suposto, que se pauta numa suposição, em hipóteses, supostamente, etc)
+  - After the sender writes a message on the postcard and drops it into the mailbox,
+the sender (presumably) loses control over that message (example of UDP Protocol)
+- **thereafter**: thereon, thereat, pursuant to, subsequently, thus (depois disso)
+  - The call ends shortly thereafter
+- **therefore**: so, thus, accordingly, between this and that, hence, whence, thereupon, thereby, as soon, like this (portanto)
+  - We were unable to get funding and therefore had to abandon the project
+- **thus**: in this way (desta maneira, assim, portanto)
+  - Bend from the waist, thus.
+  - They planned to reduce staff and thus to cut costs.
+- **compelled**: force, oblige, compel, enforce (compelido, obrigado, forçado)
 
+### IN, INTO, ON, ONTO
+
+Tradução delas é "no" ou "na", mas o contexto é que vai determinar qual deve ser utilizada:
+- **IN**: descrever a posição de algo que está dentro de um espaço ou área definida, indica que algo está dentro de outra coisa maior:
+  - She is in the supermarket.
+  - The keys are in the drawer.
+  - She lives in a house by the lake.
+  - There's a surprise in the box.
+- **INTO**: lembrar que "in" significa "dentro" e "to" significa "para", logo **into** pode ser entendido como "para dentro" (preposição de movimento, quando algo está se movendo em direção ao interior de outra)
+  - He got into the car and drove away.
+  - They fell into the water while playing.
+  - Pour the soup into a bowl
+- **ON**: indica que algo está em cima de uma superfície (que esteja em contato realmente, pois se não estivesse me contato, o correto seria usar **over** - *the book in on the table*):
+  - The cat is sleeping on the couch.
+  - I saw the keys on your desk.
+  - Look, there's a bee on that flower
+- **ONTO**: da mesma forma que *into*, a preposição **onto** também indica movimento, mas agora descreve alto que está info em direção à superfície de outra. Lembrando que "on" pode ser entendido como "em cima" e "to" como "para", se juntar as duas, ficaria "para cima". Pensar em um cão pulando para subir e uma cadeira: "The little dog jumped onto the chair"
+  - Carefully put the dishes onto the shelf.
+  - He climbed onto the roof.
+  - The bird landed onto the branch.
+
+Fonte: https://www.aluralingua.com.br/artigos/como-usar-as-preposicoes-in-into-on-e-onto
+
+- **hurdles**: 
+  1. a frame or fence for jumping over in a race (barreira, obstáculos)
+  2. a problem that you have to deal with before you can make progress (problema)
+    - Getting a work permit was the first hurdle to overcome.
+    - The cost of this exercise is proving to be a major hurdle.
+- **playfully**: in a way that is funny and not serious (de maneira brincalhona)
+  - he film is a playfully enjoyable experience. (O filme é uma experiência deliciosamente divertida.)
+  - She playfully teased her brother about his love life. (Ela amolava o irmão de maneira brincalhona sobre a sua vida amorosa.)
+- **chunks**: a part of something, especially a large part (pedaço grande)
+  - a chunk of text (um pedaço grande de texto)
+  - a substantial chunk of our profits
+  - Three hours is quite a chunk out of my working day.
+- **insofar as**: *conjunction*: to the degree that (na medida em que)
+  - I gave him the details insofar as I knew them.
+  - As an administrator, you should care about fragmentation insofar as it can affect application performance if one of the fragments of a large segment gets lost. (from book Linux Firewalls)
+- **probe**: to try to discover information that other people do not want you to know, by asking questions carefully and not directly (investigar, explorar, procurar, sondar)
+  - The interviewer probed deep into her private life. (A pesquisadora investigou a fundo a vida privada dela.)
+  - Detectives questioned him for hours, probing for any inconsistencies in his story.
+  - The article probes (= tries to describe and explain) the mysteries of nationalism in modern Europe.
+- **aptly**: in a way that is suitable or right for a particular situation (adequadamente, apropriadamente)
+  - We spent a week at the aptly named Grand View Hotel.
+  - "Perseverance" aptly describes his hard work to complete the project. ("Perseverança" descreve apropriadamente o trabalho árduo dele para completar o projeto.)
+- **apt**: suitable or right for a particular situation (adequado, apropriado, pertinente)
+  - an apt comment/description (um comentário pertinente, uma descrição apropriada)
+- **offset**: to balance one influence against an opposing influence, so that there is no great difference as a result (compensar, deduzir)
+  - The extra cost of travelling to work is offset by the lower price of houses here.
+  - *UK* He keeps his petrol receipts because petrol is one of the expenses that he can offset against tax (= can show to the government as being a business cost, and so not pay tax).
+- **purposefully**: in a way that shows that you know what you want to do (resolutamente, com determinação, propositalmente)
+  - He strode purposefully into the room.
+- **encompass**: to include most or all of (abranger)
+  - a curriculum that encompasses the diverse needs of children (um currículo que abrange as diversas necessidades das crianças)
+- **mimic**: to copy the way in which a particular person usually speaks and moves, usually in order to make people laugh (imitar, simular, arremedar)
+  - She was **mimicking** the various people in our office. (Ela estava imitando várias pessoas no nosso escritório.)
