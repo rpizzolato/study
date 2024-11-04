@@ -210,3 +210,9 @@ O **chsh** serve simplesmente para alterar o shell utilizado pelo usuário. Por 
 4.  Informe o novo valor ou pressione ENTER para aceitar o padrão
 5.    Shell de Login  [/bin/sh]:  /bin/bash
 ```
+
+testetestetestetestetestetestetestetestetestetesteteste
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjA3OTAzODMxM119
+-->
