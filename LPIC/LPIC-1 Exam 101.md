@@ -215,8 +215,12 @@ Ainda sobre terminais, podemos dizer se estiver usando uma interface gráfica, m
 Agora se estiver lidando com console do sistema, ou tty, trata-se de um terminal baseado em texto.<br>
 Pode-se alternar, como já vimos, com as teclas Ctrl+Alt+F1-F6, sendo o F7 normalmente a sssão que leva à interface gráfica.
 
+>[!NOTE]
+>
+>**tty** significa teletypewritter (teletipo); **pts** é a abreviação de pseudo terminal slave (pseudo terminal escravo). Para saber mais: **man tty** e **man pts**
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2ODAwMzI3LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbMTk5MzQyMDQ3NSw2NzQ1MjEwNzZdfQ==
 -->
