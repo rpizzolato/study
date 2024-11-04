@@ -232,13 +232,21 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 - `su - root` ou `su -`: inicia um shell de login interativo como **root**
 - `su root` ou `su` inicia um shell interativo sem login como `root`
 
-`sudo`
+`sudo`: executa comandos como outro usuário (incluindo o superusuário). Como este comando é usado principalmente para obter privilégios de root temporariamente, o usuário que o emprega deve estar no arquivo  `sudoers`. Para adicionar usuários a  `sudoers`, precisamos nos tornar  `root`  e então executar:
 
-Executa comandos como outro usuário (incluindo o superusuário). Como este comando é usado principalmente para obter privilégios de root temporariamente, o usuário que o emprega deve estar no arquivo  `sudoers`. Para adicionar usuários a  `sudoers`, precisamos nos tornar  `root`  e então executar:
+    # usermod -aG sudo user2
 
-root@debian:~# **usermod -aG sudo user2**
+Assim como o  `su`, o  `sudo`  permite invocar shells de login e sem login:
+-   `sudo su - user2`,  `sudo su -l user2`  ou  `sudo su --login user2`  iniciam um shell de login interativo como  `user2`.   
+-   `sudo su user2`  inicia um shell sem login interativo como  `user2`.
+-   `sudo -u user2 -s`  inicia um shell sem login interativo como  `user2`.
+-   `sudo su - root`  ou  `sudo su -`  inicia um shell de login interativo como  `root`.
+-   `sudo -i`  inicia um shell de login interativo como  `root`.
+-   `sudo -i <algum_comando>`  inicia um shell de login interativo como  `root`, executa o comando e retorna ao usuário original.
+-   `sudo su root`  ou  `sudo su`  inicia um shell sem login interativo como  `root`.
+-   `sudo -s`  ou  `sudo -u root -s`  iniciam um shell sem login como  `root`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MzE3NDk3OCwtNjQ2MzA5NzcyLC03Nj
+eyJoaXN0b3J5IjpbMTQ1ODg3MTEzNiwtNjQ2MzA5NzcyLC03Nj
 A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
 Nl19
 -->
