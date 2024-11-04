@@ -165,7 +165,7 @@ Ainda no **/etc/profile** que é possível incluir um alias, uma função, para 
 
 Dentro de **/etc/profile.d/** há scripts que são carregados ao fazer login. Lembrando que o que foi visto é de definição geral, para todos os usuários.
 
-Para configurações individuais de login (correspondente ao **/etc/profile**), geralmente em **/home** de cada usuário, temos os arquivos, nessa ordem, dando prioridade ainda nessa ordem:
+Para configurações individuais de login (correspondente ao **/etc/profile**), geralmente em **/home** de cada usuário, temos os arquivos, nessa ordem, e logo que um é encontrado e executado, os outros são ignorados:
 - **~/.bash_profile**
 - **~/.bash_login**
 - **~/.profile** (mais comum)
@@ -265,7 +265,7 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `bash`  or  `/bin/bash`: Interativo sem login
 - `<nome_do_script>`: Não-interativo sem login (scripts)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mj
-c3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5
-MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0OD
+g3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQw
+LC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
