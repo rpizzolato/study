@@ -245,8 +245,10 @@ Assim como o  `su`, o  `sudo`  permite invocar shells de login e sem login:
 -   `sudo -i <algum_comando>`  inicia um shell de login interativo como  `root`, executa o comando e retorna ao usuário original.
 -   `sudo su root`  ou  `sudo su`  inicia um shell sem login interativo como  `root`.
 -   `sudo -s`  ou  `sudo -u root -s`  iniciam um shell sem login como  `root`.
+
+Ao usar `su` ou `sudo`, é importante considerar o contexto particular antes de iniciar um novo shell: Precisamos ou não do ambiente do usuário de destino? Se a resposta for sim, usaríamos as opções que invocam shells de login; se não, as que invocam shells sem login.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODg3MTEzNiwtNjQ2MzA5NzcyLC03Nj
-A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
-Nl19
+eyJoaXN0b3J5IjpbNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
+QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
+XX0=
 -->
