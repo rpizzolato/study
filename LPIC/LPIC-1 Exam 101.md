@@ -212,10 +212,11 @@ O **chsh** serve simplesmente para alterar o shell utilizado pelo usuário. Por 
 ```
 
 Ainda sobre terminais, podemos dizer se estiver usando uma interface gráfica, muito provavelmente estará em uso de algum emulador de terminal na GUI, ou um shell **pts**, como gnome-terminal ou konsole (são mais ricos em recursos e fáceis de usar).<br>
-Agora se estiver lidando com console do sistema, ou tty, trata-se de um terminal baseado em texto. Pode-se alternar
+Agora se estiver lidando com console do sistema, ou tty, trata-se de um terminal baseado em texto.<br>
+Pode-se alternar, como já vimos, com as teclas Ctrl+Alt+F1-F6, sendo o F7 normalmente a sssão que leva à interface gráfica.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMTExMDgzLDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbMjc2ODAwMzI3LDY3NDUyMTA3Nl19
 -->
