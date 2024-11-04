@@ -116,3 +116,55 @@ Barramentos: interface de comunicação física entre os dispositivos e a placa 
 - PCI: Peripheral Component Interconnect (lspci)
 
 - USB: Universal Serial Bus (lsusb)
+
+## 102-500
+
+### 105.1 Personalizar e trabalhar no ambiente shell
+
+Relembrando:
+- **echo $TESTE**: lê o valor da variável TESTE
+- **TESTE=valor1**: define um valor para a variável TESTE
+- **env | grep TESTE**: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
+- **set | grep TESTE**: mostra tanto as locais de ambiente, como as exportadas de usuário.
+
+Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash, logo essa variável teria que estar exportada.
+
+É possível contornar isso com o comando **source**. Ele faz com que seja executado no mesmo shell da sessão atual, dessa forma retornando o valor de TESTE.
+
+Outra forma é utilizar o ponto (.): **. script.sh** (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com **./script.sh**)
+
+Comando alias: cria alias para os comandos (sinônimos de comandos)
+
+**alias dt="date +%H:%M"**: cria um alias chamado dt que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
+
+Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
+
+**function**: usado para criar uma rotina de comandos.
+
+Ex. Criando uma função e a chamando no final<br> 
+```
+$ function funcao1 {
+>    date;
+>   uptime;
+>    uname -a
+>    echo "Fim funcao";
+>}
+
+$ funcao1
+```
+Para visualizar a função é só digitar **set**
+
+>[!NOTE]
+>
+>É possível começar uma função digitando tudo em uma linha ou omitindo a palavra **function**. Ex. **funcao3 () {date; uptime; }**
+
+Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
+- **/etc/profile**: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
+- **/etc/bash.bashrc**: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver **algo.bashrc**, está ligado a um novo shell/bash e **algo.profile** é um novo login)
+
+Por exemplo, caso adicionar uma variável no final do arquivo **/etc/profile**, chamada E**TCPROFILE=Valor1** e tentarmos com o **echo** ver o valor dessa variável, não será retornado nada. No entanto se for mudado para qualquer outro terminal (com CTRL+ALT+F1) e efetuar o login, e exibir a variável com o comando **echo**, a variável aparecerá. 
+Isso deixa claro que **profile** está ligado com login realmente, no caso quando qualquer usuário fizer login.
+
+Ainda no **/etc/profile** que é possível incluir um alias, uma função, para que seja comum a todos que se logarem no sistema.
+
+É possível notar que ao se fazer o mesmo teste, agora com **/etc/bash.bashrc**, é possível perceber que a variável apenas irá aparecer quando for aberto um novo shell (e **NÃO** no shell atual).
