@@ -211,10 +211,10 @@ O **chsh** serve simplesmente para alterar o shell utilizado pelo usuário. Por 
 5.    Shell de Login  [/bin/sh]:  /bin/bash
 ```
 
-A
+Ainda sobre terminais, podemos dizer se estiver usando uma interface gráfica, muito provavelmente estará em uso de algum emulador de terminal na GUI, ou um shell **pts**, como gnome-terminal ou konsole. Agora se esti
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0OTk2NzI3LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbLTEzMDk2MzI0MTIsNjc0NTIxMDc2XX0=
 -->
