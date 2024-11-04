@@ -181,7 +181,7 @@ Em **/etc/inputrc** temos a opção de editar as definições de input do termin
 
 >[!WARNING]
 >
->Lembre-se, devido à ordem em que os arquivos são executados, os arquivos locais têm precedência sobre os globais.
+>Lembre-se, devido à ordem em que os arquivos são executados, os arquivos **locais** têm precedência sobre os **globais**.
 
 Em **/etc/skel** (de esqueleto): toda vez que criar um usuário, a base de arquivos básicos do usuário será pega daqui, arquivos esses que irão fazer parte do usuário. (será pego desse "esqueleto" de arquivos).<br>
 Se criarmos um arquivo qualquer, como **touch teste-skel**, quando criarmos um novo usuário, esse arquivo ficará disponível no **/home** do novo usuário. Isso se torna interessante quando é necessário colocar alguma configuração específica para todo usuário durante sua criação.
@@ -271,8 +271,8 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `bash`  or  `/bin/bash`: Interativo sem login
 - `<nome_do_script>`: Não-interativo sem login (scripts)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4Mjg1NTA0LC0xNDY1NjY0MDY2LDE2Mj
-U3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMy
-LC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
-I3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNj
+I1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQz
+MiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5MiwyMD
+MyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
