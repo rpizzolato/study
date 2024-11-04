@@ -153,8 +153,8 @@ Para visualizar a função é só digitar `set`
 >É possível começar uma função digitando tudo em uma linha ou omitindo a palavra `function`. Ex. `funcao3 () {date; uptime; }`
 
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
-- **/etc/profile**: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
-- **/etc/bash.bashrc**: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver **algo.bashrc**, está ligado a um novo shell/bash e **algo.profile** é um novo login)
+- `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
+- `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
 
 Por exemplo, caso adicionar uma variável no final do arquivo **/etc/profile**, chamada E**TCPROFILE=Valor1** e tentarmos com o **echo** ver o valor dessa variável, não será retornado nada. No entanto se for mudado para qualquer outro terminal (com CTRL+ALT+F1) e efetuar o login, e exibir a variável com o comando **echo**, a variável aparecerá. 
 Isso deixa claro que **profile** está ligado com login realmente, no caso quando qualquer usuário fizer login.
@@ -226,8 +226,9 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 
 #### #### Iniciando shells com  `su`  e  `sudo`
 
-
+- su: muda o ID de user ou o torna superusuário
+- su - user2, su -l user2 ou su
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzk3MjkwMywtNzYwNDE5MTQwLC01NT
+eyJoaXN0b3J5IjpbLTgzOTMyMzM1MiwtNzYwNDE5MTQwLC01NT
 k4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
