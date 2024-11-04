@@ -179,6 +179,10 @@ Dentro do **/home** do usuário há ainda um arquivo chamado **.bash_logout** qu
 
 Em **/etc/inputrc** temos a opção de editar as definições de input do terminal. Por exemplo, o que fará a combinação de Ctrl + alguma tecla específica, como limpar tela, e etc.
 
+>[!WARNING]
+>
+>Lembre-se, devido à ordem em que os arquivos são executados, os arquivos locais têm precedência sobre os globais.
+
 Em **/etc/skel** (de esqueleto): toda vez que criar um usuário, a base de arquivos básicos do usuário será pega daqui, arquivos esses que irão fazer parte do usuário. (será pego desse "esqueleto" de arquivos).<br>
 Se criarmos um arquivo qualquer, como **touch teste-skel**, quando criarmos um novo usuário, esse arquivo ficará disponível no **/home** do novo usuário. Isso se torna interessante quando é necessário colocar alguma configuração específica para todo usuário durante sua criação.
 
@@ -267,8 +271,8 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `bash`  or  `/bin/bash`: Interativo sem login
 - `<nome_do_script>`: Não-interativo sem login (scripts)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOT
-Y5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3
-MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2Nz
-Q1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbOTc4Mjg1NTA0LC0xNDY1NjY0MDY2LDE2Mj
+U3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMy
+LC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
+I3MDYzODgsNjc0NTIxMDc2XX0=
 -->
