@@ -219,8 +219,28 @@ Pode-se alternar, como já vimos, com as teclas Ctrl+Alt+F1-F6, sendo o F7 norma
 >
 >**tty** significa teletypewritter (teletipo); **pts** é a abreviação de pseudo terminal slave (pseudo terminal escravo). Para saber mais: **man tty** e **man pts**
 
+Lançando shells com o bash
+Após fazer o login, digite bash em um terminal para abrir um novo shell. Tecnicamente, este shell é um processo filho do shell atual.
+
+Ao iniciar o processo filho bash, podemos especificar diversas opções para definir que tipo de shell queremos iniciar. Eis algumas opções importantes de invocação no bash:
+
+bash -l or bash --login
+invoca um shell de login.
+
+bash -i
+invoca um shell interativo.
+
+bash --noprofile
+com shells de login, ignora o arquivo de inicialização do sistema /etc/profile e os arquivos de inicialização em nível de usuário ~/.bash_profile, ~/.bash_login e ~/.profile.
+
+bash --norc
+com shells interativos, ignora tanto o arquivo de inicialização do sistema /etc/bash.bashrc quanto o arquivo de inicialização em nível de usuário ~/.bashrc.
+
+bash --rcfile <file>
+com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbNDQ4MTE3NzY4LDIwMzI3MDYzODgsNjc0NT
+IxMDc2XX0=
 -->
