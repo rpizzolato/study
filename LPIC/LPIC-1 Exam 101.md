@@ -231,7 +231,9 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 - **bash --rcfile** <file>: com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
 
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3ND
-UyMTA3Nl19
+eyJoaXN0b3J5IjpbMjIzNTE2NzkyLC01NTk4NDE4OTIsMjAzMj
+cwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
