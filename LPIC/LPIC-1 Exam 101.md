@@ -167,4 +167,46 @@ Isso deixa claro que **profile** está ligado com login realmente, no caso quand
 
 Ainda no **/etc/profile** que é possível incluir um alias, uma função, para que seja comum a todos que se logarem no sistema.
 
-É possível notar que ao se fazer o mesmo teste, agora com **/etc/bash.bashrc**, é possível perceber que a variável apenas irá aparecer quando for aberto um novo shell (e **NÃO** no shell atual).
+É possível notar que ao se fazer o mesmo teste, agora com **/etc/bash.bashrc**, é possível perceber que a variável apenas irá aparecer quando for aberto um novo shell (e **NÃO** no shell atual) ou um novo login, que automaticamente irá abrir um novo shell.
+
+Dentro de **/etc/profile.d/** há scripts que são carregados ao fazer login. Lembrando que o que foi visto é de definição geral, para todos os usuários.
+
+Para configurações individuais de login (correspondente ao **/etc/profile**), geralmente em **/home** de cada usuário, temos os arquivos, nessa ordem, dando prioridade ainda nessa ordem:
+- **~/.bash_profile**
+- **~/.bash_login**
+- **~/.profile** (mais comum)
+
+Já o correspondente ao **/etc/bash.bashrc**, temos o (nova sessão, novo shell):
+- **~/.bashrc**
+
+Dentro do **/home** do usuário há ainda um arquivo chamado **.bash_logout** que é executado ao fazer logout do usuário.
+
+Em **/etc/inputrc** temos a opção de editar as definições de input do terminal. Por exemplo, o que fará a combinação de Ctrl + alguma tecla específica, como limpar tela, e etc.
+
+Em **/etc/skel** (de esqueleto): toda vez que criar um usuário, a base de arquivos básicos do usuário será pega daqui, arquivos esses que irão fazer parte do usuário. (será pego desse "esqueleto" de arquivos).<br>
+Se criarmos um arquivo qualquer, como **touch teste-skel**, quando criarmos um novo usuário, esse arquivo ficará disponível no **/home** do novo usuário. Isso se torna interessante quando é necessário colocar alguma configuração específica para todo usuário durante sua criação.
+
+Principais Variáveis de Ambiente
+É importante conhecer a função de algumas variáveis de ambiente existentes no sistema, as principais são:
+
+- **DISPLAY**: Indica às aplicações gráficas onde as janelas deverão ser exibidas. Será estudado no Tópico 106
+- **HISTFILE**: Arquivo do histórico de comandos
+- **HISTFILESIZE**: Quantidade de linhas/comandos armazenados no arquivo de histórico
+- **HOME**: Indica o diretório do usuário atual
+- **LANG**: Definição do idioma
+- **LOGNAME** e **USER**: Nome do usuário atual
+- **PATH**: Diretórios em que o Linux irá procurar por arquivos executáveis
+- **PS1**: Aparência do prompt do shell.
+- **PWD**: Diretório atual
+- **OLDPWD**: Diretório anterior
+
+Outro comando interessante e que alguns alunos já reportaram ter caído nos exames é o **chsh**.
+
+O **chsh** serve simplesmente para alterar o shell utilizado pelo usuário. Por exemplo:
+```
+1.  $ chsh
+2.  Senha:
+3.  Mudando o shell de login para ricardo
+4.  Informe o novo valor ou pressione ENTER para aceitar o padrão
+5.    Shell de Login  [/bin/sh]:  /bin/bash
+```
