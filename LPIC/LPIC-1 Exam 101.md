@@ -127,7 +127,7 @@ Relembrando:
 - **env | grep TESTE**: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
 - **set | grep TESTE**: mostra tanto as locais de ambiente, como as exportadas de usuário.
 
-Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash, logo essa variável teria que estar exportada.
+Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash (processo filho do shell atual), logo essa variável teria que estar exportada.
 
 É possível contornar isso com o comando **source**. Ele faz com que seja executado no mesmo shell da sessão atual, dessa forma retornando o valor de TESTE.
 
@@ -135,7 +135,7 @@ Outra forma é utilizar o ponto (.): **. script.sh** (faz rodar/executar localme
 
 Comando alias: cria alias para os comandos (sinônimos de comandos)
 
-**alias dt="date +%H:%M"**: cria um alias chamado dt que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
+**alias dt="date +%H:%M"**: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
 
 Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
 
@@ -222,5 +222,5 @@ Pode-se alternar, como já vimos, com as teclas Ctrl+Alt+F1-F6, sendo o F7 norma
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MzQyMDQ3NSw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
