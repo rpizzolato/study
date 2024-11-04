@@ -260,8 +260,12 @@ Ao usar `su` ou `sudo`, é importante considerar o contexto particular antes de 
     user2       5452  0.0  0.0  16760   940 pts/0    S+   23:04   0:00 grep --color=auto bash
     
 A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) e abriu _gnome-terminal_, depois pressionou Ctrl+Alt+F1 para entrar em uma sessão de terminal `tty`. Finalmente, ela retornou à sessão GUI pressionando Ctrl+Alt+F7 e digitou o comando `ps aux | grep bash`. Assim, a saída mostra um shell sem login interativo por meio do emulador de terminal (`pts/0`) e um shell de login interativo por meio do terminal baseado em texto (`tty1`). Note também como o último campo de cada linha (o comando) é `bash` para o primeiro e `-bash` para o último.
+
+- `-bash`  ou  `-su`: Interativo de login
+- `bash`  or  `/bin/bash`: Interativo sem login
+- `<nome_do_script>`: Não-interativo sem login (scripts)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDQ5MDIxMTMsMjQ4ODczMzQ4LDY2Mj
+eyJoaXN0b3J5IjpbLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mj
 c3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5
 MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
