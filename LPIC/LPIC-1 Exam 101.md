@@ -230,10 +230,10 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 - **bash --norc**: com shells interativos, ignora tanto o arquivo de inicialização do sistema /etc/bash.bashrc quanto o arquivo de inicialização em nível de usuário ~/.bashrc.
 - **bash --rcfile** <file>: com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
 
-
+#### #### Iniciando shells com  `su`  e  `sudo`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzNTE2NzkyLC01NTk4NDE4OTIsMjAzMj
-cwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
+I3MDYzODgsNjc0NTIxMDc2XX0=
 -->
