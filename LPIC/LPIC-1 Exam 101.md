@@ -227,9 +227,11 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 #### #### Iniciando shells com  `su`  e  `sudo`
 
 - `su`: muda o ID de user ou o torna superusuário
-- `su - user2`, `su -l user2` ou `su --login user2`: iniciam um shell de login interativo com user2
-- 
+- `su - user2`, `su -l user2` ou `su --login user2`: iniciam um shell de login interativo com **user2**
+- `su user2`: inicia um shell sem login interativo como **user2**
+- `su - root` ou `su -`: inicia um shell de login interativo como **root**
+- `su root` ou `su` inicia um shell interativo sem login como `root`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTczMTY3ODYsLTc2MDQxOTE0MCwtNT
-U5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NT
+k4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
