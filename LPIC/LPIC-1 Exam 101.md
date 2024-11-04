@@ -228,10 +228,10 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 - **bash -i**: invoca um shell interativo.
 - **bash --noprofile**: com shells de login, ignora o arquivo de inicialização do sistema /etc/profile e os arquivos de inicialização em nível de usuário ~/.bash_profile, ~/.bash_login e ~/.profile.
 - **bash --norc**: com shells interativos, ignora tanto o arquivo de inicialização do sistema /etc/bash.bashrc quanto o arquivo de inicialização em nível de usuário ~/.bashrc.
-- bash --rcfile <file>: com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
+- **bash --rcfile** <file>: com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyODE5NzI4NCwyMDMyNzA2Mzg4LDY3ND
+eyJoaXN0b3J5IjpbLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3ND
 UyMTA3Nl19
 -->
