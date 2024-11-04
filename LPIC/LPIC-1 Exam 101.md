@@ -251,8 +251,17 @@ Ao usar `su` ou `sudo`, é importante considerar o contexto particular antes de 
 - `echo $0`: mostra qual tipo de shell está sendo usado no momento
 
 #### Ver a quantidade de shells
+
+`ps aux | grep bash`: supondo a seguinte saída<br>
+
+    user2@debian:~$ **ps aux | grep bash**
+    user2       5270  0.1  0.1  25532  5664 pts/0    Ss   23:03   0:00 bash
+    user2       5411  0.3  0.1  25608  5268 tty1     S+   23:03   0:00 -bash
+    user2       5452  0.0  0.0  16760   940 pts/0    S+   23:04   0:00 grep --color=auto bash
+    
+A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) e abriu _gnome-terminal_, depois pressionou Ctrl+Alt+F1 para entrar em uma sessão de terminal `tty`. Finalmente, ela retornou à sessão GUI pressionando Ctrl+Alt+F7 e digitou o comando `ps aux | grep bash`. Assim, a saída mostra um shell sem login interativo por meio do emulador de terminal (`pts/0`) e um shell de login interativo por meio do terminal baseado em texto (`tty1`). Note também como o último campo de cada linha (o comando) é `bash` para o primeiro e `-bash` para o último.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcxNjU1NjgsMjQ4ODczMzQ4LDY2Mjc3OT
-QzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5Miwy
-MDMyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbLTEyMDQ5MDIxMTMsMjQ4ODczMzQ4LDY2Mj
+c3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5
+MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
