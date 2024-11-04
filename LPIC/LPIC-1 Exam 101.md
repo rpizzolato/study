@@ -231,7 +231,14 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 - `su user2`: inicia um shell sem login interativo como **user2**
 - `su - root` ou `su -`: inicia um shell de login interativo como **root**
 - `su root` ou `su` inicia um shell interativo sem login como `root`
+
+`sudo`
+
+Executa comandos como outro usuário (incluindo o superusuário). Como este comando é usado principalmente para obter privilégios de root temporariamente, o usuário que o emprega deve estar no arquivo  `sudoers`. Para adicionar usuários a  `sudoers`, precisamos nos tornar  `root`  e então executar:
+
+root@debian:~# **usermod -aG sudo user2**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NT
-k4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMTY5MzE3NDk3OCwtNjQ2MzA5NzcyLC03Nj
+A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
+Nl19
 -->
