@@ -248,9 +248,9 @@ Assim como o  `su`, o  `sudo`  permite invocar shells de login e sem login:
 
 Ao usar `su` ou `sudo`, é importante considerar o contexto particular antes de iniciar um novo shell: Precisamos ou não do ambiente do usuário de destino? Se a resposta for sim, usaríamos as opções que invocam shells de login; se não, as que invocam shells sem login.
 
-- ech
+- echo $0: mostra qual tipo de shell está sendo usado no momento
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDYxMDQwNyw2NjI3Nzk0MzIsLTY0Nj
-MwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4
-OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2Mz
+A5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4
+LDY3NDUyMTA3Nl19
 -->
