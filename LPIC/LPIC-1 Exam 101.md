@@ -116,20 +116,20 @@ Barramentos: interface de comunicação física entre os dispositivos e a placa 
 ### 105.1 Personalizar e trabalhar no ambiente shell
 
 Relembrando:
-- **echo $TESTE**: lê o valor da variável TESTE
-- **TESTE=valor1**: define um valor para a variável TESTE
-- **env | grep TESTE**: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
-- **set | grep TESTE**: mostra tanto as locais de ambiente, como as exportadas de usuário.
+- `echo $TESTE`: lê o valor da variável TESTE
+- `TESTE=valor1`: define um valor para a variável TESTE
+- `env | grep TESTE`: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
+- `set | grep TESTE`: mostra tanto as locais de ambiente, como as exportadas de usuário.
 
 Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash (processo filho do shell atual), logo essa variável teria que estar exportada.
 
 É possível contornar isso com o comando **source**. Ele faz com que seja executado no mesmo shell da sessão atual, dessa forma retornando o valor de TESTE.
 
-Outra forma é utilizar o ponto (.): **. script.sh** (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com **./script.sh**)
+Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com `./script.sh`)
 
 Comando alias: cria alias para os comandos (sinônimos de comandos)
 
-**alias dt="date +%H:%M"**: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
+`alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
 
 Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
 
@@ -146,11 +146,11 @@ $ function funcao1 {
 
 $ funcao1
 ```
-Para visualizar a função é só digitar **set**
+Para visualizar a função é só digitar `set`
 
 >[!NOTE]
 >
->É possível começar uma função digitando tudo em uma linha ou omitindo a palavra **function**. Ex. **funcao3 () {date; uptime; }**
+>É possível começar uma função digitando tudo em uma linha ou omitindo a palavra `function`. Ex. `funcao3 () {date; uptime; }`
 
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - **/etc/profile**: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
@@ -228,6 +228,6 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODUwMzAzNzMsLTc2MDQxOTE0MCwtNT
-U5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbMTgzMzk3MjkwMywtNzYwNDE5MTQwLC01NT
+k4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
