@@ -63,17 +63,11 @@ IRQ13 - Coprocessador aritmético
 
 Partições Virtuais: montado dinamicamente conforme a execução do SO
 
-/proc: informações dos processos ativos e recursos de hardware
-
-/sys: informações sobre dispositivos de hardware (sysfs) - similar ao /proc
-
-/dev: referências aos dispositivos do sistema, inclusive de armazenamento (udev)
-
-
-
-* udev: Device Manager
-
-* dbus ou hald: Comunicação entre processos. Informa os processos a situação dos dispositivos de hardware.
+- `/proc`: informações dos processos ativos e recursos de hardware
+- `/sys`: informações sobre dispositivos de hardware (sysfs) - similar ao `/proc`
+- `/dev`: referências aos dispositivos do sistema, inclusive de armazenamento (udev)
+- `udev`: Device Manager
+- `dbus` ou `hald`: Comunicação entre processos. Informa os processos a situação dos dispositivos de hardware.
 
 
 
@@ -234,6 +228,6 @@ Ao iniciar o processo filho bash, podemos especificar diversas opções para def
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
-I3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbLTEwODUwMzAzNzMsLTc2MDQxOTE0MCwtNT
+U5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
 -->
