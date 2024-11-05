@@ -111,8 +111,10 @@ Os principais arquivos de configuração ficam em **/etc/xen**, sendo o principa
 - `xl.cfg`: configuração geral das VMs
 - `/etc/default/xen` e `xendomains`: configurações gerais e configurações gerais do domínios em nível de serviço
 
-####
+### Configuração de uma VM PV
+
+Será criado por meio do Xen Tools, que é um conjunto de scripts para criação de VMs
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMwNzY1Mjc5LDQ4OTc2NzgzOCwxMjkxMT
+eyJoaXN0b3J5IjpbNzYyNzY1Mzc3LDQ4OTc2NzgzOCwxMjkxMT
 c3NzQxXX0=
 -->
