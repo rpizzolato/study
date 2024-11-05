@@ -699,8 +699,13 @@ Vejamos um exemplo que verifica se o diretório `/etc/profile.d` existe:<br>
 	    # executa rotina
 	fi
 
+Abaixo, outro exemplo um pouco mais complexo:
+
+    if [ -z "${debian_chroot:-}"] && [ -r /etc/debian_chroot ]; then
+	    debian_chroot=
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1ODY4NDM2OSwtMTM3MTExODUyMywxND
+eyJoaXN0b3J5IjpbLTc1NDYxNDQ0MywtMTM3MTExODUyMywxND
 A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
 MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
 EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
