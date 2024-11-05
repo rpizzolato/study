@@ -651,16 +651,17 @@ A declaração de variáveis **NÃO** usa cifrão (`$`), já no uso da variável
     VAR1=`cat /etc/passwd|wc -l`
     VAR2=$(date +%H)
     echo ""
-    echo "O arquivo /etc/passwd possui $VAR1 linhas. A hora atual é "
+    echo "O arquivo /etc/passwd possui $VAR1 linhas. A hora atual é $VAR2."
+*Podemos colocar execução de comandos utilizando crase (`) ou com a sitaxe `$()`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NDIzNjkwMCwtMTg5ODYwOTY2NSwxMD
-k4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1
-NTU2MSwtMTAzMjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1Nz
-M4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDks
-LTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMT
-gwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgs
-ODUyMjQ1Nzg1XX0=
+eyJoaXN0b3J5IjpbLTEwNzE1Mzc0NjgsLTE4OTg2MDk2NjUsMT
+A5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUy
+NTU1NjEsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NT
+czOCwtMTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5
+LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2MDI1MiwzMD
+E4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOTAxNjU0MDQ4
+LDg1MjI0NTc4NV19
 -->
