@@ -116,6 +116,10 @@ Barramentos: interface de comunicação física entre os dispositivos e a placa 
 ### 105.1 Personalizar e trabalhar no ambiente shell
 
 Relembrando:
+- `env` ou `printenv`: imprime uma lista de todas as variáveis de ambiente
+
+
+
 - `echo $TESTE`: lê o valor da variável TESTE
 - `TESTE=valor1`: define um valor para a variável TESTE
 - `env | grep TESTE`: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
@@ -383,10 +387,10 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgwMDE5NTYxLDEwODQzMzczOCwxOTAxNj
-U0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0OTI1
-LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LDE2Mj
-U3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMy
-LC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
-I3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbLTE5NjQ3NjQ1NDQsMTA4NDMzNzM4LDE5MD
+E2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5
+MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMT
+YyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0
+MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMj
+AzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
