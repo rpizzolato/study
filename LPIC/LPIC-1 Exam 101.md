@@ -655,14 +655,16 @@ A declaração de variáveis **NÃO** usa cifrão (`$`), já no uso da variável
 
 *Podemos colocar execução de comandos utilizando crase (\`) ou com a sitaxe `$()`
 
-####
+#### Instruções condicionais (if e case)
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjY5MTc3NzQsLTc5MzE3ODA2MiwtMT
-g5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4
-OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOCwtMTkyMzIwND
-Y2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MTMs
-LTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMT
-U5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4
-LDE5MDE2NTQwNDhdfQ==
+eyJoaXN0b3J5IjpbMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xOD
+k4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5
+MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0Nj
+Y3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywt
+MTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNT
+k4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3Mzgs
+MTkwMTY1NDA0OF19
 -->
