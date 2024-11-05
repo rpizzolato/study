@@ -335,9 +335,9 @@ Um valor diferente de  `0`  significa erro:
     $ echo $!
     663
 
->[NOTENote
-
-Lembre-se, o e comercial (`&`) é usado para iniciar processos em segundo plano.
+>[NOTE]
+>
+>Lembre-se, o e comercial (`&`) é usado para iniciar processos em segundo plano.
 
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
@@ -560,11 +560,11 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjE3MjcyMSwxODQ1NzMwNjEzLC0xOD
-Y3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2
-MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOT
-AxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0
-OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LD
-E2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5
-NDMyXX0=
+eyJoaXN0b3J5IjpbLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMT
+g2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4
+NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMT
+kwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcy
+NDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2Ni
+wxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3
+OTQzMl19
 -->
