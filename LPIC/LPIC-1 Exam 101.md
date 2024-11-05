@@ -241,6 +241,37 @@ No entanto, com aspas duplas, a expansão é feita **estaticamente**:
     $ where?
     /home/user2
 
+#### Persistência de aliases: scripts de inicialização
+
+Como no caso das variáveis, para que nossos aliases se tornem persistentes devemos colocá-los em scripts de inicialização que são originados quando o sistema é iniciado. Como já sabemos, um bom arquivo para os usuários colocarem seus aliases pessoais é  `~/.bashrc`. Já deve haver alguns aliases por lá (a maioria deles comentados e prontos para uso, bastando remover o  `#`  inicial):
+
+    $ grep alias .bashrc
+    # enable color support of ls and also add handy aliases
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=
+        #alias vdir='vdir --color=
+        #alias grep='grep --color=
+        #alias fgrep='fgrep --color'
+        #alias egrep='egrep --color=
+    # some more ls aliases
+    #ll='ls -al'
+    #alias la='ls -A'
+    #alias l='ls -CF'
+    # ~/.bash_aliases, instead of adding them here directly.
+    if [ -f ~/.bash_aliases ]; then
+       . ~/.bash_aliases
+
+Como podemos ver nas últimas três linhas, é possível ter nosso próprio arquivo dedicado aos aliases — `~/.bash_aliases` — para o  `.bashrc`  abrir e executar a cada inicialização do sistema. Ao escolher essa opção, criamos e preenchemos esse arquivo:
+
+    ###########
+    # .bash_aliases:
+    # a file to be populated by the user's personal aliases (and sourced by ~/.bashrc).
+    ###########
+    alias git_info='which git;git --version'
+    alias greet='echo Hello world!'
+    alias ll='ls -al'
+    alias where?='echo $PWD
+
 **function**: usado para criar uma rotina de comandos.
 
 Ex. Criando uma função e a chamando no final<br> 
@@ -481,7 +512,7 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTE1OTg2MDksLTE5NTIwNjUwMDMsMT
+eyJoaXN0b3J5IjpbLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMT
 MyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5
 OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNz
 Q4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3Mzcy
