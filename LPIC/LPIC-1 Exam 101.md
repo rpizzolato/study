@@ -199,6 +199,8 @@ Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
 Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
 
+
+
 **function**: usado para criar uma rotina de comandos.
 
 Ex. Criando uma função e a chamando no final<br> 
@@ -439,7 +441,7 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg2MDI1NTMxLC0xMTU5ODYwMjUyLDMwMT
+eyJoaXN0b3J5IjpbMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMT
 gwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgs
 ODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMz
 k4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0
