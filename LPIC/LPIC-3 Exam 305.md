@@ -116,8 +116,10 @@ Os principais arquivos de configuração ficam em **/etc/xen**, sendo o principa
 Será criado por meio do Xen Tools, que é um conjunto de scripts para criação de VMs, no caso com instâncias PV (Paravirtualization)
 
 - `/etc/xen-tools`: dispõe com as principais configurações do xen-tools
-- /usr/share/xen-tools: diretórios que estão os arquivos para realizar as instalações
+- `/usr/share/xen-tools`: diretórios que estão os arquivos para realizar as instalações
+
+- `xen-create-image`: comando para criar (para ver os parâmetros usar `man xen-create-image`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODY5NzM5MjEsNDg5NzY3ODM4LDEyOT
+eyJoaXN0b3J5IjpbLTIwODE4MzA1ODYsNDg5NzY3ODM4LDEyOT
 ExNzc3NDFdfQ==
 -->
