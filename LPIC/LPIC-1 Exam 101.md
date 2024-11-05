@@ -702,14 +702,16 @@ Vejamos um exemplo que verifica se o diretório `/etc/profile.d` existe:<br>
 Abaixo, outro exemplo um pouco mais complexo:
 
     if [ -z "${debian_chroot:-}"] && [ -r /etc/debian_chroot ]; then
-	    debian_chroot=
+	    debian_chroot=$(cat /etc/debian_chroot)
+	fi
+O -z significa se o tamanho (length) da string é zero e o -r quer dizer se o arquivo existe e se es em questão é somente leitura
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NDYxNDQ0MywtMTM3MTExODUyMywxND
-A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
-MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
-EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
-MTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOT
-UyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIx
-MDMsOTM1MTI5OTkzXX0=
+eyJoaXN0b3J5IjpbLTE5OTU4MzUwNzcsLTEzNzExMTg1MjMsMT
+QwODQxNzM2MSwtNzkzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1
+NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NT
+YxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2NjU3Mzgs
+LTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMT
+k1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAy
+MTAzLDkzNTEyOTk5M119
 -->
