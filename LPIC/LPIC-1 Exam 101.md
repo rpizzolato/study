@@ -637,17 +637,20 @@ echo "Esse script recebeu $# parâmetros, que são, $1 e $2"
 É possível, ao usuário digitar, receber um valor de variável durante a execução de um script, usando o read:
 
 ```
-echo "Digite um valor":
+echo -n "Digite um valor: "
 read VAR1
 echo "O valor digitado foi $VAR1"
 ```
+- `echo -n`: não quebra linha
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5ODQ1NTUwMSwxMDk4NTUxNjU4LDEyMj
-g0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5
-NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNz
-Y0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMs
-MTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMj
-k5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0x
-NzQ4NzA5MTc1XX0=
+eyJoaXN0b3J5IjpbLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMj
+I4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIw
+OTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MT
+c2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAz
+LDEzMjcyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MT
+I5OTkzLDEwODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwt
+MTc0ODcwOTE3NV19
 -->
