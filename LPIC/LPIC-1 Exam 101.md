@@ -598,7 +598,7 @@ Eis algumas outras variáveis de prompt:
 
 ### 105.2 Editar e escrever scripts simples
 
-Ao criar um script.sh comum, como por exemplo:
+Ao criar um `script.sh` (script = sequencia de comandos) comum, como por exemplo:
 
     clear
     echo "===== Primeiro Script======"
@@ -615,11 +615,11 @@ Podemos executá-lo usando apenas o comando source ou ponto (.)<br>
 
 Isso inclusive faz com que seja executado no bash atual, sem mudar para um processo filho.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMzUxNzE0MCwtMTkyMzIwNDY2NywxMD
-M3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2
-MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMj
-UyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2
-NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5Mj
-UsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYy
-NTc3Mjg0XX0=
+eyJoaXN0b3J5IjpbLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMT
+AzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xODY3
+NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2MD
+I1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOTAx
+NjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0OT
+I1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LDE2
+MjU3NzI4NF19
 -->
