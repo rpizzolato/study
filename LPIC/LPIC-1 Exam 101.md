@@ -127,12 +127,21 @@ Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá
 
 Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com `./script.sh`)
 
-Para criarmos variáveis imutáveis, basta a deixarmos como readonly (somente leitura).<br>
-Ex. readonly reptile=tortoise<br>
+Para criarmos variáveis imutáveis, basta a deixarmos como **readonly** (somente leitura).<br>
+Ex. `readonly reptile=tortoise`<br>
 Ou transformá-las depois de criá-las:<br>
 
     reptile=tortoise
     readonly reptile
+
+Agora, se tentarmos alterar o valor de  `reptile`, o Bash se recusará:
+
+    $ reptile=lizard
+    -bash: distro: readonly variable
+
+>[!NOTE]
+>
+>Para listar todas as variáveis somente leitura da sessão atual, digite `readonly` ou `readonly -p` no terminal
 
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
@@ -334,9 +343,9 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDM4ODc1MSwtMTc0ODcwOTE3NSwtMz
-EzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0
-MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNj
-YyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQx
-ODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMT
+M3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQw
+NjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2Nj
+I3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4
+OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
