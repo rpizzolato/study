@@ -104,6 +104,10 @@ Crie um **Volume Group (VG)** com o comando `vgcreate xen-vg /dev/sdb` (permitin
 Os principais arquivos de configuração ficam em **/etc/xen**, sendo o principal, `xl.conf`.<br>
 - `xl.conf`: (arquivo de configuração principal do Xen) onde ficam uma série de configurações e parâmetros, como do **vif** (virtual interface) e vários outros parâmetros padrão, como também default bridge, que foi configurado há poucos no tópico anterior ao storage, que foi dado o nome de **xenbr0**;
 - `oxenstored.conf`: referente ao pid do oxenstore que fica rodando, podendo mudar tamanho de recursos, ligações com logs;
+
+>["NOTE]
+>
+>As VMs criadas terão arquivo de configuração dentro de **/etc/xen**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
 -->
