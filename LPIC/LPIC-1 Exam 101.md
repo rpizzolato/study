@@ -270,9 +270,12 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `-bash`  ou  `-su`: Interativo de login
 - `bash`  or  `/bin/bash`: Interativo sem login
 - `<nome_do_script>`: Não-interativo sem login (scripts)
+
+#### Variáveis
+Pode conter letras (a-z, A-Z), números (0-9) e sublinhados (_)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNj
-I1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQz
-MiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5MiwyMD
-MyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbLTEzOTkxOTY5MDcsLTM3ODczNzIxNiwtMT
+Q2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODcz
+MzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLT
+U1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
