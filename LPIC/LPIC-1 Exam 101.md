@@ -127,7 +127,11 @@ Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá
 
 Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com `./script.sh`)
 
-Variáveis imutáveis
+Para criarmos variáveis imutáveis, basta a deixarmos como readonly (somente leitura).<br>
+Ex. readonly reptile=tortoise<br>
+Ou transformá-las depois de criá-las:<br>
+reptile=tortoise
+readonly rep
 
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
@@ -328,7 +332,7 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
     zorinos\
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg5Nzg3NjYsLTE3NDg3MDkxNzUsLT
+eyJoaXN0b3J5IjpbLTEzMTIzNjM3NzMsLTE3NDg3MDkxNzUsLT
 MxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2
 NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LD
 Y2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0
