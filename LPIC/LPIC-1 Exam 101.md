@@ -391,12 +391,12 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
     $ echo $distro
     zorinos\
 
-
+- `env -i bash`: inicia um bash removendo a maioria das variáveis (além de funções e aliases)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM1MTI5OTkzLDEwODQzMzczOCwxOTAxNj
-U0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0OTI1
-LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LDE2Mj
-U3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMy
-LC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
-I3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbLTExNDUyMzY3MTUsOTM1MTI5OTkzLDEwOD
+QzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3
+NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xND
+Y1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMz
+NDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNT
+U5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
 -->
