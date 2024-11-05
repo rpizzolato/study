@@ -620,12 +620,16 @@ Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
 
 Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
+
+#### Parâmetro em shell script
+
+- $0: imprime o nome do arquivo qu
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyODQ1NzQ4MywyMDkwNTg5MDEzLC0xOD
-A1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2
-NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOT
-IwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIs
-MzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMTkwMTY1ND
-A0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0
-MDMzOTg4MDddfQ==
+eyJoaXN0b3J5IjpbMTIwMDg3MDAwLDEyMjg0NTc0ODMsMjA5MD
+U4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOCwtMTkyMzIw
+NDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MT
+MsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0x
+MTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNz
+M4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0z
+MTM3MjQ5MjVdfQ==
 -->
