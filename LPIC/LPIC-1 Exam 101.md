@@ -301,47 +301,41 @@ Como no caso das variáveis e aliases, se quisermos que as funções sejam persi
 
 O  _Bourne Again Shell_  vem com um conjunto de variáveis especiais que são particularmente úteis para funções e scripts. Elas são especiais porque só podem ser referenciadas — e não atribuídas. Eis uma lista das mais relevantes:
 
-`$?`
+- `$?`: a referência desta variável se expande para o resultado do último comando executado. Um valor de  `0`  significa sucesso:
 
-A referência desta variável se expande para o resultado do último comando executado. Um valor de  `0`  significa sucesso:
-
-$ **ps aux | grep bash**
-user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
-user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
-$ **echo $?**
-0
+    $ ps aux | grep bash
+    user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
+    user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
+    $ echo $?
+    0
 
 Um valor diferente de  `0`  significa erro:
 
-user1@debian:~$ **ps aux |rep bash**
--bash: rep: command not found
-user1@debian:~$ **echo $?**
-127
+    user1@debian:~$ ps aux |rep bash
+    -bash: rep: command not found
+    user1@debian:~$ echo $?
+    127
 
-`$$`
+- `$$`: expande-se para o PID do shell (ID do processo):
 
-Expande-se para o PID do shell (ID do processo):
+    $ ps aux | grep bash
+    user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
+    user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
+    $ echo $$
+    420
 
-$ **ps aux | grep bash**
-user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
-user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
-$ **echo $$**
-420
+- `$!`: expande-se para o PID do último trabalho em segundo plano:
 
-`$!`
+    $ ps aux | grep bash &
+    [1] 663
+    $ user2      420  0.0  0.4  21156  5012 pts/0    Ss+  17:10   0:00 -bash
+    user2      663  0.0  0.0  12784   972 pts/0    S    18:08   0:00 grep bash
+    ^C
+    [1]+  Done                   ps aux | grep bash
+    $ echo $!
+    663
 
-Expande-se para o PID do último trabalho em segundo plano:
-
-$ **ps aux | grep bash &**
-[1] 663
-$ user2      420  0.0  0.4  21156  5012 pts/0    Ss+  17:10   0:00 -bash
-user2      663  0.0  0.0  12784   972 pts/0    S    18:08   0:00 grep bash
-^C
-[1]+  Done                   ps aux | grep bash
-$ **echo $!**
-663
-
-Note
+>[NOTENote
 
 Lembre-se, o e comercial (`&`) é usado para iniciar processos em segundo plano.
 
@@ -566,7 +560,7 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxOTYzNDQxMSwxODQ1NzMwNjEzLC0xOD
+eyJoaXN0b3J5IjpbMTI4NjE3MjcyMSwxODQ1NzMwNjEzLC0xOD
 Y3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2
 MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOT
 AxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0
