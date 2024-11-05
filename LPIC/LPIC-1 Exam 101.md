@@ -193,13 +193,13 @@ Agora podemos abrir uma nova instância do Bash e referenciar com sucesso a nova
 
 - `export` ou `export -p`: lista todas as variáveis de ambiente existentes. (`declare -x` é equivalente a `export`)
 
-Comando **alias**: cria alias para os comandos (sinônimos de comandos)
+Comando `alias`: cria alias para os comandos (sinônimos de comandos)
 
 `alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
 
-Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
+Se digitar somente `alias`, é mostrado os alias cadastrados no bash atual.
 
-
+- `unalias alias_criado`: remove o alias criado
 
 **function**: usado para criar uma rotina de comandos.
 
@@ -441,11 +441,11 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMT
-gwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgs
-ODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMz
-k4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0
-LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0Nj
-MwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4
-OF19
+eyJoaXN0b3J5IjpbLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMT
+U5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4
+LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMT
+M3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQw
+NjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2Nj
+I3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4
+OTJdfQ==
 -->
