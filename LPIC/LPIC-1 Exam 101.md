@@ -297,6 +297,54 @@ Como no caso das variáveis e aliases, se quisermos que as funções sejam persi
 >
 >Depois de adicionar aliases ou funções para qualquer arquivo de script de inicialização, é preciso executar  `.`  ou  `source`  nesses arquivos para que as alterações tenham efeito (caso você não queira fazer logout e login novamente ou reinicializar o sistema).
 
+#### Variáveis integradas especiais do Bash
+
+O  _Bourne Again Shell_  vem com um conjunto de variáveis especiais que são particularmente úteis para funções e scripts. Elas são especiais porque só podem ser referenciadas — e não atribuídas. Eis uma lista das mais relevantes:
+
+`$?`
+
+A referência desta variável se expande para o resultado do último comando executado. Um valor de  `0`  significa sucesso:
+
+$ **ps aux | grep bash**
+user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
+user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
+$ **echo $?**
+0
+
+Um valor diferente de  `0`  significa erro:
+
+user1@debian:~$ **ps aux |rep bash**
+-bash: rep: command not found
+user1@debian:~$ **echo $?**
+127
+
+`$$`
+
+Expande-se para o PID do shell (ID do processo):
+
+$ **ps aux | grep bash**
+user2      420  0.0  0.4  21156  5012 pts/0    Ss   17:10   0:00 -bash
+user2      640  0.0  0.0  12784   936 pts/0    S+   18:04   0:00 grep bash
+$ **echo $$**
+420
+
+`$!`
+
+Expande-se para o PID do último trabalho em segundo plano:
+
+$ **ps aux | grep bash &**
+[1] 663
+$ user2      420  0.0  0.4  21156  5012 pts/0    Ss+  17:10   0:00 -bash
+user2      663  0.0  0.0  12784   972 pts/0    S    18:08   0:00 grep bash
+^C
+[1]+  Done                   ps aux | grep bash
+$ **echo $!**
+663
+
+Note
+
+Lembre-se, o e comercial (`&`) é usado para iniciar processos em segundo plano.
+
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
 - `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
@@ -518,11 +566,11 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMT
-k1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAy
-MTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMTkwMTY1NDA0OCw4NT
-IyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0MDMzOTg4
-MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLT
-E5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5
-NzcyXX0=
+eyJoaXN0b3J5IjpbLTcxOTYzNDQxMSwxODQ1NzMwNjEzLC0xOD
+Y3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2
+MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOT
+AxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0
+OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LD
+E2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5
+NDMyXX0=
 -->
