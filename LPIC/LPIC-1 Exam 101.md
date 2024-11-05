@@ -275,11 +275,11 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 
 Pode conter letras (`a-z, A-Z`), números (`0-9`) e sublinhados (`_`). E não deve começar com um número para não confundir o Bash. Não deve conter espaços (nem mesmo entre aspas), por convenção, os sublinhados são usados no lugar dos espaços.
 
-No que diz respeito à referência ou valor das variáveis, também é importante considerar uma série de regras. As variáveis podem conter quaisquer caracteres alfanuméricos (`a-z`,`A-Z`,`0-9`), além da maioria dos outros caracteres (`?`,`!`,`*`,`.`,`/`, etc.).
+No que diz respeito à referência ou valor das variáveis, também é importante considerar uma série de regras. As variáveis podem conter quaisquer caracteres alfanuméricos (`a-z`,`A-Z`,`0-9`), além da maioria dos outros caracteres (`?`,`!`,`*`,`.`,`/`, etc.). Os valores das variáveis devem ser postos entre aspas se contiverem espaços simples.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTI5Mjk3NCw0MDMzOTg4MDcsLTM3OD
-czNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2
-NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03Nj
-A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
-Nl19
+eyJoaXN0b3J5IjpbLTExMzUyOTQ3OTIsNDAzMzk4ODA3LC0zNz
+g3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOTY5MTA3
+NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNz
+YwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEw
+NzZdfQ==
 -->
