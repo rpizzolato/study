@@ -301,11 +301,18 @@ No entanto, aspas simples e duplas nem sempre são intercambiáveis. Dependendo 
     $ echo $animal
     My uromastyx
 
+Por outro lado, ao referenciar uma variável cujo valor inclui alguns espaços iniciais (ou extras) — às vezes combinados com asteriscos — é obrigatório usar aspas duplas após o comando  `echo`  para evitar  _divisão de campos_  e  _expansão de nome de caminho_:
+
+    $ lizard="   genus   |   uromastyx"
+    $ echo $lizard
+    genus | uromastyx
+    $ echo "$lizard"
+       genus   |   uromastyx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0MDM3ODA5LDQwMzM5ODgwNywtMzc4Nz
-M3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1
-NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
-QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
-XX0=
+eyJoaXN0b3J5IjpbLTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3OD
+czNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2
+NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03Nj
+A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
+Nl19
 -->
