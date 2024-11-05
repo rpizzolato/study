@@ -181,7 +181,7 @@ Agora podemos abrir uma nova instância do Bash e referenciar com sucesso a nova
 >
 >Com `export -n <VARIABLE-NAME>`, a variável será novamente transformada em variável local do shell.
 
-
+- `export` ou `export -p`: lista todas as variáveis de ambiente existentes. (`declare -x` é equivalente a `export`)
 
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
@@ -383,10 +383,10 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDYwMjA4ODIsMTA4NDMzNzM4LDE5MD
-E2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5
-MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMT
-YyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0
-MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMj
-AzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbNzgwMDE5NTYxLDEwODQzMzczOCwxOTAxNj
+U0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0OTI1
+LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LDE2Mj
+U3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMy
+LC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMz
+I3MDYzODgsNjc0NTIxMDc2XX0=
 -->
