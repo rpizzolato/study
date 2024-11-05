@@ -125,11 +125,15 @@ Relembrando:
 >
 >Para remover variáveis definidas (locais ou globais), usamos o comando  `unset`:
 
-$ echo $reptile
-tortoise
-$ unset reptile
-$ echo $reptile
-$
+    $ echo $reptile
+    tortoise
+    $ unset reptile
+    $ echo $reptile
+    $
+
+>[!NOTE]
+>
+>`unset` deve ser seguido somente pelo nome da variável (não precedido pelo símbolo `$`)
 
 Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash (processo filho do shell atual), logo essa variável teria que estar exportada.
 
@@ -353,9 +357,9 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgzMjU3NDAyLDg1MjI0NTc4NSwtMTc0OD
-cwOTE3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2
-LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyND
-g4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0
-MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3ND
+g3MDkxNzUsLTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIx
+NiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMj
+Q4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkx
+NDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
