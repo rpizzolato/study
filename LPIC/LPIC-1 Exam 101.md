@@ -675,6 +675,7 @@ Vejamos outro exemplo
 	    PS1='# '
 	else
 		PS1='$ '
+	fi
 
 Nesse caso verificar, por meio do comando `id -u`, se o retorno é igual a 0 (zero), caso seja, retorna `#`, senão `$`. No caso testa se o usuário é root. Lembrando que id 0 é do root. Lembrando também que podemos executar comandos com a crase e por meio do cifrão abrindo e fechando parênteses `$()`
 
@@ -687,14 +688,16 @@ O comando test pode ser executado no terminal diretamente. Vejamos alguns exempl
 
 Outro exemplo interessante:<br>
 
-    if [ "$BASH" ] && [ "$BASH" != "/b" ]
-
+    if [ "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
+	    #executa rotina
+	fi
+No caso acima, verificar se a variável $BASH existe **e** se a variável $BASH é diferente de
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk0MzgxNTI1LC0xMzcxMTE4NTIzLDE0MD
-g0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUx
-NjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MS
-wtMTAzMjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0x
-NDk2MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NT
-IwNjUwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEw
-Myw5MzUxMjk5OTNdfQ==
+eyJoaXN0b3J5IjpbMTMwNDg0ODg0NywtMTM3MTExODUyMywxND
+A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
+MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
+EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
+MTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOT
+UyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIx
+MDMsOTM1MTI5OTkzXX0=
 -->
