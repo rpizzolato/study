@@ -691,9 +691,11 @@ Outro exemplo interessante:<br>
     if [ "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
 	    #executa rotina
 	fi
-No caso acima, verificar se a variável $BASH existe **e** se a variável $BASH é diferente de
+No caso acima, verifica se a variável `$BASH` está declarada **e** se a variável `$BASH` é diferente de `/bin/sh`, então vai para a rotina.
+
+Vejamos um exemplo que ver
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNDg0ODg0NywtMTM3MTExODUyMywxND
+eyJoaXN0b3J5IjpbMTY2NDAzOTkwMywtMTM3MTExODUyMywxND
 A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
 MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
 EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
