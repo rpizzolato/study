@@ -436,14 +436,14 @@ Eis algumas outras variáveis de prompt:
     $ echo $USER
     carol
 
-- `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a segunda tela do sistema
+- `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODU4MjM5NSwtMTE1OTg2MDI1MiwzMD
-E4MDIxMDMsOTM1MTI5OTkzLDEwODQzMzczOCwxOTAxNjU0MDQ4
-LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwtMzEzNzI0OTI1LDQwMz
-M5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4
-NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02ND
-YzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYz
-ODhdfQ==
+eyJoaXN0b3J5IjpbNzg2MDI1NTMxLC0xMTU5ODYwMjUyLDMwMT
+gwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgs
+ODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMz
+k4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0
+LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0Nj
+MwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4
+OF19
 -->
