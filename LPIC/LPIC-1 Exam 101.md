@@ -291,9 +291,19 @@ Mas quando usamos as aspas, a coisa funciona:
     $ echo $distro
     >zorin
 
+No entanto, aspas simples e duplas nem sempre são intercambiáveis. Dependendo do que estamos fazendo com uma variável (atribuindo ou referenciando), o uso de uma ou de outra tem implicações e produzirá resultados diferentes. No contexto da atribuição de variáveis, as **aspas simples** consideram  _literalmente_  todos os caracteres do valor da variável, enquanto as **aspas duplas** permitem a substituição de variáveis:
+
+    $ lizard=uromastyx
+    $ animal='My $lizard'
+    $ echo $animal
+    My $lizard
+    $ animal="My $lizard"
+    $ echo $animal
+    My uromastyx
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMTYyMTYxLDQwMzM5ODgwNywtMzc4Nz
+eyJoaXN0b3J5IjpbNTI0MDM3ODA5LDQwMzM5ODgwNywtMzc4Nz
 M3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1
 NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
 QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
