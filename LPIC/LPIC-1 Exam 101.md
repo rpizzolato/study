@@ -276,10 +276,26 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 Pode conter letras (`a-z, A-Z`), números (`0-9`) e sublinhados (`_`). E não deve começar com um número para não confundir o Bash. Não deve conter espaços (nem mesmo entre aspas), por convenção, os sublinhados são usados no lugar dos espaços.
 
 No que diz respeito à referência ou valor das variáveis, também é importante considerar uma série de regras. As variáveis podem conter quaisquer caracteres alfanuméricos (`a-z`,`A-Z`,`0-9`), além da maioria dos outros caracteres (`?`,`!`,`*`,`.`,`/`, etc.). Os valores das variáveis devem ser postos entre aspas se contiverem espaços simples.
+
+Os valores das variáveis também devem ser postos entre aspas se contiverem caracteres como os usados para redirecionamento (`<`,`>`) ou o símbolo de barra vertical (`|`). A única coisa que o comando a seguir faz é criar um arquivo vazio chamado  `zorin`:
+
+    $ distro=>zorin
+    $ echo $distro
+    
+    $ ls zorin
+    zorin
+
+Mas quando usamos as aspas, a coisa funciona:
+
+    $ distro=">zorin"
+    $ echo $distro
+    >zorin
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzUyOTQ3OTIsNDAzMzk4ODA3LC0zNz
-g3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOTY5MTA3
-NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNz
-YwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEw
-NzZdfQ==
+eyJoaXN0b3J5IjpbMTUwMTYyMTYxLDQwMzM5ODgwNywtMzc4Nz
+M3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1
+NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
+QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
+XX0=
 -->
