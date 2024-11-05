@@ -623,13 +623,15 @@ Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso
 
 #### Parâmetro em shell script
 
-- $0: imprime o nome do arquivo qu
+- $0: imprime o nome do arquivo que está sendo executado
+- $#: imprime a quantidade de parâmetros utilizados
+- $1, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDg3MDAwLDEyMjg0NTc0ODMsMjA5MD
-U4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOCwtMTkyMzIw
-NDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MT
-MsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0x
-MTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNz
-M4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0z
-MTM3MjQ5MjVdfQ==
+eyJoaXN0b3J5IjpbLTEyMzU3MDgxOTEsMTIyODQ1NzQ4MywyMD
+kwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIz
+MjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMD
+YxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3Mjcs
+LTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0Mz
+M3MzgsMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUs
+LTMxMzcyNDkyNV19
 -->
