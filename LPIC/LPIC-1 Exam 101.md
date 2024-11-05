@@ -667,9 +667,9 @@ ou
     if test -f /etc/bash.bashrc ; then
 	    .	/etc/bash.bashrc
 	fi
-Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no if execute, ela deve ser verdadeira, no caso o que estiver entre os colchetes, ou após a instrução `test`
+Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe (`-f`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NDk2MTUwLDE0MDg0MTczNjEsLTc5Mz
+eyJoaXN0b3J5IjpbMTczMzU0MDkwLDE0MDg0MTczNjEsLTc5Mz
 E3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0NTc0
 ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOC
 wtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4
