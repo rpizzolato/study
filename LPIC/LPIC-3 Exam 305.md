@@ -113,8 +113,10 @@ Os principais arquivos de configuração ficam em **/etc/xen**, sendo o principa
 
 ### Configuração de uma VM PV
 
-Será criado por meio do Xen Tools, que é um conjunto de scripts para criação de VMs
+Será criado por meio do Xen Tools, que é um conjunto de scripts para criação de VMs, no caso com instâncias PV (Paravirtualization)
+
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyNzY1Mzc3LDQ4OTc2NzgzOCwxMjkxMT
-c3NzQxXX0=
+eyJoaXN0b3J5IjpbLTEzMDI4MTc4ODQsNDg5NzY3ODM4LDEyOT
+ExNzc3NDFdfQ==
 -->
