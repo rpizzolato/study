@@ -632,9 +632,18 @@ echo ""
 echo "Esse script recebeu $# parâmetros, que são, $1 e $2"
 ```
 
+#### Receber uma variável com read
+
+É possível, ao usuário digitar, receber um valor de variável durante a execução de um script, usando o read:
+
+```
+echo "Digite um valor":
+read VAR1
+echo "O valor digitado foi $VAR1"
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3OTc3NDIzMiwxMDk4NTUxNjU4LDEyMj
+eyJoaXN0b3J5IjpbLTc5ODQ1NTUwMSwxMDk4NTUxNjU4LDEyMj
 g0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5
 NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNz
 Y0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMs
