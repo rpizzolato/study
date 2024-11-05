@@ -181,6 +181,8 @@ Agora podemos abrir uma nova instância do Bash e referenciar com sucesso a nova
 >
 >Com `export -n <VARIABLE-NAME>`, a variável será novamente transformada em variável local do shell.
 
+
+
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
 `alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
@@ -381,10 +383,10 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMj
-Q1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3
-LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOT
-Y5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3
-MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2Nz
-Q1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbLTEwNDYwMjA4ODIsMTA4NDMzNzM4LDE5MD
+E2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5
+MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMT
+YyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0
+MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMj
+AzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
 -->
