@@ -683,13 +683,13 @@ O comando test pode ser executado no terminal diretamente. Vejamos alguns exempl
 - `test LPI1 = LPI1`: precisamo ver no **return code**. Basta executar `echo $?` (**0** é igual sucesso, **1** ou outro número informa que não é verdadeiro)
 - `test LPI1 = LPI2`: return code será **1**
 - `test -f /etc/profile`: testa se o arquivo `/etc/profile` existe. (**0** = existe, **1** = não existe)
-- `test 10 -gt 20`: se 10 é maior que (greater than) 20 (retorna 1, pois 10 não é maior que 20)
+- `test 10 -gt 20`: se 10 é maior que (**greater than**) 20 (retorna **1**, pois 10 não é maior que 20)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDUwMjA4NSwxNDA4NDE3MzYxLC03OT
-MxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3
-NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0Mj
-gsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwx
-ODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMj
-cyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkz
-LDEwODQzMzczOF19
+eyJoaXN0b3J5IjpbLTEzNzExMTg1MjMsMTQwODQxNzM2MSwtNz
+kzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1
+NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0ND
+I4LC0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQs
+MTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMz
+I3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5
+MywxMDg0MzM3MzhdfQ==
 -->
