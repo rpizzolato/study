@@ -619,9 +619,9 @@ Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro
 
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
 
-
+Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTUzOTEyMSwyMDkwNTg5MDEzLC0xOD
+eyJoaXN0b3J5IjpbMTIyODQ1NzQ4MywyMDkwNTg5MDEzLC0xOD
 A1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2
 NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOT
 IwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIs
