@@ -408,12 +408,53 @@ Restam apenas algumas:
     SHLVL=1
     _=/usr/bin/printenv
 
+`PS1`
 
+Essa variável armazena o valor do prompt do Bash. No trecho de código a seguir (igualmente de  `/etc/profile`), a declaração  `if`  testa a identidade do usuário e lhe atribui um prompt bastante personalizado (  `#`  para  `root`  ou  `$`  para usuários regulares):
+
+    if [ "`id -u`" -eq 0 ]; then
+      PS1='# '
+    else
+      PS1='$ '
+    fi
+
+>[!NOTE]
+>
+>O  `id`  de  `root`  é  `0`. Entre como  `root`  e teste você mesmo com  `id -u`.
+
+Eis algumas outras variáveis de prompt:
+
+`PS2`
+
+Normalmente definido como  `>`  e usado como prompt de continuação para comandos longos de muitas linhas.
+
+`PS3`
+
+Usado como prompt para o comando  `select`.
+
+`PS4`
+
+Normalmente definido como  `+`  e usado para depuração.
+
+`SHELL`
+
+Esta variável armazena o caminho absoluto do shell atual:
+
+$ **echo $SHELL**
+/bin/bash
+
+`USER`
+
+Armazena o nome do usuário atual:
+
+$ **echo $USER**
+carol
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0Mz
-M3MzgsMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUs
-LTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NT
-Y2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4
-LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OT
-g0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbMTQ1NzMwNDk2NywzMDE4MDIxMDMsOTM1MT
+I5OTkzLDEwODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwt
+MTc0ODcwOTE3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4Nz
+M3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1
+NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
+QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
+XX0=
 -->
