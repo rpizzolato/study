@@ -667,13 +667,21 @@ ou
     if test -f /etc/bash.bashrc ; then
 	    .	/etc/bash.bashrc
 	fi
-Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe (`-f`)
+Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe (`-f`).
+
+Vejamos outro exemplo
+
+    if [ "`id -u`" -eq 0]; then
+	    PS1='# '
+	else
+		PS1='$ '
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMzU0MDkwLDE0MDg0MTczNjEsLTc5Mz
-E3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0NTc0
-ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOC
-wtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4
-NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMTMyNz
-I4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMs
-MTA4NDMzNzM4XX0=
+eyJoaXN0b3J5IjpbLTEyNTgwMDgwMDcsMTQwODQxNzM2MSwtNz
+kzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1
+NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0ND
+I4LC0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQs
+MTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMz
+I3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5
+MywxMDg0MzM3MzhdfQ==
 -->
