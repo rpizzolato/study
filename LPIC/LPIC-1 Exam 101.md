@@ -370,6 +370,18 @@ Tudo funcionou como esperado.
     $ great_editor emacs
     is a great text editor emacs
 
+#### Outras variáveis integradas especiais do Bash incluem:
+
+- `$#`: expande-se para o número de argumentos passados para o comando.
+
+- `$@`,  `$*`
+
+Expandem-se para os argumentos passados para o comando.
+
+`$_`
+
+Expande-se para o último parâmetro ou o nome do script (dentre outras coisas; consulte  `man bash`  para saber mais!):
+
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
 - `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
@@ -592,7 +604,7 @@ Eis algumas outras variáveis de prompt:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0Mjc4MTIyNCwtMTQ5NjI5MTc2NCwxOD
+eyJoaXN0b3J5IjpbMTc5NjI5ODY0MSwtMTQ5NjI5MTc2NCwxOD
 Q1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcy
 ODcyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLD
 EwODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcw
