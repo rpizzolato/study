@@ -616,8 +616,10 @@ Podemos executá-lo usando apenas o comando source ou ponto (.)<br>
 Isso inclusive faz com que seja executado no bash atual, sem mudar para um processo filho.
 
 Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar `chmod u+x script`, para dar permissão de execução para o arquivo (nesse caso, permissão para o usuário dono do arquivo).
+
+- `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjM4ODkxMywtMTgwNTI1NTU2MSwtMT
+eyJoaXN0b3J5IjpbMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMT
 AzMjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2
 MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNj
 UwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5
