@@ -423,38 +423,25 @@ Essa variável armazena o valor do prompt do Bash. No trecho de código a seguir
 >O  `id`  de  `root`  é  `0`. Entre como  `root`  e teste você mesmo com  `id -u`.
 
 Eis algumas outras variáveis de prompt:
+- `PS2`: normalmente definido como  `>`  e usado como prompt de continuação para comandos longos de muitas linhas.
+- `PS3`: usado como prompt para o comando  `select`.
+- `PS4`: normalmente definido como  `+`  e usado para depuração.
+- `SHELL`: esta variável armazena o caminho absoluto do shell atual:
 
-`PS2`
+    $ echo $SHELL
+    /bin/bash
 
-Normalmente definido como  `>`  e usado como prompt de continuação para comandos longos de muitas linhas.
+- `USER`: armazena o nome do usuário atual:
 
-`PS3`
+    $ echo $USER
+    carol
 
-Usado como prompt para o comando  `select`.
-
-`PS4`
-
-Normalmente definido como  `+`  e usado para depuração.
-
-`SHELL`
-
-Esta variável armazena o caminho absoluto do shell atual:
-
-$ **echo $SHELL**
-/bin/bash
-
-`USER`
-
-Armazena o nome do usuário atual:
-
-$ **echo $USER**
-carol
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzMwNDk2NywzMDE4MDIxMDMsOTM1MT
-I5OTkzLDEwODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwt
-MTc0ODcwOTE3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4Nz
-M3MjE2LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1
-NCwyNDg4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MD
-QxOTE0MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2
-XX0=
+eyJoaXN0b3J5IjpbLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNT
+EyOTk5MywxMDg0MzM3MzgsMTkwMTY1NDA0OCw4NTIyNDU3ODUs
+LTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3OD
+czNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2
+NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03Nj
+A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
+Nl19
 -->
