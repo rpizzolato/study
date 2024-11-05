@@ -615,13 +615,13 @@ Podemos executá-lo usando apenas o comando source ou ponto (.)<br>
 
 Isso inclusive faz com que seja executado no bash atual, sem mudar para um processo filho.
 
-Se tentar executar usando ./script.sh ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar chmod u+x script, para dar permissão de execução para o arquivo (nesse caso, permissão e usuário)
+Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar `chmod u+x script`, para dar permissão de execução para o arquivo (nesse caso, permissão para o usuário dono do arquivo)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Mjc2ODMwNywtMTAzMjA5NDQyOCwtMT
-kyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3
-MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4Nz
-I3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4
-NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MT
-c1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0
-NjU2NjQwNjZdfQ==
+eyJoaXN0b3J5IjpbLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLT
+E5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1
+NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyOD
+cyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEw
+ODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOT
+E3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0x
+NDY1NjY0MDY2XX0=
 -->
