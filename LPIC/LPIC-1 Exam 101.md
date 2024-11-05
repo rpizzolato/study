@@ -157,6 +157,30 @@ Agora, se tentarmos alterar o valor de  `reptile`, o Bash se recusará:
 >
 >Para listar todas as variáveis somente leitura da sessão atual, digite `readonly` ou `readonly -p` no terminal
 
+Para que uma variável local do shell se torne uma variável de ambiente, usamos o comando  `export`:
+
+    $ export reptile
+
+Com  `export reptile`, transformamos nossa variável local em uma variável de ambiente para que os shells filhos possam reconhecê-la e usá-la:
+
+    $ bash
+    $ echo $reptile
+    tortoise
+
+Da mesma maneira,  `export`  pode ser usado para definir e exportar uma variável de uma só vez:
+
+    $ export amphibian=frog
+
+Agora podemos abrir uma nova instância do Bash e referenciar com sucesso a nova variável:
+
+    $ bash
+    $ echo $amphibian
+    frog
+
+>[!NOTE]
+>
+>
+
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
 `alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
@@ -357,9 +381,10 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3ND
-g3MDkxNzUsLTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIx
-NiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMj
-Q4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkx
-NDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbOTIxNDcwMzg3LDE5MDE2NTQwNDgsODUyMj
+Q1Nzg1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3
+LC0zNzg3MzcyMTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOT
+Y5MTA3NjU0LDI0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3
+MiwtNzYwNDE5MTQwLC01NTk4NDE4OTIsMjAzMjcwNjM4OCw2Nz
+Q1MjEwNzZdfQ==
 -->
