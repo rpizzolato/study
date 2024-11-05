@@ -201,6 +201,46 @@ Se digitar somente `alias`, é mostrado os alias cadastrados no bash atual.
 
 - `unalias alias_criado`: remove o alias criado
 
+Podemos escapar um alias com  `\`:
+
+    $ alias where?='echo $PWD'
+    $ where?
+    /home/user2
+    $ \where?
+    -bash: where?: command not found
+
+O escape de um alias é útil quando um alias tem o mesmo nome de um comando regular. Nesse caso, o alias tem precedência sobre o comando original, que, no entanto, ainda pode ser acessado escapando-se o alias.
+
+Da mesma forma, podemos colocar um alias dentro de outro alias:
+
+    $ where?
+    /home/user2
+    $ alias my_home=where?
+    $ my_home
+    /home/user2
+
+Além disso, também é possível colocar uma função dentro de um alias, como será demonstrado mais adiante.
+
+#### Expansão e avaliação de aspas em aliases
+
+Ao se usar aspas com variáveis de ambiente, as aspas simples tornam a **expansão dinâmica**:
+
+    $ alias where?='echo $PWD'
+    $ where?
+    /home/user2
+    $ cd Music
+    $ where?
+    /home/user2/Music
+
+No entanto, com aspas duplas, a expansão é feita **estaticamente**:
+
+    $ alias where?="echo $PWD"
+    $ where?
+    /home/user2
+    $ cd Music
+    $ where?
+    /home/user2
+
 **function**: usado para criar uma rotina de comandos.
 
 Ex. Criando uma função e a chamando no final<br> 
@@ -441,11 +481,11 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMT
-U5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4
-LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMT
-M3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQw
-NjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2Nj
-I3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4
-OTJdfQ==
+eyJoaXN0b3J5IjpbLTE5MTE1OTg2MDksLTE5NTIwNjUwMDMsMT
+MyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5
+OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNz
+Q4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3Mzcy
+MTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LD
+I0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5
+MTQwXX0=
 -->
