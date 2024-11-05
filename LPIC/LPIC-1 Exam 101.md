@@ -130,8 +130,9 @@ Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localment
 Para criarmos variáveis imutáveis, basta a deixarmos como readonly (somente leitura).<br>
 Ex. readonly reptile=tortoise<br>
 Ou transformá-las depois de criá-las:<br>
-reptile=tortoise
-readonly rep
+
+    reptile=tortoise
+    readonly reptile
 
 Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
@@ -331,10 +332,11 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
     $ echo $distro
     zorinos\
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTIzNjM3NzMsLTE3NDg3MDkxNzUsLT
-MxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2
-NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LD
-Y2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0
-MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbLTcwNDM4ODc1MSwtMTc0ODcwOTE3NSwtMz
+EzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xNDY1NjY0
+MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMzNDgsNj
+YyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNTU5ODQx
+ODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
 -->
