@@ -678,13 +678,15 @@ Vejamos outro exemplo
 
 Nesse caso verificar, por meio do comando `id -u`, se o retorno é igual a 0 (zero), caso seja, retorna `#`, senão `$`. No caso testa se o usuário é root. Lembrando que id 0 é do root. Lembrando também que podemos executar comandos com a crase e por meio do cifrão abrindo e fechando parênteses `$()`
 
-O 
+O comando test pode ser executado no terminal diretamente. Vejamos alguns exemplos:
+
+- `test LPI1 = LPI1`: precisamo ver no return code. Basta executar echo $? (0 é igual sucesso, 1 ou outro número informa que não é verdadeiro)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzU0MjMzNDEsMTQwODQxNzM2MSwtNz
-kzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1
-NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0ND
-I4LC0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQs
-MTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMz
-I3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5
-MywxMDg0MzM3MzhdfQ==
+eyJoaXN0b3J5IjpbLTgyODAxNjQsMTQwODQxNzM2MSwtNzkzMT
+c4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4
+MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC
+0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0
+NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mj
+g3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5Mywx
+MDg0MzM3MzhdfQ==
 -->
