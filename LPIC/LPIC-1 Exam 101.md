@@ -291,6 +291,12 @@ Para visualizar a função é só digitar `set`
 >
 >É possível começar uma função digitando tudo em uma linha ou omitindo a palavra `function`. Ex. `funcao3 () {date; uptime; }`
 
+Como no caso das variáveis e aliases, se quisermos que as funções sejam persistentes durante as reinicializações do sistema, temos de colocá-las em scripts de inicialização do shell, como  `/etc/bash.bashrc`  (global) ou  `~/.bashrc`  (local).
+
+>[!WARNING]
+>
+>Depois de adicionar aliases ou funções para qualquer arquivo de script de inicialização, é preciso executar  `.`  ou  `source`  nesses arquivos para que as alterações tenham efeito (caso você não queira fazer logout e login novamente ou reinicializar o sistema).
+
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
 - `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
@@ -512,11 +518,11 @@ Eis algumas outras variáveis de prompt:
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njc2MzkyMDksLTE5NTIwNjUwMDMsMT
-MyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5MzUxMjk5
-OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nzg1LC0xNz
-Q4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3Mzcy
-MTYsLTE0NjU2NjQwNjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LD
-I0ODg3MzM0OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5
-MTQwXX0=
+eyJoaXN0b3J5IjpbMTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMT
+k1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAy
+MTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMTkwMTY1NDA0OCw4NT
+IyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0MDMzOTg4
+MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLT
+E5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5
+NzcyXX0=
 -->
