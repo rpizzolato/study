@@ -618,12 +618,14 @@ Isso inclusive faz com que seja executado no bash atual, sem mudar para um proce
 Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar `chmod u+x script`, para dar permissão de execução para o arquivo (nesse caso, permissão para o usuário dono do arquivo).
 
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMT
-AzMjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2
-MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNj
-UwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMjUyLDMwMTgwMjEwMyw5
-MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2NTQwNDgsODUyMjQ1Nz
-g1LC0xNzQ4NzA5MTc1LC0zMTM3MjQ5MjUsNDAzMzk4ODA3LC0z
-Nzg3MzcyMTZdfQ==
+eyJoaXN0b3J5IjpbMTE5MTUzOTEyMSwyMDkwNTg5MDEzLC0xOD
+A1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2
+NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOT
+IwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4NjAyNTIs
+MzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMTkwMTY1ND
+A0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0
+MDMzOTg4MDddfQ==
 -->
