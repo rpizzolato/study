@@ -626,17 +626,18 @@ Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso
 - `$0`: imprime o nome do arquivo que está sendo executado
 - `$#`: imprime a quantidade de parâmetros utilizados
 - `$1`, `$2`, etc: imprime os parâmetros sequencialmente conforme entrada
-
-    echo "O meu script se chama $0"
-    echo ""
-    echo "Esse script recebeu $# parâmetros, que são, $1 e $2"
+```
+echo "O meu script se chama $0"
+echo ""
+echo "Esse script recebeu $# parâmetros, que são, $1 e $2"
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTc3MDAwMzYsMTIyODQ1NzQ4MywyMD
-kwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIz
-MjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMD
-YxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3Mjcs
-LTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0Mz
-M3MzgsMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUs
-LTMxMzcyNDkyNV19
+eyJoaXN0b3J5IjpbMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOT
+A1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLTE5MjMy
+MDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1NzMwNj
+EzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywt
+MTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLDEwODQzMz
+czOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3NSwt
+MzEzNzI0OTI1XX0=
 -->
