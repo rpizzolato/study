@@ -339,6 +339,37 @@ Um valor diferente de  `0`  significa erro:
 >
 >Lembre-se, o e comercial (`&`) é usado para iniciar processos em segundo plano.
 
+#### Parâmetros posicionais  `$0`  a  `$9`
+
+Expandem-se para os parâmetros ou argumentos que estão sendo passados para a função (alias ou script) — `$0`  se expande para o nome do script ou shell.
+
+Vamos criar uma função para demonstrar os parâmetros posicionais — note  `PS2`  (`>`) indicando novas linhas após as quebras de linha:
+
+    $ special_vars() {
+    > echo $0
+    > echo $1
+    > echo $2
+    > echo $3
+    }
+
+Agora, vamos invocar a função (`special_vars`) passando três parâmetros para ela (`debian`,  `ubuntu`,  `zorin`):
+
+    $ special_vars debian ubuntu zorin
+    -bash
+    debian
+    ubuntu
+    zorin
+
+Tudo funcionou como esperado.
+
+>[!WARNING]
+>
+>Embora seja tecnicamente possível passar parâmetros posicionais para aliases, não é lá muito prático, já que — com aliases — os parâmetros posicionais são sempre passados no final:
+
+    $ alias great_editor='echo $1 is a great text editor'
+    $ great_editor emacs
+    is a great text editor emacs
+
 Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
 - `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
 - `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
@@ -559,12 +590,13 @@ Eis algumas outras variáveis de prompt:
 
 - `echo $DISPLAY` retorna `reptilium:0:2`, que quer dizer: a máquina **reptilium** tem um servidor X rodando e estamos usando a **segunda** tela do sistema
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMT
-g2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNTk4
-NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3MzgsMT
-kwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUsLTMxMzcy
-NDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2Ni
-wxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3
-OTQzMl19
+eyJoaXN0b3J5IjpbLTg0Mjc4MTIyNCwtMTQ5NjI5MTc2NCwxOD
+Q1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcy
+ODcyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkzLD
+EwODQzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcw
+OTE3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC
+0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4
+NzMzNDhdfQ==
 -->
