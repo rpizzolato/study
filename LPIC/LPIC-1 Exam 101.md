@@ -693,9 +693,14 @@ Outro exemplo interessante:<br>
 	fi
 No caso acima, verifica se a variável `$BASH` está declarada **e** se a variável `$BASH` é diferente de `/bin/sh`, então vai para a rotina.
 
-Vejamos um exemplo que ver
+Vejamos um exemplo que verifica se o diretório `/etc/profile.d` existe:<br>
+
+    if [ -d /etc/profile.d ]; then
+	    # executa rotina
+	fi
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDAzOTkwMywtMTM3MTExODUyMywxND
+eyJoaXN0b3J5IjpbMTE1ODY4NDM2OSwtMTM3MTExODUyMywxND
 A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
 MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
 EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
