@@ -121,6 +121,16 @@ Relembrando:
 - `env | grep TESTE`: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
 - `set | grep TESTE`: mostra tanto as locais de ambiente, como as exportadas de usuário.
 
+>[!NOTE]
+>
+>Para remover variáveis definidas (locais ou globais), usamos o comando  `unset`:
+
+$ echo $reptile
+tortoise
+$ unset reptile
+$ echo $reptile
+$
+
 Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash (processo filho do shell atual), logo essa variável teria que estar exportada.
 
 É possível contornar isso com o comando **source**. Ele faz com que seja executado no mesmo shell da sessão atual, dessa forma retornando o valor de TESTE.
@@ -343,9 +353,9 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyMjQ1Nzg1LC0xNzQ4NzA5MTc1LC0zMT
-M3MjQ5MjUsNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0NjU2NjQw
-NjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0OCw2Nj
-I3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NTk4NDE4
-OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMjgzMjU3NDAyLDg1MjI0NTc4NSwtMTc0OD
+cwOTE3NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2
+LC0xNDY1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyND
+g4NzMzNDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0
+MCwtNTU5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
 -->
