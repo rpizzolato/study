@@ -127,7 +127,9 @@ Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá
 
 Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com `./script.sh`)
 
-Comando alias: cria alias para os comandos (sinônimos de comandos)
+Variáveis imutáveis
+
+Comando **alias**: cria alias para os comandos (sinônimos de comandos)
 
 `alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
 
@@ -326,9 +328,9 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
     zorinos\
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0MD
-MzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNjI1Nzcy
-ODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNj
-Q2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2
-Mzg4LDY3NDUyMTA3Nl19
+eyJoaXN0b3J5IjpbLTIwMjg5Nzg3NjYsLTE3NDg3MDkxNzUsLT
+MxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2
+NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LD
+Y2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0
+MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
