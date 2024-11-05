@@ -657,14 +657,23 @@ A declaração de variáveis **NÃO** usa cifrão (`$`), já no uso da variável
 
 #### Instruções condicionais (if e case)
 
+Vejamos um exemplo:
 
+    if [ -f /etc/bash.bashrc ]; then
+	    .	/etc/bash.bashrc
+	fi
+ou
+
+    if [ -f /etc/bash.bashrc ]; then
+	    .	/etc/bash.bashrc
+	fiter code here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xOD
-k4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5
-MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0Nj
-Y3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywt
-MTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3MjcsLTExNT
-k4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0MzM3Mzgs
-MTkwMTY1NDA0OF19
+eyJoaXN0b3J5IjpbLTEwNDQ2MzYxODIsMTQwODQxNzM2MSwtNz
+kzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1
+NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0ND
+I4LC0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQs
+MTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMz
+I3Mjg3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5
+MywxMDg0MzM3MzhdfQ==
 -->
