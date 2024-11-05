@@ -392,11 +392,28 @@ Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás
     zorinos\
 
 - `env -i bash`: inicia um bash removendo a maioria das variáveis (além de funções e aliases)
+
+    $ env -i bash
+
+Agora, a maioria das nossas variáveis de ambiente se foi:
+
+    $ echo $USER
+    $
+
+Restam apenas algumas:
+
+    $ env
+    LS_COLORS=
+    PWD=/home/user2
+    SHLVL=1
+    _=/usr/bin/printenv
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUyMzY3MTUsOTM1MTI5OTkzLDEwOD
-QzMzczOCwxOTAxNjU0MDQ4LDg1MjI0NTc4NSwtMTc0ODcwOTE3
-NSwtMzEzNzI0OTI1LDQwMzM5ODgwNywtMzc4NzM3MjE2LC0xND
-Y1NjY0MDY2LDE2MjU3NzI4NCwtMTk2OTEwNzY1NCwyNDg4NzMz
-NDgsNjYyNzc5NDMyLC02NDYzMDk3NzIsLTc2MDQxOTE0MCwtNT
-U5ODQxODkyLDIwMzI3MDYzODgsNjc0NTIxMDc2XX0=
+eyJoaXN0b3J5IjpbMzAxODAyMTAzLDkzNTEyOTk5MywxMDg0Mz
+M3MzgsMTkwMTY1NDA0OCw4NTIyNDU3ODUsLTE3NDg3MDkxNzUs
+LTMxMzcyNDkyNSw0MDMzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NT
+Y2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4
+LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03NjA0MTkxNDAsLTU1OT
+g0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3Nl19
 -->
