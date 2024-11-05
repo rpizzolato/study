@@ -311,13 +311,22 @@ Por outro lado, ao referenciar uma variável cujo valor inclui alguns espaços i
 
 Se a referência da variável contiver um ponto de exclamação no final, este deve ser o último caractere da string (caso contrário, o Bash pensará que estamos nos referindo a um evento de  `history`):
 
-$ **distro=zorin.?/!os**
--bash: !os: event not found
-$ **distro=zorin.?/!**
-$ **echo $distro**
-zorin.?/!
+    $ distro=zorin.?/!os
+    -bash: !os: event not found
+    $ distro=zorin.?/!
+    $ echo $distro
+    zorin.?/!
+
+Todas as barras invertidas devem ser escapadas com outra barra invertida. Aliás, se uma barra invertida for o último caractere na string e não o escaparmos, o Bash interpretará que queremos uma quebra de linha e criará uma nova linha:
+
+    $ distro=zorinos\
+    >
+    $ distro=zorinos\\
+    $ echo $distro
+    zorinos\
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzc3MDM1MDIsLTMxMzcyNDkyNSw0MD
+eyJoaXN0b3J5IjpbLTE3NDg3MDkxNzUsLTMxMzcyNDkyNSw0MD
 MzOTg4MDcsLTM3ODczNzIxNiwtMTQ2NTY2NDA2NiwxNjI1Nzcy
 ODQsLTE5NjkxMDc2NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNj
 Q2MzA5NzcyLC03NjA0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2
