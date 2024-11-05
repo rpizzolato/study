@@ -119,10 +119,14 @@ Será criado por meio do Xen Tools, que é um conjunto de scripts para criação
 - `/usr/share/xen-tools`: diretórios que estão os arquivos para realizar as instalações
 
 - `xen-create-image`: comando para criar (para ver os parâmetros usar `man xen-create-image`)
-- `# xen-create-image --hostname=lpic3-pv-guest --memory=512mb --vcpus=2 --lvm=xen-vg --dhcp --pygrub --dist=bookworm`: cria uma VM, lembrando que pygrub é um topo de grub recomendado pelo projeto Xen
+- `# xen-create-image --hostname=lpic3-pv-guest --memory=512mb --vcpus=2 --lvm=xen-vg --dhcp --pygrub --dist=bookworm`: cria uma VM, lembrando que pygrub é um topo de grub recomendado pelo projeto Xen.
+>[]
 
 Depois de criado, é adicionado um arquivo `lpic3-pv-guest.cfg` em `/etc/xen/` para configuração da VM (se notar, é o nome do host, o nome do arquivo)
+
+`xl create -c /etc/xen/lpic3-pv-guest.cfg`: executa a VM que foi criada. o `-c` já coloca em um console.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMj
-A4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbLTEyMDc4NDQwNjgsLTIxNDY2Njc2NDEsLT
+MzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3
+Nzc0MV19
 -->
