@@ -609,9 +609,13 @@ Ao criar um script.sh comum, como por exemplo:
     echo "Fim Script"
 
 Podemos executá-lo usando apenas o comando source ou ponto (.)<br>
-$ source 
+
+    $ source script.sh
+    $ . script.sh
+
+Isso inclusive faz com que seja executado no bash atual, sem mudar para um processo filho.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNTE0OTA1NCwtMTkyMzIwNDY2NywxMD
+eyJoaXN0b3J5IjpbMTQzMzUxNzE0MCwtMTkyMzIwNDY2NywxMD
 M3NjY1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2
 MzkyMDksLTE5NTIwNjUwMDMsMTMyNzI4NzI3LC0xMTU5ODYwMj
 UyLDMwMTgwMjEwMyw5MzUxMjk5OTMsMTA4NDMzNzM4LDE5MDE2
