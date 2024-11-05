@@ -680,13 +680,15 @@ Nesse caso verificar, por meio do comando `id -u`, se o retorno é igual a 0 (ze
 
 O comando test pode ser executado no terminal diretamente. Vejamos alguns exemplos:
 
-- `test LPI1 = LPI1`: precisamo ver no return code. Basta executar echo $? (0 é igual sucesso, 1 ou outro número informa que não é verdadeiro)
+- `test LPI1 = LPI1`: precisamo ver no **return code**. Basta executar `echo $?` (**0** é igual sucesso, **1** ou outro número informa que não é verdadeiro)
+- `test LPI1 = LPI2`: return code será **1**
+- `test -f /etc/profile`: testa se o arquivo `/etc/profile` existe. (**0** = existe, **1** = não existe)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODAxNjQsMTQwODQxNzM2MSwtNzkzMT
-c4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4
-MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC
-0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0
-NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mj
-g3MjcsLTExNTk4NjAyNTIsMzAxODAyMTAzLDkzNTEyOTk5Mywx
-MDg0MzM3MzhdfQ==
+eyJoaXN0b3J5IjpbLTY3MjgwNzE5MywxNDA4NDE3MzYxLC03OT
+MxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3
+NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0Mj
+gsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwx
+ODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMj
+cyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIxMDMsOTM1MTI5OTkz
+LDEwODQzMzczOF19
 -->
