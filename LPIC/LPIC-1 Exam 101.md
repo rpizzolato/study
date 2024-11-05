@@ -272,10 +272,11 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `<nome_do_script>`: Não-interativo sem login (scripts)
 
 #### Variáveis
-Pode conter letras (`a-z, A-Z`), números (`0-9`) e sublinhados (`_`)
+Pode conter letras (`a-z, A-Z`), números (`0-9`) e sublinhados (`_`). 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAzMzk4ODA3LC0zNzg3MzcyMTYsLTE0Nj
-U2NjQwNjYsMTYyNTc3Mjg0LC0xOTY5MTA3NjU0LDI0ODg3MzM0
-OCw2NjI3Nzk0MzIsLTY0NjMwOTc3MiwtNzYwNDE5MTQwLC01NT
-k4NDE4OTIsMjAzMjcwNjM4OCw2NzQ1MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMTc4Mjc5MTkwOSw0MDMzOTg4MDcsLTM3OD
+czNzIxNiwtMTQ2NTY2NDA2NiwxNjI1NzcyODQsLTE5NjkxMDc2
+NTQsMjQ4ODczMzQ4LDY2Mjc3OTQzMiwtNjQ2MzA5NzcyLC03Nj
+A0MTkxNDAsLTU1OTg0MTg5MiwyMDMyNzA2Mzg4LDY3NDUyMTA3
+Nl19
 -->
