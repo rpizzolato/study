@@ -107,10 +107,12 @@ Os principais arquivos de configuração ficam em **/etc/xen**, sendo o principa
 
 >["NOTE]
 >
->As VMs criadas terão arquivo de configuração dentro de **/etc/xen**
+>As VMs criadas terão arquivo de configuração dentro de **/etc/xen** (arquivos como `/etc/xen/xlexample.pvlinux` e `/etc/xen/xlexample.hvm`)
 - `xl.cfg`: configuração geral das VMs
-- `/etc/default/xen` e `xendomains`: configurações gerais e configurações gerais do domínios
+- `/etc/default/xen` e `xendomains`: configurações gerais e configurações gerais do domínios em nível de serviço
+
+####
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNTM5MjQyNCw0ODk3Njc4MzgsMTI5MT
-E3Nzc0MV19
+eyJoaXN0b3J5IjpbODMwNzY1Mjc5LDQ4OTc2NzgzOCwxMjkxMT
+c3NzQxXX0=
 -->
