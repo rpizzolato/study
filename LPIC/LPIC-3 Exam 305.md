@@ -119,7 +119,8 @@ Será criado por meio do Xen Tools, que é um conjunto de scripts para criação
 - `/usr/share/xen-tools`: diretórios que estão os arquivos para realizar as instalações
 
 - `xen-create-image`: comando para criar (para ver os parâmetros usar `man xen-create-image`)
+- `# xen-create-image --hostname=lpic3-pv-guest --memory=512mb --vcpus=2 --lvm=xen-vg --dhcp --pygrub --dist=bookworm`: cria uma VM, lembrando que pygrub é um topo de grub recomendado pelo projeto Xen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE4MzA1ODYsNDg5NzY3ODM4LDEyOT
-ExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0OD
+k3Njc4MzgsMTI5MTE3Nzc0MV19
 -->
