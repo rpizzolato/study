@@ -747,8 +747,14 @@ Ex.<br>
     $ expr 1 - 2
     -1
 
+##### for
+
+    for i in 1 2 3 4 5
+    do
+	    j=`expr $i + $VAR1`
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwOTU0OTEzNSwtMTk2OTg2OTk4MSw1Nz
+eyJoaXN0b3J5IjpbMTExMDE1ODQ0OCwtMTk2OTg2OTk4MSw1Nz
 U3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4
 NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NS
 wxMDk4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgw
