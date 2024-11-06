@@ -673,7 +673,7 @@ Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada n
 - `-e`: testa apenas se arquivo existe;
 - `-s`: verifica se o tamanho do arquivo é maior que 0 (zero)
 - `-z`: verifica se o tamanho da string é zero (usado com variáveis)
-- `-n`: verifica se o tamanho da string é diferente de zero (nonzero
+- `-n`: verifica se o tamanho da string é diferente de zero (nonzero)
 
 Vejamos outro exemplo
 
@@ -727,12 +727,15 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
 		    echo "O valor digitado foi maior que 5"
 	esac
 
+#### Loops
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjQyODMzNSw1NzU3OTQ2MzUsMTQyOD
-I1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTcz
-NjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LD
-EyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAz
-MjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3NjY1NzM4LC0xNDk2Mj
-kxNzY0LDE4NDU3MzA2MTMsLTE4Njc2MzkyMDksLTE5NTIwNjUw
-MDMsMTMyNzI4NzI3XX0=
+eyJoaXN0b3J5IjpbLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0Mj
+gyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3
+MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OC
+wxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEw
+MzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5Nj
+I5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1
+MDAzLDEzMjcyODcyN119
 -->
