@@ -831,9 +831,13 @@ Ex.<br>
 		echo "$i + $VAR1 = $j
 	done
 
->[!NOTE]
+>[!TIP]
 >
 >O comando `expr` pode ser substituído por `$(())`, de forma que o exemplo anterior no laço `for` poderia ser reescrito como `j=$(( $i + $VAR1 ))`
+
+>[!TIP]
+>
+>É possível escrever potencias 
 
 Usando o `seq`:
 
@@ -882,11 +886,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjc2NjU4NDcsLTEyMTc4NTY0MzgsLT
-E1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAz
-ODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NT
-MxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5
-Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNz
-Q3NCwtMTM3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIs
-LTE4OTg2MDk2NjVdfQ==
+eyJoaXN0b3J5IjpbMjAzODc4NDgzMSwtMTIxNzg1NjQzOCwtMT
+UwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4
+MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1Mz
+EsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2
+OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3ND
+c0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2Miwt
+MTg5ODYwOTY2NV19
 -->
