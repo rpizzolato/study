@@ -640,6 +640,7 @@ Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso
 - `$1`, `$2`, etc: imprime os parâmetros sequencialmente conforme entrada
 - `$!`: PID do último programa executado.
 - `$$`: PID do shell atual.
+- `$?`: código de status de saída numérico do último comando concluído. Para processos POSIX padrão, um valor numérico de  `0`  indica que o último comando foi executado com sucesso, o que também se aplica a scripts do shell.
 ```
 echo "O meu script se chama $0"
 echo ""
@@ -817,7 +818,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NzQ4NDkzMiwxNzI0NzI4MzE5LC0yMT
+eyJoaXN0b3J5IjpbLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMT
 gzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUy
 MTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NC
 w0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0Mjgy
