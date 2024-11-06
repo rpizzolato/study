@@ -343,6 +343,8 @@ Um valor diferente de  `0`  significa erro:
 
 Expandem-se para os parâmetros ou argumentos que estão sendo passados para a função (alias ou script) — `$0`  se expande para o nome do script ou shell.
 
+Um _parâmetro posicional_ é um parâmetro denotado por um ou mais dígitos diferentes do dígito único `0`. Por exemplo, a variável `$1` corresponde ao primeiro argumento dado ao script (parâmetro posicional um), `$2` corresponde ao segundo argumento e assim por diante. Se a posição de um parâmetro for maior que nove, ele deve ser referenciado com chaves, como em `${10}`, `${11}` etc.
+
 Vamos criar uma função para demonstrar os parâmetros posicionais — note  `PS2`  (`>`) indicando novas linhas após as quebras de linha:
 
     $ special_vars() {
@@ -818,11 +820,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMT
-gzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUy
-MTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NC
-w0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0Mjgy
-NTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3Mz
-YxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwx
-MjI4NDU3NDgzXX0=
+eyJoaXN0b3J5IjpbLTIxMDM0Njc3MTYsLTE1MDgyMzIxMCwxNz
+I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
+MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
+QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
+Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
+UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
+MTA5ODU1MTY1OF19
 -->
