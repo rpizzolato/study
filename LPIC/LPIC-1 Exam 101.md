@@ -776,6 +776,9 @@ O comando `test` pode ser executado no terminal diretamente. Vejamos alguns exem
 - `test -f /etc/profile`: testa se o arquivo `/etc/profile` existe. (**0** = existe, **1** = não existe)
 - `test 10 -gt 20`: se 10 é maior que (**greater than**) 20 (retorna **1**, pois 10 não é maior que 20)
 
+Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Podemos ter as seguintes opções:
+
+
 Outro exemplo interessante:<br>
 
     if [ "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
@@ -941,7 +944,7 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMxMzIzNTQsMTE3MjM2NTcxMSwxMj
+eyJoaXN0b3J5IjpbLTE2ODkzMjk2ODYsMTE3MjM2NTcxMSwxMj
 MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
 NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
 UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
