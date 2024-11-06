@@ -931,15 +931,12 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
-
-
-1. ser permissão de executar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTUzMDM5MSwxMTcyMzY1NzExLC0xMT
-k2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgy
-MzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNC
-wtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEw
-NDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Nj
-k5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwt
-MTM3MTExODUyM119
+eyJoaXN0b3J5IjpbMTE3MjM2NTcxMSwxMjMxNTMwMzkxLDExNz
+IzNjU3MTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
+NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
+wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
+NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Nj
+c0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwx
+MTQ2MTA3NDc0XX0=
 -->
