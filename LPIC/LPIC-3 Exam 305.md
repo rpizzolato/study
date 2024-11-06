@@ -128,9 +128,9 @@ Depois de criado, é adicionado um arquivo `lpic3-pv-guest.cfg` em `/etc/xen/` p
 
 `xl create -c /etc/xen/lpic3-pv-guest.cfg`: executa a VM que foi criada. o `-c` já coloca em um console. Basta autenticar como root com a senha disponibilizada anteriormente.
 
-Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o comando `xl list`
+Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o comando `xl list`. No estado vai estar com `b` de **blocked**, que alterna para **running** (`r`) conforme o uso da VM
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzU4MTE4NjksLTE0NDkyMjY4NCwtMj
-E0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2
-NzgzOCwxMjkxMTc3NzQxXX0=
+eyJoaXN0b3J5IjpbLTc0MzUzNDE2NiwtMTQ0OTIyNjg0LC0yMT
+Q2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4MzA1ODYsNDg5NzY3
+ODM4LDEyOTExNzc3NDFdfQ==
 -->
