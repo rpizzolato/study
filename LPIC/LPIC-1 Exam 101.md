@@ -768,7 +768,7 @@ Usando o `seq`:
 
 ##### while
 
-    while [ $VAR1 -le $1 ]
+    while [ $VAR1 -le $1 ] #enquanto o teste = Verdadeiro, faça...
     do
 	    echo "O valor atual do \$VAR1 é: $VAR1"
 	    VAR1=`expr $VAR1 + 1`
@@ -777,8 +777,15 @@ Usando o `seq`:
 
 ##### until
 
+    until [ $VAR1 -le $1 ] #até que isso seja verdadeiro, faça...
+    do
+	    echo "O valor atual do \$VAR1 é: $VAR1"
+	    VAR1=`expr $VAR1 + 1`
+	    sleep 1
+	done
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTk5MDc1NSwtODQ5NjQ1NTMxLDEwND
+eyJoaXN0b3J5IjpbLTY4NTk1NDI4NCwtODQ5NjQ1NTMxLDEwND
 YyMTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5
 ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMT
 M3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2
