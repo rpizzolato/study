@@ -787,12 +787,16 @@ Usando o `seq`:
 #### Execução sequencial de comandos
 
 Ex. `cat teste | wc -l`: executa o primeiro comando e a saída do mesmo serve de entrada para o próximo comando, no caso `wc`.
+
+Ex. `date ; ls -l ; teste2 ; echo Exemplo`: executa todos, mesmo que dê erro
+
+Ex. ls -ls teste 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTU1MjE0NzEsLTg0OTY0NTUzMSwxMD
-Q2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2NzQ0LC0xOTY5ODY5
-OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDExNDYxMDc0NzQsLT
-EzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xODk4
-NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5MD
-EzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3
-LDEwMzc2NjU3MzhdfQ==
+eyJoaXN0b3J5IjpbNjQ1NzkwNTcwLC0xMDE1NTIxNDcxLC04ND
+k2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0
+NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMT
+Q2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3
+ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0NTc0OD
+MsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOCwt
+MTkyMzIwNDY2N119
 -->
