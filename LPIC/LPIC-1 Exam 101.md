@@ -634,9 +634,12 @@ Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso
 #### Parâmetro em shell script
 
 - `$*`: imprime todos os argumentos passados para o script.
+- `$@`: todos os argumentos passados para o script. Se usado com aspas duplas, como em  `"$@"`, todos os argumentos serão colocados entre aspas duplas.
 - `$0`: imprime o nome do arquivo que está sendo executado
 - `$#`: imprime a quantidade de parâmetros utilizados
 - `$1`, `$2`, etc: imprime os parâmetros sequencialmente conforme entrada
+- `$!`: PID do último programa executado.
+- `$$`: PID do shell atual.
 ```
 echo "O meu script se chama $0"
 echo ""
@@ -814,11 +817,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzEwMjAwNTMsMTcyNDcyODMxOSwtMj
-E4Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1
-MjE0NzEsLTg0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NT
-QsNDMwMjQ2NzQ0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4
-MjU3OTk1LDExNDYxMDc0NzQsLTEzNzExMTg1MjMsMTQwODQxNz
-M2MSwtNzkzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgs
-MTIyODQ1NzQ4M119
+eyJoaXN0b3J5IjpbMTE0NzQ4NDkzMiwxNzI0NzI4MzE5LC0yMT
+gzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUy
+MTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NC
+w0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0Mjgy
+NTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3Mz
+YxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwx
+MjI4NDU3NDgzXX0=
 -->
