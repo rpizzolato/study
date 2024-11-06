@@ -799,14 +799,15 @@ Ex. `ls -ls teste || echo Exemplo || date`: é sequencial, na hora que chegar em
 Exemplo de uso de `||`
 Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha qualquer problema, mudança de permissão, etc, avise o usuário administrador ou root sobre isso:
 
-    ls -l arquivo_importante || mail -s "arquivo não existe mais" root 
+    ls -l arquivo_importante || mail -s "arquivo não existe mais" root < .
+Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyOTE2MDEyLC0yMDM5MjczNjQwLC0xMD
-E1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0
-OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMT
-QyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0
-MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNj
-U4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwt
-MTAzMjA5NDQyOF19
+eyJoaXN0b3J5IjpbLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMT
+AxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3
+NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LD
+E0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4
+NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MT
+Y1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEs
+LTEwMzIwOTQ0MjhdfQ==
 -->
