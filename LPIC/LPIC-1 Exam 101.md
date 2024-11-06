@@ -888,12 +888,14 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
     ls -l arquivo_importante || mail -s "arquivo não existe mais" root < .
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMT
-IxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4
-NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxND
-cxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQz
-MDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nz
-k5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEs
-LTc5MzE3ODA2Ml19
+eyJoaXN0b3J5IjpbMjQyOTAwODM4LC0xMTk2NTYxNTI2LC0yNj
+A2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4
+MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MC
+wtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0
+ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0Nj
+M1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywx
+NDA4NDE3MzYxXX0=
 -->
