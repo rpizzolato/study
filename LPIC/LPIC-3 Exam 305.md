@@ -126,9 +126,11 @@ Será criado por meio do Xen Tools, que é um conjunto de scripts para criação
 
 Depois de criado, é adicionado um arquivo `lpic3-pv-guest.cfg` em `/etc/xen/` para configuração da VM (se notar, é o nome do host, o nome do arquivo)
 
-`xl create -c /etc/xen/lpic3-pv-guest.cfg`: executa a VM que foi criada. o `-c` já coloca em um console.
+`xl create -c /etc/xen/lpic3-pv-guest.cfg`: executa a VM que foi criada. o `-c` já coloca em um console. Basta autenticar como root com a senha disponibilizada anteriormente.
+
+Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o comando `xl list`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMz
-M0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3
-NzQxXX0=
+eyJoaXN0b3J5IjpbLTIwNzU4MTE4NjksLTE0NDkyMjY4NCwtMj
+E0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2
+NzgzOCwxMjkxMTc3NzQxXX0=
 -->
