@@ -698,11 +698,13 @@ O comprimento de uma variável, ou seja, a quantidade de caracteres que ela cont
 
 O Bash também apresenta variáveis de matriz (array) unidimensionais, de forma que um conjunto de elementos relacionados pode ser armazenado com um único nome de variável. Cada elemento de uma matriz possui um índice numérico, que deve ser usado para escrever e ler valores no elemento correspondente. Ao contrário das variáveis comuns, as matrizes devem ser declaradas com o comando interno do Bash  `declare`. Por exemplo, para declarar uma variável chamada  `SIZES`  como uma matriz:
 
-$ **declare -a SIZES**
+    $ declare -a SIZES
 
 As matrizes também podem ser declaradas implicitamente quando preenchidas a partir de uma lista predefinida de itens, usando a notação de parênteses:
 
-$ **SIZES=( 1048576 1073741824 )**
+$ SIZES=( 1048576 1073741824 )
+$ set | grep SIZES
+SIZES=([0][])
 
 No exemplo, os dois grandes valores inteiros foram armazenados na matriz  `SIZES`. Os elementos da matriz devem ser referenciados usando chaves e colchetes, caso contrário o Bash não alterará nem exibirá o elemento corretamente. Como os índices da matriz começam em 0, o conteúdo do primeiro elemento está em  `${SIZES[0]}`, o segundo em  `${SIZES[1]}`  e assim por diante:
 
@@ -876,7 +878,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5OTY4MDg1OSwtMTUwODIzMjEwLDE3Mj
+eyJoaXN0b3J5IjpbLTc5MDcxMTI1NSwtMTUwODIzMjEwLDE3Mj
 Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
 NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
 wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
