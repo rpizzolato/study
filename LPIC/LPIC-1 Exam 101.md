@@ -667,7 +667,7 @@ ou
     if test -f /etc/bash.bashrc ; then
 	    .	/etc/bash.bashrc
 	fi
-Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe (`-f`).
+Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe e é um arquivo regular (`-f`). Há também o 
 
 Vejamos outro exemplo
 
@@ -707,11 +707,11 @@ Abaixo, outro exemplo um pouco mais complexo:
 O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se o arquivo existe e se está com permissão de somente leitura.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxND
-A4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1
-MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1Nj
-EsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwt
-MTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOT
-UyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2MDI1MiwzMDE4MDIx
-MDMsOTM1MTI5OTkzXX0=
+eyJoaXN0b3J5IjpbLTE1NTQ5MzAyOTUsMTE0NjEwNzQ3NCwtMT
+M3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2
+MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMT
+MsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2Njcs
+MTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1NzMwNjEzLC0xOD
+Y3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcyNywtMTE1OTg2
+MDI1MiwzMDE4MDIxMDNdfQ==
 -->
