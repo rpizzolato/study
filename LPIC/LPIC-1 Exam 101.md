@@ -706,13 +706,21 @@ Abaixo, outro exemplo um pouco mais complexo:
 	fi
 O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se o arquivo existe e se está com permissão de somente leitura.
 
-#### Case
+##### Case
+
+    case $VAR1 in
+    0)
+	    echo "O valor digitado foi 0"
+    ;;
+    1|2|3|4|5)
+	    echo "O valor digitado foi entre 1 e 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExMzc2NDQxLDE0MjgyNTc5OTUsMTE0Nj
-EwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgw
-NjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLD
-IwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLTE5
-MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1Nz
-MwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1MDAzLDEzMjcyODcy
-NywtMTE1OTg2MDI1Ml19
+eyJoaXN0b3J5IjpbLTYzNDM3ODk4MiwxNDI4MjU3OTk1LDExND
+YxMDc0NzQsLTEzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkzMTc4
+MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4My
+wyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0x
+OTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOTE3NjQsMTg0NT
+czMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAwMywxMzI3Mjg3
+MjcsLTExNTk4NjAyNTJdfQ==
 -->
