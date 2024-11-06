@@ -788,42 +788,15 @@ Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Pod
 - `-h "$VAR"`: avalia se o caminho em  `VAR`  é um link simbólico.
 - `-L "$VAR"`: avalia se o caminho em  `VAR`  é um link simbólico (como  `-h`).
 - `-k "$VAR"`: avalia se o caminho em  `VAR`  tem a permissão  _sticky bit_.
-
-`-p "$VAR"`
-
-Avalia se o caminho em  `VAR`  é um arquivo  _pipe_.
-
-`-r "$VAR"`
-
-Avalia se o caminho em  `VAR`  é legível pelo usuário atual.
-
-`-s "$VAR"`
-
-Avalia se o caminho em  `VAR`  existe e não está vazio.
-
-`-S "$VAR"`
-
-Avalia se o caminho em  `VAR`  é um arquivo de socket.
-
-`-t "$VAR"`
-
-Avalia se o caminho em  `VAR`  está aberto em um terminal.
-
-`-u "$VAR"`
-
-Avalia se o caminho em  `VAR`  tem permissão SUID.
-
-`-w "$VAR"`
-
-Avalia se o caminho em  `VAR`  é gravável pelo usuário atual.
-
-`-x "$VAR"`
-
-Avalia se o caminho em  `VAR`  é executável pelo usuário atual.
-
-`-O "$VAR"`
-
-Avalia se o caminho em  `VAR`  é de propriedade do usuário atual.
+- `-p "$VAR"`: avalia se o caminho em  `VAR`  é um arquivo  _pipe_.
+- `-r "$VAR"`: avalia se o caminho em  `VAR`  é legível pelo usuário atual.
+- `-s "$VAR"`: avalia se o caminho em  `VAR`  existe e não está vazio.
+- `-S "$VAR"`: avalia se o caminho em  `VAR`  é um arquivo de socket.
+- `-t "$VAR"`: avalia se o caminho em  `VAR`  está aberto em um terminal.
+- `-u "$VAR"`: avalia se o caminho em  `VAR`  tem permissão SUID.
+- `-w "$VAR"`: avalia se o caminho em  `VAR`  é gravável pelo usuário atual.
+- `-x "$VAR"`: avalia se o caminho em  `VAR`  é executável pelo usuário atual.
+- `-O "$VAR"`: avalia se o caminho em  `VAR`  é de propriedade do usuário atual.
 
 `-G "$VAR"`
 
@@ -1010,11 +983,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDI2MjU3NzIsMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
-UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
-ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
-Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
-MTE0NjEwNzQ3NF19
+eyJoaXN0b3J5IjpbLTcyMDczMTAyMSwxMTcyMzY1NzExLDEyMz
+E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
+NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
+wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
+NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Nj
+c0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwx
+MTQ2MTA3NDc0XX0=
 -->
