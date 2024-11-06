@@ -803,6 +803,17 @@ Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Pod
 - `"$VAR1" -ot "$VAR2"`: avalia se o caminho em  `VAR1`  é mais antigo que  `VAR2`.
 - `"$VAR1" -ef "$VAR2"`: esta expressão avalia como True (Verdadeiro) se o caminho em  `VAR1`  é um link físico para  `VAR2`.
 
+##### Também existem testes para variáveis de texto arbitrárias, descritos a seguir:
+
+- `-z "$TXT"`: avalia se a variável  `TXT`  está vazia (tamanho zero).
+- `-n "$TXT"`  ou  `test "$TXT"`: avalia se a variável  `TXT`  não está vazia.
+- `"$TXT1" = "$TXT2"`  ou  `"$TXT1" == "$TXT2"`: avalia se  `TXT1`  e  `TXT2`  são iguais.
+- `"$TXT1" != "$TXT2"`: avalia se  `TXT1`  e  `TXT2`  não são iguais.
+- `"$TXT1" < "$TXT2"`: avalia se  `TXT1`  vem antes de  `TXT2`, em ordem alfabética.
+- `"$TXT1" > "$TXT2"`: avalia se  `TXT1`  vem depois de  `TXT2`, em ordem alfabética.
+
+
+
 Outro exemplo interessante:<br>
 
     if [ "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
@@ -968,7 +979,7 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDQwMDc1MCwxMTcyMzY1NzExLDEyMz
+eyJoaXN0b3J5IjpbLTg0NjI5OTk2NSwxMTcyMzY1NzExLDEyMz
 E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
 NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
 wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
