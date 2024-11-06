@@ -790,13 +790,15 @@ Ex. `cat teste | wc -l`: executa o primeiro comando e a saída do mesmo serve de
 
 Ex. `date ; ls -l ; teste2 ; echo Exemplo`: executa todos, mesmo que dê erro
 
-Ex. ls -ls teste 
+Ex. `ls -ls teste && echo Exemplo`: só executa o segundo comando, se o primeiro der sucesso (caso exista o arquivo teste, senão seria erro, caso ele não exista)
+
+Ex. `ls -ls teste || echo Exemplo`: só executa o segundo comando, se o primeiro falhar. Executando o primeiro já encerra a execuçã
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1NzkwNTcwLC0xMDE1NTIxNDcxLC04ND
-k2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0
-NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMT
-Q2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3
-ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0NTc0OD
-MsMjA5MDU4OTAxMywtMTgwNTI1NTU2MSwtMTAzMjA5NDQyOCwt
-MTkyMzIwNDY2N119
+eyJoaXN0b3J5IjpbMTc3ODc0NzU4NywtMTAxNTUyMTQ3MSwtOD
+Q5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3
+NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMT
+E0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3MzYxLC03OTMx
+NzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3ND
+gzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0Mjgs
+LTE5MjMyMDQ2NjddfQ==
 -->
