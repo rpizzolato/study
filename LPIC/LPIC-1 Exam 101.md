@@ -838,8 +838,9 @@ Ex.<br>
 >[!TIP]
 >
 >É possível escrever potenciação com o operador duplo asterisco (`**`). Ex.<br>
-$ echo $( (5**2 ) )
-25
+
+    $ echo $( (5**2 ) )
+    25
 
 Usando o `seq`:
 
@@ -888,7 +889,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNjc1MDU1MywtMTIxNzg1NjQzOCwtMT
+eyJoaXN0b3J5IjpbLTI2MDYxMDI5NywtMTIxNzg1NjQzOCwtMT
 UwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4
 MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1Mz
 EsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2
