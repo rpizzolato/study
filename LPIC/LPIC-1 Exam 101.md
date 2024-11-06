@@ -620,6 +620,10 @@ Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
 - `bash script.sh`: também executa o script sem o bit de execução.
 
+>[!WARNING]
+>
+>Um script que executa ações restritas pode ter sua permissão SUID ativada e, portanto, os usuários comuns também podem executar o script com privilégios de root. Nesse caso, é muito importante garantir que nenhum usuário além do root tenha permissão para escrever no arquivo. Caso contrário, um usuário comum poderá modificar o arquivo para realizar operações arbitrárias e potencialmente prejudiciais.
+
 Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
 
 >[!TIP]
@@ -808,7 +812,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjczOTU2OSwtMjQzMDM4MDE0LC0yMD
+eyJoaXN0b3J5IjpbLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMD
 M5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIx
 OTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MS
 w1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcx
