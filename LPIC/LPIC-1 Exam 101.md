@@ -618,10 +618,13 @@ Isso inclusive faz com que seja executado no bash atual, sem mudar para um proce
 Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar `chmod u+x script`, para dar permissão de execução para o arquivo (nesse caso, permissão para o usuário dono do arquivo).
 
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
+- 
 
 Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
 
-
+>[!TIP]
+>
+>O Bash chama qualquer comando indicado após o `#!` como interpretador do arquivo de script. Pode ser útil, por exemplo, empregar o shebang para outras linguagens de script, como _Python_ (`#!/usr/bin/python`), _Perl_ (`#!/usr/bin/perl`) ou _awk_ (`#!/usr/bin/awk`).
 
 #### Parâmetro em shell script
 
@@ -805,11 +808,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzI5NDg3MDYsLTI0MzAzODAxNCwtMj
-AzOTI3MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYy
-MTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5OD
-EsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3
-MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MD
-k2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMs
-LTE4MDUyNTU1NjFdfQ==
+eyJoaXN0b3J5IjpbMTkzODc4Nzc1OSwtMjQzMDM4MDE0LC0yMD
+M5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIx
+OTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MS
+w1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcx
+MTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOT
+Y2NSwxMDk4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywt
+MTgwNTI1NTU2MV19
 -->
