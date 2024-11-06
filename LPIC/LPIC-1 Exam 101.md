@@ -722,7 +722,7 @@ Diferente da leitura, a alteração do conteúdo de um elemento da matriz é rea
 
 As matrizes também podem ser declaradas usando-se, como elementos iniciais, a saída de um comando, por meio da substituição de comando. O exemplo a seguir mostra como criar uma matriz do Bash cujos elementos são os sistemas de arquivos suportados pelo sistema atual:
 
-$ **FS=( $(cut -f 2 < /proc/filesystems) )**
+    $ FS=( $(cut -f 2 < /proc/filesystems) )
 
 O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimidados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  se tornarão um elemento de matriz.
 
@@ -878,11 +878,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NDk4NTg0NiwtMTUwODIzMjEwLDE3Mj
-Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
-NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
-wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
-OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NT
-IzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwx
-MDk4NTUxNjU4XX0=
+eyJoaXN0b3J5IjpbLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNz
+I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
+MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
+QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
+Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
+UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
+MTA5ODU1MTY1OF19
 -->
