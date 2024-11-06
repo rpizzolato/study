@@ -724,11 +724,11 @@ As matrizes também podem ser declaradas usando-se, como elementos iniciais, a s
 
     $ FS=( $(cut -f 2 < /proc/filesystems) )
 
-O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimitados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  se tornarão um elemento de matriz.
+O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimitados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  **se tornarão um elemento de matriz**.
 
-Tip
-
-O Bash trata cada caractere do  `$IFS`  (_Input Field Separator_  ou separador de campos) de uma variável de ambiente como um delimitador. Para alterar o delimitador de campo apenas para caracteres de nova linha, por exemplo, a variável IFS deve ser redefinida com o comando  `IFS=$'\n'`.
+>[!TIP]
+>
+>O Bash trata cada caractere do  `$IFS`  (_Input Field Separator_  ou separador de campos) de uma variável de ambiente como um delimitador. Para alterar o delimitador de campo apenas para caracteres de nova linha, por exemplo, a variável IFS deve ser redefinida com o comando  `IFS=$'\n'`.
 
 #### Instruções condicionais (if e case)
 
@@ -831,6 +831,8 @@ Ex.<br>
 		echo "$i + $VAR1 = $j
 	done
 
+
+
 Usando o `seq`:
 
     read VAR1
@@ -878,11 +880,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjU5NzU0MiwtMTIxNzg1NjQzOCwtMT
-UwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4
-MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1Mz
-EsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2
-OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3ND
-c0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2Miwt
-MTg5ODYwOTY2NV19
+eyJoaXN0b3J5IjpbODM2Mjk2NDA3LC0xMjE3ODU2NDM4LC0xNT
+A4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0yNDMwMzgw
+MTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0OTY0NTUzMS
+wxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2NzQ0LC0xOTY5
+ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDExNDYxMDc0Nz
+QsLTEzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0x
+ODk4NjA5NjY1XX0=
 -->
