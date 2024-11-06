@@ -795,12 +795,14 @@ Ex. `ls -ls teste && echo Exemplo`: só executa o segundo comando, se o primeiro
 Ex. `ls -ls teste || echo Exemplo`: só executa o segundo comando, se o primeiro falhar. Executando o primeiro já encerra a execução.
 
 Ex. `ls -ls teste || echo Exemplo || date`: é sequencial, na hora que chegar em um que executou com sucesso, ele para.
+
+Exempl
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLT
-g0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2
-NzQ0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LD
-ExNDYxMDc0NzQsLTEzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkz
-MTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1Nz
-Q4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4
-LC0xOTIzMjA0NjY3XX0=
+eyJoaXN0b3J5IjpbMjAwMjA2MDU3MywtMjAzOTI3MzY0MCwtMT
+AxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3
+NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LD
+E0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4
+NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MT
+Y1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEs
+LTEwMzIwOTQ0MjhdfQ==
 -->
