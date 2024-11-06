@@ -669,8 +669,9 @@ ou
 	fi
 Ambas as instruções produzem o mesmo efeito. Para que a instrução aninhada no `if` execute, ela deve ser **verdadeira**, no caso o que estiver entre os colchetes, ou após a instrução `test`. <br>Nesse exemplo é testado se o arquivo `/etc/bash.bashrc` existe e é um arquivo regular.
 
--`-f`: testa se arquivo existe e é um arquivo regular;
--`-e`t que apenas testa se o arquivo existe.
+- `-f`: testa se arquivo existe e é um arquivo regular;
+- `-e`: testa apenas se arquivo existe;
+- `-s`: verifica se o tamanho do arquivo é maior que 0 (zero)
 
 Vejamos outro exemplo
 
@@ -725,11 +726,11 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
 	esac
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg4Njc1NzY0LDU3NTc5NDYzNSwxNDI4Mj
-U3OTk1LDExNDYxMDc0NzQsLTEzNzExMTg1MjMsMTQwODQxNzM2
-MSwtNzkzMTc4MDYyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMT
-IyODQ1NzQ4MywyMDkwNTg5MDEzLC0xODA1MjU1NTYxLC0xMDMy
-MDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2NjU3MzgsLTE0OTYyOT
-E3NjQsMTg0NTczMDYxMywtMTg2NzYzOTIwOSwtMTk1MjA2NTAw
-MywxMzI3Mjg3MjddfQ==
+eyJoaXN0b3J5IjpbLTE4MTI1OTQyODksNTc1Nzk0NjM1LDE0Mj
+gyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4NDE3
+MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MTY1OC
+wxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEsLTEw
+MzIwOTQ0MjgsLTE5MjMyMDQ2NjcsMTAzNzY2NTczOCwtMTQ5Nj
+I5MTc2NCwxODQ1NzMwNjEzLC0xODY3NjM5MjA5LC0xOTUyMDY1
+MDAzLDEzMjcyODcyN119
 -->
