@@ -1051,13 +1051,166 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
     printf "$MSG" $OS $(( $FREE / 1024**2 ))
 
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
+cho $TESTE`: lê o valor da variável TESTE
+- `TESTE=valor1`: define um valor para a variável TESTE
+- `env | grep TESTE`: não encontra nada da variável TESTE pois ela não foi exportada, está localmente apenas
+- `set | grep TESTE`: mostra tanto as locais de ambiente, como as exportadas de usuário.
 
+Se tivermos um script que lê essa variável TESTE, ao executá-lo ele não irá ler, pois quando é executado um script ele cria abre em uma nova sessão do shell/bash (processo filho do shell atual), logo essa variável teria que estar exportada.
+
+É possível contornar isso com o comando **source**. Ele faz com que seja executado no mesmo shell da sessão atual, dessa forma retornando o valor de TESTE.
+
+Outra forma é utilizar o ponto (.): `. script.sh` (faz rodar/executar localmente o script, sem chamar outra sessão de bash) (**NÃO** confundir com `./script.sh`)
+
+Comando alias: cria alias para os comandos (sinônimos de comandos)
+
+`alias dt="date +%H:%M"`: cria um alias chamado **dt** que vai executar o comando date mostrando apenas hora e minuto (se deslogar, perde a configuração, é apenas temporário)
+
+Se digitar somente **alias**, é mostrado os alias cadastrados no bash atual.
+
+**function**: usado para criar uma rotina de comandos.
+
+Ex. Criando uma função e a chamando no final<br> 
+```
+$ function funcao1 {
+>    date;
+>   uptime;
+>    uname -a
+>    echo "Fim funcao";
+>}
+
+$ funcao1
+```
+Para visualizar a função é só digitar `set`
+
+>[!NOTE]
+>
+>É possível começar uma função digitando tudo em uma linha ou omitindo a palavra `function`. Ex. `funcao3 () {date; uptime; }`
+
+Para configuração/customização do ambiente shell, usamos os seguintes arquivos:
+- `/etc/profile`: usado para quando um usuário faz o procedimento de login, seja por interface gráfica ou por terminal.
+- `/etc/bash.bashrc`: aplicado quando se abre uma nova sessão de bash/shell (sempre que ver `algo.bashrc`, está ligado a um novo shell/bash e `algo.profile` é um novo login)
+
+Por exemplo, caso adicionar uma variável no final do arquivo **/etc/profile**, chamada E**TCPROFILE=Valor1** e tentarmos com o **echo** ver o valor dessa variável, não será retornado nada. No entanto se for mudado para qualquer outro terminal (com CTRL+ALT+F1) e efetuar o login, e exibir a variável com o comando **echo**, a variável aparecerá. 
+Isso deixa claro que **profile** está ligado com login realmente, no caso quando qualquer usuário fizer login.
+
+Ainda no **/etc/profile** que é possível incluir um alias, uma função, para que seja comum a todos que se logarem no sistema.
+
+É possível notar que ao se fazer o mesmo teste, agora com **/etc/bash.bashrc**, é possível perceber que a variável apenas irá aparecer quando for aberto um novo shell (e **NÃO** no shell atual) ou um novo login, que automaticamente irá abrir um novo shell.
+
+Dentro de **/etc/profile.d/** há scripts que são carregados ao fazer login. Lembrando que o que foi visto é de definição geral, para todos os usuários.
+
+Para configurações individuais de login (correspondente ao **/etc/profile**), geralmente em **/home** de cada usuário, temos os arquivos, nessa ordem, e logo que um é encontrado e executado, os outros são ignorados:
+- `~/.bash_profile`
+- `~/.bash_login` (caso não exista `~/.bash_profile`)
+- `~/.profile` (mais comum)
+
+Já o correspondente ao **/etc/bash.bashrc**, temos o (nova sessão, novo shell):
+- **~/.bashrc**
+
+Dentro do **/home** do usuário há ainda um arquivo chamado **.bash_logout** que é executado ao fazer logout do usuário.
+
+- `~/.bash_logout`: se existir, este arquivo específico do Bash faz algumas operações de limpeza ao sair do shell. Isso pode ser conveniente em certos casos, como as sessões remotas.
+
+Em **/etc/inputrc** temos a opção de editar as definições de input do terminal. Por exemplo, o que fará a combinação de Ctrl + alguma tecla específica, como limpar tela, e etc.
+
+>[!WARNING]
+>
+>Lembre-se, devido à ordem em que os arquivos são executados, os arquivos **locais** têm precedência sobre os **globais**.
+
+Em **/etc/skel** (de esqueleto): toda vez que criar um usuário, a base de arquivos básicos do usuário será pega daqui, arquivos esses que irão fazer parte do usuário. (será pego desse "esqueleto" de arquivos).<br>
+Se criarmos um arquivo qualquer, como **touch teste-skel**, quando criarmos um novo usuário, esse arquivo ficará disponível no **/home** do novo usuário. Isso se torna interessante quando é necessário colocar alguma configuração específica para todo usuário durante sua criação.
+
+Principais Variáveis de Ambiente
+É importante conhecer a função de algumas variáveis de ambiente existentes no sistema, as principais são:
+
+- **DISPLAY**: Indica às aplicações gráficas onde as janelas deverão ser exibidas. Será estudado no Tópico 106
+- **HISTFILE**: Arquivo do histórico de comandos
+- **HISTFILESIZE**: Quantidade de linhas/comandos armazenados no arquivo de histórico
+- **HOME**: Indica o diretório do usuário atual
+- **LANG**: Definição do idioma
+- **LOGNAME** e **USER**: Nome do usuário atual
+- **PATH**: Diretórios em que o Linux irá procurar por arquivos executáveis
+- **PS1**: Aparência do prompt do shell.
+- **PWD**: Diretório atual
+- **OLDPWD**: Diretório anterior
+
+Outro comando interessante e que alguns alunos já reportaram ter caído nos exames é o **chsh**.
+
+O **chsh** serve simplesmente para alterar o shell utilizado pelo usuário. Por exemplo:
+```
+1.  $ chsh
+2.  Senha:
+3.  Mudando o shell de login para ricardo
+4.  Informe o novo valor ou pressione ENTER para aceitar o padrão
+5.    Shell de Login  [/bin/sh]:  /bin/bash
+```
+
+Ainda sobre terminais, podemos dizer se estiver usando uma interface gráfica, muito provavelmente estará em uso de algum emulador de terminal na GUI, ou um shell **pts**, como gnome-terminal ou konsole (são mais ricos em recursos e fáceis de usar).<br>
+Agora se estiver lidando com console do sistema, ou tty, trata-se de um terminal baseado em texto.<br>
+Pode-se alternar, como já vimos, com as teclas Ctrl+Alt+F1-F6, sendo o F7 normalmente a sssão que leva à interface gráfica.
+
+>[!NOTE]
+>
+>**tty** significa teletypewritter (teletipo); **pts** é a abreviação de pseudo terminal slave (pseudo terminal escravo). Para saber mais: **man tty** e **man pts**
+
+#### Lançando shells com o bash
+Após fazer o login, digite **bash** em um terminal para abrir um novo shell. Tecnicamente, este shell é um processo filho do shell atual.
+
+Ao iniciar o processo filho bash, podemos especificar diversas opções para definir que tipo de shell queremos iniciar. Eis algumas opções importantes de invocação no bash:
+
+- **bash -l** ou **bash --login**: invoca um shell de login.
+- **bash -i**: invoca um shell interativo.
+- **bash --noprofile**: com shells de login, ignora o arquivo de inicialização do sistema /etc/profile e os arquivos de inicialização em nível de usuário ~/.bash_profile, ~/.bash_login e ~/.profile.
+- **bash --norc**: com shells interativos, ignora tanto o arquivo de inicialização do sistema /etc/bash.bashrc quanto o arquivo de inicialização em nível de usuário ~/.bashrc.
+- **bash --rcfile** <file>: com shells interativos, considera <file> como arquivo de inicialização, ignorando os arquivos de inicialização do sistema /etc/bash.bashrc e em nível de usuário ~/.bashrc
+
+#### #### Iniciando shells com  `su`  e  `sudo`
+
+- `su`: muda o ID de user ou o torna superusuário
+- `su - user2`, `su -l user2` ou `su --login user2`: iniciam um shell de login interativo com **user2**
+- `su user2`: inicia um shell sem login interativo como **user2**
+- `su - root` ou `su -`: inicia um shell de login interativo como **root**
+- `su root` ou `su` inicia um shell interativo sem login como `root`
+
+`sudo`: executa comandos como outro usuário (incluindo o superusuário). Como este comando é usado principalmente para obter privilégios de root temporariamente, o usuário que o emprega deve estar no arquivo  `sudoers`. Para adicionar usuários a  `sudoers`, precisamos nos tornar  `root`  e então executar:
+
+    # usermod -aG sudo user2
+
+Assim como o  `su`, o  `sudo`  permite invocar shells de login e sem login:
+-   `sudo su - user2`,  `sudo su -l user2`  ou  `sudo su --login user2`  iniciam um shell de login interativo como  `user2`.   
+-   `sudo su user2`  inicia um shell sem login interativo como  `user2`.
+-   `sudo -u user2 -s`  inicia um shell sem login interativo como  `user2`.
+-   `sudo su - root`  ou  `sudo su -`  inicia um shell de login interativo como  `root`.
+-   `sudo -i`  inicia um shell de login interativo como  `root`.
+-   `sudo -i <algum_comando>`  inicia um shell de login interativo como  `root`, executa o comando e retorna ao usuário original.
+-   `sudo su root`  ou  `sudo su`  inicia um shell sem login interativo como  `root`.
+-   `sudo -s`  ou  `sudo -u root -s`  iniciam um shell sem login como  `root`.
+
+Ao usar `su` ou `sudo`, é importante considerar o contexto particular antes de iniciar um novo shell: Precisamos ou não do ambiente do usuário de destino? Se a resposta for sim, usaríamos as opções que invocam shells de login; se não, as que invocam shells sem login.
+
+- `echo $0`: mostra qual tipo de shell está sendo usado no momento
+
+#### Ver a quantidade de shells
+
+`ps aux | grep bash`: supondo a seguinte saída<br>
+
+    user2@debian:~$ **ps aux | grep bash**
+    user2       5270  0.1  0.1  25532  5664 pts/0    Ss   23:03   0:00 bash
+    user2       5411  0.3  0.1  25608  5268 tty1     S+   23:03   0:00 -bash
+    user2       5452  0.0  0.0  16760   940 pts/0    S+   23:04   0:00 grep --color=auto bash
+    
+A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) e abriu _gnome-terminal_, depois pressionou Ctrl+Alt+F1 para entrar em uma sessão de terminal `tty`. Finalmente, ela retornou à sessão GUI pressionando Ctrl+Alt+F7 e digitou o comando `ps aux | grep bash`. Assim, a saída mostra um shell sem login interativo por meio do emulador de terminal (`pts/0`) e um shell de login interativo por meio do terminal baseado em texto (`tty1`). Note também como o último campo de cada linha (o comando) é `bash` para o primeiro e `-bash` para o último.
+
+- `-bash`  ou  `-su`: Interativo de login
+- `bash`  or  `/bin/bash`: Interativo sem login
+- `<nome_do_script>`: Não-interativo sem login (scripts)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMT
-UzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2
-NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC
-0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0
-OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2Nz
-Q0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDEx
-NDYxMDc0NzRdfQ==
+eyJoaXN0b3J5IjpbLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNz
+IzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEw
+Mjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOS
+wtMjE4Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEw
+MTU1MjE0NzEsLTg0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNz
+Q5NTQsNDMwMjQ2NzQ0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwx
+NDI4MjU3OTk1XX0=
 -->
