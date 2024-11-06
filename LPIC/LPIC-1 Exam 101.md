@@ -702,9 +702,9 @@ O Bash também apresenta variáveis de matriz (array) unidimensionais, de forma 
 
 As matrizes também podem ser declaradas implicitamente quando preenchidas a partir de uma lista predefinida de itens, usando a notação de parênteses:
 
-$ SIZES=( 1048576 1073741824 )
-$ set | grep SIZES
-SIZES=([0][])
+    $ SIZES=( 1048576 1073741824 )
+    $ set | grep SIZES
+    SIZES=([0]="1048576"   [1]="1073741824")
 
 No exemplo, os dois grandes valores inteiros foram armazenados na matriz  `SIZES`. Os elementos da matriz devem ser referenciados usando chaves e colchetes, caso contrário o Bash não alterará nem exibirá o elemento corretamente. Como os índices da matriz começam em 0, o conteúdo do primeiro elemento está em  `${SIZES[0]}`, o segundo em  `${SIZES[1]}`  e assim por diante:
 
@@ -878,11 +878,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDcxMTI1NSwtMTUwODIzMjEwLDE3Mj
-Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
-NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
-wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
-OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NT
-IzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwx
-MDk4NTUxNjU4XX0=
+eyJoaXN0b3J5IjpbLTIwMjk4NDA1NjYsLTE1MDgyMzIxMCwxNz
+I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
+MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
+QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
+Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
+UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
+MTA5ODU1MTY1OF19
 -->
