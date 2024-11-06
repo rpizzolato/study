@@ -618,7 +618,7 @@ Isso inclusive faz com que seja executado no bash atual, sem mudar para um proce
 Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro de permissão, pois o arquivo não tem permissão de execução. Precisaria executar `chmod u+x script`, para dar permissão de execução para o arquivo (nesse caso, permissão para o usuário dono do arquivo).
 
 - `exec script.sh`: executa o script e fecha a sessão atual (nem dá pra ver o resultado, pois já fecha em seguida)
-- 
+- `bash script.sh`: também executa o script sem o bit de execução.
 
 Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
 
@@ -808,7 +808,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzODc4Nzc1OSwtMjQzMDM4MDE0LC0yMD
+eyJoaXN0b3J5IjpbMTAyMjczOTU2OSwtMjQzMDM4MDE0LC0yMD
 M5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIx
 OTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MS
 w1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcx
