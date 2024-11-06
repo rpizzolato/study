@@ -609,6 +609,7 @@ Ao criar um `script.sh` (script = sequencia de comandos) comum, como por exemplo
     echo "Fim Script"
 
 Podemos executá-lo usando apenas o comando source ou ponto (.)<br>
+Quando um script é executado, os comandos nele contidos não são executados diretamente na sessão atual, mas sim por um novo processo do Bash, chamado _sub-shell_. Isso evita que o script sobrescreva as variáveis de ambiente da sessão atual e faça modificações indesejadas nela. Se o objetivo é executar o conteúdo do script na sessão atual do shell, ele deve ser executado com `source script.sh` ou `. script.sh` (note que há um espaço entre o ponto e o nome do script).
 
     $ source script.sh
     $ . script.sh
@@ -812,11 +813,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMD
-M5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIx
-OTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MS
-w1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcx
-MTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOT
-Y2NSwxMDk4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywt
-MTgwNTI1NTU2MV19
+eyJoaXN0b3J5IjpbMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0yND
+MwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0OTY0
+NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2NzQ0LC
+0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDExNDYx
+MDc0NzQsLTEzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkzMTc4MD
+YyLC0xODk4NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4Mywy
+MDkwNTg5MDEzXX0=
 -->
