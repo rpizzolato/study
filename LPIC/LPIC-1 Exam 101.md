@@ -926,17 +926,17 @@ O espaço reservado  `%s`  destina-se ao conteúdo de texto (será substituído 
 
 Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna possível armazenar o padrão de texto em uma variável separada:
 
-MSG='Operating system:\t%s\nUnallocated RAM:\t%d MB\n'
-printf "$MSG" $OS $(( $FREE / 1024**2 ))
+    MSG='Operating system:\t%s\nUnallocated RAM:\t%d MB\n'
+    printf "$MSG" $OS $(( $FREE / 1024**2 ))
 
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQ4MTY4ODEsLTExOTY1NjE1MjYsLT
-I2MDYxMDI5NywtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3
-MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNj
-QwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwx
-OTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OT
-Q2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIz
-LDE0MDg0MTczNjFdfQ==
+eyJoaXN0b3J5IjpbMTE3MjM2NTcxMSwtMTE5NjU2MTUyNiwtMj
+YwNjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcy
+ODMxOSwtMjE4Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2ND
+AsLTEwMTU1MjE0NzEsLTg0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5
+NDgwNzQ5NTQsNDMwMjQ2NzQ0LC0xOTY5ODY5OTgxLDU3NTc5ND
+YzNSwxNDI4MjU3OTk1LDExNDYxMDc0NzQsLTEzNzExMTg1MjMs
+MTQwODQxNzM2MV19
 -->
