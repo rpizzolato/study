@@ -876,7 +876,7 @@ Ex. `cat teste | wc -l`: executa o primeiro comando e a saída do mesmo serve de
 
 Ex. `date ; ls -l ; teste2 ; echo Exemplo`: executa todos, mesmo que dê erro
 
-Ex. `ls -ls teste && echo Exemplo`: só executa o segundo comando, se o primeiro der sucesso (caso exista o arquivo teste, senão seria erro, caso ele não exista)
+Ex. `ls -ls teste && echo Exemplo`: só executa o segundo comando, se o primeiro der sucesso (caso exista o arquivo teste, senão seria erro, caso ele não exista - ou seja, o status de saída igual a `0`)
 
 Ex. `ls -ls teste || echo Exemplo`: só executa o segundo comando, se o primeiro falhar. Executando o primeiro já encerra a execução.
 
@@ -889,11 +889,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDYxMDI5NywtMTIxNzg1NjQzOCwtMT
-UwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4
-MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1Mz
-EsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2
-OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3ND
-c0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2Miwt
-MTg5ODYwOTY2NV19
+eyJoaXN0b3J5IjpbLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMT
+IxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4
+NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxND
+cxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQz
+MDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nz
+k5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEs
+LTc5MzE3ODA2Ml19
 -->
