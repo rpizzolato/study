@@ -714,7 +714,7 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
 
 ##### Case
 
-    read $VAR1
+    read VAR1
     case $VAR1 in
 	    0)
 		    echo "O valor digitado foi 0"
@@ -749,18 +749,18 @@ Ex.<br>
 
 ##### for
 
-	read $VAR1
+	read VAR1
     for i in 1 2 3 4 5
     do
 	    j=`expr $i + $VAR1`
 		echo "$i + $VAR1 = $j
 	done
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwMjQ2NzQ0LC0xOTY5ODY5OTgxLDU3NT
-c5NDYzNSwxNDI4MjU3OTk1LDExNDYxMDc0NzQsLTEzNzExMTg1
-MjMsMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xODk4NjA5NjY1LD
-EwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5MDEzLC0xODA1
-MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2Nj
-U3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOTIw
-OSwtMTk1MjA2NTAwM119
+eyJoaXN0b3J5IjpbMTA1NzI3MTAxNiw0MzAyNDY3NDQsLTE5Nj
+k4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3
+NCwtMTM3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLT
+E4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1
+ODkwMTMsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLTE5MjMyMD
+Q2NjcsMTAzNzY2NTczOCwtMTQ5NjI5MTc2NCwxODQ1NzMwNjEz
+LC0xODY3NjM5MjA5XX0=
 -->
