@@ -778,6 +778,84 @@ O comando `test` pode ser executado no terminal diretamente. Vejamos alguns exem
 
 Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Podemos ter as seguintes opções:
 
+- `-a "$VAR"`: avalia se o caminho em  `VAR`  existe no sistema de arquivos e é um arquivo.
+- `-b "$VAR"`: avalia se o caminho em  `VAR`  é um arquivo de bloco especial.
+- `-c "$VAR"`: avalia se o caminho em  `VAR`  é um arquivo de caractere especial.
+- `-d "$VAR"`: avalia se o caminho em  `VAR`  é um diretório.
+- `-e "$VAR"`: avalia se o caminho em  `VAR`  existe no sistema de arquivos.
+- `-f "$VAR"`: avalia se o caminho em  `VAR`  existe e é um arquivo regular.
+
+`-g "$VAR"`
+
+Avalia se o caminho em  `VAR`  tem permissão SGID.
+
+`-h "$VAR"`
+
+Avalia se o caminho em  `VAR`  é um link simbólico.
+
+`-L "$VAR"`
+
+Avalia se o caminho em  `VAR`  é um link simbólico (como  `-h`).
+
+`-k "$VAR"`
+
+Avalia se o caminho em  `VAR`  tem a permissão  _sticky bit_.
+
+`-p "$VAR"`
+
+Avalia se o caminho em  `VAR`  é um arquivo  _pipe_.
+
+`-r "$VAR"`
+
+Avalia se o caminho em  `VAR`  é legível pelo usuário atual.
+
+`-s "$VAR"`
+
+Avalia se o caminho em  `VAR`  existe e não está vazio.
+
+`-S "$VAR"`
+
+Avalia se o caminho em  `VAR`  é um arquivo de socket.
+
+`-t "$VAR"`
+
+Avalia se o caminho em  `VAR`  está aberto em um terminal.
+
+`-u "$VAR"`
+
+Avalia se o caminho em  `VAR`  tem permissão SUID.
+
+`-w "$VAR"`
+
+Avalia se o caminho em  `VAR`  é gravável pelo usuário atual.
+
+`-x "$VAR"`
+
+Avalia se o caminho em  `VAR`  é executável pelo usuário atual.
+
+`-O "$VAR"`
+
+Avalia se o caminho em  `VAR`  é de propriedade do usuário atual.
+
+`-G "$VAR"`
+
+Avalia se o caminho em  `VAR`  pertence ao grupo efetivo do usuário atual.
+
+`-N "$VAR"`
+
+Avalia se o caminho em  `VAR`  foi modificado desde o último acesso.
+
+`"$VAR1" -nt "$VAR2"`
+
+Avalia se o caminho em  `VAR1`  é mais recente que o caminho em  `VAR2`, de acordo com as datas de modificação respectivas.
+
+`"$VAR1" -ot "$VAR2"`
+
+Avalia se o caminho em  `VAR1`  é mais antigo que  `VAR2`.
+
+`"$VAR1" -ef "$VAR2"`
+
+Esta expressão avalia como True (Verdadeiro) se o caminho em  `VAR1`  é um link físico para  `VAR2`.
 
 Outro exemplo interessante:<br>
 
@@ -944,11 +1022,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODkzMjk2ODYsMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
-UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
-ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
-Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
-MTE0NjEwNzQ3NF19
+eyJoaXN0b3J5IjpbMjYwMTI0ODIwLDExNzIzNjU3MTEsMTIzMT
+UzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2
+NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC
+0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0
+OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2Nz
+Q0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDEx
+NDYxMDc0NzRdfQ==
 -->
