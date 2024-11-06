@@ -755,8 +755,18 @@ Ex.<br>
 	    j=`expr $i + $VAR1`
 		echo "$i + $VAR1 = $j
 	done
+
+Usando o `seq`:
+
+    read VAR1
+    for i in 1 2 3 4 5
+    do
+	    j=`expr $i + $VAR1`
+		echo "$i + $VAR1 = $j
+	done
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NzI3MTAxNiw0MzAyNDY3NDQsLTE5Nj
+eyJoaXN0b3J5IjpbMTA0MDAzMjIwMSw0MzAyNDY3NDQsLTE5Nj
 k4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3
 NCwtMTM3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLT
 E4OTg2MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1
