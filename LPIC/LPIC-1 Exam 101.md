@@ -812,6 +812,31 @@ Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Pod
 - `"$TXT1" < "$TXT2"`: avalia se  `TXT1`  vem antes de  `TXT2`, em ordem alfabética.
 - `"$TXT1" > "$TXT2"`: avalia se  `TXT1`  vem depois de  `TXT2`, em ordem alfabética.
 
+- `$NUM1 -lt $NUM2`: avalia se  `NUM1`  é menor que  `NUM2`.
+- `$NUM1 -gt $NUM2`: avalia se  `NUM1`  é maior que  `NUM2`.
+- `$NUM1 -le $NUM2`: avalia se  `NUM1`  é menor ou igual a  `NUM2`.
+- `$NUM1 -ge $NUM2`: avalia se  `NUM1`  é maior ou igual a  `NUM2`.
+- `$NUM1 -eq $NUM2`: avalia se  `NUM1`  é igual a  `NUM2`.
+- 
+
+`$NUM1 -ne $NUM2`
+
+Avalia se  `NUM1`  não é igual a  `NUM2`.
+
+Todos os testes podem receber os seguintes modificadores:
+
+`! EXPR`
+
+Avalia se a expressão  `EXPR`  é falsa.
+
+`EXPR1 -a EXPR2`
+
+Avalia se tanto  `EXPR1`  quanto  `EXPR2`  são verdadeiras.
+
+`EXPR1 -o EXPR2`
+
+Avalia se ao menos uma das duas expressões é verdadeira.
+
 
 
 Outro exemplo interessante:<br>
@@ -979,11 +1004,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NjI5OTk2NSwxMTcyMzY1NzExLDEyMz
-E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
-NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
-wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
-NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Nj
-c0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwx
-MTQ2MTA3NDc0XX0=
+eyJoaXN0b3J5IjpbLTE0OTkyNDE5NzksMTE3MjM2NTcxMSwxMj
+MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
+NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
+UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
+ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
+Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
+MTE0NjEwNzQ3NF19
 -->
