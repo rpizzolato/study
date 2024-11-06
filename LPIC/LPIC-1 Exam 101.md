@@ -940,7 +940,7 @@ Ex.<br>
     $ echo $( (5**2 ) )
     25
 
-Ex
+Exemplo1:<br>
 
 Usando o `seq`:
 
@@ -951,6 +951,25 @@ Usando o `seq`:
 		echo "$i + $VAR1 = $j
 		sleep 1
 	done
+
+Exemplo2:<br>
+
+    #!/bin/bash
+    
+    SEQ=( 1 1 2 3 5 8 13 )
+    
+    for (( IDX = 0; IDX < ${#SEQ[*]}; IDX++ ))
+    do
+    	echo -n "${SEQ[$IDX]} is "
+    	if [ $(( ${SEQ[$IDX]} % 2 )) -ne 0 ]
+    	then
+    		echo "odd."
+    	else
+    		echo "even."
+      fi
+    done
+
+Este script gera exatamente a mesma saída do exemplo anterior. No entanto, em vez de usar a variável  `NUM`  para armazenar um item por vez, a variável  `IDX`  é empregada para rastrear o índice da matriz atual em ordem crescente, começando de 0 e continuando a adicionar enquanto esse número permanecer abaixo do número de itens na matriz  `SEQ`. O item em si é recuperado de sua posição na matriz com  `${SEQ[$IDX]}`.
 
 
 
@@ -1034,11 +1053,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTcwMjE3NzgsMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
-UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
-ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
-Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
-MTE0NjEwNzQ3NF19
+eyJoaXN0b3J5IjpbMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMT
+UzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2
+NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC
+0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0
+OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2Nz
+Q0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDEx
+NDYxMDc0NzRdfQ==
 -->
