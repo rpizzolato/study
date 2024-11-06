@@ -898,7 +898,7 @@ Cada lista de padrões e comandos associados deve terminar com  `;;`,  `;&`, ou 
 >[!TIP]
 >
 >
->
+> O Bash tem uma opção chamada `nocasematch` que ativa a correspondência de padrões sem distinção entre maiúsculas e minúsculas para a construção `case` e outros comandos condicionais. O comando interno `shopt` alterna os valores das configurações que controlam comportamentos opcionais do shell: `shopt -s` habilita (_set_) a opção fornecida e `shopt -u` desabilita (_unset_) a opção fornecida. Portanto, colocar `shopt -s nocasematch` antes da construção case permite encontrar padrões sem diferenciar maiúsculas de minúsculas. As opções modificadas por `shopt` afetarão apenas a sessão atual, de forma que as opções modificadas dentro de scripts em execução em um sub-shell — o que é a maneira padrão de executar um script — não afetarão as opções da sessão pai.
 
 #### Loops
 
@@ -940,6 +940,8 @@ Ex.<br>
     $ echo $( (5**2 ) )
     25
 
+Ex
+
 Usando o `seq`:
 
     read VAR1
@@ -949,6 +951,8 @@ Usando o `seq`:
 		echo "$i + $VAR1 = $j
 		sleep 1
 	done
+
+
 
 ##### while
 
@@ -1030,11 +1034,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NjEyMDE3MiwxMTcyMzY1NzExLDEyMz
-E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
-NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
-wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
-NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Nj
-c0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwx
-MTQ2MTA3NDc0XX0=
+eyJoaXN0b3J5IjpbLTE4NTcwMjE3NzgsMTE3MjM2NTcxMSwxMj
+MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
+NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
+UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
+ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
+Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
+MTE0NjEwNzQ3NF19
 -->
