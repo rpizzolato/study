@@ -891,6 +891,15 @@ Exemplo 2:<br>
     esac
     echo " package format."
 
+Cada lista de padrões e comandos associados deve terminar com  `;;`,  `;&`, ou  `;;&`. O último padrão, um asterisco, será usado se não for encontrada uma correspondência para nenhum outro padrão anterior. A instrução  `esac`  (_case_  de trás pra frente) conclui a construção  `case`. Supondo que o script de amostra anterior se chame  `script.sh`  e seja executado com  `opensuse`  como primeiro argumento, a seguinte saída será gerada:
+
+    $ ./script.sh opensuse
+    Distribution opensuse uses the RPM package format.
+>[!TIP]
+>
+>
+>
+
 #### Loops
 
 - `seq`: faz uma sequencia de acordo com o número que coloque.<br>
@@ -1021,11 +1030,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg5ODMzNTM4LDExNzIzNjU3MTEsMTIzMT
-UzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2
-NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC
-0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0
-OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2Nz
-Q0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDEx
-NDYxMDc0NzRdfQ==
+eyJoaXN0b3J5IjpbMTE2NjEyMDE3MiwxMTcyMzY1NzExLDEyMz
+E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
+NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
+wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
+NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Nj
+c0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwx
+MTQ2MTA3NDc0XX0=
 -->
