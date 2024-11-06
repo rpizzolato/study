@@ -660,6 +660,18 @@ echo "O valor digitado foi $VAR1"
 ```
 - `echo -n`: não quebra linha
 
+echo "Do you want to continue (y/n)?"
+read ANSWER
+
+O valor retornado será armazenado na variável  `ANSWER`. Se o nome da variável não for fornecido, o nome da variável  `REPLY`  será usado por padrão. Também é possível usar o comando  `read`  para ler mais de uma variável simultaneamente:
+
+echo "Type your first name and last name:"
+read NAME SURNAME
+
+Neste caso, cada termo separado por espaços será atribuído às variáveis  `NAME`  e  `SURNAME`  respectivamente. Se o número de termos dados for maior que o número de variáveis, os termos excedentes serão armazenados na última variável. O próprio  `read`  pode exibir a mensagem para o usuário com a opção  `-p`, tornando o comando  `echo`  redundante nesse caso:
+
+read -p "Type your first name and last name:" NAME SURNAME
+
 #### Declarando variáveis
 
 A declaração de variáveis **NÃO** usa cifrão (`$`), já no uso da variável, **TEM QUE USAR**. Exemplo:<br>
@@ -820,11 +832,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDM0Njc3MTYsLTE1MDgyMzIxMCwxNz
-I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
-MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
-QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
-Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
-UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
-MTA5ODU1MTY1OF19
+eyJoaXN0b3J5IjpbMTAzNDU4NjI5MCwtMTUwODIzMjEwLDE3Mj
+Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
+NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
+wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
+OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NT
+IzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwx
+MDk4NTUxNjU4XX0=
 -->
