@@ -665,12 +665,12 @@ read ANSWER
 
 O valor retornado será armazenado na variável  `ANSWER`. Se o nome da variável não for fornecido, o nome da variável  `REPLY`  será usado por padrão. Também é possível usar o comando  `read`  para ler mais de uma variável simultaneamente:
 
-echo "Type your first name and last name:"
-read NAME SURNAME
+    echo "Type your first name and last name:"
+    read NAME SURNAME
 
 Neste caso, cada termo separado por espaços será atribuído às variáveis  `NAME`  e  `SURNAME`  respectivamente. Se o número de termos dados for maior que o número de variáveis, os termos excedentes serão armazenados na última variável. O próprio  `read`  pode exibir a mensagem para o usuário com a opção  `-p`, tornando o comando  `echo`  redundante nesse caso:
 
-read -p "Type your first name and last name:" NAME SURNAME
+    read -p "Type your first name and last name:" NAME SURNAME
 
 #### Declarando variáveis
 
@@ -683,7 +683,7 @@ A declaração de variáveis **NÃO** usa cifrão (`$`), já no uso da variável
     echo "O arquivo /etc/passwd possui $VAR1 linhas. A hora atual é $VAR2."
 
 *Podemos colocar execução de comandos utilizando crase (\`) ou com a sitaxe `$()`
-
+**A notação de crase é conhecida como **backtick**
 #### Instruções condicionais (if e case)
 
 Vejamos um exemplo:
@@ -832,7 +832,7 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDU4NjI5MCwtMTUwODIzMjEwLDE3Mj
+eyJoaXN0b3J5IjpbMTYyMzkxNDY0MiwtMTUwODIzMjEwLDE3Mj
 Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
 NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
 wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
