@@ -765,10 +765,15 @@ Usando o `seq`:
 		echo "$i + $VAR1 = $j
 		sleep 1
 	done
-####
+
+##### while
+
+    while [ $VAR1 -le $1 ]
+    do
+	    echo "O valor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NjMzMTMzNiwxOTQ4MDc0OTU0LDQzMD
+eyJoaXN0b3J5IjpbLTk5MzI3MDQ4MSwxOTQ4MDc0OTU0LDQzMD
 I0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5
 NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLT
 c5MzE3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0
