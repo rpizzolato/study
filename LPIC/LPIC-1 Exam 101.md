@@ -888,14 +888,55 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
     ls -l arquivo_importante || mail -s "arquivo não existe mais" root < .
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
+###$$ Saída do script (echo e printf)
 
+Mesmo quando a finalidade de um script envolve apenas operações orientadas a arquivos, é importante exibir mensagens relacionadas ao progresso na saída padrão, para que o usuário seja informado sobre quaisquer problemas e possa, eventualmente, usar essas mensagens para gerar logs de operação.
+
+O comando interno do Bash  `echo`  é comumente usado para exibir strings de texto simples, mas ele também oferece alguns recursos estendidos. Com a opção  `-e`, o comando  `echo`  é capaz de exibir caracteres especiais usando sequências de escape (uma sequência de barra invertida designando um caractere especial). Por exemplo:
+
+    #!/bin/bash
+    
+    # Get the operating system's generic name
+    OS=$(uname -o)
+    
+    # Get the amount of free memory in bytes
+    FREE=$(( 1000 * `sed -nre '2s/[^[:digit:]]//gp' < /proc/meminfo` ))
+    
+    echo -e "Operating system:\t$OS"
+    echo -e "Unallocated RAM:\t$(( $FREE / 1024**2 )) MB"
+
+Embora o uso de aspas seja opcional ao se usar  `echo`  sem opções, é necessário adicioná-las ao incluir a opção  `-e`; caso contrário, os caracteres especiais podem não ser lidos corretamente. No script anterior, ambos os comandos  `echo`  usam o caractere de tabulação  `\t`  para alinhar o texto, resultando na seguinte saída:
+
+    Operating system:       GNU/Linux
+    Unallocated RAM:        1491 MB
+
+O caractere de nova linha  `\n`  pode ser usado para separar as linhas da saída, de forma que exatamente a mesma saída é obtida combinando-se os dois comandos  `echo`  em um só:
+
+    echo -e "Operating system:\t$OS\nUnallocated RAM:\t$(( $FREE / 1024**2 )) MB"
+
+Embora adequado para exibir a maioria das mensagens de texto, o comando  `echo`  pode não ser o melhor para padrões de texto mais específicos. O comando interno do Bash  `printf`  oferece mais controle sobre a exibição das variáveis. O comando  `printf`  usa o primeiro argumento como formato da saída, onde os marcadores serão substituídos pelos argumentos seguintes na ordem em que aparecem na linha de comando. Assim, a mensagem do exemplo anterior poderia ser gerada com o seguinte comando  `printf`:
+
+    printf "Operating system:\t%s\nUnallocated RAM:\t%d MB\n" $OS $(( $FREE / 1024**2 ))
+
+O espaço reservado  `%s`  destina-se ao conteúdo de texto (será substituído pela variável  `$OS`) e o espaço reservado  `%d`  destina-se a números inteiros (será substituído pelo número resultante de megabytes livres na RAM). O  `printf`  não acrescenta um caractere de nova linha no final do texto, então o caractere de nova linha  `\n`  deve ser posto ao fim do padrão, se necessário. Todo o padrão deve ser interpretado como um único argumento e, portanto, deve ser posto entre aspas.
+
+>[!TIP]
+>
+> O formato de substituição do espaço reservado realizada por  `printf`  pode ser personalizado com o mesmo formato usado pela função  `printf`  da linguagem de programação C. A referência completa para a função  `printf`  pode ser encontrada em sua página de manual, acessada com o comando  `man 3 printf`.
+
+Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna possível armazenar o padrão de texto em uma variável separada:
+
+MSG='Operating system:\t%s\nUnallocated RAM:\t%d MB\n'
+printf "$MSG" $OS $(( $FREE / 1024**2 ))
+
+Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyOTAwODM4LC0xMTk2NTYxNTI2LC0yNj
-A2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4
-MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MC
-wtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0
-ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0Nj
-M1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywx
-NDA4NDE3MzYxXX0=
+eyJoaXN0b3J5IjpbLTExNTQ4MTY4ODEsLTExOTY1NjE1MjYsLT
+I2MDYxMDI5NywtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3
+MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNj
+QwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwx
+OTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OT
+Q2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIz
+LDE0MDg0MTczNjFdfQ==
 -->
