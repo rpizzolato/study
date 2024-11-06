@@ -817,11 +817,7 @@ Supõe que a variável $VAR guarde um caminho para um arquivo ou diretório. Pod
 - `$NUM1 -le $NUM2`: avalia se  `NUM1`  é menor ou igual a  `NUM2`.
 - `$NUM1 -ge $NUM2`: avalia se  `NUM1`  é maior ou igual a  `NUM2`.
 - `$NUM1 -eq $NUM2`: avalia se  `NUM1`  é igual a  `NUM2`.
-- 
-
-`$NUM1 -ne $NUM2`
-
-Avalia se  `NUM1`  não é igual a  `NUM2`.
+- `$NUM1 -ne $NUM2`: avalia se  `NUM1`  não é igual a  `NUM2`.
 
 Todos os testes podem receber os seguintes modificadores:
 
@@ -860,6 +856,7 @@ Abaixo, outro exemplo um pouco mais complexo:
 O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se o arquivo existe e se está com permissão de somente leitura.
 
 ##### Case
+Exemplo1:<br>
 
     read VAR1
     case $VAR1 in
@@ -873,6 +870,26 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
 	    *)
 		    echo "O valor digitado foi maior que 5"
 	esac
+
+Exemplo 2:<br>
+
+    #!/bin/bash
+    
+    DISTRO=$1
+    
+    echo -n "Distribution $DISTRO uses "
+    case "$DISTRO" in
+    	debian | ubuntu | mint)
+        echo -n "the DEB"
+      ;;
+    	centos | fedora | opensuse )
+        echo -n "the RPM"
+      ;;
+    	*)
+        echo -n "an unknown"
+      ;;
+    esac
+    echo " package format."
 
 #### Loops
 
@@ -1004,11 +1021,11 @@ Com  `printf`, as variáveis são postas fora do padrão de texto, o que torna p
 Este método é particularmente útil para exibir formatos de saída distintos, dependendo dos requisitos do usuário. Fica mais fácil, por exemplo, produzir um script que use um padrão de texto distinto se o usuário precisar de uma lista CSV (valores separados por vírgula) em vez de uma mensagem de saída padrão.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTkyNDE5NzksMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
-UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
-ODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3NDk1NCw0MzAyND
-Y3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUs
-MTE0NjEwNzQ3NF19
+eyJoaXN0b3J5IjpbODg5ODMzNTM4LDExNzIzNjU3MTEsMTIzMT
+UzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2
+NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC
+0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0
+OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2Nz
+Q0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDEx
+NDYxMDc0NzRdfQ==
 -->
