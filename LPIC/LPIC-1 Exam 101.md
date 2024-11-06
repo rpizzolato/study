@@ -730,7 +730,7 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
 #### Loops
 
 - `seq`: faz uma sequencia de acordo com o número que coloque.<br>
-
+Ex.<br>
     $ seq 5
     1
     2
@@ -738,13 +738,21 @@ O `-z` significa se o tamanho (length) da string é zero e o `-r` quer dizer se 
     4
     5
 
+- `expr`: faz conta aritmética<br>
+Ex.<br>
+
+    $ expr 1 + 2
+    3
+
+    $ expr 1 - 2
+    -1
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg2NDQ1OTQzLC0xOTY5ODY5OTgxLDU3NT
-c5NDYzNSwxNDI4MjU3OTk1LDExNDYxMDc0NzQsLTEzNzExMTg1
-MjMsMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xODk4NjA5NjY1LD
-EwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5MDEzLC0xODA1
-MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3LDEwMzc2Nj
-U3MzgsLTE0OTYyOTE3NjQsMTg0NTczMDYxMywtMTg2NzYzOTIw
-OSwtMTk1MjA2NTAwM119
+eyJoaXN0b3J5IjpbMTEwOTU0OTEzNSwtMTk2OTg2OTk4MSw1Nz
+U3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4
+NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NS
+wxMDk4NTUxNjU4LDEyMjg0NTc0ODMsMjA5MDU4OTAxMywtMTgw
+NTI1NTU2MSwtMTAzMjA5NDQyOCwtMTkyMzIwNDY2NywxMDM3Nj
+Y1NzM4LC0xNDk2MjkxNzY0LDE4NDU3MzA2MTMsLTE4Njc2Mzky
+MDksLTE5NTIwNjUwMDNdfQ==
 -->
