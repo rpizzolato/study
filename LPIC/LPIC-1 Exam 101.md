@@ -694,6 +694,40 @@ O comprimento de uma variável, ou seja, a quantidade de caracteres que ela cont
     $ echo ${#OS}
     9
 
+##### Arrays (matriz unidimensionais)
+
+O Bash também apresenta variáveis de matriz (array) unidimensionais, de forma que um conjunto de elementos relacionados pode ser armazenado com um único nome de variável. Cada elemento de uma matriz possui um índice numérico, que deve ser usado para escrever e ler valores no elemento correspondente. Ao contrário das variáveis comuns, as matrizes devem ser declaradas com o comando interno do Bash  `declare`. Por exemplo, para declarar uma variável chamada  `SIZES`  como uma matriz:
+
+$ **declare -a SIZES**
+
+As matrizes também podem ser declaradas implicitamente quando preenchidas a partir de uma lista predefinida de itens, usando a notação de parênteses:
+
+$ **SIZES=( 1048576 1073741824 )**
+
+No exemplo, os dois grandes valores inteiros foram armazenados na matriz  `SIZES`. Os elementos da matriz devem ser referenciados usando chaves e colchetes, caso contrário o Bash não alterará nem exibirá o elemento corretamente. Como os índices da matriz começam em 0, o conteúdo do primeiro elemento está em  `${SIZES[0]}`, o segundo em  `${SIZES[1]}`  e assim por diante:
+
+$ **echo ${SIZES[0]}**
+1048576
+$ **echo ${SIZES[1]}**
+1073741824
+
+Diferente da leitura, a alteração do conteúdo de um elemento da matriz é realizada sem as chaves (por exemplo,  `SIZES[0]=1048576`). Como no caso das variáveis comuns, o comprimento de um elemento em uma matriz é retornado com o caractere hash (por exemplo,  `${#SIZES[0]}`  para o comprimento do primeiro elemento da matriz  `SIZES`). O número total de elementos em uma matriz é retornado se  `@`  ou  `*`  forem usados como o índice:
+
+$ **echo ${#SIZES[@]}**
+2
+$ **echo ${#SIZES[*]}**
+2
+
+As matrizes também podem ser declaradas usando-se, como elementos iniciais, a saída de um comando, por meio da substituição de comando. O exemplo a seguir mostra como criar uma matriz do Bash cujos elementos são os sistemas de arquivos suportados pelo sistema atual:
+
+$ **FS=( $(cut -f 2 < /proc/filesystems) )**
+
+O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimidados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  se tornarão um elemento de matriz.
+
+Tip
+
+O Bash trata cada caractere do  `$IFS`  (_Input Field Separator_  ou separador de campos) de uma variável de ambiente como um delimitador. Para alterar o delimitador de campo apenas para caracteres de nova linha, por exemplo, a variável IFS deve ser redefinida com o comando  `IFS=$'\n'`.
+
 #### Instruções condicionais (if e case)
 
 Vejamos um exemplo:
@@ -842,11 +876,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDU2MDA2MzQsLTE1MDgyMzIxMCwxNz
-I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
-MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
-QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
-Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
-UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
-MTA5ODU1MTY1OF19
+eyJoaXN0b3J5IjpbMTM5OTY4MDg1OSwtMTUwODIzMjEwLDE3Mj
+Q3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5Mjcz
+NjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NC
+wxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2OTg2OTk4MSw1NzU3
+OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NT
+IzLDE0MDg0MTczNjEsLTc5MzE3ODA2MiwtMTg5ODYwOTY2NSwx
+MDk4NTUxNjU4XX0=
 -->
