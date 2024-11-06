@@ -621,6 +621,8 @@ Se tentar executar usando `./script.sh` ou o caminho absoluto dele, vai dar erro
 
 Caso queira direcionar algum outro interpretador, usa-se o she-bang, que no caso é indicar no começo do arquivo: `#!/bin/bash`
 
+
+
 #### Parâmetro em shell script
 
 - `$0`: imprime o nome do arquivo que está sendo executado
@@ -803,11 +805,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMT
-AxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQsMTk0ODA3
-NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1Nzk0NjM1LD
-E0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExODUyMywxNDA4
-NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUsMTA5ODU1MT
-Y1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMsLTE4MDUyNTU1NjEs
-LTEwMzIwOTQ0MjhdfQ==
+eyJoaXN0b3J5IjpbLTExMzI5NDg3MDYsLTI0MzAzODAxNCwtMj
+AzOTI3MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYy
+MTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5OD
+EsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3
+MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MD
+k2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMTMs
+LTE4MDUyNTU1NjFdfQ==
 -->
