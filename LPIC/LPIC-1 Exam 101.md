@@ -724,7 +724,7 @@ As matrizes também podem ser declaradas usando-se, como elementos iniciais, a s
 
     $ FS=( $(cut -f 2 < /proc/filesystems) )
 
-O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimidados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  se tornarão um elemento de matriz.
+O comando  `cut -f 2 < /proc/filesystems`  exibe todos os sistemas de arquivos atualmente suportados pelo kernel em execução (listados na segunda coluna do arquivo  `/proc/filesystems`), de forma que a matriz  `FS`  agora contém um elemento para cada sistema de arquivos suportado. Qualquer conteúdo de texto pode ser usado para inicializar uma matriz, já que, por padrão, quaisquer termos delimitados por caracteres de  _espaço_,  _tabulação_  ou  _nova linha_  se tornarão um elemento de matriz.
 
 Tip
 
@@ -878,11 +878,11 @@ Imagine uma checagem de um arquivo muito importante, caso ele desaparece, tenha 
 Se executar o comando acima e der sucesso, não faz nada. Mas se der erro, executa o segundo comando, no caso, enviar um email avisando que o arquivo não existe mais.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNz
-I0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3
-MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1Nz
-QsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEsNTc1
-Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMTM3MTExOD
-UyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2MDk2NjUs
-MTA5ODU1MTY1OF19
+eyJoaXN0b3J5IjpbLTY0NjU5NzU0MiwtMTIxNzg1NjQzOCwtMT
+UwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQzMDM4
+MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2NDU1Mz
+EsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwtMTk2
+OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5NSwxMTQ2MTA3ND
+c0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLTc5MzE3ODA2Miwt
+MTg5ODYwOTY2NV19
 -->
