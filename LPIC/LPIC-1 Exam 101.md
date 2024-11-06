@@ -770,10 +770,13 @@ Usando o `seq`:
 
     while [ $VAR1 -le $1 ]
     do
-	    echo "O valor
+	    echo "O valor atual do \$VAR1 é: $VAR1"
+	    VAR1=`expr $VAR1 + 1`
+	    sleep 1
+	done
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MzI3MDQ4MSwxOTQ4MDc0OTU0LDQzMD
+eyJoaXN0b3J5IjpbMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMD
 I0Njc0NCwtMTk2OTg2OTk4MSw1NzU3OTQ2MzUsMTQyODI1Nzk5
 NSwxMTQ2MTA3NDc0LC0xMzcxMTE4NTIzLDE0MDg0MTczNjEsLT
 c5MzE3ODA2MiwtMTg5ODYwOTY2NSwxMDk4NTUxNjU4LDEyMjg0
