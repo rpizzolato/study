@@ -777,19 +777,19 @@ Usando o `seq`:
 
 ##### until
 
-    until [ $VAR1 -le $1 ] #até que isso seja verdadeiro, faça...
+    until [ $VAR1 = 0 ] #até que isso seja verdadeiro, faça...chegando no 0, não executa o looping
     do
 	    echo "O valor atual do \$VAR1 é: $VAR1"
-	    VAR1=`expr $VAR1 + 1`
+	    VAR1=`expr $VAR1 - 1`
 	    sleep 1
 	done
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTk1NDI4NCwtODQ5NjQ1NTMxLDEwND
-YyMTk1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5
-ODEsNTc1Nzk0NjM1LDE0MjgyNTc5OTUsMTE0NjEwNzQ3NCwtMT
-M3MTExODUyMywxNDA4NDE3MzYxLC03OTMxNzgwNjIsLTE4OTg2
-MDk2NjUsMTA5ODU1MTY1OCwxMjI4NDU3NDgzLDIwOTA1ODkwMT
-MsLTE4MDUyNTU1NjEsLTEwMzIwOTQ0MjgsLTE5MjMyMDQ2Njcs
-MTAzNzY2NTczOF19
+eyJoaXN0b3J5IjpbLTE2Njk2NDEzNzIsLTg0OTY0NTUzMSwxMD
+Q2MjE5NTc0LDE5NDgwNzQ5NTQsNDMwMjQ2NzQ0LC0xOTY5ODY5
+OTgxLDU3NTc5NDYzNSwxNDI4MjU3OTk1LDExNDYxMDc0NzQsLT
+EzNzExMTg1MjMsMTQwODQxNzM2MSwtNzkzMTc4MDYyLC0xODk4
+NjA5NjY1LDEwOTg1NTE2NTgsMTIyODQ1NzQ4MywyMDkwNTg5MD
+EzLC0xODA1MjU1NTYxLC0xMDMyMDk0NDI4LC0xOTIzMjA0NjY3
+LDEwMzc2NjU3MzhdfQ==
 -->
