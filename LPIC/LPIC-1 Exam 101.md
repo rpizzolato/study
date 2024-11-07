@@ -1353,13 +1353,16 @@ Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-comm
 Agora do computador que irá executar o comando para abertura de algum app, execute xcalc ou qualquer outro aplicativo para abrir no outro computador.<br>
 *O processamento todo está sendo feito pelo PC que abriu a aplicação, no caso o PC de origem. O de destino apenas está gerando a parte gráfica.
 
+#### X11 e o Desktop Environment
 
+Desktop Environment: é um **conjunto de aplicações**, com a finalidade de prover uma interface gráfica amigável ao usuário.<br>
+Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDE4NDQ0NCwtMTkyMDMwMDQ1OCwtNT
-QyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYw
-MDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxND
-E1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5
-OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNi
-wtMjYwNjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcy
-NDcyODMxOV19
+eyJoaXN0b3J5IjpbMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01ND
+I2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAw
+OSw1MzUxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MT
+UzNDU5NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5
+OTEsMTE3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC
+0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0
+NzI4MzE5XX0=
 -->
