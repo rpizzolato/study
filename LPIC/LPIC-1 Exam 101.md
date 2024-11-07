@@ -1216,16 +1216,16 @@ Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já ne
 
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
-É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`
+É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MT
-UzNDU5NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5
-OTEsMTE3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC
-0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0
-NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3Mz
-Y0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMTk1NzQs
-MTk0ODA3NDk1NF19
+eyJoaXN0b3J5IjpbNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzND
+MwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3
+NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMT
+E5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4
+MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0yNDMwMzgwMT
+QsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEsLTg0OTY0NTUzMSwx
+MDQ2MjE5NTc0XX0=
 -->
