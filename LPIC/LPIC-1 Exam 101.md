@@ -1379,9 +1379,9 @@ Portanto, a interface gráfica é um dos muitos componentes dentro do DE.
 
 Se estiver usando o GNOME, faça o teste:
 
-- `ps axu | grep gnome`: lista diversas aplicações, como gnome-settings, gnome-software, etc. Essas são aplicações que fazem parte do DE. Uma delas vai ser o `gnome-shell`, que no caso é a inte
+- `ps axu | grep gnome`: lista diversas aplicações, como gnome-settings, gnome-software, etc. Essas são aplicações que fazem parte do DE. Uma delas vai ser o `gnome-shell`, que no caso é a interface gráfica.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MjQwMjMyMiwtNDI5MTE1OTg5LDE5MD
+eyJoaXN0b3J5IjpbLTQyMDMzMzY4NiwtNDI5MTE1OTg5LDE5MD
 Y3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5
 LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNz
 k3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUx
