@@ -1350,7 +1350,7 @@ Ainda assim não será possível realizar a tarefa, pois o **Display Manager** e
 
 Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-command.conf`e adicione `xserver-allow-tcp=true` no final do arquivo. Reinicie o `lightdm: systemctl restart lightdm`. Se olhar no processo Xorg **NÃO** terá mais o `-nolisten tcp`
 
-Agora do computador que irá executar o comando para abertura de algum app, execute xcalc ou qualquer outro aplicativo para abrir no outro computador.<br>
+Agora do computador que irá executar o comando para abertura de algum app, execute **xcalc** ou qualquer outro aplicativo para abrir no outro computador.<br>
 *O processamento todo está sendo feito pelo PC que abriu a aplicação, no caso o PC de origem. O de destino apenas está gerando a parte gráfica.
 
 #### X11 e o Desktop Environment
@@ -1401,12 +1401,14 @@ Se estiver usando o GNOME, faça o teste:
 Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplicativos ligados ao hardware, como GPUs, com padrão Section e EndSection
 
 Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`, que é um arquivo de log para guardar os erros que ocorrem relacionados à interface gráfica
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5ND
-cwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYs
-LTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0Mj
-YwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5
-LDUzNTE5ODg1NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNT
-M0NTk2NSwxODQ4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5
-MV19
+eyJoaXN0b3J5IjpbLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxND
+kwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgz
+OCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5Mj
+AzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgz
+LC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEyLDEyMz
+QzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMjYxNjgy
+NzU0XX0=
 -->
