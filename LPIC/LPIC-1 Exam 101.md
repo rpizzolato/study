@@ -1349,14 +1349,14 @@ O  `screennumber`  padrão é  `0`. Esse pode ser o caso se apenas uma tela fís
 
 Para iniciar um aplicativo em uma tela específica, atribua o número da tela à variável de ambiente  `DISPLAY`  antes de iniciar o aplicativo: $
 
-$ **DISPLAY=:0.1 firefox &**
+    $ DISPLAY=:0.1 firefox &
 
 Esse comando iniciaria o navegador Firefox na tela à direita do diagrama acima. Alguns kits de ferramentas também oferecem opções de linha de comando para instruir um aplicativo a ser executado em uma tela especificada. Procure por  `--screen`  end  `--display`  na página do manual de  `gtk-options(7)`  para ver um exemplo..
 
 O nome de exibição de uma sessão X em execução é armazenado na variável de ambiente  `DISPLAY`:
 
-$ **echo $DISPLAY**
-:0
+    $ echo $DISPLAY
+    :0
 
 A saída detalha o seguinte:
 
@@ -1436,7 +1436,7 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzU1NjgzOSwtODYzMDkyODkxLDkwNj
+eyJoaXN0b3J5IjpbMTY3NTgwODc0MywtODYzMDkyODkxLDkwNj
 Q2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIs
 LTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNj
 YxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4
