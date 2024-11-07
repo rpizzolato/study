@@ -1339,6 +1339,27 @@ $Display mostra, normalmente, a seguinte informação:<br>
 
     hostname:displaynumber.screennumber
 
+O nome de exibição também informa a um aplicativo gráfico onde ele deve ser renderizado e em qual hospedeiro (no caso de uma conexão X remota).
+
+O  `hostname`  refere-se ao nome do sistema que exibirá o aplicativo. Se o nome de exibição não contiver o nome do hospedeiro, o host local será pressuposto.
+
+O  `displaynumber`  faz referência à coleção de “telas” que estão em uso, seja uma única tela de laptop ou diversas telas em uma estação de trabalho. Cada sessão do servidor X em execução recebe um número de exibição começando em  `0`.
+
+O  `screennumber`  padrão é  `0`. Esse pode ser o caso se apenas uma tela física ou diversas telas físicas estiverem configuradas para funcionar como uma só tela. Quando todas as telas de uma configuração de múltiplos monitores são combinadas em uma única tela lógica, as janelas do aplicativo podem ser movidas livremente entre as telas. Em situações em que cada tela é configurada para funcionar independentemente uma da outra, cada tela abrigará as janelas dos aplicativos que forem abertos dentro delas e as janelas não podem ser movidas de uma tela para outra. A cada tela independente será atribuído seu próprio número. Se houver apenas uma tela lógica em uso, o ponto e o número da tela serão omitidos.
+
+O nome de exibição de uma sessão X em execução é armazenado na variável de ambiente  `DISPLAY`:
+
+$ **echo $DISPLAY**
+:0
+
+A saída detalha o seguinte:
+
+1.  O servidor X em uso está no sistema local, portanto não há nada impresso à esquerda dos dois pontos.
+    
+2.  A sessão atual do servidor X é a primeira indicada por  `0`  imediatamente após os dois pontos.
+    
+3.  Há apenas uma tela lógica em uso, portanto um número de tela não é visível.
+
 Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`. Para executar algum app em outro computador, precisa-se mudar o valor da variável de ambiente DISPLAY:<br>
 
     export DISPLAY="192.168.0.100:0.0"
@@ -1409,11 +1430,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MD
-Y4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcs
-LTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyND
-Q5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUs
-MTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MT
-k4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1
+eyJoaXN0b3J5IjpbMTY0MDI1NzU4MywtODYzMDkyODkxLDkwNj
+Q2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIs
+LTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNj
+YxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4
+LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0ND
+Y2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4
 XX0=
 -->
