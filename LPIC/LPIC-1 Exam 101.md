@@ -1357,12 +1357,14 @@ Agora do computador que irá executar o comando para abertura de algum app, exec
 
 Desktop Environment: é um **conjunto de aplicações**, com a finalidade de prover uma interface gráfica amigável ao usuário.<br>
 Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
+
+##### Gerenciador de Janelas (Window Manager)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01ND
-I2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAw
-OSw1MzUxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MT
-UzNDU5NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5
-OTEsMTE3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC
-0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0
-NzI4MzE5XX0=
+eyJoaXN0b3J5IjpbLTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5Mj
+AzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgz
+LC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEyLDEyMz
+QzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMjYxNjgy
+NzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMzE1MzAzOTEsLT
+ExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1NjQzOCwtMTUw
+ODIzMjEwXX0=
 -->
