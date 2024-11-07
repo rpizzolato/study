@@ -1218,16 +1218,16 @@ Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no 
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
 
-Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`
+Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`. Rode `startx` para subir o servidor X (mas sem a tela de login), para sair basta fazer um logout.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzODU4NDE5Miw1MzUxOTg4NTQsMTg5Nz
-k4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0Mjkz
-OCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
-UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
-ODQ5NjQ1NTMxXX0=
+eyJoaXN0b3J5IjpbLTIxMDg4NzkyMDQsNTM1MTk4ODU0LDE4OT
+c5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5
+MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMT
+IzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3
+ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NT
+g1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1MjE0NzEs
+LTg0OTY0NTUzMV19
 -->
