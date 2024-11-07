@@ -1295,58 +1295,52 @@ Exemplo:
     EndSection_
 
   
+- **Screen**: a seção screen é uma combinação entre o monitor e a placa de vídeo, dizendo ao X quais os modos que ele pode trabalhar. Na sub-seção  **Display**, são informados por exemplo as  **resoluções** suportadas,  **color depth** (bits por pixel), e etc.
 
-**Screen**
-
-A seção screen é uma combinação entre o monitor e a placa de vídeo, dizendo ao X quais os modos que ele pode trabalhar. Na sub-seção  **Display**, são informados por exemplo as  **resoluções** suportadas,  **color depth** (bits por pixel), e etc.
-
-_Section "Screen"  
-Identifier "Screen0"  
-Device "Card0"  
-Monitor "Monitor0"  
-SubSection "Display"  
-Viewport 0 0  
-Depth 1  
-EndSubSection  
-SubSection "Display"  
-Viewport 0 0  
-Depth 4  
-EndSubSection  
-SubSection "Display"  
-Depth 24  
-Modes "1920x1080" "1280x1024" "1024x768"  
-EndSubSection  
-SubSection "Display"  
-Depth 8  
-Modes "1024x768" "800x600" "640x480"  
-EndSubSection  
-EndSection_
+    _Section "Screen"  
+    Identifier "Screen0"  
+    Device "Card0"  
+    Monitor "Monitor0"  
+    SubSection "Display"  
+    Viewport 0 0  
+    Depth 1  
+    EndSubSection  
+    SubSection "Display"  
+    Viewport 0 0  
+    Depth 4  
+    EndSubSection  
+    SubSection "Display"  
+    Depth 24  
+    Modes "1920x1080" "1280x1024" "1024x768"  
+    EndSubSection  
+    SubSection "Display"  
+    Depth 8  
+    Modes "1024x768" "800x600" "640x480"  
+    EndSubSection  
+    EndSection_
 
   
-
-**ServerLayout**
-
-Esta seção agrega as outras definições da configuração do X, associando principalmente as informações do Screen e InputDevices.
+- **ServerLayout**: esta seção agrega as outras definições da configuração do X, associando principalmente as informações do Screen e InputDevices.
 
 Exemplo:
 
-_Section "ServerLayout"  
-Identifier "X.org Configured"  
-Screen 0 "Screen0" 0 0  
-InputDevice "Mouse0" "CorePointer"  
-InputDevice "Keyboard0" "CoreKeyboard"  
-EndSection_
+    _Section "ServerLayout"  
+    Identifier "X.org Configured"  
+    Screen 0 "Screen0" 0 0  
+    InputDevice "Mouse0" "CorePointer"  
+    InputDevice "Keyboard0" "CoreKeyboard"  
+    EndSection_
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNTU2OTMzNSwtMTc0NDY2NjAwOSw1Mz
-UxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5
-NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMT
-E3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2
-MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4Mz
-E5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwt
-MTAxNTUyMTQ3MV19
+eyJoaXN0b3J5IjpbODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNT
+E5ODg1NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2
+NSwxODQ4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMT
+cyMzY1NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYx
+MDI5NywtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMT
+ksLTIxODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0x
+MDE1NTIxNDcxXX0=
 -->
