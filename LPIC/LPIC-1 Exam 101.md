@@ -1214,6 +1214,8 @@ O servidor X funciona como um modelo cliente-servidor. Os apps que são executad
 
 Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já nem vem mais com as distros, tendo em vista que tudo já vem muito bem configurado.). No entanto, para explorar, teria que criar o arquivo `xorg.conf` manualmente.
 
+Trecho LPI: [Tradicionalmente, o principal arquivo de configuração usado para configurar um servidor X é o arquivo `/etc/X11/xorg.conf`. Nas distribuições Linux modernas, o servidor X configura a si mesmo em tempo de execução quando é iniciado e, portanto, nenhum arquivo `xorg.conf` pode existir.]
+
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
@@ -1436,11 +1438,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTgwODc0MywtODYzMDkyODkxLDkwNj
-Q2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIs
-LTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNj
-YxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4
-LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0ND
-Y2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4
+eyJoaXN0b3J5IjpbMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04Nj
+MwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1Mzcs
+MTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNj
+czNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDks
+LTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OT
+c2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEy
 XX0=
 -->
