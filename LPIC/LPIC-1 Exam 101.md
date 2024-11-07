@@ -1207,12 +1207,16 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `<nome_do_script>`: Não-interativo sem login (scripts)
 
 ### 106.1 Instalar e configurar o X11
+
+Em cima do X ou X11, que roda os gerenciadores de janela, como gnome, kde, xfce, etc.
+Display Manager: aquela tela de login inicial
+O servidor X funciona como um modelo cliente-servidor. Os apps que são executados são clientes do servidor X, que provê as disponibilidades gráficas. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMj
-YxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMzE1MzAz
-OTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1NjQzOC
-wtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQz
-MDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04NDk2ND
-U1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0LDQzMDI0Njc0NCwt
-MTk2OTg2OTk4MV19
+eyJoaXN0b3J5IjpbLTEzNzQ4NDYxNjMsMTQxNTM0NTk2NSwxOD
+Q4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1
+NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5Ny
+wtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIx
+ODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NT
+IxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0
+LDQzMDI0Njc0NF19
 -->
