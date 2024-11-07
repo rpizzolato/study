@@ -1347,6 +1347,12 @@ O  `displaynumber`  faz referência à coleção de “telas” que estão em us
 
 O  `screennumber`  padrão é  `0`. Esse pode ser o caso se apenas uma tela física ou diversas telas físicas estiverem configuradas para funcionar como uma só tela. Quando todas as telas de uma configuração de múltiplos monitores são combinadas em uma única tela lógica, as janelas do aplicativo podem ser movidas livremente entre as telas. Em situações em que cada tela é configurada para funcionar independentemente uma da outra, cada tela abrigará as janelas dos aplicativos que forem abertos dentro delas e as janelas não podem ser movidas de uma tela para outra. A cada tela independente será atribuído seu próprio número. Se houver apenas uma tela lógica em uso, o ponto e o número da tela serão omitidos.
 
+Para iniciar um aplicativo em uma tela específica, atribua o número da tela à variável de ambiente  `DISPLAY`  antes de iniciar o aplicativo: $
+
+$ **DISPLAY=:0.1 firefox &**
+
+Esse comando iniciaria o navegador Firefox na tela à direita do diagrama acima. Alguns kits de ferramentas também oferecem opções de linha de comando para instruir um aplicativo a ser executado em uma tela especificada. Procure por  `--screen`  end  `--display`  na página do manual de  `gtk-options(7)`  para ver um exemplo..
+
 O nome de exibição de uma sessão X em execução é armazenado na variável de ambiente  `DISPLAY`:
 
 $ **echo $DISPLAY**
@@ -1430,7 +1436,7 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MDI1NzU4MywtODYzMDkyODkxLDkwNj
+eyJoaXN0b3J5IjpbMjEzNzU1NjgzOSwtODYzMDkyODkxLDkwNj
 Q2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIs
 LTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNj
 YxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4
