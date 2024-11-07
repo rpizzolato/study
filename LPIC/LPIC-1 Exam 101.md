@@ -1398,9 +1398,9 @@ Se estiver usando o GNOME, faça o teste:
 
 #### Comandos e Arquivos
 
-Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplicativos, como GPUs 
+Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplicativos ligados ao hardware, como GPUs, com padrão Section e EndSection
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NjAxMTk3MiwxMzE0OTA2NDQyLC0yNj
+eyJoaXN0b3J5IjpbLTkxNjUxOTAxNywxMzE0OTA2NDQyLC0yNj
 k0NzA0NTcsLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQw
 NiwtMjMyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1OCwtNT
 QyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYw
