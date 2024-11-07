@@ -1336,16 +1336,16 @@ Exemplo:
 $Display mostra, normalmente, a seguinte informação:<br>
 
     :0.0
-Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`.
+Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`. Para exec
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3ND
-Q2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1
-OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMj
-U3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2
-MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMT
-AsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0yNDMwMzgwMTQsLTIw
-MzkyNzM2NDBdfQ==
+eyJoaXN0b3J5IjpbLTM4NTkzNDc0NiwxNTY5NTU2ODIzLDgwNz
+k3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUx
+MiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0MjkzOCwtMT
+I2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMjMxNTMw
+MzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4NTY0Mz
+gsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0
+MzAzODAxNF19
 -->
