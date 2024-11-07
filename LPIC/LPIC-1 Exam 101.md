@@ -1402,13 +1402,13 @@ Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplic
 
 Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`, que é um arquivo de log para guardar os erros que ocorrem relacionados à interface gráfica
 
-
+O acesso remo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxND
-kwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgz
-OCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5Mj
-AzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgz
-LC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEyLDEyMz
-QzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMjYxNjgy
-NzU0XX0=
+eyJoaXN0b3J5IjpbLTE1MjA0OTM4MzEsLTEwODA2ODU5NDksLT
+k2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5
+ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMz
+MyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4
+MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxOD
+k3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQy
+OTM4XX0=
 -->
