@@ -1340,15 +1340,19 @@ Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `l
 
     export DISPLAY="192.168.0.100:0.0"
 
-No host que irá receber a abertura do programa escolhido, é preciso liberá-lo para essa conexão. Por meio do comando xhost é possível 
+No host que irá receber a abertura do programa escolhido, é preciso liberá-lo para essa conexão. Por meio do comando `xhost` é possível verificar quem que está autorizado a permitir essa conexão. Para liberar o acesso, digite o comando:<br>
+
+    xhost +192.168.0.99
+
+Digite `xhost` novamente para confirmar que realmente foi liberado.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYxOTAyODgsMTU2OTU1NjgyMyw4MD
-c5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1
-MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLT
-EyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUz
-MDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2ND
-M4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0y
-NDMwMzgwMTRdfQ==
+eyJoaXN0b3J5IjpbMzU0NzAzNjk5LDE1Njk1NTY4MjMsODA3OT
+c2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEy
+LDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMj
+YxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMzE1MzAz
+OTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1NjQzOC
+wtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQz
+MDM4MDE0XX0=
 -->
