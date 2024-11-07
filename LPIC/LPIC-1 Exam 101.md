@@ -1386,12 +1386,20 @@ Se estiver usando o GNOME, faça o teste:
 - Interface para realização do login
 - Exemplos: GDM (GNOME), LightDM (XFCE), XDM, LXDM
 *Geralmente termina em DM (Display Manager)
+
+##### Wayland
+
+É uma alternativa ao X11, criado pelo xorg.
+
+- Protocolo que especifica a comunicação entre o servidor gráfico (Compositor Wayland) e os clientes
+- Criado com a intenção de substituir o X, com uma arquitetura diferente visado melhor performance geral
+- Atualmente utilizando por padrão no Fedora com GN
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNjYyODM2LC0yNjk0NzA0NTcsLTQyOT
-ExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2
-LDEzMzIwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OT
-U1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0
-LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
-gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
-MTFdfQ==
+eyJoaXN0b3J5IjpbMTAxODI5MTg3MywtMjY5NDcwNDU3LC00Mj
+kxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1
+NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Nj
+k1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1
+NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxOD
+Q4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1
+NzExXX0=
 -->
