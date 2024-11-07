@@ -1367,9 +1367,9 @@ Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 *É requisito ter um **Window Manager** dentro do **Desktop Environment**
 
 - update-alternatives --display x-window-manager: verifica qual é o gerenciador de janelas, ou com o comando:
-- ls -l /etc/alterna
+- ls -l /etc/alternatives/ | grep window
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDY3MTcxMSwxOTA2NzM3ODM4LDI5Mj
+eyJoaXN0b3J5IjpbLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5Mj
 Y2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1
 OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3ND
 Q2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1
