@@ -1291,7 +1291,7 @@ A opção  `--no-convert`  é usada aqui para impedir que o  `localectl`  modifi
 
 Os arquivos de configuração específicos ao usuário também residem em `/etc/X11/xorg.conf.d/`. Os arquivos de configuração fornecidos pela distribuição localizam-se em `/usr/share/X11/xorg.conf.d/`. Os arquivos de configuração localizados em `/etc/X11/xorg.conf.d/` são analisados antes do arquivo `/etc/X11/xorg.conf` se ele existir no sistema.
 
-O comando  `xdpyinfo`  é usado em um computador para exibir informações sobre uma instância do servidor X em execução. Veja abaixo um exemplo de saída do comando:
+O comando  `xdpyinfo`  é usado em um computador para exibir informações sobre uma instância do servidor X em execução. Veja abaixo um exemplo de saída do comando (determinar quais extensões Xorg estão disponíveis em um sistema):
 
     $ xdpyinfo
     name of display:    :0
@@ -1586,11 +1586,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzND
-cwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2
-LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OT
-Q3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2
-LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01ND
-I2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAw
-OV19
+eyJoaXN0b3J5IjpbLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNz
+U2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDky
+ODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMT
+Q5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4
+MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOT
+IwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4
+M119
 -->
