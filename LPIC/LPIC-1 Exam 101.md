@@ -1214,12 +1214,14 @@ O servidor X funciona como um modelo cliente-servidor. Os apps que são executad
 
 Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já nem vem mais com as distros, tendo em vista que tudo já vem muito bem configurado.). No entanto, para explorar, teria que criar o arquivo `xorg.conf` manualmente.
 
-Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**
+Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
+
+É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NDQxMDg4MiwxMjM0MzA4ODU4LDE0MT
+eyJoaXN0b3J5IjpbMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MT
 UzNDU5NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5
 OTEsMTE3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC
 0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0
