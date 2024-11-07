@@ -1336,6 +1336,9 @@ Exemplo:
 $Display mostra, normalmente, a seguinte informação:<br>
 
     :0.0
+
+    hostname:displaynumber.screennumber
+
 Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`. Para executar algum app em outro computador, precisa-se mudar o valor da variável de ambiente DISPLAY:<br>
 
     export DISPLAY="192.168.0.100:0.0"
@@ -1406,11 +1409,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA2NDYyNTYsLTEwODA2ODU5NDksLTk2Nj
-Q1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODks
-MTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMD
-U5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMs
-ODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OT
-gyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4
+eyJoaXN0b3J5IjpbLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MD
+Y4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcs
+LTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyND
+Q5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUs
+MTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MT
+k4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1
 XX0=
 -->
