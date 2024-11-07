@@ -1393,13 +1393,14 @@ Se estiver usando o GNOME, faça o teste:
 
 - Protocolo que especifica a comunicação entre o servidor gráfico (Compositor Wayland) e os clientes
 - Criado com a intenção de substituir o X, com uma arquitetura diferente visado melhor performance geral
-- Atualmente utilizando por padrão no Fedora com GN
+- Atualmente utilizando por padrão no Fedora com GNOME, mas é uma opção em todos os DE
+- Projeto em Desevolvimento
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODI5MTg3MywtMjY5NDcwNDU3LC00Mj
-kxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1
-NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Nj
-k1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1
-NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxOD
-Q4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1
-NzExXX0=
+eyJoaXN0b3J5IjpbLTExNjMxNzY3NzcsLTI2OTQ3MDQ1NywtND
+I5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5
+NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNT
+Y5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4
+NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMT
+g0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2
+NTcxMV19
 -->
