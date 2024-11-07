@@ -1220,94 +1220,79 @@ Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no 
 
 Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`. Rode `startx` para subir o servidor X (mas sem a tela de login), para sair basta fazer um logout. Volte para a interface gráfica padrão executando o comando `systemctl default`. O `xorg.conf` é separado por seções, com identificadores e opções, para mouse, teclado, telas, fontes (que podem ser remotas inclusive), etc.
 
-**Module**
+Vejamos algumas:
 
-Carregamento dinâmico de módulos.
+- **Module**: carregamento dinâmico de módulos.
 
 Exemplo:  
 
-_Section "Module"  
-Load "glx"  
-Load "dbe"  
-Load "extmod"  
-EndSection  
-_
+    _Section "Module"  
+    Load "glx"  
+    Load "dbe"  
+    Load "extmod"  
+    EndSection  
 
-**Files**
-
-Caminhos para alguns arquivos e diretórios utilizados pelo servidor X, como módulos mas principalmente as  **fontes**.
+_ **Files**: caminhos para alguns arquivos e diretórios utilizados pelo servidor X, como módulos mas principalmente as  **fontes**.
 
 Exemplos:
 
-_Section "Files"  
-ModulePath "/usr/lib/xorg/modules"  
-FontPath "/usr/share/fonts/X11/misc"  
-FontPath "/usr/share/fonts/X11/Type1"  
-FontPath "/usr/share/fonts/X11/100dpi"  
-FontPath "/usr/share/fonts/X11/75dpi"  
-FontPath "built-ins"  
-FontPath "unix:/7100"  
-FontPath "tcp/fonts.server.com:7100"  
-EndSection_
-
+    _Section "Files"  
+    ModulePath "/usr/lib/xorg/modules"  
+    FontPath "/usr/share/fonts/X11/misc"  
+    FontPath "/usr/share/fonts/X11/Type1"  
+    FontPath "/usr/share/fonts/X11/100dpi"  
+    FontPath "/usr/share/fonts/X11/75dpi"  
+    FontPath "built-ins"  
+    FontPath "unix:/7100"  
+    FontPath "tcp/fonts.server.com:7100"  
+    EndSection_
   
-
-**InputDevice**
-
-Contêm configurações referentes aos dispositivos de entrada, principalmente  **mouse** e  **teclado**.  _Identifier_ e  _Driver_  são parâmetros obrigatórios utilizados para especificar o dispositivo. Além disso parâmetros  _Option_ podem ser adicionados para implementar configurações específicas
+- **InputDevice**: contêm configurações referentes aos dispositivos de entrada, principalmente  **mouse** e  **teclado**.  _Identifier_ e  _Driver_  são parâmetros obrigatórios utilizados para especificar o dispositivo. Além disso parâmetros  _Option_ podem ser adicionados para implementar configurações específicas
 
 Exemplo:
 
-_Section "InputDevice"  
-Identifier "Keyboard0"  
-Driver "kbd"  
-Option "XkbModel" "pc105"  
-Option "XkbLayout" "us"  
-Option "AutoRepeat" "500 200"  
-EndSection_
+    _Section "InputDevice"  
+    Identifier "Keyboard0"  
+    Driver "kbd"  
+    Option "XkbModel" "pc105"  
+    Option "XkbLayout" "us"  
+    Option "AutoRepeat" "500 200"  
+    EndSection_
+
+      _Section "InputDevice"  
+    Identifier "Mouse0"  
+    Driver "mouse"  
+    Option "Protocol" "auto"  
+    Option "Device" "/dev/input/mice"  
+    Option "Emulate3Buttons" "no"  
+    Option "ZAxisMapping" "4 5"  
+    EndSection_
 
   
-
-_Section "InputDevice"  
-Identifier "Mouse0"  
-Driver "mouse"  
-Option "Protocol" "auto"  
-Option "Device" "/dev/input/mice"  
-Option "Emulate3Buttons" "no"  
-Option "ZAxisMapping" "4 5"  
-EndSection_
-
-  
-
-**Device**
-
-Seção utilizada principalmente para configuração da  **placa de vídeo**. Semelhante ao InputDevice, tem os parâmetros  _Identifier_ e  _Driver_ como obrigatórios.
+- **Device**: seção utilizada principalmente para configuração da  **placa de vídeo**. Semelhante ao InputDevice, tem os parâmetros  _Identifier_ e  _Driver_ como obrigatórios.
 
 Exemplo:
 
-_Section "Device"  
-Identifier "VideoCard0"  
-Driver "nv"  
-VendorName "nVidia"  
-BoardName "GeForce 6100"  
-VideoRam 131072  
-EndSection_
+    _Section "Device"  
+    Identifier "VideoCard0"  
+    Driver "nv"  
+    VendorName "nVidia"  
+    BoardName "GeForce 6100"  
+    VideoRam 131072  
+    EndSection_
 
   
-
-**Monitor**
-
-Configurações específicas do monitor utilizado, como  _HorizSync_ e  _VertRefresh_.
+- **Monitor**: configurações específicas do monitor utilizado, como  _HorizSync_ e  _VertRefresh_.
 
 Exemplo:
 
-_Section "Monitor"  
-Identifier "Monitor0"  
-VendorName "Monitor Vendor"  
-ModelName "Monitor Model"  
-HorizSync 30.0 - 83.0  
-VertRefresh 55.0 - 75.0  
-EndSection_
+    _Section "Monitor"  
+    Identifier "Monitor0"  
+    VendorName "Monitor Vendor"  
+    ModelName "Monitor Model"  
+    HorizSync 30.0 - 83.0  
+    VertRefresh 55.0 - 75.0  
+    EndSection_
 
   
 
@@ -1357,11 +1342,11 @@ EndSection_
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjUyNDkwMzAsLTE3NDQ2NjYwMDksNT
-M1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1
-OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLD
-ExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYw
-NjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyOD
-MxOSwtMjE4Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAs
-LTEwMTU1MjE0NzFdfQ==
+eyJoaXN0b3J5IjpbMTYzNTU2OTMzNSwtMTc0NDY2NjAwOSw1Mz
+UxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5
+NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMT
+E3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2
+MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4Mz
+E5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwt
+MTAxNTUyMTQ3MV19
 -->
