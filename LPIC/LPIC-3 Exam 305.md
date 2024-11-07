@@ -132,9 +132,9 @@ Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o 
 
 Para acessar novamente a VM, use: `xl console nome_instancia` ou `numero_id`
 
-Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado uma vif (virtual interface chamada vif1.0. Esse 1.0 da vif (virtual interface)
+Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado uma vif (virtual interface) chamada **vif1.0**, que se conecta à bridge `xenbr0`. Esse 1.0 da **vif** faz referência ao ID da VM quando é listado com o comando `xl list`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTQ5NzQ0MSwtMjAwNTA3Njk3MSwtMT
-Q0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4
-MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbLTE4OTcxNDk4NTYsLTIwMDUwNzY5NzEsLT
+E0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgx
+ODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
 -->
