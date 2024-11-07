@@ -1380,13 +1380,17 @@ Portanto, a interface gráfica é um dos muitos componentes dentro do DE.
 Se estiver usando o GNOME, faça o teste:
 
 - `ps axu | grep gnome`: lista diversas aplicações, como gnome-settings, gnome-software, etc. Essas são aplicações que fazem parte do DE. Uma delas vai ser o `gnome-shell`, que no caso é a interface gráfica.
+ 
+##### Display Managers (DM)
 
+- Interface para realização do login
+- Exemplos: GDM (GNOME), LightDM, XDM, LXDM
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTgzOTI4OCwtNDI5MTE1OTg5LDE5MD
-Y3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5
-LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNz
-k3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUx
-MiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0MjkzOCwtMT
-I2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMjMxNTMw
-MzkxXX0=
+eyJoaXN0b3J5IjpbLTE1NjkyNTQxMDAsLTQyOTExNTk4OSwxOT
+A2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0
+OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MD
+c5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1
+MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLT
+EyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUz
+MDM5MV19
 -->
