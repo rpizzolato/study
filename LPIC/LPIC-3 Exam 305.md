@@ -131,8 +131,10 @@ Depois de criado, é adicionado um arquivo `lpic3-pv-guest.cfg` em `/etc/xen/` p
 Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o comando `xl list`. No estado vai estar com `b` de **blocked**, que alterna para **running** (`r`) conforme o uso da VM
 
 Para acessar novamente a VM, use: `xl console nome_instancia` ou `numero_id`
+
+Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado uma vif (virtual interface chamada vif1.0. Esse 1.0 da vif (virtual interface)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDUwNzY5NzEsLTE0NDkyMjY4NCwtMj
-E0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2
-NzgzOCwxMjkxMTc3NzQxXX0=
+eyJoaXN0b3J5IjpbLTY1OTQ5NzQ0MSwtMjAwNTA3Njk3MSwtMT
+Q0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4
+MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
 -->
