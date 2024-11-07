@@ -1350,12 +1350,15 @@ Ainda assim não será possível realizar a tarefa, pois o **Display Manager** e
 
 Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-command.conf`e adicione `xserver-allow-tcp=true` no final do arquivo. Reinicie o `lightdm: systemctl restart lightdm`. Se olhar no processo Xorg **NÃO** terá mais o `-nolisten tcp`
 
+Agora do computador que irá executar o comando para abertura de algum app, execute xcalc ou qualquer outro aplicativo para abrir no outro computador.
+*O processamento todo está sendo feito pelo PC que abriu a aplicação. Onde a aplicação 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4OTI3ODQ4LC01NDI2MDQyNSwxNTY5NT
-U2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQs
-MTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0OD
-M0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcx
-MSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLT
-EyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgz
-ODY1ODVdfQ==
+eyJoaXN0b3J5IjpbLTI0NzkxNjU1NiwtNTQyNjA0MjUsMTU2OT
+U1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0
+LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
+gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
+MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
+0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
+Mzg2NTg1XX0=
 -->
