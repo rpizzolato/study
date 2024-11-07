@@ -1348,11 +1348,11 @@ Digite `xhost` novamente para confirmar que realmente foi liberado. Para liberar
 
 Ainda assim não será possível realizar a tarefa, pois o **Display Manager** está bloqueando. No caso, seria o **lightdm**. Se olhar no processo Xorg (`ps axu | grep X`), é possível notar que **lightdm** está rodando com a opção `-nolisten tcp`, e é necessário mudar essa opção (isso para distros baseadas no Debian/Ubuntu).
 
-Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-command.conf`e adicione `xserver-allow-tcp=true` no final do arquivo.
+Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-command.conf`e adicione `xserver-allow-tcp=true` no final do arquivo. Reinicie o `lightdm: systemctl restart lightdm`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0OTQ4Mjk1MCwtNTQyNjA0MjUsMTU2OT
+eyJoaXN0b3J5IjpbMTU4NzE4MzAwMCwtNTQyNjA0MjUsMTU2OT
 U1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0
 LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
 gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
