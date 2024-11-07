@@ -1268,30 +1268,26 @@ A opção  `--no-convert`  é usada aqui para impedir que o  `localectl`  modifi
             BusID       "PCI:0:2:0"
     EndSection
 
-- Screen`
+- `Screen`: a seção  `Screen`  reúne as seções  `Monitor`  e  `Device`. Um exemplo de seção  `Screen`  seria semelhante ao seguinte:
 
-A seção  `Screen`  reúne as seções  `Monitor`  e  `Device`. Um exemplo de seção  `Screen`  seria semelhante ao seguinte:
+    Section "Screen"
+            Identifier "Screen0"
+            Device     "Device0"
+            Monitor    "DP2"
+    EndSection
 
-Section "Screen"
-        Identifier "Screen0"
-        Device     "Device0"
-        Monitor    "DP2"
-EndSection
+-`ServerLayout`: a seção  `ServerLayout`  agrupa todas as seções como mouse, teclado e telas em uma única interface do X Window System.
 
-`ServerLayout`
+    Section "ServerLayout"
+    	Identifier   "Layout-1"
+    	Screen       "Screen0" 0 0
+    	InputDevice  "mouse1"  "CorePointer"
+    	InputDevice  "system-keyboard"  "CoreKeyboard"
+    EndSection
 
-A seção  `ServerLayout`  agrupa todas as seções como mouse, teclado e telas em uma única interface do X Window System.
-
-Section "ServerLayout"
-	Identifier   "Layout-1"
-	Screen       "Screen0" 0 0
-	InputDevice  "mouse1"  "CorePointer"
-	InputDevice  "system-keyboard"  "CoreKeyboard"
-EndSection
-
-Note
-
-Nem todas as seções estão presentes em um arquivo de configuração. Nos casos em que uma seção está ausente, os valores padrão são fornecidos pela instância do servidor X em execução.
+>[!NOTE]
+>
+>Nem todas as seções estão presentes em um arquivo de configuração. Nos casos em que uma seção está ausente, os valores padrão são fornecidos pela instância do servidor X em execução.
 
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
@@ -1515,7 +1511,7 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0NDY5NDc5LDEzNDcwODY1MTMsMTY3NT
+eyJoaXN0b3J5IjpbNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3NT
 gwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5
 LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MT
 E1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYs
