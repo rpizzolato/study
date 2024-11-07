@@ -1218,16 +1218,16 @@ Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no 
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
 
-Agora resta executar o comando Xorg -configure (ubuntu 16.04) ou Xorg
+Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTA1NzU2LDUzNTE5ODg1NCwxODk3OT
-gyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4
-LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMz
-E1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1
-NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NS
-wtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NTIxNDcxLC04
-NDk2NDU1MzFdfQ==
+eyJoaXN0b3J5IjpbMTQzODU4NDE5Miw1MzUxOTg4NTQsMTg5Nz
+k4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0Mjkz
+OCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMj
+MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
+NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1OD
+UsLTI0MzAzODAxNCwtMjAzOTI3MzY0MCwtMTAxNTUyMTQ3MSwt
+ODQ5NjQ1NTMxXX0=
 -->
