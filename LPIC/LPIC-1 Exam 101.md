@@ -1214,10 +1214,12 @@ O servidor X funciona como um modelo cliente-servidor. Os apps que são executad
 
 Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já nem vem mais com as distros, tendo em vista que tudo já vem muito bem configurado.). No entanto, para explorar, teria que criar o arquivo `xorg.conf` manualmente.
 
+Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMDQ2NzIzMiwxNDE1MzQ1OTY1LDE4ND
+eyJoaXN0b3J5IjpbMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
 gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
 MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
 0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
