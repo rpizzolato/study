@@ -1402,13 +1402,15 @@ Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplic
 
 Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`, que é um arquivo de log para guardar os erros que ocorrem relacionados à interface gráfica
 
-O acesso remo
+O acesso remoto que foi feito usando xhost, pode ser feito usando o xauth list, pegando o magic cookie do computador que quer executar os aplicativos, e adicionando esse magic coockie no computador que irá realizar o acesso, usando o comando:
+
+- xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjA0OTM4MzEsLTEwODA2ODU5NDksLT
-k2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5
-ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMz
-MyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4
-MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxOD
-k3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQy
-OTM4XX0=
+eyJoaXN0b3J5IjpbMTE0MjI3MDM3NywtMTA4MDY4NTk0OSwtOT
+Y2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcsLTQyOTExNTk4
+OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMz
+IwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1Njgy
+Myw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OT
+c5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5
+MzhdfQ==
 -->
