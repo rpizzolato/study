@@ -1346,15 +1346,15 @@ No host que irá receber a abertura do programa escolhido, é preciso liberá-lo
 
 Digite `xhost` novamente para confirmar que realmente foi liberado. Para liberar completamente o controle de acesso, digite `xhost +` (comando para restringir novamente é: `xhost -`)
 
-Ainda assim não será possível realizar a tarefa, pois o Display Manager está bloqueando.
+Ainda assim não será possível realizar a tarefa, pois o Display Manager está bloqueando. No caso,
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OT
-c2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEy
-LDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMj
-YxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMzE1MzAz
-OTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1NjQzOC
-wtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQz
-MDM4MDE0XX0=
+eyJoaXN0b3J5IjpbMTA5MjY0OTc5NCwtNTQyNjA0MjUsMTU2OT
+U1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0
+LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
+gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
+MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
+0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
+Mzg2NTg1XX0=
 -->
