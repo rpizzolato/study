@@ -1377,8 +1377,11 @@ Já a Interface Gráfica em que o usuário interage, que é o que é usado pelo 
 
 Portanto, a interface gráfica é um dos muitos componentes dentro do DE.
 
+Se estiver usando o GNOME, faça o teste:
+
+- ps axu | grep gnome: lista 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDI1NTQ5MjQsLTQyOTExNTk4OSwxOT
+eyJoaXN0b3J5IjpbLTE3MzUwMzQ1ODMsLTQyOTExNTk4OSwxOT
 A2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0
 OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MD
 c5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1
