@@ -1216,6 +1216,37 @@ Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já ne
 
 Trecho LPI: [Tradicionalmente, o principal arquivo de configuração usado para configurar um servidor X é o arquivo `/etc/X11/xorg.conf`. Nas distribuições Linux modernas, o servidor X configura a si mesmo em tempo de execução quando é iniciado e, portanto, nenhum arquivo `xorg.conf` pode existir.]
 
+O arquivo  `xorg.conf`  é dividido em estrofes separadas chamadas  _seções_. Cada seção começa com o termo  `Section`  e, após este termo está o  _nome da seção_, que se refere à configuração de um componente. Cada  `Section`  é encerrada por uma  `EndSection`  correspondente. Um arquivo  `xorg.conf`  típico contém as seguintes seções:
+
+- `InputDevice`: usada para configurar um modelo específico de teclado ou mouse.
+- `InputClass`: InputClass Nas distribuições Linux modernas, esta seção é tipicamente encontrada em um arquivo de configuração à parte, localizado em  `/etc/X11/xorg.conf.d/`.  `InputClass`  é usada para configurar uma classe de dispositivos de hardware como teclados e mouses, e não um componente específico de hardware. Veja abaixo um exemplo de arquivo  `/etc/X11/xorg.conf.d/00- keyboard.conf`:
+
+    Section "InputClass"
+            Identifier "system-keyboard"
+            MatchIsKeyboard "on"
+            Option "XkbLayout" "us"
+            Option "XkbModel" "pc105"
+    EndSection
+
+A opção de  `XkbLayout`  determina a disposição das teclas de um teclado, como Dvorak, canhoto ou destro, QWERTY e idioma. A opção de  `XkbModel`  é usada para definir o tipo de teclado utilizado. Há uma tabela de modelos, layouts e suas descrições em  `xkeyboard-config(7)`. Os arquivos associados aos layouts de teclado podem ser encontrados em  `/usr/share/X11/xkb`. Um layout de teclado grego politônico em um computador Chromebook apareceria desta maneira:
+
+    Section "InputClass"
+            Identifier "system-keyboard"
+            MatchIsKeyboard "on"
+            Option "XkbLayout" "gr(polytonic)"
+            Option "XkbModel" "chromebook"
+    EndSection
+
+Alternativamente, o layout de um teclado pode ser modificado durante uma sessão X em execução com o comando  `setxkbmap`. Eis um exemplo desse comando para configurar o layout grego politônico em um computador Chromebook:
+
+    $ setxkbmap -model chromebook -layout "gr(polytonic)"
+
+Essa configuração só permanecerá ativa enquanto a sessão X estiver em uso. Para que essas alterações se tornem permanentes, modifique o arquivo  `/etc/X11/xorg.conf.d/00-keyboard.conf`  de forma a incluir as configurações necessárias.
+
+Note
+
+O comando  `setxkbmap`  utiliza a X Keyboard Extension (XKB). Este é um exemplo da funcionalidade aditiva do X Window System por meio do uso de extensões.
+
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
@@ -1438,11 +1469,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04Nj
-MwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1Mzcs
-MTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNj
-czNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDks
-LTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4MjMsODA3OT
-c2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEy
-XX0=
+eyJoaXN0b3J5IjpbODUxNDk3OTE3LDEzNDcwODY1MTMsMTY3NT
+gwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5
+LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MT
+E1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYs
+MTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NT
+U2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTRd
+fQ==
 -->
