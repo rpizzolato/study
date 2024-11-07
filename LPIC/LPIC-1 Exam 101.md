@@ -1289,8 +1289,80 @@ A opção  `--no-convert`  é usada aqui para impedir que o  `localectl`  modifi
 >
 >Nem todas as seções estão presentes em um arquivo de configuração. Nos casos em que uma seção está ausente, os valores padrão são fornecidos pela instância do servidor X em execução.
 
-
 Os arquivos de configuração específicos ao usuário também residem em `/etc/X11/xorg.conf.d/`. Os arquivos de configuração fornecidos pela distribuição localizam-se em `/usr/share/X11/xorg.conf.d/`. Os arquivos de configuração localizados em `/etc/X11/xorg.conf.d/` são analisados antes do arquivo `/etc/X11/xorg.conf` se ele existir no sistema.
+
+O comando  `xdpyinfo`  é usado em um computador para exibir informações sobre uma instância do servidor X em execução. Veja abaixo um exemplo de saída do comando:
+
+    $ xdpyinfo
+    name of display:    :0
+    version number:    11.0
+    vendor string:    The X.Org Foundation
+    vendor release number:    12004000
+    X.Org version: 1.20.4
+    maximum request size:  16777212 bytes
+    motion buffer size:  256
+    bitmap unit, bit order, padding:    32, LSBFirst, 32
+    image byte order:    LSBFirst
+    number of supported pixmap formats:    7
+    supported pixmap formats:
+        depth 1, bits_per_pixel 1, scanline_pad 32
+        depth 4, bits_per_pixel 8, scanline_pad 32
+        depth 8, bits_per_pixel 8, scanline_pad 32
+        depth 15, bits_per_pixel 16, scanline_pad 32
+        depth 16, bits_per_pixel 16, scanline_pad 32
+        depth 24, bits_per_pixel 32, scanline_pad 32
+        depth 32, bits_per_pixel 32, scanline_pad 32
+    keycode range:    minimum 8, maximum 255
+    focus:  None
+    **number of extensions:    25
+        BIG-REQUESTS
+        Composite
+        DAMAGE
+        DOUBLE-BUFFER
+        DRI3
+        GLX
+        Generic Event Extension
+        MIT-SCREEN-SAVER
+        MIT-SHM
+        Present
+        RANDR
+        RECORD
+        RENDER
+        SECURITY
+        SHAPE
+        SYNC
+        X-Resource
+        XC-MISC
+        XFIXES
+        XFree86-VidModeExtension
+        XINERAMA
+        XInputExtension
+        XKEYBOARD
+        XTEST
+        XVideo
+    default screen number:    0
+    number of screens:    1
+    
+    screen #0:
+      dimensions:    3840x1080 pixels (1016x286 millimeters)
+      resolution:    96x96 dots per inch
+      depths (7):    24, 1, 4, 8, 15, 16, 32**
+      root window id:    0x39e
+      depth of root window:    24 planes
+      number of colormaps:    minimum 1, maximum 1
+      default colormap:    0x25
+      default number of colormap cells:    256
+      preallocated pixels:    black 0, white 16777215
+      options:    backing-store WHEN MAPPED, save-unders NO
+      largest cursor:    3840x1080
+      current input event mask:    0xda0033
+        KeyPressMask             KeyReleaseMask           EnterWindowMask
+        LeaveWindowMask          StructureNotifyMask      SubstructureNotifyMask
+        SubstructureRedirectMask PropertyChangeMask       ColormapChangeMask
+      number of visuals:    270
+    ...
+
+As partes mais relevantes da saída estão em negrito, como o nome da tela (que é idêntico ao conteúdo da variável de ambiente  `DISPLAY`), as informações de versão do servidor X em uso, o número e a listagem das extensões do Xorg em uso e mais informações sobre a tela em si.
 
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
@@ -1514,11 +1586,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njg4ODcwMiw3NTY0NTUzNjUsMTM0Nz
-A4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYs
-LTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5ND
-cwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYs
-LTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0Mj
-YwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5
-XX0=
+eyJoaXN0b3J5IjpbLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzND
+cwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2
+LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OT
+Q3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2
+LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01ND
+I2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAw
+OV19
 -->
