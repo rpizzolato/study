@@ -1289,6 +1289,9 @@ A opção  `--no-convert`  é usada aqui para impedir que o  `localectl`  modifi
 >
 >Nem todas as seções estão presentes em um arquivo de configuração. Nos casos em que uma seção está ausente, os valores padrão são fornecidos pela instância do servidor X em execução.
 
+
+Os arquivos de configuração específicos ao usuário também residem em `/etc/X11/xorg.conf.d/`. Os arquivos de configuração fornecidos pela distribuição localizam-se em `/usr/share/X11/xorg.conf.d/`. Os arquivos de configuração localizados em `/etc/X11/xorg.conf.d/` são analisados antes do arquivo `/etc/X11/xorg.conf` se ele existir no sistema.
+
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
@@ -1511,11 +1514,11 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3NT
-gwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5
-LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MT
-E1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYs
-MTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NT
-U2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTRd
-fQ==
+eyJoaXN0b3J5IjpbLTE5Njg4ODcwMiw3NTY0NTUzNjUsMTM0Nz
+A4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYs
+LTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5ND
+cwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYs
+LTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0Mj
+YwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5
+XX0=
 -->
