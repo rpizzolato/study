@@ -1243,9 +1243,55 @@ Alternativamente, o layout de um teclado pode ser modificado durante uma sessão
 
 Essa configuração só permanecerá ativa enquanto a sessão X estiver em uso. Para que essas alterações se tornem permanentes, modifique o arquivo  `/etc/X11/xorg.conf.d/00-keyboard.conf`  de forma a incluir as configurações necessárias.
 
+>[!NOTE]
+>
+>O comando  `setxkbmap`  utiliza a X Keyboard Extension (XKB). Este é um exemplo da funcionalidade aditiva do X Window System por meio do uso de extensões.
+
+As distribuições Linux modernas fornecem o comando  `localectl`  através do  `systemd`, que também pode ser usado para modificar um layout de teclado e cria automaticamente o arquivo de configuração  `/etc/X11/xorg.conf.d/00-keyboard.conf`. Novamente, eis um exemplo de configuração de um teclado grego politônico em um Chromebook, desta vez com o comando  `localectl`:
+
+    $ localectl --no-convert set-x11-keymap "gr(polytonic)" chromebook
+
+A opção  `--no-convert`  é usada aqui para impedir que o  `localectl`  modifique o mapa do teclado no console do hospedeiro.
+
+- `Monitor`: a seção  `Monitor`  descreve o monitor físico utilizado e onde está conectado. Eis um exemplo de configuração que mostra um monitor de hardware conectado à segunda porta de vídeo e usado como monitor principal.
+
+    Section "Monitor"
+            Identifier  "DP2"
+            Option      "Primary" "true"
+    EndSection
+
+- `Device`: a seção  `Device`  descreve a placa de vídeo física utilizada. A seção também contém o módulo do kernel usado como driver para a placa de vídeo, junto com sua localização física na placa-mãe.
+
+    Section "Device"
+            Identifier  "Device0"
+            Driver      "i915"
+            BusID       "PCI:0:2:0"
+    EndSection
+
+- Screen`
+
+A seção  `Screen`  reúne as seções  `Monitor`  e  `Device`. Um exemplo de seção  `Screen`  seria semelhante ao seguinte:
+
+Section "Screen"
+        Identifier "Screen0"
+        Device     "Device0"
+        Monitor    "DP2"
+EndSection
+
+`ServerLayout`
+
+A seção  `ServerLayout`  agrupa todas as seções como mouse, teclado e telas em uma única interface do X Window System.
+
+Section "ServerLayout"
+	Identifier   "Layout-1"
+	Screen       "Screen0" 0 0
+	InputDevice  "mouse1"  "CorePointer"
+	InputDevice  "system-keyboard"  "CoreKeyboard"
+EndSection
+
 Note
 
-O comando  `setxkbmap`  utiliza a X Keyboard Extension (XKB). Este é um exemplo da funcionalidade aditiva do X Window System por meio do uso de extensões.
+Nem todas as seções estão presentes em um arquivo de configuração. Nos casos em que uma seção está ausente, os valores padrão são fornecidos pela instância do servidor X em execução.
 
 Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no terminal **tty7**. E para gerar o `xorg.conf`, é necessário parar esse processo, logo terá que mudar para o **tty1** (`Ctrl+Alt+F1`), acessar como root e parar o processo **Xorg**.
 
@@ -1469,7 +1515,7 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUxNDk3OTE3LDEzNDcwODY1MTMsMTY3NT
+eyJoaXN0b3J5IjpbNzI0NDY5NDc5LDEzNDcwODY1MTMsMTY3NT
 gwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5
 LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MT
 E1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYs
