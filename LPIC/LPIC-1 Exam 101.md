@@ -1364,12 +1364,13 @@ Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 - São clientes X
 - Podem ser parte integrada de um DE ou independentes
 - Exemplos: mutter (GNOME), KWin (DKE), Muffin (Cinnamon), Xfwm (XFCE), enligntenment, window maker, Openbox, etc
+*É requisito ter um Window Manager dentro do Desktop Environment
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMj
-A1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIz
-LDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nz
-k4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0Mjkz
-OCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMj
-MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
-NTY0MzhdfQ==
+eyJoaXN0b3J5IjpbMTYwOTQ5MjI3MCwyOTI2NjE0MDYsLTIzMj
+Q0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1
+LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNT
+E5ODg1NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2
+NSwxODQ4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMT
+cyMzY1NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYx
+MDI5N119
 -->
