@@ -1346,15 +1346,17 @@ No host que irá receber a abertura do programa escolhido, é preciso liberá-lo
 
 Digite `xhost` novamente para confirmar que realmente foi liberado. Para liberar completamente o controle de acesso, digite `xhost +` (comando para restringir novamente é: `xhost -`)
 
-Ainda assim não será possível realizar a tarefa, pois o **Display Manager** está bloqueando. No caso, seria o **lightdm**. Se olhar no processo Xorg (`ps axu | grep X`), é possível notar que **lightdm** está rodando com a opção `-nolisten tcp`, e é necessário mudar essa opção.
+Ainda assim não será possível realizar a tarefa, pois o **Display Manager** está bloqueando. No caso, seria o **lightdm**. Se olhar no processo Xorg (`ps axu | grep X`), é possível notar que **lightdm** está rodando com a opção `-nolisten tcp`, e é necessário mudar essa opção (isso para distros baseadas no Debian/Ubuntu).
+
+Vá até `/usr/share/lightdm/lightdm.conf.d`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MTQ0NDY4NiwtNTQyNjA0MjUsMTU2OT
-U1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0
-LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4ND
-gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
-MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
-0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
-Mzg2NTg1XX0=
+eyJoaXN0b3J5IjpbNTEwMjk1OTQzLC01NDI2MDQyNSwxNTY5NT
+U2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQs
+MTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0OD
+M0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcx
+MSwxMjMxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLT
+EyMTc4NTY0MzgsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgz
+ODY1ODVdfQ==
 -->
