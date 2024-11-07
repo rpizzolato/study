@@ -1209,14 +1209,17 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 ### 106.1 Instalar e configurar o X11
 
 Em cima do X ou X11, que roda os gerenciadores de janela, como gnome, kde, xfce, etc.
-Display Manager: aquela tela de login inicial
-O servidor X funciona como um modelo cliente-servidor. Os apps que são executados são clientes do servidor X, que provê as disponibilidades gráficas. 
+Display Manager: aquela tela de login inicial.<br>
+O servidor X funciona como um modelo cliente-servidor. Os apps que são executados são clientes do servidor X, que provê as disponibilidades gráficas. Assim como a calculadora, que também é um cliente do servidor X.
+
+Normalmente as configurações ficam em /etc/X11
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzQ4NDYxNjMsMTQxNTM0NTk2NSwxOD
-Q4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1
-NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5Ny
-wtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIx
-ODM4NjU4NSwtMjQzMDM4MDE0LC0yMDM5MjczNjQwLC0xMDE1NT
-IxNDcxLC04NDk2NDU1MzEsMTA0NjIxOTU3NCwxOTQ4MDc0OTU0
-LDQzMDI0Njc0NF19
+eyJoaXN0b3J5IjpbMjEwMzE0OTI3MywxNDE1MzQ1OTY1LDE4ND
+gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
+MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
+0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
+Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEwMTU1Mj
+E0NzEsLTg0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNzQ5NTQs
+NDMwMjQ2NzQ0XX0=
 -->
