@@ -133,8 +133,11 @@ Para sair da VM, digite `Ctrl + ]`. Veja que a VM ainda está executando, com o 
 Para acessar novamente a VM, use: `xl console nome_instancia` ou `numero_id`
 
 Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado uma vif (virtual interface) chamada **vif1.0**, que se conecta à bridge `xenbr0`. Esse 1.0 da **vif** faz referência ao ID da VM quando é listado com o comando `xl list`, ou seja, a **vif1.0** pertence à VM de **id 1**.
+
+- `xl shutdown nome_instancia ou numero_id`: desliga/baixa a VM, depois pode confirmar com `xl list`. Lembrando que para subir a VM novamente, usa x
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xND
-Q5MjI2ODQsLTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgz
-MDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbLTIwNzc5NjYzODQsNTI3MTUzNTMwLC0yMD
+A1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzNDYw
+NDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV
+19
 -->
