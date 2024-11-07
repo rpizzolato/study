@@ -134,10 +134,10 @@ Para acessar novamente a VM, use: `xl console nome_instancia` ou `numero_id`
 
 Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado uma vif (virtual interface) chamada **vif1.0**, que se conecta à bridge `xenbr0`. Esse 1.0 da **vif** faz referência ao ID da VM quando é listado com o comando `xl list`, ou seja, a **vif1.0** pertence à VM de **id 1**.
 
-- `xl shutdown nome_instancia ou numero_id`: desliga/baixa a VM, depois pode confirmar com `xl list`. Lembrando que para subir a VM novamente, usa x
+- `xl shutdown nome_instancia ou numero_id`: desliga/baixa a VM, depois pode confirmar com `xl list`. Lembrando que para subir a VM novamente, usa `xl create -c /etc/xen/lpic3-pv-guest.cfg`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzc5NjYzODQsNTI3MTUzNTMwLC0yMD
-A1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzNDYw
-NDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV
-19
+eyJoaXN0b3J5IjpbMTQyMzA1NDY0MSw1MjcxNTM1MzAsLTIwMD
+UwNzY5NzEsLTE0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0NjA0
+NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX
+0=
 -->
