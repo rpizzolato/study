@@ -1344,15 +1344,15 @@ No host que irá receber a abertura do programa escolhido, é preciso liberá-lo
 
     xhost +192.168.0.99
 
-Digite `xhost` novamente para confirmar que realmente foi liberado.
+Digite `xhost` novamente para confirmar que realmente foi liberado. Para liberar completamente o controle de acesso, digite `xhost +`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0NzAzNjk5LDE1Njk1NTY4MjMsODA3OT
-c2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1NCwxODk3OTgyNTEy
-LDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxODQ4MzQyOTM4LC0xMj
-YxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1NzExLDEyMzE1MzAz
-OTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5NywtMTIxNzg1NjQzOC
-wtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIxODM4NjU4NSwtMjQz
-MDM4MDE0XX0=
+eyJoaXN0b3J5IjpbLTkzMjgxNDIzNywxNTY5NTU2ODIzLDgwNz
+k3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUx
+MiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0MjkzOCwtMT
+I2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMjMxNTMw
+MzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4NTY0Mz
+gsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0
+MzAzODAxNF19
 -->
