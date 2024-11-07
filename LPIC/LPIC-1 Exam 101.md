@@ -1353,12 +1353,13 @@ Vá até `/usr/share/lightdm/lightdm.conf.d`, e edite o arquivo `50-xserver-comm
 Agora do computador que irá executar o comando para abertura de algum app, execute xcalc ou qualquer outro aplicativo para abrir no outro computador.<br>
 *O processamento todo está sendo feito pelo PC que abriu a aplicação, no caso o PC de origem. O de destino apenas está gerando a parte gráfica.
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Nj
-k1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNTE5ODg1
-NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2NSwxOD
-Q4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMTcyMzY1
-NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYxMDI5Ny
-wtMTIxNzg1NjQzOCwtMTUwODIzMjEwLDE3MjQ3MjgzMTksLTIx
-ODM4NjU4NV19
+eyJoaXN0b3J5IjpbLTgzNDE4NDQ0NCwtMTkyMDMwMDQ1OCwtNT
+QyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3NDQ2NjYw
+MDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxND
+E1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5
+OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNi
+wtMjYwNjEwMjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcy
+NDcyODMxOV19
 -->
