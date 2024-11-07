@@ -1360,12 +1360,16 @@ Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 
 ##### Gerenciador de Janelas (Window Manager)
 
+- Controla a criação e fechamento das janelas no ambiente, além do posicionamento e aparência
+- São clientes X
+- Podem ser parte integrada de um DE ou independentes
+- Exemplos: mutter (GNOME), KWin (DKE), Muffin (Cinnamon), Xfwm (XFCE), enligntenment, window maker, Openbox, etc
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzQ3NzM4NiwtMjMyNDQ5OTU2LDEzMz
-IwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1Njgy
-Myw4MDc5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OT
-c5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5
-MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMT
-IzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3
-ODU2NDM4XX0=
+eyJoaXN0b3J5IjpbMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMj
+A1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIz
+LDgwNzk3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nz
+k4MjUxMiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0Mjkz
+OCwtMTI2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMj
+MxNTMwMzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4
+NTY0MzhdfQ==
 -->
