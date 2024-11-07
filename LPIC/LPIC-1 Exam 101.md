@@ -1400,13 +1400,13 @@ Se estiver usando o GNOME, faça o teste:
 
 Em `/usr/share/X11/xorg.conf.d` ficam alguns arquivos de configuração de aplicativos ligados ao hardware, como GPUs, com padrão Section e EndSection
 
-Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`, que é um arquivo de log
+Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`, que é um arquivo de log para guardar os erros que ocorrem relacionados à interface gráfica
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYxODA0OTAwLDEzMTQ5MDY0NDIsLTI2OT
-Q3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2
-LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOTIwMzAwNDU4LC01ND
-I2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4MywtMTc0NDY2NjAw
-OSw1MzUxOTg4NTQsMTg5Nzk4MjUxMiwxMjM0MzA4ODU4LDE0MT
-UzNDU5NjUsMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNTcyNTk5
-OTFdfQ==
+eyJoaXN0b3J5IjpbLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5ND
+cwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYs
+LTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0Mj
+YwNDI1LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5
+LDUzNTE5ODg1NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNT
+M0NTk2NSwxODQ4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5
+MV19
 -->
