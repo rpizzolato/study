@@ -1365,12 +1365,15 @@ Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 - Podem ser parte integrada de um DE ou independentes
 - Exemplos: mutter (GNOME), KWin (DKE), Muffin (Cinnamon), Xfwm (XFCE), enligntenment, window maker, Openbox, etc
 *É requisito ter um **Window Manager** dentro do **Desktop Environment**
+
+- update-alternatives --display x-window-manager: verifica qual é o gerenciador de janelas, ou com o comando:
+- ls -l /etc/alterna
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMj
-Q0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1
-LDE1Njk1NTY4MjMsODA3OTc2OTgzLC0xNzQ0NjY2MDA5LDUzNT
-E5ODg1NCwxODk3OTgyNTEyLDEyMzQzMDg4NTgsMTQxNTM0NTk2
-NSwxODQ4MzQyOTM4LC0xMjYxNjgyNzU0LDI1NzI1OTk5MSwxMT
-cyMzY1NzExLDEyMzE1MzAzOTEsLTExOTY1NjE1MjYsLTI2MDYx
-MDI5N119
+eyJoaXN0b3J5IjpbLTIwNDY3MTcxMSwxOTA2NzM3ODM4LDI5Mj
+Y2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1
+OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3ND
+Q2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1
+OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMj
+U3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2
+MTUyNl19
 -->
