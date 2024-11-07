@@ -1218,12 +1218,146 @@ Com `ps axu | grep X`, podemos ver o processo `/usr/lib/xorg/Xorg`, que roda no 
 
 É necessário mudar para o modo de multiusuários, mas sem interface gráfica, por meio do comando: `# systemctl isolate multi-user.target`. Confirme com `ps axu | grep X`, e verá que o servidor X não está mais rodando.
 
-Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`. Rode `startx` para subir o servidor X (mas sem a tela de login), para sair basta fazer um logout. Volte para a interface gráfica padrão executando o comando `systemctl default`. O x
+Agora resta executar o comando `Xorg -configure` (ubuntu 16.04) que irá gerar um arquivo `xorg.conf` em `/root`. Copie esse arquivo para `/etc/x11/xorg.conf`. Rode `startx` para subir o servidor X (mas sem a tela de login), para sair basta fazer um logout. Volte para a interface gráfica padrão executando o comando `systemctl default`. O `xorg.conf` é separado por seções, com identificadores e opções, para mouse, teclado, telas, fontes (que podem ser remotas inclusive), etc.
+
+**Module**
+
+Carregamento dinâmico de módulos.
+
+Exemplo:  
+
+_Section "Module"  
+Load "glx"  
+Load "dbe"  
+Load "extmod"  
+EndSection  
+_
+
+**Files**
+
+Caminhos para alguns arquivos e diretórios utilizados pelo servidor X, como módulos mas principalmente as  **fontes**.
+
+Exemplos:
+
+_Section "Files"  
+ModulePath "/usr/lib/xorg/modules"  
+FontPath "/usr/share/fonts/X11/misc"  
+FontPath "/usr/share/fonts/X11/Type1"  
+FontPath "/usr/share/fonts/X11/100dpi"  
+FontPath "/usr/share/fonts/X11/75dpi"  
+FontPath "built-ins"  
+FontPath "unix:/7100"  
+FontPath "tcp/fonts.server.com:7100"  
+EndSection_
+
+  
+
+**InputDevice**
+
+Contêm configurações referentes aos dispositivos de entrada, principalmente  **mouse** e  **teclado**.  _Identifier_ e  _Driver_  são parâmetros obrigatórios utilizados para especificar o dispositivo. Além disso parâmetros  _Option_ podem ser adicionados para implementar configurações específicas
+
+Exemplo:
+
+_Section "InputDevice"  
+Identifier "Keyboard0"  
+Driver "kbd"  
+Option "XkbModel" "pc105"  
+Option "XkbLayout" "us"  
+Option "AutoRepeat" "500 200"  
+EndSection_
+
+  
+
+_Section "InputDevice"  
+Identifier "Mouse0"  
+Driver "mouse"  
+Option "Protocol" "auto"  
+Option "Device" "/dev/input/mice"  
+Option "Emulate3Buttons" "no"  
+Option "ZAxisMapping" "4 5"  
+EndSection_
+
+  
+
+**Device**
+
+Seção utilizada principalmente para configuração da  **placa de vídeo**. Semelhante ao InputDevice, tem os parâmetros  _Identifier_ e  _Driver_ como obrigatórios.
+
+Exemplo:
+
+_Section "Device"  
+Identifier "VideoCard0"  
+Driver "nv"  
+VendorName "nVidia"  
+BoardName "GeForce 6100"  
+VideoRam 131072  
+EndSection_
+
+  
+
+**Monitor**
+
+Configurações específicas do monitor utilizado, como  _HorizSync_ e  _VertRefresh_.
+
+Exemplo:
+
+_Section "Monitor"  
+Identifier "Monitor0"  
+VendorName "Monitor Vendor"  
+ModelName "Monitor Model"  
+HorizSync 30.0 - 83.0  
+VertRefresh 55.0 - 75.0  
+EndSection_
+
+  
+
+**Screen**
+
+A seção screen é uma combinação entre o monitor e a placa de vídeo, dizendo ao X quais os modos que ele pode trabalhar. Na sub-seção  **Display**, são informados por exemplo as  **resoluções** suportadas,  **color depth** (bits por pixel), e etc.
+
+_Section "Screen"  
+Identifier "Screen0"  
+Device "Card0"  
+Monitor "Monitor0"  
+SubSection "Display"  
+Viewport 0 0  
+Depth 1  
+EndSubSection  
+SubSection "Display"  
+Viewport 0 0  
+Depth 4  
+EndSubSection  
+SubSection "Display"  
+Depth 24  
+Modes "1920x1080" "1280x1024" "1024x768"  
+EndSubSection  
+SubSection "Display"  
+Depth 8  
+Modes "1024x768" "800x600" "640x480"  
+EndSubSection  
+EndSection_
+
+  
+
+**ServerLayout**
+
+Esta seção agrega as outras definições da configuração do X, associando principalmente as informações do Screen e InputDevices.
+
+Exemplo:
+
+_Section "ServerLayout"  
+Identifier "X.org Configured"  
+Screen 0 "Screen0" 0 0  
+InputDevice "Mouse0" "CorePointer"  
+InputDevice "Keyboard0" "CoreKeyboard"  
+EndSection_
+
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDUxNTk5MjQsLTE3NDQ2NjYwMDksNT
+eyJoaXN0b3J5IjpbLTExNjUyNDkwMzAsLTE3NDQ2NjYwMDksNT
 M1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1OCwxNDE1MzQ1
 OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLD
 ExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYw
