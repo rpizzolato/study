@@ -1366,14 +1366,18 @@ Exemplos: KDE, GNOME, MATE, Cinnamon, LXDE, Xfce
 - Exemplos: mutter (GNOME), KWin (DKE), Muffin (Cinnamon), Xfwm (XFCE), enligntenment, window maker, Openbox, etc
 *É requisito ter um **Window Manager** dentro do **Desktop Environment**
 
-- update-alternatives --display x-window-manager: verifica qual é o gerenciador de janelas, ou com o comando:
-- ls -l /etc/alternatives/ | grep window
+- `update-alternatives --display x-window-manager`: verifica qual é o gerenciador de janelas, ou com o comando:
+- `ls -l /etc/alternatives/ | grep window`
+
+##### Interface Gráfica (GUI)
+
+Quando falamos qual interface gráfica você usa? E respondemos KDE, GNOME, etc. Na realidade tecnicamente estamos falando de Desktop E
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5Mj
-Y2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1
-OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MDc5NzY5ODMsLTE3ND
-Q2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1MTIsMTIzNDMwODg1
-OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLTEyNjE2ODI3NTQsMj
-U3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2
-MTUyNl19
+eyJoaXN0b3J5IjpbLTExNDk2NTI1NzMsLTQyOTExNTk4OSwxOT
+A2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0
+OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1NjgyMyw4MD
+c5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1
+MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLT
+EyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUz
+MDM5MV19
 -->
