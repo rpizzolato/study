@@ -1336,16 +1336,19 @@ Exemplo:
 $Display mostra, normalmente, a seguinte informação:<br>
 
     :0.0
-Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`. Para exec
+Quando não há nada antes dos dois pontos (`:`), considera-se que o valor é `localhost`. Para executar algum app em outro computador, precisa-se mudar o valor da variável de ambiente DISPLAY:<br>
 
+    export DISPLAY="192.168.0.100:0.0"
+
+No host que irá receber a abertura do programa escolhido, é preciso liberá-lo para essa conexão. Por meio do comando xhost é possível 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NTkzNDc0NiwxNTY5NTU2ODIzLDgwNz
-k3Njk4MywtMTc0NDY2NjAwOSw1MzUxOTg4NTQsMTg5Nzk4MjUx
-MiwxMjM0MzA4ODU4LDE0MTUzNDU5NjUsMTg0ODM0MjkzOCwtMT
-I2MTY4Mjc1NCwyNTcyNTk5OTEsMTE3MjM2NTcxMSwxMjMxNTMw
-MzkxLC0xMTk2NTYxNTI2LC0yNjA2MTAyOTcsLTEyMTc4NTY0Mz
-gsLTE1MDgyMzIxMCwxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0
-MzAzODAxNF19
+eyJoaXN0b3J5IjpbLTEyOTYxOTAyODgsMTU2OTU1NjgyMyw4MD
+c5NzY5ODMsLTE3NDQ2NjYwMDksNTM1MTk4ODU0LDE4OTc5ODI1
+MTIsMTIzNDMwODg1OCwxNDE1MzQ1OTY1LDE4NDgzNDI5MzgsLT
+EyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3MTEsMTIzMTUz
+MDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC0xMjE3ODU2ND
+M4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4Mzg2NTg1LC0y
+NDMwMzgwMTRdfQ==
 -->
