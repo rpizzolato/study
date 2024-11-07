@@ -1212,10 +1212,12 @@ Em cima do X ou X11, que roda os gerenciadores de janela, como gnome, kde, xfce,
 Display Manager: aquela tela de login inicial.<br>
 O servidor X funciona como um modelo cliente-servidor. Os apps que são executados são clientes do servidor X, que provê as disponibilidades gráficas. Assim como a calculadora, que também é um cliente do servidor X.
 
-Normalmente as configurações ficam em /etc/X11
+Normalmente as configurações ficam em `/etc/X11/xorg.conf` (por padrão já nem vem mais com as distros, tendo em vista que tudo já vem muito bem configurado.). No entanto, para explorar, teria que criar o arquivo `xorg.conf` manualmente.
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMzE0OTI3MywxNDE1MzQ1OTY1LDE4ND
+eyJoaXN0b3J5IjpbMTUzMDQ2NzIzMiwxNDE1MzQ1OTY1LDE4ND
 gzNDI5MzgsLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNzIzNjU3
 MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEwMjk3LC
 0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOSwtMjE4
