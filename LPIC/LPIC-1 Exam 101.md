@@ -1205,12 +1205,14 @@ A usuária `user2` em `debian` se logou em uma sessão GUI (ou X Window System) 
 - `-bash`  ou  `-su`: Interativo de login
 - `bash`  or  `/bin/bash`: Interativo sem login
 - `<nome_do_script>`: Não-interativo sem login (scripts)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjE2ODI3NTQsMjU3MjU5OTkxLDExNz
-IzNjU3MTEsMTIzMTUzMDM5MSwtMTE5NjU2MTUyNiwtMjYwNjEw
-Mjk3LC0xMjE3ODU2NDM4LC0xNTA4MjMyMTAsMTcyNDcyODMxOS
-wtMjE4Mzg2NTg1LC0yNDMwMzgwMTQsLTIwMzkyNzM2NDAsLTEw
-MTU1MjE0NzEsLTg0OTY0NTUzMSwxMDQ2MjE5NTc0LDE5NDgwNz
-Q5NTQsNDMwMjQ2NzQ0LC0xOTY5ODY5OTgxLDU3NTc5NDYzNSwx
-NDI4MjU3OTk1XX0=
+eyJoaXN0b3J5IjpbMTg0ODM0MjkzOCwtMTI2MTY4Mjc1NCwyNT
+cyNTk5OTEsMTE3MjM2NTcxMSwxMjMxNTMwMzkxLC0xMTk2NTYx
+NTI2LC0yNjA2MTAyOTcsLTEyMTc4NTY0MzgsLTE1MDgyMzIxMC
+wxNzI0NzI4MzE5LC0yMTgzODY1ODUsLTI0MzAzODAxNCwtMjAz
+OTI3MzY0MCwtMTAxNTUyMTQ3MSwtODQ5NjQ1NTMxLDEwNDYyMT
+k1NzQsMTk0ODA3NDk1NCw0MzAyNDY3NDQsLTE5Njk4Njk5ODEs
+NTc1Nzk0NjM1XX0=
 -->
