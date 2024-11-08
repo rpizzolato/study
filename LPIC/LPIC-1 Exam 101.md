@@ -1592,14 +1592,14 @@ Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 
 - **GNOME**: forte associação ao Projeto GNU, usa biblioteca gráfica **GTK**, Window Manager: mutter.
 - **KDE**: pode ser usado em Linux, FreeBSD, Solaris, Windows e Mac OS X, usa biblioteca gráfica **Qt**, Window Manager: KWin
-- MATE: derivado do GNOME 2, utiliza biblioteca GTK, Window Manager: marco
-- 
+- **MATE**: derivado do GNOME 2, utiliza biblioteca GTK, Window Manager: marco
+- **Xfce**: pretende ser rápido e leve, utiliza biblioteca GTK, Window Manager: xfwm
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTc4NjU3NzcsLTE2NDE5NTcyNDgsLT
-EzMTA4MDQzMjAsNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgw
-ODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC
-05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1
-OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYsMT
-MzMjA1OTQ5LC0xOTIwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2
-ODIzXX0=
+eyJoaXN0b3J5IjpbNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMz
+EwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3
+NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOT
+Y2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcsLTQyOTExNTk4
+OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMz
+IwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1Njgy
+M119
 -->
