@@ -1609,12 +1609,18 @@ Para conexão remota utilizando XDMCP, configure o arquivo `/etc/lightdm/lightdm
     enable=true
 
 Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
+
+- **VNC** (Virtual Networking Computing)
+	- utiliza o protocolo RFB
+	- Não é totalmente seguro, mas as senhas são criptografadas
+
+- SPICE (Simple Protocol for Independent Computing Environment
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMD
-M2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUz
-NjUsMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOT
-A2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0
-MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOT
-I2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0
-NThdfQ==
+eyJoaXN0b3J5IjpbMTYxMjA2MjQ0MCwtODAwODE4OTcyLC05Mz
+UxMDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0
+MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLT
+g2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOTY2NDUz
+NywxMzE0OTA2NDQyLC0yNjk0NzA0NTcsLTQyOTExNTk4OSwxOT
+A2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0
+OV19
 -->
