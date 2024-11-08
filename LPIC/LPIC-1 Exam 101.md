@@ -1618,14 +1618,14 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 	- solução open source completa para acesso remoto
 	- solução mais segura
 
-- RDP (Remote Desktop Protocol)
+- **RDP** (Remote Desktop Protocol)
 	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMD
-gxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0
-OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4NjUxMywxNj
-c1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5
-NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00Mj
-kxMTU5ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1
+eyJoaXN0b3J5IjpbMTE4NTIwNDI0OCwzMTYzNzM1MjgsLTM3Mz
+k5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5
+LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMz
+Q3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1
+NiwtMTA4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNj
+k0NzA0NTcsLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQw
 Nl19
 -->
