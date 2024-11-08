@@ -1615,7 +1615,7 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 - **VNC** (Virtual Networking Computing)
 	- utiliza o protocolo RFB (Remote Framebuffer Protocol)
 	- Não é totalmente seguro, mas as senhas são criptografadas
-	- 
+	- É possível executar muitos servidores VNC na mesma máquina, mas cada servidor VNC precisa de uma porta TCP exclusiva na interface de rede que aceite solicitações de sessão de entrada. Por convenção, o primeiro servidor VNC deve usar a porta TCP 5900, o segundo deve usar 5901 e assim por diante
 
 - **SPICE** (Simple Protocol for Independent Computing Environment)
 	- solução open source completa para acesso remoto
@@ -1624,11 +1624,11 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 - **RDP** (Remote Desktop Protocol)
 	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTYyMDQ0Nyw2NDIwMDcwNzQsMzE2Mz
-czNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3
-LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NT
-Y0NTUzNjUsMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4
-OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxND
-kwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgz
-OF19
+eyJoaXN0b3J5IjpbLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNj
+M3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4
+Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNz
+U2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDky
+ODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMT
+Q5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4
+MzhdfQ==
 -->
