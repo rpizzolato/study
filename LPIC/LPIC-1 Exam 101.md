@@ -1589,12 +1589,14 @@ O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth l
 ### 106.2 Desktops gráficos
 
 Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
+
+- **GNOME**: forte associação ao Projeto GNU, usa biblioteca gráfica GTK, Window Manager: mutter.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMzY4MTkwOSwtMTY0MTk1NzI0OCwtMT
-MxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4NjUxMywxNjc1ODA4
-NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLT
-k2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5
-ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMz
-MyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4
-MjNdfQ==
+eyJoaXN0b3J5IjpbODU1MDU0MjYzLC0xNjQxOTU3MjQ4LC0xMz
+EwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3
+NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOT
+Y2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcsLTQyOTExNTk4
+OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMz
+IwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1Njgy
+M119
 -->
