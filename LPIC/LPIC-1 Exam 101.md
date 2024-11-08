@@ -1585,12 +1585,16 @@ Todos os usuário terão em seu diretório padrão o arquivo `.xsession-errors`,
 O acesso remoto que foi feito usando **xhost**, pode ser feito usando o `xauth list`, pegando o magic cookie do computador que quer executar os aplicativos, e adicionando esse magic coockie no computador que irá realizar o acesso, usando o comando:
 
 - `xauth add 192.168.0.100 MIT-MAGIC-COOKIE-1 hash_gerada`
+
+### 106.2 Desktops gráficos
+
+Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNz
-U2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDky
-ODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMT
-Q5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4
-MzgsMjkyNjYxNDA2LC0yMzI0NDk5NTYsMTMzMjA1OTQ5LC0xOT
-IwMzAwNDU4LC01NDI2MDQyNSwxNTY5NTU2ODIzLDgwNzk3Njk4
-M119
+eyJoaXN0b3J5IjpbLTkzMzY4MTkwOSwtMTY0MTk1NzI0OCwtMT
+MxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4NjUxMywxNjc1ODA4
+NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLT
+k2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5
+ODksMTkwNjczNzgzOCwyOTI2NjE0MDYsLTIzMjQ0OTk1NiwxMz
+MyMDU5NDksLTE5MjAzMDA0NTgsLTU0MjYwNDI1LDE1Njk1NTY4
+MjNdfQ==
 -->
