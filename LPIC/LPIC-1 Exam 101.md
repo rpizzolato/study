@@ -1603,13 +1603,14 @@ Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 	- Não implementa segurança/criptografia
 	- Não faz compressão (ocupa bastante banda  )
 
-Para conexão remota utilizando XDMCP, configure o arquivo /etc/lightdm/lightdm.conf de maneira que habilite o XDMCPServer:<br>
+Para conexão remota utilizando XDMCP, configure o arquivo `/etc/lightdm/lightdm.conf` de maneira que habilite o XDMCPServer:<br>
 
     [XDMCPServer]
     enable=true
-Em otro
+
+Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODEzNzE2OCwtOTM1MTAxOTg3LDUyMD
+eyJoaXN0b3J5IjpbLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMD
 M2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUz
 NjUsMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOT
 A2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0
