@@ -1595,6 +1595,8 @@ Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 - **MATE**: derivado do GNOME 2, utiliza biblioteca GTK, Window Manager: marco
 - **Xfce**: pretende ser rápido e leve, utiliza biblioteca GTK, Window Manager: xfwm
 
+*O **LXDE** é um ambiente de desktop adaptado para baixo consumo de recursos, sendo assim uma boa escolha para instalação em equipamentos mais antigos ou computadores de placa única. Embora não ofereça todas as capabilidades dos ambientes de trabalho mais pesados, o LXDE inclui todos os recursos básicos esperados de uma interface gráfica de usuário moderna
+
 #### Protocolos para acesso remoto a Desktops
 
 - **XDMCP** (X Display Manager Control Protocol)
@@ -1621,11 +1623,11 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 - **RDP** (Remote Desktop Protocol)
 	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTIwNDI0OCwzMTYzNzM1MjgsLTM3Mz
-k5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5
-LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMz
-Q3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1
-NiwtMTA4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNj
-k0NzA0NTcsLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQw
-Nl19
+eyJoaXN0b3J5IjpbNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOT
+k4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5Njks
+LTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzND
+cwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2
+LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OT
+Q3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2
+XX0=
 -->
