@@ -1615,6 +1615,7 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 - **VNC** (Virtual Networking Computing)
 	- utiliza o protocolo RFB (Remote Framebuffer Protocol)
 	- Não é totalmente seguro, mas as senhas são criptografadas
+	- 
 
 - **SPICE** (Simple Protocol for Independent Computing Environment)
 	- solução open source completa para acesso remoto
@@ -1623,11 +1624,11 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 - **RDP** (Remote Desktop Protocol)
 	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOT
-k4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5Njks
-LTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzND
-cwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2
-LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OT
-Q3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4MzgsMjkyNjYxNDA2
-XX0=
+eyJoaXN0b3J5IjpbMTExMTYyMDQ0Nyw2NDIwMDcwNzQsMzE2Mz
+czNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3
+LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NT
+Y0NTUzNjUsMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4
+OTEsOTA2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxND
+kwNjQ0MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgz
+OF19
 -->
