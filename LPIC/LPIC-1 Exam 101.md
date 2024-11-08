@@ -1603,13 +1603,17 @@ Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 	- Não implementa segurança/criptografia
 	- Não faz compressão (ocupa bastante banda  )
 
-Para conexão remov
+Para conexão remota utilizando XDMCP, configure o arquivo /etc/lightdm/lightdm.conf de maneira que habilite o XDMCPServer:<br>
+
+    [XDMCPServer]
+    enable=true
+Em otro
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzczNjgxMjM5LC05MzUxMDE5ODcsNTIwMz
-Y0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2
-NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MD
-Y0NjI1NiwtMTA4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQy
-LC0yNjk0NzA0NTcsLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5Mj
-Y2MTQwNiwtMjMyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1
-OF19
+eyJoaXN0b3J5IjpbMTEwODEzNzE2OCwtOTM1MTAxOTg3LDUyMD
+M2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUz
+NjUsMTM0NzA4NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOT
+A2NDYyNTYsLTEwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0
+MiwtMjY5NDcwNDU3LC00MjkxMTU5ODksMTkwNjczNzgzOCwyOT
+I2NjE0MDYsLTIzMjQ0OTk1NiwxMzMyMDU5NDksLTE5MjAzMDA0
+NThdfQ==
 -->
