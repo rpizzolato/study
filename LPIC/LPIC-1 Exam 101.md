@@ -1594,12 +1594,20 @@ Desktops Environments: GNOME, KDE, MATE, Cinnamon, XFCE, LXDE
 - **KDE**: pode ser usado em Linux, FreeBSD, Solaris, Windows e Mac OS X, usa biblioteca gráfica **Qt**, Window Manager: KWin
 - **MATE**: derivado do GNOME 2, utiliza biblioteca GTK, Window Manager: marco
 - **Xfce**: pretende ser rápido e leve, utiliza biblioteca GTK, Window Manager: xfwm
+
+#### Protocolos para acesso remoto a Desktops
+
+- **XDMCP** (X Display Manager Control Protocol)
+	- Protocolo nativo do X
+	- Implementado pelo Display Manager
+	- Não implementa segurança/criptografia
+	- Não faz compressão
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMz
-EwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3
-NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOT
-Y2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0NTcsLTQyOTExNTk4
-OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMjMyNDQ5OTU2LDEzMz
-IwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0MjUsMTU2OTU1Njgy
-M119
+eyJoaXN0b3J5IjpbLTE4NzE4MjY2NDIsNTIwMzY0OTY5LC0xNj
+QxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2
+NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMT
+A4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0
+NTcsLTQyOTExNTk4OSwxOTA2NzM3ODM4LDI5MjY2MTQwNiwtMj
+MyNDQ5OTU2LDEzMzIwNTk0OSwtMTkyMDMwMDQ1OCwtNTQyNjA0
+MjVdfQ==
 -->
