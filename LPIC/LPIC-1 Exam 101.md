@@ -1621,14 +1621,14 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 	- solução open source completa para acesso remoto
 	- solução mais segura
 
-- **RDP** (Remote Desktop Protocol)
+- **RDP** (Remote Desktop Protocol): é usado sobretudo para acessar remotamente a área de trabalho de um sistema operacional _Microsoft Windows_ por meio da porta de rede TCP 3389
 	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNj
-M3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4
-Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNz
-U2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDky
-ODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMT
-Q5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1OTg5LDE5MDY3Mzc4
-MzhdfQ==
+eyJoaXN0b3J5IjpbLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNj
+QyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5
+NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLT
+EzMTA4MDQzMjAsNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgw
+ODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC
+05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1
+OTg5XX0=
 -->
