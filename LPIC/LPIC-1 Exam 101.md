@@ -1619,9 +1619,9 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 	- solução mais segura
 
 - RDP (Remote Desktop Protocol)
-	- 
+	- utilizado para o Microsoft Terminal Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyMDE3MDM5LC0zNzM5OTg1ODYsLTgwMD
+eyJoaXN0b3J5IjpbMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMD
 gxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0
 OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4NjUxMywxNj
 c1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLTEwODA2ODU5
