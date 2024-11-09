@@ -158,13 +158,13 @@ Agora a parte de disco:<br>
 
     disk = [
 	    'phy:/dev/xen-vg/lpic3-hvm-guest-disk,hda,w',
-	    ''
+	    'file:/root/Rocky-9.4-x86_64-minimal.iso,hdc:cdrom,r'
     ]
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNDM5NjAzNiwtNjg0MTEwMTIsMjM0Mz
-c2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3MTUzNTMwLC0y
-MDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzND
-YwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0
-MV19
+eyJoaXN0b3J5IjpbODQwMTYzNjQxLC02ODQxMTAxMiwyMzQzNz
+Y4NjUsNDkxODE0ODE1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIw
+MDUwNzY5NzEsLTE0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0Nj
+A0NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQx
+XX0=
 -->
