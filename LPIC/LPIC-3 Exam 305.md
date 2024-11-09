@@ -145,10 +145,10 @@ Criar uma LVM de 20G para ser o disco da VM, com o comando: `lvcreate -n lpic3-h
 
 Fazer download de alguma distro linux, no caso será a Rocky Linux, com o wget: `wget https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-minimal.iso`
 
-
+Agora em `/etc/xen`, trabalhe com o arquivo `xlexample.hvm`, realizando uma cópia dele: `cp xlexample.hvm lpic3-hvm-guest.cfg`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg5MjU4NDkzLDIzNDM3Njg2NSw0OTE4MT
-Q4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwt
-MTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwOD
-E4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbMTkyNjI4NjY4NywyMzQzNzY4NjUsNDkxOD
+E0ODE1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEs
+LTE0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMD
+gxODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
 -->
