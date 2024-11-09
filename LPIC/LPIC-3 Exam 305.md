@@ -160,11 +160,16 @@ Agora a parte de disco:<br>
 	    'phy:/dev/xen-vg/lpic3-hvm-guest-disk,hda,w',
 	    'file:/root/Rocky-9.4-x86_64-minimal.iso,hdc:cdrom,r'
     ]
+E para forçar boot pelo cdrom, usamos abaixo da configuração do disco:<br>
+
+    boot="d"
+    #para hard drive seria "c"
+    #pode colocar por 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMTYzNjQxLC02ODQxMTAxMiwyMzQzNz
-Y4NjUsNDkxODE0ODE1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIw
-MDUwNzY5NzEsLTE0NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0Nj
-A0NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQx
-XX0=
+eyJoaXN0b3J5IjpbODEwOTcxMzAwLDg0MDE2MzY0MSwtNjg0MT
+EwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3
+MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Nj
+c2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4Mzgs
+MTI5MTE3Nzc0MV19
 -->
