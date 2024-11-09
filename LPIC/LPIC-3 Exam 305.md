@@ -142,9 +142,11 @@ Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado u
 Primeiramente é preciso habilitar o suporte à virtualização no processador, no caso no virtualbox, usar o comando: `VBoxManage modifyvm "Nome_da_VM" --nested-hw-virt on`
 
 Criar uma LVM de 20G para ser o disco da VM, com o comando: `lvcreate -n lpic3-hvm-guest-disk -L 20G xen-vg`
+
+Fazer download de alguma distro linux, no caso será a Rocky Linux, com o wget: `wget https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-minimal.iso`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MjI3MzE1NCw0OTE4MTQ4MTUsNzE2OT
-k3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwtMTQ0OTIyNjg0
-LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4MzA1ODYsND
-g5NzY3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OT
+cwMjUsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQs
+LTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0OD
+k3Njc4MzgsMTI5MTE3Nzc0MV19
 -->
