@@ -148,10 +148,12 @@ Fazer download de alguma distro linux, no caso será a Rocky Linux, com o wget: 
 Agora em `/etc/xen`, trabalhe com o arquivo `xlexample.hvm`, realizando uma cópia dele: `cp xlexample.hvm lpic3-hvm-guest.cfg`
 
 Agora no arquivo de configuração lpic3-hvm-guest.cfg:
-- ty
+- `type = hvm` (podemos usar `builder=hvm`, tem o mesmo efeito)
+- `name = "lpic3-hvm-guest"`:
+- memory = 2048
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk0ODIyNzIzLDIzNDM3Njg2NSw0OTE4MT
-Q4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwt
-MTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwOD
-E4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbLTE2NzkwODUxMDIsMjM0Mzc2ODY1LDQ5MT
+gxNDgxNSw3MTY5OTcwMjUsNTI3MTUzNTMwLC0yMDA1MDc2OTcx
+LC0xNDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMj
+A4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV19
 -->
