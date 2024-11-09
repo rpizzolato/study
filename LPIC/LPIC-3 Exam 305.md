@@ -167,12 +167,14 @@ E para forçar boot pelo cdrom, usamos abaixo da configuração do disco:<br>
     #pode colocar por ordem
     #boot="dc" #primeiro o disco cdrom e depois o hard drive
 
-Para o acesso à interface de instalação, pode escolher entre **sdl** e vnc, basta descomentar o desejado.
+Para o acesso à interface de instalação, pode escolher entre **sdl** e **vnc**, basta retirar comentário da opção desejada.
+
+Para efetivamente começar a criar a VM, use o comando: xl crea
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2OTQyODM5LDg0MDE2MzY0MSwtNjg0MT
-EwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3
-MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Nj
-c2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4Mzgs
-MTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbMTEzMzY2MDc4Myw4NDAxNjM2NDEsLTY4ND
+ExMDEyLDIzNDM3Njg2NSw0OTE4MTQ4MTUsNzE2OTk3MDI1LDUy
+NzE1MzUzMCwtMjAwNTA3Njk3MSwtMTQ0OTIyNjg0LC0yMTQ2Nj
+Y3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4MzA1ODYsNDg5NzY3ODM4
+LDEyOTExNzc3NDFdfQ==
 -->
