@@ -147,15 +147,24 @@ Fazer download de alguma distro linux, no caso será a Rocky Linux, com o wget: 
 
 Agora em `/etc/xen`, trabalhe com o arquivo `xlexample.hvm`, realizando uma cópia dele: `cp xlexample.hvm lpic3-hvm-guest.cfg`
 
-Agora no arquivo de configuração lpic3-hvm-guest.cfg:
+Agora no arquivo de configuração `lpic3-hvm-guest.cfg`:
 - `type = hvm` (podemos usar `builder=hvm`, tem o mesmo efeito)
 - `name = "lpic3-hvm-guest"`:
 - `memory = 2048`: quantidade de memória, nesse caso 2G
 - `vcpus = 2`: quantidade de cpus, nesse caso 2 vcpus
 - `vif = [ 'bridge=xenbr0' ]`: aqui aceita mac address também, mas o recomendado é informar a bridge
+
+Agora a parte de disco:<br>
+
+    disk = [
+	    'phy:/dev/xen-vg/lpic3-hvm-guest-disk,hda,w',
+	    ''
+    ]
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDExMDEyLDIzNDM3Njg2NSw0OTE4MT
-Q4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwt
-MTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwOD
-E4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbMjAxNDM5NjAzNiwtNjg0MTEwMTIsMjM0Mz
+c2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3MTUzNTMwLC0y
+MDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzND
+YwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0
+MV19
 -->
