@@ -140,9 +140,11 @@ Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado u
 ### Configuração de uma VM HVM
 
 Primeiramente é preciso habilitar o suporte à virtualização no processador, no caso no virtualbox, usar o comando: `VBoxManage modifyvm "Nome_da_VM" --nested-hw-virt on`
+
+Cri
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkxODE0ODE1LDcxNjk5NzAyNSw1MjcxNT
-M1MzAsLTIwMDUwNzY5NzEsLTE0NDkyMjY4NCwtMjE0NjY2NzY0
-MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMj
-kxMTc3NzQxXX0=
+eyJoaXN0b3J5IjpbNzc1OTAyMDc5LDQ5MTgxNDgxNSw3MTY5OT
+cwMjUsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQs
+LTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0OD
+k3Njc4MzgsMTI5MTE3Nzc0MV19
 -->
