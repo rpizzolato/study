@@ -167,14 +167,17 @@ E para forçar boot pelo cdrom, usamos abaixo da configuração do disco:<br>
     #pode colocar por ordem
     #boot="dc" #primeiro o disco cdrom e depois o hard drive
 
-Para o acesso à interface de instalação, pode escolher entre **sdl** e **vnc**, basta retirar comentário da opção desejada.
+Para o acesso à interface de instalação, pode escolher entre **sdl** e **vnc**, basta retirar comentário da opção desejada. Aqui se
 
 Para efetivamente começar a criar a VM, use o comando: `xl create lpic3-hvm-guest.cfg`
 
+Depois de dar um parsing da construção da VM, pode-se conferir sua efetividade usando `xl list` para listar se realmente já aparece na lista de VMs
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MzczMTMwLDg0MDE2MzY0MSwtNjg0MT
-EwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3
-MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Nj
-c2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4Mzgs
-MTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbMTgyNTA0NzI1MSwtODczNzMxMzAsODQwMT
+YzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0ODE1LDcx
+Njk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0NDkyMj
+Y4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2
+LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
 -->
