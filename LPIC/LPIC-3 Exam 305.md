@@ -152,9 +152,9 @@ Agora no arquivo de configuração lpic3-hvm-guest.cfg:
 - `name = "lpic3-hvm-guest"`:
 - `memory = 2048`: quantidade de memória, nesse caso 2G
 - `vcpus = 2`: quantidade de cpus, nesse caso 2 vcpus
-- vif = [ 'bridge=xenbr0' ]: aqui aceita mac address também, mas o recomendado é informar a bridge
+- `vif = [ 'bridge=xenbr0' ]`: aqui aceita mac address também, mas o recomendado é informar a bridge
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI1ODE0NjkwLDIzNDM3Njg2NSw0OTE4MT
+eyJoaXN0b3J5IjpbLTY4NDExMDEyLDIzNDM3Njg2NSw0OTE4MT
 Q4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwt
 MTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwOD
 E4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
