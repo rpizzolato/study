@@ -183,12 +183,11 @@ Use o comando `ss -nalp | grep 5900` para conferir se a porta do vnc está abert
     # ss -nalp | grep 5900
     tcp   LISTEN 0      1                                       127.0.0.1:5900             0.0.0.0:*    users:(("xen-qemu-system",pid=907,fd=38))
 
-
-
+Do host local, precisamos abrir uma porta até o servidor Xen, por meio do comando:  `ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMzkxOTU3NCwtODczNzMxMzAsODQwMT
-YzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0ODE1LDcx
-Njk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0NDkyMj
-Y4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2
-LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
+eyJoaXN0b3J5IjpbLTM0NTA1MDg4MywtNTEzOTE5NTc0LC04Nz
+M3MzEzMCw4NDAxNjM2NDEsLTY4NDExMDEyLDIzNDM3Njg2NSw0
+OTE4MTQ4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Nj
+k3MSwtMTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgs
+LTIwODE4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
 -->
