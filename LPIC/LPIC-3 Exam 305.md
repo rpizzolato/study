@@ -144,9 +144,11 @@ Primeiramente é preciso habilitar o suporte à virtualização no processador, 
 Criar uma LVM de 20G para ser o disco da VM, com o comando: `lvcreate -n lpic3-hvm-guest-disk -L 20G xen-vg`
 
 Fazer download de alguma distro linux, no caso será a Rocky Linux, com o wget: `wget https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-minimal.iso`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OT
-cwMjUsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQs
-LTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0OD
-k3Njc4MzgsMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbNTg5MjU4NDkzLDIzNDM3Njg2NSw0OTE4MT
+Q4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwt
+MTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwOD
+E4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ==
 -->
