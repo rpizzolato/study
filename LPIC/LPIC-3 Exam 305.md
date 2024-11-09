@@ -178,11 +178,15 @@ Para efetivamente começar a criar a VM, use o comando: `xl create lpic3-hvm-gue
 
 Depois de dar um parsing da construção da VM, pode-se conferir sua efetividade usando `xl list` para listar se realmente já aparece na lista de VMs
 
-Use o comando ss -nalp | grep 5900 para conferir se a porta do vnc está aberta 
+Use o comando `ss -nalp | grep 5900` para conferir se a porta do vnc está aberta e em estado de listening.
+
+    # ss -nalp | grep 5900
+    tcp   LISTEN 0      1                                       127.0.0.1:5900             0.0.0.0:*    users:(("xen-qemu-system",pid=907,fd=38))
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NTEyMjA5OCwtODczNzMxMzAsODQwMT
+eyJoaXN0b3J5IjpbLTUxMzkxOTU3NCwtODczNzMxMzAsODQwMT
 YzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0ODE1LDcx
 Njk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0NDkyMj
 Y4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2
