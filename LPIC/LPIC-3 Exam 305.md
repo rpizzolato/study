@@ -164,10 +164,13 @@ E para forçar boot pelo cdrom, usamos abaixo da configuração do disco:<br>
 
     boot="d"
     #para hard drive seria "c"
-    #pode colocar por 
+    #pode colocar por ordem
+    #boot="dc" #primeiro o disco cdrom e depois o hard drive
+
+Para o acesso à interface de instalação, pode escolher entre **sdl** e vnc, basta descomentar o desejado.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwOTcxMzAwLDg0MDE2MzY0MSwtNjg0MT
+eyJoaXN0b3J5IjpbODI2OTQyODM5LDg0MDE2MzY0MSwtNjg0MT
 EwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMjUsNTI3
 MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIxNDY2Nj
 c2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Njc4Mzgs
