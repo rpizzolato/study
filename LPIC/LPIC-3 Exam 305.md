@@ -138,9 +138,11 @@ Fora da VM, ao executar o comando `brctl show` é possível ver que foi criado u
 - `xen-delete-image --lvm=xen-vg`: remove o disco LVM criado, seria como removesse a imagem. Terá que reinstalar novamente.
 
 ### Configuração de uma VM HVM
+
+Primeiramente é preciso habilitar o suporte à virtualização no processador, no caso no virtualbox, usar o comando: `VBoxManage modifyvm "Nome_da_VM" --nested-hw-virt on`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2OTk3MDI1LDUyNzE1MzUzMCwtMjAwNT
-A3Njk3MSwtMTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0zMzQ2MDQ1
-MTgsLTIwODE4MzA1ODYsNDg5NzY3ODM4LDEyOTExNzc3NDFdfQ
-==
+eyJoaXN0b3J5IjpbNDkxODE0ODE1LDcxNjk5NzAyNSw1MjcxNT
+M1MzAsLTIwMDUwNzY5NzEsLTE0NDkyMjY4NCwtMjE0NjY2NzY0
+MSwtMzM0NjA0NTE4LC0yMDgxODMwNTg2LDQ4OTc2NzgzOCwxMj
+kxMTc3NzQxXX0=
 -->
