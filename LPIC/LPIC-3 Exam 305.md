@@ -203,12 +203,14 @@ Com as duas VMs criadas, se rodar `xl list`, é possível ver seus status. Rodan
 Para monitorar o processamento das VMs, usamos os comandos: `xl top`, `xen top`, `xentop` (há diversas variações)
 
 Resumidamente:
-- baixar VM
+- **baixar VM**: `shutdown` ou `destroy`
+- **subir VM**: `create`
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg4NjAwNzEsMTQyMjcxMTM0OSw0MT
-Y4MTI3OCwtMzQ1MDUwODgzLC01MTM5MTk1NzQsLTg3MzczMTMw
-LDg0MDE2MzY0MSwtNjg0MTEwMTIsMjM0Mzc2ODY1LDQ5MTgxND
-gxNSw3MTY5OTcwMjUsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0x
-NDQ5MjI2ODQsLTIxNDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MT
-gzMDU4Niw0ODk3Njc4MzgsMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbLTEzODAzODMzOSwxNDIyNzExMzQ5LDQxNj
+gxMjc4LC0zNDUwNTA4ODMsLTUxMzkxOTU3NCwtODczNzMxMzAs
+ODQwMTYzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0OD
+E1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0
+NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxOD
+MwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
 -->
