@@ -205,9 +205,12 @@ Para monitorar o processamento das VMs, usamos os comandos: `xl top`, `xen top`,
 Resumidamente:
 - **baixar VM**: `shutdown` ou `destroy`
 - **subir VM**: `create`
-- 
+
+### Comandos de Gerenciamento das VMs
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODAzODMzOSwxNDIyNzExMzQ5LDQxNj
+eyJoaXN0b3J5IjpbLTQ4NDIyODU0MSwxNDIyNzExMzQ5LDQxNj
 gxMjc4LC0zNDUwNTA4ODMsLTUxMzkxOTU3NCwtODczNzMxMzAs
 ODQwMTYzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0OD
 E1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0
