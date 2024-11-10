@@ -187,22 +187,22 @@ Do host local, precisamos abrir uma porta até o servidor Xen (criará um túnel
 
 Depois instale o remmina ou qualquer outro cliente vnc viewer e entre como `localhost`(lembre-se de usar protocolo vnc)
 
-Com as duas VMs criadas, se rodar xl list, é possível ver seus status. Rodando o comando ip address show, é possível notar que há duas interfaces, vif2.0 e vif3.0, uma para cada VM:<br>
+Com as duas VMs criadas, se rodar `xl list`, é possível ver seus status. Rodando o comando `ip address show`, é possível notar que há duas interfaces de rede virtuais, vif2.0 e vif3.0, uma para cada VM:<br>
 
     5: vif1.0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master xenbr0 state UP group default qlen 1000
-    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
-    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
-       valid_lft forever preferred_lft forever
-6: vif2.0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master xenbr0 state UP group default qlen 1000
-    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
-    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
-       valid_lft forever preferred_lft forever
+        link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+        inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+           valid_lft forever preferred_lft forever
+    6: vif2.0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master xenbr0 state UP group default qlen 1000
+        link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+        inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+           valid_lft forever preferred_lft forever
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDY2NjA5OTEsNDE2ODEyNzgsLTM0NT
-A1MDg4MywtNTEzOTE5NTc0LC04NzM3MzEzMCw4NDAxNjM2NDEs
-LTY4NDExMDEyLDIzNDM3Njg2NSw0OTE4MTQ4MTUsNzE2OTk3MD
-I1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwtMTQ0OTIyNjg0LC0y
-MTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4MzA1ODYsNDg5Nz
-Y3ODM4LDEyOTExNzc3NDFdfQ==
+eyJoaXN0b3J5IjpbMTQyMjcxMTM0OSw0MTY4MTI3OCwtMzQ1MD
+UwODgzLC01MTM5MTk1NzQsLTg3MzczMTMwLDg0MDE2MzY0MSwt
+Njg0MTEwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMj
+UsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIx
+NDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Nj
+c4MzgsMTI5MTE3Nzc0MV19
 -->
