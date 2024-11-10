@@ -198,11 +198,12 @@ Com as duas VMs criadas, se rodar `xl list`, é possível ver seus status. Rodan
         inet6 fe80::fcff:ffff:feff:ffff/64 scope link
            valid_lft forever preferred_lft forever
 
+É possível confirmar também com o comando `brctl show`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMjcxMTM0OSw0MTY4MTI3OCwtMzQ1MD
-UwODgzLC01MTM5MTk1NzQsLTg3MzczMTMwLDg0MDE2MzY0MSwt
-Njg0MTEwMTIsMjM0Mzc2ODY1LDQ5MTgxNDgxNSw3MTY5OTcwMj
-UsNTI3MTUzNTMwLC0yMDA1MDc2OTcxLC0xNDQ5MjI2ODQsLTIx
-NDY2Njc2NDEsLTMzNDYwNDUxOCwtMjA4MTgzMDU4Niw0ODk3Nj
-c4MzgsMTI5MTE3Nzc0MV19
+eyJoaXN0b3J5IjpbMTg2MDg0MTAwNSwxNDIyNzExMzQ5LDQxNj
+gxMjc4LC0zNDUwNTA4ODMsLTUxMzkxOTU3NCwtODczNzMxMzAs
+ODQwMTYzNjQxLC02ODQxMTAxMiwyMzQzNzY4NjUsNDkxODE0OD
+E1LDcxNjk5NzAyNSw1MjcxNTM1MzAsLTIwMDUwNzY5NzEsLTE0
+NDkyMjY4NCwtMjE0NjY2NzY0MSwtMzM0NjA0NTE4LC0yMDgxOD
+MwNTg2LDQ4OTc2NzgzOCwxMjkxMTc3NzQxXX0=
 -->
