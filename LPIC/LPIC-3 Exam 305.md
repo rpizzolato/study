@@ -186,11 +186,23 @@ Use o comando `ss -nalp | grep 5900` para conferir se a porta do vnc está abert
 Do host local, precisamos abrir uma porta até o servidor Xen (criará um túnel), por meio do comando:  `ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`
 
 Depois instale o remmina ou qualquer outro cliente vnc viewer e entre como `localhost`(lembre-se de usar protocolo vnc)
+
+Com as duas VMs criadas, se rodar xl list, é possível ver seus status. Rodando o comando ip address show, é possível notar que há duas interfaces, vif2.0 e vif3.0, uma para cada VM:<br>
+
+    5: vif1.0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master xenbr0 state UP group default qlen 1000
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+       valid_lft forever preferred_lft forever
+6: vif2.0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master xenbr0 state UP group default qlen 1000
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+       valid_lft forever preferred_lft forever
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2ODEyNzgsLTM0NTA1MDg4MywtNTEzOT
-E5NTc0LC04NzM3MzEzMCw4NDAxNjM2NDEsLTY4NDExMDEyLDIz
-NDM3Njg2NSw0OTE4MTQ4MTUsNzE2OTk3MDI1LDUyNzE1MzUzMC
-wtMjAwNTA3Njk3MSwtMTQ0OTIyNjg0LC0yMTQ2NjY3NjQxLC0z
-MzQ2MDQ1MTgsLTIwODE4MzA1ODYsNDg5NzY3ODM4LDEyOTExNz
-c3NDFdfQ==
+eyJoaXN0b3J5IjpbLTIwNDY2NjA5OTEsNDE2ODEyNzgsLTM0NT
+A1MDg4MywtNTEzOTE5NTc0LC04NzM3MzEzMCw4NDAxNjM2NDEs
+LTY4NDExMDEyLDIzNDM3Njg2NSw0OTE4MTQ4MTUsNzE2OTk3MD
+I1LDUyNzE1MzUzMCwtMjAwNTA3Njk3MSwtMTQ0OTIyNjg0LC0y
+MTQ2NjY3NjQxLC0zMzQ2MDQ1MTgsLTIwODE4MzA1ODYsNDg5Nz
+Y3ODM4LDEyOTExNzc3NDFdfQ==
 -->
