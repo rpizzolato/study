@@ -1672,12 +1672,13 @@ Ordem dos campos:<br>
 4. grupo padrão do usuário: que por padrão usa o mesmo nome do usuário, mas também é configurável e possível alterar
 5. descrição: normalmente o nome do usuário, mas isso não é regra.
 6. home do usuário: local onde usuário poderá gravar sem restrições, e onde também o usuário cai ao fazer login
+7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2OTg2NzU2LDQ1NzgxODc4MywxMjY5OD
-k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
-LTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
-g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
-NzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC
-05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEw
-ODA0MzIwXX0=
+eyJoaXN0b3J5IjpbLTkxMzEwMDk3Nyw0NTc4MTg3ODMsMTI2OT
+g5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIz
+LC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMT
+M4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIw
+MDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3Mi
+wtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMx
+MDgwNDMyMF19
 -->
