@@ -1653,9 +1653,12 @@ O Orca é um leitor de tela que gera uma voz sintetizada que descreve os eventos
 
 ### 107.1 Administrar contas de usuário, grupos e arquivos de sistema relacionados
 
-Cada usuário tem, obrigatoriamente, seu grupo padrão. 
+Cada usuário tem, obrigatoriamente, seu grupo padrão. E pode estar em vários grupos, ou seja, o mesmo usuário pode estar em vários grupos, facilitando para o administrador de sistemas.
+
+- `/etc/passwd`: principal arquivo que contém todos os usuários do sistema
+	- - id e
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxNTc5MTYyLDM5MDAzNDcwNiwxOTYwNT
+eyJoaXN0b3J5IjpbMTg3NjYyMTUwLDM5MDAzNDcwNiwxOTYwNT
 MxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAw
 MTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Mi
 w2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgx
