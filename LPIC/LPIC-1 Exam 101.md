@@ -1719,19 +1719,20 @@ Basicamente são:<br>
 
 Exemplo com várias opções:<br>
 
-useradd -c "Nome do Usuario" -s /bin/bash -g 1001 -G 1010
+    useradd -c "Nome do Usuario" -s /bin/bash -g 1001 -G 1010
 
 - `-c`(`--comment`):  string de texto com o comentário do usuário (geralmente nome completo do usuário
 - `-s`(--shell): shell padrão desejado pelo novo usuário
-- `-g`(`--grp`)
+- `-g`(`--gid`): grupo primário do novo usuário
+- `-G` (`--group`): grupo(s) secundários do novo usuário
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NTY3ODkwNiwtMjI2MzcxNzc5LDEzNz
-M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
-MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
-g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
-NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOC
-wtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAz
-NjQ5NjldfQ==
+eyJoaXN0b3J5IjpbLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMz
+czNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQz
+NjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLT
+E4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2
+OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1Mj
+gsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIw
+MzY0OTY5XX0=
 -->
