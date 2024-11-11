@@ -1689,15 +1689,17 @@ Ordem dos campos:<br>
 Contém os grupos dos usuário<br>
 Ordem dos campos:<br>
 1. nome do grupo
-2. senha (sim, grupo também pode ter senha)
+2. senha (sim, grupo também pode ter senha, que fica em `/etc/gshadow`)
 3. ids do grupo
 4. usuários que fazem parte do grupo
+
+#### Entendendo cada campo do /etc/lo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTAxNDk0NjIsMTM3MzY1NjIwOCw0NT
-c4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcw
-NiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC
-04NTcxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcw
-NTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1OD
-YsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0
-MTk1NzI0OF19
+eyJoaXN0b3J5IjpbMTYxNzY5NzA2NiwxMzczNjU2MjA4LDQ1Nz
+gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
+LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
+g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
+NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
+wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
+OTU3MjQ4XX0=
 -->
