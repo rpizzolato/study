@@ -1779,15 +1779,20 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 - `groupadd -g 2000 dev`: cria o grupo **dev** com id 2000
 
 ##### groupdel
-- groupdel
+
+- `groupdel suporte`: exclui o grupo suporte
 
 ##### groupmod
+
+É possível mudar o id e o nome do grupo. No exemplo abaixo está mudando o nome do grupo de suporte para devops:
+
+- `groupmod suporte`: exclui o grupo suporte
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA4MTIwNTIwLDQyMDQxNjUxMCw5OTg4Mj
-gzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4
-LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMD
-M0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQx
-MDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC
-0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5
-ODU4Nl19
+eyJoaXN0b3J5IjpbMTY4Mzg0MjMyMCw0MjA0MTY1MTAsOTk4OD
+I4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1NjIw
+OCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MD
+AzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0
+MTA1LC04NTcxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5My
+wtMTcwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5
+OTg1ODZdfQ==
 -->
