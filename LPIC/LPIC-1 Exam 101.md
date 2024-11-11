@@ -1658,13 +1658,13 @@ Cada usuário tem, obrigatoriamente, seu grupo padrão. E pode estar em vários 
 - `/etc/passwd`: principal arquivo que contém todos os usuários do sistema
 	- `id` e `gid`: id e id do grupo padrão do usuário (**root SEMPRE será id igual a 0 zero, assim como seu gid**)
 
-Se observar há diversos usuário de sistema, como por exemplo o daemon. No Linux, para poder criar um processo ou gerar um arquivo, é preciso ter um usuário, no mínimo. Por isso a necessidade
+Se observar há diversos usuários de sistema, como por exemplo o **daemon**. No Linux, para poder criar um processo ou gerar um arquivo, é preciso ter um usuário, no mínimo. Por isso a necessidade de aplicações terem seu usuário
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MD
-AzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0
-MTA1LC04NTcxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5My
-wtMTcwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5
-OTg1ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OS
-wtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0
-NzA4NjUxM119
+eyJoaXN0b3J5IjpbLTkwNjg3NjM1NCwxMjY5ODk2NTE4LC04Nz
+EwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5
+MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC
+0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYz
+NzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5OD
+csNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1
+NjQ1NTM2NV19
 -->
