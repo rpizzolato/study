@@ -1695,13 +1695,21 @@ Ordem dos campos:<br>
 
 #### Entendendo cada campo do /etc/login.defs
 
-Contém as definições de login de cada usuário. No caso, aqui também tem as definições de ids dos usuários
+Contém as definições de login de cada usuário. No caso, aqui também tem as definições de ids dos usuários (fica próximo da linha 172). Por exemplo:<br>
+
+    # Min/max values for automatic uid selection in useradd
+    171 #
+    172 UID_MIN                  1000
+    173 UID_MAX                 60000
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzA1NzYzNywxMzczNjU2MjA4LDQ1Nz
-gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
-LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
-g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
-NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
-wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
-OTU3MjQ4XX0=
+eyJoaXN0b3J5IjpbLTYyNjQwMDgsMTM3MzY1NjIwOCw0NTc4MT
+g3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwx
+OTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NT
+cxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4
+Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLT
+gwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1
+NzI0OF19
 -->
