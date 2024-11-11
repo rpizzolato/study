@@ -1715,10 +1715,10 @@ Basicamente são:<br>
 - `usermod`: altera configurações usuário
 
 ##### useradd
-- `useradd usuário1`: cria o **usuário1**, e em `/etc/passwd`, cria uma linha referente a esse usuário. Algumas distros antigas tinham um bug que não informava o shell a ser utilizado, ficando em branco, e tendo que alterar manualmente
+- `useradd usuário1`: cria o **usuário1**, e em `/etc/passwd`, cria uma linha referente a esse usuário. Algumas distros antigas tinham um bug que não informava o shell a ser utilizado, ficando em branco, e tendo que alterar manualmente (é possível mudar com o comando `chsh`)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODA5MTQxMDMsLTIyNjM3MTc3OSwxMz
+eyJoaXN0b3J5IjpbLTE3MjAwOTAyMzgsLTIyNjM3MTc3OSwxMz
 czNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQz
 NjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLT
 E4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2
