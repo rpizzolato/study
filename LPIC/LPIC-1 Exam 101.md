@@ -1652,12 +1652,14 @@ De que forma o aplicativo  _Orca_  pode ajudar usuários com deficiência visual
 O Orca é um leitor de tela que gera uma voz sintetizada que descreve os eventos na tela e lê o texto sob o cursor do mouse. Ele também funciona com dispositivos chamados de  _visores braille atualizáveis_, permitindo ao usuário identificar o texto com padrões táteis.
 
 ### 107.1 Administrar contas de usuário, grupos e arquivos de sistema relacionados
+
+Cada usuário tem, obrigatoriamente, seu grupo padrão. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjQ1ODk2OCwzOTAwMzQ3MDYsMTk2MD
-UzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgw
-MDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4Nj
-IsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4
-MTg5NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyND
-gsLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3
-NTgwODc0M119
+eyJoaXN0b3J5IjpbMzUxNTc5MTYyLDM5MDAzNDcwNiwxOTYwNT
+MxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAw
+MTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Mi
+w2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgx
+ODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OC
+wtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4NjUxMywxNjc1
+ODA4NzQzXX0=
 -->
