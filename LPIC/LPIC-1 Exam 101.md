@@ -1627,9 +1627,10 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 ### 106.3 Acessibilidade
 
 - `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar)
-- slow keys: usado por quem tem problema motor, ele evita que 
+- `slow keys`: usado por quem tem problema motor, ele evita que o retorno da tecla digitada aparece por diversas vezes
+- `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MzI2NDQzNywtMTUxNjk1Mjg5MywtMT
+eyJoaXN0b3J5IjpbMTYxNDc5MDAyMSwtMTUxNjk1Mjg5MywtMT
 cwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1
 ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMT
 Y0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4
