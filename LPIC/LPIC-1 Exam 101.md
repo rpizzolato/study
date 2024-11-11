@@ -1742,15 +1742,21 @@ Supõe que **usuario1** tenha entrada referente a ele em `/etc/passwd`, `/etc/sh
 Será apagado as entradas nos três arquivos, mas **não apagará** a pasta `/home/usuario1`. Para apagar, tem que usar a opção `-r`:
 - `-r` (`--remove`): remove o /home do usuário
 
+##### usermod
+
+Basicamente muda o que poderia ser definido com o `useradd`
+
+
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0ODgxNjA1OCwtMTAwNTgwMjYwNywtMj
-I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
-MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
-AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
-NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MD
-c0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkz
-NTEwMTk4N119
+eyJoaXN0b3J5IjpbLTEyNjE1MzQ3OTMsLTEwMDU4MDI2MDcsLT
+IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
+NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLT
+IwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4
+NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNz
+A3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05
+MzUxMDE5ODddfQ==
 -->
