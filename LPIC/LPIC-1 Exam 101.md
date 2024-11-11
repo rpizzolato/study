@@ -1682,7 +1682,7 @@ Ordem dos campos:<br>
 Contém as senhas dos usuário<br>
 Ordem dos campos:<br>
 1. usuário propriamente dito
-2. hash da senha ()
+2. hash da senha (**quando não** tem senha definida, fica um ponto de exclamação - `!`)
 
 #### Entendendo cada campo do /etc/group
 
@@ -1718,7 +1718,7 @@ Basicamente são:<br>
 - `useradd usuário1`: cria o **usuário1**, e em `/etc/passwd`, cria uma linha referente a esse usuário. Algumas distros antigas tinham um bug que não informava o shell a ser utilizado, ficando em branco, e tendo que alterar manualmente (é possível mudar com o comando `chsh`)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MjMwODY5NywtMjI2MzcxNzc5LDEzNz
+eyJoaXN0b3J5IjpbMTkwMTQ1MDM2NCwtMjI2MzcxNzc5LDEzNz
 M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
 MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
 g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
