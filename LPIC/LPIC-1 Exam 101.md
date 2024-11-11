@@ -1634,9 +1634,7 @@ Locais para acesso: O módulo de configurações de acessibilidade é chamado de
 - `slow keys`(teclas lentas): usado por quem tem problema motor, as teclas lentas exigem que o usuário mantenha a tecla pressionada por um período de tempo especificado antes de ela ser aceita
 - `bouce keys`(teclas de repercussão): serve para inibir pressionamentos de tecla não intencionais adicionando um tempo de latência entre eles (se precisar digitar a mesma tecla, precisa aguardar o delay)
 - `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique esquerdo)
-- _Preferências do mouse_  na janela de configuração do sistema.
-
-Se o usuário não conseguir pressionar um ou mais botões do mouse, os cliques podem ser simulados usando diferentes técnicas. Na seção  _Assistência de clique_  do  _Acesso Universal_  do Gnome, a opção  _Clique secundário simulado_  simula um clique com o botão direito se o usuário pressionar e segurar o botão esquerdo do mouse. Com a opção  _Clique flutuante_  habilitada, um evento de clique será disparado quando o usuário segurar o mouse sem movê-lo. No KDE, o aplicativo  _KMouseTool_  fornece esses mesmos recursos para facilitar as ações com o mouse.
+- `Preferências do mouse  na janela de configuração do sistema`: se o usuário não conseguir pressionar um ou mais botões do mouse, os cliques podem ser simulados usando diferentes técnicas. Na seção  _Assistência de clique_  do  _Acesso Universal_  do Gnome, a opção  _Clique secundário simulado_  simula um clique com o botão direito se o usuário pressionar e segurar o botão esquerdo do mouse. Com a opção  _Clique flutuante_  habilitada, um evento de clique será disparado quando o usuário segurar o mouse sem movê-lo. No KDE, o aplicativo  _KMouseTool_  fornece esses mesmos recursos para facilitar as ações com o mouse.
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
 - `KMag`: screen magnifier (ampliador de tela - LUPA)
 - `Orca e emacspeak`: leitor de tela, sendo o Orca o principal
@@ -1649,11 +1647,11 @@ Software capaz de executar comandos através do reconhecimento de voz. Diversos 
 - Simon (KDE)
 - Julius
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODk1MDE1NjEsLTIwMjM0NzQ5MDksLT
-E4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2
-OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1Mj
-gsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIw
-MzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NT
-M2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5
-MDY0NjI1Nl19
+eyJoaXN0b3J5IjpbMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
+g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
+NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOC
+wtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAz
+NjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2NDU1Mz
+Y1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkw
+NjQ2MjU2XX0=
 -->
