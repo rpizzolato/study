@@ -1693,9 +1693,11 @@ Ordem dos campos:<br>
 3. ids do grupo
 4. usuários que fazem parte do grupo
 
-#### Entendendo cada campo do /etc/lo
+#### Entendendo cada campo do /etc/login.defs
+
+Contém as definições de login de cada usuário. No caso, aqui também tem as definições de ids dos usuários
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzY5NzA2NiwxMzczNjU2MjA4LDQ1Nz
+eyJoaXN0b3J5IjpbLTE5NzA1NzYzNywxMzczNjU2MjA4LDQ1Nz
 gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
 LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
 g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
