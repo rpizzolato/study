@@ -1660,9 +1660,9 @@ Cada usuário tem, obrigatoriamente, seu grupo padrão. E pode estar em vários 
 
 Se observar há diversos usuários de sistema, como por exemplo o **daemon**. No Linux, para poder criar um processo ou gerar um arquivo, é preciso ter um usuário, no mínimo. Por isso a necessidade de aplicações terem seu usuário
 
-Normalmente (varia de distro para distro), ids a partir de 1000 são os de usuário, abaixo de 1000 são os de sistema. Lembrando que não
+Normalmente (varia de distro para distro), ids a partir de 1000 são os de usuário, abaixo de 1000 são os de sistema. Lembrando que isso é mais comum, mas pode variar, pois é totalmente configurável.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODcyNDc4ODcsMTI2OTg5NjUxOCwtOD
+eyJoaXN0b3J5IjpbLTE1MTY0MTcwMzksMTI2OTg5NjUxOCwtOD
 cxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0
 OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1MTAxMi
 wtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2
