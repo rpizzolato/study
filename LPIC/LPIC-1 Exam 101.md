@@ -1775,16 +1775,16 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 ##### groupadd
 
-groupadd suporte: cria o grupo suporte
+- `groupadd suporte`: cria o grupo suporte
 
 ##### groupdel
 ##### groupmod
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwNDE2NTEwLDk5ODgyODM2NSwtMTAwNT
-gwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4Nzgz
-LDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MD
-UzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgw
-MDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4Nj
-IsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4
-MTg5NzJdfQ==
+eyJoaXN0b3J5IjpbLTE1NTg5OTQ3OTcsNDIwNDE2NTEwLDk5OD
+gyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYy
+MDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOT
+AwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2
+NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OT
+MsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzcz
+OTk4NTg2XX0=
 -->
