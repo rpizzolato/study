@@ -1683,12 +1683,20 @@ Contém as senhas dos usuário<br>
 Ordem dos campos:<br>
 1. usuário propriamente dito
 2. hash da senha
+
+#### Entendendo cada campo do /etc/group
+
+Contém os grupos dos usuário<br>
+Ordem dos campos:<br>
+1. nome do grupo
+2. senha (sim, grupo também pode ter senha)
+3. ids dos usuário do grupo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM4MDI5MzMsMTM3MzY1NjIwOCw0NTc4MT
-g3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwx
-OTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NT
-cxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4
-Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLT
-gwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1
-NzI0OF19
+eyJoaXN0b3J5IjpbLTYzMTY2MjIwNywxMzczNjU2MjA4LDQ1Nz
+gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
+LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
+g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
+NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
+wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
+OTU3MjQ4XX0=
 -->
