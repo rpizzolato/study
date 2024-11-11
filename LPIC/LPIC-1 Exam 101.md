@@ -1744,7 +1744,11 @@ Será apagado as entradas nos três arquivos, mas **não apagará** a pasta `/ho
 
 ##### usermod
 
-Basicamente muda o que poderia ser definido com o `useradd`. Supõe que usuario1 nã
+Basicamente muda o que poderia ser definido com o `useradd`. Supõe que usuario1 não tem comentário, podemos adicionar um comentário com o comando:<br>
+
+    usermod -c "Nome usuario 1" usuario1
+
+Mudar o shell do usuário 1:<br>
 
 
 
@@ -1752,11 +1756,11 @@ Basicamente muda o que poderia ser definido com o `useradd`. Supõe que usuario1
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ4MjgwNzc0LC0xMDA1ODAyNjA3LC0yMj
-YzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUx
-OCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMD
-IzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1
-MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIwMDcwNz
-QsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1
-MTAxOTg3XX0=
+eyJoaXN0b3J5IjpbMTczODUwMzUyNSwtMTAwNTgwMjYwNywtMj
+I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
+MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
+AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
+NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MD
+c0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkz
+NTEwMTk4N119
 -->
