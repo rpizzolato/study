@@ -1728,11 +1728,11 @@ Exemplo com várias opções:<br>
 
 Outras opções importantes:
 -d (--home-dir): definir um /home para usuário (não precisa ser o padrão)
--m (--create-home): caso no /etc/user.defs esteja para não criar /home por padrão, pode-se usar essa opção para "forçar" c 
+-m (--create-home): caso no /etc/user.defs esteja para não criar /home por padrão, pode-se usar essa opção para "forçar" criar o /home do usuário (conforme definido no skeleton directory) 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjIzNDMwMzAsLTEwMDU4MDI2MDcsLT
+eyJoaXN0b3J5IjpbLTEwNzI2MjAyODUsLTEwMDU4MDI2MDcsLT
 IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
 NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLT
 IwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4
