@@ -1634,9 +1634,9 @@ Acessibilidade também é chamada de access X
 - `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique)
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
 - `KMag`: screen magnifier (ampliador de tela - LUPA)
-- Ork 
+- `Orca e emacspeak`: leitor de tela, sendo o Orca o principal
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjEzNzcyOCwxMzg4NTUxMDEyLC0xNT
+eyJoaXN0b3J5IjpbMTY5MTU1MTI1NiwxMzg4NTUxMDEyLC0xNT
 E2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1
 MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNT
 IwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1
