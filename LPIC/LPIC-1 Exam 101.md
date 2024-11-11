@@ -1726,13 +1726,17 @@ Exemplo com várias opções:<br>
 - `-g`(`--gid`): grupo primário do novo usuário
 - `-G` (`--group`): grupo(s) secundários do novo usuário
 
+Outras opções importantes:
+-d (--home-dir): definir um /home para usuário (não precisa ser o padrão)
+-m (--create-home): caso no /etc/user.defs esteja para não criar /home por padrão, pode-se usar essa opção para "forçar" c 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMz
-czNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQz
-NjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLT
-E4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2
-OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1Mj
-gsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIw
-MzY0OTY5XX0=
+eyJoaXN0b3J5IjpbLTEwMjIzNDMwMzAsLTEwMDU4MDI2MDcsLT
+IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
+NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLT
+IwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4
+NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNz
+A3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05
+MzUxMDE5ODddfQ==
 -->
