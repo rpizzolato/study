@@ -1631,7 +1631,7 @@ Acessibilidade também é chamada de access X
 Locais para acesso: O módulo de configurações de acessibilidade é chamado de _Acesso universal_ na área de trabalho do Gnome, enquanto que no KDE ele está em _Configurações do sistema_, _Personalização_, _Acessibilidade_. Outros ambientes de desktop, como o _Xfce_, também o chamam de _Acessibilidade_ em seu gerenciador de configurações gráficas. Porém, de maneira geral eles oferecem um conjunto reduzido de funcionalidades em comparação com o Gnome e o KDE.
 
 - `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar) - (O KDE também oferece a opção de _Teclas de bloqueio_: se habilitada, as teclas Alt, Ctrl e Shift permanecerão “apertadas” se o usuário as pressionar duas vezes, semelhante ao comportamento da tecla Caps lock)
-- `slow keys`(teclas lentas): usado por quem tem problema motor, ele evita que o retorno da tecla digitada aparece por diversas vezes
+- `slow keys`(teclas lentas): usado por quem tem problema motor, as teclas lentas exigem que o usuário mantenha a tecla pressionada por um período de tempo especificado antes de ela ser aceita
 - `bouce keys`(teclas de repercussão): serve para inibir pressionamentos de tecla não intencionais adicionando um tempo de latência entre eles (se precisar digitar a mesma tecla, precisa aguardar o delay)
 - `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique)
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
@@ -1646,11 +1646,11 @@ Software capaz de executar comandos através do reconhecimento de voz. Diversos 
 - Simon (KDE)
 - Julius
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MTUxNDc2NywtMjAyMzQ3NDkwOSwtMT
-g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
-NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOC
-wtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAz
-NjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2NDU1Mz
-Y1LDEzNDcwODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkw
-NjQ2MjU2XX0=
+eyJoaXN0b3J5IjpbMjQzMTYwNDYsLTIwMjM0NzQ5MDksLTE4ND
+AwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUy
+ODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLT
+M3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0
+OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NS
+wxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0
+NjI1Nl19
 -->
