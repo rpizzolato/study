@@ -1765,10 +1765,13 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 > [!IMPORTANT] 
 >
->Há o comando adduser, que na realidade é um script 
+>Há o comando `adduser`, que na realidade é um script que vai interagindo para criação do usuário. A nível de LPI, focar no `useradd`.
+
+#### 107.1 Gerenciamento de Usuários e Grupos - groupadd, groupdel, groupmod
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjU3MTE5NCw5OTg4MjgzNjUsLTEwMD
+eyJoaXN0b3J5IjpbMTE3NjMxMzIwMCw5OTg4MjgzNjUsLTEwMD
 U4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4
 MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5Nj
 A1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4
