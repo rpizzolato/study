@@ -1748,15 +1748,12 @@ Basicamente muda o que poderia ser definido com o `useradd`. Supõe que usuario1
 
     usermod -c "Nome usuario 1" usuario1
 
-Mudar o shell do usuário 1:<br>
+Mudar o shell do usuário1:<br>
 
-
-
-
-
+    usermod -s /sbin/ksh usuario1
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODUwMzUyNSwtMTAwNTgwMjYwNywtMj
+eyJoaXN0b3J5IjpbMTMyMDcxMzI0MSwtMTAwNTgwMjYwNywtMj
 I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
 MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
 AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
