@@ -1670,8 +1670,9 @@ Ordem dos campos:<br>
 2. senha do usuário: que armazena em /etc/shadow. Antigamente armazenava aqui mesmo
 3. id do usuário
 4. grupo padrão do usuário: que por padrão usa o mesmo nome do usuário, mas também é configurável e possível alterar
+5. descrição
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1Mjc3OTkzLDQ1NzgxODc4MywxMjY5OD
+eyJoaXN0b3J5IjpbMjkxMzEwMTYzLDQ1NzgxODc4MywxMjY5OD
 k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
 LTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
 g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
