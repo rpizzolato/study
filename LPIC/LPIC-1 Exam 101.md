@@ -1662,9 +1662,14 @@ Se observar há diversos usuários de sistema, como por exemplo o **daemon**. No
 
 Normalmente (varia de distro para distro), ids a partir de 1000 são os de usuário, abaixo de 1000 são os de sistema. Lembrando que isso é mais comum, mas pode variar, pois é totalmente configurável.
 
-Por convenção, em /etc/passwd, é recomendado sempre utilizar caracteres minúsculos, pois haveria distinção de um usuário chamado rodrigo 
+Por convenção, em `/etc/passwd`, é recomendado sempre utilizar caracteres minúsculos, pois haveria distinção de um usuário chamado rodrigo e Rodrigo, pois é case sensitive. Portanto, é recomendado seguir o padrão.
+
+#### Entendendo cada campo do /etc/passwd
+Ordem dos campos:<br>
+1. nome do usuário
+2. senha do usuário
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI3NjQwNDAxLDEyNjk4OTY1MTgsLTg3MT
+eyJoaXN0b3J5IjpbNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MT
 AzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkw
 OSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLT
 E1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3
