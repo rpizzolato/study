@@ -1789,9 +1789,11 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 - `groupmod -n devops suporte`(`-n` ou `--new-name`): altera o nome do grupo de suporte para devops
 - `groupmod -g 2001 suporte`(`-g` ou `--gid`): altera o id do grupo para 2001
 
+##### Testando alteração de grupo padrão
 
+Com usuario1 crie um arquivo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1MDgzNTAxLDk1MzE3NTY5NywtMzQwMT
+eyJoaXN0b3J5IjpbOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMT
 U4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcs
 LTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5OD
 k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
