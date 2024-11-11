@@ -1647,15 +1647,17 @@ Software capaz de executar comandos através do reconhecimento de voz. Diversos 
 - Simon (KDE)
 - Julius
 
-Pergunta interessante na lpi.org citando o Orca<br>
+Pergunta interessante na [lpi.org](https://learning.lpi.org/pt/learning-materials/102-500/106/106.3/106.3_01/) citando o Orca<br>
 De que forma o aplicativo  _Orca_  pode ajudar usuários com deficiência visual a interagir com o ambiente de trabalho?
 O Orca é um leitor de tela que gera uma voz sintetizada que descreve os eventos na tela e lê o texto sob o cursor do mouse. Ele também funciona com dispositivos chamados de  _visores braille atualizáveis_, permitindo ao usuário identificar o texto com padrões táteis.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMj
-M0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUx
-MDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NC
-wzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUx
-MDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0Mz
-IwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2
-MzA5Mjg5MV19
+eyJoaXN0b3J5IjpbLTE0MzM3OTM5MjUsMzkwMDM0NzA2LDE5Nj
+A1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4
+MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzOD
+YyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAw
+ODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3Mj
+Q4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2
+NzU4MDg3NDNdfQ==
 -->
