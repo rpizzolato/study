@@ -1623,12 +1623,16 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 
 - **RDP** (Remote Desktop Protocol): é usado sobretudo para acessar remotamente a área de trabalho de um sistema operacional _Microsoft Windows_ por meio da porta de rede TCP 3389
 	- utilizado para o Microsoft Terminal Service
+
+### 106.3 Acessibilidade
+
+- sticky keys: é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tel
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNj
-QyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5
-NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLT
-EzMTA4MDQzMjAsNzU2NDU1MzY1LDEzNDcwODY1MTMsMTY3NTgw
-ODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC0xMDgwNjg1OTQ5LC
-05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3MDQ1NywtNDI5MTE1
-OTg5XX0=
+eyJoaXN0b3J5IjpbLTY0NDc5NzUxNSwtMTUxNjk1Mjg5MywtMT
+cwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1
+ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMT
+Y0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4
+NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLT
+EwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcw
+NDU3XX0=
 -->
