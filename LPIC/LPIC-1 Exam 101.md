@@ -1705,8 +1705,13 @@ Contém as definições de login de cada usuário. No caso, aqui também tem as 
 Lembrando que é uma convenção, o Linux, por exemplo, pode ter mais que 60k usuários.
 
 É nesse arquivo também que podemos alterar a variável `DEFAULT_HOME` para `yes` para criar o `/home` dos usuários.
+
+
+#### 107.1 Gerenciamento de Usuários e Grupos - useradd, userdel, usermod, passwd
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxODA2ODIwMiwxMzczNjU2MjA4LDQ1Nz
+eyJoaXN0b3J5IjpbLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1Nz
 gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
 LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
 g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
