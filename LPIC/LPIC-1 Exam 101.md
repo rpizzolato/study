@@ -1676,12 +1676,19 @@ Ordem dos campos:<br>
 *Internamente o Linux sempre trabalha com o `id`.<br>
 **Pode-se ter dois usuários com o mesmo id, no entanto o Linux tratará os dois como se fosse um só.<br>
 ***Pode-se alterar o arquivo `/etc/passwd` diretamente, mas não é recomendado, pois há comandos para isso (e pense que o `/etc/passwd` é ligado com o `/etc/shadow`, e mudar uma coisa em um, geraria inconsistência no outro). Ex. Poderia alterar o id de qualquer usuário para o `id = 0`, e esse usuário se comportaria como root. No entanto não é recomendado.
+
+#### Entendendo cada campo do /etc/shadow
+
+Contém as senhas dos usuário<br>
+Ordem dos campos:<br>
+1. usuário propriamente dito
+2. hash da senha
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OT
-g5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIz
-LC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMT
-M4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIw
-MDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3Mi
-wtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMx
-MDgwNDMyMF19
+eyJoaXN0b3J5IjpbNzM4MDI5MzMsMTM3MzY1NjIwOCw0NTc4MT
+g3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwx
+OTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NT
+cxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4
+Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLT
+gwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1
+NzI0OF19
 -->
