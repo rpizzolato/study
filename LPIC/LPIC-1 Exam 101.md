@@ -1775,16 +1775,19 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 ##### groupadd
 
-- `groupadd suporte`: cria o grupo suporte
+- `groupadd suporte`: cria o grupo **suporte**
+- `groupadd -g 2000 dev`: cria o grupo **dev** com id 2000
 
 ##### groupdel
+- groupdel
+
 ##### groupmod
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTg5OTQ3OTcsNDIwNDE2NTEwLDk5OD
-gyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYy
-MDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOT
-AwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2
-NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OT
-MsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzcz
-OTk4NTg2XX0=
+eyJoaXN0b3J5IjpbOTA4MTIwNTIwLDQyMDQxNjUxMCw5OTg4Mj
+gzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4
+LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMD
+M0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQx
+MDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC
+0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5
+ODU4Nl19
 -->
