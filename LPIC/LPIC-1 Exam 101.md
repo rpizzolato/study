@@ -1667,9 +1667,11 @@ Por convenção, em `/etc/passwd`, é recomendado sempre utilizar caracteres min
 #### Entendendo cada campo do /etc/passwd
 Ordem dos campos:<br>
 1. nome do usuário
-2. senha do usuário: 
+2. senha do usuário: que armazena em /etc/shadow. Antigamente armazenava aqui mesmo
+3. id do usuário
+4. grupo padrão do usuário: que por padrão usa o mesmo nome do usuário, mas também é configurável e possível alterar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk4MDg1ODgxLDQ1NzgxODc4MywxMjY5OD
+eyJoaXN0b3J5IjpbNzA1Mjc3OTkzLDQ1NzgxODc4MywxMjY5OD
 k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
 LTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
 g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
