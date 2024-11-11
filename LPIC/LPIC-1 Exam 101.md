@@ -1721,11 +1721,13 @@ Exemplo com várias opções:<br>
 
 useradd -c "Nome do Usuario" -s /bin/bash -g 1001 -G 1010
 
-- `-c`(`--comment`):  string de texto com o comentário do usuário (geralmente nomoe c
+- `-c`(`--comment`):  string de texto com o comentário do usuário (geralmente nome completo do usuário
+- `-s`(--shell): shell padrão desejado pelo novo usuário
+- `-g`(`--grp`)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODUwNjk5MSwtMjI2MzcxNzc5LDEzNz
+eyJoaXN0b3J5IjpbMTM0NTY3ODkwNiwtMjI2MzcxNzc5LDEzNz
 M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
 MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
 g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
