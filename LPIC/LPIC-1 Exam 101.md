@@ -1628,13 +1628,14 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 
 - `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar)
 - `slow keys`: usado por quem tem problema motor, ele evita que o retorno da tecla digitada aparece por diversas vezes
-- `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes
+- `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes (se precisar digitar a mesma tecla, precisa aguardar o delay)
+- `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, )
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDc5MDAyMSwtMTUxNjk1Mjg5MywtMT
-cwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1
-ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMT
-Y0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4
-NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLT
-EwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcw
-NDU3XX0=
+eyJoaXN0b3J5IjpbMjk2OTI3MDEzLC0xNTE2OTUyODkzLC0xNz
+A1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4
+NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNj
+QxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2
+NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMT
+A4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2NDQyLC0yNjk0NzA0
+NTddfQ==
 -->
