@@ -1639,9 +1639,12 @@ Acessibilidade também é chamada de access X
 
 #### Reconhecimento de voz
 
-Software capaz de executar comandos através do reconhecimento de voz. Diversos projetos Open Source em desenvolvimento (além dos principais para dispositivos móveis, como siri, Cortana, etc.
+Software capaz de executar comandos através do reconhecimento de voz. Diversos projetos Open Source em desenvolvimento (além dos principais para dispositivos móveis, como Siri, Cortana, etc.
+- CMUSphinx
+- Simon (KDE)
+- Julius
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTM2MzQ4NTgsLTE4NDAwNjQxMDUsLT
+eyJoaXN0b3J5IjpbLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
 g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
 NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
 wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
