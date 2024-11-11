@@ -1744,7 +1744,7 @@ Será apagado as entradas nos três arquivos, mas **não apagará** a pasta `/ho
 
 ##### usermod
 
-Basicamente muda o que poderia ser definido com o `useradd`
+Basicamente muda o que poderia ser definido com o `useradd`. Supõe que usuario1 nã
 
 
 
@@ -1752,11 +1752,11 @@ Basicamente muda o que poderia ser definido com o `useradd`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjE1MzQ3OTMsLTEwMDU4MDI2MDcsLT
-IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
-NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLT
-IwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4
-NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNz
-A3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05
-MzUxMDE5ODddfQ==
+eyJoaXN0b3J5IjpbNDQ4MjgwNzc0LC0xMDA1ODAyNjA3LC0yMj
+YzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUx
+OCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMD
+IzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1
+MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIwMDcwNz
+QsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1
+MTAxOTg3XX0=
 -->
