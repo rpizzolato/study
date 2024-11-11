@@ -1667,13 +1667,13 @@ Por convenção, em `/etc/passwd`, é recomendado sempre utilizar caracteres min
 #### Entendendo cada campo do /etc/passwd
 Ordem dos campos:<br>
 1. nome do usuário
-2. senha do usuário
+2. senha do usuário: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MT
-AzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkw
-OSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLT
-E1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3
-MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Ny
-w1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2
-NDU1MzY1XX0=
+eyJoaXN0b3J5IjpbMjk4MDg1ODgxLDQ1NzgxODc4MywxMjY5OD
+k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
+LTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
+g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
+NzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC
+05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEw
+ODA0MzIwXX0=
 -->
