@@ -1667,18 +1667,20 @@ Por convenção, em `/etc/passwd`, é recomendado sempre utilizar caracteres min
 #### Entendendo cada campo do /etc/passwd
 Ordem dos campos:<br>
 1. nome do usuário
-2. senha do usuário: que armazena em /etc/shadow. Antigamente armazenava aqui mesmo
+2. senha do usuário: que armazena em `/etc/shadow`. Antigamente armazenava aqui mesmo
 3. id do usuário
 4. grupo padrão do usuário: que por padrão usa o mesmo nome do usuário, mas também é configurável e possível alterar
 5. descrição: normalmente o nome do usuário, mas isso não é regra.
 6. home do usuário: local onde usuário poderá gravar sem restrições, e onde também o usuário cai ao fazer login
-7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar. Assim como quando tiver `/usr/sbin/nologin`.
+7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar. Assim como quando tiver `/usr/sbin/nologin`.<br>
+*Internamente o Linux sempre trabalha com o `id`.
+**Podemos ter dois usuários com o mesmo id, no entanto o Linux tratará os dois como se fosse um só.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzE4Mzc0NzEsNDU3ODE4NzgzLDEyNj
-k4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMy
-MywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LD
-EzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQy
-MDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5Nz
-IsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEz
-MTA4MDQzMjBdfQ==
+eyJoaXN0b3J5IjpbMjI1Mzg5NjUsNDU3ODE4NzgzLDEyNjk4OT
+Y1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywt
+MjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzOD
+g1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3
+MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLT
+kzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4
+MDQzMjBdfQ==
 -->
