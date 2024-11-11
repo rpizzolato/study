@@ -1792,12 +1792,14 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 ##### Testando alteração de grupo padrão
 
 Com usuario1 crie um arquivo
+
+usermod -G devops usuario1: define o grupo 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMT
-U4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcs
-LTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5OD
-k2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMs
-LTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
-g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
-NzA3NF19
+eyJoaXN0b3J5IjpbLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMT
+c1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwt
+MTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3OD
+E4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYs
+MTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtOD
+U3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0
+ODM4NjJdfQ==
 -->
