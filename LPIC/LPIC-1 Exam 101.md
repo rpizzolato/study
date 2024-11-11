@@ -1626,14 +1626,14 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 
 ### 106.3 Acessibilidade
 
-Acessibilidade também é chamada de access X
+Acessibilidade também é chamada de **AccessX**. Pode ser alterado com a linha de comando: 
 
 Locais para acesso: O módulo de configurações de acessibilidade é chamado de _Acesso universal_ na área de trabalho do Gnome, enquanto que no KDE ele está em _Configurações do sistema_, _Personalização_, _Acessibilidade_. Outros ambientes de desktop, como o _Xfce_, também o chamam de _Acessibilidade_ em seu gerenciador de configurações gráficas. Porém, de maneira geral eles oferecem um conjunto reduzido de funcionalidades em comparação com o Gnome e o KDE.
 
-- `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar) - (O KDE também oferece a opção de _Teclas de bloqueio_: se habilitada, as teclas Alt, Ctrl e Shift permanecerão “apertadas” se o usuário as pressionar duas vezes, semelhante ao comportamento da tecla Caps lock)
+- `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar) - (O KDE também oferece a opção de _Teclas de bloqueio_: se habilitada, as teclas Alt, Ctrl e Shift permanecerão “apertadas” se o usuário as pressionar duas vezes, semelhante ao comportamento da tecla Caps lock) - (o recurso de teclas de aderência será ativado pressionando-se a tecla Shift cinco vezes consecutivas. Para ativar o recurso de teclas lentas, a tecla Shift deve ser mantida pressionada por oito segundos consecutivos)
 - `slow keys`(teclas lentas): usado por quem tem problema motor, as teclas lentas exigem que o usuário mantenha a tecla pressionada por um período de tempo especificado antes de ela ser aceita
 - `bouce keys`(teclas de repercussão): serve para inibir pressionamentos de tecla não intencionais adicionando um tempo de latência entre eles (se precisar digitar a mesma tecla, precisa aguardar o delay)
-- `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique)
+- `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique esquerdo)
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
 - `KMag`: screen magnifier (ampliador de tela - LUPA)
 - `Orca e emacspeak`: leitor de tela, sendo o Orca o principal
@@ -1646,7 +1646,7 @@ Software capaz de executar comandos através do reconhecimento de voz. Diversos 
 - Simon (KDE)
 - Julius
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQzMTYwNDYsLTIwMjM0NzQ5MDksLTE4ND
+eyJoaXN0b3J5IjpbNjA1NTg2ODcsLTIwMjM0NzQ5MDksLTE4ND
 AwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUy
 ODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLT
 M3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0
