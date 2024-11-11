@@ -1709,13 +1709,20 @@ Lembrando que é uma convenção, o Linux, por exemplo, pode ter mais que 60k us
 
 #### 107.1 Gerenciamento de Usuários e Grupos - useradd, userdel, usermod, passwd
 
+Basicamente são:<br>
+- `useradd`: adiciona usuário
+- `userdel`: exclui usuário
+- `usermod`: altera configurações usuário
+
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1Nz
-gxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2
-LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
-g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
-NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
-wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
-OTU3MjQ4XX0=
+eyJoaXN0b3J5IjpbLTExMDU4NzUyOSwtMjI2MzcxNzc5LDEzNz
+M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
+MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
+g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
+NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOC
+wtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAz
+NjQ5NjldfQ==
 -->
