@@ -1633,12 +1633,14 @@ Acessibilidade também é chamada de access X
 - `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes (se precisar digitar a mesma tecla, precisa aguardar o delay)
 - `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique)
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
+- `KMag`: screen magnifier (ampliador de tela - LUPA)
+- Ork 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMT
-cwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1
-ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMT
-Y0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4
-NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLT
-EwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcw
-NDU3XX0=
+eyJoaXN0b3J5IjpbMTU0NjEzNzcyOCwxMzg4NTUxMDEyLC0xNT
+E2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1
+MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNT
+IwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1
+NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MS
+w5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOTY2NDUzNywxMzE0OTA2
+NDQyXX0=
 -->
