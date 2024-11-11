@@ -1787,9 +1787,9 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 É possível mudar o id e o nome do grupo. No exemplo abaixo está mudando o nome do grupo de **suporte** para **devops**:
 
 - `groupmod -n devops suporte`(`-n` ou `--new-name`): altera o nome do grupo
-- `groupmod -g devops suporte`(`-n` ou `--new-name`): exclui o grupo suporte
+- `groupmod -g 2001 suporte`(`-g` ou `--gid`): altera o id do grupo para 2001
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTY1MDk4OCwtMzQwMTU4MzU1LDQyMD
+eyJoaXN0b3J5IjpbMTQ5NzY0NjcyMywtMzQwMTU4MzU1LDQyMD
 QxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3
 OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04Nz
 EwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5
