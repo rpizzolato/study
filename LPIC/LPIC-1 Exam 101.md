@@ -1659,12 +1659,14 @@ Cada usuário tem, obrigatoriamente, seu grupo padrão. E pode estar em vários 
 	- `id` e `gid`: id e id do grupo padrão do usuário (**root SEMPRE será id igual a 0 zero, assim como seu gid**)
 
 Se observar há diversos usuários de sistema, como por exemplo o **daemon**. No Linux, para poder criar um processo ou gerar um arquivo, é preciso ter um usuário, no mínimo. Por isso a necessidade de aplicações terem seu usuário
+
+Normalmente (varia de distro para distro), ids a partir de 1000 são os de usuário, abaixo de 1000 são os de sistema. Lembrando que não
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNjg3NjM1NCwxMjY5ODk2NTE4LC04Nz
-EwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5
-MDksLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC
-0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYz
-NzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5OD
-csNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1
-NjQ1NTM2NV19
+eyJoaXN0b3J5IjpbLTIwODcyNDc4ODcsMTI2OTg5NjUxOCwtOD
+cxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0
+OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1MTAxMi
+wtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2
+MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1MTAxOT
+g3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMxMDgwNDMyMCw3
+NTY0NTUzNjVdfQ==
 -->
