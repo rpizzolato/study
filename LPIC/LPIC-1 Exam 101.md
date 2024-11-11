@@ -1673,14 +1673,15 @@ Ordem dos campos:<br>
 5. descrição: normalmente o nome do usuário, mas isso não é regra.
 6. home do usuário: local onde usuário poderá gravar sem restrições, e onde também o usuário cai ao fazer login
 7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar. Assim como quando tiver `/usr/sbin/nologin`.<br>
-*Internamente o Linux sempre trabalha com o `id`.
-**Podemos ter dois usuários com o mesmo id, no entanto o Linux tratará os dois como se fosse um só.
+*Internamente o Linux sempre trabalha com o `id`.<br>
+**Pode-se ter dois usuários com o mesmo id, no entanto o Linux tratará os dois como se fosse um só.<br>
+***Pode-se alterar o ar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1Mzg5NjUsNDU3ODE4NzgzLDEyNjk4OT
-Y1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywt
-MjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzOD
-g1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3
-MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLT
-kzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEzMTA4
-MDQzMjBdfQ==
+eyJoaXN0b3J5IjpbLTE5NjIwMDgyOTUsNDU3ODE4NzgzLDEyNj
+k4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMy
+MywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LD
+EzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQy
+MDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5Nz
+IsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEz
+MTA4MDQzMjBdfQ==
 -->
