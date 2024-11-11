@@ -1735,15 +1735,15 @@ Outras opções importantes:
 
 ##### userdel
 
-Supõe que usuario1 tenha entrada referente a ele em /etc/passwd, /etc/shadow, /etc/group e ele possua um diretório em /home, sendo /home/usuario1. Se executar:<br>
+Supõe que **usuario1** tenha entrada referente a ele em `/etc/passwd`, `/etc/shadow`, `/etc/group` e ele possua um diretório em `/home`, sendo `/home/usuario1`. Se executar:<br>
 userdell usuario1
-
+Será apagado as entradas nos três arquivos, mas não apagará a pasta /home/usuario1
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MzA1NzMyMCwtMTAwNTgwMjYwNywtMj
+eyJoaXN0b3J5IjpbMTczNTE1MTgxOSwtMTAwNTgwMjYwNywtMj
 I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
 MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
 AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
