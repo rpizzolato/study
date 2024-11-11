@@ -1628,6 +1628,8 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 
 Acessibilidade também é chamada de access X
 
+
+
 - `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar)
 - `slow keys`: usado por quem tem problema motor, ele evita que o retorno da tecla digitada aparece por diversas vezes
 - `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes (se precisar digitar a mesma tecla, precisa aguardar o delay)
@@ -1644,11 +1646,11 @@ Software capaz de executar comandos através do reconhecimento de voz. Diversos 
 - Simon (KDE)
 - Julius
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLT
-g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
-NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
-wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
-OTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NT
-EzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4
-MDY4NTk0OV19
+eyJoaXN0b3J5IjpbLTE4NzkzMzQwMTcsLTIwMjM0NzQ5MDksLT
+E4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2
+OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1Mj
+gsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNTIw
+MzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NT
+M2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5
+MDY0NjI1Nl19
 -->
