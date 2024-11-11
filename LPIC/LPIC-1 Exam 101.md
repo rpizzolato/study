@@ -1675,13 +1675,13 @@ Ordem dos campos:<br>
 7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar. Assim como quando tiver `/usr/sbin/nologin`.<br>
 *Internamente o Linux sempre trabalha com o `id`.<br>
 **Pode-se ter dois usuários com o mesmo id, no entanto o Linux tratará os dois como se fosse um só.<br>
-***Pode-se alterar o arquivo `/etc/passwd` diretamente, mas não é recomendado, pois há comandos para isso. Ex. Poderia alterar o id de qualquer usuário para o `id = 0`, e esse usuário se comportaria como root. No entanto não é recomendado.
+***Pode-se alterar o arquivo `/etc/passwd` diretamente, mas não é recomendado, pois há comandos para isso (e pense que o `/etc/passwd` é ligado com o `/etc/shadow`, e mudar uma coisa em um, geraria inconsistência no outro). Ex. Poderia alterar o id de qualquer usuário para o `id = 0`, e esse usuário se comportaria como root. No entanto não é recomendado.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDk3MTA2MTgsNDU3ODE4NzgzLDEyNj
-k4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMy
-MywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LD
-EzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQy
-MDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5Nz
-IsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEz
-MTA4MDQzMjBdfQ==
+eyJoaXN0b3J5IjpbMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OT
+g5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIz
+LC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMT
+M4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIw
+MDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3Mi
+wtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMx
+MDgwNDMyMF19
 -->
