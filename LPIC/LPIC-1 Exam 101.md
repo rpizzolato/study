@@ -1756,13 +1756,13 @@ Mudar o shell do usuário1:<br>
 
 Usado para alterar/criar senha para usuários (precisa ser root)
 
-Lembre-se que ao criar um usuá
+Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `/etc/shadow`, vai ficar com um ponto de exclamação (`!`), indicando que não foi definido uma senha. Após criar uma senha com o comando `passwd`, uma hash entrará no lugar do ponto de exclamação.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTg1Mzg2MzUsOTk4ODI4MzY1LC0xMD
-A1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3
-ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOT
-YwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcx
-ODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mz
-g2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgw
-MDgxODk3Ml19
+eyJoaXN0b3J5IjpbOTA5ODg5Nzk4LDk5ODgyODM2NSwtMTAwNT
+gwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4Nzgz
+LDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MD
+UzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgw
+MDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4Nj
+IsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4
+MTg5NzJdfQ==
 -->
