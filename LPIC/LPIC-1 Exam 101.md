@@ -1714,11 +1714,11 @@ Basicamente são:<br>
 - `userdel`: exclui usuário
 - `usermod`: altera configurações usuário
 
-
-
+##### useradd
+- `useradd usuário1`: cria o **usuário1**, e em /etc/passwd, cria uma linha referente a esse usuário.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDU4NzUyOSwtMjI2MzcxNzc5LDEzNz
+eyJoaXN0b3J5IjpbLTc1NDYxMTU3MywtMjI2MzcxNzc5LDEzNz
 M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
 MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
 g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
