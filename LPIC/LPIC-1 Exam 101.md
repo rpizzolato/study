@@ -1635,9 +1635,9 @@ Acessibilidade também é chamada de access X
 - `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
 - `KMag`: screen magnifier (ampliador de tela - LUPA)
 - `Orca e emacspeak`: leitor de tela, sendo o Orca o principal
-- BRLTTY: app do Linux para entender e usar o [Braille Display](https://www.google.com/search?q=braille+display&oq=brai&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYPDIGCAMQRRg8MgYIBBBFGEEyBggFEEUYQTIGCAYQRRhBMgYIBxAuGEDSAQgzODQ5ajBqMagCALACAA&sourceid=chrome&ie=UTF-8)
+- `BRLTTY`: app do Linux para entender e usar o [Braille Display](https://www.google.com/search?q=braille+display&oq=brai&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYPDIGCAMQRRg8MgYIBBBFGEEyBggFEEUYQTIGCAYQRRhBMgYIBxAuGEDSAQgzODQ5ajBqMagCALACAA&sourceid=chrome&ie=UTF-8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NjY4NTQyNywxMzg4NTUxMDEyLC0xNT
+eyJoaXN0b3J5IjpbLTg1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNT
 E2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1
 MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC05MzUxMDE5ODcsNT
 IwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1
