@@ -1626,16 +1626,19 @@ Em outro terminal, execute: `Xorg -terminate -query 192.168.0.100 :1`
 
 ### 106.3 Acessibilidade
 
+Acessibilidade também é chamada de access X
+
 - `sticky keys` (teclas de aderência): é para quem não consegue apertar mais de uma tecla ao mesmo tempo (Ex. shift + A ou S, etc). Se habilitar, basta apertar a tecla do atalho e a outra sequencial (sem necessidade de segurar)
 - `slow keys`: usado por quem tem problema motor, ele evita que o retorno da tecla digitada aparece por diversas vezes
 - `bouce keys`: cria um delay ao pressionar a mesma tecla por diversas vezes (se precisar digitar a mesma tecla, precisa aguardar o delay)
 - `mouse emulation`: para usar o mouse com o teclado numérico da direita. (Ex. 8=cima, 2=baixo, 6=direita e 4=esquerda, 5=pressionar - clique)
+- `GOK (Gnome On-board Keyboard)`: teclado virtual On-board
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDcyMDcxNzgsLTE1MTY5NTI4OTMsLT
-E3MDU0ODM4NjIsNjQyMDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4
-NTg2LC04MDA4MTg5NzIsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLT
-E2NDE5NTcyNDgsLTEzMTA4MDQzMjAsNzU2NDU1MzY1LDEzNDcw
-ODY1MTMsMTY3NTgwODc0MywtODYzMDkyODkxLDkwNjQ2MjU2LC
-0xMDgwNjg1OTQ5LC05NjY0NTM3LDEzMTQ5MDY0NDIsLTI2OTQ3
-MDQ1N119
+eyJoaXN0b3J5IjpbMTM4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMT
+cwNTQ4Mzg2Miw2NDIwMDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1
+ODYsLTgwMDgxODk3MiwtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMT
+Y0MTk1NzI0OCwtMTMxMDgwNDMyMCw3NTY0NTUzNjUsMTM0NzA4
+NjUxMywxNjc1ODA4NzQzLC04NjMwOTI4OTEsOTA2NDYyNTYsLT
+EwODA2ODU5NDksLTk2NjQ1MzcsMTMxNDkwNjQ0MiwtMjY5NDcw
+NDU3XX0=
 -->
