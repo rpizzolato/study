@@ -1639,13 +1639,13 @@ Acessibilidade também é chamada de access X
 
 #### Reconhecimento de voz
 
-Software capaz de executar comandos através do reconhecimento de voz
+Software capaz de executar comandos através do reconhecimento de voz. Diversos projetos Open Source em desenvolvimento (além dos principais para dispositivos móveis, como siri, Cortana, etc.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDAwNjQxMDUsLTg1NzE4MDAxOSwxMz
-g4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1NDgzODYyLDY0MjAw
-NzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4NiwtODAwODE4OTcyLC
-05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQxOTU3MjQ4LC0xMzEw
-ODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NTEzLDE2NzU4MDg3ND
-MsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4MDY4NTk0OSwtOTY2
-NDUzN119
+eyJoaXN0b3J5IjpbLTE1OTM2MzQ4NTgsLTE4NDAwNjQxMDUsLT
+g1NzE4MDAxOSwxMzg4NTUxMDEyLC0xNTE2OTUyODkzLC0xNzA1
+NDgzODYyLDY0MjAwNzA3NCwzMTYzNzM1MjgsLTM3Mzk5ODU4Ni
+wtODAwODE4OTcyLC05MzUxMDE5ODcsNTIwMzY0OTY5LC0xNjQx
+OTU3MjQ4LC0xMzEwODA0MzIwLDc1NjQ1NTM2NSwxMzQ3MDg2NT
+EzLDE2NzU4MDg3NDMsLTg2MzA5Mjg5MSw5MDY0NjI1NiwtMTA4
+MDY4NTk0OV19
 -->
