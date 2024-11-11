@@ -1672,13 +1672,13 @@ Ordem dos campos:<br>
 4. grupo padrão do usuário: que por padrão usa o mesmo nome do usuário, mas também é configurável e possível alterar
 5. descrição: normalmente o nome do usuário, mas isso não é regra.
 6. home do usuário: local onde usuário poderá gravar sem restrições, e onde também o usuário cai ao fazer login
-7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar.
+7. shell padrão do usuário, que é aberto após login. Quando tem `/bin/false`, significa que **NÃO** é um usuário que irá se logar. Assim como quando tiver `/usr/sbin/nologin`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzEwMDk3Nyw0NTc4MTg3ODMsMTI2OT
-g5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIz
-LC0yMDIzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMT
-M4ODU1MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIw
-MDcwNzQsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3Mi
-wtOTM1MTAxOTg3LDUyMDM2NDk2OSwtMTY0MTk1NzI0OCwtMTMx
-MDgwNDMyMF19
+eyJoaXN0b3J5IjpbLTE5NzE4Mzc0NzEsNDU3ODE4NzgzLDEyNj
+k4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMy
+MywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LD
+EzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQy
+MDA3MDc0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5Nz
+IsLTkzNTEwMTk4Nyw1MjAzNjQ5NjksLTE2NDE5NTcyNDgsLTEz
+MTA4MDQzMjBdfQ==
 -->
