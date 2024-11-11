@@ -1724,19 +1724,21 @@ Exemplo com várias opções:<br>
 - `-c`(`--comment`):  string de texto com o comentário do usuário (geralmente nome completo do usuário
 - `-s`(--shell): shell padrão desejado pelo novo usuário
 - `-g`(`--gid`): grupo primário (padrão) do novo usuário
-- `-G` (`--group`): grupo(s) secundários do novo usuário
+- `-G` (`--group`): grupo(s) secundários do novo usuário (outros grupos que o usuário vai pertencer)
 
 Outras opções importantes:
 - `-d` (`--home-dir`): definir um `/home` para usuário (não precisa ser o padrão)
 - `-m` (`--create-home`): caso no `/etc/user.defs` esteja para não criar `/home` por padrão, pode-se usar essa opção para "forçar" criar o `/home` do usuário (conforme definido no skeleton directory) 
+- `-M` (`--no-create-home`): não cria o `/home`
+- -p (--password): define a senha. Mas precisa ser em hash, que pode ser criado por 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjY1Njk2OSwtMTAwNTgwMjYwNywtMj
-I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
-MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
-AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
-NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0ODM4NjIsNjQyMDA3MD
-c0LDMxNjM3MzUyOCwtMzczOTk4NTg2LC04MDA4MTg5NzIsLTkz
-NTEwMTk4N119
+eyJoaXN0b3J5IjpbOTEyOTc3MjU3LC0xMDA1ODAyNjA3LC0yMj
+YzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUx
+OCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMD
+IzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1
+MTAxMiwtMTUxNjk1Mjg5MywtMTcwNTQ4Mzg2Miw2NDIwMDcwNz
+QsMzE2MzczNTI4LC0zNzM5OTg1ODYsLTgwMDgxODk3MiwtOTM1
+MTAxOTg3XX0=
 -->
