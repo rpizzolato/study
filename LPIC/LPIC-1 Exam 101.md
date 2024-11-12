@@ -1819,12 +1819,14 @@ Primeiramente é necessário criar uma senha para o grupo, com o comando:<br>
 
     gpasswd nome_grupo
 
+Lembrando que se pode observar se o
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ4NTA2OTc5LC0xNDY2NzIzODE5LDE3OD
+eyJoaXN0b3J5IjpbMjQ2NDkxMTgzLC0xNDY2NzIzODE5LDE3OD
 U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
 MjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOT
 UzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2
