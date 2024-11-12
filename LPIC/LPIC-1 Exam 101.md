@@ -1851,8 +1851,9 @@ Ex.<br>
 `chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, última vez que usuário mudou a senha, etc
 - `chage -l rodrigo`: mostra propriedades do usuário rodrigo (apenas **root** pode ver as propriedades de todos os usuários, os demais somente suas próprias informações)
 - `chage -M 60 rodrigo`: força que o usuário troque de senha a cada 60 dias. Execute `chage -l rodrigo` para saber se aplicou mesmo.
+- chage -d (--lastdar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MjY4NTYxMiwxNDY1MTA0NjE0LDEzMT
+eyJoaXN0b3J5IjpbLTkwODU3NjY4MCwxNDY1MTA0NjE0LDEzMT
 M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
 MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
 Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
