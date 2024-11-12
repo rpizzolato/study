@@ -1754,6 +1754,8 @@ Mudar o shell do usuário1:<br>
 
 `usermod -g suporte usuario1`: muda para **suporte** o grupo padrão do **usuario1** (originalmente, quando criado, o grupo padrão (`-g`) do **usuario1** era **usuario1**. Confirme com um `cat /etc/passwd` para ver o id do grupo do **usuario1**.
 
+Repare
+
 
 `usermod -G devops usuario1`: define o grupo **devops** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **devosp**.
 
@@ -1801,11 +1803,11 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MT
-gxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3
-LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMTAwNT
-gwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4Nzgz
-LDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MD
-UzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgw
-MDE5XX0=
+eyJoaXN0b3J5IjpbMTE5NTY0MDI3OSwtODY4MzUxNDAsMTY4Mz
+g0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcw
+OSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOTk4OD
+I4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1NjIw
+OCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MD
+AzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0
+MTA1XX0=
 -->
