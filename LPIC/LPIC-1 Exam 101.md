@@ -1754,12 +1754,14 @@ Mudar o shell do usuário1:<br>
 
 `usermod -g suporte usuario1`: muda para **suporte** o grupo padrão do **usuario1** (originalmente, quando criado, o grupo padrão (`-g`) do **usuario1** era **usuario1**. Confirme com um `cat /etc/passwd` para ver o id do grupo do **usuario1**.
 
-Repare
+Repare na similaridade dos dois comandos a seguir:<br>
 
 
 `usermod -G devops usuario1`: define o grupo **devops** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **devosp**.
 
-`usermod -G qateams usuario1`: define o grupo **qateams** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **qateams**. NO ENTANTO, o usuario1 não faz mais parte do grupo suporte (imagine que o limite de grupos secundários seja 1 grupo por vez), mas podemos podemos manter o grupo secundário com o argumento `-a`, que no caso vai adicionando os grupos.
+`usermod -G qateams usuario1`: define o grupo **qateams** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **qateams**. NO ENTANTO, o usuario1 não faz mais parte do grupo suporte (imagine que o limite de grupos secundários seja 1 grupo por vez), mas podemos podemos manter o grupo secundário com o argumento `-a`, que no caso vai adicionando os grupos. Ficando o comando:<br>
+
+    usermod -G -a qateams usuario1
 
 ##### passwd
 
@@ -1803,11 +1805,11 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTY0MDI3OSwtODY4MzUxNDAsMTY4Mz
-g0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcw
-OSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOTk4OD
-I4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1NjIw
-OCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYyLDM5MD
-AzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xODQwMDY0
-MTA1XX0=
+eyJoaXN0b3J5IjpbLTc5MjIyNjI5LC04NjgzNTE0MCwxNjgzOD
+QzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5
+LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4Mj
+gzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4
+LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMD
+M0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQx
+MDVdfQ==
 -->
