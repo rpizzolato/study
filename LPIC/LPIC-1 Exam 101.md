@@ -1807,12 +1807,12 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 ##### newgrp
 
-Comando faz com que 
+Comando faz com que o usuário atual assuma determinado grupo durante a sessão de login.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDQ5NTIxNSwtMTc2ODg2NjM4NywtOD
+eyJoaXN0b3J5IjpbMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtOD
 Y4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3
 MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0Mj
 A0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3
