@@ -1763,6 +1763,11 @@ Repare na similaridade dos dois comandos a seguir:<br>
 
     usermod -G -a qateams usuario1
 
+ou
+
+    usermod -aG qateams usuario1
+- `-a` ou `--append`
+
 ##### passwd
 
 Usado para alterar/criar senha para usuários (precisa ser root)
@@ -1805,11 +1810,11 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjIyNjI5LC04NjgzNTE0MCwxNjgzOD
-QzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5
-LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4Mj
-gzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4
-LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMD
-M0NzA2LDE5NjA1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQx
-MDVdfQ==
+eyJoaXN0b3J5IjpbLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2OD
+M4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3
+MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5OD
+gyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYy
+MDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOT
+AwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2
+NDEwNV19
 -->
