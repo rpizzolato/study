@@ -1809,16 +1809,16 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 Comando faz com que o usuário atual assuma determinado grupo durante a sessão de login.
 
-new
+- `newgrp suporte`: supõe que está logado com **usuario1**, e que esse usuário também faça parte do grupo suporte, além de seu próprio (grupo usuario1). Ao executar o comando no começo da frase, ele assume o grupo suporte como padrão, e arquivos criados serão do grupo suporte.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk0Mzg1MTEwLDE3ODU5MzI2OTQsLTE3Nj
-g4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIx
-MDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zND
-AxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYw
-NywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNj
-k4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMy
-M119
+eyJoaXN0b3J5IjpbLTkyNjUwOTYxMSwxNzg1OTMyNjk0LC0xNz
+Y4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcy
+MTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMz
+QwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2
+MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMj
+Y5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5NjA1MzEz
+MjNdfQ==
 -->
