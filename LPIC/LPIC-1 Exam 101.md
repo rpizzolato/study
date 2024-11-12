@@ -1856,13 +1856,13 @@ Ex.<br>
 
 >[!NOTE]
 >
->A sequencias mostrada no comando chage, é a mesma dentro do arquivo.
+>A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1MzQ2NTYxLDE0NjUxMDQ2MTQsMTMxMz
-Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
-OSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNj
-gzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2Mjkx
-NzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OT
-g4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2
-MjA4XX0=
+eyJoaXN0b3J5IjpbMTIxNDU5MTI0MiwxNDY1MTA0NjE0LDEzMT
+M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
+MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
+Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
+MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOT
+k4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1
+NjIwOF19
 -->
