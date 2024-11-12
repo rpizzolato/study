@@ -1811,14 +1811,18 @@ Comando faz com que o usuário atual assuma determinado grupo durante a sessão 
 
 - `newgrp suporte`: supõe que está logado com **usuario1**, e que esse usuário também faça parte do grupo **suporte**, além de seu próprio (grupo **usuario1**). Ao executar o comando no começo da frase, ele assume o grupo **suporte** como padrão, e arquivos criados serão do grupo **suporte**.
 
+##### senhas nos grupos
+
+Seria uma situação que o usuário não faz parte de um grupo, se tentar, por exemplo, com o comando: `newgrp devops`, e o usuário não fizer parte do grupo, vai pedir uma senha, e somente será admini
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMT
-c2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3
-MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLT
-M0MDE1ODM1NSw0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAy
-NjA3LC0yMjYzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMT
-I2OTg5NjUxOCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMx
-MzIzXX0=
+eyJoaXN0b3J5IjpbNzc5MjYxNTkyLC0xNDY2NzIzODE5LDE3OD
+U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
+MjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOT
+UzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2
+NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsND
+U3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3
+MDZdfQ==
 -->
