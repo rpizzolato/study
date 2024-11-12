@@ -1854,16 +1854,17 @@ Ex.<br>
 - `chage -d "2024-11-13" rodrigo`: (ou `--lastday`): muda a data que da última vez que o usuário mudou a senha. (isso implica se, por exemplo, foi configurado para trocar a senha a cada x dias. Se for 10 dias, e voltar mais de 10 dias da última troca, vai ter que cadastrar uma nova senha, pois a senha é considerada expirada).
 - - `chage -E "2024-12-12" rodrigo`: (ou `--expiredate`): define uma data para a conta expirar. Se expirar, ao logar, vai informar que a conta foi expirada, que é preciso falar com o administrador do sistema
 - `chage` -E -1 rodrigo: volta a conta ao normal, em referências ao comando anterior.
+- chage -d0 rodrigo: força o usuário a trocar senha no próximo lo
 
 >[!NOTE]
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzM1MjE0LDE0NjUxMDQ2MTQsMTMxMz
-Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
-OSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNj
-gzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2Mjkx
-NzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OT
-g4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2
-MjA4XX0=
+eyJoaXN0b3J5IjpbLTEyODA1MTk4MjMsMTQ2NTEwNDYxNCwxMz
+EzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIz
+ODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLD
+E2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYy
+OTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLD
+k5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2
+NTYyMDhdfQ==
 -->
