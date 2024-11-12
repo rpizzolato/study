@@ -1844,13 +1844,13 @@ Ex.<br>
     rodrigo adm cdrom sudo dip plugdev users lpadmin sambashare
 ```
 
-- getent passwd: pega informação do usuário rodrigo em /etc/passwd (como se fosse um cat /etc)
+- `getent passwd`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM4MjM5MTk0LDI1MzcyOTY4NSwtODE3MT
-MyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYz
-ODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLT
-YzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgz
-NTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMj
-I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
-MThdfQ==
+eyJoaXN0b3J5IjpbMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNz
+EzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2
+Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC
+02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4
+MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLT
+IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
+NTE4XX0=
 -->
