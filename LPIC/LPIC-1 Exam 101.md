@@ -1754,6 +1754,8 @@ Mudar o shell do usuário1:<br>
 
 `usermod -g suporte usuario1`: muda para **suporte** o grupo padrão do **usuario1** (originalmente, quando criado, o grupo padrão (`-g`) do **usuario1** era **usuario1**. Confirme com um `cat /etc/passwd` para ver o id do grupo do **usuario1**.
 
+usermod -G devops usuario1: define o grupo 
+
 ##### passwd
 
 Usado para alterar/criar senha para usuários (precisa ser root)
@@ -1793,15 +1795,14 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 ##### Testando alteração de grupo padrão
 
-Com usuario1 crie um arquivo
 
-usermod -G devops usuario1: define o grupo 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NT
-YyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEw
-LDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNz
-M2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2
-MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMT
-g0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5
-NTI4OTNdfQ==
+eyJoaXN0b3J5IjpbLTExNTAxNzM0NzMsLTE1MTgxNzIxMDMsLT
+YzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgz
+NTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMj
+I2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1
+MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYsMTk2MDUzMTMyMywtMj
+AyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtODU3MTgwMDE5LDEzODg1
+NTEwMTJdfQ==
 -->
