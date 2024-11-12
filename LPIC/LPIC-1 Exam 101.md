@@ -1752,6 +1752,8 @@ Mudar o shell do usuário1:<br>
 
     usermod -s /sbin/ksh usuario1
 
+`usermod -g suporte usuario1`: muda para suporte o grupo padrão do **usuario1** (originalmente, quando criado, o grupo padrão (`-g`) do **usuario1** era **usuario1**.
+
 ##### passwd
 
 Usado para alterar/criar senha para usuários (precisa ser root)
@@ -1795,11 +1797,11 @@ Com usuario1 crie um arquivo
 
 usermod -G devops usuario1: define o grupo 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMT
-c1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwt
-MTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3OD
-E4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOTAwMzQ3MDYs
-MTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2NDEwNSwtOD
-U3MTgwMDE5LDEzODg1NTEwMTIsLTE1MTY5NTI4OTMsLTE3MDU0
-ODM4NjJdfQ==
+eyJoaXN0b3J5IjpbLTk0NTcyNDkwNCwtNjMyMTQ3MzMxLDk1Nj
+I5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAs
+OTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3Mz
+Y1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0MzYy
+LDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0OTA5LC0xOD
+QwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1MTAxMiwtMTUxNjk1
+Mjg5M119
 -->
