@@ -1805,16 +1805,18 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 - `groupmod -n devops suporte`(`-n` ou `--new-name`): altera o nome do grupo de suporte para devops
 - `groupmod -g 2001 suporte`(`-g` ou `--gid`): altera o id do grupo para 2001
 
-##### Testando alteração de grupo padrão
+##### newgrp
+
+Comando faz com que 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2OD
-M4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3
-MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5OD
-gyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYy
-MDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAzNDM2MiwzOT
-AwMzQ3MDYsMTk2MDUzMTMyMywtMjAyMzQ3NDkwOSwtMTg0MDA2
-NDEwNV19
+eyJoaXN0b3J5IjpbLTk5MDQ5NTIxNSwtMTc2ODg2NjM4NywtOD
+Y4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3
+MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0Mj
+A0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3
+NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtOD
+cxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMDIzNDc0
+OTA5XX0=
 -->
