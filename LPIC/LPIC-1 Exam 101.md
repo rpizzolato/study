@@ -1831,11 +1831,16 @@ Para acessar o grupo, basta usar o comando `newgrp nome_grupo`
 
 - `id`: imprime o id do usuário e o id dos grupos pertencentes a esse usuário (usuário atual). Ou pode usar colocando o usuário como parâmetro: `id usuario1`
 
-Sequencialmente seria: id do usuário | id do grupo padrão do usuário | 
+Sequencialmente seria: 
+- **id do usuário**; 
+- **id do grupo padrão do usuário**;
+- **grupos secundários que esse usuário pertence**.
+
+Mesmo conceut 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3MTE0MzcwLC04MTcxMzIxMzMsLTE0Nj
+eyJoaXN0b3J5IjpbMTgzMzQwMjQwLC04MTcxMzIxMzMsLTE0Nj
 Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
 NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
 k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
