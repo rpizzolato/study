@@ -1831,13 +1831,15 @@ Para acessar o grupo, basta usar o comando `newgrp nome_grupo`
 
 - `id`: imprime o id do usuário e o id dos grupos pertencentes a esse usuário (usuário atual). Ou pode usar colocando o usuário como parâmetro: `id usuario1`
 
+Sequencialmente seria: id do usuário | id do grupo padrão do usuário | 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzI0MTYwNDIsLTgxNzEzMjEzMywtMT
-Q2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04Njgz
-NTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMz
-EsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQx
-NjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3MTc3OS
-wxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2NTE4LC04NzEw
-MzQzNjJdfQ==
+eyJoaXN0b3J5IjpbMjM3MTE0MzcwLC04MTcxMzIxMzMsLTE0Nj
+Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
+NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
+k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
+MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMT
+M3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0
+MzYyXX0=
 -->
