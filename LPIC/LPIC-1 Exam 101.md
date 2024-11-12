@@ -1848,14 +1848,14 @@ Ex.<br>
 - `getent passwd rodrigo`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
 - `getent group suporte`: pega informações do usuário suporte no `/etc/group`
 
-`chage`: mostra as propriedades do usuário: quando a senha vai expirar, se está inativo/ativo, etc
+`chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, etc
 - `chage -l rodrigo`: mostra propriedades 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2NjA1MDA0LDEzMTM2NzgwNTUsMjUzNz
-I5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5
-NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMT
-UxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2
-OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMD
-A1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3
-ODNdfQ==
+eyJoaXN0b3J5IjpbLTcwODg1MjMyNywxMzEzNjc4MDU1LDI1Mz
+cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
+OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
+E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
+Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMT
+AwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4
+NzgzXX0=
 -->
