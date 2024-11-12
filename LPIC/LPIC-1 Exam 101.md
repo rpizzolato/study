@@ -1827,15 +1827,17 @@ Para acessar o grupo, basta usar o comando `newgrp nome_grupo`
 > 
 >Utilizar senha em grupo não é recomendado, e é pouquíssimo ou quase não utilizado.
 
+#### 107.1 Gerenciamento de Usuários e Grupos - id, groups, getent e chage
 
+- id: imprime o id do usuário e o id dos grupos pertencentes a esse usuário.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MzU0MjEzNSwtODE3MTMyMTMzLC0xND
-Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
-MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
-w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
-NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LD
-EzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAz
-NDM2Ml19
+eyJoaXN0b3J5IjpbNzcxNTcwMDgwLC04MTcxMzIxMzMsLTE0Nj
+Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
+NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
+k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
+MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMT
+M3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0
+MzYyXX0=
 -->
