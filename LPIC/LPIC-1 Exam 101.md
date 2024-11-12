@@ -1821,13 +1821,14 @@ Primeiramente é necessário criar uma senha para o grupo, com o comando:<br>
 
 Lembrando que se pode observar os grupos que têm senha olhando o arquivo `/etc/gshadow`
 
-Para acessar o grupo, basta usar o comando newgrp 
+Para acessar o grupo, basta usar o comando `newgrp nome_grupo`
 
+*Utilizar senha 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MTk1OTg3NiwtMTQ2NjcyMzgxOSwxNz
+eyJoaXN0b3J5IjpbLTgzNDI4ODg5MCwtMTQ2NjcyMzgxOSwxNz
 g1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQz
 MjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LD
 k1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4Mjgz
