@@ -1836,15 +1836,19 @@ Sequencialmente seria:
 - **id do grupo padrão do usuário**;
 - **grupos secundários que esse usuário pertence**.
 
-- `groups`: mesmo conceito acontece com o comando `groups`, que irá listar os grupos do usuário logado. Podendo também especificar um usuário. Ex. `groups usuario1`
+- `groups`: mesmo conceito que no comando `id`, que irá listar os grupos do usuário logado. Podendo também especificar um usuário. Ex. `groups usuario1`<br>
+Ex.<br>
+
+    groups rodrigo
+    rodrigo adm cdrom sudo dip plugdev users lpadmin sambashare
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3MjcxODM5LC04MTcxMzIxMzMsLTE0Nj
-Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
-NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
-k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
-MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMT
-M3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUxOCwtODcxMDM0
-MzYyXX0=
+eyJoaXN0b3J5IjpbMTMzMTEyOTM1NywtODE3MTMyMTMzLC0xND
+Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
+MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
+w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
+NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LD
+EzNzM2NTYyMDgsNDU3ODE4NzgzLDEyNjk4OTY1MTgsLTg3MTAz
+NDM2Ml19
 -->
