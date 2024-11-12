@@ -1851,14 +1851,14 @@ Ex.<br>
 `chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, última vez que usuário mudou a senha, etc
 - `chage -l rodrigo`: mostra propriedades do usuário rodrigo (apenas **root** pode ver as propriedades de todos os usuários, os demais somente suas próprias informações)
 - `chage -M 60 rodrigo`: força que o usuário troque de senha a cada 60 dias. Execute `chage -l rodrigo` para saber se aplicou mesmo.
-- `chage -d 2024-11-13 rodrigo`: (ou `--lastday`): muda a data que da última vez que o usuário mudou a senha. (isso implica se, por exemplo, foi configurado para trocar a senha a cada x dias. Se for 10 dias, e voltar mais de 10 dias da última troca, vai ter que cadastrar uma nova senha, pois a senha é considerada expirada).
-- - `chage -E 2024-12-12 rodrigo`: (ou `--expiredate`): muda a data que da última vez que o usuário mudou a senha. (isso implica se, por exemplo, foi configurado para trocar a senha a cada x dias. Se for 10 dias, e voltar mais de 10 dias da última troca, vai ter que cadastrar uma nova senha, pois a senha é considerada expirada).
+- `chage -d "2024-11-13" rodrigo`: (ou `--lastday`): muda a data que da última vez que o usuário mudou a senha. (isso implica se, por exemplo, foi configurado para trocar a senha a cada x dias. Se for 10 dias, e voltar mais de 10 dias da última troca, vai ter que cadastrar uma nova senha, pois a senha é considerada expirada).
+- - `chage -E "2024-12-12" rodrigo`: (ou `--expiredate`): define uma data para a conta expirar. Se expirar, ao logar, vai informar que a conta foi expirada, que é preciso falar com o administrador do sistema
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5ODA5MTEzMSwxNDY1MTA0NjE0LDEzMT
-M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
-MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
-Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
-MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOT
-k4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1
-NjIwOF19
+eyJoaXN0b3J5IjpbLTEzNDc5MTA2OTIsMTQ2NTEwNDYxNCwxMz
+EzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIz
+ODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLD
+E2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYy
+OTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLD
+k5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2
+NTYyMDhdfQ==
 -->
