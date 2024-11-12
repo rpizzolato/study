@@ -1754,7 +1754,10 @@ Mudar o shell do usuário1:<br>
 
 `usermod -g suporte usuario1`: muda para **suporte** o grupo padrão do **usuario1** (originalmente, quando criado, o grupo padrão (`-g`) do **usuario1** era **usuario1**. Confirme com um `cat /etc/passwd` para ver o id do grupo do **usuario1**.
 
+
 `usermod -G devops usuario1`: define o grupo **devops** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **devosp**.
+
+`usermod -G qateams usuario1`: define o grupo **qateams** como grupo secundário do **usuario1**. Repare que em `/etc/passwd`, ainda continuar sendo o grupo padrão o grupo `suporte` (considerando a mudança no comando do parágrafo anterior. No entanto o **usuario1** também pertence agora ao grupo **qateams**. NO ENTANTO, o usuario1 não faz mais parte do grupo suporte (imagine que o limite de grupos sencundários seja )
 
 ##### passwd
 
@@ -1798,11 +1801,11 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNj
-MyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1
-NSw0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMj
-YzNzE3NzksMTM3MzY1NjIwOCw0NTc4MTg3ODMsMTI2OTg5NjUx
-OCwtODcxMDM0MzYyLDM5MDAzNDcwNiwxOTYwNTMxMzIzLC0yMD
-IzNDc0OTA5LC0xODQwMDY0MTA1LC04NTcxODAwMTksMTM4ODU1
-MTAxMl19
+eyJoaXN0b3J5IjpbLTM4NzE5NzE1MiwxNjgzODQzMjI5LC0xNT
+E4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5
+NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMD
+U4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4
+MywxMjY5ODk2NTE4LC04NzEwMzQzNjIsMzkwMDM0NzA2LDE5Nj
+A1MzEzMjMsLTIwMjM0NzQ5MDksLTE4NDAwNjQxMDUsLTg1NzE4
+MDAxOV19
 -->
