@@ -1836,11 +1836,11 @@ Sequencialmente seria:
 - **id do grupo padrão do usuário**;
 - **grupos secundários que esse usuário pertence**.
 
-Mesmo conceut 
+- `groups`: mesmo conceito acontece com o comando `groups`, que irá listar os grupos do usuário logado. Podendo também especificar um usuário. Ex. `groups usuario1`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzQwMjQwLC04MTcxMzIxMzMsLTE0Nj
+eyJoaXN0b3J5IjpbNDM3MjcxODM5LC04MTcxMzIxMzMsLTE0Nj
 Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
 NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
 k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
