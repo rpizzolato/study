@@ -1850,12 +1850,13 @@ Ex.<br>
 
 `chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, última vez que usuário mudou a senha, etc
 - `chage -l rodrigo`: mostra propriedades do usuário rodrigo (apenas **root** pode ver as propriedades de todos os usuários, os demais somente suas próprias informações)
+- c
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1Mz
-cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
-OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
-E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
-Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2NSwtMT
-AwNTgwMjYwNywtMjI2MzcxNzc5LDEzNzM2NTYyMDgsNDU3ODE4
-NzgzXX0=
+eyJoaXN0b3J5IjpbLTcwMjM5MDY0MCwxNDY1MTA0NjE0LDEzMT
+M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
+MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
+Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
+MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOT
+k4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1
+NjIwOF19
 -->
