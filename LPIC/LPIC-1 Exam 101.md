@@ -1843,15 +1843,18 @@ Ex.<br>
     $ groups rodrigo
     rodrigo adm cdrom sudo dip plugdev users lpadmin sambashare
 ```
+`getent`: pega informações de grupos/usuários
 
-- `getent passwd`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
-- get
+- `getent passwd rodrigo`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
+- `getent group suporte`: pega informações do usuário suporte no `/etc/group`
+
+chage: pega informações do usuário
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzAwOTIwMDQsMTMxMzY3ODA1NSwyNT
-M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
-Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
-0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
-NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLT
-EwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1Nzgx
-ODc4M119
+eyJoaXN0b3J5IjpbNjIwNTgxOTEsMTMxMzY3ODA1NSwyNTM3Mj
+k2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0
+LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNT
+E4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5
+NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMD
+U4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4
+M119
 -->
