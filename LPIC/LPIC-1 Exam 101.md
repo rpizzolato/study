@@ -1845,12 +1845,13 @@ Ex.<br>
 ```
 
 - `getent passwd`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
+- get
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNz
-EzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2
-Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC
-02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4
-MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLT
-IyNjM3MTc3OSwxMzczNjU2MjA4LDQ1NzgxODc4MywxMjY5ODk2
-NTE4XX0=
+eyJoaXN0b3J5IjpbLTE3NzAwOTIwMDQsMTMxMzY3ODA1NSwyNT
+M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
+Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
+0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
+NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLT
+EwMDU4MDI2MDcsLTIyNjM3MTc3OSwxMzczNjU2MjA4LDQ1Nzgx
+ODc4M119
 -->
