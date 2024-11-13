@@ -1986,12 +1986,16 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 	- `1`= segunda-feira, 
 	- `2`= terça-feira, etc
 
+A primeira entrada no arquivo `/etc/crontab`:
+
+    17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDQ4MjkxMzUsLTM4MTk4NDk3NywtMz
-I1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0
-NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMj
-UzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkz
-MjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOS
-wtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMx
-NzU2OTddfQ==
+eyJoaXN0b3J5IjpbMTMwMzkwODAxNiwtMzgxOTg0OTc3LC0zMj
+U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
+NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
+M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
+Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
+0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
+NTY5N119
 -->
