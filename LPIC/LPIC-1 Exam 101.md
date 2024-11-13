@@ -1814,22 +1814,10 @@ Mais algumas opções para o uso de `passwd`:<br>
 - `-i`:  define o número de dias de inatividade após a expiração de uma senha, durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
 - `-l`: bloqueia a conta de usuário (a senha criptografada é prefixada com um ponto de exclamação no arquivo  `/etc/shadow`).
 - `-n`: define o tempo de vida mínimo da senha.
-
-`-S`
-
-Exibe informações sobre o status da senha de uma conta de usuário específica.
-
-`-u`
-
-Desbloqueia a conta do usuário (o ponto de exclamação é removido do campo de senha no arquivo  `/etc/shadow`).
-
-`-x`
-
-Define o tempo de vida máximo da senha.
-
-`-w`
-
-Define o número de dias de aviso antes que a senha expire, durante os quais o usuário é advertido de que a senha deve ser alterada.
+- `-S`: exibe informações sobre o status da senha de uma conta de usuário específica.
+- `-u`: desbloqueia a conta do usuário (o ponto de exclamação é removido do campo de senha no arquivo  `/etc/shadow`).
+- `-x`: define o tempo de vida máximo da senha.
+- `-w`: Define o número de dias de aviso antes que a senha expire, durante os quais o usuário é advertido de que a senha deve ser alterada.
 
 Note
 
@@ -1918,11 +1906,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4MTU0ODIwLDEwMDc1MTQ5ODUsNDIyOD
-E0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUs
-MjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NT
-kzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIy
-OSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NT
-MxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOTk4ODI4MzY1
-XX0=
+eyJoaXN0b3J5IjpbLTk4Njk0Njk3MiwxMDA3NTE0OTg1LDQyMj
+gxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1
+LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3OD
+U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
+MjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOT
+UzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2
+NV19
 -->
