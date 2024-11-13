@@ -1726,7 +1726,8 @@ Exemplo com várias opções:<br>
 - `-g`(`--gid`): grupo primário (padrão) do novo usuário
 - `-G` (`--group`): grupo(s) secundários do novo usuário (outros grupos que o usuário vai pertencer)
 - `-e` (`--expiredate`) (YYYY-MM-DD): define um tempo que a conta será desabilitada
-- `-f`: ria uma nova conta de usuário definindo o número de dias após a expiração de uma senha durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
+- `-f`: cria uma nova conta de usuário definindo o número de dias após a expiração de uma senha durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
+- `-k`: cria uma nova conta de usuário copiando os arquivos de esqueleto de um diretório personalizado específico (esta opção só é válida se a opção  `-m`  ou  `--create-home`  for especificada).
 
 Outras opções importantes:
 - `-d` (`--home-dir`): definir um `/home` para usuário (não precisa ser o padrão)
@@ -1862,11 +1863,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTgxNDcyNSwxNzI0ODU0Njc0LDE0Nj
-UxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEz
-MywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC
-04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIx
-NDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LD
-QyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3
-MTc3OV19
+eyJoaXN0b3J5IjpbNzU1MDMxMjUwLDE3MjQ4NTQ2NzQsMTQ2NT
+EwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMz
+LC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLT
+g2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0
+NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsND
+IwNDE2NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2Mzcx
+Nzc5XX0=
 -->
