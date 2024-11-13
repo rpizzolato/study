@@ -2006,12 +2006,12 @@ Vejamos um exemplo:<br>
     #m	h	dia	mes	diasemana	comando/script
     15	13	1,10,20,30	* 1-5	/home/rodrigo/Scripts/script.sh >> /tmp/teste-cron.txt
 
-Acima temos:
-- tnos dias 1,10,20,30 às 13h15m, em todo/qualquer mês (`*`), de segunda à sexta-feira (1=segunda, 5=sexta-feira), execute o script em /home/rodrigo/Scripts/script.sh e envie um 
+Acima temos:<br>
+nos dias 1,10,20,30 às 13h15m, em todo/qualquer mês (`*`), de segunda à sexta-feira (1=segunda, 5=sexta-feira), execute o script em `/home/rodrigo/Scripts/script.sh` e grava a saída do `script.sh` no arquivo `/tmp/teste-cron.txt`<br>
 **Observação**: se os dias 1, 10, 20, ou 30 caírem em um sábado ou domingo, o script.sh não vai rodar.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3Mzg2ODMzOSwyODc1OTEwMzEsLTM4MT
+eyJoaXN0b3J5IjpbMTM0ODc5NzEzOSwyODc1OTEwMzEsLTM4MT
 k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
 ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
 M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
