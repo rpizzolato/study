@@ -2012,11 +2012,13 @@ nos dias 1,10,20,30 às 13h15m, em todo/qualquer mês (`*`), de segunda à sexta
 
 Outro exemplo:
 
-    #m		h	dia	mes	diasemana	comando/script
-    */10	13	1,10,20,30	* 1-5	/home/rodrigo/Scripts/script.sh >> /tmp/teste-cron.txt
+    #m		h	dia		mes	diasemana	comando/script
+    */10	*	*		* 	*			/ cd /tmp ; rm -f teste
+
+Nesse caso, a cada 10 minutos
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Nzg1MTc3LDI4NzU5MTAzMSwtMzgxOT
+eyJoaXN0b3J5IjpbNzc5NDE0MDI3LDI4NzU5MTAzMSwtMzgxOT
 g0OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4
 NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMz
 Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
