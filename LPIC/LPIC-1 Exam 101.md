@@ -1994,12 +1994,14 @@ Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do m�
 
 
 ##### Cron para usuários
+
+Para listar os agendamentos do seu usuário: contrab -l -u rodrigo. Se tentar listar agendamentos de outro usuário, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNT
-YwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2
-LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1Mz
-cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
-OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
-E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
-Njk3XX0=
+eyJoaXN0b3J5IjpbLTgxNTM2MzM3LDI4NzU5MTAzMSwtMzgxOT
+g0OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4
+NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMz
+Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
+OSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNj
+gzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2Mjkx
+NzA5XX0=
 -->
