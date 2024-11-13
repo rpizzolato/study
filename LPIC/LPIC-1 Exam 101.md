@@ -1807,6 +1807,46 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
     su usuario1 #troca para o usuario1
 
+`-d`
+
+Apaga a senha de uma conta de usuário (desabilitando o usuário).
+
+`-e`
+
+Força a conta de usuário a alterar a senha.
+
+`-i`
+
+Define o número de dias de inatividade após a expiração de uma senha, durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
+
+`-l`
+
+Bloqueia a conta de usuário (a senha criptografada é prefixada com um ponto de exclamação no arquivo  `/etc/shadow`).
+
+`-n`
+
+Define o tempo de vida mínimo da senha.
+
+`-S`
+
+Exibe informações sobre o status da senha de uma conta de usuário específica.
+
+`-u`
+
+Desbloqueia a conta do usuário (o ponto de exclamação é removido do campo de senha no arquivo  `/etc/shadow`).
+
+`-x`
+
+Define o tempo de vida máximo da senha.
+
+`-w`
+
+Define o número de dias de aviso antes que a senha expire, durante os quais o usuário é advertido de que a senha deve ser alterada.
+
+Note
+
+Os grupos também podem ter uma senha, que pode ser definida usando o comando  `gpasswd`. Os usuários que não são membros de um grupo mas conhecem a senha podem ingressar nele temporariamente usando o comando  `newgrp`.  `gpasswd`  também é usado para adicionar e remover usuários de um grupo e para definir a lista de administradores e membros comuns do grupo.
+
 > [!IMPORTANT] 
 >
 >Há o comando `adduser`, que na realidade é um script que vai interagindo para criação do usuário. A nível de LPI, focar no `useradd`.
@@ -1890,11 +1930,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0OD
-U0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUs
-LTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNz
-Y4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcy
-MTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMz
-QwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2
-MDddfQ==
+eyJoaXN0b3J5IjpbMTI1MzE0NTY1MywxMDA3NTE0OTg1LDQyMj
+gxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1
+LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3OD
+U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
+MjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOT
+UzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2
+NV19
 -->
