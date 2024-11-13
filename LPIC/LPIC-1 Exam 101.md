@@ -1980,10 +1980,13 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 **minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
 
 - `*` = todo. Todo minuto, toda hora, todo dia do mês, etc.
-- **dow (day of week):** `7` e `0` = domingo, logo: `1`= segunda-feira, `2`= terça-feira, etc
+- **dow (day of week):**
+	-  `7` e `0` = domingo, logo: 
+	- `1`= segunda-feira, 
+	- `2`= terça-feira, etc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNjkxODkzMCwtMzgxOTg0OTc3LC0zMj
+eyJoaXN0b3J5IjpbLTY4MzU0NjQyMywtMzgxOTg0OTc3LC0zMj
 U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
 NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
 M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
