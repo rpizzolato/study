@@ -1817,11 +1817,11 @@ Mais algumas opções para o uso de `passwd`:<br>
 - `-S`: exibe informações sobre o status da senha de uma conta de usuário específica.
 - `-u`: desbloqueia a conta do usuário (o ponto de exclamação é removido do campo de senha no arquivo  `/etc/shadow`).
 - `-x`: define o tempo de vida máximo da senha.
-- `-w`: Define o número de dias de aviso antes que a senha expire, durante os quais o usuário é advertido de que a senha deve ser alterada.
+- `-w`: define o número de dias de aviso antes que a senha expire, durante os quais o usuário é advertido de que a senha deve ser alterada.
 
-Note
-
-Os grupos também podem ter uma senha, que pode ser definida usando o comando  `gpasswd`. Os usuários que não são membros de um grupo mas conhecem a senha podem ingressar nele temporariamente usando o comando  `newgrp`.  `gpasswd`  também é usado para adicionar e remover usuários de um grupo e para definir a lista de administradores e membros comuns do grupo.
+>[!NOTE]
+>
+>Os grupos também podem ter uma senha, que pode ser definida usando o comando  `gpasswd`. Os usuários que não são membros de um grupo mas conhecem a senha podem ingressar nele temporariamente usando o comando  `newgrp`.  `gpasswd`  também é usado para adicionar e remover usuários de um grupo e para definir a lista de administradores e membros comuns do grupo.
 
 > [!IMPORTANT] 
 >
@@ -1894,6 +1894,8 @@ Ex.<br>
 - `getent passwd rodrigo`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
 - `getent group suporte`: pega informações do usuário suporte no `/etc/group`
 
+##### chage (change age - alterar idade)
+
 `chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, última vez que usuário mudou a senha, etc
 - `chage -l rodrigo`: mostra propriedades do usuário rodrigo (apenas **root** pode ver as propriedades de todos os usuários, os demais somente suas próprias informações)
 - `chage -M 60 rodrigo`: força que o usuário troque de senha a cada 60 dias. Execute `chage -l rodrigo` para saber se aplicou mesmo.
@@ -1906,7 +1908,7 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4Njk0Njk3MiwxMDA3NTE0OTg1LDQyMj
+eyJoaXN0b3J5IjpbLTgyMzc0NTg2OSwxMDA3NTE0OTg1LDQyMj
 gxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1
 LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3OD
 U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
