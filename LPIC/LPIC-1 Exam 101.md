@@ -1972,9 +1972,11 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 ##### Cron
 
-É um daemon, um processo que fica rodando. Verificar se está rodando com systemctl status cro
+É um daemon, um processo que fica rodando. Verificar se está rodando com `systemctl status cron`
+
+O arquivo /etc/crontab é onde ficam as tarefas de agendamento, que é executado pelo usuário root
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NTMwNjU3MSwtMzgxOTg0OTc3LC0zMj
+eyJoaXN0b3J5IjpbLTM1NjA2NDMwNywtMzgxOTg0OTc3LC0zMj
 U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
 NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
 M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
