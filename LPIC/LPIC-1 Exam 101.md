@@ -1969,12 +1969,16 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
     uid=1050(emma) gid=1028(administrators) groups=1028(administrators),1029(developers),1031(web-designers)
 
 ### 107.2 Automatizar e agendar tarefas administrativas de sistema
+
+##### Cron
+
+É um daemon, um processo que fica rodando. Verificar se está rodando com systemctl status cro
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjY1MDk1ODYsLTM4MTk4NDk3NywtMz
-I1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0
-NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMj
-UzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkz
-MjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOS
-wtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMx
-NzU2OTddfQ==
+eyJoaXN0b3J5IjpbLTQ5NTMwNjU3MSwtMzgxOTg0OTc3LC0zMj
+U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
+NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
+M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
+Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
+0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
+NTY5N119
 -->
