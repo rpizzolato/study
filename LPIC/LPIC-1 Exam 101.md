@@ -1772,7 +1772,12 @@ ou
 - `-a` ou `--append`
 
 - `-l` ou `--login`: altera o nome de login da conta de usuário especificada.
-- `-L`ou `--lock`:  bloqueia a conta de usuário especificada. Um ponto de exclamação é posto na frente da senha criptografada dentro do arquivo  `/etc/shadow`, desabilitando assim o acesso com senha para esse usuário. (Note: if you wish to lock the account (not only access with a password), you should also set the EXPIRE_DATE to 1). Para desbloquear, usar `-U` ou `--unlock`
+- `-L`ou `--lock`:  bloqueia a conta de usuário especificada. Um ponto de exclamação é posto na frente da senha criptografada dentro do arquivo  `/etc/shadow`, desabilitando assim o acesso com senha para esse usuário. (Note: if you wish to lock the account (not only access with a password), you should also set the EXPIRE_DATE to 1).
+- `-U`ou `--unlock`: desbloqueia a conta de usuário especificada. Remove o ponto de exclamação na frente da senha criptografada no arquivo  `/etc/shadow`.
+
+>[!TIP]
+>
+>Lembre que, ao alterar o nome de login de uma conta de usuário, você provavelmente deve renomear o diretório pessoal desse usuário e outros itens relacionados a ele, como arquivos de spool de email. Lembre também que, ao alterar o UID de uma conta de usuário, provavelmente será preciso corrigir a propriedade dos arquivos e diretórios que estejam fora do diretório inicial do usuário (o ID do usuário é alterado automaticamente na caixa de email do usuário e em todos os arquivos pertencentes ao usuário e localizados no diretório inicial do usuário).
 
 ##### passwd
 
@@ -1866,11 +1871,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODA0OTU0MDUsMTcyNDg1NDY3NCwxND
-Y1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIx
-MzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4Ny
-wtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMy
-MTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NS
-w0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYz
-NzE3NzldfQ==
+eyJoaXN0b3J5IjpbNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MT
+A0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMs
+LTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtOD
+Y4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3
+MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0Mj
+A0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3
+NzldfQ==
 -->
