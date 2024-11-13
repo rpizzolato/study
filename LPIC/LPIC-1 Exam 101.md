@@ -1714,29 +1714,15 @@ Mais algumas diretivas importantes:<br>
 - `CREATE_HOME`: Especifica se um diretório pessoal deve ser criado por padrão para novos usuários.
 - `USERGROUPS_ENAB`: Especifica se o sistema deve, por padrão, criar um novo grupo para cada nova conta de usuário com o mesmo nome do usuário, e se, ao deletar a conta do usuário, o grupo primário do usuário também deve ser removido, caso não contenha mais membros.
 
-`MAIL_DIR`
+- `MAIL_DIR`: O diretório de spool de email.
+- `PASS_MAX_DAYS`: O número máximo de dias que uma senha pode ser usada.
+- `PASS_MIN_DAYS`: O número mínimo de dias permitido entre mudanças de senha.
+- `PASS_MIN_LEN`: O comprimento mínimo aceitável da senha.
+- `PASS_WARN_AGE`: O número de dias de aviso antes que uma senha expire.
 
-O diretório de spool de email.
-
-`PASS_MAX_DAYS`
-
-O número máximo de dias que uma senha pode ser usada.
-
-`PASS_MIN_DAYS`
-
-O número mínimo de dias permitido entre mudanças de senha.
-
-`PASS_MIN_LEN`
-
-O comprimento mínimo aceitável da senha.
-
-`PASS_WARN_AGE`
-
-O número de dias de aviso antes que uma senha expire.
-
-Tip
-
-Ao gerenciar usuários e grupos, sempre verifique este arquivo para visualizar e, eventualmente, alterar o comportamento padrão do sistema, se necessário.
+>[!TIP]
+>
+>Ao gerenciar usuários e grupos, sempre verifique este arquivo para visualizar e, eventualmente, alterar o comportamento padrão do sistema, se necessário.
 
 #### 107.1 Gerenciamento de Usuários e Grupos - useradd, userdel, usermod, passwd
 
@@ -1904,7 +1890,7 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNTU1OTI0OSw0MjI4MTQ1NiwxNzI0OD
+eyJoaXN0b3J5IjpbMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0OD
 U0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUs
 LTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNz
 Y4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcy
