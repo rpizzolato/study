@@ -1909,12 +1909,13 @@ Ex.<br>
 >[!NOTE]
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0Mj
-I4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1
-NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNz
-g1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQz
-MjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LD
-k1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQxNjUxMCw5OTg4Mjgz
-NjVdfQ==
+eyJoaXN0b3J5IjpbMTE1NjMxMjc2NywtMTE3MTg2MTI5NSwxMD
+A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
+NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
+Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
+MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
+w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
+NTEwXX0=
 -->
