@@ -1993,13 +1993,13 @@ A primeira entrada no arquivo `/etc/crontab`:
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 
 
-#####
+##### Cron para usuários
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDAzNDgwNiwtMzgxOTg0OTc3LC0zMj
-U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
-NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
-M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
-Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
-0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
-NTY5N119
+eyJoaXN0b3J5IjpbMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNT
+YwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2
+LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1Mz
+cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
+OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
+E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
+Njk3XX0=
 -->
