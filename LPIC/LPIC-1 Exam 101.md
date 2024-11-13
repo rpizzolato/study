@@ -1889,7 +1889,7 @@ Ex.<br>
     $ groups rodrigo
     rodrigo adm cdrom sudo dip plugdev users lpadmin sambashare
 ```
-`getent`: pega informações de grupos/usuários
+`getent`: pega informações de grupos/usuários ()
 
 - `getent passwd rodrigo`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
 - `getent group suporte`: pega informações do usuário suporte no `/etc/group`
@@ -1978,11 +1978,11 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 |---|---|
 |   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMD
-A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
-NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
-Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
-MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
-w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
-NTEwXX0=
+eyJoaXN0b3J5IjpbLTI0MjYwMTE3OSwtMzI1NjA5MzA4LC0xMT
+cxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3
+NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MT
+cxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2
+NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMy
+wtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1
+ODM1NV19
 -->
