@@ -1980,14 +1980,14 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 **minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
 
 - `*` = todo. Todo minuto, toda hora, todo dia do mês, etc.
-- 
+- **dow (day of week):** `7` e `0` = domingo, logo: `1`= segunda-feira, `2`= terça-feira, etc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg0ODYyNDE4LC0zODE5ODQ5NzcsLTMyNT
-YwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2
-LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1Mz
-cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
-OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
-E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
-Njk3XX0=
+eyJoaXN0b3J5IjpbMTQyNjkxODkzMCwtMzgxOTg0OTc3LC0zMj
+U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
+NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
+M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
+Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
+0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
+NTY5N119
 -->
