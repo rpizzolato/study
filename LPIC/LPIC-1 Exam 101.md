@@ -1946,7 +1946,23 @@ Já para desbloqueá-la, os comandos seriam `usermod -U`, `usermod --unlock` e `
 
     # usermod -G administrators,web-designers kevin
 
-Quest
+Questão 6:<br>
+Usando o comando  `chage`, primeiro verifique a data de expiração da conta de usuário  `kevin`  e depois altere-a para 31 de dezembro de 2022. Que outro comando pode ser usado para alterar a data de expiração de uma conta de usuário?
+
+    # chage -l kevin | grep "Account expires"
+    Account expires		: never
+    # chage -E 2022-12-31 kevin
+    # chage -l kevin | grep "Account expires"
+    Account expires		: dec 31, 2022
+
+O comando  `usermod`  com a opção  `-e`  equivale a  `chage -E`.
+
+Questão 7:<br>
+Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `administrators`  como seu grupo principal e  `developers`  e  `web-designers`  como seus grupos secundários.
+
+    # useradd -u 1050 -g administrators -G developers,web-designers emma
+    # id emma
+    uid=1050(emma) gid=1028(administrators) groups=1028(administrators),1029(developers),1031(web-designers)
 
 
 
@@ -1962,7 +1978,7 @@ Quest
 |---|---|
 |   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5ODEzODQzNywtMTE3MTg2MTI5NSwxMD
+eyJoaXN0b3J5IjpbLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMD
 A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
 NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
 Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
