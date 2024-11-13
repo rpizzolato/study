@@ -1990,8 +1990,9 @@ A primeira entrada no arquivo `/etc/crontab`:
 
     17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
 
+Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de /etc/cron.hourly. A execução de todos os arquivos se deve ao programa `run-parts`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzkwODAxNiwtMzgxOTg0OTc3LC0zMj
+eyJoaXN0b3J5IjpbMTc0ODA0Mzk4MSwtMzgxOTg0OTc3LC0zMj
 U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
 NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
 M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
