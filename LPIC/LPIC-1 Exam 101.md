@@ -1725,6 +1725,7 @@ Exemplo com várias opções:<br>
 - `-s`(--shell): shell padrão desejado pelo novo usuário
 - `-g`(`--gid`): grupo primário (padrão) do novo usuário
 - `-G` (`--group`): grupo(s) secundários do novo usuário (outros grupos que o usuário vai pertencer)
+- -2
 
 Outras opções importantes:
 - `-d` (`--home-dir`): definir um `/home` para usuário (não precisa ser o padrão)
@@ -1860,11 +1861,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
-M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
-MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
-Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
-MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOT
-k4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3NzksMTM3MzY1
-NjIwOF19
+eyJoaXN0b3J5IjpbLTMxODI5NDM3MiwxNzI0ODU0Njc0LDE0Nj
+UxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEz
+MywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC
+04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIx
+NDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LD
+QyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3
+MTc3OV19
 -->
