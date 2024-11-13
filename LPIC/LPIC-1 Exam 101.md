@@ -1894,6 +1894,10 @@ Ex.<br>
 - `getent passwd rodrigo`: pega informação do usuário rodrigo em `/etc/passwd` (como se fosse um `cat /etc/passwd | grep rodrigo`)
 - `getent group suporte`: pega informações do usuário suporte no `/etc/group`
 
+>[!NOTE]
+>
+>Lembre-se de que o `getent` só pode acessar os bancos de dados configurados no arquivo `/etc/nsswitch.conf`.
+
 ##### chage (change age - alterar idade)
 
 `chage`: mostra as propriedades do usuário: quando a senha vai expirar ou ficar ativa/inativo, número máximo entre dias para alterar senha, última vez que usuário mudou a senha, etc
@@ -1978,11 +1982,11 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 |---|---|
 |   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTA3MTMyMjksLTMyNTYwOTMwOCwtMT
-E3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2
-NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtOD
-E3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4
-NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMD
-MsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAx
-NTgzNTVdfQ==
+eyJoaXN0b3J5IjpbLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMT
+cxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3
+NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MT
+cxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2
+NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMy
+wtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1
+ODM1NV19
 -->
