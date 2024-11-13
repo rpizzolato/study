@@ -2007,10 +2007,10 @@ Vejamos um exemplo:<br>
     15	13	1,10,20,30	* 1-5	/home/rodrigo/Scripts/script.sh >> /tmp/teste-cron.txt
 
 Acima temos:
-- todo hora 13:15, nos dias 1,10,20,30, em todo mês (`*`)
+- todo hora 13:15, nos dias 1,10,20,30, em todo mês (`*`), de segunda à sexta-feira (1=segunda, 5=sexta-feira), execute o script em /home/rodrigo/Scripts/script.sh e envie um 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNDg5NzM0OCwyODc1OTEwMzEsLTM4MT
+eyJoaXN0b3J5IjpbMTUxMzcyMTYxNiwyODc1OTEwMzEsLTM4MT
 k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
 ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
 M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
