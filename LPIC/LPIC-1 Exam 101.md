@@ -1969,24 +1969,12 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
     uid=1050(emma) gid=1028(administrators) groups=1028(administrators),1029(developers),1031(web-designers)
 
 
-
-
-
-
-|   |   |
-|---|---|
-|   |   |
-
-
-|   |   |
-|---|---|
-|   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMT
-cxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3
-NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MT
-cxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2
-NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMy
-wtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1
-ODM1NV19
+eyJoaXN0b3J5IjpbMTYzNjQzNDE5NSwtMzgxOTg0OTc3LC0zMj
+U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
+NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
+M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
+Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
+0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
+NTY5N119
 -->
