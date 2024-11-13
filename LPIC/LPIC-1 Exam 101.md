@@ -1772,6 +1772,7 @@ ou
 - `-a` ou `--append`
 
 - `-l` ou `--login`: altera o nome de login da conta de usuário especificada.
+- `-L`ou `--lock`:  bloqueia a conta de usuário especificada. Um ponto de exclamação é posto na frente da senha criptografada dentro do arquivo  `/etc/shadow`, desabilitando assim o acesso com senha para esse usuário.
 
 ##### passwd
 
@@ -1865,11 +1866,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODI2MTMwOTIsMTcyNDg1NDY3NCwxND
-Y1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIx
-MzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4Ny
-wtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMy
-MTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NS
-w0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYz
-NzE3NzldfQ==
+eyJoaXN0b3J5IjpbLTQ2MTIzMTM3MywxNzI0ODU0Njc0LDE0Nj
+UxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEz
+MywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC
+04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIx
+NDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LD
+QyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2MDcsLTIyNjM3
+MTc3OV19
 -->
