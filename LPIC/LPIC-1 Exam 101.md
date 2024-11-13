@@ -1926,8 +1926,48 @@ Comandos aleatórios:<br>
 | `groupmod -n` | Alterar o nome do grupo |
 | `useradd -m` | Criar uma nova conta de usuário e seu diretório inicial  |
 
+Comandos correspondentes:<br>
+
+|   |   |
+|---|---|
+| `passwd -n` | `chage -m`  |
+|  `passwd -x` |  `chage -M` |
+|  `passwd -w` |  `chage -W` |
+|   |   |
+|   |   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+`passwd -i`
+
+`chage -I`
+
+`passwd -S`
+
+`chage -l`
+
+
+
+|   |   |
+|---|---|
+|   |   |
+
+
+|   |   |
+|---|---|
+|   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDg4NzA0NjEsLTExNzE4NjEyOTUsMT
+eyJoaXN0b3J5IjpbLTE2Nzk3MDc0ODYsLTExNzE4NjEyOTUsMT
 AwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2
 MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMT
 Q2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04Njgz
