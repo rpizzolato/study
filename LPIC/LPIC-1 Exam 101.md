@@ -1930,31 +1930,21 @@ Comandos correspondentes:<br>
 
 |   |   |
 |---|---|
-| `passwd -n` | `chage -m`  |
-|  `passwd -x` |  `chage -M` |
-|  `passwd -w` |  `chage -W` |
-|   |   |
-|   |   |
+| `passwd -n` | `chage -m` |
+| `passwd -x` | `chage -M` |
+| `passwd -w` | `chage -W` |
+| `passwd -i` | `chage -I` |
+| `passwd -S` | `chage -l` |
+
+No Linux, podemos usar o comando `passwd -n` (ou `chage -m`) para definir o número mínimo de dias entre as mudanças de senha, o comando `passwd -x` (ou `chage -M`) para definir o número máximo de dias durante os quais uma senha é válida, o comando `passwd -w` (ou `chage -W`) para definir o número de dias de aviso antes que a senha expire, o comando `passwd -i` (ou `chage -I`) para definir o número de dias de inatividade durante os quais o usuário deve alterar a senha e o comando `passwd -S` (ou `chage -l`) para exibir informações breves sobre a senha da conta de usuário.
+
+Comando para bloquear e desbloquear usuários<br>
+`usermod --lock` e `passwd -l`. 
+Já para desbloqueá-la, os comandos seriam `usermod -U`, `usermod --unlock` e `passwd -u`.
 
 
 
 
-
-
-
-
-
-
-
-
-
-`passwd -i`
-
-`chage -I`
-
-`passwd -S`
-
-`chage -l`
 
 
 
@@ -1967,11 +1957,11 @@ Comandos correspondentes:<br>
 |---|---|
 |   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzk3MDc0ODYsLTExNzE4NjEyOTUsMT
-AwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2
-MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMT
-Q2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04Njgz
-NTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMz
-EsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQx
-NjUxMF19
+eyJoaXN0b3J5IjpbLTM5ODU3MDQ0LC0xMTcxODYxMjk1LDEwMD
+c1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0
+LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0Nj
+Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
+NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
+k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
+MTBdfQ==
 -->
