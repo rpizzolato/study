@@ -1972,7 +1972,7 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 ##### Cron
 
-É um daemon, um processo que fica rodando. Verificar se está rodando com `systemctl status cron`
+É um daemon, um processo que fica rodando, de agendamento do sistema (normalmente do sis). Verificar se está rodando com `systemctl status cron`
 
 O arquivo `/etc/crontab` é onde ficam as tarefas de agendamento, que é executado pelo usuário **root**
 
@@ -1980,7 +1980,7 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 **minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
 
 - supõe que esteja com o valor 17 no campo **m** (**minute**), significa que vai executar todo minuto 17.
-- `*` = todo. Todo minuto, toda hora, todo dia do mês, etc.
+- `*` = todo. Todo minuto, toda hora, todo dia do mês, etc. Outra forma que facilitar a leitura do asterisco é interpretá-lo como "**seja o dia/hora/mes que for**"
 - **dow (day of week):**
 	-  `7` e `0` = domingo, logo: 
 	- `1`= segunda-feira, 
@@ -1992,7 +1992,7 @@ A primeira entrada no arquivo `/etc/crontab`:
 
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMwOTI4OTUsLTM4MTk4NDk3NywtMz
+eyJoaXN0b3J5IjpbLTE2NDkyNTU4NDgsLTM4MTk4NDk3NywtMz
 I1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0
 NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMj
 UzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkz
