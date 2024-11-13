@@ -1771,6 +1771,8 @@ ou
     usermod -aG qateams usuario1
 - `-a` ou `--append`
 
+- `-l` ou `--login`: altera o nome de login da conta de usuário especificada.
+
 ##### passwd
 
 Usado para alterar/criar senha para usuários (precisa ser root)
@@ -1863,11 +1865,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1MDMxMjUwLDE3MjQ4NTQ2NzQsMTQ2NT
-EwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMz
-LC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLT
-g2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0
-NzMzMSw5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsND
-IwNDE2NTEwLDk5ODgyODM2NSwtMTAwNTgwMjYwNywtMjI2Mzcx
-Nzc5XX0=
+eyJoaXN0b3J5IjpbLTE5ODI2MTMwOTIsMTcyNDg1NDY3NCwxND
+Y1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIx
+MzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4Ny
+wtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMy
+MTQ3MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NS
+w0MjA0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYz
+NzE3NzldfQ==
 -->
