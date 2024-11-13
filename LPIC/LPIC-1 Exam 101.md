@@ -1995,17 +1995,17 @@ Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do m�
 
 ##### Cron para usuários
 
-Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de ro).
+Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de root).
 
     must be privileged to use -u
 
-
+- `crontab -e`: entra no modo de edição do crontab. (primeiro acesso lhe pergunta qual editor que usa)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTk5MTkzNTksMjg3NTkxMDMxLC0zOD
-E5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0
-OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMz
-EzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIz
-ODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLD
-E2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYy
-OTE3MDldfQ==
+eyJoaXN0b3J5IjpbLTI0NzQ1OTEwMywyODc1OTEwMzEsLTM4MT
+k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
+ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
+M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
+MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
+Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
+MTcwOV19
 -->
