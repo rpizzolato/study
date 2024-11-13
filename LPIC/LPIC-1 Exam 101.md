@@ -1912,13 +1912,17 @@ Ex.<br>
 
 ##### Exercícios interessantes no site lpi.org
 
-Equivalência dos comandos<br>
+Comandos aleatórios:<br>
 
+
+|   |   |
 |---|---|
+|  `usermod -L` | Bloquear a conta de usuário  |
 
-`usermod -L`
 
-Bloquear a conta de usuário
+
+
+
 
 `passwd -u`
 
@@ -1956,7 +1960,7 @@ Alterar o nome do grupo
 
 Criar uma nova conta de usuário e seu diretório inicial
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDMzMjA2MCwtMTE3MTg2MTI5NSwxMD
+eyJoaXN0b3J5IjpbMjAxNzA2MDQ2MSwtMTE3MTg2MTI5NSwxMD
 A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
 NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
 Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
