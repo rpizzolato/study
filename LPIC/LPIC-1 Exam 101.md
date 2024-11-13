@@ -1913,39 +1913,25 @@ Ex.<br>
 ##### Exercícios interessantes no site lpi.org
 
 Comandos aleatórios:<br>
-
-
 |   |   |
 |---|---|
-|  `usermod -L` | Bloquear a conta de usuário  |
-|  `passwd -u` | Desbloquear a conta de usuário  |
-|  `chage -E` | Definir a data de expiração da conta de usuário  |
-|  `groupdel` | Excluir o grupo  |
-|  `useradd -s` |Criar uma nova conta de usuário com um shell de login específico  |
-|  `groupadd -g` | Criar um novo grupo com um GID específico  |
-|  `userdel -r` | Remover a conta de usuário e todos os arquivos em seu diretório inicial, o próprio diretório inicial e o spool de email do usuário  |
-|  `usermod -L` | Bloquear a conta de usuário  |
+| `usermod -L` | Bloquear a conta de usuário |
+| `passwd -u` | Desbloquear a conta de usuário |
+| `chage -E` | Definir a data de expiração da conta de usuário |
+| `groupdel` | Excluir o grupo  |
+| `useradd -s` |Criar uma nova conta de usuário com um shell de login específico |
+| `groupadd -g` | Criar um novo grupo com um GID específico |
+| `userdel -r` | Remover a conta de usuário e todos os arquivos em seu diretório inicial, o próprio diretório inicial e o spool de email do usuário |
+| `usermod -l` | Alterar o nome de login da conta de usuário |
+| `groupmod -n` | Alterar o nome do grupo |
+| `useradd -m` | Criar uma nova conta de usuário e seu diretório inicial  |
 
-
-
-
-`usermod -l`
-
-Alterar o nome de login da conta de usuário
-
-`groupmod -n`
-
-Alterar o nome do grupo
-
-`useradd -m`
-
-Criar uma nova conta de usuário e seu diretório inicial
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTg5NDMyNywtMTE3MTg2MTI5NSwxMD
-A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
-NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
-Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
-MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
-w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
-NTEwXX0=
+eyJoaXN0b3J5IjpbLTE2MDg4NzA0NjEsLTExNzE4NjEyOTUsMT
+AwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2
+MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMT
+Q2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04Njgz
+NTE0MCwxNjgzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMz
+EsOTU2MjkxNzA5LDk1MzE3NTY5NywtMzQwMTU4MzU1LDQyMDQx
+NjUxMF19
 -->
