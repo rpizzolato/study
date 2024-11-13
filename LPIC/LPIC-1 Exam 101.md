@@ -1976,14 +1976,18 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 O arquivo /etc/crontab é onde ficam as tarefas de agendamento, que é executado pelo usuário root
 
-Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialmente: minuto | hora | dia do mês ()
+Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialmente: <br>
+**minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
+
+- `*` = todo. Todo minuto, toda hora, todo dia do mês, etc.
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MTkxNjAzNCwtMzgxOTg0OTc3LC0zMj
-U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
-NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
-M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
-Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
-0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
-NTY5N119
+eyJoaXN0b3J5IjpbODg0ODYyNDE4LC0zODE5ODQ5NzcsLTMyNT
+YwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2
+LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1Mz
+cyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2
+OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMyMjksLT
+E1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOTUzMTc1
+Njk3XX0=
 -->
