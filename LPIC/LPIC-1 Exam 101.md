@@ -2015,10 +2015,14 @@ Outro exemplo:
     #m		h	dia		mes	diasemana	comando/script
     */10	*	*		* 	*			/ cd /tmp ; rm -f teste
 
-Nesse caso, a cada 10 minutos
+Nesse caso, a cada 10 minutos o comando será executado.
+
+Mais um exemplo para ilustrar:
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5NDE0MDI3LDI4NzU5MTAzMSwtMzgxOT
+eyJoaXN0b3J5IjpbODIxMjc1NDQyLDI4NzU5MTAzMSwtMzgxOT
 g0OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4
 NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMz
 Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
