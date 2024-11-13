@@ -2008,14 +2008,14 @@ Vejamos um exemplo:<br>
 
 Acima temos:
 - tnos dias 1,10,20,30 às 13h15m, em todo/qualquer mês (`*`), de segunda à sexta-feira (1=segunda, 5=sexta-feira), execute o script em /home/rodrigo/Scripts/script.sh e envie um 
-Observação
+**Observação**: se os dias 1, 10, 20, ou 30 caírem em um sábado ou domingo, o script.sh não vai rodar.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgwNjc0ODk0LDI4NzU5MTAzMSwtMzgxOT
-g0OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4
-NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMz
-Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
-OSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNj
-gzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2Mjkx
-NzA5XX0=
+eyJoaXN0b3J5IjpbLTY3Mzg2ODMzOSwyODc1OTEwMzEsLTM4MT
+k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
+ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
+M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
+MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMT
+Y4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5
+MTcwOV19
 -->
