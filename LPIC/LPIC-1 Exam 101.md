@@ -1942,6 +1942,11 @@ Comando para bloquear e desbloquear usuários<br>
 `usermod --lock` e `passwd -l`. 
 Já para desbloqueá-la, os comandos seriam `usermod -U`, `usermod --unlock` e `passwd -u`.
 
+***O comando `usermod` não inclui a opção de remover apenas um grupo; portanto, você precisa especificar todos os grupos secundários aos quais o usuário pertence.
+
+    # usermod -G administrators,web-designers kevin
+
+Quest
 
 
 
@@ -1957,11 +1962,11 @@ Já para desbloqueá-la, os comandos seriam `usermod -U`, `usermod --unlock` e `
 |---|---|
 |   |   |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5ODU3MDQ0LC0xMTcxODYxMjk1LDEwMD
-c1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0
-LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0Nj
-Y3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUx
-NDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLD
-k1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1
-MTBdfQ==
+eyJoaXN0b3J5IjpbMTY5ODEzODQzNywtMTE3MTg2MTI5NSwxMD
+A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
+NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
+Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
+MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMS
+w5NTYyOTE3MDksOTUzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2
+NTEwXX0=
 -->
