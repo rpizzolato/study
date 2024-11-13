@@ -1974,7 +1974,7 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 É um daemon, um processo que fica rodando. Verificar se está rodando com `systemctl status cron`
 
-O arquivo /etc/crontab é onde ficam as tarefas de agendamento, que é executado pelo usuário root
+O arquivo `/etc/crontab` é onde ficam as tarefas de agendamento, que é executado pelo usuário **root**
 
 Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialmente: <br>
 **minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
@@ -1990,13 +1990,13 @@ A primeira entrada no arquivo `/etc/crontab`:
 
     17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
 
-Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de /etc/cron.hourly. A execução de todos os arquivos se deve ao programa `run-parts`.
+Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0ODA0Mzk4MSwtMzgxOTg0OTc3LC0zMj
-U2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1
-NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNT
-M3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMy
-Njk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC
-0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3
-NTY5N119
+eyJoaXN0b3J5IjpbLTE1NDMwOTI4OTUsLTM4MTk4NDk3NywtMz
+I1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0
+NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMj
+UzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkz
+MjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOS
+wtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NTMx
+NzU2OTddfQ==
 -->
