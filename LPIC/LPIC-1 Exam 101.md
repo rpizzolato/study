@@ -1999,9 +1999,11 @@ Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar 
 
     must be privileged to use -u
 
-- `crontab -e`: entra no modo de edição do crontab. (primeiro acesso lhe pergunta qual editor que usa)
+- `crontab -e`: entra no modo de edição do crontab. (primeiro acesso lhe pergunta qual editor que usa). O formato é parecedo com o crontab que foi visto anteriormente, apenas com a exceção que não tem o campo de usuário.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NzQ1OTEwMywyODc1OTEwMzEsLTM4MT
+eyJoaXN0b3J5IjpbMjA3MzY4MjY0NywyODc1OTEwMzEsLTM4MT
 k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
 ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
 M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
