@@ -1816,6 +1816,8 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 - `groupmod -n devops suporte`(`-n` ou `--new-name`): altera o nome do grupo de suporte para devops
 - `groupmod -g 2001 suporte`(`-g` ou `--gid`): altera o id do grupo para 2001
 
+
+
 ##### newgrp
 
 Comando faz com que o usuário atual assuma determinado grupo durante a sessão de login.
@@ -1871,11 +1873,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MT
-A0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMs
-LTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtOD
-Y4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMyMTQ3
-MzMxLDk1NjI5MTcwOSw5NTMxNzU2OTcsLTM0MDE1ODM1NSw0Mj
-A0MTY1MTAsOTk4ODI4MzY1LC0xMDA1ODAyNjA3LC0yMjYzNzE3
-NzldfQ==
+eyJoaXN0b3J5IjpbMTYwMjY5NDQyMCw0MjI4MTQ1NiwxNzI0OD
+U0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUs
+LTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNz
+Y4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcy
+MTAzLC02MzIxNDczMzEsOTU2MjkxNzA5LDk1MzE3NTY5NywtMz
+QwMTU4MzU1LDQyMDQxNjUxMCw5OTg4MjgzNjUsLTEwMDU4MDI2
+MDddfQ==
 -->
