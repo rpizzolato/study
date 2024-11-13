@@ -1807,25 +1807,13 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 
     su usuario1 #troca para o usuario1
 
-`-d`
+Mais algumas opções para o uso de `passwd`:<br>
 
-Apaga a senha de uma conta de usuário (desabilitando o usuário).
-
-`-e`
-
-Força a conta de usuário a alterar a senha.
-
-`-i`
-
-Define o número de dias de inatividade após a expiração de uma senha, durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
-
-`-l`
-
-Bloqueia a conta de usuário (a senha criptografada é prefixada com um ponto de exclamação no arquivo  `/etc/shadow`).
-
-`-n`
-
-Define o tempo de vida mínimo da senha.
+- `-d`: apaga a senha de uma conta de usuário (desabilitando o usuário).
+- `-e`:  força a conta de usuário a alterar a senha.
+- `-i`:  define o número de dias de inatividade após a expiração de uma senha, durante os quais o usuário deve atualizar a senha (caso contrário, a conta será desabilitada).
+- `-l`: bloqueia a conta de usuário (a senha criptografada é prefixada com um ponto de exclamação no arquivo  `/etc/shadow`).
+- `-n`: define o tempo de vida mínimo da senha.
 
 `-S`
 
@@ -1930,11 +1918,11 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MzE0NTY1MywxMDA3NTE0OTg1LDQyMj
-gxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1
-LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3OD
-U5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLDE2ODM4NDMy
-MjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYyOTE3MDksOT
-UzMTc1Njk3LC0zNDAxNTgzNTUsNDIwNDE2NTEwLDk5ODgyODM2
-NV19
+eyJoaXN0b3J5IjpbNTc4MTU0ODIwLDEwMDc1MTQ5ODUsNDIyOD
+E0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUs
+MjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NT
+kzMjY5NCwtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIy
+OSwtMTUxODE3MjEwMywtNjMyMTQ3MzMxLDk1NjI5MTcwOSw5NT
+MxNzU2OTcsLTM0MDE1ODM1NSw0MjA0MTY1MTAsOTk4ODI4MzY1
+XX0=
 -->
