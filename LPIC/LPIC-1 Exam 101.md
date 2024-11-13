@@ -2004,10 +2004,13 @@ Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar 
 Vejamos um exemplo:<br>
 
     #m	h	dia	mes	diasemana	comando/script
-    15	13	1,10,20,30	* 1-5	/home/rodrigo/Scripts/script.sh >>
+    15	13	1,10,20,30	* 1-5	/home/rodrigo/Scripts/script.sh >> /tmp/teste-cron.txt
+
+Acima temos:
+- todo hora 13:15, nos dias 1,10,20,30, em todo mês (`*`)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4OTUxNTQxOCwyODc1OTEwMzEsLTM4MT
+eyJoaXN0b3J5IjpbLTUyNDg5NzM0OCwyODc1OTEwMzEsLTM4MT
 k4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5
 ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMT
 M2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4
