@@ -1816,7 +1816,7 @@ Lembre-se que ao criar um usuário, no campo referente à senha lá no arquivo `
 - `groupmod -n devops suporte`(`-n` ou `--new-name`): altera o nome do grupo de suporte para devops
 - `groupmod -g 2001 suporte`(`-g` ou `--gid`): altera o id do grupo para 2001
 
-
+*Não é possível excluir um grupo caso se trate do grupo principal de uma conta de usuário. Portanto, é preciso remover o usuário antes de remover o grupo. Quanto aos usuários, se você excluir um grupo, os arquivos pertencentes a esse grupo permanecerão em seu sistema de arquivos e não serão excluídos ou atribuídos a outro grupo.
 
 ##### newgrp
 
@@ -1873,7 +1873,7 @@ Ex.<br>
 >
 >A sequencias mostrada no comando `chage`, é a mesma dentro do arquivo `/etc/shadow`. Inclusive a última coluna, é o número de dias, desde 1970. (Nos sistemas mais novos não foi percebido essa informação).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMjY5NDQyMCw0MjI4MTQ1NiwxNzI0OD
+eyJoaXN0b3J5IjpbLTgzNTIxMDExOCw0MjI4MTQ1NiwxNzI0OD
 U0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUs
 LTgxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNz
 Y4ODY2Mzg3LC04NjgzNTE0MCwxNjgzODQzMjI5LC0xNTE4MTcy
