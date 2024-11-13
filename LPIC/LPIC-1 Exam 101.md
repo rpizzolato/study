@@ -1918,35 +1918,16 @@ Comandos aleatórios:<br>
 |   |   |
 |---|---|
 |  `usermod -L` | Bloquear a conta de usuário  |
+|  `passwd -u` | Desbloquear a conta de usuário  |
+|  `chage -E` | Definir a data de expiração da conta de usuário  |
+|  `groupdel` | Excluir o grupo  |
+|  `useradd -s` |Criar uma nova conta de usuário com um shell de login específico  |
+|  `groupadd -g` | Criar um novo grupo com um GID específico  |
+|  `userdel -r` | Remover a conta de usuário e todos os arquivos em seu diretório inicial, o próprio diretório inicial e o spool de email do usuário  |
+|  `usermod -L` | Bloquear a conta de usuário  |
 
 
 
-
-
-
-`passwd -u`
-
-Desbloquear a conta de usuário
-
-`chage -E`
-
-Definir a data de expiração da conta de usuário
-
-`groupdel`
-
-Excluir o grupo
-
-`useradd -s`
-
-Criar uma nova conta de usuário com um shell de login específico
-
-`groupadd -g`
-
-Criar um novo grupo com um GID específico
-
-`userdel -r`
-
-Remover a conta de usuário e todos os arquivos em seu diretório inicial, o próprio diretório inicial e o spool de email do usuário
 
 `usermod -l`
 
@@ -1960,7 +1941,7 @@ Alterar o nome do grupo
 
 Criar uma nova conta de usuário e seu diretório inicial
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNzA2MDQ2MSwtMTE3MTg2MTI5NSwxMD
+eyJoaXN0b3J5IjpbLTM0NTg5NDMyNywtMTE3MTg2MTI5NSwxMD
 A3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYx
 NCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xND
 Y2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1
