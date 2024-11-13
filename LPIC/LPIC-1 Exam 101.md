@@ -2019,14 +2019,17 @@ Nesse caso, a cada 10 minutos o comando será executado.
 
 Mais um exemplo para ilustrar:
 
+    #m		h	dia		mes	diasemana	comando/script
+	0		0	1		1	* /usr/bin/fogo-artificio.sh
 
+No dia 1 de Janeiro, meia noite
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIxMjc1NDQyLDI4NzU5MTAzMSwtMzgxOT
-g0OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4
-NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMz
-Y3ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgx
-OSwxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNj
-gzODQzMjI5LC0xNTE4MTcyMTAzLC02MzIxNDczMzEsOTU2Mjkx
-NzA5XX0=
+eyJoaXN0b3J5IjpbLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zOD
+E5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0
+OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMz
+EzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIz
+ODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzODcsLTg2ODM1MTQwLD
+E2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYzMjE0NzMzMSw5NTYy
+OTE3MDldfQ==
 -->
