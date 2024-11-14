@@ -2050,8 +2050,14 @@ Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso 
 >Há uma diferença no comportamento dos arquivos  **/etc/cron.allow**  e  **/etc/cron.deny**  entre sistemas baseados em Debian e RedHat.<br>
 No Debian, e distribuições baseadas como o Ubuntu que usamos nesse curso, se ambos arquivos não existem, o uso dos recursos da cron é liberado para todos os usuários.<br>
 No entanto, em sistemas baseados em RedHat, como o CentOS, na inexistência dos arquivos, o uso é bloqueado a todos os usuários, exceto para o usuário root.
+
+##### at
+
+Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
+
+at now +2hour
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTY1OTYxMCwtMTE1Njk3MDIxNywxOD
+eyJoaXN0b3J5IjpbLTU3ODk1MDQ1NiwtMTE1Njk3MDIxNywxOD
 AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
 NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
 wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
