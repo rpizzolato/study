@@ -1970,7 +1970,7 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 ### 107.2 Automatizar e agendar tarefas administrativas de sistema
 
-##### Cron
+#### Cron
 
 É um daemon, um processo que fica rodando, de agendamento do sistema (normalmente do sistema). Verificar se está rodando com `systemctl status cron`
 
@@ -1993,7 +1993,7 @@ A primeira entrada no arquivo `/etc/crontab`:
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 
 
-##### Cron para usuários
+#### Cron para usuários
 
 Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de root).
 
@@ -2051,7 +2051,7 @@ Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso 
 No Debian, e distribuições baseadas como o Ubuntu que usamos nesse curso, se ambos arquivos não existem, o uso dos recursos da cron é liberado para todos os usuários.<br>
 No entanto, em sistemas baseados em RedHat, como o CentOS, na inexistência dos arquivos, o uso é bloqueado a todos os usuários, exceto para o usuário root.
 
-##### at (agendamento de uma execução)
+#### at (agendamento de uma execução)
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
 
@@ -2079,8 +2079,12 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 - `/etc/at.allow`: permite quais usuário usar o `at`
 - `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchido com usuários do sistema, permitindo somente usuários comuns utilizar)
+
+#### Agendamento de Tarefas - systemd timer
+
+- `# systemct list-timers`: lista os agendamentos que já estão no sistema
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIzNjY5MTM1LC0xMTc4Njk4MjQ1LC0xMT
+eyJoaXN0b3J5IjpbLTYwNjE2ODc2LC0xMTc4Njk4MjQ1LC0xMT
 U2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0
 NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC
 0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2
