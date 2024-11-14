@@ -2039,13 +2039,15 @@ Há possibilidade de criar um arquivo separado contendo as regras da crontab, e 
 
 Essas modificações, tanto em sistema (`/etc/cron`) como a de usuário, são permanentes, e o(s) arquivo(s) do(s) usuário(s) fica(m) em `/var/spool/cron/crontabs` (precisa ser acesso como **root**). Em algumas distros pode ser que o diretório `crontabs` seja apenas `cron`.
 
-
+Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso se baseia nos arquivos:
+- /etc/cron.allow ou
+- /etc/ctron.deny
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxNTg4OTc5LC0xMTU2OTcwMjE3LDE4MD
-I4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1
-OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LD
-I4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTExNzE4
-NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LD
-E0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEz
-MjEzM119
+eyJoaXN0b3J5IjpbMTMzOTM2NDM1NCwtMTE1Njk3MDIxNywxOD
+AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
+NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
+wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
+ODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NC
+wxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcx
+MzIxMzNdfQ==
 -->
