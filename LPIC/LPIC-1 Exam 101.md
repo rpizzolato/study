@@ -2158,10 +2158,10 @@ Unit=teste.service
 No `OnCalendar`, pode informar só a hora: `OnCalendar=*:*:10`<br>
 No `AccuracySec` lembrar da prioridade, se colocar tempo muito alto e se estiver tendo muita execução, vai utilizar um tempo random dentro do intervalo colocado
 
-Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista.
+Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista. É interessante também recarregar as informações do daemon do systemctl, com o comando `systemctl daemon-reload`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODYzMjI1NDUsLTE2MDQwODkyOTEsLT
+eyJoaXN0b3J5IjpbLTE2Mjc0MTk0MjgsLTE2MDQwODkyOTEsLT
 Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
 OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
 csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
