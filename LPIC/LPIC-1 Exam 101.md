@@ -2160,12 +2160,13 @@ No `AccuracySec` lembrar da prioridade, se colocar tempo muito alto e se estiver
 
 Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista. É interessante também recarregar as informações do daemon do systemctl, com o comando `systemctl daemon-reload`
 
+$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjc0MTk0MjgsLTE2MDQwODkyOTEsLT
-Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
-OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
-csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
-MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MT
-Y1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4
-LDI4NzU5MTAzMV19
+eyJoaXN0b3J5IjpbNjIxOTU3NjA2LC0xNjA0MDg5MjkxLC02Nj
+c1Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3Mzkz
+OSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LD
+Y1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAy
+ODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NT
+ksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOCwy
+ODc1OTEwMzFdfQ==
 -->
