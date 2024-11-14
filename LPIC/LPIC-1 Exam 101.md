@@ -2108,13 +2108,14 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 - `OnCalendar=Mon..Fri *-*-* 6:00`: caso queira colocar de segunda à sexta-feira
 - `OnCalendar=Sat,Sun *-*-* 6:00`: caso queira colocar sábado e domingo (padrão para **Debian** e derivados - **RedHat** seria `Mon-Fri`)
 
-- RandomizedDelaySec=:
+- `RandomizedDelaySec=60m`: nessa faixa de 60 minutos, a execução pode fica aleatória dentro desse tempo, para que não tenha várias coisas executando ao mesmo tempo, achando um gap melhor para essa execução.
+- `Persistend=true`:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1Mjk3Nzk3MiwtNjIxMzQ0NDY5LC0xNj
-c2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3ODY5
-ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1ND
-ksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3
-NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4ND
-k3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUs
-NDIyODE0NTZdfQ==
+eyJoaXN0b3J5IjpbLTE3ODQxNTU0MjAsLTYyMTM0NDQ2OSwtMT
+Y3Njc5MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2
+OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNT
+Q5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1
+NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5OD
+Q5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1
+LDQyMjgxNDU2XX0=
 -->
