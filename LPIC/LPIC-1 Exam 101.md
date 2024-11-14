@@ -2082,9 +2082,9 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 #### Agendamento de Tarefas - systemd timer
 
-- `# systemct list-timers`: lista os agendamentos que já estão no sistema
+- `systemct list-timers`: lista os agendamentos que já estão no sistema
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjE2ODc2LC0xMTc4Njk4MjQ1LC0xMT
+eyJoaXN0b3J5IjpbNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMT
 U2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0
 NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC
 0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2
