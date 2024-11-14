@@ -2015,7 +2015,7 @@ Outro exemplo:
     #m		h	dia		mes	diasemana	comando/script
     */10	*	*		* 	*			/ cd /tmp ; rm -f teste
 
-Nesse caso, a cada 10 minutos o comando será executado. ()
+Nesse caso, a cada 10 minutos o comando será executado. (A `/` significa **a cada**). Se usar `*/5` no dia, seria a cada 5 dias, etc
 
 Mais um exemplo para ilustrar:
 
@@ -2025,11 +2025,11 @@ Mais um exemplo para ilustrar:
 No dia 1 de Janeiro, meia noite
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzU4MTQyNywtMTY5MDU2OTYwOCwyOD
-c1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYx
-Mjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxND
-Y1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIx
-MzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4Ny
-wtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUxODE3MjEwMywtNjMy
-MTQ3MzMxXX0=
+eyJoaXN0b3J5IjpbLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMj
+g3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2
+MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMT
+Q2NTEwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMy
+MTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzOD
+csLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYz
+MjE0NzMzMV19
 -->
