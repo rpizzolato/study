@@ -2036,12 +2036,14 @@ Observação: Lembrando que isso é referente ao usuário atual, e os scripts pr
 - `# crontab -r -u lpi2`: (só root pode) remover crontab de outro usuário
 
 Há possibilidade de criar um arquivo separado contendo as regras da crontab, e importar com o comando: `crontab arquivo_com_contrab`. Confirme com `contrab -l`
+
+Esse ar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMz
-M0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5
-NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLT
-ExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0
-Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLT
-gxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4
-ODY2Mzg3XX0=
+eyJoaXN0b3J5IjpbMTM0MTU4NzYxOCwxMzM2MDgwNTQ5LDEwND
+Y0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1
+MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLT
+MyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgx
+NDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LD
+I1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2NzIzODE5LDE3ODU5
+MzI2OTRdfQ==
 -->
