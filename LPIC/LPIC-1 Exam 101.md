@@ -2114,13 +2114,14 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 Na Unit do `.service`, é basicamente um `.service` comum, que é descrito o que será executado no `ExecStart`.<br>
 Mais detalhes em `man systemd.timer`. Mais detalhes de como especificar a data e hora no calendar, usar: `man systemd.time`
 
-Vejamos o exemplo de 
+Vejamos o exemplo de `systemd-tmpfiles-clean.timer`:<br:
+- executa `systemctl status systemd-tmpfiles-clean.timer` para saber onde está carregado esse arquivo, no caso é em `/usr/lib/systemd/system/systemd-tmpfiles-clean.timer`, tendo como conteúdo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTI1OTE3MywyODM4ODY0OTgsMTI0ND
-A3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgw
-Njk3LDY1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNy
-wxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMz
-NDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OT
-YwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0x
-MTcxODYxMjk1XX0=
+eyJoaXN0b3J5IjpbLTEwOTgwNTg1OTUsMjgzODg2NDk4LDEyND
+QwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4
+MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMT
+csMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMz
+MzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Nj
+k2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwt
+MTE3MTg2MTI5NV19
 -->
