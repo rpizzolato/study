@@ -2062,12 +2062,15 @@ Executa o echo `"Hora do café"` daqui duas horas, e poderia ir adicionando coma
 
 - `atq` ou `at -l`: mostra os jobs que estão aguardando (vem de `queue`).
 
+```
+at 13:20
+at> echo "Hora do almoço
+```
 
-    at 13:20
-    at> echo "Hora do amoço"
+Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDI1NzYwNTAsLTExNTY5NzAyMTcsMT
+eyJoaXN0b3J5IjpbLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMT
 gwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQx
 NjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MD
 gsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3
