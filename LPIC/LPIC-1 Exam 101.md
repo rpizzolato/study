@@ -2162,10 +2162,11 @@ Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso
 
 ##### systemd-run (equivalente ao at)
 
-- system-run --on-active=60s /bin/touch /tmp/exemplo-run.txr: roda após 60 segundos o comando touch que criar o arquivo exemplo-run.txt em /tmp
+- `system-run --on-active=60s /bin/touch /tmp/exemplo-run.txt`: roda após **60 segundos** o comando `touch` que criar o arquivo `exemplo-run.txt` em `/tmp`
+- `system-run --on-active=60s /bin/touch /tmp/exemplo-run.txt`: faz o mesmo do comando anterior, mas em system-run também tem a questão de prioridade, e se quiser com precisão, precisar incluir o argumento --time
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTM2MzYyMCwtMTYwNDA4OTI5MSwtNj
+eyJoaXN0b3J5IjpbLTE2MzgxNTIwMywtMTYwNDA4OTI5MSwtNj
 Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
 MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
 w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
