@@ -2035,8 +2035,9 @@ Observação: Lembrando que isso é referente ao usuário atual, e os scripts pr
 - `crontab -r`: remove toda configuração do crontab.
 - `# crontab -r -u lpi2`: (só root pode) remover crontab de outro usuário
 
+Há possibilidade de criar um arquivo separado contendo as regras da crontab, e importar com o comando: `crontab arquivo_com_contrab`. Confirme com `contrab -l`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3ODQ3Mjc4OCwxMDQ2NDg0NDYsLTEzMz
+eyJoaXN0b3J5IjpbMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMz
 M0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5
 NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLT
 ExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0
