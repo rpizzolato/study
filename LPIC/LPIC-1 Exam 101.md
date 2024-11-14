@@ -2034,12 +2034,13 @@ Observação: Lembrando que isso é referente ao usuário atual, e os scripts pr
 
 - `crontab -r`: remove toda configuração do crontab.
 - `# crontab -r -u lpi2`: (só root pode) remover crontab de outro usuário
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2Nz
-AxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEw
-MzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LD
-EwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0
-NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLT
-E0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4
-MzUxNDBdfQ==
+eyJoaXN0b3J5IjpbLTQ3ODQ3Mjc4OCwxMDQ2NDg0NDYsLTEzMz
+M0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5
+NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLT
+ExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0
+Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLT
+gxNzEzMjEzMywtMTQ2NjcyMzgxOSwxNzg1OTMyNjk0LC0xNzY4
+ODY2Mzg3XX0=
 -->
