@@ -2085,12 +2085,26 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 - `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, que terminam com `.timer`, ligadas às `ACTIVATES`, que terminam com `.service`.
 - `systemct list-timers --all`: mostra agendamentos que possam estar inativas
 - `systemctl list-units --type=timer`: lista as unidades do tipo `timer`
+
+Para observar uma unit, é possível pode meio do comando:<br>
+- `systemct list-timers`
+
+```
+$ systemctl status apt-daily-upgrade.timer 
+● apt-daily-upgrade.timer - Daily apt upgrade and clean activities
+     Loaded: loaded (/usr/lib/systemd/system/apt-daily-upgrade.timer; enabled; preset: enabled)
+     Active: active (waiting) since Fri 2024-11-08 16:41:52 -03; 5 days ago
+    Trigger: Fri 2024-11-15 06:13:26 -03; 16h left
+   Triggers: ● apt-daily-upgrade.service
+
+Nov 08 16:41:52 OptiPlex-3080 systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODEzNzczNSw2NTAxMjgwMTcsLTExNz
-g2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgw
-NTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLT
-E1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5
-ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OT
-g1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEz
-Njc4MDU1XX0=
+eyJoaXN0b3J5IjpbNTMwNzA1MDE0LDY1MDEyODAxNywtMTE3OD
+Y5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1
+NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMT
+U3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4
+NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5OD
+UsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2
+NzgwNTVdfQ==
 -->
