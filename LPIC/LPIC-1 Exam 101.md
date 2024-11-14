@@ -2060,14 +2060,18 @@ Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
 
 Executa o echo `"Hora do café"` daqui duas horas, e poderia ir adicionando comandos. No final use `Ctrl+D` para adicionar essa tarefa (job).
 
-- `atq`: mostra os jobs que estão aguardando.
+- `atq` ou `at -l`: mostra os jobs que estão aguardando (vem de `queue`).
+
+
+    at 13:20
+    at> echo "Hora do amoço"
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzU4MTgxMCwtMTE1Njk3MDIxNywxOD
-AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
-NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
-wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
-ODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NC
-wxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcx
-MzIxMzNdfQ==
+eyJoaXN0b3J5IjpbLTE4NDI1NzYwNTAsLTExNTY5NzAyMTcsMT
+gwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQx
+NjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MD
+gsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3
+MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2Nz
+QsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3
+MTMyMTMzXX0=
 -->
