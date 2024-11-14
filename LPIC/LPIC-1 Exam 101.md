@@ -2103,9 +2103,9 @@ Nov 08 16:41:52 OptiPlex-3080 systemd[1]: Started apt-daily-upgrade.timer - Dail
 Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr/lib/systemd/system/apt-daily-upgrade.timer`. Sendo em um formato normal de unit, com sua descrição, e demais itens.
 
 O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, com a seguinte sintaxe:
-- OnCalendar: *
+- `OnCalendar: *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMzU1MDgzLDY1MDEyODAxNywtMTE3OD
+eyJoaXN0b3J5IjpbLTk5MTQzNjczLDY1MDEyODAxNywtMTE3OD
 Y5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1
 NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMT
 U3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4
