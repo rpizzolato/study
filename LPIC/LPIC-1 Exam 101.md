@@ -2032,9 +2032,10 @@ Exemplo com range:<br>
 Em todo minuto 20, das horas entre 9h e 18h (horário comercial), qualquer dia, qualquer mês, de segunda à sexta-feira, executa o script `relatorio.sh`<br>
 Observação: Lembrando que isso é referente ao usuário atual, e os scripts precisam ter permissão de execução.
 
-- 
+- `crontab -r`: remove toda configuração do crontab.
+- `# crontab -r -u lpi2`: (só root pode) remover crontab de outro usuário
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY0NjI3NzQ0LC0xMzMzNDE2NTksMTc2Nz
+eyJoaXN0b3J5IjpbMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2Nz
 AxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEw
 MzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LD
 EwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0
