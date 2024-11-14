@@ -2106,12 +2106,13 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 - `OnCalendar= *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
 - `OnCalendar= *-*-* 6..18:00,30 `: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) das 6 até às 18h, no minuto 00 e minuto 30. Se preferir, pode adicionar dois pontos (`:`) e informar os segundos, ou `*` para qualquer segundo.
 - `OnCalendar=Mon..Fri *-*-* 6:00`: caso queira colocar de segunda à sexta-feira
+- `OnCalendar=Sat,Sun *-*-* 6:00`: caso queira colocar sábado e domingo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNj
-UwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4
-MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OS
-wxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LDI4
-NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTExNzE4Nj
-EyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0
-NjUxMDQ2MTRdfQ==
+eyJoaXN0b3J5IjpbLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMT
+E2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5
+NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0Ni
+wtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2
+OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOT
+MwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3
+MjQ4NTQ2NzRdfQ==
 -->
