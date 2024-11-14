@@ -2032,12 +2032,13 @@ Exemplo com range:<br>
 Em todo minuto 20, das horas entre 9h e 18h (horário comercial), qualquer dia, qualquer mês, de segunda à sexta-feira, executa o script `relatorio.sh`<br>
 Observação: Lembrando que isso é referente ao usuário atual, e os scripts precisam ter permissão de execução.
 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNT
-c1OTE3NTI4LC0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0
-OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NS
-w0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3
-ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOS
-wxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgz
-ODQzMjI5XX0=
+eyJoaXN0b3J5IjpbOTY0NjI3NzQ0LC0xMzMzNDE2NTksMTc2Nz
+AxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEw
+MzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LD
+EwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0
+NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcxMzIxMzMsLT
+E0NjY3MjM4MTksMTc4NTkzMjY5NCwtMTc2ODg2NjM4NywtODY4
+MzUxNDBdfQ==
 -->
