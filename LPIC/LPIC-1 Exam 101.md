@@ -2150,15 +2150,17 @@ Description=Teste de systemd
 [Timer]
 OnCalendar=*-*-* *:*:10 # toda hora, todo min, no segundo 10
 AccuracySec=1us # 1 micro segundo ou 1ms, que é a margem para executar com precisão. Se for muito alto, lembrar que tem prioridade.
+
+
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxOD
-UxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0
-NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC
-0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4MzEwNzksMTMz
-NjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nz
-c3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LDI4NzU5MTAzMSwt
-MzgxOTg0OTc3XX0=
+eyJoaXN0b3J5IjpbMTQ4Mzk1NDAwOSwtMTYwNDA4OTI5MSwtNj
+Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
+MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
+w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
+MjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNj
+U5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgs
+Mjg3NTkxMDMxXX0=
 -->
