@@ -2084,8 +2084,9 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 - `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, que terminam com `.timer`, ligadas às `ACTIVATES`, que terminam com `.service`.
 - `systemct list-timers --all`: mostra agendamentos que possam estar inativas
+- `systemctl list-units --type=timer`: lista as unidades do tipo `timer`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzYwNzA1NCw2NTAxMjgwMTcsLTExNz
+eyJoaXN0b3J5IjpbMjAxODEzNzczNSw2NTAxMjgwMTcsLTExNz
 g2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgw
 NTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLT
 E1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5
