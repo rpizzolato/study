@@ -2029,14 +2029,14 @@ Exemplo com range:<br>
     #m		h		dia		mes	diasemana	comando/script
     20		9-18	*		*	1-5 		/home/usuario/relatorio.sh
 
-Em todo minuto 20, das horas entre 9h e 18h (horário comercial), qualquer dia, qualquer mês, de segunda à sexta-feira
+Em todo minuto 20, das horas entre 9h e 18h (horário comercial), qualquer dia, qualquer mês, de segunda à sexta-feira, executa 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMT
-Y5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5
-MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMT
-cyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5
-Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NC
-wtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUx
-ODE3MjEwM119
+eyJoaXN0b3J5IjpbMTE1NDg5Njk5OCwxNzY3MDE2Nzc3LC0xNT
+c1OTE3NTI4LC0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0
+OTc3LC0zMjU2MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NS
+w0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3
+ODA1NSwyNTM3Mjk2ODUsLTgxNzEzMjEzMywtMTQ2NjcyMzgxOS
+wxNzg1OTMyNjk0LC0xNzY4ODY2Mzg3LC04NjgzNTE0MCwxNjgz
+ODQzMjI5XX0=
 -->
