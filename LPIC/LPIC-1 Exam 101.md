@@ -2148,17 +2148,17 @@ ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
 Description=Teste de systemd
 
 [Timer]
-OnCalendar=*-*-*
-ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
+OnCalendar=*-*-* *:*:10 # toda hora, todo min, no segundo 10
+AccuracySec=1us # 1 micro segundo, para ev
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mz
-g4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIy
-OTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC
-0xMTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2
-NDg0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NT
-I4LC0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0z
-MjU2MDkzMDhdfQ==
+eyJoaXN0b3J5IjpbMTAyNzk2MzU1OSwtNjY3NTI4OTc0LDE4NT
+EzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2
+OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLT
+ExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2
+MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3Nz
+csLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0z
+ODE5ODQ5NzddfQ==
 -->
