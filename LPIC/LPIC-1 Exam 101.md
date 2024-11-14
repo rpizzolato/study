@@ -2110,8 +2110,10 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 
 - `RandomizedDelaySec=60m`: nessa faixa de 60 minutos, a execução pode fica aleatória dentro desse tempo, para que não tenha várias coisas executando ao mesmo tempo, achando um gap melhor para essa execução.
 - `Persistend=true`: grava caso o `.service` seja executado manualmente. E considera essa informação para a próxima execução.
+
+Na Unit do `.service`, é basicamente um `.service` comum, que é descrito o que será executado no `ExecStart`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTgzMjQxNywtNjIxMzQ0NDY5LC0xNj
+eyJoaXN0b3J5IjpbMTg1MjA4NTcwMywtNjIxMzQ0NDY5LC0xNj
 c2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3ODY5
 ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1ND
 ksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3
