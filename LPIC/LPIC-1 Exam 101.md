@@ -2069,14 +2069,16 @@ at> echo "Hora do almoço
 
 Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte.
 
-
+- at midnight: agenda para meia noite
+- at teatime: agenda para às 16h (hora do chá)
+- at noon: age
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4NjQ5MzAzLC0xMTc4Njk4MjQ1LC0xMT
-U2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0
-NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC
-0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2
-MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1Ni
-wxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3
-Mjk2ODVdfQ==
+eyJoaXN0b3J5IjpbMTc2NjQ4MDM5MCwtMTE3ODY5ODI0NSwtMT
+E1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4
+NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOC
+wtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1
+NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NT
+YsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUz
+NzI5Njg1XX0=
 -->
