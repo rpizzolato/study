@@ -2169,9 +2169,11 @@ Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso
 
 Se pegar esse `.timer` e olhar no `journalctl`, com a opção `-u` `--unit`, mais o `run` (`journalctl -u run-sequecia-caracteres.timer`), é possível notar que já está rodando (mas o comando ainda não foi executado - lembre-se, foi configurado para 60 segundos).
 
-Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi criado, vai estar listado, mostrando quanto tempo falta para 
+Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi criado, vai estar listado, mostrando quanto tempo falta para sua hora de executar.
+
+Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODAwNzE5NTQsLTE2MDQwODkyOTEsLT
+eyJoaXN0b3J5IjpbLTEwNjg3NzI4OTYsLTE2MDQwODkyOTEsLT
 Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
 OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
 csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
