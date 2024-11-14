@@ -2130,8 +2130,19 @@ Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar
 
 ##### Criando um agendamento
 
-1. criar um serviço, dentro de `/etc/systemd/system`:
+1. criar um **serviço**, dentro de `/etc/systemd/system`:
 	1.1 usar `vim exemplo.servce`
+```
+[Unit]
+Description=Exemplo systemd-timer
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
+```
+
+2. criar um timer, dentro de `/etc/systemd/system`:
+	2.1 usar `vim exemplo.timer` (usar o mesmo nome, mudando só o final)
 ```
 [Unit]
 Description=Exemplo systemd-timer
@@ -2143,11 +2154,11 @@ ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjY5MTMzNjQsMTg1MTM3NzE2NCwyOD
-M4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2Nzky
-Mjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3ODY5ODI0NS
-wtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0
-NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNz
-UyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3Nywt
-MzI1NjA5MzA4XX0=
+eyJoaXN0b3J5IjpbMTEzNDA5ODgwMywxODUxMzc3MTY0LDI4Mz
+g4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIy
+OTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC
+0xMTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2
+NDg0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NT
+I4LC0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0z
+MjU2MDkzMDhdfQ==
 -->
