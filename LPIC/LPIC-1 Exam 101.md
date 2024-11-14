@@ -2126,13 +2126,13 @@ ConditionPathExists=!/etc/initrd-release
 OnBootSec=15min
 OnUnitActiveSec=1d
 ```
-Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar o serviço a cada 1 dia. Em `OnBootSec` é nítido que será executado após 15 minu
+Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar o serviço a cada 1 dia. Em `OnBootSec` é nítido que será executado após 15 minutos. Isso é para casos que o sistema não é desligado.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODA5NDY3LDI4Mzg4NjQ5OCwxMjQ0MD
-czOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2
-OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LD
-E4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0
-MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5Nj
-A4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTEx
-NzE4NjEyOTVdfQ==
+eyJoaXN0b3J5IjpbMTMwODM1MjcyNCwyODM4ODY0OTgsMTI0ND
+A3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgw
+Njk3LDY1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNy
+wxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMz
+NDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OT
+YwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0x
+MTcxODYxMjk1XX0=
 -->
