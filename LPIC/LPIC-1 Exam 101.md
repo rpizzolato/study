@@ -2043,13 +2043,13 @@ Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso 
 - /etc/cron.allow ou
 - /etc/cron.deny
 
-*Pode ser que esses arquivos não existam, sendo necessário criá-los. A lista de usuário é comum, 
+*Pode ser que esses arquivos não existam, sendo necessário criá-los. A lista de usuários é comum, linha a linha.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2Nzg2MDIzOSwtMTE1Njk3MDIxNywxOD
-AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
-NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
-wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
-ODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMTcyNDg1NDY3NC
-wxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5Njg1LC04MTcx
-MzIxMzNdfQ==
+eyJoaXN0b3J5IjpbOTk2MzQ2ODI3LC0xMTU2OTcwMjE3LDE4MD
+I4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1
+OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LD
+I4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTExNzE4
+NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LD
+E0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEz
+MjEzM119
 -->
