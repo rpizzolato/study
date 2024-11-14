@@ -2022,14 +2022,14 @@ Mais um exemplo para ilustrar:
     #m		h	dia		mes	diasemana	comando/script
 	0		0	1		1	* /usr/bin/fogo-artificio.sh
 
-No dia 1 de Janeiro, meia noite
+No dia 1 de Janeiro, de todo ano, às meia noite (hora = 0 e minuto = 0), executa o script `fogos-artificio.sh`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMj
-g3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2
-MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMT
-Q2NTEwNDYxNCwxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMy
-MTMzLC0xNDY2NzIzODE5LDE3ODU5MzI2OTQsLTE3Njg4NjYzOD
-csLTg2ODM1MTQwLDE2ODM4NDMyMjksLTE1MTgxNzIxMDMsLTYz
-MjE0NzMzMV19
+eyJoaXN0b3J5IjpbLTMwNjcwMjkyMywtMTU3NTkxNzUyOCwtMT
+Y5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5
+MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMT
+cyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5
+Njg1LC04MTcxMzIxMzMsLTE0NjY3MjM4MTksMTc4NTkzMjY5NC
+wtMTc2ODg2NjM4NywtODY4MzUxNDAsMTY4Mzg0MzIyOSwtMTUx
+ODE3MjEwM119
 -->
