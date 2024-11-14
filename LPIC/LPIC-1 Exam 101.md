@@ -2082,13 +2082,14 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 #### Agendamento de Tarefas - systemd timer
 
-- `systemct list-timers`: lista os agendamentos que já estão no sistema
+- `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, que terminam com `.timer`, ligadas às `ACTIVATES`, que terminam com `.service`.
+- `systemct list-timers --all`: mostra agendamentos que possam estar inativas
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMT
-U2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0
-NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC
-0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2
-MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1Ni
-wxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3
-Mjk2ODVdfQ==
+eyJoaXN0b3J5IjpbMTExMzYwNzA1NCw2NTAxMjgwMTcsLTExNz
+g2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgw
+NTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLT
+E1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5
+ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OT
+g1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEz
+Njc4MDU1XX0=
 -->
