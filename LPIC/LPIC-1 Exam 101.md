@@ -2069,12 +2069,12 @@ at> echo "Hora do almoço
 
 Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte.
 
-- at midnight: agenda para meia noite
-- at teatime: agenda para às 16h (hora do chá)
-- at noon: age
+- `at midnight`: agenda para meia noite
+- `at teatime`: agenda para às 16h ou 4PM (hora do chá)
+- `at noon`: agenda para hora do almoço.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjQ4MDM5MCwtMTE3ODY5ODI0NSwtMT
+eyJoaXN0b3J5IjpbMTc5OTUwMTIxMCwtMTE3ODY5ODI0NSwtMT
 E1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4
 NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOC
 wtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1
