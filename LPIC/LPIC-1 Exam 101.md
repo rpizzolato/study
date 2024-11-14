@@ -2055,9 +2055,13 @@ No entanto, em sistemas baseados em RedHat, como o CentOS, na inexistência dos 
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
 
-at now +2hour
+    at now +2hour
+    at> echo "Hora cafe"
+
+Executa o echo `"Hora do café"` daqui duas horas
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3ODk1MDQ1NiwtMTE1Njk3MDIxNywxOD
+eyJoaXN0b3J5IjpbMTUyNjQzMzk2MiwtMTE1Njk3MDIxNywxOD
 AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
 NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
 wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
