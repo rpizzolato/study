@@ -2100,17 +2100,18 @@ $ systemctl status apt-daily-upgrade.timer
 Nov 08 16:41:52 OptiPlex-3080 systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
 ```
 
-Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr/lib/systemd/system/apt-daily-upgrade.timer`. Sendo em um formato normal de unit, com sua descrição, e demais itens.
+Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr/lib/systemd/system/apt-daily-upgrade.timer`(esse arquivo que seria alterado para definir novo agendamento). Sendo em um formato normal de unit, com sua descrição, e demais itens.
 
 O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, com a seguinte sintaxe:
-- `OnCalendar: *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
-- `OnCalendar: *-*-* 6..18:00,30 `: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) das 6 até às 18h, no minuto 00 e minuto 30. Se preferir, pode adicionar dois pontos (:) e informar os segundos, ou `*` para qualquer segundo.
+- `OnCalendar= *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
+- `OnCalendar= *-*-* 6..18:00,30 `: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) das 6 até às 18h, no minuto 00 e minuto 30. Se preferir, pode adicionar dois pontos (`:`) e informar os segundos, ou `*` para qualquer segundo.
+- `OnCalendar=Mon..Fri *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjk4MjY5MzAsLTExNjM5ODA2OTcsNj
-UwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4
-MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OS
-wxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LDI4
-NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTExNzE4Nj
-EyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LDE0
-NjUxMDQ2MTRdfQ==
+eyJoaXN0b3J5IjpbLTgxNzQzNTk1MywtMTE2Mzk4MDY5Nyw2NT
+AxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgz
+MTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LD
+E3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3
+NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MT
+I5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2
+NTEwNDYxNF19
 -->
