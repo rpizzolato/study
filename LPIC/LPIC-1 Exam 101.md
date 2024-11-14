@@ -2078,9 +2078,9 @@ Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda pa
 Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 - `/etc/at.allow`: permite quais usuário usar o `at`
-- `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchi)
+- `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchido com usuários do sistema, permitindo somente usuários comuns utilizar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzc1NzYzNzIsLTExNzg2OTgyNDUsLT
+eyJoaXN0b3J5IjpbLTE2Nzg1ODEzNjgsLTExNzg2OTgyNDUsLT
 ExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0
 ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1Mj
 gsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMy
