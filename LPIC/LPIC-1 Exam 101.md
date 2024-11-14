@@ -2041,11 +2041,11 @@ Essas modificações, tanto em sistema (`/etc/cron`) como a de usuário, são pe
 
 Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso se baseia nos arquivos:
 - /etc/cron.allow ou
-- /etc/ctron.deny
+- /etc/cron.deny
 
-*Pode ser que esses arquivos não existam, sendo necessário criá-los
+*Pode ser que esses arquivos não existam, sendo necessário criá-los. A lista de usuário é comum, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTYyNDY4NiwtMTE1Njk3MDIxNywxOD
+eyJoaXN0b3J5IjpbLTU2Nzg2MDIzOSwtMTE1Njk3MDIxNywxOD
 AyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2
 NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOC
 wyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5MzA4LC0xMTcx
