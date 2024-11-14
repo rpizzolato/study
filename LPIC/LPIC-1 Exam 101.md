@@ -2167,14 +2167,15 @@ Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso
 
 É possível observar que após rodar o `system-run` acima, será retornado um run, que no caso é algo parecido com isso: `run-sequecia-caracteres.timer`
 
-Se olhar no journal  no `systemctl list-timers` foi criado um `run-sequecia-caracteres.timer`. Se pegar esse `.timer` e olhar no `journalctl`, com a opção `-u` `--unit`, mais o `run` (journalctl )
+Se pegar esse `.timer` e olhar no `journalctl`, com a opção `-u` `--unit`, mais o `run` (`journalctl -u run-sequecia-caracteres.timer`)m é pos
 
+Se olhar no `systemctl list-timers` foi criado um `run-sequecia-caracteres.timer`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA0MjUyMzgxLC0xNjA0MDg5MjkxLC02Nj
-c1Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3Mzkz
-OSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LD
-Y1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAy
-ODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NT
-ksMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMTY5MDU2OTYwOCwy
-ODc1OTEwMzFdfQ==
+eyJoaXN0b3J5IjpbLTEyNjgxOTA3MTYsLTE2MDQwODkyOTEsLT
+Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
+OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
+csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
+MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MT
+Y1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4
+LDI4NzU5MTAzMV19
 -->
