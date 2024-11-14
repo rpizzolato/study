@@ -2155,9 +2155,11 @@ AccuracySec=1us # 1 micro segundo ou 1ms, que é a margem para executar com prec
 Unit=teste.service
 ```
 
+No `OnCalendar`, pode informar só a hora: `OnCalendar=*:*:10`
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMzMwNTc2OCwtMTYwNDA4OTI5MSwtNj
+eyJoaXN0b3J5IjpbLTI2NTQ4NzIyNiwtMTYwNDA4OTI5MSwtNj
 Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
 MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
 w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
