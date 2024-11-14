@@ -2038,12 +2038,14 @@ Observação: Lembrando que isso é referente ao usuário atual, e os scripts pr
 Há possibilidade de criar um arquivo separado contendo as regras da crontab, e importar com o comando: `crontab arquivo_com_contrab`. Confirme com `contrab -l`
 
 Essas modificações, tanto em sistema (`/etc/cron`) como a de usuário, são permanentes, e o(s) arquivo(s) do(s) usuário(s) fica(m) em `/var/spool/cron/crontabs` (precisa ser acesso como **root**). Em algumas distros pode ser que o diretório `crontabs` seja apenas `cron`.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMz
-M2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3
-NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC
-0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3
-NTE0OTg1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNC
-wxMzEzNjc4MDU1LDI1MzcyOTY4NSwtODE3MTMyMTMzLC0xNDY2
-NzIzODE5XX0=
+eyJoaXN0b3J5IjpbNTkxNTg4OTc5LC0xMTU2OTcwMjE3LDE4MD
+I4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1
+OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4LD
+I4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTExNzE4
+NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1NiwxNzI0ODU0Njc0LD
+E0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3Mjk2ODUsLTgxNzEz
+MjEzM119
 -->
