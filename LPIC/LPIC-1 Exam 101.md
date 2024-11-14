@@ -2165,10 +2165,12 @@ Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso
 - `system-run --on-active=60s /bin/touch /tmp/exemplo-run.txt`: roda após **60 segundos** o comando `touch` que criar o arquivo `exemplo-run.txt` em `/tmp`
 - `system-run --on-active=60s --time-property=AccuracySec=1ms /bin/touch /tmp/exemplo-run.txt`: faz o mesmo do comando anterior, mas em system-run também tem a questão de prioridade, e se quiser com precisão, precisar incluir o argumento `--time-property`
 
-É possível observar que após rodar o `system-run` acima, será retornado um run, que no caso é algo parecido com isso:  no `systemctl list-timers` foi criado um `run-sequecia-caracteres.timer`. Se pegar esse `.timer` e olhar no journal, é possível observar 
+É possível observar que após rodar o `system-run` acima, será retornado um run, que no caso é algo parecido com isso: `run-sequecia-caracteres.timer`
+
+Se olhar no journal  no `systemctl list-timers` foi criado um `run-sequecia-caracteres.timer`. Se pegar esse `.timer` e olhar no journal, é possível observar 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTA5NjI5MiwtMTYwNDA4OTI5MSwtNj
+eyJoaXN0b3J5IjpbLTUzODQxOTA0NywtMTYwNDA4OTI5MSwtNj
 Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
 MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
 w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
