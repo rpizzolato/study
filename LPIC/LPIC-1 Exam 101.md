@@ -2115,13 +2115,24 @@ Na Unit do `.service`, é basicamente um `.service` comum, que é descrito o que
 Mais detalhes em `man systemd.timer`. Mais detalhes de como especificar a data e hora no calendar, usar: `man systemd.time`
 
 Vejamos o exemplo de `systemd-tmpfiles-clean.timer`:<br:
-- executa `systemctl status systemd-tmpfiles-clean.timer` para saber onde está carregado esse arquivo, no caso é em `/usr/lib/systemd/system/systemd-tmpfiles-clean.timer`, tendo como conteúdo
+- executa `systemctl status systemd-tmpfiles-clean.timer` para saber onde está carregado esse arquivo, no caso é em `/usr/lib/systemd/system/systemd-tmpfiles-clean.timer`, tendo como conteúdo:
+```
+[Unit]
+Description=Daily Cleanup of Temporary Directories
+Documentation=man:tmpfiles.d(5) man:systemd-tmpfiles(8)
+ConditionPathExists=!/etc/initrd-release
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1d
+```
+Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar o serviço a cada 1 dia. Em `OnBootSec` é nítido que será executado após 15 minu
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTgwNTg1OTUsMjgzODg2NDk4LDEyND
-QwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4
-MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMT
-csMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMz
-MzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Nj
-k2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwt
-MTE3MTg2MTI5NV19
+eyJoaXN0b3J5IjpbMTQ1ODA5NDY3LDI4Mzg4NjQ5OCwxMjQ0MD
+czOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2
+OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LD
+E4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0
+MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5Nj
+A4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2MDkzMDgsLTEx
+NzE4NjEyOTVdfQ==
 -->
