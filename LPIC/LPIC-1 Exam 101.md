@@ -2029,10 +2029,10 @@ Exemplo com range:<br>
     #m		h		dia		mes	diasemana	comando/script
     20		9-18	*		*	1-5 		/home/usuario/relatorio.sh
 
-Em todo minuto 20, das horas entre 9h e 18h, qualquer dia, qualquer mês, de segunda à sexta-feira
+Em todo minuto 20, das horas entre 9h e 18h (horário comercial), qualquer dia, qualquer mês, de segunda à sexta-feira
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMzc0NTYyNSwtMTU3NTkxNzUyOCwtMT
+eyJoaXN0b3J5IjpbMTc2NzAxNjc3NywtMTU3NTkxNzUyOCwtMT
 Y5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1NjA5
 MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUsNDIyODE0NTYsMT
 cyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2NzgwNTUsMjUzNzI5
