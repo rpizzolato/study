@@ -2100,13 +2100,16 @@ $ systemctl status apt-daily-upgrade.timer
 Nov 08 16:41:52 OptiPlex-3080 systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
 ```
 
-Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr/lib/systemd/system/apt-daily-upgrade.timer`. Sendo em um formato normal de unit, com sua descrição
+Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr/lib/systemd/system/apt-daily-upgrade.timer`. Sendo em um formato normal de unit, com sua descrição, e demais itens.
+
+O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, com a seguinte sintaxe:
+- OnCalendar: *
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MDA2NzA2Niw2NTAxMjgwMTcsLTExNz
-g2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgw
-NTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLT
-E1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5
-ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OT
-g1LDQyMjgxNDU2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEz
-Njc4MDU1XX0=
+eyJoaXN0b3J5IjpbNzczMzU1MDgzLDY1MDEyODAxNywtMTE3OD
+Y5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1
+NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMT
+U3NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4
+NDk3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5OD
+UsNDIyODE0NTYsMTcyNDg1NDY3NCwxNDY1MTA0NjE0LDEzMTM2
+NzgwNTVdfQ==
 -->
