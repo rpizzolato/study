@@ -2051,7 +2051,7 @@ Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso 
 No Debian, e distribuições baseadas como o Ubuntu que usamos nesse curso, se ambos arquivos não existem, o uso dos recursos da cron é liberado para todos os usuários.<br>
 No entanto, em sistemas baseados em RedHat, como o CentOS, na inexistência dos arquivos, o uso é bloqueado a todos os usuários, exceto para o usuário root.
 
-##### at
+##### at (agendamento de uma execução)
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
 
@@ -2080,11 +2080,11 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 - `/etc/at.allow`: permite quais usuário usar o `at`
 - `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchido com usuários do sistema, permitindo somente usuários comuns utilizar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg1ODEzNjgsLTExNzg2OTgyNDUsLT
-ExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0
-ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1Mj
-gsLTE2OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMy
-NTYwOTMwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxND
-U2LDE3MjQ4NTQ2NzQsMTQ2NTEwNDYxNCwxMzEzNjc4MDU1LDI1
-MzcyOTY4NV19
+eyJoaXN0b3J5IjpbNTIzNjY5MTM1LC0xMTc4Njk4MjQ1LC0xMT
+U2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0
+NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC
+0xNjkwNTY5NjA4LDI4NzU5MTAzMSwtMzgxOTg0OTc3LC0zMjU2
+MDkzMDgsLTExNzE4NjEyOTUsMTAwNzUxNDk4NSw0MjI4MTQ1Ni
+wxNzI0ODU0Njc0LDE0NjUxMDQ2MTQsMTMxMzY3ODA1NSwyNTM3
+Mjk2ODVdfQ==
 -->
