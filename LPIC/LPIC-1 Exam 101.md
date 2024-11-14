@@ -2149,14 +2149,15 @@ Description=Teste de systemd
 
 [Timer]
 OnCalendar=*-*-* *:*:10 # toda hora, todo min, no segundo 10
+
 AccuracySec=1us # 1 micro segundo ou 1ms, que é a margem para executar com precisão. Se for muito alto, lembrar que tem prioridade.
 
-
+Unit=teste.service
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4Mzk1NDAwOSwtMTYwNDA4OTI5MSwtNj
+eyJoaXN0b3J5IjpbMTEwMzMwNTc2OCwtMTYwNDA4OTI5MSwtNj
 Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
 MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
 w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
