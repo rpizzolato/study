@@ -2141,20 +2141,20 @@ Type=oneshot
 ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
 ```
 
-2. criar um timer, dentro de `/etc/systemd/system`:
+2. criar um **timer**, dentro de `/etc/systemd/system`:
 	2.1 usar `vim exemplo.timer` (usar o mesmo nome, mudando só o final)
 ```
 [Unit]
-Description=Exemplo systemd-timer
+Description=Teste de systemd
 
-[Service]
-Type=oneshot
+[Timer]
+OnCalendar=*-*-*
 ExecStart=/bin/sh -c '/bin/date >> /tmp/exemplo-system.txt'
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNDA5ODgwMywxODUxMzc3MTY0LDI4Mz
+eyJoaXN0b3J5IjpbLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mz
 g4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIy
 OTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC
 0xMTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2
