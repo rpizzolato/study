@@ -2112,13 +2112,13 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 - `Persistend=true`: grava caso o `.service` seja executado manualmente. E considera essa informação para a próxima execução.
 
 Na Unit do `.service`, é basicamente um `.service` comum, que é descrito o que será executado no `ExecStart`.<br>
-Mais detalhes em `man systemd.timer`
+Mais detalhes em `man systemd.timer`. Mais detalhes de como especificar a data e hora no calendar, usar: `man systemd.time`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNj
-c2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3ODY5
-ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1ND
-ksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3
-NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4ND
-k3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUs
-NDIyODE0NTZdfQ==
+eyJoaXN0b3J5IjpbMjgzODg2NDk4LDEyNDQwNzM5MzksLTYyMT
+M0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgw
+MTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OS
+wxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3Njcw
+MTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgsMjg3NTkxMD
+MxLC0zODE5ODQ5NzcsLTMyNTYwOTMwOCwtMTE3MTg2MTI5NSwx
+MDA3NTE0OTg1XX0=
 -->
