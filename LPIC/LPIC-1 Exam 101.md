@@ -2076,8 +2076,11 @@ Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda pa
 - `at 02:20pm 05202024`: agenda para dia 20/05/2024 às 14:20
 
 Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
+
+- /etc/at.allow: permite quais usuário usar o at
+- /etc/at.deny: nega quais usuário são permitidos usar o at
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODIyMzI1MywtMTE3ODY5ODI0NSwtMT
+eyJoaXN0b3J5IjpbLTc2OTQyMDE3MiwtMTE3ODY5ODI0NSwtMT
 E1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4
 NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3NTkxNzUyOC
 wtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4NDk3NywtMzI1
