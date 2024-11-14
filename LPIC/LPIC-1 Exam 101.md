@@ -2106,13 +2106,15 @@ O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, 
 - `OnCalendar= *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
 - `OnCalendar= *-*-* 6..18:00,30 `: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) das 6 até às 18h, no minuto 00 e minuto 30. Se preferir, pode adicionar dois pontos (`:`) e informar os segundos, ou `*` para qualquer segundo.
 - `OnCalendar=Mon..Fri *-*-* 6:00`: caso queira colocar de segunda à sexta-feira
-- `OnCalendar=Sat,Sun *-*-* 6:00`: caso queira colocar sábado e domingo
+- `OnCalendar=Sat,Sun *-*-* 6:00`: caso queira colocar sábado e domingo (padrão para **Debian** e derivados - **RedHat** seria `Mon-Fri`)
+
+- RandomizedDelaySec=:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMT
-E2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5
-NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0Ni
-wtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2
-OTA1Njk2MDgsMjg3NTkxMDMxLC0zODE5ODQ5NzcsLTMyNTYwOT
-MwOCwtMTE3MTg2MTI5NSwxMDA3NTE0OTg1LDQyMjgxNDU2LDE3
-MjQ4NTQ2NzRdfQ==
+eyJoaXN0b3J5IjpbMTg1Mjk3Nzk3MiwtNjIxMzQ0NDY5LC0xNj
+c2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3ODY5
+ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwODA1ND
+ksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3NywtMTU3
+NTkxNzUyOCwtMTY5MDU2OTYwOCwyODc1OTEwMzEsLTM4MTk4ND
+k3NywtMzI1NjA5MzA4LC0xMTcxODYxMjk1LDEwMDc1MTQ5ODUs
+NDIyODE0NTZdfQ==
 -->
