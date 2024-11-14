@@ -2158,13 +2158,14 @@ Unit=teste.service
 No `OnCalendar`, pode informar só a hora: `OnCalendar=*:*:10`<br>
 No `AccuracySec` lembrar da prioridade, se colocar tempo muito alto e se estiver tendo muita execução, vai utilizar um tempo random dentro do intervalo colocado
 
+Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNjkyODY2MywtMTYwNDA4OTI5MSwtNj
-Y3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5
-MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Ny
-w2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTExNTY5NzAyMTcsMTgw
-MjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNj
-U5LDE3NjcwMTY3NzcsLTE1NzU5MTc1MjgsLTE2OTA1Njk2MDgs
-Mjg3NTkxMDMxXX0=
+eyJoaXN0b3J5IjpbLTE2ODYzMjI1NDUsLTE2MDQwODkyOTEsLT
+Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
+OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
+csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
+MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MT
+Y1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4
+LDI4NzU5MTAzMV19
 -->
