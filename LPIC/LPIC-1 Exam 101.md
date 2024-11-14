@@ -2171,9 +2171,9 @@ Se pegar esse `.timer` e olhar no `journalctl`, com a opção `-u` `--unit`, mai
 
 Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi criado, vai estar listado, mostrando quanto tempo falta para sua hora de executar.
 
-Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas
+Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjg3NzI4OTYsLTE2MDQwODkyOTEsLT
+eyJoaXN0b3J5IjpbLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLT
 Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
 OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
 csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
