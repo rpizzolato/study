@@ -1993,13 +1993,16 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 	- `2`= terça-feira, etc
 
 - `,`: especifica uma lista de valores possíveis
-- `-`
+- `-`(hífen): especifica um intervalor de valores possiveis
+- `/`: especifica valores escalonados
 
 A primeira entrada no arquivo `/etc/crontab`:
 
     17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
 
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
+
+- /etc/cron/
 
 
 #### Cron para usuários
@@ -2182,7 +2185,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NTcxOTkyNiwtMjEyMTM5MDg1NywtMT
+eyJoaXN0b3J5IjpbLTg4NDQ5NjQxMSwtMjEyMTM5MDg1NywtMT
 YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
 NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5Ni
 wtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTEx
