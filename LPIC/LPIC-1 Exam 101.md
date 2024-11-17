@@ -2210,6 +2210,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     
 Executa diariamente o script script.sh e joga a saída de sucesso ou de erro no arquivo script.log (2>&1 indica para jogar as duas saídas no arquivo script.log)
 
+Outro exemplo interessante, executar o script  `barfoo.sh`  localizado no diretório  `/root`  todos os dias à 01:30, abra  `/etc/crontab`  com seu editor preferido e adicione a seguinte linha:
+
+    30 01 * * * root /root/barfoo.sh >>/root/output.log 2>>/root/error.log
+
+No exemplo acima, a saída do job é anexada a  `/root/output.log`, enquanto os erros são anexados a  `/root/error.log` (`2>` é a saída padrão para erro, usando `2>>` vai concatenar os valores).
+
 #### Cron para usuários
 
 Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de root).
@@ -2391,7 +2397,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MTQ1NDMxOCwxMTI2MzM5ODE4LC0yNj
+eyJoaXN0b3J5IjpbLTQwNTgwOTczNCwxMTI2MzM5ODE4LC0yNj
 AwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3
 LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMT
 YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
