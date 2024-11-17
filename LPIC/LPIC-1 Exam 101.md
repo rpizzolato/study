@@ -2002,6 +2002,25 @@ A primeira entrada no arquivo `/etc/crontab`:
 
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 
+A sintaxe dos crontabs de sistema é semelhante à dos crontabs de usuário, porém ela requer um campo adicional obrigatório que especifica qual usuário executará o cron job. Portanto, cada linha em um crontab de sistema contém sete campos separados por um espaço:
+
+-   O minuto da hora (0-59).
+    
+-   A hora do dia (0-23).
+    
+-   O dia do mês (1-31).
+    
+-   O mês do ano (1-12).
+    
+-   O dia da semana (0-7 com Domingo=0 ou Domingo=7).
+    
+-   O nome da conta de usuário a ser usada ao executar o comando.
+    
+-   O comando a executar.
+    
+
+Quanto aos crontabs do usuário, podemos especificar mais de um valor nos campos de tempo usando os operadores  `*`,  `,`  ,  `-`  e  `/`. Também é possível indicar o mês do ano e o dia da semana com as três primeiras letras do nome em vez do número correspondente.
+
 - **crontab de sistema**: `/etc/crontab` e `/etc/cron.d`
 	- `/etc/cron.hourly` (de hora em hora)
 	- `/etc/cron.daily` (diariamente)
@@ -2194,7 +2213,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTc2MjczMDUsLTEyOTU3NTU2OTcsLT
+eyJoaXN0b3J5IjpbLTExMTAxOTEwMDQsLTEyOTU3NTU2OTcsLT
 IxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUx
 Mzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0Nj
 ksLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0x
