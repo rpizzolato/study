@@ -2333,7 +2333,7 @@ Na terceira linha, é mostrado onde está configurado o `.timer`, no caso: `/usr
 O que é interessante é a parte de `[Timer]`, onde tem a opção `onCalendar`, com a seguinte sintaxe:
 - `OnCalendar= *-*-* 6:00`: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) às 6 horas.
 - `OnCalendar= *-*-* 6..18:00,30 `: sendo qualquer ano (*), qualquer mês (*), qualquer dia (*) das 6 até às 18h, no minuto 00 e minuto 30. Se preferir, pode adicionar dois pontos (`:`) e informar os segundos, ou `*` para qualquer segundo.
-- `OnCalendar=Mon..Fri *-*-* 6:00`: caso queira colocar de segunda à sexta-feira
+- `OnCalendar=Mon..Fri *-*-* 6:00`: caso queira colocar de segunda à sexta-feira (entre dois valores para indicar um intervalo contíguo)
 - `OnCalendar=Sat,Sun *-*-* 6:00`: caso queira colocar sábado e domingo (padrão para **Debian** e derivados - **RedHat** seria `Mon-Fri`)
 
 - `RandomizedDelaySec=60m`: nessa faixa de 60 minutos, a execução pode fica aleatória dentro desse tempo, para que não tenha várias coisas executando ao mesmo tempo, achando um gap melhor para essa execução.
@@ -2401,11 +2401,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMj
-YzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMs
-LTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMT
-IxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3
-NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC
-0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3
-ODY5ODI0NV19
+eyJoaXN0b3J5IjpbLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtOD
+gxMTUxMzYzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2
+ODUsNjAzMDcyMDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMj
+k1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1
+Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOS
+wtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1
+MDEyODAxN119
 -->
