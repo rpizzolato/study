@@ -2216,6 +2216,10 @@ Outro exemplo interessante, executar o script  `barfoo.sh`  localizado no diret�
 
 No exemplo acima, a saída do job é anexada a  `/root/output.log`, enquanto os erros são anexados a  `/root/error.log` (`2>` é a saída padrão para erro, usando `2>>` vai concatenar os valores).
 
+>[!WARNING]
+>
+>Exceto nos casos em que a saída é redirecionada para um arquivo, como no exemplo acima (ou se a variável `MAILTO` estiver definida como um valor em branco), toda a saída de um trabalho cron será enviada ao usuário via email. Uma prática comum é redirecionar a saída padrão para `/dev/null` (ou para um arquivo, para revisão posterior, se necessário) e não redirecionar o erro padrão. Desta forma, o usuário é notificado imediatamente por email sobre eventuais erros.
+
 #### Cron para usuários
 
 Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de root).
@@ -2397,7 +2401,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTgwOTczNCwxMTI2MzM5ODE4LC0yNj
+eyJoaXN0b3J5IjpbLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNj
 AwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3
 LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMT
 YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
