@@ -2247,6 +2247,7 @@ Observação: Lembrando que isso é referente ao usuário atual, e os scripts pr
 
 - `crontab -r`: remove toda configuração do crontab.
 - `# crontab -r -u lpi2`: (só root pode) remover crontab de outro usuário
+- `crontab -u`: especifica o nome do usuário cujo crontab precisa ser modificado. Esta opção requer privilégios de root e permite que o usuário root edite os arquivos crontab do usuário.
 
 Há possibilidade de criar um arquivo separado contendo as regras da crontab, e importar com o comando: `crontab arquivo_com_contrab`. Confirme com `contrab -l`
 
@@ -2386,11 +2387,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMD
-cyMDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3
-LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMT
-g1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0
-NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNy
-wtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEz
-MzYwODA1NDldfQ==
+eyJoaXN0b3J5IjpbMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3Nz
+U5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1Nyw3Mjc0MzQ4OTgs
+LTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLT
+Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
+OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
+csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
+MDI4MzEwNzldfQ==
 -->
