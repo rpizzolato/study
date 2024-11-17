@@ -1986,11 +1986,14 @@ Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialment
 *Para o mês do ano e o dia da semana, podemos usar as três primeiras letras do nome em vez do número correspondente.
 
 - supõe que esteja com o valor 17 no campo **m** (**minute**), significa que vai executar todo minuto 17.
-- `*` = qualquer valor. qualquer minuto, qualquer hora, qualquer dia do mês, etc. Outra forma que facilitar a leitura do asterisco é interpretá-lo como "**seja o dia/hora/mes que for** ou `qualquer valor`"
+- `*` = qualquer valor. qualquer minuto, qualquer hora, qualquer dia do mês, etc. Outra forma que facilitar a leitura do asterisco é interpretá-lo como "**seja o dia/hora/mes que for** ou **qualquer valor**"
 - **dow (day of week):**
 	-  `7` e `0` = domingo, logo: 
 	- `1`= segunda-feira, 
 	- `2`= terça-feira, etc
+
+- `,`: especifica uma lista de valores possíveis
+- `-`
 
 A primeira entrada no arquivo `/etc/crontab`:
 
@@ -2179,7 +2182,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1Nzg3ODYxNywtMjEyMTM5MDg1NywtMT
+eyJoaXN0b3J5IjpbLTQ5NTcxOTkyNiwtMjEyMTM5MDg1NywtMT
 YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
 NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5Ni
 wtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTEx
