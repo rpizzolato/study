@@ -2025,6 +2025,23 @@ Quanto aos crontabs do usuário, podemos especificar mais de um valor nos campos
 >
 >Algumas distribuições usam `/etc/cron.d/hourly`, `/etc/cron.d/daily`, `/etc/cron.d/weekly` e `/etc/cron.d/monthly`. Lembre-se de sempre conferir os diretórios corretos nos quais colocar os scripts que o cron deve executar.
 
+##### Especificações de tempo particulares
+
+Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinco colunas em vez das especificações de tempo:
+
+- `@reboot`: roda a tarefa especificada uma vez após a reinicialização.
+- `@hourly`: roda a tarefa especificada uma vez por hora no início da hora.
+- `@daily`  (ou  `@midnight`): roda a tarefa especificada uma vez por dia à meia-noite.
+- `@weekly`: roda a tarefa especificada uma vez por semana, à meia-noite de domingo.
+
+`@monthly`
+
+Roda a tarefa especificada uma vez por mês, à meia-noite do primeiro dia do mês.
+
+`@yearly`  (or  `@annually`)
+
+Roda a tarefa especificada uma vez por ano, à meia-noite de 1º de janeiro.
+
 
 #### Cron para usuários
 
@@ -2206,11 +2223,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMT
-IxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3
-NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC
-0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3
-ODY5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEzMzYwOD
-A1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTksMTc2NzAxNjc3Nywt
-MTU3NTkxNzUyOF19
+eyJoaXN0b3J5IjpbMjA0NDUyMzE4Niw3Mjc0MzQ4OTgsLTEyOT
+U3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUy
+ODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC
+02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNjUw
+MTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4Mz
+EwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OSwx
+NzY3MDE2Nzc3XX0=
 -->
