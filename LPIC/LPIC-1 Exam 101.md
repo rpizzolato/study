@@ -2005,12 +2005,12 @@ Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do m�
 A sintaxe dos crontabs de sistema é semelhante à dos crontabs de usuário, porém ela requer um campo adicional obrigatório que especifica **qual usuário executará o cron job**. Portanto, cada linha em um crontab de sistema contém sete campos separados por um espaço:
 
 -   O minuto da hora (0-59).
-    -   A hora do dia (0-23).
-    -   O dia do mês (1-31).
-    -   O mês do ano (1-12).
-    -   O dia da semana (0-7 com Domingo=0 ou Domingo=7).
-    -   O nome da conta de usuário a ser usada ao executar o comando.
-    -   O comando a executar.
+-   A hora do dia (0-23).
+-   O dia do mês (1-31).
+-   O mês do ano (1-12).
+-   O dia da semana (0-7 com Domingo=0 ou Domingo=7).
+-   O nome da conta de usuário a ser usada ao executar o comando.
+-   O comando a executar.
     
 Quanto aos crontabs do usuário, podemos especificar mais de um valor nos campos de tempo usando os operadores  `*`,  `,`  ,  `-`  e  `/`. Também é possível indicar o mês do ano e o dia da semana com as três primeiras letras do nome em vez do número correspondente.
 
@@ -2300,11 +2300,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMj
-k1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1
-Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOS
-wtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1
-MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAyOD
-MxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTks
-MTc2NzAxNjc3N119
+eyJoaXN0b3J5IjpbNjAzMDcyMDMsLTE1NzA3NDQ5NTcsNzI3ND
+M0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5
+MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMT
+I0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYz
+OTgwNjk3LDY1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MD
+IxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0x
+MzMzNDE2NTldfQ==
 -->
