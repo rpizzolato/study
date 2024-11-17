@@ -2279,6 +2279,14 @@ Usuário root pode determinar quem pode e quem não pode utilizar crontab. Isso 
 No Debian, e distribuições baseadas como o Ubuntu que usamos nesse curso, se ambos arquivos não existem, o uso dos recursos da cron é liberado para todos os usuários.<br>
 No entanto, em sistemas baseados em RedHat, como o CentOS, na inexistência dos arquivos, o uso é bloqueado a todos os usuários, exceto para o usuário root.
 
+#### Exercício interessante no lpi.org
+
+Crie um job agendado simples que execute o comando  `date`  todas as sextas-feiras às 13h. Onde você poderia ver o resultado deste trabalho?
+
+    00 13 * * 5 date
+
+A saída é enviada ao usuário; para visualizá-la, use o comando  `mail`(no caso, é possível ver a saída com esse comando, mas precisa ter o pacote **mailutils** instalado (`apt install mailutisl`)
+
 #### at (agendamento de uma execução)
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
@@ -2554,11 +2562,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMT
-UxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMz
-OTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMT
-U3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEz
-OTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MT
-Y0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2
-NzY3OTIyOTZdfQ==
+eyJoaXN0b3J5IjpbODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2Nj
+I2MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEz
+NjMsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MD
+MwNzIwMywtMTU3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2
+OTcsLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NC
+wxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEz
+NDQ0NjldfQ==
 -->
