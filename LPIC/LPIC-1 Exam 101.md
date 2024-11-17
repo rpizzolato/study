@@ -2114,11 +2114,11 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
         `0 0 1 1 *` 
         ```
     -   Exemplo:
-        ```
+	   ```
         bash
         
         `@yearly /path/to/script.sh`
-```
+	```
 
 #### Cron para usuários
 
@@ -2300,11 +2300,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzMDcyMDMsLTE1NzA3NDQ5NTcsNzI3ND
-M0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5
-MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMT
-I0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYz
-OTgwNjk3LDY1MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MD
-IxNywxODAyODMxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0x
-MzMzNDE2NTldfQ==
+eyJoaXN0b3J5IjpbODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNz
+Q0OTU3LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1
+NywtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMj
+gzODg2NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5
+MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyND
+UsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEw
+NDY0ODQ0Nl19
 -->
