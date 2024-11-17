@@ -2310,7 +2310,7 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 #### Agendamento de Tarefas - systemd timer
 
-- `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, que terminam com `.timer`, ligadas às `ACTIVATES`, que terminam com `.service`.
+- `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, com sufixo  (terminam com)`.timer`, ligadas às `ACTIVATES`, com sufixo (terminam com) `.service` (Por padrão, um `timer` ativa um serviço com o mesmo nome, exceto pelo sufixo).
 - `systemct list-timers --all`: mostra agendamentos que possam estar inativas
 - `systemctl list-units --type=timer`: lista as unidades do tipo `timer`
 
@@ -2401,11 +2401,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNj
-AwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3
-LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMT
-YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
-NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5Ni
-wtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTEx
-NTY5NzAyMTddfQ==
+eyJoaXN0b3J5IjpbLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMj
+YzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMs
+LTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMT
+IxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3
+NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC
+0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNywtMTE3
+ODY5ODI0NV19
 -->
