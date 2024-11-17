@@ -2041,28 +2041,25 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
 -   **`@reboot`**
     -   Executa a tarefa apenas uma vez, sempre que o sistema é inicializado.
     -   Exemplo:
-        
+        ```
         bash
         
         Copiar código
         
         `@reboot /path/to/script.sh` 
+        ```
         
         Uso comum: Iniciar serviços personalizados ou scripts após reiniciar o servidor.
+        
 -   **`@hourly`**
-    
     -   Executa a tarefa uma vez por hora, no minuto 0.
     -   Equivalente a:
-        
-        Copiar código
         
         `0 * * * *` 
         
     -   Exemplo:
         
         bash
-        
-        Copiar código
         
         `@hourly /path/to/script.sh` 
         
@@ -2071,15 +2068,11 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
     -   Executa a tarefa uma vez por dia, à meia-noite.
     -   Equivalente a:
         
-        Copiar código
-        
         `0 0 * * *` 
         
     -   Exemplo:
         
         bash
-        
-        Copiar código
         
         `@daily /path/to/script.sh` 
         
@@ -2088,15 +2081,11 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
     -   Executa a tarefa uma vez por semana, no primeiro minuto do domingo.
     -   Equivalente a:
         
-        Copiar código
-        
         `0 0 * * 0` 
         
     -   Exemplo:
         
         bash
-        
-        Copiar código
         
         `@weekly /path/to/script.sh` 
         
@@ -2105,15 +2094,11 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
     -   Executa a tarefa uma vez por mês, no primeiro minuto do primeiro dia.
     -   Equivalente a:
         
-        Copiar código
-        
         `0 0 1 * *` 
         
     -   Exemplo:
         
         bash
-        
-        Copiar código
         
         `@monthly /path/to/script.sh` 
         
@@ -2121,8 +2106,6 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
     
     -   Executa a tarefa uma vez por ano, no primeiro minuto do primeiro dia do ano.
     -   Equivalente a:
-        
-        Copiar código
         
         `0 0 1 1 *` 
         
@@ -2315,11 +2298,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTExOTQ4NDEsNzI3NDM0ODk4LC0xMj
-k1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1
-Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOS
-wtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1
-MDEyODAxNywtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAyOD
-MxMDc5LDEzMzYwODA1NDksMTA0NjQ4NDQ2LC0xMzMzNDE2NTks
-MTc2NzAxNjc3N119
+eyJoaXN0b3J5IjpbLTU0MDMyMjE3Niw3Mjc0MzQ4OTgsLTEyOT
+U3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUy
+ODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC
+02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNjUw
+MTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4Mz
+EwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OSwx
+NzY3MDE2Nzc3XX0=
 -->
