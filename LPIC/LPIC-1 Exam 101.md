@@ -1981,7 +1981,7 @@ O arquivo `/etc/crontab` é onde ficam as tarefas de agendamento, que é executa
 >No Linux, também existe o recurso `anacron`, adequado para sistemas que podem ser desligados (como computadores de mesa ou laptops). Ele só pode ser usado pelo root. Se a máquina estiver desligada quando os trabalhos de `anacron` tiverem de ser executados, isso ocorrerá na próxima vez em que se ligar a máquina. O `anacron` está fora do escopo da certificação LPIC-1.
 
 Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialmente: <br>
-**minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
+**minuto da hora (0-59)** | **hora do dia (0-23)** | **dia do mês - dom (1-31)** | **mês do ano -mon (1-12)** | **dia da semana - dow**
 
 - supõe que esteja com o valor 17 no campo **m** (**minute**), significa que vai executar todo minuto 17.
 - `*` = todo. Todo minuto, toda hora, todo dia do mês, etc. Outra forma que facilitar a leitura do asterisco é interpretá-lo como "**seja o dia/hora/mes que for**"
@@ -2177,11 +2177,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDU5NzI4MywtMjEyMTM5MDg1NywtMT
-YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
-NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5Ni
-wtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTEx
-NTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEwNDY0OD
-Q0NiwtMTMzMzQxNjU5LDE3NjcwMTY3NzcsLTE1NzU5MTc1Mjgs
-LTE2OTA1Njk2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEzOTA0ODEyNzYsLTIxMjEzOTA4NTcsLT
+E2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4
+NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOT
+YsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0x
+MTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2ND
+g0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4
+LC0xNjkwNTY5NjA4XX0=
 -->
