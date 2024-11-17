@@ -2204,7 +2204,11 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 - Se seus scripts dependem de variáveis de ambiente específicas (como `JAVA_HOME`), você pode defini-las no início do arquivo `crontab`.
 - Teste seus comandos ou scripts manualmente para evitar problemas de execução devido a configurações de ambiente no cron. 
 
-Isso garante que suas tarefas agendadas tenham o ambiente correto para funcionar! 
+#### uso interessante para o dia a dia
+
+    @daily /path/to/script.sh >> /var/log/script.log 2>&1
+    
+Executa diariamente o script script.sh e joga a saída de sucesso ou de erro no arquivo script.log (2>&1 indica para jogar as duas saídas no arquivo script.log)
 
 #### Cron para usuários
 
@@ -2387,11 +2391,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDY3NjA5NjMsMTEyNjMzOTgxOCwtMj
-YwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1
-Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLT
-E2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4
-NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOT
-YsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0x
-MTU2OTcwMjE3XX0=
+eyJoaXN0b3J5IjpbLTY0MTQ1NDMxOCwxMTI2MzM5ODE4LC0yNj
+AwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3
+LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMT
+YwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2
+NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5MjI5Ni
+wtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyNDUsLTEx
+NTY5NzAyMTddfQ==
 -->
