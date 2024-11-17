@@ -2181,7 +2181,7 @@ No `crontab`, variáveis como `HOME`, `MAILTO`, `PATH`, e `SHELL` são usadas pa
 
 ---
 
-### Exemplo Completo
+#### Exemplo Completo
 ```bash
 SHELL=/bin/bash
 HOME=/home/usuario
@@ -2200,7 +2200,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 ---
 
-### Dicas Adicionais
+#### Dicas Adicionais
 - Se seus scripts dependem de variáveis de ambiente específicas (como `JAVA_HOME`), você pode defini-las no início do arquivo `crontab`.
 - Teste seus comandos ou scripts manualmente para evitar problemas de execução devido a configurações de ambiente no cron. 
 
@@ -2386,7 +2386,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTI5MTE5NCw4Nzc1OTc2ODUsNjAzMD
+eyJoaXN0b3J5IjpbLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMD
 cyMDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3
 LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMT
 g1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0
