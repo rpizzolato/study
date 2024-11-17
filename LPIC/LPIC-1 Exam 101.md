@@ -2120,6 +2120,92 @@ Ao editar os arquivos crontab, podemos usar atalhos especiais nas primeiras cinc
         `@yearly /path/to/script.sh`
 	```
 
+#### Variáveis no crontab
+
+Dentro de um arquivo crontab, pode haver atribuições de variáveis definidas antes que as tarefas agendadas sejam declaradas. As variáveis de ambiente comumente definidas são:
+
+- `HOME`: o diretório no qual o  `cron`  invoca os comandos (por padrão, o diretório inicial do usuário).
+- `MAILTO`: o nome do usuário ou o endereço para o qual a saída e o erro padrão são enviados (por padrão, o proprietário do crontab). Diversos valores separados por vírgulas também são permitidos, e um valor vazio indica que nenhum email deve ser enviado.
+- `PATH`: o caminho no qual os comandos podem ser encontrados.
+- `SHELL`: o shell a ser usado (por padrão  `/bin/sh`).
+
+No `crontab`, variáveis como `HOME`, `MAILTO`, `PATH`, e `SHELL` são usadas para definir o ambiente no qual os comandos serão executados. Aqui está uma explicação detalhada e exemplos para cada uma:
+
+---
+
+### 1. **`HOME`**
+   - Define o diretório de trabalho padrão para os comandos executados pelo `crontab`.
+   - Se não for especificado, o valor padrão geralmente é o diretório home do usuário que criou o crontab.
+   - Exemplo:
+     ```bash
+     HOME=/home/usuario
+     @daily /path/to/script.sh
+     ```
+     Aqui, o script será executado com `/home/usuario` como diretório de trabalho.
+
+---
+
+### 2. **`MAILTO`**
+   - Define o endereço de email para o qual serão enviados os logs de saída e erros dos comandos executados.
+   - Se definido como vazio (`MAILTO=""`), o email não será enviado.
+   - Exemplo:
+     ```bash
+     MAILTO=admin@exemplo.com
+     @hourly /path/to/script.sh
+     ```
+     Aqui, os logs da execução do script serão enviados para `admin@exemplo.com`.
+
+---
+
+### 3. **`PATH`**
+   - Define os diretórios onde o `crontab` buscará os comandos executados.
+   - Por padrão, o `PATH` do cron é mais restrito que o de um shell interativo, frequentemente algo como `/usr/bin:/bin`.
+   - Exemplo:
+     ```bash
+     PATH=/usr/local/bin:/usr/bin:/bin
+     @daily script.sh
+     ```
+     Aqui, o cron poderá localizar `script.sh` se ele estiver em qualquer um dos diretórios especificados.
+
+---
+
+### 4. **`SHELL`**
+   - Define qual shell será usado para executar os comandos.
+   - O valor padrão geralmente é `/bin/sh`.
+   - Exemplo:
+     ```bash
+     SHELL=/bin/bash
+     @reboot /path/to/script.sh
+     ```
+     Aqui, o script será executado usando o Bash em vez do shell padrão.
+
+---
+
+### Exemplo Completo
+```bash
+SHELL=/bin/bash
+HOME=/home/usuario
+MAILTO=admin@exemplo.com
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+@hourly /home/usuario/scripts/backup.sh
+@daily /home/usuario/scripts/limpeza.sh
+```
+
+#### O que acontece aqui:
+1. O `backup.sh` será executado a cada hora.
+2. O `limpeza.sh` será executado diariamente.
+3. Os logs dessas tarefas serão enviados para o email `admin@exemplo.com`.
+4. Os comandos serão executados no diretório `/home/usuario` usando o Bash.
+
+---
+
+### Dicas Adicionais
+- Se seus scripts dependem de variáveis de ambiente específicas (como `JAVA_HOME`), você pode defini-las no início do arquivo `crontab`.
+- Teste seus comandos ou scripts manualmente para evitar problemas de execução devido a configurações de ambiente no cron. 
+
+Isso garante que suas tarefas agendadas tenham o ambiente correto para funcionar! 😊
+
 #### Cron para usuários
 
 Para listar os agendamentos do seu usuário: `contrab -l -u rodrigo`. Se tentar listar agendamentos de outro usuário, se deparará com a mensagem que a opção `-u` deve ser com usuário privilegiado (root ou usuário com privilégio de root).
@@ -2300,11 +2386,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNz
-Q0OTU3LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1
-NywtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMj
-gzODg2NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OSwtMTY3Njc5
-MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTExNzg2OTgyND
-UsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MDgwNTQ5LDEw
-NDY0ODQ0Nl19
+eyJoaXN0b3J5IjpbLTQyNTI5MTE5NCw4Nzc1OTc2ODUsNjAzMD
+cyMDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3
+LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMT
+g1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0
+NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1MDEyODAxNy
+wtMTE3ODY5ODI0NSwtMTE1Njk3MDIxNywxODAyODMxMDc5LDEz
+MzYwODA1NDldfQ==
 -->
