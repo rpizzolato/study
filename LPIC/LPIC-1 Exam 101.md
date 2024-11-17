@@ -1974,7 +1974,7 @@ Adicione uma nova conta de usuário chamada  `emma`  com UID 1050 e defina  `adm
 
 É um daemon, um processo que fica rodando, de agendamento do sistema (normalmente do sistema). Verificar se está rodando com `systemctl status cron`
 
-O arquivo `/etc/crontab` é onde ficam as tarefas de agendamento, que é executado pelo usuário **root**
+O arquivo `/etc/crontab` é onde ficam as tarefas de agendamento, que é executado pelo usuário **root** ()
 
 Os 5 primeiros campos são delimitados questões do tempo, sendo, sequencialmente: <br>
 **minuto** | **hora** | **dia do mês (dom)** | **mês (mon)** | **dia da semana (dow)**
@@ -2173,11 +2173,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLT
-Y2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDcz
-OTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTExNjM5ODA2OT
-csNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4
-MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MT
-Y1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4LC0xNjkwNTY5NjA4
-LDI4NzU5MTAzMV19
+eyJoaXN0b3J5IjpbLTE3NDAzMDUzMTIsLTIxMjEzOTA4NTcsLT
+E2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4
+NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOT
+YsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0xMTc4Njk4MjQ1LC0x
+MTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNjA4MDU0OSwxMDQ2ND
+g0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3LC0xNTc1OTE3NTI4
+LC0xNjkwNTY5NjA4XX0=
 -->
