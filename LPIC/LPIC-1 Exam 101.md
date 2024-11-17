@@ -2356,6 +2356,33 @@ OnUnitActiveSec=1d
 ```
 Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar o serviço a cada 1 dia. Em `OnBootSec` é nítido que será executado após 15 minutos. Isso é para casos que o sistema não é desligado.
 
+Outro exemplo interessante listado nas lições da lpi.org
+
+Por exemplo, para rodar o serviço  `/etc/systemd/system/foobar.service`  às 05:30 da primeira segunda-feira do mês, adicionamos as seguintes linhas no arquivo de unidade  `/etc/systemd/system/foobar.timer`  correspondente:
+
+[Unit]
+Description=Run the foobar service
+
+[Timer]
+OnCalendar=Mon *-*-1..7 05:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+Depois de criar o novo temporizador, você pode ativá-lo e iniciá-lo executando os seguintes comandos como root:
+
+    # **systemctl enable foobar.timer**
+    # **systemctl start foobar.timer**
+
+Podemos alterar a frequência do trabalho agendado modificando o valor  `OnCalendar`  e, em seguida, digitando o comando  `systemctl daemon-reload`.
+
+Finalmente, se você quiser ver a lista de temporizadores ativos ordenados pelo momento em que terminam, use o comando  `systemctl list-timers`. A opção  `--all`  exibe também as unidades de temporizador inativas.
+
+Note
+
+Lembre-se de que os temporizadores são registrados no diário do systemd e você pode rever os registros das diferentes unidades usando o comando  `journalctl`. Além disso, se estiver trabalhando como um usuário comum, será preciso usar a opção  `--user`  dos comandos  `systemctl`  e  `journalctl`.
+
 ##### Criando um agendamento
 
 1. criar um **serviço**, dentro de `/etc/systemd/system`:
@@ -2401,11 +2428,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtOD
-gxMTUxMzYzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2
-ODUsNjAzMDcyMDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMj
-k1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1
-Mjg5NzQsMTg1MTM3NzE2NCwyODM4ODY0OTgsMTI0NDA3MzkzOS
-wtNjIxMzQ0NDY5LC0xNjc2NzkyMjk2LC0xMTYzOTgwNjk3LDY1
-MDEyODAxN119
+eyJoaXN0b3J5IjpbMTIwNTQ0NjA3OSwtMTUxNzQ3NzEwMSwtND
+UwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMzOTgxOCwtMjYwMDU2
+MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1Nyw3Mj
+c0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQw
+ODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OC
+wxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTEx
+NjM5ODA2OTddfQ==
 -->
