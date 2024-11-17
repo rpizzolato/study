@@ -2415,7 +2415,131 @@ No `AccuracySec` lembrar da prioridade, se colocar tempo muito alto e se estiver
 
 Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista. É interessante também recarregar as informações do daemon do systemctl, com o comando `systemctl daemon-reload`
 
+Em vez da forma normalizada mais longa mencionada acima, é possível usar algumas expressões especiais que descrevem frequências específicas para a execução de um job:
 
+- `hourly`: roda a tarefa especificada uma vez por hora, no início da hora.
+- `daily`: roda a tarefa especificada uma vez por dia à meia-noite.
+- `weekly`: roda a tarefa especificada uma vez por semana, na meia-noite de segunda-feira.
+- `monthly`: roda a tarefa especificada uma vez por mês, na meia-noite do primeiro dia do mês.
+- `yearly`: roda a tarefa especificada uma vez por ano, na meia-noite de 1º de janeiro.
+
+Consulte as páginas de manual para ver a lista completa de especificações de hora e data em  `systemd.timer(5)`.
+
+No **`systemd`**, os **timers** substituem ou complementam o uso do `cron` para agendamento de tarefas, proporcionando maior flexibilidade e integração com o sistema. Aqui estão os equivalentes aos atalhos do `crontab` usando **`systemd.timer`**:
+
+---
+
+#### Estrutura de um Timer no `systemd`
+Um timer no `systemd` geralmente é composto por dois arquivos:
+
+1. **Arquivo de Serviço (`.service`)**
+   - Define o que será executado.
+2. **Arquivo de Timer (`.timer`)**
+   - Define quando será executado.
+
+---
+
+### Equivalentes no `systemd.timer`
+Os timers no `systemd` usam o campo `[Timer]` para configurar os intervalos de execução. Aqui estão os exemplos:
+
+1. **`@reboot` (ao iniciar o sistema)**
+   - Use o parâmetro **`OnBootSec`** no arquivo `.timer`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnBootSec=1min
+     ```
+     Este timer executará a tarefa 1 minuto após o sistema inicializar.
+
+2. **`@hourly` (uma vez por hora)**
+   - Use **`OnCalendar`** com o valor `hourly`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnCalendar=hourly
+     ```
+     Este timer será acionado no início de cada hora.
+
+3. **`@daily` (uma vez por dia, à meia-noite)**
+   - Use **`OnCalendar`** com o valor `daily`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnCalendar=daily
+     ```
+     O timer será acionado diariamente à meia-noite.
+
+4. **`@weekly` (uma vez por semana, no domingo)**
+   - Use **`OnCalendar`** com o valor `weekly`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnCalendar=weekly
+     ```
+     O timer será acionado no primeiro minuto de cada domingo.
+
+5. **`@monthly` (uma vez por mês, no primeiro dia)**
+   - Use **`OnCalendar`** com o valor `monthly`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnCalendar=monthly
+     ```
+     O timer será acionado no primeiro minuto do dia 1 de cada mês.
+
+6. **`@yearly` (ou `@annually`)**
+   - Use **`OnCalendar`** com o valor `yearly`.
+   - Exemplo:
+     ```ini
+     [Timer]
+     OnCalendar=yearly
+     ```
+     O timer será acionado no primeiro minuto do primeiro dia de cada ano.
+
+---
+
+### Exemplo Completo
+Aqui está um exemplo completo para criar um serviço e um timer que executam um script diariamente.
+
+#### Arquivo de Serviço (`exemplo.service`)
+```ini
+[Unit]
+Description=Executa o script de exemplo
+
+[Service]
+ExecStart=/path/to/script.sh
+```
+
+#### Arquivo de Timer (`exemplo.timer`)
+```ini
+[Unit]
+Description=Executa o script de exemplo diariamente
+
+[Timer]
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
+```
+
+#### Comandos para Ativar
+1. Coloque os arquivos em `/etc/systemd/system/`.
+2. Habilite o timer:
+   ```bash
+   sudo systemctl enable exemplo.timer
+   ```
+3. Inicie o timer:
+   ```bash
+   sudo systemctl start exemplo.timer
+   ```
+
+---
+
+### Vantagens do `systemd.timer`
+- Integração nativa com o `systemd` (logs em `journalctl`).
+- Opções adicionais, como **`AccuracySec`** (ajustar precisão) e **`Persistent`** (executar tarefas perdidas durante períodos de inatividade).
+
+Isso torna o `systemd` uma alternativa poderosa ao `cron` para tarefas agendadas! 😊
 
 ##### systemd-run (equivalente ao at)
 
@@ -2430,11 +2554,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NjI2MjE5MiwtMTUxNzQ3NzEwMSwtND
-UwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMzOTgxOCwtMjYwMDU2
-MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1Nyw3Mj
-c0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQw
-ODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4NjQ5OC
-wxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2NzY3OTIyOTYsLTEx
-NjM5ODA2OTddfQ==
+eyJoaXN0b3J5IjpbOTQyMDAzMjY2LC0zNjYyNjIxOTIsLTE1MT
+c0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYzMzk4
+MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLTE1Nz
+A3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkw
+ODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NC
+wyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2
+NzkyMjk2XX0=
 -->
