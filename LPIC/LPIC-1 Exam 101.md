@@ -2356,19 +2356,19 @@ OnUnitActiveSec=1d
 ```
 Em `OnUnitActiveSec`, é informado que se a unidade estiver ativa, para executar o serviço a cada 1 dia. Em `OnBootSec` é nítido que será executado após 15 minutos. Isso é para casos que o sistema não é desligado.
 
-Outro exemplo interessante listado nas lições da lpi.org
+**Outro exemplo interessante listado nas lições da lpi.org**
 
 Por exemplo, para rodar o serviço  `/etc/systemd/system/foobar.service`  às 05:30 da primeira segunda-feira do mês, adicionamos as seguintes linhas no arquivo de unidade  `/etc/systemd/system/foobar.timer`  correspondente:
 
-[Unit]
-Description=Run the foobar service
-
-[Timer]
-OnCalendar=Mon *-*-1..7 05:30:00
-Persistent=true
-
-[Install]
-WantedBy=timers.target
+    [Unit]
+    Description=Run the foobar service
+    
+    [Timer]
+    OnCalendar=Mon *-*-1..7 05:30:00
+    Persistent=true
+    
+    [Install]
+    WantedBy=timers.target
 
 Depois de criar o novo temporizador, você pode ativá-lo e iniciá-lo executando os seguintes comandos como root:
 
@@ -2379,9 +2379,9 @@ Podemos alterar a frequência do trabalho agendado modificando o valor  `OnCalen
 
 Finalmente, se você quiser ver a lista de temporizadores ativos ordenados pelo momento em que terminam, use o comando  `systemctl list-timers`. A opção  `--all`  exibe também as unidades de temporizador inativas.
 
-Note
-
-Lembre-se de que os temporizadores são registrados no diário do systemd e você pode rever os registros das diferentes unidades usando o comando  `journalctl`. Além disso, se estiver trabalhando como um usuário comum, será preciso usar a opção  `--user`  dos comandos  `systemctl`  e  `journalctl`.
+>[!NOTE]
+>
+>Lembre-se de que os temporizadores são registrados no diário (journal) do systemd e você pode rever os registros das diferentes unidades usando o comando  `journalctl`. Além disso, se estiver trabalhando como um usuário comum, será preciso usar a opção  `--user`  dos comandos  `systemctl`  e  `journalctl`.
 
 ##### Criando um agendamento
 
@@ -2415,6 +2415,8 @@ No `AccuracySec` lembrar da prioridade, se colocar tempo muito alto e se estiver
 
 Se rodar `systemctl list-timer`, o timer feito não aparece. Portanto é preciso iniciar o timer criado: `systemctl start exemplo.timer`. Executando novamente `systemctl list-timer`, já vai aparecer na lista. É interessante também recarregar as informações do daemon do systemctl, com o comando `systemctl daemon-reload`
 
+
+
 ##### systemd-run (equivalente ao at)
 
 - `system-run --on-active=60s /bin/touch /tmp/exemplo-run.txt`: roda após **60 segundos** o comando `touch` que criar o arquivo `exemplo-run.txt` em `/tmp`
@@ -2428,7 +2430,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNTQ0NjA3OSwtMTUxNzQ3NzEwMSwtND
+eyJoaXN0b3J5IjpbLTM2NjI2MjE5MiwtMTUxNzQ3NzEwMSwtND
 UwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMzOTgxOCwtMjYwMDU2
 MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1Nyw3Mj
 c0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLTE2MDQw
