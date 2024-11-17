@@ -2539,7 +2539,7 @@ WantedBy=timers.target
 - Integração nativa com o `systemd` (logs em `journalctl`).
 - Opções adicionais, como **`AccuracySec`** (ajustar precisão) e **`Persistent`** (executar tarefas perdidas durante períodos de inatividade).
 
-Isso torna o `systemd` uma alternativa poderosa ao `cron` para tarefas agendadas! 😊
+Isso torna o `systemd` uma alternativa poderosa ao `cron` para tarefas agendadas! 
 
 ##### systemd-run (equivalente ao at)
 
@@ -2554,11 +2554,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMDAzMjY2LC0zNjYyNjIxOTIsLTE1MT
-c0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYzMzk4
-MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLTE1Nz
-A3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkw
-ODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NC
-wyODM4ODY0OTgsMTI0NDA3MzkzOSwtNjIxMzQ0NDY5LC0xNjc2
-NzkyMjk2XX0=
+eyJoaXN0b3J5IjpbLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMT
+UxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMz
+OTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMT
+U3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEz
+OTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MT
+Y0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0NjksLTE2
+NzY3OTIyOTZdfQ==
 -->
