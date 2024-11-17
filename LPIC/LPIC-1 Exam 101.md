@@ -2002,7 +2002,11 @@ A primeira entrada no arquivo `/etc/crontab`:
 
 Nesse caso, executa em todo minuto 17, em todas as horas, em todos os dias do mês, todo mês, todos os dias da semana, o que estiver dentro de `/etc/cron.hourly`. A execução de todos os arquivos se deve ao programa `run-parts`.
 
-- **crontab de sistema**: `/etc/crontab`e
+- **crontab de sistema**: `/etc/crontab` e `/etc/cron.d`
+	- `/etc/cron.hourly` (de hora em hora)
+	- `/etc/cron.daily` (diariamente)
+	- `/etc/cron.weekly` (semanalmente)
+	- `/etc/cron.monthly` (mensalmente)
 - **crontab de usuário**: `/var/spool/cron`
 
 
@@ -2186,11 +2190,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTY4NTY4MTAsLTEyOTU3NTU2OTcsLT
-IxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUx
-Mzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEzNDQ0Nj
-ksLTE2NzY3OTIyOTYsLTExNjM5ODA2OTcsNjUwMTI4MDE3LC0x
-MTc4Njk4MjQ1LC0xMTU2OTcwMjE3LDE4MDI4MzEwNzksMTMzNj
-A4MDU0OSwxMDQ2NDg0NDYsLTEzMzM0MTY1OSwxNzY3MDE2Nzc3
-LC0xNTc1OTE3NTI4XX0=
+eyJoaXN0b3J5IjpbMTM1ODQwOTkyNywtMTI5NTc1NTY5NywtMj
+EyMTM5MDg1NywtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEz
+NzcxNjQsMjgzODg2NDk4LDEyNDQwNzM5MzksLTYyMTM0NDQ2OS
+wtMTY3Njc5MjI5NiwtMTE2Mzk4MDY5Nyw2NTAxMjgwMTcsLTEx
+Nzg2OTgyNDUsLTExNTY5NzAyMTcsMTgwMjgzMTA3OSwxMzM2MD
+gwNTQ5LDEwNDY0ODQ0NiwtMTMzMzQxNjU5LDE3NjcwMTY3Nzcs
+LTE1NzU5MTc1MjhdfQ==
 -->
