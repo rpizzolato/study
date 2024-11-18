@@ -2648,9 +2648,12 @@ Em `/etc/timezone` está configurado o timezone atual (se der um `cat` nesse arq
 - `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
 
 Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
-e
+- export TZ=America/Chicago<br>
+
+**Faça um date antes e depois de alterar o timezone para perceber as mudanças:<br>
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTY2NzUwNywxODA4MzM0OTAwLDcxMD
+eyJoaXN0b3J5IjpbMTk2Njk0Mzc5MCwxODA4MzM0OTAwLDcxMD
 I4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1
 OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMz
 Y2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1
