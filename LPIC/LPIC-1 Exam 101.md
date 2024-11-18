@@ -2627,7 +2627,7 @@ Consulte as páginas de manual para aprender todos os usos possíveis de  `syste
 
 Para o Linux, o horário padrão é o UTC (Tempo Universal Coordenado). O UTC substituiu o GMT (Greenwich Meridian Time) ou Z (Zulu), que se baseava na hora local de Greenwich. Depois disso ele pega e converte para o que foi configurado de acordo com a localização.
 
-- `timedatectl`: é um date melhorado, mais completo, que descreve a **data/hora** em diferentes formatos
+- `timedatectl`: é um date melhorado, mais completo, que descreve a **data/hora** em diferentes formatos (embora o `date` também mostre o deslocamento em relação a UTC.)
 
 Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como ler, nele fica configurado a questão do **timezone**, horário de verão - **daylight saving time**). Lembrando que `/etc/localtime` aponta para `/usr/share/zoneinfo/America/Sao_Paulo` (a depender da sua localização).
 
@@ -2700,11 +2700,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODM3MDA0NiwxODc0ODQwMTUwLC0xNj
-U3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2
-NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3MTc1NDgzNS
-wtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEw
-Mjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzOD
-U5MCwtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0z
-NjYyNjIxOTJdfQ==
+eyJoaXN0b3J5IjpbLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwtMT
+Y1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0
+NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4Mz
+UsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcx
+MDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMz
+g1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwt
+MzY2MjYyMTkyXX0=
 -->
