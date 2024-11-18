@@ -2701,7 +2701,7 @@ Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
 - `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
 
-O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado. Se escrever um arquivo com caracteres especiais no Windows, e abrir no Linux, vai haver divergência (lembrando que para verificar a codificação do arquivo, pode-se utilizar o comando `file nome_arquivo`)
+O primeiro mais antigo é o ASCII (_American Standard Code for Information Interchange_), depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado. Se escrever um arquivo com caracteres especiais no Windows, e abrir no Linux, vai haver divergência (lembrando que para verificar a codificação do arquivo, pode-se utilizar o comando `file nome_arquivo`)
 
 - `iconv -f ISO-8859-1 -t UTF-8 nome_do_arquivo`: (`-f` ou `--from-code` e `-t` ou `--to-encode`) converte o arquivo, que antes estava na decodificação do Windows, para a codificação que o Linux entende. (para casos que um texto no Windows não leia no Linux)
 
@@ -2710,11 +2710,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMD
-MzMDUwNjM5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2
-NzY3LC0xMzQ1NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC
-0xODg2Nzg5OTI1LC0xMDcxNzU0ODM1LC0xMTAyMzUzMDY4LDIw
-Njg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgwMywtMTQwNzc4Mj
-AzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1MDEs
-ODE4MDY0MTVdfQ==
+eyJoaXN0b3J5IjpbLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMD
+k4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwtMTY1NzY5
+NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0NjY2LD
+EzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTEx
+MDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4OD
+AzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OTAs
+LTE1MzY0OTUwMV19
 -->
