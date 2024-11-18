@@ -2659,12 +2659,14 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
     Mon Nov 18 15:23:05 AM PST 2024
 
 *Lembrando que isso apenas está traduzindo o que está internamente no UTC. Para voltar a data no timezone que estava antes, basta executar: `unset TZ`.
+
+A
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxOD
-A4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgw
-NjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMT
-k1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAz
-ODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNj
-IsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQz
-NDg5OF19
+eyJoaXN0b3J5IjpbMzg5MjQzNTIzLC0xMTAyMzUzMDY4LDIwNj
+g3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgwMywtMTQwNzc4MjAz
+NSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1MDEsOD
+E4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMTUxNzQ3
+NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMzOTgxOC
+wtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0
+NDk1N119
 -->
