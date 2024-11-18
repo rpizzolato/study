@@ -2677,6 +2677,8 @@ Para alterar por meio do `/etc/localtime`, basta remover o link atual, e apontar
 
 Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são refletidas de imediato.
 
+Uma máquina conectada pode ser acessada de diferentes partes do mundo, de forma que é aconselhável definir o relógio do hardware para UTC (o fuso horário GMT+0) e deixar a escolha do fuso horário para cada caso particular. Os serviços em nuvem, por exemplo, costumam ser configurados para usar UTC, o que pode ajudar a mitigar eventuais inconsistências entre o horário local e o horário dos clientes ou de outros servidores. Por outro lado, os usuários que abrem uma sessão remota no servidor podem querer usar seu fuso horário local. Assim, caberá ao sistema operacional configurar o fuso horário correto de acordo com cada caso.
+
 #### Localização e Internacionalização - Idioma, Linguagem e Codificação
 
 - `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc, assim como o tipo de codificação de caracteres. (tudo isso são variáveis de ambiente - vide `env | grep "^LC"`, perceba que há uma chamada `LC_ALL`, que sobrescreve todas as demais).
@@ -2698,11 +2700,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0ND
-E5MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0
-NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNj
-gsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3
-NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OT
-UwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0x
-NTE3NDc3MTAxXX0=
+eyJoaXN0b3J5IjpbLTYxODM3MDA0NiwxODc0ODQwMTUwLC0xNj
+U3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2
+NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3MTc1NDgzNS
+wtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEw
+Mjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzOD
+U5MCwtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0z
+NjYyNjIxOTJdfQ==
 -->
