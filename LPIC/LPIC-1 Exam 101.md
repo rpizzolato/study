@@ -2673,16 +2673,16 @@ Para alterar por meio do `/etc/localtime`, basta remover o link atual, e apontar
     
     rm -f /etc/localtime
     
-    ls -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
+    ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 
 Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são refletidas de imediato.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4MDU5Mjk2LC0xMDcxNzU0ODM1LC0xMT
-AyMzUzMDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgw
-MywtMTQwNzc4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC
-0xNTM2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2
-MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNj
-MsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMw
-NzIwM119
+eyJoaXN0b3J5IjpbLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLT
+ExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4
+ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OT
+AsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMzY2
+MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1MT
+M2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsODc3NTk3Njg1LDYw
+MzA3MjAzXX0=
 -->
