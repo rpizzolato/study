@@ -2627,7 +2627,7 @@ Consulte as páginas de manual para aprender todos os usos possíveis de  `syste
 
 Para o Linux, o horário padrão é o UTC (Tempo Universal Coordenado). O UTC substituiu o GMT (Greenwich Meridian Time) ou Z (Zulu), que se baseava na hora local de Greenwich. Depois disso ele pega e converte para o que foi configurado de acordo com a localização.
 
-- `timedatectl`: é um date melhorado, mais completo, que descreve a **data/hora** em diferentes formatos (embora o `date` também mostre o deslocamento em relação a UTC.)
+- `timedatectl`: (disponível em distribuições que usam o `systemd`) é um date melhorado, mais completo, que descreve a **data/hora** em diferentes formatos (embora o `date` também mostre o deslocamento em relação a UTC.)
 
 Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como ler, nele fica configurado a questão do **timezone**, horário de verão - **daylight saving time**). Lembrando que `/etc/localtime` aponta para `/usr/share/zoneinfo/America/Sao_Paulo` (a depender da sua localização).
 
@@ -2643,12 +2643,13 @@ Vendo em `/usr/share/zoneinfo/Brazil` é possível notar onde `/etc/localtime` e
     lrwxrwxrwx 1 root root 20 Nov  8 16:20 East -> ../America/Sao_Paulo
     lrwxrwxrwx 1 root root 17 Nov  8 16:20 West -> ../America/Manaus
 
-Em `/etc/timezone` está configurado o timezone atual (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
+Em `/etc/timezone` está contidoonfigurado o timezone atual (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
 
 - `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
 
 Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
-- export TZ=America/Chicago<br>
+
+    - export TZ=America/Chicago<br>
 
 *Faça um date antes e depois de alterar o timezone para perceber as mudanças:<br>
 
@@ -2700,11 +2701,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwtMT
-Y1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0
-NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4Mz
-UsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcx
-MDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMz
-g1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwt
-MzY2MjYyMTkyXX0=
+eyJoaXN0b3J5IjpbLTEwOTE4NjEzMTAsLTIwMzMwNTA2MzksMT
+g3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0
+NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5Mj
+UsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwx
+ODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMT
+gwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwt
+MTk1OTUyOTk2OV19
 -->
