@@ -2634,7 +2634,7 @@ Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como 
     ls -l /etc/localtime 
     lrwxrwxrwx 1 root root 37 Nov  8 16:21 /etc/localtime -> /usr/share/zoneinfo/America/Sao_Paulo
 
-
+Vendo em `/usr/share/zoneinfo/Brazil` é possível notar onde `/etc/localtime` está apontando:
 
     ls -l /usr/share/zoneinfo/Brazil/
     total 0
@@ -2644,7 +2644,7 @@ Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como 
     lrwxrwxrwx 1 root root 17 Nov  8 16:20 West -> ../America/Manaus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjY4Mjc1Niw3MTAyODgwMywtMTQwNz
+eyJoaXN0b3J5IjpbMTM4ODY4MTM3NCw3MTAyODgwMywtMTQwNz
 c4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1
 MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMT
 UxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMz
