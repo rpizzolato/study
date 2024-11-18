@@ -2287,6 +2287,18 @@ Crie um job agendado simples que execute o comando  `date`  todas as sextas-feir
 
 A saída é enviada ao usuário; para visualizá-la, use o comando  `mail`(no caso, é possível ver a saída com esse comando, mas precisa ter o pacote **mailutils** instalado (`apt install mailutisl`)
 
+#### Exercício com MAILTO
+
+Como é possível enviar a saída e os erros do seu trabalho agendado para a conta de usuário  `emma`  via email? E como evitar o envio da saída padrão e erros por email?
+
+Para enviar a saída padrão e o erro para  `emma`, definimos a variável de ambiente  `MAILTO`  em nosso arquivo  `crontab`  desta forma:
+
+    MAILTO="emma"
+
+Para dizer ao  `cron`  que nenhum email deve ser enviado, atribuímos um valor vazio à variável de ambiente  `MAILTO`.
+
+    MAILTO=""
+
 #### at (agendamento de uma execução)
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
@@ -2562,11 +2574,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2Nj
-I2MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEz
-NjMsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MD
-MwNzIwMywtMTU3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2
-OTcsLTIxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NC
-wxODUxMzc3MTY0LDI4Mzg4NjQ5OCwxMjQ0MDczOTM5LC02MjEz
-NDQ0NjldfQ==
+eyJoaXN0b3J5IjpbLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OT
+UyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0
+MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsOD
+c3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQzNDg5
+OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMTYwNDA4OTI5MS
+wtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQw
+NzM5MzldfQ==
 -->
