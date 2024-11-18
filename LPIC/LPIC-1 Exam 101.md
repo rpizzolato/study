@@ -2679,9 +2679,10 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 #### Localização e Internacionalização - Idioma, Linguagem e Codificação
 
-- locale: 
+- `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTk2NzQyMDIsLTE4ODY3ODk5MjUsLT
+eyJoaXN0b3J5IjpbLTE5NTM4NzU3OTIsLTE4ODY3ODk5MjUsLT
 EwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4
 MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNj
 gsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1
