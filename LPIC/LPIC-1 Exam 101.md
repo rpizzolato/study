@@ -2660,13 +2660,13 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
 
 *Lembrando que isso apenas está traduzindo o que está internamente no UTC. Para voltar a data no timezone que estava antes, basta executar: `unset TZ`.
 
-Ainda alterando o `TZ`, se criar um arquivo, a data de criação atualiza caso o `TZ` seja alterado.
+Ainda alterando o `TZ`, se criar um arquivo, a data de criação atualiza caso o `TZ` seja alterado. Isso se torna intere
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMj
-A2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3Nzgy
-MDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMS
-w4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3
-NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5OD
-E4LC0yNjAwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcw
-NzQ0OTU3XX0=
+eyJoaXN0b3J5IjpbMTM1NzMyOTYyMCwtMTA3MTc1NDgzNSwtMT
+EwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4
+MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MC
+wtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYy
+NjIxOTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMz
+YzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAz
+MDcyMDNdfQ==
 -->
