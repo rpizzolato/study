@@ -2666,9 +2666,9 @@ A mudança por meio da variável prevalece a configuração em `/etc/localtime`.
 
     TZ=:/usr/share/zoneinfo/America/Sao_Paulo
 
-Para alterar por meio do /etc/localtime
+Para alterar por meio do /etc/localtime, basta remover o link atual, e apontar para um novo (esse novo é possível consultar por meio das opções que há em /etc
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjcwNDI1NSwtMTA3MTc1NDgzNSwtMT
+eyJoaXN0b3J5IjpbMTY2NjM2OTA5MiwtMTA3MTc1NDgzNSwtMT
 EwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4
 MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MC
 wtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYy
