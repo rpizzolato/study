@@ -2306,7 +2306,9 @@ Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
     at now +2hour
     at> echo "Hora cafe"
 
-Executa o echo `"Hora do café"` daqui duas horas, e poderia ir adicionando comandos. No final use `Ctrl+D` para adicionar essa tarefa (job).
+Executa o echo `"Hora do café"` daqui duas horas, e poderia ir adicionando comandos. No final use `Ctrl+D` para adicionar essa tarefa (job).<br>
+**(Como no caso do `cron`, a saída padrão e o erro são enviados por email)<br>
+***Observe que o daemon `atd` precisará estar rodando no sistema para ser possível usar o agendamento de tarefas `at`
 
 - `atq` ou `at -l`: mostra os jobs que estão aguardando (vem de `queue`).
 
@@ -2574,11 +2576,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyODA0NjM3MiwtMTUzNjQ5NTAxLDgxOD
-A2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIxOTIsLTE1MTc0Nzcx
-MDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYzMzk4MTgsLT
-I2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLTE1NzA3NDQ5
-NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkwODU3LC
-0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NCwyODM4
-ODY0OThdfQ==
+eyJoaXN0b3J5IjpbLTEyMzMxODI5MzIsLTE1MzY0OTUwMSw4MT
+gwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3
+MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC
+0yNjAwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0
+OTU3LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1Ny
+wtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgz
+ODg2NDk4XX0=
 -->
