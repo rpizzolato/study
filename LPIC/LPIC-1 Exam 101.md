@@ -2310,6 +2310,10 @@ Executa o echo `"Hora do café"` daqui duas horas, e poderia ir adicionando coma
 **(Como no caso do `cron`, a saída padrão e o erro são enviados por email)<br>
 ***Observe que o daemon `atd` precisará estar rodando no sistema para ser possível usar o agendamento de tarefas `at`
 
+>[!NOTE]
+>
+>No Linux, o comando `batch` é semelhante a `at`, porém os jobs `batch` são executados apenas quando a carga do sistema está baixa o suficiente para permiti-lo.
+
 - `atq` ou `at -l`: mostra os jobs que estão aguardando (vem de `queue`).
 
 ```
@@ -2329,6 +2333,24 @@ Para remover algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
 - `/etc/at.allow`: permite quais usuário usar o `at`
 - `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchido com usuários do sistema, permitindo somente usuários comuns utilizar)
+
+**As opções mais importantes do comando**  `at`  são:
+
+- `-c`: imprime os comandos de um ID de trabalho específico na saída padrão.
+- `-d`: exclui trabalhos com base em seu ID de trabalho. É um alias para  `atrm`.
+- `-f`: lê o job em um arquivo em vez da entrada padrão.
+- `-l`: lista as tarefas pendentes do usuário. Se o usuário for root, todos os trabalhos de todos os usuários serão listados. É um alias para  `atq`.
+- `-m`
+
+Envia um email para o usuário no final do trabalho, mesmo se não houver saída.
+
+`-q`
+
+Especifica uma fila na forma de uma única letra de  `a`  a  `z`  e de  `A`  a  `Z`  (por padrão,  `a`  para  `at`  e  `b`  para  `batch`). Os jobs nas filas com as letras mais altas são executados com um valor nice maior. Os jobs enviados a uma fila com uma letra maiúscula são tratados como trabalhos em lote (`batch`).
+
+`-v`
+
+Mostra a hora em que o trabalho será executado antes de ler o trabalho.
 
 #### Agendamento de Tarefas - systemd timer
 
@@ -2576,11 +2598,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzMxODI5MzIsLTE1MzY0OTUwMSw4MT
-gwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3
-MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC
-0yNjAwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0
-OTU3LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1Ny
-wtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgz
-ODg2NDk4XX0=
+eyJoaXN0b3J5IjpbODQzMjI3NjcxLC0xNTM2NDk1MDEsODE4MD
+Y0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMTUxNzQ3NzEw
+MSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMzOTgxOCwtMj
+YwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMTU3MDc0NDk1
+Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEzOTA4NTcsLT
+E2MDQwODkyOTEsLTY2NzUyODk3NCwxODUxMzc3MTY0LDI4Mzg4
+NjQ5OF19
 -->
