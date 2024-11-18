@@ -2668,18 +2668,21 @@ A mudança por meio da variável prevalece a configuração em `/etc/localtime`.
 
 Para alterar por meio do `/etc/localtime`, basta remover o link atual, e apontar para um novo (esse novo é possível consultar por meio das opções que há em `/usr/share/zoneinfo`)
 
-$ ls -l /etc/localtime
-/etc/localtime -> /usr/share/zoneinfo/America/Sao_Paulo
+    $ ls -l /etc/localtime
+    /etc/localtime -> /usr/share/zoneinfo/America/Sao_Paulo
+    
+    rm -f /etc/localtime
+    
+    ls -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 
-rm -f /etc/localtime
+Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são refletidas de imediato.
 
-ls -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1Mjc1NTIyNCwtMTA3MTc1NDgzNSwtMT
-EwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4
-MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MC
-wtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYy
-NjIxOTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMz
-YzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAz
-MDcyMDNdfQ==
+eyJoaXN0b3J5IjpbMzY4MDU5Mjk2LC0xMDcxNzU0ODM1LC0xMT
+AyMzUzMDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgw
+MywtMTQwNzc4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC
+0xNTM2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2
+MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNj
+MsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMw
+NzIwM119
 -->
