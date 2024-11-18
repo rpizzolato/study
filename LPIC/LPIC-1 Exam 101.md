@@ -2710,14 +2710,9 @@ O primeiro mais antigo é o ASCII (_American Standard Code for Information Inter
 >
 >O comando `localectl`, disponível em sistemas que empregam o _systemd_ como gerenciador de sistema, também pode ser usado para consultar e alterar a localidade do sistema. Por exemplo: `localectl set-locale LANG=en_US.UTF-8`.
 
-Além da variável  `LANG`, outras variáveis de ambiente afetam aspectos específicos da localidade, como o símbolo monetário ou o separador de milhar correto para números::
-- `LC_COLLATE`
-
-Define a ordem alfabética. Uma de suas finalidades é definir a ordem em que os arquivos e diretórios são listados.
-
-`LC_CTYPE`
-
-Define como o sistema tratará certos conjuntos de caracteres. Ele define, por exemplo, quais caracteres considerar como  _maiúsculas_  ou  _minúsculas_.
+Além da variável  `LANG`, outras variáveis de ambiente afetam aspectos específicos da localidade, como o símbolo monetário ou o separador de milhar correto para números:
+- `LC_COLLATE`: define a ordem alfabética. Uma de suas finalidades é definir a ordem em que os arquivos e diretórios são listados.
+- `LC_CTYPE`: define como o sistema tratará certos conjuntos de caracteres. Ele define, por exemplo, quais caracteres considerar como  _maiúsculas_  ou  _minúsculas_.
 
 `LC_MESSAGES`
 
@@ -2768,7 +2763,7 @@ seg out 21 10:45:21 -03 2019
 $ **env LC_ALL=en_US.UTF-8 date**
 Mon Oct 21 10:45:21 -03 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMDI4NDQwMiwtODc5NDI5MzU0LDYyND
+eyJoaXN0b3J5IjpbMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyND
 k1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQw
 MTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNS
 w3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3
