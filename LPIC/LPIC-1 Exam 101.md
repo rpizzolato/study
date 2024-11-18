@@ -2677,13 +2677,15 @@ Para alterar por meio do `/etc/localtime`, basta remover o link atual, e apontar
 
 Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são refletidas de imediato.
 
-Localização e Internacionalização - Idioma, Linguagem e Codificação
+#### Localização e Internacionalização - Idioma, Linguagem e Codificação
+
+- locale: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NTU4MjA5LC0xODg2Nzg5OTI1LC0xMD
-cxNzU0ODM1LC0xMTAyMzUzMDY4LDIwNjg3OTQ5MTAsMTgwODMz
-NDkwMCw3MTAyODgwMywtMTQwNzc4MjAzNSwtNTg1MjE4MDY4LC
-0xMDY1MTM4NTkwLC0xNTM2NDk1MDEsODE4MDY0MTUsLTE5NTk1
-Mjk5NjksLTM2NjI2MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5ND
-MzLC04ODExNTEzNjMsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3
-NzU5NzY4NV19
+eyJoaXN0b3J5IjpbLTE0OTk2NzQyMDIsLTE4ODY3ODk5MjUsLT
+EwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4
+MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNj
+gsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1
+OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzOD
+k0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIs
+ODc3NTk3Njg1XX0=
 -->
