@@ -2629,15 +2629,17 @@ Para o Linux, o horário padrão é o UTC (Tempo Universal Coordenado). O UTC su
 
 - `timedatectl`: é um date melhorado, mais completo, que descreve a **data/hora** em diferentes formatos
 
-Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como ler, nele fica configurado a questão do **timezone**, horário de verão - **daylight saving time**). Lembrando que `/etc/localtime` aponta para `/usr/share/zoneinfo/America/Sao_Paulo` (a depender da sua localização)
+Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como ler, nele fica configurado a questão do **timezone**, horário de verão - **daylight saving time**). Lembrando que `/etc/localtime` aponta para `/usr/share/zoneinfo/America/Sao_Paulo` (a depender da sua localização).
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwMjg4MDMsLTE0MDc3ODIwMzUsLTU4NT
-IxODA2OCwtMTA2NTEzODU5MCwtMTUzNjQ5NTAxLDgxODA2NDE1
-LC0xOTU5NTI5OTY5LC0zNjYyNjIxOTIsLTE1MTc0NzcxMDEsLT
-Q1MDM4OTQzMywtODgxMTUxMzYzLDExMjYzMzk4MTgsLTI2MDA1
-NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLTE1NzA3NDQ5NTcsNz
-I3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkwODU3LC0xNjA0
-MDg5MjkxXX0=
+eyJoaXN0b3J5IjpbLTEyMzQ5MzIzMjksNzEwMjg4MDMsLTE0MD
+c3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MCwtMTUzNjQ5
+NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIxOTIsLT
+E1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYz
+Mzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLT
+E1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIx
+MzkwODU3XX0=
 -->
