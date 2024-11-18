@@ -2681,16 +2681,18 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 - `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc, assim como o tipo de codificação de caracteres. (tudo isso são variáveis de ambiente - vide `env | grep "^LC"`, perceba que há uma chamada `LC_ALL`, que sobrescreve todas as demais).
 
+É possível configurar pelo `.bashrc` ou `/etc/profile`, definindo diretamente as variáveis por sessão ou para todos os usuários, respectivamente.
+
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
 O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado.
 
 - `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
 
-´
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcyOTM4OTk0LDEzNDY3Mjc0NzAsLTE4OD
+eyJoaXN0b3J5IjpbNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4OD
 Y3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5
 NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC
 01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgw
