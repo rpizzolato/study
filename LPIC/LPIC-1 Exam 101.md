@@ -2683,6 +2683,8 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 É possível configurar pelo `.bashrc` ou `/etc/profile`, definindo diretamente as variáveis por sessão ou para todos os usuários, respectivamente.
 
+Por exemplo, caso
+
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
 O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado.
@@ -2692,11 +2694,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4OD
-Y3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5
-NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC
-01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgw
-NjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MT
-AxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0y
-NjAwNTYxNjJdfQ==
+eyJoaXN0b3J5IjpbNzE0NDc2ODIxLDc1NDU2NDY2NiwxMzQ2Nz
+I3NDcwLC0xODg2Nzg5OTI1LC0xMDcxNzU0ODM1LC0xMTAyMzUz
+MDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgwMywtMT
+QwNzc4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2
+NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5Mi
+wtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEy
+NjMzOTgxOF19
 -->
