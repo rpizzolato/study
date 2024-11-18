@@ -2660,13 +2660,13 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
 
 *Lembrando que isso apenas está traduzindo o que está internamente no UTC. Para voltar a data no timezone que estava antes, basta executar: `unset TZ`.
 
-Ainda alterando o `TZ`, se criar um arquivo, a data de criação atualiza caso o `TZ` seja alterado. Isso se torna intere
+Ainda alterando o `TZ`, se criar um arquivo, a data de criação atualiza caso o `TZ` seja alterado. Isso se torna interessante quando há usuário de diferentes timezones, para que possa ajustar de acordo com a localização (ajustar no `.bashrc`, por exemplo - ou até mesmo para todos os usuário, em `/etc/profile`).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzMyOTYyMCwtMTA3MTc1NDgzNSwtMT
-EwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4
-MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MC
-wtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYy
-NjIxOTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMz
-YzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAz
-MDcyMDNdfQ==
+eyJoaXN0b3J5IjpbMzcyMjA5MDAxLC0xMDcxNzU0ODM1LC0xMT
+AyMzUzMDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgw
+MywtMTQwNzc4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC
+0xNTM2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2
+MjE5MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNj
+MsMTEyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMw
+NzIwM119
 -->
