@@ -2687,20 +2687,22 @@ Por exemplo, caso esteja utilizando o modelo brasileiro de representação dos n
 
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
+- `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
+
 O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado. Se escrever um arquivo com caracteres especiais no Windows, e abrir no Linux, vai haver divergência (lembrando que para verificar a codificação do arquivo, pode-se utilizar o comando `file nome_arquivo`)
 
-- `iconv -f ISO-8859-1 -t UTF-8 nome_do_arquivo`: (`-f` ou `--from-code` e `-t` ou `--to-encode`) converte o arquivo, que antes estava na decodificação do Windows, para a codificação que o Linux entende.
+- `iconv -f ISO-8859-1 -t UTF-8 nome_do_arquivo`: (`-f` ou `--from-code` e `-t` ou `--to-encode`) converte o arquivo, que antes estava na decodificação do Windows, para a codificação que o Linux entende. (para casos que um texto no Windows não leia no Linux)
 
-- `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMz
-Q1NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0xODg2Nzg5
-OTI1LC0xMDcxNzU0ODM1LC0xMTAyMzUzMDY4LDIwNjg3OTQ5MT
-AsMTgwODMzNDkwMCw3MTAyODgwMywtMTQwNzc4MjAzNSwtNTg1
-MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1MDEsODE4MDY0MT
-UsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMTUxNzQ3NzEwMSwt
-NDUwMzg5NDMzXX0=
+eyJoaXN0b3J5IjpbMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0ND
+E5MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0
+NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNj
+gsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3
+NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OT
+UwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0x
+NTE3NDc3MTAxXX0=
 -->
