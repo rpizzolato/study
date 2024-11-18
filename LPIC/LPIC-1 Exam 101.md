@@ -2683,7 +2683,7 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 É possível configurar pelo `.bashrc` ou `/etc/profile`, definindo diretamente as variáveis por sessão ou para todos os usuários, respectivamente.
 
-Por exemplo, caso
+Por exemplo, caso esteja utilizando o modelo brasileiro de representação dos números, em uma moeda, e queira mudar para o modelo dos Estados Unidos, use: `export  LC_AL=en_US.UTF-8`. Para remover, `unset LC_ALL`.
 
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
@@ -2694,11 +2694,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE0NDc2ODIxLDc1NDU2NDY2NiwxMzQ2Nz
-I3NDcwLC0xODg2Nzg5OTI1LC0xMDcxNzU0ODM1LC0xMTAyMzUz
-MDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3MTAyODgwMywtMT
-QwNzc4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2
-NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5Mi
-wtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEy
-NjMzOTgxOF19
+eyJoaXN0b3J5IjpbLTEzNDU0NjQyMzUsNzU0NTY0NjY2LDEzND
+Y3Mjc0NzAsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIz
+NTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC
+0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1OTAsLTE1
+MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMT
+kyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2Mywx
+MTI2MzM5ODE4XX0=
 -->
