@@ -2650,7 +2650,7 @@ Os nomes genéricos de fusos horários indicados pela diferença em relação a 
     $ **cat /etc/timezone**
     Etc/GMT+3
 
-- `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
+- `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado. (Também é possível especificar o fuso horário com coordenadas geográficas ou com a notação de deslocamento, também conhecida como _formato Posix TZ_)
 
 Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
 
@@ -2706,7 +2706,7 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNDI2NTc1MSwtMjAwOTgxNjQ4MCwtMj
+eyJoaXN0b3J5IjpbMTM1ODQ5OTYyMCwtMjAwOTgxNjQ4MCwtMj
 AzMzA1MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkz
 Njc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MC
 wtMTg4Njc4OTkyNSwtMTA3MTc1NDgzNSwtMTEwMjM1MzA2OCwy
