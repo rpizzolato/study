@@ -2681,10 +2681,12 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 - `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc, assim como o tipo de codificação de caracteres.
 
-Ex. en_US.UTF-8 ou pt_BR.UTF-8
+Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
+
+O primeiro mais antigo é o ASCII, depois foi melhorado para ISO-8859, e UTF-8 é o mais recente/utilizado.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDg3MTAzNiwtMTg4Njc4OTkyNSwtMT
+eyJoaXN0b3J5IjpbLTQ4ODQyODMwNywtMTg4Njc4OTkyNSwtMT
 A3MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgz
 MzQ5MDAsNzEwMjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OC
 wtMTA2NTEzODU5MCwtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5
