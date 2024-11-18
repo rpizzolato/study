@@ -2359,6 +2359,8 @@ Para **remover** algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 
 - `-q`: especifica uma fila na forma de uma única letra de  `a`  a  `z`  e de  `A`  a  `Z`  (por padrão,  `a`  para  `at`  e  `b`  para  `batch`). Os jobs nas filas com as letras mais altas são executados com um valor nice maior. Os jobs enviados a uma fila com uma letra maiúscula são tratados como trabalhos em lote (`batch`).
 - `-v`: mostra a hora em que o trabalho será executado antes de ler o trabalho.
 
+Leia o arquivo `timespec` na árvore `/usr/share` para saber mais sobre a definição exata das especificações de data e hora.
+
 #### Agendamento de Tarefas - systemd timer
 
 - `systemct list-timers`: lista os agendamentos que já estão no sistema, no caso `UNITs`, com sufixo  (terminam com)`.timer`, ligadas às `ACTIVATES`, com sufixo (terminam com) `.service` (Por padrão, um `timer` ativa um serviço com o mesmo nome, exceto pelo sufixo).
@@ -2605,7 +2607,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0OTczMDk2LC0xMDY1MTM4NTkwLC0xNT
+eyJoaXN0b3J5IjpbMTQ0NTIwMjkyLC0xMDY1MTM4NTkwLC0xNT
 M2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5
 MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMT
 EyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIw
