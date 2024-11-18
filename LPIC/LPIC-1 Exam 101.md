@@ -2596,6 +2596,16 @@ Isso torna o `systemd` uma alternativa poderosa ao `cron` para tarefas agendadas
 
 ##### systemd-run (equivalente ao at)
 
+Normalmente ele é usado para criar uma unidade transiente de temporizador para que um comando seja executado em um momento específico sem a necessidade de se criar um arquivo de serviço
+
+Por exemplo, atuando como root, você pode executar o comando  `date`  às 11h30 em 06/10/2019 usando o seguinte:
+
+    # **systemd-run --on-calendar='2019-10-06 11:30' date**
+
+Se quiser executar o script  `foo.sh`, localizado em seu diretório atual, depois de dois minutos, use:
+
+    # **systemd-run --on-active="2m" ./foo.sh**
+
 - `system-run --on-active=60s /bin/touch /tmp/exemplo-run.txt`: roda após **60 segundos** o comando `touch` que criar o arquivo `exemplo-run.txt` em `/tmp`
 - `system-run --on-active=60s --time-property=AccuracySec=1ms /bin/touch /tmp/exemplo-run.txt`: faz o mesmo do comando anterior, mas em system-run também tem a questão de prioridade, e se quiser com precisão, precisar incluir o argumento `--time-property`
 
@@ -2606,12 +2616,14 @@ Se pegar esse `.timer` e olhar no `journalctl`, com a opção `-u` `--unit`, mai
 Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi criado, vai estar listado, mostrando quanto tempo falta para sua hora de executar.
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
+
+Consulte as páginas de manual para aprender todos os usos possíveis de  `systemd-run`  com  `systemd-run(1)`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NTIwMjkyLC0xMDY1MTM4NTkwLC0xNT
-M2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5
-MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMT
-EyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIw
-MywtMTU3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLT
-IxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUx
-Mzc3MTY0XX0=
+eyJoaXN0b3J5IjpbLTI2NzI2ODgxNSwtMTA2NTEzODU5MCwtMT
+UzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIx
+OTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLD
+ExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcy
+MDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC
+0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1
+MTM3NzE2NF19
 -->
