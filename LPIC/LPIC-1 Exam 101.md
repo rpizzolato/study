@@ -2713,8 +2713,7 @@ O primeiro mais antigo é o ASCII (_American Standard Code for Information Inter
 Além da variável  `LANG`, outras variáveis de ambiente afetam aspectos específicos da localidade, como o símbolo monetário ou o separador de milhar correto para números:
 - `LC_COLLATE`: define a ordem alfabética. Uma de suas finalidades é definir a ordem em que os arquivos e diretórios são listados.
 - `LC_CTYPE`: define como o sistema tratará certos conjuntos de caracteres. Ele define, por exemplo, quais caracteres considerar como  _maiúsculas_  ou  _minúsculas_.
-
-`LC_MESSAGES`
+- `LC_MESSAGES`
 
 Define o idioma para exibir as mensagens de programas (principalmente programas do GNU).
 
@@ -2763,11 +2762,11 @@ seg out 21 10:45:21 -03 2019
 $ **env LC_ALL=en_US.UTF-8 date**
 Mon Oct 21 10:45:21 -03 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyND
-k1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQw
-MTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNS
-w3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3
-MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMz
-Q5MDAsNzEwMjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwt
-MTA2NTEzODU5MF19
+eyJoaXN0b3J5IjpbOTkxMDk3MjEyLDE4MzEwMzUyOTMsLTg3OT
+QyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2
+MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLT
+EzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3
+ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5ND
+kxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01
+ODUyMTgwNjhdfQ==
 -->
