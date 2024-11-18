@@ -2708,6 +2708,12 @@ O primeiro mais antigo é o ASCII (_American Standard Code for Information Inter
 - `iconv -f ISO-8859-1 -t UTF-8 nome_do_arquivo`: (`-f` ou `--from-code` e `-t` ou `--to-encode`) converte o arquivo, que antes estava na decodificação do Windows, para a codificação que o Linux entende. (para casos que um texto no Windows não leia no Linux)
 Para listar todas as codificações suportadas pelo comando `iconv`, usamos o comando `iconv -l` ou `iconv --list`. Ao invés de usar o redirecionamento de saída, como no exemplo, a opção `-o converted.txt` ou `--output converted.txt` também faz o serviço.
 
+###
+
+Os caracteres dos arquivos de texto podem não ser exibidos corretamente em um sistema com uma codificação de caracteres diferente da usada na criação do documento de texto. Como o  `iconv`  pode ser usado para converter o arquivo  `old.txt`, codificado em WINDOWS-1252, no arquivo  `new.txt`, que usa a codificação UTF-8?
+
+O comando  `iconv -f WINDOWS-1252 -t UTF-8 -o new.txt old.txt`  realizará a conversão desejada.
+
 
 >[!TIP]
 >
@@ -2752,7 +2758,7 @@ A modificação da variável `LC_ALL` fez com que ambas as abreviações de dia 
 
 Algumas configurações de localização alteram a forma como os programas lidam com a ordem alfabética e formatos de numeração. Embora os programas convencionais geralmente sejam capazes de escolher corretamente uma localidade comum para essas situações, os scripts podem se comportar de forma inesperada ao tentar ordenar corretamente uma lista de itens em ordem alfabética, por exemplo. Por este motivo, recomenda-se definir a variável de ambiente `LANG` para a localidade comum `C`, como em `LANG=C`, para que o script produza resultados inequívocos, independentemente das definições de localização usadas no sistema onde é executado. A localidade C realiza apenas uma comparação simples de bytes e, portanto, também terá um desempenho melhor do que as outras.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjgzMjQ0ODYsMTgzMTAzNTI5MywtOD
+eyJoaXN0b3J5IjpbLTE1Nzk5NjA4NjUsMTgzMTAzNTI5MywtOD
 c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
 MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Ny
 wtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4
