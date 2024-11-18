@@ -2713,60 +2713,44 @@ O primeiro mais antigo é o ASCII (_American Standard Code for Information Inter
 Além da variável  `LANG`, outras variáveis de ambiente afetam aspectos específicos da localidade, como o símbolo monetário ou o separador de milhar correto para números:
 - `LC_COLLATE`: define a ordem alfabética. Uma de suas finalidades é definir a ordem em que os arquivos e diretórios são listados.
 - `LC_CTYPE`: define como o sistema tratará certos conjuntos de caracteres. Ele define, por exemplo, quais caracteres considerar como  _maiúsculas_  ou  _minúsculas_.
-- `LC_MESSAGES`
-
-Define o idioma para exibir as mensagens de programas (principalmente programas do GNU).
-
-`LC_MONETARY`
-
-Define a unidade monetária e o formato da moeda.
-
-`LC_NUMERIC`
-
-Define o formato numérico para valores não-monetários. Sua finalidade principal é definir os separadores de milhar e decimais.
-
-`LC_TIME`
-
-Define o formato de hora e data.
-
-`LC_PAPER`
-
-Define o tamanho padrão do papel.
-
-`LC_ALL`
-
-Sobrepõe todas as outras variáveis, incluindo  `LANG`.
+- `LC_MESSAGES`: define o idioma para exibir as mensagens de programas (principalmente programas do GNU).
+- `LC_MONETARY`: define a unidade monetária e o formato da moeda.
+- `LC_NUMERIC`: define o formato numérico para valores não-monetários. Sua finalidade principal é definir os separadores de milhar e decimais.
+- `LC_TIME`: define o formato de hora e data.
+- `LC_PAPER`: define o tamanho padrão do papel.
+- `LC_ALL`: sobrepõe todas as outras variáveis, incluindo  `LANG`.
 
 O comando  `locale`  mostra todas as variáveis definidas na configuração de localidade atual:
 
-$ **locale**
-LANG=pt_BR.UTF-8
-LC_CTYPE="pt_BR.UTF-8"
-LC_NUMERIC=pt_BR.UTF-8
-LC_TIME=pt_BR.UTF-8
-LC_COLLATE="pt_BR.UTF-8"
-LC_MONETARY=pt_BR.UTF-8
-LC_MESSAGES="pt_BR.UTF-8"
-LC_PAPER=pt_BR.UTF-8
-LC_NAME=pt_BR.UTF-8
-LC_ADDRESS=pt_BR.UTF-8
-LC_TELEPHONE=pt_BR.UTF-8
-LC_MEASUREMENT=pt_BR.UTF-8
-LC_IDENTIFICATION=pt_BR.UTF-8
-LC_ALL=
+    $ **locale**
+    LANG=pt_BR.UTF-8
+    LC_CTYPE="pt_BR.UTF-8"
+    LC_NUMERIC=pt_BR.UTF-8
+    LC_TIME=pt_BR.UTF-8
+    LC_COLLATE="pt_BR.UTF-8"
+    LC_MONETARY=pt_BR.UTF-8
+    LC_MESSAGES="pt_BR.UTF-8"
+    LC_PAPER=pt_BR.UTF-8
+    LC_NAME=pt_BR.UTF-8
+    LC_ADDRESS=pt_BR.UTF-8
+    LC_TELEPHONE=pt_BR.UTF-8
+    LC_MEASUREMENT=pt_BR.UTF-8
+    LC_IDENTIFICATION=pt_BR.UTF-8
+    LC_ALL=
 
 A única variável indefinida é  `LC_ALL`, que pode ser usada para substituir temporariamente todas as outras configurações locais. O exemplo a seguir mostra como o comando  `date` — sendo executado em um sistema configurado para a localidade  `pt_BR.UTF-8` — modifica sua saída de forma a cumprir a nova variável  `LC_ALL`:
 
-$ **date**
-seg out 21 10:45:21 -03 2019
-$ **env LC_ALL=en_US.UTF-8 date**
-Mon Oct 21 10:45:21 -03 2019
+    $ **date**
+    seg out 21 10:45:21 -03 2019
+    $ **env LC_ALL=en_US.UTF-8 date**
+    Mon Oct 21 10:45:21 -03 2019
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxMDk3MjEyLDE4MzEwMzUyOTMsLTg3OT
-QyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2
-MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLT
-EzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3
-ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5ND
-kxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01
-ODUyMTgwNjhdfQ==
+eyJoaXN0b3J5IjpbLTE5OTQ1MTM3ODMsMTgzMTAzNTI5MywtOD
+c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
+MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Ny
+wtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4
+Njc4OTkyNSwtMTA3MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nz
+k0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4MDMsLTE0MDc3ODIwMzUs
+LTU4NTIxODA2OF19
 -->
