@@ -2299,7 +2299,7 @@ Para dizer ao  `cron`  que nenhum email deve ser enviado, atribuímos um valor v
 
     MAILTO=""
 
-#### at (agendamento de uma execução)
+### at (agendamento de uma execução)
 
 Tipo de agendamento em determinada hora/momento (executa apenas uma vez)
 
@@ -2574,11 +2574,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OT
-UyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0
-MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsOD
-c3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQzNDg5
-OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1NywtMTYwNDA4OTI5MS
-wtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgzODg2NDk4LDEyNDQw
-NzM5MzldfQ==
+eyJoaXN0b3J5IjpbLTQyODA0NjM3MiwtMTUzNjQ5NTAxLDgxOD
+A2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIxOTIsLTE1MTc0Nzcx
+MDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYzMzk4MTgsLT
+I2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLTE1NzA3NDQ5
+NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIxMzkwODU3LC
+0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1MTM3NzE2NCwyODM4
+ODY0OThdfQ==
 -->
