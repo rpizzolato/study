@@ -2683,14 +2683,16 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
-O primeiro mais antigo é o ASCII, depois foi melhorado para ISO-8859, e UTF-8 é o mais recente/utilizado.
+O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado.
+
+- `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4ODQyODMwNywtMTg4Njc4OTkyNSwtMT
-A3MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgz
-MzQ5MDAsNzEwMjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OC
-wtMTA2NTEzODU5MCwtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5
-NTI5OTY5LC0zNjYyNjIxOTIsLTE1MTc0NzcxMDEsLTQ1MDM4OT
-QzMywtODgxMTUxMzYzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4
-Nzc1OTc2ODVdfQ==
+eyJoaXN0b3J5IjpbLTE0NzA0MDQzMzYsLTE4ODY3ODk5MjUsLT
+EwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4
+MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNj
+gsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1
+OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzOD
+k0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIs
+ODc3NTk3Njg1XX0=
 -->
