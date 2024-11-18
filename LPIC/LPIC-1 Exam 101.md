@@ -2679,7 +2679,7 @@ Confirme as mudanças com os comandos `date` e `timedatectl`. As mudanças são 
 
 #### Localização e Internacionalização - Idioma, Linguagem e Codificação
 
-- `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc, assim como o tipo de codificação de caracteres.
+- `locale`: lista informações específicas de acordo com locais, países no mundo, tais como: sistema monetário, se usa vírgula ou ponto, formato de datas, etc, assim como o tipo de codificação de caracteres. (tudo isso são variáveis de ambiente - vide `env | grep "^LC"`)
 
 Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
@@ -2688,11 +2688,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 - `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzA0MDQzMzYsLTE4ODY3ODk5MjUsLT
-EwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4
-MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNj
-gsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1
-OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzOD
-k0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIs
-ODc3NTk3Njg1XX0=
+eyJoaXN0b3J5IjpbLTM5MjU1NTYyOSwtMTg4Njc4OTkyNSwtMT
+A3MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgz
+MzQ5MDAsNzEwMjg4MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OC
+wtMTA2NTEzODU5MCwtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5
+NTI5OTY5LC0zNjYyNjIxOTIsLTE1MTc0NzcxMDEsLTQ1MDM4OT
+QzMywtODgxMTUxMzYzLDExMjYzMzk4MTgsLTI2MDA1NjE2Miw4
+Nzc1OTc2ODVdfQ==
 -->
