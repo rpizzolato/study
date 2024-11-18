@@ -2646,12 +2646,15 @@ Vendo em `/usr/share/zoneinfo/Brazil` é possível notar onde `/etc/localtime` e
 Em `/etc/timezone` está configurado o timezone atual (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
 
 - `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
+
+Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
+e
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwODMzNDkwMCw3MTAyODgwMywtMTQwNz
-c4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1
-MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMT
-UxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMz
-OTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMT
-U3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEz
-OTA4NTddfQ==
+eyJoaXN0b3J5IjpbMTg5OTY2NzUwNywxODA4MzM0OTAwLDcxMD
+I4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1
+OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMz
+Y2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1
+MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsODc3NTk3Njg1LD
+YwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQzNDg5OCwtMTI5NTc1
+NTY5N119
 -->
