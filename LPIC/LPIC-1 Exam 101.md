@@ -2745,8 +2745,9 @@ A única variável indefinida é  `LC_ALL`, que pode ser usada para substituir t
     $ **env LC_ALL=en_US.UTF-8 date**
     Mon Oct 21 10:45:21 -03 2019
 
+A modificação da variável `LC_ALL` fez com que ambas as abreviações de dia da semana e nome do mês fossem mostradas em inglês americano (`en_US`). Não é obrigatório, entretanto, definir a mesma localidade para todas as variáveis. É possível, por exemplo, ter a linguagem definida como `pt_BR` e o formato numérico (`LC_NUMERIC`) no padrão americano.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ1MTM3ODMsMTgzMTAzNTI5MywtOD
+eyJoaXN0b3J5IjpbLTE5MDk2NjcyMTIsMTgzMTAzNTI5MywtOD
 c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
 MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Ny
 wtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4
