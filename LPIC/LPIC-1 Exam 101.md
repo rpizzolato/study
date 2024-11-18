@@ -2650,7 +2650,7 @@ Em `/etc/timezone` está configurado o timezone atual (se der um `cat` nesse arq
 Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
 - export TZ=America/Chicago<br>
 
-**Faça um date antes e depois de alterar o timezone para perceber as mudanças:<br>
+*Faça um date antes e depois de alterar o timezone para perceber as mudanças:<br>
 
     $ date
     Mon Nov 18 20:22:49 AM -03 2024
@@ -2658,13 +2658,13 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
     $ date
     Mon Nov 18 15:23:05 AM PST 2024
 
-
+*Lembrando que isso apenas está traduzindo o que está internamente no UTC. Para voltar a data no timezone que estava antes, basta executar: `unset TZ`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMD
-I4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1
-OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMz
-Y2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1
-MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsODc3NTk3Njg1LD
-YwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQzNDg5OCwtMTI5NTc1
-NTY5N119
+eyJoaXN0b3J5IjpbLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxOD
+A4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgw
+NjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMT
+k1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAz
+ODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNj
+IsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQz
+NDg5OF19
 -->
