@@ -2652,8 +2652,15 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
 
 **Faça um date antes e depois de alterar o timezone para perceber as mudanças:<br>
 
+    $ date
+    Mon Nov 18 20:22:49 AM -03 2024
+    $ export TZ=America/Los_Angeles
+    $ date
+    Mon Nov 18 15:23:05 AM PST 2024
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Njk0Mzc5MCwxODA4MzM0OTAwLDcxMD
+eyJoaXN0b3J5IjpbMjA2ODc5NDkxMCwxODA4MzM0OTAwLDcxMD
 I4ODAzLC0xNDA3NzgyMDM1LC01ODUyMTgwNjgsLTEwNjUxMzg1
 OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2OSwtMz
 Y2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLTg4MTE1
