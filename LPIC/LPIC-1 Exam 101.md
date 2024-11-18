@@ -2622,12 +2622,16 @@ Consulte as páginas de manual para aprender todos os usos possíveis de  `syste
 >[!NOTE]
 >
 >Os temporizadores são registrados no diário do systemd e você pode rever os registros das diferentes unidades usando o comando `journalctl`. Além disso, se estiver trabalhando como um usuário comum, precisará usar a opção `--user` dos comandos `systemctl` e `journalctl`.
+
+### 107.3 Localização e internacionalização
+
+Para o Linux, o horário padrão é o UTC (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTIxODA2OCwtMTA2NTEzODU5MCwtMT
-UzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIx
-OTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLD
-ExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcy
-MDMsLTE1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC
-0yMTIxMzkwODU3LC0xNjA0MDg5MjkxLC02Njc1Mjg5NzQsMTg1
-MTM3NzE2NF19
+eyJoaXN0b3J5IjpbNzYwNTM1MDM4LC01ODUyMTgwNjgsLTEwNj
+UxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwtMTk1OTUyOTk2
+OSwtMzY2MjYyMTkyLC0xNTE3NDc3MTAxLC00NTAzODk0MzMsLT
+g4MTE1MTM2MywxMTI2MzM5ODE4LC0yNjAwNTYxNjIsODc3NTk3
+Njg1LDYwMzA3MjAzLC0xNTcwNzQ0OTU3LDcyNzQzNDg5OCwtMT
+I5NTc1NTY5NywtMjEyMTM5MDg1NywtMTYwNDA4OTI5MSwtNjY3
+NTI4OTc0XX0=
 -->
