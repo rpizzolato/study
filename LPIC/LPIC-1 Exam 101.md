@@ -2662,9 +2662,13 @@ Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$T
 
 Ainda alterando o `TZ`, se criar um arquivo, a data de criação atualiza caso o `TZ` seja alterado. Isso se torna interessante quando há usuário de diferentes timezones, para que possa ajustar de acordo com a localização (ajustar no `.bashrc`, por exemplo - ou até mesmo para todos os usuário, em `/etc/profile`).
 
-A mudança por meio da variável prevalece a configuração em `/etc/localtime`
+A mudança por meio da variável prevalece a configuração em `/etc/localtime`. Podemos preencher da forma por extenso também:
+
+    TZ=:/usr/share/zoneinfo/America/Sao_Paulo
+
+Para alterar por meio do /etc/localtime
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDYzOTQ1MCwtMTA3MTc1NDgzNSwtMT
+eyJoaXN0b3J5IjpbMTA5MjcwNDI1NSwtMTA3MTc1NDgzNSwtMT
 EwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4
 MDMsLTE0MDc3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MC
 wtMTUzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYy
