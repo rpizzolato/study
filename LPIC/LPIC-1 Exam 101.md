@@ -2618,8 +2618,12 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 
 Consulte as páginas de manual para aprender todos os usos possíveis de  `systemd-run`  com  `systemd-run(1)`.
+
+>[!NOTE]
+>
+>Os temporizadores são registrados no diário do systemd e você pode rever os registros das diferentes unidades usando o comando `journalctl`. Além disso, se estiver trabalhando como um usuário comum, precisará usar a opção `--user` dos comandos `systemctl` e `journalctl`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzI2ODgxNSwtMTA2NTEzODU5MCwtMT
+eyJoaXN0b3J5IjpbLTU4NTIxODA2OCwtMTA2NTEzODU5MCwtMT
 UzNjQ5NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIx
 OTIsLTE1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLD
 ExMjYzMzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcy
