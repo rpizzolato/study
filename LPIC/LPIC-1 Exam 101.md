@@ -2327,9 +2327,16 @@ at> echo "Hora do almoço
 
 Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte. (para especificar quando um job `at` determinado deve ser executado, use o formato `HH:MM`, seguido opcionalmente por **AM** ou **PM** no caso do formato de 12 horas)
 
+Formatos aceitos para passar uma data após a hora:
+- `MMDDYY`
+- `MM/DD/YY`
+- `DD.MM.YY` e
+- `YYYY-MM-DD`
+
 - `at midnight`: agenda para meia noite
 - `at teatime`: agenda para às 16h ou 4PM (hora do chá)
-- `at noon`: agenda para hora do almoço.
+- `at noon`: agenda para hora do almoço - meio-dia
+- `now`: para agora
 
 - `at 02:20pm 05202024`: agenda para dia 20/05/2024 às 14:20
 
@@ -2598,11 +2605,11 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MT
-gwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3
-MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC
-0yNjAwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0
-OTU3LDcyNzQzNDg5OCwtMTI5NTc1NTY5NywtMjEyMTM5MDg1Ny
-wtMTYwNDA4OTI5MSwtNjY3NTI4OTc0LDE4NTEzNzcxNjQsMjgz
-ODg2NDk4XX0=
+eyJoaXN0b3J5IjpbNzU0OTczMDk2LC0xMDY1MTM4NTkwLC0xNT
+M2NDk1MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5
+MiwtMTUxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMT
+EyNjMzOTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIw
+MywtMTU3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLT
+IxMjEzOTA4NTcsLTE2MDQwODkyOTEsLTY2NzUyODk3NCwxODUx
+Mzc3MTY0XX0=
 -->
