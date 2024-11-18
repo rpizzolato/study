@@ -2645,6 +2645,11 @@ Vendo em `/usr/share/zoneinfo/Brazil` é possível notar onde `/etc/localtime` e
 
 Em `/etc/timezone` está contido o fuso horário padrão padrão do sistema: (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
 
+Os nomes genéricos de fusos horários indicados pela diferença em relação a UTC devem incluir  `Etc`  na primeira parte do nome. Assim, para definir o fuso horário padrão como GMT+3, o nome do fuso horário deve ser  `Etc/GMT+3`:
+
+    $ **cat /etc/timezone**
+    Etc/GMT+3
+
 - `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
 
 Para alterar o timezone apenas da sessão atual, pode-se alterar a variável `$TZ`:<br>
@@ -2701,11 +2706,11 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMT
-g3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0
-NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5Mj
-UsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwx
-ODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01ODUyMT
-gwNjgsLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MTgwNjQxNSwt
-MTk1OTUyOTk2OV19
+eyJoaXN0b3J5IjpbLTkyNDI2NTc1MSwtMjAwOTgxNjQ4MCwtMj
+AzMzA1MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkz
+Njc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MC
+wtMTg4Njc4OTkyNSwtMTA3MTc1NDgzNSwtMTEwMjM1MzA2OCwy
+MDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4MDMsLTE0MDc3OD
+IwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MCwtMTUzNjQ5NTAx
+LDgxODA2NDE1XX0=
 -->
