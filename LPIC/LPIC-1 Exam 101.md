@@ -2325,7 +2325,7 @@ at 13:20
 at> echo "Hora do almoço
 ```
 
-Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte.
+Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda para o dia seguinte. (para especificar quando um job `at` determinado deve ser executado, use o formato `HH:MM`, seguido opcionalmente por **AM** ou **PM** no caso do formato de 12 horas)
 
 - `at midnight`: agenda para meia noite
 - `at teatime`: agenda para às 16h ou 4PM (hora do chá)
@@ -2335,7 +2335,9 @@ Executa o echo às `13:20`. Caso já tenha passado esse horário, o at agenda pa
 
 Para **remover** algum job feito pelo at: `atrm 10` ou `at -d 10`: remove o job 10.
 
-
+>[!NOTE]
+>
+>O usuário que rodar `atrm` como root pode excluir os jobs de todos os outros usuários.
 
 - `/etc/at.allow`: permite quais usuário usar o `at`
 - `/etc/at.deny`: nega quais usuário a usar o `at` (esse já vem criado, preenchido com usuários do sistema, permitindo somente usuários comuns utilizar)
@@ -2596,7 +2598,7 @@ Se olhar no `systemctl list-timers` o `run-sequecia-caracteres.timer` que foi cr
 
 Depois que passar os 60 segundos, ele irá executar, e **não** irá mais aparecer no `systemctl list-timers`. Mostrando que fez 1 execução apenas. É possível ter certeza verificando o .service dele, com o comando `journalctl -u run-sequecia-caracteres.service`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDIwNDgzMTYsLTE1MzY0OTUwMSw4MT
+eyJoaXN0b3J5IjpbLTEwNjUxMzg1OTAsLTE1MzY0OTUwMSw4MT
 gwNjQxNSwtMTk1OTUyOTk2OSwtMzY2MjYyMTkyLC0xNTE3NDc3
 MTAxLC00NTAzODk0MzMsLTg4MTE1MTM2MywxMTI2MzM5ODE4LC
 0yNjAwNTYxNjIsODc3NTk3Njg1LDYwMzA3MjAzLC0xNTcwNzQ0
