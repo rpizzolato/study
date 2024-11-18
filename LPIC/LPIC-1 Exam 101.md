@@ -2631,15 +2631,24 @@ Para o Linux, o horário padrão é o UTC (Tempo Universal Coordenado). O UTC su
 
 Tudo isso fica configurado em `/etc/localtime` (é um arquivo que não tem como ler, nele fica configurado a questão do **timezone**, horário de verão - **daylight saving time**). Lembrando que `/etc/localtime` aponta para `/usr/share/zoneinfo/America/Sao_Paulo` (a depender da sua localização).
 
+    ls -l /etc/localtime 
+    lrwxrwxrwx 1 root root 37 Nov  8 16:21 /etc/localtime -> /usr/share/zoneinfo/America/Sao_Paulo
 
 
+
+    ls -l /usr/share/zoneinfo/Brazil/
+    total 0
+    lrwxrwxrwx 1 root root 21 Nov  8 16:20 Acre -> ../America/Rio_Branco
+    lrwxrwxrwx 1 root root 18 Nov  8 16:20 DeNoronha -> ../America/Noronha
+    lrwxrwxrwx 1 root root 20 Nov  8 16:20 East -> ../America/Sao_Paulo
+    lrwxrwxrwx 1 root root 17 Nov  8 16:20 West -> ../America/Manaus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzQ5MzIzMjksNzEwMjg4MDMsLTE0MD
-c3ODIwMzUsLTU4NTIxODA2OCwtMTA2NTEzODU5MCwtMTUzNjQ5
-NTAxLDgxODA2NDE1LC0xOTU5NTI5OTY5LC0zNjYyNjIxOTIsLT
-E1MTc0NzcxMDEsLTQ1MDM4OTQzMywtODgxMTUxMzYzLDExMjYz
-Mzk4MTgsLTI2MDA1NjE2Miw4Nzc1OTc2ODUsNjAzMDcyMDMsLT
-E1NzA3NDQ5NTcsNzI3NDM0ODk4LC0xMjk1NzU1Njk3LC0yMTIx
-MzkwODU3XX0=
+eyJoaXN0b3J5IjpbLTIxMjY4Mjc1Niw3MTAyODgwMywtMTQwNz
+c4MjAzNSwtNTg1MjE4MDY4LC0xMDY1MTM4NTkwLC0xNTM2NDk1
+MDEsODE4MDY0MTUsLTE5NTk1Mjk5NjksLTM2NjI2MjE5MiwtMT
+UxNzQ3NzEwMSwtNDUwMzg5NDMzLC04ODExNTEzNjMsMTEyNjMz
+OTgxOCwtMjYwMDU2MTYyLDg3NzU5NzY4NSw2MDMwNzIwMywtMT
+U3MDc0NDk1Nyw3Mjc0MzQ4OTgsLTEyOTU3NTU2OTcsLTIxMjEz
+OTA4NTddfQ==
 -->
