@@ -2643,7 +2643,7 @@ Vendo em `/usr/share/zoneinfo/Brazil` é possível notar onde `/etc/localtime` e
     lrwxrwxrwx 1 root root 20 Nov  8 16:20 East -> ../America/Sao_Paulo
     lrwxrwxrwx 1 root root 17 Nov  8 16:20 West -> ../America/Manaus
 
-Em `/etc/timezone` está contidoonfigurado o timezone atual (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
+Em `/etc/timezone` está contido o fuso horário padrão padrão do sistema: (se der um `cat` nesse arquivo, retorna `America/Sao_Paulo`)
 
 - `tzselect`: usado para ajudar a selecionar o **timezone** correto/desejado.
 
@@ -2701,7 +2701,7 @@ O primeiro mais antigo é o ASCII, depois foi melhorado para ISO/IEC 8859-1, e U
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTE4NjEzMTAsLTIwMzMwNTA2MzksMT
+eyJoaXN0b3J5IjpbLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMT
 g3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0
 NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5Mj
 UsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwx
