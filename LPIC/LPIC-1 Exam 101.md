@@ -2701,9 +2701,12 @@ Ex. **en_US.UTF-8** ou **pt_BR.UTF-8** (codificação usada na instalação)
 
 - `locale -a` (`--all-locales`): lista os modelos disponíveis para o uso.
 
+#### Conversão de codificação
+
 O primeiro mais antigo é o ASCII (_American Standard Code for Information Interchange_), depois foi melhorado para ISO/IEC 8859-1, e UTF-8 é o mais recente/utilizado. Se escrever um arquivo com caracteres especiais no Windows, e abrir no Linux, vai haver divergência (lembrando que para verificar a codificação do arquivo, pode-se utilizar o comando `file nome_arquivo`)
 
 - `iconv -f ISO-8859-1 -t UTF-8 nome_do_arquivo`: (`-f` ou `--from-code` e `-t` ou `--to-encode`) converte o arquivo, que antes estava na decodificação do Windows, para a codificação que o Linux entende. (para casos que um texto no Windows não leia no Linux)
+Para listar todas as codificações suportadas pelo comando `iconv`, usamos o comando `iconv -l` ou `iconv --list`. Ao invés de usar o redirecionamento de saída, como no exemplo, a opção `-o converted.txt` ou `--output converted.txt` também faz o serviço.
 
 
 >[!TIP]
@@ -2746,8 +2749,10 @@ A única variável indefinida é  `LC_ALL`, que pode ser usada para substituir t
     Mon Oct 21 10:45:21 -03 2019
 
 A modificação da variável `LC_ALL` fez com que ambas as abreviações de dia da semana e nome do mês fossem mostradas em inglês americano (`en_US`). Não é obrigatório, entretanto, definir a mesma localidade para todas as variáveis. É possível, por exemplo, ter a linguagem definida como `pt_BR` e o formato numérico (`LC_NUMERIC`) no padrão americano.
+
+Algumas configurações de localização alteram a forma como os programas lidam com a ordem alfabética e formatos de numeração. Embora os programas convencionais geralmente sejam capazes de escolher corretamente uma localidade comum para essas situações, os scripts podem se comportar de forma inesperada ao tentar ordenar corretamente uma lista de itens em ordem alfabética, por exemplo. Por este motivo, recomenda-se definir a variável de ambiente `LANG` para a localidade comum `C`, como em `LANG=C`, para que o script produza resultados inequívocos, independentemente das definições de localização usadas no sistema onde é executado. A localidade C realiza apenas uma comparação simples de bytes e, portanto, também terá um desempenho melhor do que as outras.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDk2NjcyMTIsMTgzMTAzNTI5MywtOD
+eyJoaXN0b3J5IjpbLTEzMjgzMjQ0ODYsMTgzMTAzNTI5MywtOD
 c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
 MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Ny
 wtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4
