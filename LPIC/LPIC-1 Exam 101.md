@@ -2757,12 +2757,18 @@ A única variável indefinida é  `LC_ALL`, que pode ser usada para substituir t
 A modificação da variável `LC_ALL` fez com que ambas as abreviações de dia da semana e nome do mês fossem mostradas em inglês americano (`en_US`). Não é obrigatório, entretanto, definir a mesma localidade para todas as variáveis. É possível, por exemplo, ter a linguagem definida como `pt_BR` e o formato numérico (`LC_NUMERIC`) no padrão americano.
 
 Algumas configurações de localização alteram a forma como os programas lidam com a ordem alfabética e formatos de numeração. Embora os programas convencionais geralmente sejam capazes de escolher corretamente uma localidade comum para essas situações, os scripts podem se comportar de forma inesperada ao tentar ordenar corretamente uma lista de itens em ordem alfabética, por exemplo. Por este motivo, recomenda-se definir a variável de ambiente `LANG` para a localidade comum `C`, como em `LANG=C`, para que o script produza resultados inequívocos, independentemente das definições de localização usadas no sistema onde é executado. A localidade C realiza apenas uma comparação simples de bytes e, portanto, também terá um desempenho melhor do que as outras.
+
+### 108.1 Manutenção da data e hora do sistema
+
+#### Manutenção do Horário do Sistema - Relógios e os comandos date e hwclock
+
+hardware clock: relógio da BIOS (aquela que usa bateria para armazenar data/hora)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OT
-QyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2
-MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLT
-EzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3
-ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5ND
-kxMCwxODA4MzM0OTAwLDcxMDI4ODAzLC0xNDA3NzgyMDM1LC01
-ODUyMTgwNjhdfQ==
+eyJoaXN0b3J5IjpbMTgzODEzOTE0NCw1MTExMTgwMzMsMTgzMT
+AzNTI5MywtODc5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4
+MCwtMjAzMzA1MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LD
+Q0MTkzNjc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0Njcy
+NzQ3MCwtMTg4Njc4OTkyNSwtMTA3MTc1NDgzNSwtMTEwMjM1Mz
+A2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAsNzEwMjg4MDMsLTE0
+MDc3ODIwMzVdfQ==
 -->
