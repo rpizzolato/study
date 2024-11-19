@@ -2778,13 +2778,14 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 - `hwclock -w` ou `--systohc` (**hc**=**hardware clock**): pega o horário do sistema e sincroniza com o relógio no BIOS: Sys->Bios
 - `hwclock -s` ou `--hctosys`: faz o contrário, pega o horário do BIOS e sincroniza com o relógio do Linux: Bios->Sys
 
-- `hwclock --set --date "12/25/2024 14:00"`: define o horário na BIOS
+- `hwclock --set --date "12/25/2024 14:00"`: define o horário na BIOS<br>
+**Na aula o comando acima retorna erro, formato inválido para a data. Procurando no man, é descrito que deve usar hífen, ficando o comando: `hwclock --set --date "12-25-2024 14:00`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4OD
-MxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUy
-OTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLT
-IwMzMwNTA2MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5
-MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0Nz
-AsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgs
-MjA2ODc5NDkxMF19
+eyJoaXN0b3J5IjpbODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOT
+c2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAz
+MywxODMxMDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMD
+A5ODE2NDgwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNTAsLTE2NTc2
+OTU5NzcsNDQxOTM2NzY3LC0xMzQ1NDY0MjM1LDc1NDU2NDY2Ni
+wxMzQ2NzI3NDcwLC0xODg2Nzg5OTI1LC0xMDcxNzU0ODM1LC0x
+MTAyMzUzMDY4XX0=
 -->
