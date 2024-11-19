@@ -2775,9 +2775,9 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 
 O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horário do hardware, ou vice-versa.
 
-- `hwclock -w` ou `--systohc` (**hc**=**hardware clock**): pega o horário do sistema e passa para o relógio no BIOS: Sys->Bios
+- `hwclock -w` ou `--systohc` (**hc**=**hardware clock**): pega o horário do sistema e sincroniza com o relógio no BIOS: Sys->Bios
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzOTg1ODg0Nyw4ODMxMzM2NzUsLTE0Nj
+eyJoaXN0b3J5IjpbLTU4NTc5MDMwOCw4ODMxMzM2NzUsLTE0Nj
 U2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1
 NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMT
 g3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0
