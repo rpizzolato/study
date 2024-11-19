@@ -2800,12 +2800,10 @@ Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de in
 
 O arquivo de configuração do NTP é `/etc/ntp.conf`
 
--ntp
-
-
+- `ntpq -p`ou`--peers`: lista as pools (peers) com diversas estatísticas de cada pool ou server. Com -n não resolve os nomes, traz s
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjQ1MzcwNywtMTM3NjI1ODY0NCwtMT
+eyJoaXN0b3J5IjpbLTUwNDE3MzIwOCwtMTM3NjI1ODY0NCwtMT
 I3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYz
 NjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLD
 E4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4
