@@ -2801,11 +2801,11 @@ Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de in
 O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm listado as pools com endereços NTP. Essas pools precedem da palavra reservada `pool` ou `server`.
 
 - `ntpq -p`ou`--peers`: lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs
-- `ntpdate 3.pt.pool.ntp.org`: vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)
-**O comando 
+- `ntpdate 3.pt.pool.ntp.org`: vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)<br>
+**O comando acima não altera para o horário de Portugal, na realidade vai pegar o horário de lá, e de acordo com as configurações de timezone do sistema, vai ajustar de acordo com o timezone.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI1NTU0OTksLTE3ODQ1OTk5OTQsLT
+eyJoaXN0b3J5IjpbLTE2MzgyNTczOTksLTE3ODQ1OTk5OTQsLT
 cwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2
 MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2Nz
 UsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3
