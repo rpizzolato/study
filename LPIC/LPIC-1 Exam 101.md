@@ -2784,14 +2784,16 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
     sudo hwclock --set --date "YYYY-MM-DD HH:MM:SS"
 ```
 
-, é descrito que deve usar hífen, ficando o comando: `hwclock --set --date "12-25-2024 14:00`
+>[!NOTE]
+>
+>Para fins de logs, é utilizado o horário do sistema.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxNzQxNTI4LDg3MDYxNzg5OCwtMTE5MT
-gxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMw
-MCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyND
-k1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQw
-MTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNS
-w3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3
-MTc1NDgzNV19
+eyJoaXN0b3J5IjpbLTE1NTM3MzUzNyw4NzA2MTc4OTgsLTExOT
+E4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMz
+MDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2Mj
+Q5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0
+MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMz
+UsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEw
+NzE3NTQ4MzVdfQ==
 -->
