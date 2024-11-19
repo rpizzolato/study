@@ -2794,14 +2794,14 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 
 #### Protocolo NTP (Network Time Protocol)
 
-Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo /etc/services)
+Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/services`, que lista as portas)
 
 Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODYzMjkzMywtMTI3NDQ3ODMyMiw4Nz
+eyJoaXN0b3J5IjpbMTkxMjcxNDUwMCwtMTI3NDQ3ODMyMiw4Nz
 A2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2
 NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLT
 g3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMw
