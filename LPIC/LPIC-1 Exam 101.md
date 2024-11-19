@@ -2788,8 +2788,13 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 >
 >Para fins de logs, é utilizado o horário do sistema.
 
+>[!NOTE]
+>
+>Alguns processos internos (principalmente em distros baseadas em Ubuntu), a hora é atualizada automaticamente.
+>
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTM3MzUzNyw4NzA2MTc4OTgsLTExOT
+eyJoaXN0b3J5IjpbLTQ5NjQxNDY5OSw4NzA2MTc4OTgsLTExOT
 E4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMz
 MDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2Mj
 Q5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0
