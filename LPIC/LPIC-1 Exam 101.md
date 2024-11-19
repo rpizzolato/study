@@ -2791,14 +2791,17 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 >[!NOTE]
 >
 >Alguns processos internos (principalmente em distros baseadas em Ubuntu), a hora é atualizada automaticamente.
->
+
+#### Protocolo NTP (Network Time Protocol)
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NjQxNDY5OSw4NzA2MTc4OTgsLTExOT
-E4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMz
-MDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2Mj
-Q5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0
-MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMz
-UsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEw
-NzE3NTQ4MzVdfQ==
+eyJoaXN0b3J5IjpbLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0xMT
+kxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEz
+MzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0MjkzNTQsNj
+I0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LDE4NzQ4
+NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMzQ1NDY0Mj
+M1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0xODg2Nzg5OTI1LC0x
+MDcxNzU0ODM1XX0=
 -->
