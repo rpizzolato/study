@@ -2798,18 +2798,16 @@ Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/servi
 
 Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de instalador, pode verificar se o daemon do ntp está executando com o comando `ps axu | grep ntp`
 
-O arquivo de configuração do NTP é `/etc/ntp.conf`
-
-DEntro
+O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm listado as pools com endereços NTP. Essas pools precedem da palavra reservada ppol
 
 - `ntpq -p`ou`--peers`: lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5NzM1Mjk3LC03MDQ4NTUyNTUsLTEzNz
-YyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4
-NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEzMzAwLD
-UxMTExODAzMywxODMxMDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2
-NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNT
-AsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMzQ1NDY0MjM1LDc1
-NDU2NDY2Nl19
+eyJoaXN0b3J5IjpbMTYwODk2MDA3NiwtNzA0ODU1MjU1LC0xMz
+c2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgx
+ODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMC
+w1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyNDk1
+Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQwMT
+UwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNSw3
+NTQ1NjQ2NjZdfQ==
 -->
