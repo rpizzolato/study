@@ -2804,12 +2804,14 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 - `ntpdate 3.pt.pool.ntp.org`: vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)<br>
 **O comando acima não altera para o horário de Portugal, na realidade vai pegar o horário de lá, e de acordo com as configurações de timezone do sistema, vai ajustar de acordo com o timezone.
 
+- ntpdate -q 3.pt.pool.ntp.org: ()
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzgyNTczOTksLTE3ODQ1OTk5OTQsLT
-cwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2
-MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2Nz
-UsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3
-OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNT
-A2MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3Njcs
-LTEzNDU0NjQyMzVdfQ==
+eyJoaXN0b3J5IjpbMTIwNTE4MTEyMiwtMTc4NDU5OTk5NCwtNz
+A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
+Nzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NS
+wtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5
+NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MD
+YzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Nywt
+MTM0NTQ2NDIzNV19
 -->
