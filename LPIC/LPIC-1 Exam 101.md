@@ -2810,13 +2810,13 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 
 - **chrony**: funciona melhor em ambientes instáveis. Precisa instalar: `apt install chrony`. Confirmar com `ps axu | grep chrony` e `systemctl status crony`.
 
-O arquivo de oc
+O arquivo de configuração ficam `/etc/chrony/chrony.conf`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NTQ3MTc1MCwxMjQ4NjYxMzUxLC0xNz
-g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
-NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
-MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
-MDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2ND
-gwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5Nzcs
-NDQxOTM2NzY3XX0=
+eyJoaXN0b3J5IjpbNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3OD
+Q1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3
+ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2My
+w4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEw
+MzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0OD
+AsLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0
+NDE5MzY3NjddfQ==
 -->
