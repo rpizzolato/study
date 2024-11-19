@@ -2768,15 +2768,15 @@ Algumas configurações de localização alteram a forma como os programas lidam
 
 Em linhas gerais, o hardware e software clock não são sincronizados pois são independentes.
 
-- date: retorna a hora no sistema
+- `date`: retorna a hora no sistema
 - date -u: retorna data/hora UTC (GMT0)
 - hwclock (apt install util-linux-extra): mostra o relógio do BIOS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMT
-ExODAzMywxODMxMDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2Nzcy
-LC0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNTAsLT
-E2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMzQ1NDY0MjM1LDc1NDU2
-NDY2NiwxMzQ2NzI3NDcwLC0xODg2Nzg5OTI1LC0xMDcxNzU0OD
-M1LC0xMTAyMzUzMDY4LDIwNjg3OTQ5MTAsMTgwODMzNDkwMCw3
-MTAyODgwM119
+eyJoaXN0b3J5IjpbLTEwMDU5MzI4NTcsODgzMTMzNjc1LC0xND
+Y1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0Mjkz
+NTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LD
+E4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMzQ1
+NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0xODg2Nzg5OT
+I1LC0xMDcxNzU0ODM1LC0xMTAyMzUzMDY4LDIwNjg3OTQ5MTAs
+MTgwODMzNDkwMF19
 -->
