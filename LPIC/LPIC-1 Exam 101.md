@@ -2772,12 +2772,14 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
 - `hwclock` (`apt install util-linux-extra`): mostra o relógio do BIOS
+
+O hwclock server ainda para sincronizar o horário do sistema igual ao do horário do hardware, ou vice ce
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjgzOTU1MzUsODgzMTMzNjc1LC0xND
-Y1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0Mjkz
-NTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LD
-E4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0xMzQ1
-NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0xODg2Nzg5OT
-I1LC0xMDcxNzU0ODM1LC0xMTAyMzUzMDY4LDIwNjg3OTQ5MTAs
-MTgwODMzNDkwMF19
+eyJoaXN0b3J5IjpbMjI0OTExOTAwLDg4MzEzMzY3NSwtMTQ2NT
+YxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5NDI5MzU0
+LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxOD
+c0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2
+NDIzNSw3NTQ1NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNS
+wtMTA3MTc1NDgzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4
+MDgzMzQ5MDBdfQ==
 -->
