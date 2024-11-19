@@ -2806,12 +2806,15 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 
 - `ntpdate -q 3.pt.pool.ntp.org`: (`-q` ou `--query`): consulta se o servidor está funcionando.
 
+#### chrony e timedatect
+
+- **chrony**: funciona melhor em ambientes instáveis. Precisa instalar: apt install chrone
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNz
-A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
-Nzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NS
-wtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5
-NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MD
-YzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LDQ0MTkzNjc2Nywt
-MTM0NTQ2NDIzNV19
+eyJoaXN0b3J5IjpbMTg1NzQzODE1NywxMjQ4NjYxMzUxLC0xNz
+g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
+NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
+MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
+MDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2ND
+gwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5Nzcs
+NDQxOTM2NzY3XX0=
 -->
