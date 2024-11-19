@@ -2796,18 +2796,18 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 
 Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/services`, que lista as portas)
 
-Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de ins
+Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de instalador, pode verificar se o daemon do ntp está executando com o comando `ps axu | grep ntp`
 
 O arquivo de configuração do NTP é `/etc/ntp.conf`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA4Mzk4ODUsLTEyNzQ0NzgzMjIsODcwNj
-E3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1
-LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nz
-k0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUw
-NjM5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC
-0xMzQ1NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0xODg2
-Nzg5OTI1XX0=
+eyJoaXN0b3J5IjpbLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsOD
+cwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMz
+Njc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC
+04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMz
+MDUwNjM5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2Nz
+Y3LC0xMzQ1NDY0MjM1LDc1NDU2NDY2NiwxMzQ2NzI3NDcwLC0x
+ODg2Nzg5OTI1XX0=
 -->
