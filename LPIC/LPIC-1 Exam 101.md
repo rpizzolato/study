@@ -2762,9 +2762,10 @@ Algumas configurações de localização alteram a forma como os programas lidam
 
 #### Manutenção do Horário do Sistema - Relógios e os comandos date e hwclock
 
-hardware clock: relógio da BIOS (aquela que usa bateria para armazenar data/hora)
+**hardware clock**: relógio da BIOS (aquela que usa bateria para armazenar data/hora)
+**software clock**: relógio do Linux propriamente dito, depois que o SO sobe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODEzOTE0NCw1MTExMTgwMzMsMTgzMT
+eyJoaXN0b3J5IjpbLTc1ODQ2MDUxNCw1MTExMTgwMzMsMTgzMT
 AzNTI5MywtODc5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4
 MCwtMjAzMzA1MDYzOSwxODc0ODQwMTUwLC0xNjU3Njk1OTc3LD
 Q0MTkzNjc2NywtMTM0NTQ2NDIzNSw3NTQ1NjQ2NjYsMTM0Njcy
