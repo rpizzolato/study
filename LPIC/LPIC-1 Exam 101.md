@@ -2801,13 +2801,14 @@ Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de in
 O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm listado as pools com endereços NTP. Essas pools precedem da palavra reservada `pool` ou `server`.
 
 - `ntpq -p`ou`--peers`: lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs
+- ntp
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMT
-M3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4
-MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMzMD
-AsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5
-NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0MD
-E1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMzUs
-NzU0NTY0NjY2XX0=
+eyJoaXN0b3J5IjpbNTYzNDQzMzY1LC0xNzg0NTk5OTk0LC03MD
+Q4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3
+ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC
+0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0
+MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMzMDUwNj
+M5LDE4NzQ4NDAxNTAsLTE2NTc2OTU5NzcsNDQxOTM2NzY3LC0x
+MzQ1NDY0MjM1XX0=
 -->
