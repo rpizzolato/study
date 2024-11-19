@@ -2776,13 +2776,15 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horário do hardware, ou vice-versa.
 
 - `hwclock -w` ou `--systohc` (**hc**=**hardware clock**): pega o horário do sistema e sincroniza com o relógio no BIOS: Sys->Bios
-- `hwclock -s` ou `--hctosys`: faz o contrário, pega o horário do BIOS e sincroniza com o relógio do Linux.
+- `hwclock -s` ou `--hctosys`: faz o contrário, pega o horário do BIOS e sincroniza com o relógio do Linux: Bios->Sys
+
+- hwclock --set --date "12/25/2024 14:00": define o horário na BIOS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0Nj
-U2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1
-NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMT
-g3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0
-NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5Mj
-UsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwx
-ODA4MzM0OTAwXX0=
+eyJoaXN0b3J5IjpbLTE4OTk2NTg2ODEsMTA5NzYzNjE2Myw4OD
+MxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEwMzUy
+OTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0ODAsLT
+IwMzMwNTA2MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0NDE5
+MzY3NjcsLTEzNDU0NjQyMzUsNzU0NTY0NjY2LDEzNDY3Mjc0Nz
+AsLTE4ODY3ODk5MjUsLTEwNzE3NTQ4MzUsLTExMDIzNTMwNjgs
+MjA2ODc5NDkxMF19
 -->
