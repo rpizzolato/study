@@ -2766,14 +2766,16 @@ Algumas configurações de localização alteram a forma como os programas lidam
 
 **software clock**: relógio do Linux propriamente dito, depois que o SO sobe
 
+Em 
+
 - date: 
 - hwclock (apt install util-linux-extra): mostra o relógio do BIOS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDAzMTYwMjAsLTE0NjU2MTMzMDAsNT
-ExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3
-NzIsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0MDE1MC
-wtMTY1NzY5NTk3Nyw0NDE5MzY3NjcsLTEzNDU0NjQyMzUsNzU0
-NTY0NjY2LDEzNDY3Mjc0NzAsLTE4ODY3ODk5MjUsLTEwNzE3NT
-Q4MzUsLTExMDIzNTMwNjgsMjA2ODc5NDkxMCwxODA4MzM0OTAw
-LDcxMDI4ODAzXX0=
+eyJoaXN0b3J5IjpbMTgwNjEwNjc3MiwtMTQ2NTYxMzMwMCw1MT
+ExMTgwMzMsMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyNDk1Njc3
+MiwtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQwMTUwLC
+0xNjU3Njk1OTc3LDQ0MTkzNjc2NywtMTM0NTQ2NDIzNSw3NTQ1
+NjQ2NjYsMTM0NjcyNzQ3MCwtMTg4Njc4OTkyNSwtMTA3MTc1ND
+gzNSwtMTEwMjM1MzA2OCwyMDY4Nzk0OTEwLDE4MDgzMzQ5MDAs
+NzEwMjg4MDNdfQ==
 -->
