@@ -2771,6 +2771,7 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date`: retorna a hora no sistema
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
+- 
 
 Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 - `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
@@ -2918,11 +2919,11 @@ America/Toronto
 
 Observe que este arquivo não é usado por todas as distribuições Linux.
 
-### Configurando data e hora sem timedatectl
+#### Configurando data e hora sem timedatectl
 
-Note
-
-A maioria dos sistemas Linux modernos usa o  `systemd`  para sua configuração e serviços; assim, não é recomendado usar  `date`  ou  `hwclock`  para definir a hora. O  `systemd`  emprega para isso o  `timedatectl`. No entanto, é importante conhecer esses comandos legados no caso de você precisar administrar um sistema mais antigo.
+>[!NOTE]
+>
+>A maioria dos sistemas Linux modernos usa o  `systemd`  para sua configuração e serviços; assim, não é recomendado usar  `date`  ou  `hwclock`  para definir a hora. O  `systemd`  emprega para isso o  `timedatectl`. No entanto, é importante conhecer esses comandos legados no caso de você precisar administrar um sistema mais antigo.
 
 #### Protocolo NTP (Network Time Protocol)
 
@@ -2961,7 +2962,7 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzQyMTk1NTksMTQ5NDg0NTQxMiwtMT
+eyJoaXN0b3J5IjpbLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMiwtMT
 E3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3
 MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMT
 c4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0
