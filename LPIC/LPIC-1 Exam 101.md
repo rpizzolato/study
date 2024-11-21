@@ -2833,8 +2833,6 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 ```
 - `hwclock  --verbose`: retorna mais resultados, que podem ser úteis para solucionar problemas. Observe o `Calculated Hardware Clock drift`. Esta saída informa se a hora do sistema e a hora do hardware estão divergindo uma da outra.
 
-$ sudo hwclock --verbose: mostra mais detalhes do h
-
 >[!NOTE]
 >
 >Para fins de logs, é utilizado o horário do sistema.
@@ -2972,7 +2970,7 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjkyMjA1NCwtMTM1NjkzMTcyOCwxND
+eyJoaXN0b3J5IjpbLTQ5MDYxNTc0NywtMTM1NjkzMTcyOCwxND
 k0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1
 NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMj
 Q4NjYxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYy
