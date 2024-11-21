@@ -206,9 +206,9 @@ Resumidamente:
 - **baixar VM**: `shutdown` ou `destroy`
 - **subir VM**: `create`
 
-### Comandos de Gerenciamento das VMs
+### Comandos para gerenciamento das VMs
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ==
 -->
