@@ -2970,6 +2970,14 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 
 - `ntpdate -q 3.pt.pool.ntp.org`: (`-q` ou `--query`): consulta se o servidor está funcionando.
 
+### ntpdate
+
+Durante a configuração inicial, a hora do sistema e o NTP podem ser seriamente dessincronizados. Se o  _deslocamento_  entre o sistema e a hora NTP for maior que 17 minutos, o daemon NTP não fará alterações na hora do sistema. Neste caso, será necessária uma intervenção manual.
+
+Primeiramente, se  `ntpd`  estiver rodando, será necessário  _interromper_  o serviço. Use  `systemctl stop ntpd`  para fazer isso.
+
+Em seguida, use  `ntpdate pool.ntp.org`  para realizar uma sincronização inicial única, onde  `pool.ntp.org`  se refere ao endereço IP ou URL de um servidor NTP. Pode ser necessária mais de uma sincronização.
+
 #### chrony e timedatect
 
 - **chrony**: funciona melhor em ambientes instáveis. Precisa instalar: `apt install chrony`. Confirmar com `ps axu | grep chrony` e `systemctl status chrony`.
@@ -2995,7 +3003,7 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NDg0MzE1OCwtMTQzMTY0NjY4OCwtOD
+eyJoaXN0b3J5IjpbLTE3MzgyNTg1MiwtMTQzMTY0NjY4OCwtOD
 E0MjY4ODg0LDE5MzAwNjQxMDAsLTQ5MDYxNTc0NywtMTM1Njkz
 MTcyOCwxNDk0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMD
 ksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3
