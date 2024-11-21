@@ -2933,6 +2933,8 @@ Observe que este arquivo não é usado por todas as distribuições Linux.
 >
 >A maioria dos sistemas Linux modernos usa o  `systemd`  para sua configuração e serviços; assim, não é recomendado usar  `date`  ou  `hwclock`  para definir a hora. O  `systemd`  emprega para isso o  `timedatectl`. No entanto, é importante conhecer esses comandos legados no caso de você precisar administrar um sistema mais antigo.
 
+exer
+
 #### Protocolo NTP (Network Time Protocol)
 
 Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/services`, que lista as portas)
@@ -2970,11 +2972,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMDA2NDEwMCwtNDkwNjE1NzQ3LC0xMz
-U2OTMxNzI4LDE0OTQ4NDU0MTIsLTExNzU3ODg0OTMsMTkwMTY1
-MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIzOSw1MDUyOTg4NzgsNj
-MxODczMjI2LDEyNDg2NjEzNTEsLTE3ODQ1OTk5OTQsLTcwNDg1
-NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2MTc4OT
-gsLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0
-NjU2MTMzMDBdfQ==
+eyJoaXN0b3J5IjpbMTc5MDA5NDYyNCwxOTMwMDY0MTAwLC00OT
+A2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMiwtMTE3NTc4
+ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LD
+UwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5
+OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4Mz
+IyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4
+MzEzMzY3NV19
 -->
