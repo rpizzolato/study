@@ -2820,13 +2820,15 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 - `chronyc activity`: mostra status das atividades, mostrando se está com status 200 OK, por exemplo<br>
 *Se digitar só `chronyc`, entra no modo de cli, e os comandos anteriores podem ser digitados diretamente.
 
-A título de curiosidade, o **systemd** tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando `timedatectl`, que apresenta informações de `network time on` e `NTP synchronized`. Para evitar seria interessante usar o comando: `timedatectl set-ntp false`, assim, vai deixar como no, a opção netw
+A título de curiosidade, o **systemd** tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando `timedatectl`, que apresenta informações de `network time on` e `NTP synchronized`. Para evitar seria interessante usar o comando: `timedatectl set-ntp false`, assim, vai deixar como **no**, a opção `network time on`
+
+O ntpd usa a porta 123 e o chrony usa 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczODkyNzcsNDU5OTU3MjM5LDUwNTI5OD
-g3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwt
-NzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MD
-YxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3
-NSwtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtOD
-c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
-MDYzOV19
+eyJoaXN0b3J5IjpbLTEzNTAxNjA1MjQsNDU5OTU3MjM5LDUwNT
+I5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5
+NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLD
+g3MDYxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEz
+MzY3NSwtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5My
+wtODc5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAz
+MzA1MDYzOV19
 -->
