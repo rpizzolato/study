@@ -2772,6 +2772,12 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
 
+Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
+- `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
+- `-R`:  retorna data e hora no formato RFC 5322.
+- `--rfc-3339`: 
+Retorna data e hora no formato RFC 3339.
+
 - `hwclock` (`apt install util-linux-extra`): mostra o relógio do BIOS
 
 O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horário do hardware, ou vice-versa.
@@ -2829,7 +2835,7 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDMxNDgyMSwtMTE3NTc4ODQ5MywxOT
+eyJoaXN0b3J5IjpbLTg5NDk4MTc1OCwtMTE3NTc4ODQ5MywxOT
 AxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3
 OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNz
 A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
