@@ -2816,8 +2816,9 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 
 - `chronyc tracking`: estatísticas do servidor ntp que está configurado (vê um status geral)
 - `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
+- chronyc mode: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjQ5NTE5NCw2MzE4NzMyMjYsMTI0OD
+eyJoaXN0b3J5IjpbMTUwMzU3MjMyMiw2MzE4NzMyMjYsMTI0OD
 Y2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4
 NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OS
 wxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1MTEx
