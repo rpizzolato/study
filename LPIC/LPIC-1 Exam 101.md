@@ -3018,10 +3018,13 @@ Essa saída contém muitas informações, mais do que as que estão disponíveis
 - `Leap status`: Este é o status de intercalação, que pode ter um dos seguintes valores: normal, inserir segundo, excluir segundo ou não sincronizado.
 ---
 
-- `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
+- `chronyc sources`: retorna informações sobre os servidores NTP usados para sincronizar a hora
 - `chronyc sources -v`:  this command displays information about the current time sources that chronyd is accessing. Mostra se é um server (`^`), se é um peer (`=`) ou se se é o relógio local (`#`). Mostra também se está sincronizado (`*`), se está combinado (`+`) ou se está não está combinado (`-`)
 - `chronyc activity`: mostra status das atividades, mostrando se está com status 200 OK, por exemplo<br>
 *Se digitar só `chronyc`, entra no modo de cli, e os comandos anteriores podem ser digitados diretamente.
+- `chrony ntpdate`: usado para ver informações detalhadas sobre a última atualização válida do NTP:
+
+# **chrony ntpdata**
 
 A título de curiosidade, o **systemd** tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando `timedatectl`, que apresenta informações de `network time on` e `NTP synchronized`. Para evitar seria interessante usar o comando: `timedatectl set-ntp false`, assim, vai deixar como **no**, a opção `network time on`
 
@@ -3034,11 +3037,11 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNjM3MTQ1NSwxNjM2NzIyNTMyLC04OT
-A0MDczNDAsLTE0MzE2NDY2ODgsLTgxNDI2ODg4NCwxOTMwMDY0
-MTAwLC00OTA2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMi
-wtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5
-OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MS
-wtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0x
-Mjc0NDc4MzIyXX0=
+eyJoaXN0b3J5IjpbLTEwMDM1NTIzNzIsMTYzNjcyMjUzMiwtOD
+kwNDA3MzQwLC0xNDMxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2
+NDEwMCwtNDkwNjE1NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MT
+IsLTExNzU3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1
+OTk1NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNT
+EsLTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwt
+MTI3NDQ3ODMyMl19
 -->
