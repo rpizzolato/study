@@ -2972,18 +2972,9 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 - `when`: número de segundos desde a última consulta.
 - `poll`: número de segundos entre as consultas.
 - `reach`: ID de status para indicar se um servidor foi alcançado. As conexões bem-sucedidas aumentam este número em 1.
-
-`delay`
-
-Tempo em ms entre a consulta e a resposta do servidor.
-
-`offset`
-
-Tempo em ms entre a hora do sistema e a hora NTP.
-
-`jitter`
-
-Deslocamento em ms entre a hora do sistema e o NTP na última consulta.
+- `delay`: tempo em ms entre a consulta e a resposta do servidor.
+- `offset`: tempo em ms entre a hora do sistema e a hora NTP.
+- `jitter`: deslocamento em ms entre a hora do sistema e o NTP na última consulta.
 
 `ntpq`  também inclui um modo interativo, que é acessado quando ele é executado sem opções ou argumentos. A opção  `?`  retorna uma lista de comandos reconhecidos pelo  `ntpq`.
 
@@ -3025,7 +3016,7 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTEyNDQxOSwtODkwNDA3MzQwLC0xND
+eyJoaXN0b3J5IjpbMTYzNjcyMjUzMiwtODkwNDA3MzQwLC0xND
 MxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2NDEwMCwtNDkwNjE1
 NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MTIsLTExNzU3ODg0OT
 MsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIzOSw1MDUy
