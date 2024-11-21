@@ -2786,9 +2786,27 @@ Na página de manual de  `date`, podemos ver que  `%s`  se refere ao tempo do Un
 
 O tempo do Unix é usado internamente na maioria dos sistemas baseados em Unix. Ele armazena a hora UTC como o número de segundos desde a  _Época_, que foi definida como 1º de janeiro de 1970.
 
-Note
+>[!NOTE]
+>
+>O número de bits necessários para armazenar a hora Unix no momento atual é de 32 bits. No futuro, 32 bits se tornarão insuficientes para conter a hora atual no formato Unix. Isso causará problemas sérios para qualquer sistema Linux de 32 bits. Felizmente, isso não ocorrerá até 19 de janeiro de 2038.
 
-O número de bits necessários para armazenar a hora Unix no momento atual é de 32 bits. No futuro, 32 bits se tornarão insuficientes para conter a hora atual no formato Unix. Isso causará problemas sérios para qualquer sistema Linux de 32 bits. Felizmente, isso não ocorrerá até 19 de janeiro de 2038.
+A opção  `--debug`  é muito útil para garantir que uma data possa ser analisada com sucesso. Observe o que acontece ao passarmos uma data válida para o comando:
+
+    $ **date --debug --date="Fri, 03 Jan 2020 14:00:17 -0500"**
+    date: parsed day part: Fri (day ordinal=0 number=5)
+    date: parsed date part: (Y-M-D) 2020-01-03
+    date: parsed time part: 14:00:17 UTC-05
+    date: input timezone: parsed date/time string (-05)
+    date: using specified time as starting value: '14:00:17'
+    date: warning: day (Fri) ignored when explicit dates are given
+    date: starting date/time: '(Y-M-D) 2020-01-03 14:00:17 TZ=-05'
+    date: '(Y-M-D) 2020-01-03 14:00:17 TZ=-05' = 1578078017 epoch-seconds
+    date: timezone: system default
+    date: final: 1578078017.000000000 (epoch-seconds)
+    date: final: (Y-M-D) 2020-01-03 19:00:17 (UTC)
+    date: final: (Y-M-D) 2020-01-03 14:00:17 (UTC-05)
+
+Essa é uma ferramenta útil para a resolução de problemas em um aplicativo que gera uma data.
 
 - `hwclock` (`apt install util-linux-extra`): mostra o relógio do BIOS
 
@@ -2846,12 +2864,13 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 ### 108.2 Sistema de Logs - Rsyslog
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI5MzAyMjc2LC0xMTc1Nzg4NDkzLDE5MD
-E2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4
-LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0LC03MD
-Q4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3
-ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC
-0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0
-MjkzNTRdfQ==
+eyJoaXN0b3J5IjpbMTQ5NDg0NTQxMiwtMTE3NTc4ODQ5MywxOT
+AxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3
+OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNz
+A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
+Nzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NS
+wtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5
+NDI5MzU0XX0=
 -->
