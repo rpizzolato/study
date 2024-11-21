@@ -2999,7 +2999,10 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 
 #### chronyc (é o cli do chrony)
 
-- `chronyc tracking`: estatísticas do servidor ntp que está configurado (vê um status geral)
+- `chrony` é outra forma de implementar o NTP. Ele é instalado por padrão em alguns sistemas Linux, mas está disponível para download em todas as principais distribuições. 
+- `chronyd` é o daemon chrony e `chronyc` é a interface de linha de comando
+---
+- `chronyc tracking`: fornece informações sobre o NTP e a hora do sistema que está configurado (vê um status geral)
 - `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
 - `chronyc sources -v`:  this command displays information about the current time sources that chronyd is accessing. Mostra se é um server (`^`), se é um peer (`=`) ou se se é o relógio local (`#`). Mostra também se está sincronizado (`*`), se está combinado (`+`) ou se está não está combinado (`-`)
 - `chronyc activity`: mostra status das atividades, mostrando se está com status 200 OK, por exemplo<br>
@@ -3016,11 +3019,11 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNjcyMjUzMiwtODkwNDA3MzQwLC0xND
-MxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2NDEwMCwtNDkwNjE1
-NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MTIsLTExNzU3ODg0OT
-MsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIzOSw1MDUy
-OTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3ODQ1OTk5OT
-QsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4
-NzA2MTc4OThdfQ==
+eyJoaXN0b3J5IjpbNzE1NDYxMjksMTYzNjcyMjUzMiwtODkwND
+A3MzQwLC0xNDMxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2NDEw
+MCwtNDkwNjE1NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MTIsLT
+ExNzU3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1
+NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLT
+E3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3
+NDQ3ODMyMl19
 -->
