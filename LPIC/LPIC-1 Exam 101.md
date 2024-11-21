@@ -2771,7 +2771,17 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date`: retorna a hora no sistema
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
-- `date --set="11 Nov 2011 11:11:11"`: também redefine o horário
+- `date --set="11 Nov 2011 11:11:11"`: também redefine o horário. Neste caso, é necessário ter privilégios de root para definir a data. Também podemos optar por alterar a hora ou data independentemente:
+
+    # date +%Y%m%d -s "20111125"
+
+Aqui, devemos especificar as sequências para que nossa string seja analisada corretamente. Por exemplo,  `%Y`  refere-se ao ano e, portanto, os primeiros quatro dígitos  `2011`  serão interpretados como o ano de 2011. Da mesma forma,  `%T`  é a sequência de hora, como demonstrado aqui ao definirmos a hora:
+
+# **date +%T -s "13:11:00"**
+
+Depois de alterar a hora do sistema, é recomendável também definir o relógio do hardware para que os relógios do sistema e do hardware estejam sincronizados:
+
+# **hwclock --systohc**
 
 Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 - `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
@@ -2962,7 +2972,7 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzg0MTE3NjMsLTEzNTY5MzE3MjgsMT
+eyJoaXN0b3J5IjpbLTE5OTQ1MTEwMTcsLTEzNTY5MzE3MjgsMT
 Q5NDg0NTQxMiwtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4
 NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMT
 I0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2
