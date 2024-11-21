@@ -2885,17 +2885,17 @@ Lembre-se de que o nome do fuso horário deve ser exato.  `Africa/Cairo`, por ex
 
 Em alguns casos, pode ser necessário desativar o NTP. Podemos fazer isso com  `systemctl`, mas vamos demonstrar o procedimento com  `timedatectl`:
 
-# **timedatectl set-ntp no**
-$ **timedatectl**
-             Local time: Thu 2019-12-05 18:19:04 EET Universal time: Thu 2019-12-05 16:19:04 UTC
-               RTC time: Thu 2019-12-05 16:19:04
-              Time zone: Africa/Cairo (EET, +0200)
-            NTP enabled: no
-       NTP synchronized: no
-        RTC in local TZ: no
-             DST active: n/a
+    # timedatectl set-ntp no
+    $ timedatectl\
+                 Local time: Thu 2019-12-05 18:19:04 EET Universal time: Thu 2019-12-05 16:19:04 UTC
+                   RTC time: Thu 2019-12-05 16:19:04
+                  Time zone: Africa/Cairo (EET, +0200)
+                NTP enabled: no
+           NTP synchronized: no
+            RTC in local TZ: no
+                 DST active: n/a
 
-### Definindo o fuso horário sem timedatectl
+#### Definindo o fuso horário sem timedatectl
 
 A definição do fuso horário é uma etapa padrão ao se instalar o Linux em uma nova máquina. Se houver um processo de instalação gráfico, isso provavelmente será feito sem nenhuma ação adicional do usuário.
 
@@ -2903,11 +2903,11 @@ O diretório  `/usr/share/zoneinfo`  contém informações sobre os diferentes f
 
 Os arquivos  `zoneinfo`  contêm as regras necessárias para calcular a diferença de horário local em relação a UTC e também são importantes se a sua região segue o horário de verão. O conteúdo de  `/etc/localtime`  será lido quando o Linux precisar determinar o fuso horário local. Para definir o fuso horário sem o uso de uma GUI, o usuário deve criar um link simbólico de  `/usr/share/zoneinfo`  para  `/etc/localtime`  informando sua localização. Por exemplo:
 
-$ **ln -s /usr/share/zoneinfo/Canada/Eastern /etc/localtime**
+    $ **ln -s /usr/share/zoneinfo/Canada/Eastern /etc/localtime**
 
 Depois de definir o fuso horário correto, recomenda-se executar:
 
-# **hwclock --systohc**
+    # **hwclock --systohc**
 
 Isso configurará o  _relógio do hardware_  a partir do  _relógio do sistema_  (ou seja, o relógio em tempo real será configurado para a mesma hora que  `date`). Note que este comando é executado com privilégios de root; neste caso, você está logado como root.
 
@@ -2961,11 +2961,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNTU4NzIzMiwxNDk0ODQ1NDEyLC0xMT
-c1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcy
-MzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNz
-g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
-NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
-MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
-MDM1MjkzXX0=
+eyJoaXN0b3J5IjpbLTIwNzQyMTk1NTksMTQ5NDg0NTQxMiwtMT
+E3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3
+MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMT
+c4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0
+NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MT
+YzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgz
+MTAzNTI5M119
 -->
