@@ -2832,11 +2832,11 @@ $ **sudo hwclock --verbose**
 >
 >Alguns processos internos (principalmente em distros baseadas em Ubuntu), a hora é atualizada automaticamente.
 
-`timedatectl`  é um comando que pode ser usado para verificar o status geral de hora e data, incluindo se a hora da rede foi ou não sincronizada (na próxima lição, trataremos do Network Time Protocol).
+- `timedatectl`  é um comando que pode ser usado para verificar o status geral de hora e data, incluindo se a hora da rede foi ou não sincronizada (na próxima lição, trataremos do Network Time Protocol).
 
 Por padrão,  `timedatectl`  retorna informações semelhantes a  `date`, mas com a adição da hora RTC (hardware), bem como o status do serviço NTP:
 
-    $ **timedatectl**
+    $ timedatectl
                    Local time: Thu 2019-12-05 11:08:05 EST
                Universal time: Thu 2019-12-05 16:08:05 UTC
                      RTC time: Thu 2019-12-05 16:08:05
@@ -2844,6 +2844,12 @@ Por padrão,  `timedatectl`  retorna informações semelhantes a  `date`, mas co
     System clock synchronized: yes
                   NTP service: active
               RTC in local TZ: no
+
+Se o NTP não estiver disponível, recomenda-se usar  `timedatectl`  em vez de  `date`  ou  `hwclock`  para definir a hora:
+
+    # **timedatectl set-time '2011-11-25 14:00:00'**
+
+O processo é semelhante ao de  `date`. O usuário também pode definir a hora independentemente da data com o formato **HH:MM:SS**
 
 #### Protocolo NTP (Network Time Protocol)
 
@@ -2882,11 +2888,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwMzQ5NDUwLDE0OTQ4NDU0MTIsLTExNz
-U3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIz
-OSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3OD
-Q1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3
-ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2My
-w4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEw
-MzUyOTNdfQ==
+eyJoaXN0b3J5IjpbLTk1NjM3ODI2NiwxNDk0ODQ1NDEyLC0xMT
+c1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcy
+MzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNz
+g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
+NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
+MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
+MDM1MjkzXX0=
 -->
