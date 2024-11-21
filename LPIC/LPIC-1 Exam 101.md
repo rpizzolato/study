@@ -2951,29 +2951,12 @@ ou
 
 Alguns desses termos aparecem nos comandos que usamos para rastrear o status do NTP em nossas máquinas:
 
-Deslocamento (offset)
-
-Refere-se à diferença absoluta entre a hora do sistema e a hora NTP. Por exemplo, se o relógio do sistema marca 12:00:02 e o horário NTP é 11:59:58, o deslocamento entre os dois relógios é de quatro segundos.
-
-Salto (step)
-
-Se o deslocamento de tempo entre o provedor NTP e um consumidor for maior que 128ms, o NTP executará uma única alteração significativa na hora do sistema, em vez de desacelerar ou acelerar o relógio do sistema. Isso é chamado de  _stepping_.
-
-Ajuste gradativo (slew)
-
-Slew refere-se às alterações feitas na hora do sistema quando o deslocamento entre a hora do sistema e o NTP é menor que 128ms. Se esse for o caso, as alterações serão feitas gradualmente. Isso é conhecido como  _slewing_.
-
-Relógio insano
-
-Se o deslocamento entre a hora do sistema e a hora NTP for maior que 17 minutos, o tempo do sistema é considerado  _insano_  e o daemon NTP não introduzirá nenhuma alteração no relógio do sistema. Será preciso tomar medidas especiais para trazer a hora do sistema até menos de 17 minutos da hora correta.
-
-Escorregamento ou deslizamento (drift)
-
-O escorregamento se refere ao fenômeno em que dois relógios ficam fora de sincronia com o tempo. Essencialmente, se dois relógios são inicialmente sincronizados, mas vão ficando fora de sincronia com o passar do tempo, está ocorrendo um escorregamento do relógio.
-
-Variação (jitter)
-
-A variação refere-se à quantidade de escorregamento desde a última vez em que um relógio foi consultado. Portanto, se a última sincronização com o NTP ocorreu há 17 minutos, e o deslocamento entre o provedor NTP e o consumidor é de 3 milissegundos, então 3 milissegundos é a variação.
+- **Deslocamento (offset)**: Refere-se à diferença absoluta entre a hora do sistema e a hora NTP. Por exemplo, se o relógio do sistema marca 12:00:02 e o horário NTP é 11:59:58, o deslocamento entre os dois relógios é de quatro segundos.
+- **Salto (step)**: Se o deslocamento de tempo entre o provedor NTP e um consumidor for maior que 128ms, o NTP executará uma única alteração significativa na hora do sistema, em vez de desacelerar ou acelerar o relógio do sistema. Isso é chamado de  _stepping_.
+- **Ajuste gradativo (slew)**: Slew refere-se às alterações feitas na hora do sistema quando o deslocamento entre a hora do sistema e o NTP é menor que 128ms. Se esse for o caso, as alterações serão feitas gradualmente. Isso é conhecido como  _slewing_.
+- **Relógio insano**: Se o deslocamento entre a hora do sistema e a hora NTP for maior que 17 minutos, o tempo do sistema é considerado  _insano_  e o daemon NTP não introduzirá nenhuma alteração no relógio do sistema. Será preciso tomar medidas especiais para trazer a hora do sistema até menos de 17 minutos da hora correta.
+- **Escorregamento ou deslizamento (drift)**: O escorregamento se refere ao fenômeno em que dois relógios ficam fora de sincronia com o tempo. Essencialmente, se dois relógios são inicialmente sincronizados, mas vão ficando fora de sincronia com o passar do tempo, está ocorrendo um escorregamento do relógio.
+- **Variação (jitter)**: A variação refere-se à quantidade de escorregamento desde a última vez em que um relógio foi consultado. Portanto, se a última sincronização com o NTP ocorreu há 17 minutos, e o deslocamento entre o provedor NTP e o consumidor é de 3 milissegundos, então 3 milissegundos é a variação.
 
 Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/services`, que lista as portas)
 
@@ -3010,11 +2993,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNTk4MzQyLC04MTQyNjg4ODQsMTkzMD
-A2NDEwMCwtNDkwNjE1NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0
-MTIsLTExNzU3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLD
-Q1OTk1NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEz
-NTEsLTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NC
-wtMTI3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5
-NzYzNjE2M119
+eyJoaXN0b3J5IjpbLTE0MzE2NDY2ODgsLTgxNDI2ODg4NCwxOT
+MwMDY0MTAwLC00OTA2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0
+NTQxMiwtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNj
+EsNDU5OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2
+MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4Nj
+Q0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OSwx
+MDk3NjM2MTYzXX0=
 -->
