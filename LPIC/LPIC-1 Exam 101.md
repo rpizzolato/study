@@ -2823,12 +2823,18 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 A título de curiosidade, o **systemd** tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando `timedatectl`, que apresenta informações de `network time on` e `NTP synchronized`. Para evitar seria interessante usar o comando: `timedatectl set-ntp false`, assim, vai deixar como **no**, a opção `network time on`
 
 O ntpd usa a porta **123** e o chrony usa a **323**.
+
+(antes terminar aqui https://learning.lpi.org/pt/learning-materials/102-500/108/108.1/108.1_01/)
+
+### 108.2 Sistema de Logs - Rsyslog
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mj
-k4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0
-LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsOD
-cwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMz
-Njc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC
-04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMz
-MDUwNjM5XX0=
+eyJoaXN0b3J5IjpbMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OT
+k1NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEs
+LTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMT
+I3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYz
+NjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLD
+E4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4
+MTY0ODBdfQ==
 -->
