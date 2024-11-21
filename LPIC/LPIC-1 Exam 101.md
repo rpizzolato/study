@@ -2869,17 +2869,60 @@ A lista de fusos horários possíveis é longa, por isso o uso do comando  `grep
 
 Em seguida, podemos definir o fuso horário usando um dos elementos da lista retornada:
 
-$ **timedatectl set-timezone Africa/Cairo**
-$ **timedatectl**
-               Local time: Thu 2019-12-05 18:18:10 EET
-           Universal time: Thu 2019-12-05 16:18:10 UTC
-                 RTC time: Thu 2019-12-05 16:18:10
-                Time zone: Africa/Cairo (EET, +0200)
-System clock synchronized: yes
-              NTP service: active
-          RTC in local TZ: no
+    $ timedatectl set-timezone Africa/Cairo
+    $ timedatectl
+                   Local time: Thu 2019-12-05 18:18:10 EET
+               Universal time: Thu 2019-12-05 16:18:10 UTC
+                     RTC time: Thu 2019-12-05 16:18:10
+                    Time zone: Africa/Cairo (EET, +0200)
+    System clock synchronized: yes
+                  NTP service: active
+              RTC in local TZ: no
 
 Lembre-se de que o nome do fuso horário deve ser exato.  `Africa/Cairo`, por exemplo, muda o fuso horário, mas  `cairo`  ou  `africa/cairo`  não.
+
+#### Desativando o NTP com timedatectl
+
+Em alguns casos, pode ser necessário desativar o NTP. Podemos fazer isso com  `systemctl`, mas vamos demonstrar o procedimento com  `timedatectl`:
+
+# **timedatectl set-ntp no**
+$ **timedatectl**
+             Local time: Thu 2019-12-05 18:19:04 EET Universal time: Thu 2019-12-05 16:19:04 UTC
+               RTC time: Thu 2019-12-05 16:19:04
+              Time zone: Africa/Cairo (EET, +0200)
+            NTP enabled: no
+       NTP synchronized: no
+        RTC in local TZ: no
+             DST active: n/a
+
+### Definindo o fuso horário sem timedatectl
+
+A definição do fuso horário é uma etapa padrão ao se instalar o Linux em uma nova máquina. Se houver um processo de instalação gráfico, isso provavelmente será feito sem nenhuma ação adicional do usuário.
+
+O diretório  `/usr/share/zoneinfo`  contém informações sobre os diferentes fusos horários possíveis. No diretório  `zoneinfo`, há subdiretórios com o nome dos continentes, bem como outros links simbólicos. Recomenda-se encontrar o  `zoneinfo`  da sua região começando por seu continente.
+
+Os arquivos  `zoneinfo`  contêm as regras necessárias para calcular a diferença de horário local em relação a UTC e também são importantes se a sua região segue o horário de verão. O conteúdo de  `/etc/localtime`  será lido quando o Linux precisar determinar o fuso horário local. Para definir o fuso horário sem o uso de uma GUI, o usuário deve criar um link simbólico de  `/usr/share/zoneinfo`  para  `/etc/localtime`  informando sua localização. Por exemplo:
+
+$ **ln -s /usr/share/zoneinfo/Canada/Eastern /etc/localtime**
+
+Depois de definir o fuso horário correto, recomenda-se executar:
+
+# **hwclock --systohc**
+
+Isso configurará o  _relógio do hardware_  a partir do  _relógio do sistema_  (ou seja, o relógio em tempo real será configurado para a mesma hora que  `date`). Note que este comando é executado com privilégios de root; neste caso, você está logado como root.
+
+`/etc/timezone`  é semelhante a  `/etc/localtime`. É uma representação de dados do fuso horário local e, como tal, pode ser lido usando  `cat`:
+
+$ **cat /etc/timezone**
+America/Toronto
+
+Observe que este arquivo não é usado por todas as distribuições Linux.
+
+### Configurando data e hora sem timedatectl
+
+Note
+
+A maioria dos sistemas Linux modernos usa o  `systemd`  para sua configuração e serviços; assim, não é recomendado usar  `date`  ou  `hwclock`  para definir a hora. O  `systemd`  emprega para isso o  `timedatectl`. No entanto, é importante conhecer esses comandos legados no caso de você precisar administrar um sistema mais antigo.
 
 #### Protocolo NTP (Network Time Protocol)
 
@@ -2918,11 +2961,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxNjYxMjc5LDE0OTQ4NDU0MTIsLTExNz
-U3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIz
-OSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3OD
-Q1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3
-ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2My
-w4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEw
-MzUyOTNdfQ==
+eyJoaXN0b3J5IjpbMjAzNTU4NzIzMiwxNDk0ODQ1NDEyLC0xMT
+c1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcy
+MzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNz
+g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
+NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
+MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
+MDM1MjkzXX0=
 -->
