@@ -3014,13 +3014,8 @@ Essa saída contém muitas informações, mais do que as que estão disponíveis
 - `Frequency`: Esta é a taxa na qual o relógio do sistema estaria errado se o chronyd não o estivesse corrigindo. É fornecida em ppm (partes por milhão).
 - `Residual freq`: Frequência residual indicando a diferença entre as medições da fonte de referência e a frequência atualmente sendo usada.
 - `Skew`: Limite de erro estimado da frequência.
-- `Root delay`:
-
-Total de atrasos do caminho de rede até o computador do estrato a partir do qual o computador está sendo sincronizado.
-
-`Leap status`
-
-Este é o status de intercalação, que pode ter um dos seguintes valores: normal, inserir segundo, excluir segundo ou não sincronizado.
+- `Root delay`: Total de atrasos do caminho de rede até o computador do estrato a partir do qual o computador está sendo sincronizado.
+- `Leap status`: Este é o status de intercalação, que pode ter um dos seguintes valores: normal, inserir segundo, excluir segundo ou não sincronizado.
 ---
 
 - `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
@@ -3039,7 +3034,7 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1ODg1NTY2MCwxNjM2NzIyNTMyLC04OT
+eyJoaXN0b3J5IjpbMTMyNjM3MTQ1NSwxNjM2NzIyNTMyLC04OT
 A0MDczNDAsLTE0MzE2NDY2ODgsLTgxNDI2ODg4NCwxOTMwMDY0
 MTAwLC00OTA2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMi
 wtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5
