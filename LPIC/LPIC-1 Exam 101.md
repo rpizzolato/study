@@ -2967,26 +2967,11 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 - `ntpq -p`ou`--peers`: (é um utilitário para monitorar o status do NTP. Uma vez que o daemon NTP foi iniciado e configurado, usamos `ntpq` para verificar seu status) lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs. As colunas são:
 
 - `remote`: nome do host do provedor NTP.
-
-`refid`
-
-ID de referência do provedor NTP.
-
-`st`
-
-Estrato do provedor.
-
-`when`
-
-Número de segundos desde a última consulta.
-
-`poll`
-
-Número de segundos entre as consultas.
-
-`reach`
-
-ID de status para indicar se um servidor foi alcançado. As conexões bem-sucedidas aumentam este número em 1.
+- `refid`:  ID de referência do provedor NTP.
+- `st`: estrato do provedor.
+- `when`: número de segundos desde a última consulta.
+- `poll`: número de segundos entre as consultas.
+- `reach`: ID de status para indicar se um servidor foi alcançado. As conexões bem-sucedidas aumentam este número em 1.
 
 `delay`
 
@@ -3040,11 +3025,11 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MDQwNzM0MCwtMTQzMTY0NjY4OCwtOD
-E0MjY4ODg0LDE5MzAwNjQxMDAsLTQ5MDYxNTc0NywtMTM1Njkz
-MTcyOCwxNDk0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMD
-ksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3
-MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNT
-UsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0x
-MTkxODE4NDQ5XX0=
+eyJoaXN0b3J5IjpbMTU2NTEyNDQxOSwtODkwNDA3MzQwLC0xND
+MxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2NDEwMCwtNDkwNjE1
+NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MTIsLTExNzU3ODg0OT
+MsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIzOSw1MDUy
+OTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3ODQ1OTk5OT
+QsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4
+NzA2MTc4OThdfQ==
 -->
