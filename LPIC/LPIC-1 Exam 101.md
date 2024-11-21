@@ -3003,6 +3003,26 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 - `chronyd` é o daemon chrony e `chronyc` é a interface de linha de comando
 ---
 - `chronyc tracking`: fornece informações sobre o NTP e a hora do sistema que está configurado (vê um status geral)
+Essa saída contém muitas informações, mais do que as que estão disponíveis em outras implementações.
+
+- `Reference ID`: O ID de referência e o nome ao qual o computador está sincronizado no momento.
+- `Stratum`: Número de passos até um computador com um relógio de referência anexado.
+- `Ref time`: Esta é a hora UTC em que a última medição da fonte de referência foi feita.
+- `System time`: Atraso do relógio do sistema do servidor sincronizado.
+- `Last offset`: Deslocamento estimado da última atualização do relógio.
+- `RMS offset`: Média de longo prazo do valor do deslocamento.
+- `Frequency`: Esta é a taxa na qual o relógio do sistema estaria errado se o chronyd não o estivesse corrigindo. É fornecida em ppm (partes por milhão).
+- `Residual freq`: Frequência residual indicando a diferença entre as medições da fonte de referência e a frequência atualmente sendo usada.
+- `Skew`: Limite de erro estimado da frequência.
+- `Root delay`:
+
+Total de atrasos do caminho de rede até o computador do estrato a partir do qual o computador está sendo sincronizado.
+
+`Leap status`
+
+Este é o status de intercalação, que pode ter um dos seguintes valores: normal, inserir segundo, excluir segundo ou não sincronizado.
+---
+
 - `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
 - `chronyc sources -v`:  this command displays information about the current time sources that chronyd is accessing. Mostra se é um server (`^`), se é um peer (`=`) ou se se é o relógio local (`#`). Mostra também se está sincronizado (`*`), se está combinado (`+`) ou se está não está combinado (`-`)
 - `chronyc activity`: mostra status das atividades, mostrando se está com status 200 OK, por exemplo<br>
@@ -3019,11 +3039,11 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE1NDYxMjksMTYzNjcyMjUzMiwtODkwND
-A3MzQwLC0xNDMxNjQ2Njg4LC04MTQyNjg4ODQsMTkzMDA2NDEw
-MCwtNDkwNjE1NzQ3LC0xMzU2OTMxNzI4LDE0OTQ4NDU0MTIsLT
-ExNzU3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1
-NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLT
-E3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3
-NDQ3ODMyMl19
+eyJoaXN0b3J5IjpbMTc1ODg1NTY2MCwxNjM2NzIyNTMyLC04OT
+A0MDczNDAsLTE0MzE2NDY2ODgsLTgxNDI2ODg4NCwxOTMwMDY0
+MTAwLC00OTA2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMi
+wtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5
+OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MS
+wtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0x
+Mjc0NDc4MzIyXX0=
 -->
