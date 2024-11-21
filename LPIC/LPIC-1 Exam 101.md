@@ -2933,7 +2933,19 @@ Observe que este arquivo não é usado por todas as distribuições Linux.
 >
 >A maioria dos sistemas Linux modernos usa o  `systemd`  para sua configuração e serviços; assim, não é recomendado usar  `date`  ou  `hwclock`  para definir a hora. O  `systemd`  emprega para isso o  `timedatectl`. No entanto, é importante conhecer esses comandos legados no caso de você precisar administrar um sistema mais antigo.
 
-exer
+**Exercício interessante Timezone**
+
+Existe um local chamado  `eucla`. De que continente ele faz parte? Use o comando  `grep`  para descobrir.
+
+`timedatectl list-timezones \| grep -i eucla`
+ou
+`grep -ri eucla /usr/share/zoneinfo`
+
+Defina seu fuso horário atual para  `eucla`.
+
+`timedatectl set-timezone 'Australia/Eucla'`
+ou
+`ln -s /usr/share/zoneinfo/Australia/Eucla /etc/localtime`
 
 #### Protocolo NTP (Network Time Protocol)
 
@@ -2972,7 +2984,7 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDA5NDYyNCwxOTMwMDY0MTAwLC00OT
+eyJoaXN0b3J5IjpbLTgxNDI2ODg4NCwxOTMwMDY0MTAwLC00OT
 A2MTU3NDcsLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMiwtMTE3NTc4
 ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LD
 UwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5
