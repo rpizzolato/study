@@ -2772,17 +2772,17 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
 - `date --set="11 Nov 2011 11:11:11"`: também redefine o horário. Neste caso, é necessário ter privilégios de root para definir a data. Também podemos optar por alterar a hora ou data independentemente:
-
+```
     # date +%Y%m%d -s "20111125"
-
+```
 Aqui, devemos especificar as sequências para que nossa string seja analisada corretamente. Por exemplo,  `%Y`  refere-se ao ano e, portanto, os primeiros quatro dígitos  `2011`  serão interpretados como o ano de 2011. Da mesma forma,  `%T`  é a sequência de hora, como demonstrado aqui ao definirmos a hora:
-
-# **date +%T -s "13:11:00"**
-
+```
+# date +%T -s "13:11:00"
+```
 Depois de alterar a hora do sistema, é recomendável também definir o relógio do hardware para que os relógios do sistema e do hardware estejam sincronizados:
-
-# **hwclock --systohc**
-
+```
+# hwclock --systohc
+```
 Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 - `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
 - `-R`:  retorna data e hora no formato RFC 5322.
@@ -2833,7 +2833,7 @@ O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horá
 ```
 - `hwclock  --verbose`: retorna mais resultados, que podem ser úteis para solucionar problemas. Observe o `Calculated Hardware Clock drift`. Esta saída informa se a hora do sistema e a hora do hardware estão divergindo uma da outra.
 
-$ **sudo hwclock --verbose**
+$ sudo hwclock --verbose: mostra mais detalhes do h
 
 >[!NOTE]
 >
@@ -2972,11 +2972,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ1MTEwMTcsLTEzNTY5MzE3MjgsMT
-Q5NDg0NTQxMiwtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4
-NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMT
-I0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2
-MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxOD
-Q0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1
-MTExMTgwMzNdfQ==
+eyJoaXN0b3J5IjpbMTE1NjkyMjA1NCwtMTM1NjkzMTcyOCwxND
+k0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1
+NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMj
+Q4NjYxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYy
+NTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4ND
+Q5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUx
+MTExODAzM119
 -->
