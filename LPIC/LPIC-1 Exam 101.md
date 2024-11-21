@@ -2851,6 +2851,36 @@ Se o NTP não estiver disponível, recomenda-se usar  `timedatectl`  em vez de  
 
 O processo é semelhante ao de  `date`. O usuário também pode definir a hora independentemente da data com o formato **HH:MM:SS**
 
+#### Definindo o fuso horário com timedatectl
+
+`timedatectl`  é a melhor maneira de configurar o fuso horário local nos sistemas Linux baseados em  `systemd`  quando não existe GUI.  `timedatectl`  lista os fusos horários possíveis e, a partir daí, o fuso horário pode ser definido usando um deles como argumento.
+
+Primeiro, listamos os fusos horários possíveis:
+
+    $ **timedatectl list-timezones**
+    Africa/Abidjan
+    Africa/Accra
+    Africa/Algiers
+    Africa/Bissau
+    Africa/Cairo
+    ...
+
+A lista de fusos horários possíveis é longa, por isso o uso do comando  `grep`  é recomendado neste caso.
+
+Em seguida, podemos definir o fuso horário usando um dos elementos da lista retornada:
+
+$ **timedatectl set-timezone Africa/Cairo**
+$ **timedatectl**
+               Local time: Thu 2019-12-05 18:18:10 EET
+           Universal time: Thu 2019-12-05 16:18:10 UTC
+                 RTC time: Thu 2019-12-05 16:18:10
+                Time zone: Africa/Cairo (EET, +0200)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+Lembre-se de que o nome do fuso horário deve ser exato.  `Africa/Cairo`, por exemplo, muda o fuso horário, mas  `cairo`  ou  `africa/cairo`  não.
+
 #### Protocolo NTP (Network Time Protocol)
 
 Protocolo que usa a porta **123** via UDP (pode ser visto no arquivo `/etc/services`, que lista as portas)
@@ -2888,11 +2918,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NjM3ODI2NiwxNDk0ODQ1NDEyLC0xMT
-c1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcy
-MzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNz
-g0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0
-NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNj
-MsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMx
-MDM1MjkzXX0=
+eyJoaXN0b3J5IjpbOTgxNjYxMjc5LDE0OTQ4NDU0MTIsLTExNz
+U3ODg0OTMsMTkwMTY1MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIz
+OSw1MDUyOTg4NzgsNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3OD
+Q1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3
+ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2My
+w4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEw
+MzUyOTNdfQ==
 -->
