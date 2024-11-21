@@ -2816,13 +2816,13 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 
 - `chronyc tracking`: estatísticas do servidor ntp que está configurado (vê um status geral)
 - `chronyc sources`: mostra as fontes dos servers ntps que estão sendo utilizados
-- `chronyc sources -v`:  this command displays information about the current time sources that chronyd is accessing. Mostra se é um server (`^`), se é um peer (`=`) ou se se é o relógio local (`#`). Mostra também se está sincronizado
+- `chronyc sources -v`:  this command displays information about the current time sources that chronyd is accessing. Mostra se é um server (`^`), se é um peer (`=`) ou se se é o relógio local (`#`). Mostra também se está sincronizado (`*`), se está combinado (`+`) ou se está não está combinado (`-`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NzMzMDExNiw2MzE4NzMyMjYsMTI0OD
-Y2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4
-NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OS
-wxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1MTEx
-MTgwMzMsMTgzMTAzNTI5MywtODc5NDI5MzU0LDYyNDk1Njc3Mi
-wtMjAwOTgxNjQ4MCwtMjAzMzA1MDYzOSwxODc0ODQwMTUwLC0x
-NjU3Njk1OTc3XX0=
+eyJoaXN0b3J5IjpbNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMjQ4Nj
+YxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYyNTg2
+NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4NDQ5LD
+EwOTc2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUxMTEx
+ODAzMywxODMxMDM1MjkzLC04Nzk0MjkzNTQsNjI0OTU2NzcyLC
+0yMDA5ODE2NDgwLC0yMDMzMDUwNjM5LDE4NzQ4NDAxNTAsLTE2
+NTc2OTU5NzddfQ==
 -->
