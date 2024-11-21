@@ -2808,15 +2808,15 @@ O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm
 
 #### chrony e timedatect
 
-- **chrony**: funciona melhor em ambientes instáveis. Precisa instalar: `apt install chrony`. Confirmar com `ps axu | grep chrony` e `systemctl status crony`.
+- **chrony**: funciona melhor em ambientes instáveis. Precisa instalar: `apt install chrony`. Confirmar com `ps axu | grep chrony` e `systemctl status chrony`.
 
-O arquivo de configuração ficam `/etc/chrony/chrony.conf`
+O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar igual ao ntp, com a palavra pool ou 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxODczMjI2LDEyNDg2NjEzNTEsLTE3OD
-Q1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3
-ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0NDksMTA5NzYzNjE2My
-w4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTExMTE4MDMzLDE4MzEw
-MzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3NzIsLTIwMDk4MTY0OD
-AsLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwtMTY1NzY5NTk3Nyw0
-NDE5MzY3NjddfQ==
+eyJoaXN0b3J5IjpbLTEzMTY0ODY5NjQsNjMxODczMjI2LDEyND
+g2NjEzNTEsLTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMTM3NjI1
+ODY0NCwtMTI3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4MTg0ND
+ksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMzMDAsNTEx
+MTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5NTY3Nz
+IsLTIwMDk4MTY0ODAsLTIwMzMwNTA2MzksMTg3NDg0MDE1MCwt
+MTY1NzY5NTk3N119
 -->
