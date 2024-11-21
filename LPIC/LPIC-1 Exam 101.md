@@ -2771,6 +2771,7 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date`: retorna a hora no sistema
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
+
 - `hwclock` (`apt install util-linux-extra`): mostra o relógio do BIOS
 
 O `hwclock` serve ainda para sincronizar o horário do sistema igual ao do horário do hardware, ou vice-versa.
@@ -2828,11 +2829,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzU3ODg0OTMsMTkwMTY1MDEwOSwtOD
-Y4ODU2MjYxLDQ1OTk1NzIzOSw1MDUyOTg4NzgsNjMxODczMjI2
-LDEyNDg2NjEzNTEsLTE3ODQ1OTk5OTQsLTcwNDg1NTI1NSwtMT
-M3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2MTc4OTgsLTExOTE4
-MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0NjU2MTMzMD
-AsNTExMTE4MDMzLDE4MzEwMzUyOTMsLTg3OTQyOTM1NCw2MjQ5
-NTY3NzJdfQ==
+eyJoaXN0b3J5IjpbMjAzMDMxNDgyMSwtMTE3NTc4ODQ5MywxOT
+AxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3
+OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNz
+A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
+Nzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NS
+wtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5
+NDI5MzU0XX0=
 -->
