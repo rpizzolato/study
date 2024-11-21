@@ -2820,13 +2820,13 @@ O arquivo de configuração ficam `/etc/chrony/chrony.conf`, podendo ainda usar 
 - `chronyc activity`: mostra status das atividades, mostrando se está com status 200 OK, por exemplo<br>
 *Se digitar só `chronyc`, entra no modo de cli, e os comandos anteriores podem ser digitados diretamente.
 
-A título de curiosidade, o systemd tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando timedatectl, que apresenta informações de network time on e NTP sync
+A título de curiosidade, o **systemd** tem uma forma de sincronia por meio do serviço `systemd-timesyncd.service`, que pode conflitar com o ntp. Vide o comando `timedatectl`, que apresenta informações de `network time on` e `NTP synchronized`. Para evitar seria interessante usar o comando: `timedatectl set-ntp false`, assim, vai deixar como no, a opção netw
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzODg1NDY4Myw0NTk5NTcyMzksNTA1Mj
-k4ODc4LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0
-LC03MDQ4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsOD
-cwNjE3ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMz
-Njc1LC0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC
-04Nzk0MjkzNTQsNjI0OTU2NzcyLC0yMDA5ODE2NDgwLC0yMDMz
-MDUwNjM5XX0=
+eyJoaXN0b3J5IjpbMjczODkyNzcsNDU5OTU3MjM5LDUwNTI5OD
+g3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwt
+NzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MD
+YxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3
+NSwtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtOD
+c5NDI5MzU0LDYyNDk1Njc3MiwtMjAwOTgxNjQ4MCwtMjAzMzA1
+MDYzOV19
 -->
