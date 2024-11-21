@@ -2775,7 +2775,7 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 ```
     # date +%Y%m%d -s "20111125"
 ```
-Aqui, devemos especificar as sequências para que nossa string seja analisada corretamente. Por exemplo,  `%Y`  refere-se ao ano e, portanto, os primeiros quatro dígitos  `2011`  serão interpretados como o ano de 2011. Da mesma forma,  `%T`  é a sequência de hora, como demonstrado aqui ao definirmos a hora:
+Aqui, devemos especificar as sequências para que nossa string seja analisada corretamente. Por exemplo,  `%Y`  refere-se ao ano e, portanto, os primeiros quatro dígitos  `2011`  serão interpretados como o ano de 2011. Da mesma forma,  `%T`  é a sequência de hora, como demonstrado aqui ao definirmos a hora (`-s` ou `--set`):
 ```
 # date +%T -s "13:11:00"
 ```
@@ -2790,7 +2790,7 @@ Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 
 O formato de  `date`  pode ser personalizado pelo usuário com as sequências especificadas na página de manual. Por exemplo, a hora atual pode ser formatada como tempo do Unix da seguinte maneira:
 
-    $ **date +%s**
+    $ date +%s
     1574014515
 
 Na página de manual de  `date`, podemos ver que  `%s`  se refere ao tempo do Unix.
@@ -2803,7 +2803,7 @@ O tempo do Unix é usado internamente na maioria dos sistemas baseados em Unix. 
 
 A opção  `--debug`  é muito útil para garantir que uma data possa ser analisada com sucesso. Observe o que acontece ao passarmos uma data válida para o comando:
 
-    $ **date --debug --date="Fri, 03 Jan 2020 14:00:17 -0500"**
+    $ date --debug --date="Fri, 03 Jan 2020 14:00:17 -0500"
     date: parsed day part: Fri (day ordinal=0 number=5)
     date: parsed date part: (Y-M-D) 2020-01-03
     date: parsed time part: 14:00:17 UTC-05
@@ -2970,11 +2970,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDYxNTc0NywtMTM1NjkzMTcyOCwxND
-k0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMDksLTg2ODg1
-NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3MzIyNiwxMj
-Q4NjYxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNTUsLTEzNzYy
-NTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0xMTkxODE4ND
-Q5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC0xNDY1NjEzMzAwLDUx
-MTExODAzM119
+eyJoaXN0b3J5IjpbMTkzMDA2NDEwMCwtNDkwNjE1NzQ3LC0xMz
+U2OTMxNzI4LDE0OTQ4NDU0MTIsLTExNzU3ODg0OTMsMTkwMTY1
+MDEwOSwtODY4ODU2MjYxLDQ1OTk1NzIzOSw1MDUyOTg4NzgsNj
+MxODczMjI2LDEyNDg2NjEzNTEsLTE3ODQ1OTk5OTQsLTcwNDg1
+NTI1NSwtMTM3NjI1ODY0NCwtMTI3NDQ3ODMyMiw4NzA2MTc4OT
+gsLTExOTE4MTg0NDksMTA5NzYzNjE2Myw4ODMxMzM2NzUsLTE0
+NjU2MTMzMDBdfQ==
 -->
