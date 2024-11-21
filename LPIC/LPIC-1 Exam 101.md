@@ -2965,12 +2965,10 @@ Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de in
 O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm listado as pools com endereços NTP. Essas pools precedem da palavra reservada `pool` ou `server`.
 
 - `ntpq -p`ou`--peers`: lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs
-- `ntpdate 3.pt.pool.ntp.org`: vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)<br>
+- `ntpdate 3.pt.pool.ntp.org` (`apt install ntpsec-ntpdate -y`): vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)<br>
 **O comando acima não altera para o horário de Portugal, na realidade vai pegar o horário de lá, e de acordo com as configurações de timezone do sistema, vai ajustar de acordo com o timezone.
 
 - `ntpdate -q 3.pt.pool.ntp.org`: (`-q` ou `--query`): consulta se o servidor está funcionando.
-
-### ntpdate
 
 Durante a configuração inicial, a hora do sistema e o NTP podem ser seriamente dessincronizados. Se o  _deslocamento_  entre o sistema e a hora NTP for maior que 17 minutos, o daemon NTP não fará alterações na hora do sistema. Neste caso, será necessária uma intervenção manual.
 
@@ -3003,7 +3001,7 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzgyNTg1MiwtMTQzMTY0NjY4OCwtOD
+eyJoaXN0b3J5IjpbLTc0MzU0MTYwOCwtMTQzMTY0NjY4OCwtOD
 E0MjY4ODg0LDE5MzAwNjQxMDAsLTQ5MDYxNTc0NywtMTM1Njkz
 MTcyOCwxNDk0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMD
 ksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3
