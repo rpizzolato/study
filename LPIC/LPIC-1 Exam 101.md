@@ -2775,8 +2775,20 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 - `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
 - `-R`:  retorna data e hora no formato RFC 5322.
-- `--rfc-3339`: 
-Retorna data e hora no formato RFC 3339.
+- `--rfc-3339`:  retorna data e hora no formato RFC 3339.
+
+O formato de  `date`  pode ser personalizado pelo usuário com as sequências especificadas na página de manual. Por exemplo, a hora atual pode ser formatada como tempo do Unix da seguinte maneira:
+
+    $ **date +%s**
+    1574014515
+
+Na página de manual de  `date`, podemos ver que  `%s`  se refere ao tempo do Unix.
+
+O tempo do Unix é usado internamente na maioria dos sistemas baseados em Unix. Ele armazena a hora UTC como o número de segundos desde a  _Época_, que foi definida como 1º de janeiro de 1970.
+
+Note
+
+O número de bits necessários para armazenar a hora Unix no momento atual é de 32 bits. No futuro, 32 bits se tornarão insuficientes para conter a hora atual no formato Unix. Isso causará problemas sérios para qualquer sistema Linux de 32 bits. Felizmente, isso não ocorrerá até 19 de janeiro de 2038.
 
 - `hwclock` (`apt install util-linux-extra`): mostra o relógio do BIOS
 
@@ -2835,11 +2847,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NDk4MTc1OCwtMTE3NTc4ODQ5MywxOT
-AxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3
-OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNz
-A0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYx
-Nzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NS
-wtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgzMTAzNTI5MywtODc5
-NDI5MzU0XX0=
+eyJoaXN0b3J5IjpbMjI5MzAyMjc2LC0xMTc1Nzg4NDkzLDE5MD
+E2NTAxMDksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4
+LDYzMTg3MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0LC03MD
+Q4NTUyNTUsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3
+ODk4LC0xMTkxODE4NDQ5LDEwOTc2MzYxNjMsODgzMTMzNjc1LC
+0xNDY1NjEzMzAwLDUxMTExODAzMywxODMxMDM1MjkzLC04Nzk0
+MjkzNTRdfQ==
 -->
