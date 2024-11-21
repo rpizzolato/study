@@ -2771,7 +2771,7 @@ Em linhas gerais, o hardware e software clock não são sincronizados pois são 
 - `date`: retorna a hora no sistema
 - `date -u`: retorna data/hora UTC (GMT0)
 - `date 12251200`: ajusta o relógio para 12 de dezembro às 12:00 (o ano é opcional). Opção com ano seria: `date 122512002024` (precisa ser como root).
-- 
+- date --set="11 Nov 2011 11:11:11"**
 
 Outras opções comumente usadas retornam a hora local em um formato RFC aceito:
 - `-I`:  data/hora no formato ISO 8601. Anexar  `date`  (`-Idate`) limita a saída apenas à data. Outros formatos são  `hours`,  `minutes`,  `seconds`  e  `ns`  (para nanossegundos).
@@ -2962,11 +2962,11 @@ O ntpd usa a porta **123** e o chrony usa a **323**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTY5MzE3MjgsMTQ5NDg0NTQxMiwtMT
-E3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4NTYyNjEsNDU5OTU3
-MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMTI0ODY2MTM1MSwtMT
-c4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2MjU4NjQ0LC0xMjc0
-NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxODQ0OSwxMDk3NjM2MT
-YzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1MTExMTgwMzMsMTgz
-MTAzNTI5M119
+eyJoaXN0b3J5IjpbLTEwNDY5MzA0MjYsLTEzNTY5MzE3MjgsMT
+Q5NDg0NTQxMiwtMTE3NTc4ODQ5MywxOTAxNjUwMTA5LC04Njg4
+NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3OCw2MzE4NzMyMjYsMT
+I0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1MjU1LC0xMzc2
+MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwtMTE5MTgxOD
+Q0OSwxMDk3NjM2MTYzLDg4MzEzMzY3NSwtMTQ2NTYxMzMwMCw1
+MTExMTgwMzNdfQ==
 -->
