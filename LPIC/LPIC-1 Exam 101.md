@@ -2964,7 +2964,46 @@ Primeiro é preciso instalar os pacotes: `apt install ntp ntpdate`. Depois de in
 
 O arquivo de configuração do NTP é `/etc/ntp.conf`. Dentro desse arquivo têm listado as pools com endereços NTP. Essas pools precedem da palavra reservada `pool` ou `server`.
 
-- `ntpq -p`ou`--peers`: (é um utilitário para monitorar o status do NTP. Uma vez que o daemon NTP foi iniciado e configurado, usamos `ntpq` para verificar seu status) lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs
+- `ntpq -p`ou`--peers`: (é um utilitário para monitorar o status do NTP. Uma vez que o daemon NTP foi iniciado e configurado, usamos `ntpq` para verificar seu status) lista as pools (peers) com diversas estatísticas de cada pool ou server. Com `-n` não resolve os nomes, traz só os IPs. As colunas são:
+
+- `remote`: nome do host do provedor NTP.
+
+`refid`
+
+ID de referência do provedor NTP.
+
+`st`
+
+Estrato do provedor.
+
+`when`
+
+Número de segundos desde a última consulta.
+
+`poll`
+
+Número de segundos entre as consultas.
+
+`reach`
+
+ID de status para indicar se um servidor foi alcançado. As conexões bem-sucedidas aumentam este número em 1.
+
+`delay`
+
+Tempo em ms entre a consulta e a resposta do servidor.
+
+`offset`
+
+Tempo em ms entre a hora do sistema e a hora NTP.
+
+`jitter`
+
+Deslocamento em ms entre a hora do sistema e o NTP na última consulta.
+
+`ntpq`  também inclui um modo interativo, que é acessado quando ele é executado sem opções ou argumentos. A opção  `?`  retorna uma lista de comandos reconhecidos pelo  `ntpq`.
+
+
+
 - `ntpdate 3.pt.pool.ntp.org` (`apt install ntpsec-ntpdate -y`): vai até o NTP de Portugal e atualiza o horário (de acordo com NTP de Portugal)<br>
 **O comando acima não altera para o horário de Portugal, na realidade vai pegar o horário de lá, e de acordo com as configurações de timezone do sistema, vai ajustar de acordo com o timezone.
 
@@ -3001,11 +3040,11 @@ NTP Pool recomendado: https://www.ntppool.org/en/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTYxNDY3NDIsLTE0MzE2NDY2ODgsLT
-gxNDI2ODg4NCwxOTMwMDY0MTAwLC00OTA2MTU3NDcsLTEzNTY5
-MzE3MjgsMTQ5NDg0NTQxMiwtMTE3NTc4ODQ5MywxOTAxNjUwMT
-A5LC04Njg4NTYyNjEsNDU5OTU3MjM5LDUwNTI5ODg3OCw2MzE4
-NzMyMjYsMTI0ODY2MTM1MSwtMTc4NDU5OTk5NCwtNzA0ODU1Mj
-U1LC0xMzc2MjU4NjQ0LC0xMjc0NDc4MzIyLDg3MDYxNzg5OCwt
-MTE5MTgxODQ0OV19
+eyJoaXN0b3J5IjpbLTg5MDQwNzM0MCwtMTQzMTY0NjY4OCwtOD
+E0MjY4ODg0LDE5MzAwNjQxMDAsLTQ5MDYxNTc0NywtMTM1Njkz
+MTcyOCwxNDk0ODQ1NDEyLC0xMTc1Nzg4NDkzLDE5MDE2NTAxMD
+ksLTg2ODg1NjI2MSw0NTk5NTcyMzksNTA1Mjk4ODc4LDYzMTg3
+MzIyNiwxMjQ4NjYxMzUxLC0xNzg0NTk5OTk0LC03MDQ4NTUyNT
+UsLTEzNzYyNTg2NDQsLTEyNzQ0NzgzMjIsODcwNjE3ODk4LC0x
+MTkxODE4NDQ5XX0=
 -->
