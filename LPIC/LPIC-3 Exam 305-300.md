@@ -225,9 +225,10 @@ Estados que aparecem no comando `xl list`:
 - `xl -v restore ~root/image-pv-guest.save`: restaura a instância/VM (interessante ao salvar, deixar um `top` rodando, para mostrar que a VM é salva em um estado que estava com um programa em execução, e após o restore, ela volta no mesmo local que estava executando)
 - `xen-list-images`: lista as imagens criadas
 
-Para fazer com que determinada VM suba assim que o hypervisor seja iniciado (de um reinício inesperado, por exemplo), criamos um diretório chamado `auto` em `/etc/xen` (isso é p)
+Para fazer com que determinada VM suba assim que o hypervisor seja iniciado (de um reinício inesperado, por exemplo), criamos um diretório chamado `auto` em `/etc/xen` (isso é predefinido em `/etc/default/xendomains`).<br>
+Dentro de a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTQ5NzUyMjMsLTIzNjgwODE3MywyMT
+eyJoaXN0b3J5IjpbLTIxMzg3NDAwNDYsLTIzNjgwODE3MywyMT
 A0NTAzMjI5LC05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1
 NDFdfQ==
 -->
