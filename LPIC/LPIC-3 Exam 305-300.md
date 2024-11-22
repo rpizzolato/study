@@ -233,8 +233,9 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 - `xl block-list lpic3-pv-guest`: lista os discos (devices) na VM lpic3-pv-guest.
 - `xl block-detach lpic3-pv-guest sdb`: desanexa um disco da VM lpic3-pv-guest
 - `xl block-attach lpic3-pv-guest 'phy:/dev/xen-vg/lpic3-pv-novo,sdc,w'` (isso considerando que tenha criado uma LV de 5G, com o comando: `lvcreate -n lpic3-pv-guest-novo -L 5G xen-vg`)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NDIxNDkyNiwtNTM3OTgzODQ3LC0yMz
-Y4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4NjIxNDE4
-MCwtNDg0MjI4NTQxXX0=
+eyJoaXN0b3J5IjpbNTk1MzE0NDQxLDEwNDQyMTQ5MjYsLTUzNz
+k4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1
+MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
 -->
