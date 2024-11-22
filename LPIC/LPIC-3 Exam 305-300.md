@@ -217,8 +217,9 @@ Estados que aparecem no comando `xl list`:
 - d - dying
 É recomendado ver no `man xl`
 
-- xl list -l nome_da_vm: mostra informações da VM esp
+- `xl list -l nome_da_vm`: mostra informações da VM específica, como nome, id, cpu, etc. (sem o nome da VM traz info de todas as VMs)
+- `xl uptime`: mostra o tempo que as VMs estão no ar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njg0NTY0NTEsLTkzMDEwOTc1MCw2OD
-YyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbMTMyNzcxNDM1MiwtOTMwMTA5NzUwLDY4Nj
+IxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
