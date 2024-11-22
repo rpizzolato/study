@@ -216,7 +216,9 @@ Estados que aparecem no comando `xl list`:
 - c -crashed
 - d - dying
 É recomendado ver no `man xl`
+
+- xl list -l nome_da_vm: mostra informações da VM esp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NzcyODM5MiwtOTMwMTA5NzUwLDY4Nj
-IxNDE4MCwtNDg0MjI4NTQxXX0=
+eyJoaXN0b3J5IjpbLTE2Njg0NTY0NTEsLTkzMDEwOTc1MCw2OD
+YyMTQxODAsLTQ4NDIyODU0MV19
 -->
