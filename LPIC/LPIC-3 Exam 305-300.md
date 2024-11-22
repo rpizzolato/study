@@ -217,13 +217,13 @@ Estados que aparecem no comando `xl list`:
 - d - dying
 É recomendado ver no `man xl`
 
-- `xl list -l nome_da_vm`: mostra informações da VM específica, como nome, id, cpu, etc. (sem o nome da VM traz info de todas as VMs)
+- `xl list -l nome_da_vm`: mostra informações da VM específica, como nome, id, cpu, discos, etc. (sem o nome da VM traz info de todas as VMs)
 - `xl uptime`: mostra o tempo que as VMs estão no ar
 - `xl pause nome_da_vm`: pausa a VM (interessante olhar o estado dela, vai ficar com um `p`)
 - `xl unpause nome_da_vm`: retira o pause da VM (volta para running)
 - `xl -v save nome_da_vm ~root/image-pv-guest.save`: salva uma instancia/estado da VM (quando salva, sai da lista do `xl list`)
 - `xl -v restore ~root/image-pv-guest.save`: restaura a instância/VM (interessante ao salvar, deixar um `top` rodando, para mostrar que a VM é salva em um estado que estava com um programa em execução, e após o restore, ela volta no mesmo local que estava executando)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjYyOTEwNCwtOTMwMTA5NzUwLDY4Nj
+eyJoaXN0b3J5IjpbMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4Nj
 IxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
