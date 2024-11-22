@@ -7,7 +7,7 @@ A certificação LPIC-3 Enterprise Virtualization and Containerization cobre a a
 
 #### Anotações para servir de resumo e consulta futuramente
 
-## 351.1 - Conceitos e Teoria sobre Virtualização
+# 351.1 - Conceitos e Teoria sobre Virtualização
 
 **Simulador**
 - Comporta-se de forma similar;
@@ -238,8 +238,12 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 
 - `xl cd-eject lpic3-hvm-guest hdc`: remove o disco que há no cdrom (não remove o dispositivo, apenas remove o disco inserido internamente nele)
 - `xl cd-insert lpic3-hvm-guest hdc /root/Rocky-9.3-x86_64-minimal.iso`: insere a iso do Rocky linux no cdrom
+
+## 351.3 - QEMU (e KVM)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNz
-k4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1
-MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTEwODczNjEyODUsNjM0NzczNjgzLDEwND
+QyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMy
+MjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
 -->
