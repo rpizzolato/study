@@ -233,9 +233,13 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 - `xl block-list lpic3-pv-guest`: lista os discos (devices) na VM lpic3-pv-guest.
 - `xl block-detach lpic3-pv-guest sdb`: desanexa um disco da VM lpic3-pv-guest
 - `xl block-attach lpic3-pv-guest 'phy:/dev/xen-vg/lpic3-pv-novo,sdc,w'` (isso considerando que tenha criado uma LV de 5G, com o comando: `lvcreate -n lpic3-pv-guest-novo -L 5G xen-vg`)
-- 
+
+#### Remover e inserir disco em CDROM
+
+- xl cd-eject lpic3-hvm-guest hdc: remove o disco que há no cdrom (não remove o dispositivo, apenas remove o disco inserido internamente nele)
+- xl cd-insert lpic3-hvm-guest hdc /root/Rocky-9.3-x86
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk1MzE0NDQxLDEwNDQyMTQ5MjYsLTUzNz
-k4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1
-MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTE3MjgwMDc1MTQsMTA0NDIxNDkyNiwtNT
+M3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5
+NzUwLDY4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
