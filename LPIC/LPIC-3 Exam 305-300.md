@@ -220,8 +220,9 @@ Estados que aparecem no comando `xl list`:
 - `xl list -l nome_da_vm`: mostra informações da VM específica, como nome, id, cpu, etc. (sem o nome da VM traz info de todas as VMs)
 - `xl uptime`: mostra o tempo que as VMs estão no ar
 - `xl pause nome_da_vm`: pausa a VM (interessante olhar o estado dela, vai ficar com um `p`)
-- xl unpause nome_da_vm: retira o pause da VM
+- `xl unpause nome_da_vm`: retira o pause da VM (volta para running)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk1MDM1ODIsLTkzMDEwOTc1MCw2OD
-YyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTc4NDQwMzAwMSwtOTMwMTA5NzUwLDY4Nj
+IxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
