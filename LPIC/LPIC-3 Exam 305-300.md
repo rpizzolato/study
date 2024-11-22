@@ -224,7 +224,10 @@ Estados que aparecem no comando `xl list`:
 - `xl -v save nome_da_vm ~root/image-pv-guest.save`: salva uma instancia/estado da VM (quando salva, sai da lista do `xl list`)
 - `xl -v restore ~root/image-pv-guest.save`: restaura a instância/VM (interessante ao salvar, deixar um `top` rodando, para mostrar que a VM é salva em um estado que estava com um programa em execução, e após o restore, ela volta no mesmo local que estava executando)
 - `xen-list-images`: lista as imagens criadas
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjgwODE3MywyMTA0NTAzMjI5LC05Mz
-AxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ==
+eyJoaXN0b3J5IjpbMjE4MzQxMjMxLC0yMzY4MDgxNzMsMjEwND
+UwMzIyOSwtOTMwMTA5NzUwLDY4NjIxNDE4MCwtNDg0MjI4NTQx
+XX0=
 -->
