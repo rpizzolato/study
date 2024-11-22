@@ -230,9 +230,9 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 
 ### Comandos para gerenciamento dos dispositivos de armazenamento
 
-
+- xl block-list lpic3-pv-guest: lista os discos (devices) na VM lpic3-pv-guest.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMD
-Q1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0
-MV19
+eyJoaXN0b3J5IjpbLTM2NTM2MjQzNCwtNTM3OTgzODQ3LC0yMz
+Y4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4NjIxNDE4
+MCwtNDg0MjI4NTQxXX0=
 -->
