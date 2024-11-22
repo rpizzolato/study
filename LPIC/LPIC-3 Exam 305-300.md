@@ -215,8 +215,8 @@ Estados que aparecem no comando `xl list`:
 - s - shudown
 - c -crashed
 - d - dying
-É recomendado ver no `man xl list`
+É recomendado ver no `man xl`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4ND
-IyODU0MV19
+eyJoaXN0b3J5IjpbMTM2NzcyODM5MiwtOTMwMTA5NzUwLDY4Nj
+IxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
