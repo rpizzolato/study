@@ -221,8 +221,8 @@ Estados que aparecem no comando `xl list`:
 - `xl uptime`: mostra o tempo que as VMs estão no ar
 - `xl pause nome_da_vm`: pausa a VM (interessante olhar o estado dela, vai ficar com um `p`)
 - `xl unpause nome_da_vm`: retira o pause da VM (volta para running)
-- 
+- xl -v save nome_da_vm ~root/image-pv-guest.save: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NDQwMzAwMSwtOTMwMTA5NzUwLDY4Nj
+eyJoaXN0b3J5IjpbMTYwMzc3MTUyMywtOTMwMTA5NzUwLDY4Nj
 IxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
