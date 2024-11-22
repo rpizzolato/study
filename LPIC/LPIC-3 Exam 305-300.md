@@ -227,8 +227,12 @@ Estados que aparecem no comando `xl list`:
 
 Para fazer com que determinada VM suba assim que o hypervisor seja iniciado (de um reinício inesperado, por exemplo), criamos um diretório chamado `auto` em `/etc/xen` (isso é predefinido em `/etc/default/xendomains`).<br>
 Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-guest.cfg .` (considerando que já esteja em `/etc/xen/auto`)
+
+### Comandos para gerenciamento dos dispositivos de armazenamento
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjY4NDUzMDIsLTIzNjgwODE3MywyMT
-A0NTAzMjI5LC05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1
-NDFdfQ==
+eyJoaXN0b3J5IjpbLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMD
+Q1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0
+MV19
 -->
