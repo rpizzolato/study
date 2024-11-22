@@ -236,10 +236,10 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 
 #### Remover e inserir disco em CDROM
 
-- xl cd-eject lpic3-hvm-guest hdc: remove o disco que há no cdrom (não remove o dispositivo, apenas remove o disco inserido internamente nele)
-- xl cd-insert lpic3-hvm-guest hdc /root/Rocky-9.3-x86
+- `xl cd-eject lpic3-hvm-guest hdc`: remove o disco que há no cdrom (não remove o dispositivo, apenas remove o disco inserido internamente nele)
+- `xl cd-insert lpic3-hvm-guest hdc /root/Rocky-9.3-x86_64-minimal.iso`: insere a iso do Rocky linux no cdrom
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjgwMDc1MTQsMTA0NDIxNDkyNiwtNT
-M3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5
-NzUwLDY4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
+eyJoaXN0b3J5IjpbNjM0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNz
+k4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1
+MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
 -->
