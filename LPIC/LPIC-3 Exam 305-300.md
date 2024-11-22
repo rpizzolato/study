@@ -208,7 +208,15 @@ Resumidamente:
 
 ### Comandos para gerenciamento das VMs
 
-
+Estados que aparecem no comando `xl list`:
+- r - running
+- b - blocked
+- p - paused
+- s - shudown
+- c -crashed
+- d - dying
+É recomendado ver no `man xl list`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4ND
+IyODU0MV19
 -->
