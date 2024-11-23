@@ -262,12 +262,18 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 - **QEMU**: faz a emulação dos dispositivos (rede, disco, placas, etc)
 - **KVM**: disponibiliza o recurso de HVM (CPU Hardware Virtualization)
 
+Antes da instalação, precisa testar se KVM está disponível:
+- eg
 
+
+#### instalação
+- QEMU (Debian): `apt install qemu-system-x86 -y`
+- QEMU (Red Hat): `yum install qemu-kvm qemu-img`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTM5ODAyNywtMTk4Nzg0MzUzNywtNj
+eyJoaXN0b3J5IjpbMTQ4NTQyMzI1NSwtMTk4Nzg0MzUzNywtNj
 U4NDI1NTQyLC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0Nzcz
 NjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLD
 IxMDQ1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIy
