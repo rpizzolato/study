@@ -274,12 +274,15 @@ Antes da instalação, precisa testar se KVM está disponível:
 
 Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man qemu-system-x86_64`)
 
+ qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2: iniciar uma VM usan
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OT
-M4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xODQ0NTkz
-MjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5MjYsLT
-UzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEw
-OTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbNzMyMjM2MDksLTcyNTA2MTA4LDE3NjIwOT
+MxMDcsMTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQy
+LC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwND
+QyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMy
+MjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
 -->
