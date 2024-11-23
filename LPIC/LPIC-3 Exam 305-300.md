@@ -268,7 +268,6 @@ Antes da instalação, precisa testar se KVM está disponível:
 - `lsmod|grep kvm`
 - `ls -l /dev/kvm`
 
-
 #### instalação
 - QEMU (**Debian**): `apt install qemu-system-x86 -y`
 - QEMU (**Red Hat**): `yum install qemu-kvm qemu-img`
@@ -276,9 +275,9 @@ Antes da instalação, precisa testar se KVM está disponível:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNj
-U4NDI1NTQyLC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0Nzcz
-NjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLD
-IxMDQ1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIy
-ODU0MV19
+eyJoaXN0b3J5IjpbMTc2MjA5MzEwNywxNjY5Mzg3MDEzLC0xOT
+g3ODQzNTM3LC02NTg0MjU1NDIsLTE4NDQ1OTMyNCwtMTA4NzM2
+MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgzODQ3LC
+0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4NjIx
+NDE4MCwtNDg0MjI4NTQxXX0=
 -->
