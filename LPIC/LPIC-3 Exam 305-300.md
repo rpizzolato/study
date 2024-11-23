@@ -274,15 +274,18 @@ Antes da instalação, precisa testar se KVM está disponível:
 
 Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man qemu-system-x86_64`)
 
- qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2: iniciar uma VM usan
+ `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (-boot -d, vide man qemu-system-x86_64), com 2G de RAM e 2 CPUs.
+
+Usando interface gráfica, vai subir uma janela para controlar a máquina. CAso 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyMjM2MDksLTcyNTA2MTA4LDE3NjIwOT
-MxMDcsMTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQy
-LC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwND
-QyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMy
-MjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbNjYxNTg5MzAxLC03MjUwNjEwOCwxNzYyMD
+kzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1ODQyNTU0
+MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4MywxMD
+Q0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3MywyMTA0NTAz
+MjI5LC05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ
+==
 -->
