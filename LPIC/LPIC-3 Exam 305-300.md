@@ -244,13 +244,17 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 ### KVM: Kernel-based Virtual Machine
 
 - Tecnologia de virtualização open source integrada ao Kernel Linux
-- Implementa um Hyperv
+- Implementa um Hypervisor do tipo 1
+- Multiplataforma (x86, x86_64, ARM, ...)
+- Utiliza as extensões de virtualização dos processos (HVM): Intel VT-x (vmx) e AMD-V (svm)
+- Usado em conjunto com o QEMU, Libvirt, Virt-manager, etc
+- Usado em soluções como oVirt, Proxmox, OpenStack
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQxOTYwNDgsLTEwODczNjEyODUsNj
-M0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4
-MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLT
-Q4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTE4NDQ1OTMyNCwtMTA4NzM2MTI4NSw2Mz
+Q3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgzODQ3LC0yMzY4MDgx
+NzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4NjIxNDE4MCwtND
+g0MjI4NTQxXX0=
 -->
