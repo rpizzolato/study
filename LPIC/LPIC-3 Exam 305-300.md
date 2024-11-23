@@ -257,12 +257,16 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 - É um conjunto com outro Hypervisor (KVM/Xen), atingindo performance próxima a uma máquina nativa
 - Hypervisor do tipo **2**
 
+### QEMU + KVM
+
+- **QEMU**: faz a emulação dos dispositivos (rede, disco, placas, etc)
+- **KVM**: disponibiliza o recurso de HVM (CPU Hardware Virtualization)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2ODMyMzYwLC02NTg0MjU1NDIsLTE4ND
-Q1OTMyNCwtMTA4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDky
-NiwtNTM3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOT
-MwMTA5NzUwLDY4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
+eyJoaXN0b3J5IjpbLTE5ODc4NDM1MzcsLTY1ODQyNTU0MiwtMT
+g0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4MywxMDQ0MjE0
+OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3MywyMTA0NTAzMjI5LC
+05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ==
 -->
