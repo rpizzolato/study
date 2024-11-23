@@ -250,12 +250,18 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 - Usado em conjunto com o QEMU, Libvirt, Virt-manager, etc
 - Usado em soluções como oVirt, Proxmox, OpenStack
 
+### QEMU - Quick Emulador
+
+- É um emulador e virtualizador Open Source
+- Pode emular uma máquina completa ou a execução de um software em outra arquitetura de hardware
+- É um conjunto com outro Hypervisor (KVM/Xen), atingindo performance próxima a uma máquina nativa
+- Hypervisor d
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxODM0NDgyLC0xODQ0NTkzMjQsLTEwOD
-czNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0
-NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1MCw2OD
-YyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTIxMDI2NTc1NTEsLTE4NDQ1OTMyNCwtMT
+A4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgz
+ODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLD
+Y4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
