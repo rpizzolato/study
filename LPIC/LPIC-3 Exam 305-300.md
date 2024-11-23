@@ -241,9 +241,16 @@ Dentro de `auto` crie um link para o arquivo `.cfg` da VM: `ln -s ../lpic3-pv-gu
 
 ## 351.3 - QEMU (e KVM)
 
+### KVM: Kernel-based Virtual Machine
+
+- Tecnologia de virtualização open source integrada ao Kernel Linux
+- Implementa um Hyperv
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODczNjEyODUsNjM0NzczNjgzLDEwND
-QyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMy
-MjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTE5MzQxOTYwNDgsLTEwODczNjEyODUsNj
+M0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0NywtMjM2ODA4
+MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1MCw2ODYyMTQxODAsLT
+Q4NDIyODU0MV19
 -->
