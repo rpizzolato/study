@@ -276,13 +276,13 @@ Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man
 
  `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (-boot -d, vide man qemu-system-x86_64), com 2G de RAM e 2 CPUs.
 
-Usando interface gráfica, vai subir uma janela para controlar a máquina. CAso 
+Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso esteja utilizando apenas console, é preciso abrir um tunel (colocar aqui o comando do xen) com a VM e acessar por VNC, o qual também precisa indicar, colocando mais um argumento ao comando anterior: `-vnc :0` (relembrar das saídas de monit. lpi1)
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYxNTg5MzAxLC03MjUwNjEwOCwxNzYyMD
+eyJoaXN0b3J5IjpbNjY2ODYxMTc1LC03MjUwNjEwOCwxNzYyMD
 kzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1ODQyNTU0
 MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4MywxMD
 Q0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3MywyMTA0NTAz
