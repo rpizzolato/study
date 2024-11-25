@@ -280,7 +280,7 @@ Primeiro passo é criar um disk image utility, usando o qemu-img, sendo o comand
 O `-f` é de first image format. `qcow2` é um formato de imagem comprimido, nesse caso será de 20GB com nome `vm-disco1.qcow2`
 
 Para gerar a VM:
-- `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (`-boot d`, vide `man qemu-system-x86_64`, basicamente é a, b para floppy), com 2G de RAM e 2 CPUs.
+- `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (`-boot d`, vide `man qemu-system-x86_64`, basicamente é `a`, `b` para floppy, `c` para hard disk e `d` para CD-ROM, `n-p` para Etherboot), com 2G de RAM e 2 CPUs.
 
 Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso esteja utilizando apenas console, é preciso abrir um túnel (`ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`) com a VM e acessar por VNC, o qual também precisa indicar, colocando mais um argumento ao comando anterior: `-vnc :0`
 
@@ -288,10 +288,10 @@ Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc0NzI1MTI2LDEwMzMwNDE2MSwtMTY5MT
-kwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OTM4NzAxMywt
-MTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xODQ0NTkzMjQsLTEwOD
-czNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0
-NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEwOTc1MCw2OD
-YyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbLTIwMzk5NDQxOTUsMTAzMzA0MTYxLC0xNj
+kxOTAxNSwtNzI1MDYxMDgsMTc2MjA5MzEwNywxNjY5Mzg3MDEz
+LC0xOTg3ODQzNTM3LC02NTg0MjU1NDIsLTE4NDQ1OTMyNCwtMT
+A4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgz
+ODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLD
+Y4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
 -->
