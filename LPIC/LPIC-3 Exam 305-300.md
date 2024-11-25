@@ -296,8 +296,10 @@ Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
 É possível fazer a VM subir com o kernel da máquina Host, assim como a imagem de initrd.img: `qemu-system-x86_64 -name LPIC3-Ubuntu -enable-kvm -hda Ubuntu-Server.qcow2 -m 2048 -smp cpus=2 -kernel /boot/vmlinuz -initrd /boot/initrd.img -append 'root=/dev/ubuntu-vg/ubuntu-lv fastboot quiet'`
 
+Para confirmar, dentro da VM, veja a versão do Kernel e em `/proc/cmdline`, os argumentos que foram passados no boot (`'root=/dev/ubuntu-vg/ubuntu-lv fastboot quiet'`)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODk5NDAwNCw1ODUxNDYxMjksLTEzNT
+eyJoaXN0b3J5IjpbMTQ2Njc3MTA4OCw1ODUxNDYxMjksLTEzNT
 g2MjA0NzUsODEzNDczNzQsMTk5NjQ4MTM3LC0xMTc2OTA4NzIx
 LDgxNDY1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5NDQxOTUsMTAzMz
 A0MTYxLC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2MjA5MzEwNywx
