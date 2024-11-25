@@ -288,7 +288,7 @@ A partir daqui, poderia segui a instalação do linux normalmente, no entanto é
 
 Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentOS9.vdi CentOS9.qcow2 -p -m10`. O `-m10` é o número de coroutines (corrotinas) paralelas no processo de conversão. O `-p` é para mostrar uma barra de progresso da conversão.
 
-Com o comando `hostnamectl` é possível notar que o **Virtualization** é igual a **kvm**, e **Hardware Vendor** é igual a **QEMU**. O comando `systemd-detect-virt` ajuda a detectar também. (se não )
+Com o comando `hostnamectl` é possível notar que o **Virtualization** é igual a **kvm**, e **Hardware Vendor** é igual a **QEMU**. O comando `systemd-detect-virt` ajuda a detectar também. (se não usar `-enable-kvm` na hora de criar a VM, **Virtualization** vai ser igual a **QEMU**)
 
 Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
@@ -296,11 +296,11 @@ Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgwOTkxNTEsODEzNDczNzQsMTk5Nj
-Q4MTM3LC0xMTc2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1MzA0MzIs
-LTIwMzk5NDQxOTUsMTAzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MD
-YxMDgsMTc2MjA5MzEwNywxNjY5Mzg3MDEzLC0xOTg3ODQzNTM3
-LC02NTg0MjU1NDIsLTE4NDQ1OTMyNCwtMTA4NzM2MTI4NSw2Mz
-Q3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgzODQ3LC0yMzY4MDgx
-NzNdfQ==
+eyJoaXN0b3J5IjpbLTY4ODYzMjczNCw4MTM0NzM3NCwxOTk2ND
+gxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwt
+MjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNj
+EwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1Mzcs
+LTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzND
+c3MzY4MywxMDQ0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3
+M119
 -->
