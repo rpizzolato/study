@@ -290,15 +290,17 @@ Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentO
 
 Com o comando `hostnamectl` é possível notar que o **Virtualization** é igual a **kvm**, e **Hardware Vendor** é igual a **QEMU**. O comando `systemd-detect-virt` ajuda a detectar também.
 
+Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjQ4MTM3LC0xMTc2OTA4NzIxLDgxND
-Y1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5NDQxOTUsMTAzMzA0MTYx
-LC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2MjA5MzEwNywxNjY5Mz
-g3MDEzLC0xOTg3ODQzNTM3LC02NTg0MjU1NDIsLTE4NDQ1OTMy
-NCwtMTA4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDkyNiwtNT
-M3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOSwtOTMwMTA5
-NzUwXX0=
+eyJoaXN0b3J5IjpbODEzNDczNzQsMTk5NjQ4MTM3LC0xMTc2OT
+A4NzIxLDgxNDY1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5NDQxOTUs
+MTAzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2MjA5Mz
+EwNywxNjY5Mzg3MDEzLC0xOTg3ODQzNTM3LC02NTg0MjU1NDIs
+LTE4NDQ1OTMyNCwtMTA4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0ND
+IxNDkyNiwtNTM3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIy
+OV19
 -->
