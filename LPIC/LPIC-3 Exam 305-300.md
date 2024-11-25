@@ -288,13 +288,13 @@ A partir daqui, poderia segui a instalação do linux normalmente, no entanto é
 
 Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentOS9.vdi CentOS9.qcow2 -p -m10`. O `-m10` é o número de coroutines (corrotinas) paralelas no processo de conversão. O `-p` é para mostrar uma barra de progresso da conversão.
 
-Com o comando h
+Com o comando `hostnamectl` é possível notar que o **Virtualization** é igual a **kvm**, e **Hardware Vendor** é igual a **QEMU**.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDc2MTQ2NCwtMTE3NjkwODcyMSw4MT
+eyJoaXN0b3J5IjpbLTUwNjczMjUzNCwtMTE3NjkwODcyMSw4MT
 Q2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMwNDE2
 MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OT
 M4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xODQ0NTkz
