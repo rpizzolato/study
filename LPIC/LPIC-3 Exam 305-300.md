@@ -277,9 +277,10 @@ Antes da instalação, precisa testar se KVM está disponível:
 Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man qemu-system-x86_64`)
 
 Primeiro passo é criar um disk image utility, usando o qemu-img, sendo o comando o seguinte: `qemu-img create -f qcow2 vm-disco1.qcow2 20G`.
-O -f é de first image format. qcow2 é um formato de imagem comprimido, nesse caso será de 20GB com nome `vm-disco1.qcow2`
+O `-f` é de first image format. `qcow2` é um formato de imagem comprimido, nesse caso será de 20GB com nome `vm-disco1.qcow2`
 
- `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (-boot -d, vide man qemu-system-x86_64), com 2G de RAM e 2 CPUs.
+Para gerar a VM:
+- `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (-boot -d, vide man qemu-system-x86_64), com 2G de RAM e 2 CPUs.
 
 Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso esteja utilizando apenas console, é preciso abrir um túnel (`ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`) com a VM e acessar por VNC, o qual também precisa indicar, colocando mais um argumento ao comando anterior: `-vnc :0`
 
@@ -287,10 +288,10 @@ Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzg3MjMxNDUsLTE2OTE5MDE1LC03Mj
-UwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1
-MzcsLTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LD
-YzNDc3MzY4MywxMDQ0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgw
-ODE3MywyMTA0NTAzMjI5LC05MzAxMDk3NTAsNjg2MjE0MTgwLC
-00ODQyMjg1NDFdfQ==
+eyJoaXN0b3J5IjpbMTAzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MD
+YxMDgsMTc2MjA5MzEwNywxNjY5Mzg3MDEzLC0xOTg3ODQzNTM3
+LC02NTg0MjU1NDIsLTE4NDQ1OTMyNCwtMTA4NzM2MTI4NSw2Mz
+Q3NzM2ODMsMTA0NDIxNDkyNiwtNTM3OTgzODQ3LC0yMzY4MDgx
+NzMsMjEwNDUwMzIyOSwtOTMwMTA5NzUwLDY4NjIxNDE4MCwtND
+g0MjI4NTQxXX0=
 -->
