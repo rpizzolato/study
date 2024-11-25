@@ -298,12 +298,14 @@ Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
 Para confirmar, dentro da VM, veja a versão do Kernel e em `/proc/cmdline`, os argumentos que foram passados no boot (`'root=/dev/ubuntu-vg/ubuntu-lv fastboot quiet'`)
 
+###
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2Njc3MTA4OCw1ODUxNDYxMjksLTEzNT
-g2MjA0NzUsODEzNDczNzQsMTk5NjQ4MTM3LC0xMTc2OTA4NzIx
-LDgxNDY1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5NDQxOTUsMTAzMz
-A0MTYxLC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2MjA5MzEwNywx
-NjY5Mzg3MDEzLC0xOTg3ODQzNTM3LC02NTg0MjU1NDIsLTE4ND
-Q1OTMyNCwtMTA4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIxNDky
-Nl19
+eyJoaXN0b3J5IjpbMTIyOTkyNjA5LDE0NjY3NzEwODgsNTg1MT
+Q2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywt
+MTE3NjkwODcyMSw4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OT
+Q0MTk1LDEwMzMwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3
+NjIwOTMxMDcsMTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4ND
+I1NTQyLC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgz
+XX0=
 -->
