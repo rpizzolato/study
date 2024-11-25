@@ -300,14 +300,16 @@ Para confirmar, dentro da VM, veja a versão do Kernel e em `/proc/cmdline`, os 
 
 ### Storage
 
-Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (reaproveitar aquele criado no começo das aulas de QEMU (`vm-dsico1.qcow2`)
+Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (reaproveitar aquele criado no começo das aulas de QEMU (`vm-dsico1.qcow2`): `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -hdb ./Downloads/64bit/vm-disco1.qcow2 -m 1024 -smp cpus=2`
+
+Para conferir, use `fdisk -l` ou `lsblk`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NT
-E0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcs
-LTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOT
-k0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwx
-NzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1OD
-QyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4
-M119
+eyJoaXN0b3J5IjpbLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxND
+Y2NzcxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3
+NCwxOTk2NDgxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1LDc0Nz
+UzMDQzMiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1
+LC03MjUwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5OD
+c4NDM1MzcsLTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYx
+Mjg1XX0=
 -->
