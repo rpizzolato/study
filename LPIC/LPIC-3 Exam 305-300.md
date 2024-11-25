@@ -300,10 +300,10 @@ Para confirmar, dentro da VM, veja a versão do Kernel e em `/proc/cmdline`, os 
 
 ### Storage
 
-Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (reaproveitar aquele criado no começo das aul
+Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (reaproveitar aquele criado no começo das aulas de QEMU (`vm-dsico1.qcow2`)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDMzOTQwMSwxNDY2NzcxMDg4LDU4NT
+eyJoaXN0b3J5IjpbMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NT
 E0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcs
 LTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOT
 k0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwx
