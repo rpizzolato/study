@@ -294,14 +294,14 @@ Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
 ### Kernel e Boot
 
-É possível fazer a VM subir com o kernel da máquina Host, assim como a imagem de initrd.img: qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -boot d -m 2048 -smp cpus=2 -kernel /boot/vmlinuz -initrd /boot/initrd.img
+É possível fazer a VM subir com o kernel da máquina Host, assim como a imagem de initrd.img: `qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -boot d -m 2048 -smp cpus=2 -kernel /boot/vmlinuz -initrd /boot/initrd.img -append 'root=/dev'`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTcxNzczNSwtMTM1ODYyMDQ3NSw4MT
-M0NzM3NCwxOTk2NDgxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1
-LDc0NzUzMDQzMiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OT
-E5MDE1LC03MjUwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMs
-LTE5ODc4NDM1MzcsLTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMD
-g3MzYxMjg1LDYzNDc3MzY4MywxMDQ0MjE0OTI2LC01Mzc5ODM4
-NDddfQ==
+eyJoaXN0b3J5IjpbNTg1MTQ2MTI5LC0xMzU4NjIwNDc1LDgxMz
+Q3Mzc0LDE5OTY0ODEzNywtMTE3NjkwODcyMSw4MTQ2NTM4NzUs
+NzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMwNDE2MSwtMTY5MT
+kwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OTM4NzAxMywt
+MTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xODQ0NTkzMjQsLTEwOD
+czNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5MjYsLTUzNzk4Mzg0
+N119
 -->
