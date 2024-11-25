@@ -286,16 +286,17 @@ Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso 
 
 A partir daqui, poderia segui a instalação do linux normalmente, no entanto é possível pegar imagem pronta, como as que há no site [https://osboxes.org](https://osboxes.org/). As imagens são no formato do VirtualBox (`.vdi`) e no QEMU não ofereceriam a possibilidade de snapshot. Para isso é necessário converter de `.vdi` para `.qcow2`.
 
-Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentOS9.vdi CentOS9.qcow2 -p -m10`
+Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentOS9.vdi CentOS9.qcow2 -p -m10`. O `-m10` é o número de coroutines (corrotinas) paralelas no processo de conversão.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMz
-MwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcs
-MTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xOD
-Q0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5
-MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLT
-kzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOT
+k0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwx
+NzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1OD
+QyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4
+MywxMDQ0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3MywyMT
+A0NTAzMjI5LC05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1
+NDFdfQ==
 -->
