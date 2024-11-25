@@ -298,14 +298,16 @@ Dentro da VM, rode `lshw` para ver as configurações de hardware do computador.
 
 Para confirmar, dentro da VM, veja a versão do Kernel e em `/proc/cmdline`, os argumentos que foram passados no boot (`'root=/dev/ubuntu-vg/ubuntu-lv fastboot quiet'`)
 
-###
+### Storage
+
+Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (reaproveitar aquele criado no começo das aul
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTkyNjA5LDE0NjY3NzEwODgsNTg1MT
-Q2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywt
-MTE3NjkwODcyMSw4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OT
-Q0MTk1LDEwMzMwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3
-NjIwOTMxMDcsMTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4ND
-I1NTQyLC0xODQ0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgz
-XX0=
+eyJoaXN0b3J5IjpbMTU2MDMzOTQwMSwxNDY2NzcxMDg4LDU4NT
+E0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcs
+LTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOT
+k0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwx
+NzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1OD
+QyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4
+M119
 -->
