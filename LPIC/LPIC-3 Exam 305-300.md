@@ -304,10 +304,10 @@ Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (rea
 
 Para conferir, use `fdisk -l` ou `lsblk`
 
-[]
+[registrar os tipos de discos que pode criar]
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODE1NjcwMSwtMTg4NTgyNTI0NSwyMD
+eyJoaXN0b3J5IjpbMTAxNjgyNjk5NywtMTg4NTgyNTI0NSwyMD
 QxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0xMzU4NjIw
 NDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywtMTE3NjkwODcyMSw4MT
 Q2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMwNDE2
