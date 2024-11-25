@@ -284,16 +284,18 @@ Para gerar a VM:
 
 Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso esteja utilizando apenas console, é preciso abrir um túnel (`ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`) com a VM e acessar por VNC, o qual também precisa indicar, colocando mais um argumento ao comando anterior: `-vnc :0`
 
-A partir daqui, poderia segui a instalação do linux normalmente, no entanto é possível pegar imagem pronta, como as que há no site [https://osboxes.org](https://osboxes.org/). 
+A partir daqui, poderia segui a instalação do linux normalmente, no entanto é possível pegar imagem pronta, como as que há no site [https://osboxes.org](https://osboxes.org/). As imagens são no formato do VirtualBox (`.vdi`) e no QEMU não ofereceriam a possibilidade de snapshot. Para isso é necessário converter de `.vdi` para `.qcow2`.
+
+Para conversão precisa rodar o coma
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDc1NzAxLC0yMDM5OTQ0MTk1LDEwMz
-MwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcs
-MTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xOD
-Q0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5
-MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLT
-kzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
+eyJoaXN0b3J5IjpbMTIwNTU5MTEwMSwtMjAzOTk0NDE5NSwxMD
+MzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwxNzYyMDkzMTA3
+LDE2NjkzODcwMTMsLTE5ODc4NDM1MzcsLTY1ODQyNTU0MiwtMT
+g0NDU5MzI0LC0xMDg3MzYxMjg1LDYzNDc3MzY4MywxMDQ0MjE0
+OTI2LC01Mzc5ODM4NDcsLTIzNjgwODE3MywyMTA0NTAzMjI5LC
+05MzAxMDk3NTAsNjg2MjE0MTgwLC00ODQyMjg1NDFdfQ==
 -->
