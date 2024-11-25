@@ -277,7 +277,7 @@ Antes da instalação, precisa testar se KVM está disponível:
 Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man qemu-system-x86_64`)
 
 Primeiro passo é criar um disk image utility, usando o qemu-img, sendo o comando o seguinte: `qemu-img create -f qcow2 vm-disco1.qcow2 20G`.
-O -
+O -f é de first image format. qcow2 é um formato de imagem comprimido, nesse caso será de 20GB com nome `vm-disco1.qcow2`
 
  `qemu-system-x86_64 -name LPIC3-Debian -enable-kvm -hda vm-disco1.qcow2 -cdrom /home/rodrigo/Downloads/debian.iso -boot d -m 2048 -smp cpus=2`: iniciar uma VM usando o disco `vm-disco1.qcow2` com boot no cdrom (-boot -d, vide man qemu-system-x86_64), com 2G de RAM e 2 CPUs.
 
@@ -287,7 +287,7 @@ Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDEwNDU3NDYsLTE2OTE5MDE1LC03Mj
+eyJoaXN0b3J5IjpbLTIwNzg3MjMxNDUsLTE2OTE5MDE1LC03Mj
 UwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1
 MzcsLTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYxMjg1LD
 YzNDc3MzY4MywxMDQ0MjE0OTI2LC01Mzc5ODM4NDcsLTIzNjgw
