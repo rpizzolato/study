@@ -288,15 +288,17 @@ A partir daqui, poderia segui a instalação do linux normalmente, no entanto é
 
 Para conversão precisa rodar o comando: `qemu-img convert -f vdi -O qcow2 CentOS9.vdi CentOS9.qcow2 -p -m10`. O `-m10` é o número de coroutines (corrotinas) paralelas no processo de conversão. O `-p` é para mostrar uma barra de progresso da conversão.
 
+Com o comando h
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzY5MDg3MjEsODE0NjUzODc1LDc0Nz
-UzMDQzMiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1
-LC03MjUwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5OD
-c4NDM1MzcsLTY1ODQyNTU0MiwtMTg0NDU5MzI0LC0xMDg3MzYx
-Mjg1LDYzNDc3MzY4MywxMDQ0MjE0OTI2LC01Mzc5ODM4NDcsLT
-IzNjgwODE3MywyMTA0NTAzMjI5LC05MzAxMDk3NTAsNjg2MjE0
-MTgwXX0=
+eyJoaXN0b3J5IjpbLTM1MDc2MTQ2NCwtMTE3NjkwODcyMSw4MT
+Q2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMwNDE2
+MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OT
+M4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xODQ0NTkz
+MjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5MjYsLT
+UzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLTkzMDEw
+OTc1MF19
 -->
