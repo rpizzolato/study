@@ -284,16 +284,16 @@ Para gerar a VM:
 
 Usando interface gráfica, vai subir uma janela para controlar a máquina. Caso esteja utilizando apenas console, é preciso abrir um túnel (`ssh -l rodrigo -L 5900:localhost:5900 192.168.1.200`) com a VM e acessar por VNC, o qual também precisa indicar, colocando mais um argumento ao comando anterior: `-vnc :0`
 
-
+A partir daqui, poderia segui a instalação do linux normalmente, no entanto é possível pegar imagem pronta, como as que há no site [https://osboxes.org](https://osboxes.org/). 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjg3Mjg5OTksLTIwMzk5NDQxOTUsMT
-AzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2MjA5MzEw
-NywxNjY5Mzg3MDEzLC0xOTg3ODQzNTM3LC02NTg0MjU1NDIsLT
-E4NDQ1OTMyNCwtMTA4NzM2MTI4NSw2MzQ3NzM2ODMsMTA0NDIx
-NDkyNiwtNTM3OTgzODQ3LC0yMzY4MDgxNzMsMjEwNDUwMzIyOS
-wtOTMwMTA5NzUwLDY4NjIxNDE4MCwtNDg0MjI4NTQxXX0=
+eyJoaXN0b3J5IjpbLTI2MDc1NzAxLC0yMDM5OTQ0MTk1LDEwMz
+MwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcs
+MTY2OTM4NzAxMywtMTk4Nzg0MzUzNywtNjU4NDI1NTQyLC0xOD
+Q0NTkzMjQsLTEwODczNjEyODUsNjM0NzczNjgzLDEwNDQyMTQ5
+MjYsLTUzNzk4Mzg0NywtMjM2ODA4MTczLDIxMDQ1MDMyMjksLT
+kzMDEwOTc1MCw2ODYyMTQxODAsLTQ4NDIyODU0MV19
 -->
