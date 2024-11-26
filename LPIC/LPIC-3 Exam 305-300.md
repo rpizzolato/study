@@ -324,12 +324,12 @@ Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [
 Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível (ICMP não funciona por padrão no Guest). Inclusive, se instalar utilitário ping (`apt install iputils-ping`), poderá "pingar" em algum site.
 
 Uso especificando uma interface de rede:
-- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88 -device e1000,netdev=mynet0`
+- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88 -device e1000,netdev=mynet0`
 
 Cria uma netdev (`-netdev`) e identifica pelo `id`. Cria um device (`-device`) e associa com o `mynet0` (que é um `netdev`). Assim podemos controlar os IPs, no entanto ainda não teríamos acesso do Host ao Guest.
 
 Para contornar isso, pode-se criar uma entrada `hostfwd=tcp::2222:22`, a qual da porta 2222 (no Host), disponibiliza acesso à porta 22 do Guest. Com o seguinte comando:
-- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88,hostfwd=tcp::2222-:22 -device e1000,netdev=mynet0`
+- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88,hostfwd=tcp::2222-:22 -device e1000,netdev=mynet0`
 
 A partir do Host, acesse o Guest por ssh com o comando:  `ssh -l osboxes localhost -p 2222`
 
@@ -343,9 +343,10 @@ Também conhecido como [TAP](https://wiki.qemu.org/Documentation/Networking#Tap)
     10: br0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500
 ```
 
-confirme a bridge também com o comando: `brctl show`. Para us
+confirme a bridge também com o comando: `brctl show`. Para subir a VM, use:
+- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -m 1024 -smp cpus=2 -device e1000,netdev=br0,mac=DE:AD:BE:EF:1A:24 -netdev tap,id=br0 &`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NjU1OTY3LC0yMTE2NTQ3MzgzLC0xMz
+eyJoaXN0b3J5IjpbLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMz
 c3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkz
 MTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NT
 QsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4
