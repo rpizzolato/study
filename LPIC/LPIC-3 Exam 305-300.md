@@ -354,14 +354,17 @@ Também conhecido como [TAP](https://wiki.qemu.org/Documentation/Networking#Tap)
 
 Confirme a bridge também com o comando: `brctl show`. 
 
-Para subir a VM, use:
+Para subir a VM, use (aqui sobe um **Ubuntu Server**):
 - `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -m 1024 -smp cpus=2 -device e1000,netdev=br0,mac=DE:AD:BE:EF:1A:24 -netdev tap,id=br0 &`
+
+Agora configure outra VM, usando outra imagem (Aqui sobe um **CentOS**):
+- `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -m 1024 -smp cpus=2 -device e1000,netdev=br0,mac=DE:AD:BE:EF:1A:25 -netdev tap,id=br0 &`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTQxODY0LC00NTM2MjYwMCwtMjExNj
-U0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUz
-ODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC
-0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2
-ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MT
-A4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEzNDczNzQsMTk5
-NjQ4MTM3XX0=
+eyJoaXN0b3J5IjpbMTkxMjQzMTkzNCwtNDUzNjI2MDAsLTIxMT
+Y1NDczODMsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1
+MzgzMywxMjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3NzM1OS
+wtMTAxOTM3NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4NzksMTAx
+NjgyNjk5NywtMTg4NTgyNTI0NSwyMDQxODc3OTUyLDE0NjY3Nz
+EwODgsNTg1MTQ2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5
+OTY0ODEzN119
 -->
