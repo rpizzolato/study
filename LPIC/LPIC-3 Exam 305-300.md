@@ -317,6 +317,8 @@ Exemplo de uso (com `-hda` e `-drive`):
 
 ### Networking
 
+#### User Mode
+
 Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [User Networking](https://www.linux-kvm.org/page/Networking). Esse modo atribui um endereço IP somente para a VM, deixando-a isolada do Host. No entanto a VM acessará à Internet, com o rota padrão que é criado (para ver a rota, use: `ip route show`).
 
 Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível (ICMP não funciona por padrão no Guest). Inclusive, se instalar utilitário ping (`apt install iputils-ping`), poderá "pingar" em algum site.
@@ -331,12 +333,13 @@ Para contornar isso, pode-se criar uma entrada `hostfwd=tcp::2222:22`, a qual da
 
 A partir do Host, acesse o Guest por ssh com o comando:  `ssh -l osboxes localhost -p 2222`
 
+#### Private Virtual Bridge
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzcxOTAzMywtMTUwMjk1MTQ3NiwtNj
-IzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3
-MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OS
-wxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2
-Njc3MTA4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEzNDczNz
-QsMTk5NjQ4MTM3LC0xMTc2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1
-MzA0MzJdfQ==
+eyJoaXN0b3J5IjpbLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLT
+YyMzI1MzgzMywxMjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3
+NzM1OSwtMTAxOTM3NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4Nz
+ksMTAxNjgyNjk5NywtMTg4NTgyNTI0NSwyMDQxODc3OTUyLDE0
+NjY3NzEwODgsNTg1MTQ2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mz
+c0LDE5OTY0ODEzNywtMTE3NjkwODcyMSw4MTQ2NTM4NzUsNzQ3
+NTMwNDMyXX0=
 -->
