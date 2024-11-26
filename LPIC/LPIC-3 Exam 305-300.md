@@ -324,15 +324,16 @@ Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodri
 Uso especificando uma interface de rede:
 - `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88 -device e1000,netdev=mynet0`
 
-Cria uma netdev (`-netdev`) e identifica pelo `id`. Cria um device (`-device`) e associa com o `mynet0` (que é um `netdev`)
+Cria uma netdev (`-netdev`) e identifica pelo `id`. Cria um device (`-device`) e associa com o `mynet0` (que é um `netdev`). Assim podemos controlar os IPs, no entanto ainda não teríamos acesso do Host ao Guest.
 
+Para contornar isso, pode-se criar uma entrada `hostfwd=tcp::2222:22`, a qual 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjU2NjUwOSwtNjIzMjUzODMzLDEyOT
-Q5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC0xMDE5Mzc1
-NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2ODI2OTk3LC
-0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MTA4OCw1ODUx
-NDYxMjksLTEzNTg2MjA0NzUsODEzNDczNzQsMTk5NjQ4MTM3LC
-0xMTc2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5
-NDQxOTVdfQ==
+eyJoaXN0b3J5IjpbMzU0ODY2NjMwLC02MjMyNTM4MzMsMTI5ND
+kzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3
+NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLT
+E4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0
+NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcsLT
+ExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOTk0
+NDE5NV19
 -->
