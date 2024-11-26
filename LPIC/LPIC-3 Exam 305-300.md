@@ -360,6 +360,8 @@ Para subir a VM, use (aqui sobe um **Ubuntu Server**):
 Agora configure outra VM, usando outra imagem (Aqui sobe um **CentOS**):
 - `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -m 1024 -smp cpus=2 -device e1000,netdev=br0,mac=DE:AD:BE:EF:1A:25 -netdev tap,id=br0 &`
 
+**Use o comando a seguir para gerar um endereço `MAC: printf 'DE:AD:BE:EF:%02X:%02X\n' $((RANDOM%256)) $((RANDOM%256))`
+
 Agora dentro das VMs configure um IP e máscara, para cada uma. (Ex. `192.168.0.10/24` para uma e `192.168.0.20/24` para outra), usando o comando:
 - `ip address add 192.168.0.10/24 dev ens3` (veja o nome da interface antes, nesse caso é `ens3`)
 
@@ -367,11 +369,11 @@ Terminado as configurações de IP, como a bridge interliga as VMs de forma dire
 
 Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o **tap0** e **tap1**, ambos conectando na bridge `br0`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDU5NjQxMDgsLTQ1MzYyNjAwLC0yMT
-E2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMy
-NTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNT
-ksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEw
-MTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2Nz
-cxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwx
-OTk2NDgxMzddfQ==
+eyJoaXN0b3J5IjpbLTI0Mzg3NjU3LC00NTM2MjYwMCwtMjExNj
+U0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUz
+ODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC
+0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2
+ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MT
+A4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEzNDczNzQsMTk5
+NjQ4MTM3XX0=
 -->
