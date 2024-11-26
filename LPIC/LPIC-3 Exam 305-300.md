@@ -335,13 +335,14 @@ A partir do Host, acesse o Guest por ssh com o comando:  `ssh -l osboxes localho
 
 #### Private Virtual Bridge
 
-Também conhecido como [TAP](https://wiki.qemu.org/Documentation/Networking#Tap). Esse cenário é para quando deseja conectar duas VMs entre si internamente, sem acesso à rede local
+Também conhecido como [TAP](https://wiki.qemu.org/Documentation/Networking#Tap). Esse cenário é para quando deseja conectar duas VMs entre si internamente, sem acesso à rede local do Host. Para isso é necessário criar uma bridge para conexão das duas ou mais VMs. Com root:
+- ip link add br0 type bridge ou brctl addr br0
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4MTExMzYzLC0xMzc3ODI5NDI2LC0xNT
-AyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4
-MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMi
-wtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0
-MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMD
-Q3NSw4MTM0NzM3NCwxOTk2NDgxMzcsLTExNzY5MDg3MjEsODE0
-NjUzODc1XX0=
+eyJoaXN0b3J5IjpbLTU2MTkzNjM2MywtMTM3NzgyOTQyNiwtMT
+UwMjk1MTQ3NiwtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIy
+ODEzOCwxMTkyNTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MD
+IsLTE4ODUxNDg3OSwxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIw
+NDE4Nzc5NTIsMTQ2Njc3MTA4OCw1ODUxNDYxMjksLTEzNTg2Mj
+A0NzUsODEzNDczNzQsMTk5NjQ4MTM3LC0xMTc2OTA4NzIxLDgx
+NDY1Mzg3NV19
 -->
