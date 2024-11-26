@@ -311,14 +311,15 @@ Para conferir, use `fdisk -l` ou `lsblk`
 - `-drive file=ssh://user@host/tmp/file.img`
 - `-drive file=http://user:password@fileserver/pub/linux.iso,media=cdrom,readonly`
 
-Exe
+Exemplo de uso (com `-hda` e `-drive`): 
+- `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2` (`-drive` tem mais opções)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODg1MzA2NDQsLTEwMTkzNzU3NTQsLT
-E4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4
-MjUyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOS
-wtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcsLTExNzY5
-MDg3MjEsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOTk0NDE5NS
-wxMDMzMDQxNjEsLTE2OTE5MDE1LC03MjUwNjEwOCwxNzYyMDkz
-MTA3XX0=
+eyJoaXN0b3J5IjpbMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMT
+g1NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgy
+NTI0NSwyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC
+0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywtMTE3Njkw
+ODcyMSw4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LD
+EwMzMwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMx
+MDddfQ==
 -->
