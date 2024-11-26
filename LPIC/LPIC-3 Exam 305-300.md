@@ -359,8 +359,10 @@ Para subir a VM, use (aqui sobe um **Ubuntu Server**):
 
 Agora configure outra VM, usando outra imagem (Aqui sobe um **CentOS**):
 - `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -m 1024 -smp cpus=2 -device e1000,netdev=br0,mac=DE:AD:BE:EF:1A:25 -netdev tap,id=br0 &`
+
+Agora dentro das VMs configure um IP e máscara, para cada uma. (Ex. `192.168.0.10/24` para uma e `192.168.0.20/24` para outra)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMjQzMTkzNCwtNDUzNjI2MDAsLTIxMT
+eyJoaXN0b3J5IjpbLTcwOTM1OTkxOCwtNDUzNjI2MDAsLTIxMT
 Y1NDczODMsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1
 MzgzMywxMjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3NzM1OS
 wtMTAxOTM3NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4NzksMTAx
