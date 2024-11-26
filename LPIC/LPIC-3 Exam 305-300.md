@@ -317,13 +317,15 @@ Exemplo de uso (com `-hda` e `-drive`):
 
 ### Networking
 
-Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [User Networking](https://www.linux-kvm.org/page/Networking). Esse modo atribui um endereço IP somente para a VM, deixando-a isolada do Host. No entanto a VM acessará à Internet, com o rota padrão que é criado (para ver a rota, use: `i`
+Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [User Networking](https://www.linux-kvm.org/page/Networking). Esse modo atribui um endereço IP somente para a VM, deixando-a isolada do Host. No entanto a VM acessará à Internet, com o rota padrão que é criado (para ver a rota, use: `ip route show`).
+
+Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTkzMDM1NjYsLTU4ODIyODEzOCwxMT
-kyNTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUx
-NDg3OSwxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NT
-IsMTQ2Njc3MTA4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEz
-NDczNzQsMTk5NjQ4MTM3LC0xMTc2OTA4NzIxLDgxNDY1Mzg3NS
-w3NDc1MzA0MzIsLTIwMzk5NDQxOTUsMTAzMzA0MTYxLC0xNjkx
-OTAxNV19
+eyJoaXN0b3J5IjpbMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOT
+I1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0
+ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1Mi
+wxNDY2NzcxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0
+NzM3NCwxOTk2NDgxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1LD
+c0NzUzMDQzMiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5
+MDE1XX0=
 -->
