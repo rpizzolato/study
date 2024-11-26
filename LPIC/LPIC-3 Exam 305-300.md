@@ -305,16 +305,17 @@ Por enquanto foi feito apenas VM com um disco, para adicionar mais um disco (rea
 Para conferir, use `fdisk -l` ou `lsblk`
 
 #### Outras formas de indicação de disco:
-- `drive file=iscsi://user%password@fileserver/iqn.2001-04.com.example/1`
-- `drive file=ssh://user@host/tmp/file.img`
-- `drive file=http://user:password@fileserver/pub/linux.iso,media=cdrom,readonly`
+- `-drive file=file,index=0,media=disk`: seria equivalente ao `-hda` (`index=1`, seria `hdb`, etc)
+- `-drive file=iscsi://user%password@fileserver/iqn.2001-04.com.example/1`
+- `-drive file=ssh://user@host/tmp/file.img`
+- `-drive file=http://user:password@fileserver/pub/linux.iso,media=cdrom,readonly`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODUxNDg3OSwxMDE2ODI2OTk3LC0xOD
-g1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MTA4OCw1ODUxNDYx
-MjksLTEzNTg2MjA0NzUsODEzNDczNzQsMTk5NjQ4MTM3LC0xMT
-c2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1MzA0MzIsLTIwMzk5NDQx
-OTUsMTAzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MDYxMDgsMTc2Mj
-A5MzEwNywxNjY5Mzg3MDEzLC0xOTg3ODQzNTM3LC02NTg0MjU1
-NDJdfQ==
+eyJoaXN0b3J5IjpbLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMT
+Y4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2Nzcx
+MDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOT
+k2NDgxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQz
+MiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03Mj
+UwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1
+MzddfQ==
 -->
