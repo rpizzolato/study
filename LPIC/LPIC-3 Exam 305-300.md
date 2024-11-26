@@ -319,13 +319,13 @@ Exemplo de uso (com `-hda` e `-drive`):
 
 Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [User Networking](https://www.linux-kvm.org/page/Networking). Esse modo atribui um endereço IP somente para a VM, deixando-a isolada do Host. No entanto a VM acessará à Internet, com o rota padrão que é criado (para ver a rota, use: `ip route show`).
 
-Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível. Inclusive, se instalar utilitário ping (apt install iputils-ping
+Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível (ICMP não funciona por padrão no Guest). Inclusive, se instalar utilitário ping (`apt install iputils-ping`), poderá "pingar" em algum site.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNjcxNTc3OSwxMjk0OTMxMDA0LC01OD
-gyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1NDMx
-OTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNTI0NS
-wyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0xMzU4
-NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywtMTE3NjkwODcyMS
-w4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMw
-NDE2MV19
+eyJoaXN0b3J5IjpbLTEyNzA0MzU0NjUsMTI5NDkzMTAwNCwtNT
+g4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQz
+MTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyND
+UsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwtMTM1
+ODYyMDQ3NSw4MTM0NzM3NCwxOTk2NDgxMzcsLTExNzY5MDg3Mj
+EsODE0NjUzODc1LDc0NzUzMDQzMiwtMjAzOTk0NDE5NSwxMDMz
+MDQxNjFdfQ==
 -->
