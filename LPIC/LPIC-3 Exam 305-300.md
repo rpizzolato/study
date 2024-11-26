@@ -314,12 +314,16 @@ Para conferir, use `fdisk -l` ou `lsblk`
 Exemplo de uso (com `-hda` e `-drive`): 
 - `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -hda ./Downloads/64bit/CentOS9.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2` (`-drive` tem mais opções)
 
+
+### Networking
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMT
-g1NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgy
-NTI0NSwyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC
-0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNywtMTE3Njkw
-ODcyMSw4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LD
-EwMzMwNDE2MSwtMTY5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMx
-MDddfQ==
+eyJoaXN0b3J5IjpbLTU4ODIyODEzOCwxMTkyNTc3MzU5LC0xMD
+E5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2ODI2
+OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MTA4OC
+w1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEzNDczNzQsMTk5NjQ4
+MTM3LC0xMTc2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1MzA0MzIsLT
+IwMzk5NDQxOTUsMTAzMzA0MTYxLC0xNjkxOTAxNSwtNzI1MDYx
+MDhdfQ==
 -->
