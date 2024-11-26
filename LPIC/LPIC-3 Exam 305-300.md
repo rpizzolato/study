@@ -326,15 +326,17 @@ Uso especificando uma interface de rede:
 
 Cria uma netdev (`-netdev`) e identifica pelo `id`. Cria um device (`-device`) e associa com o `mynet0` (que é um `netdev`). Assim podemos controlar os IPs, no entanto ainda não teríamos acesso do Host ao Guest.
 
-Para contornar isso, pode-se criar uma entrada `hostfwd=tcp::2222:22`, a qual da porta 2222, disponibiliza acesso à porta 22 do Guest. Com o seguinte comando:
+Para contornar isso, pode-se criar uma entrada `hostfwd=tcp::2222:22`, a qual da porta 2222 (no Host), disponibiliza acesso à porta 22 do Guest. Com o seguinte comando:
 - `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88,hostfwd=tcp::2222-:22 -device e1000,netdev=mynet0`
 
+A partir do Host, acesse o Guest por ssh com o comando:  `ssh -l osboxes localhost -p 2222`
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMj
-k0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3
-NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5Ny
-wtMTg4NTgyNTI0NSwyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1
-MTQ2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5OTY0ODEzNy
-wtMTE3NjkwODcyMSw4MTQ2NTM4NzUsNzQ3NTMwNDMyLC0yMDM5
-OTQ0MTk1XX0=
+eyJoaXN0b3J5IjpbMTg0NzcxOTAzMywtMTUwMjk1MTQ3NiwtNj
+IzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3
+MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OS
+wxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2
+Njc3MTA4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUsODEzNDczNz
+QsMTk5NjQ4MTM3LC0xMTc2OTA4NzIxLDgxNDY1Mzg3NSw3NDc1
+MzA0MzJdfQ==
 -->
