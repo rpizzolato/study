@@ -322,11 +322,11 @@ Se subir uma VM no padrão, como já subimos as anteriores, irá subir no modo [
 Inclusive, se tentar usar ssh para conectar na rota padrão (exemplo: `ssh rodrigo@10.0.2.2`), conseguirá conectar no computador host. Entretanto o inverso não é possível (ICMP não funciona por padrão no Guest). Inclusive, se instalar utilitário ping (`apt install iputils-ping`), poderá "pingar" em algum site.
 
 Uso especificando uma interface de rede:
-- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24.dhcpstart=192.168.50.88 -device e1000,netdev=mynet0`
+- `sudo qemu-system-x86_64 -name LPIC3-UbuntuServer -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -drive file=./Downloads/64bit/vm-disco1.qcow2,index=1,media=disk,if=ide -m 1024 -smp cpus=2 -netdev user,id=mynet0,net=192.168.80.0/24,dhcpstart=192.168.80.88 -device e1000,netdev=mynet0`
 
 Cria uma netdev (`-netdev`) e identifica pelo `id`. Cria um device (`-device`) e associa com o `mynet0` (que é um `netdev`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODg1ODQwNCwxMjk0OTMxMDA0LC01OD
+eyJoaXN0b3J5IjpbLTYyMzI1MzgzMywxMjk0OTMxMDA0LC01OD
 gyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1NDMx
 OTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNTI0NS
 wyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0xMzU4
