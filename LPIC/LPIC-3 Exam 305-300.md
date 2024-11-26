@@ -307,15 +307,16 @@ Para conferir, use `fdisk -l` ou `lsblk`
 #### Outras formas de indicação de disco:
 - `-drive file=file,index=0,media=disk`: seria equivalente ao `-hda` (`index=1`, seria `hdb`, etc)
 - `-drive file=iscsi://user%password@fileserver/iqn.2001-04.com.example/1`
+- `
 - `-drive file=ssh://user@host/tmp/file.img`
 - `-drive file=http://user:password@fileserver/pub/linux.iso,media=cdrom,readonly`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMT
-Y4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2Nzcx
-MDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwxOT
-k2NDgxMzcsLTExNzY5MDg3MjEsODE0NjUzODc1LDc0NzUzMDQz
-MiwtMjAzOTk0NDE5NSwxMDMzMDQxNjEsLTE2OTE5MDE1LC03Mj
-UwNjEwOCwxNzYyMDkzMTA3LDE2NjkzODcwMTMsLTE5ODc4NDM1
-MzddfQ==
+eyJoaXN0b3J5IjpbMTY4Nzg1OTYzOSwtMTg1NDMxOTAyLC0xOD
+g1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNTI0NSwyMDQxODc3
+OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0xMzU4NjIwNDc1LD
+gxMzQ3Mzc0LDE5OTY0ODEzNywtMTE3NjkwODcyMSw4MTQ2NTM4
+NzUsNzQ3NTMwNDMyLC0yMDM5OTQ0MTk1LDEwMzMwNDE2MSwtMT
+Y5MTkwMTUsLTcyNTA2MTA4LDE3NjIwOTMxMDcsMTY2OTM4NzAx
+M119
 -->
