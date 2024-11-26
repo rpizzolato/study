@@ -364,12 +364,14 @@ Agora dentro das VMs configure um IP e máscara, para cada uma. (Ex. `192.168.0.
 - `ip address add 192.168.0.10/24 dev ens3` (veja o nome da interface antes, nesse caso é `ens3`)
 
 Terminado as configurações de IP, como a bridge interliga as VMs de forma direta, um já vai "pingar" no outro.
+
+Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o **tap0** e **tap1**, ambos conectando na bridge `br0`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NDg5MDM1NywtNDUzNjI2MDAsLTIxMT
-Y1NDczODMsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1
-MzgzMywxMjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3NzM1OS
-wtMTAxOTM3NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4NzksMTAx
-NjgyNjk5NywtMTg4NTgyNTI0NSwyMDQxODc3OTUyLDE0NjY3Nz
-EwODgsNTg1MTQ2MTI5LC0xMzU4NjIwNDc1LDgxMzQ3Mzc0LDE5
-OTY0ODEzN119
+eyJoaXN0b3J5IjpbLTEzNDU5NjQxMDgsLTQ1MzYyNjAwLC0yMT
+E2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMy
+NTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNT
+ksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEw
+MTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2Nz
+cxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4MTM0NzM3NCwx
+OTk2NDgxMzddfQ==
 -->
