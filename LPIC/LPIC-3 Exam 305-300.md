@@ -369,13 +369,15 @@ Terminado as configurações de IP, como a bridge interliga as VMs de forma dire
 
 Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o **tap0** e **tap1**, ambos conectando na bridge `br0`
 
-# QEMU Monitor
+### QEMU Monitor
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzkwNTQwOCwtMjQzODc2NTcsLTQ1Mz
-YyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUx
-NDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LD
-ExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4
-NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nz
-k1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4
-MTM0NzM3NF19
+eyJoaXN0b3J5IjpbLTIxMDY4NTAxMTYsLTI0Mzg3NjU3LC00NT
+M2MjYwMCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1
+MTQ3NiwtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOC
+wxMTkyNTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4
+ODUxNDg3OSwxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nz
+c5NTIsMTQ2Njc3MTA4OCw1ODUxNDYxMjksLTEzNTg2MjA0NzUs
+ODEzNDczNzRdfQ==
 -->
