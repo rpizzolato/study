@@ -373,13 +373,17 @@ Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o
 
 Interface de monitoramento do QEMU. O mais comum para entrar no modo de "monitor", seria apertando as teclas `Ctrl + Alt + 2`, ou simplesmente indo no menu > `View` > `Show tabs`, para que facilite alterar entre a VM e o monitoramento.
 
-
+No console de monitoramento (fica com `(qemu)`):
+- `info cpu`: mostra informações dos cpus
+- `info network`: mostra informações da rede, se está em modo user, etc.
+- info block: mostra informações do armazenamento
+- info version: versão 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjgwMzg2OSwxMjkwMDcxOTQzLC0yND
-M4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4Mjk0
-MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMjk0OTMxMDA0LC
-01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1
-NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNT
-I0NSwyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0x
-MzU4NjIwNDc1XX0=
+eyJoaXN0b3J5IjpbLTE5NjczODYwNDEsMTI5MDA3MTk0MywtMj
+QzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5
+NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNC
+wtNTg4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4
+NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4Mj
+UyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwt
+MTM1ODYyMDQ3NV19
 -->
