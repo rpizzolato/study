@@ -405,13 +405,13 @@ Vale muito a pena chamar o `help` do **qemu monitor** para explorar outras opç�
 
 [VirtIO](https://en.wikibooks.org/wiki/QEMU/Devices/Virtio) é uma plataforma para virtualização de IO (input/output), comum para vários hypervisors (e QEMU). Resumidamente, em vez de usar os drivers padrão do QEMU, é utilizado drivers VirtIO, especialmente quando são drivers específicos para manusear alguns dispositivos.
 
-Vejamos um exemplo: 
+Vejamos um exemplo usando driver para : 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzNzcwMDEyLDI4MTYzOTA4NiwxMzg5Mj
-M1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0
-NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkwMDcxOTQzLC
-0yNDM4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4
-Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMjk0OTMxMD
-A0LC01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwt
-MTg1NDMxOTAyXX0=
+eyJoaXN0b3J5IjpbLTc4OTE2NTk3NCwyODE2MzkwODYsMTM4OT
+IzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMz
+NDYsLTEzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5MDA3MTk0My
+wtMjQzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3
+ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkzMT
+AwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NTQs
+LTE4NTQzMTkwMl19
 -->
