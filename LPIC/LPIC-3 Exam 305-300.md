@@ -371,9 +371,9 @@ Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o
 
 ### QEMU Monitor
 
-
+Interface de monitoramento do QEMU.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDY4NTAxMTYsLTI0Mzg3NjU3LC00NT
+eyJoaXN0b3J5IjpbLTE5MDE5MzU0NDMsLTI0Mzg3NjU3LC00NT
 M2MjYwMCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1
 MTQ3NiwtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOC
 wxMTkyNTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4
