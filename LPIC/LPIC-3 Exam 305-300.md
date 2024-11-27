@@ -382,12 +382,18 @@ No console de monitoramento (fica com `(qemu)`):
 - `cont`: sai do estado de pause
 - `system_powerdown`: desliga a VM
 - `system_reset`: reinicia a VM
+
+#### snapshot
+
+Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será possível realizar snapshot
+- info snapshots: para verificar se há snapshots disponíveis
+- savevm NOME_DO_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwOTkxMjc1LC0xOTY3Mzg2MDQxLDEyOT
-AwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4
-MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLD
-EyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC0xMDE5
-Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2ODI2OT
-k3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MTA4OCw1
-ODUxNDYxMjldfQ==
+eyJoaXN0b3J5IjpbLTExMjgyOTA4NTcsLTE5NjczODYwNDEsMT
+I5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3
+MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4Mz
+MsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEw
+MTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4Mj
+Y5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4
+LDU4NTE0NjEyOV19
 -->
