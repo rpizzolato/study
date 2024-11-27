@@ -424,15 +424,15 @@ Na VM precisa instala o **qemu-guest-agent** (`apt install qemu-guest-agent`) e 
 - é composto por:
 	- API
 	- Daemon: libvirtd
-	- Interface de Comandos: `virsh`
+	- Interface de Comandos: `virsh` ()CLI
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
-kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
-NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MT
-YzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3
-NTEsMTY4MTk2MzM0NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MS
-wxMjkwMDcxOTQzLC0yNDM4NzY1NywtNDUzNjI2MDAsLTIxMTY1
-NDczODNdfQ==
+eyJoaXN0b3J5IjpbLTc3ODY4ODQyNywyMjU4ODU3NDgsMTcwNz
+E3MjExMCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1
+MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMT
+cwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0
+OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC
+0xOTY3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2
+MjYwMF19
 -->
