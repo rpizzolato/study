@@ -395,17 +395,21 @@ Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será
 
 Com o comando info block, pode-se notar que há um cd-rom sem CD. Para adicionar um CD/ISO nele, use o comando: `change ide-cd0 /home/rodrigo/Downloads/Rocky-9.5-x86_64-minimal.iso`
 
-Posteriormente digite `info block` para confirmar que o a ISO foi associada ao CD-ROM. Logo poderá montar a ISO: `mount /dev/sr0 /media/cdrom
+Posteriormente digite `info block` para confirmar que o a ISO foi associada ao CD-ROM. Logo poderá montar a ISO: `mount /dev/sr0 /media/cdrom`
 
-Para retirar o CD, use: `eject ide1-cd0
+Para retirar o CD, use: `eject ide1-cd0`
+
+Vale muito a pena chamar o `help` do **qemu monitor** para explorar outras opções.
+
+## VirtIO e QEMU Guest Agent
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzMxNDMwNSwtMjEzODczNjM0OSwtMT
-YyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3
-Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYwMC
-wtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3Niwt
-NjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNT
-c3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3
-OSwxMDE2ODI2OTk3XX0=
+eyJoaXN0b3J5IjpbMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNj
+I4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAxMzYsLTE5Njcz
+ODYwNDEsMTI5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYyNjAwLC
+0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02
+MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1Nz
+czNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5
+LDEwMTY4MjY5OTddfQ==
 -->
