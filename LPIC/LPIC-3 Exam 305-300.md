@@ -409,13 +409,13 @@ Vejamos um exemplo usando driver para Hard Disk usando VirtIO e uma rede também
 
 Geralmente por melhorar performance e resposta, ambiente de produção usa VirtIO
 
-O GuestA
+O [Guest Agent](https://wiki.qemu.org/Features/GuestAgent) busca implementar uma melhor interação entre o Guest e o Host, como habilitar cópia de arquivos entre eles, enviar comandos, como se fosse uma comunicação via API. Funciona por meio de um socket
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU0NjkwNDExLC0yNjIwMTE4MzEsMzA5OD
-g4MzU0LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwt
-MjEzODczNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMz
-Q2NzMwMTM2LC0xOTY3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3
-NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNi
-wtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4
-ODIyODEzOF19
+eyJoaXN0b3J5IjpbLTEyOTc0MDkwNzIsLTI2MjAxMTgzMSwzMD
+k4ODgzNTQsLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUw
+LC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLT
+EzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5MDA3MTk0MywtMjQz
+ODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5ND
+I2LC0xNTAyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwt
+NTg4MjI4MTM4XX0=
 -->
