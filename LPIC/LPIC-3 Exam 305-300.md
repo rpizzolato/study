@@ -389,12 +389,13 @@ Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será
 - `info snapshots`: para verificar se há snapshots disponíveis
 - `savevm NOME_DO_SNAP`: cria um snapshot da VM
 - `loadvm NOME_DO_SNAP`: volta um snapshot da VM
+- `delvm NOME_DO_SNAP`: exclui um snapshot
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDY3MzAxMzYsLTE5NjczODYwNDEsMT
-I5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3
-MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4Mz
-MsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEw
-MTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4Mj
-Y5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4
-LDU4NTE0NjEyOV19
+eyJoaXN0b3J5IjpbMzMwMzg5NzgzLC0xMzQ2NzMwMTM2LC0xOT
+Y3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYw
+MCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3Ni
+wtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTky
+NTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxND
+g3OSwxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIs
+MTQ2Njc3MTA4OF19
 -->
