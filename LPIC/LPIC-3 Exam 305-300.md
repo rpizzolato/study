@@ -412,12 +412,14 @@ Geralmente por melhorar performance e resposta, ambiente de produção usa VirtI
 O [Guest Agent](https://wiki.qemu.org/Features/GuestAgent) busca implementar uma melhor interação entre o Guest e o Host, como habilitar cópia de arquivos entre eles, enviar comandos, como se fosse uma comunicação via API. Funciona por meio de um socket, que precisa previamente ser aberto. Usado com o comando `qemu-ga`
 
 Para subir uma VM utilizando esse recurso e já abrindo um socket, use: `sudo qemu-system-x86_64 -name LPIC3-Ubuntu -enable-kvm -hda ./Downloads/64bit/UbuntuServer24-04.qcow2 -m 2024 -smp cpus=2 -chardev socket,path=/tmp/qga.sock,server=on,wait=off,id=qga0 -device virtio-serial -device virtserialport,chardev=qga0,name=org.qemu.guest_agent.0`
+
+Na VM precisa instala o **qemu-guest-agent** (`apt install qemu-guest-agent`) e habilitá-lo (`systemctl start qemu-guest-agent`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODE2ODM1MiwxNTc5NDI3NzY3LC0yNj
-IwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMjgxNjM5MDg2
-LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMTYyODAzMDc1MSwxNj
-gxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3Mzg2MDQxLDEyOTAw
-NzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4My
-wtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLDEy
-OTQ5MzEwMDRdfQ==
+eyJoaXN0b3J5IjpbMTkyMDk5ODY0MCwtMTQ4MTY4MzUyLDE1Nz
+k0Mjc3NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQz
+MCwyODE2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNj
+I4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAxMzYsLTE5Njcz
+ODYwNDEsMTI5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYyNjAwLC
+0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02
+MjMyNTM4MzNdfQ==
 -->
