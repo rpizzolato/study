@@ -395,9 +395,11 @@ Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será
 
 Com o comando info block, pode-se notar que há um cd-rom sem CD. Para adicionar um CD/ISO nele, use o comando: `change ide-cd0 /home/rodrigo/Downloads/Rocky-9.5-x86_64-minimal.iso`
 
-Posteriormente digite `info block` para confirmar que o a ISO foi associada ao CD-ROM
+Posteriormente digite `info block` para confirmar que o a ISO foi associada ao CD-ROM. Logo poderá montar a ISO: `mount /dev/sr0 /media/cdrom
+
+Para retirar o CD, use: `eject ide1-cd0
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjI0NzQzNzYsLTE2MjgwMzA3NTEsMT
+eyJoaXN0b3J5IjpbLTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMT
 Y4MTk2MzM0NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkw
 MDcxOTQzLC0yNDM4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczOD
 MsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywx
