@@ -405,9 +405,9 @@ Vale muito a pena chamar o `help` do **qemu monitor** para explorar outras opç�
 
 [VirtIO](https://en.wikibooks.org/wiki/QEMU/Devices/Virtio) é uma plataforma para virtualização de IO (input/output), comum para vários hypervisors (e QEMU). Resumidamente, em vez de usar os drivers padrão do QEMU, é utilizado drivers VirtIO, especialmente quando são drivers específicos para manusear alguns dispositivos.
 
-Vejamos um exemplo usando driver para Hard Disk usando VirtIO e uma rede também nos mesmos moldes: `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -drive file=./Downloads/64bit/CentOS9.qcow2,if=virtio -m 1024 -smp cpus=2 -net nic,model=virtio -net user`
+Vejamos um exemplo usando driver para Hard Disk usando VirtIO e uma rede também nos mesmos moldes (rede já com modo **user**): `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -drive file=./Downloads/64bit/CentOS9.qcow2,if=virtio -m 1024 -smp cpus=2 -net nic,model=virtio -net user`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNDAzNDYyNywyODE2MzkwODYsMTM4OT
+eyJoaXN0b3J5IjpbLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OT
 IzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMz
 NDYsLTEzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5MDA3MTk0My
 wtMjQzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3
