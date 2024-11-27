@@ -376,14 +376,18 @@ Interface de monitoramento do QEMU. O mais comum para entrar no modo de "monitor
 No console de monitoramento (fica com `(qemu)`):
 - `info cpu`: mostra informações dos cpus
 - `info network`: mostra informações da rede, se está em modo user, etc.
-- info block: mostra informações do armazenamento
-- info version: versão 
+- `info block`: mostra informações do armazenamento
+- `info version`: versão 
+- `stop`: pausa a VM
+- `cont`: sai do estado de pause
+- `system_powerdown`: desliga a VM
+- `system_reset`: reinicia a VM
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjczODYwNDEsMTI5MDA3MTk0MywtMj
-QzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5
-NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNC
-wtNTg4MjI4MTM4LDExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4
-NTQzMTkwMiwtMTg4NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4Mj
-UyNDUsMjA0MTg3Nzk1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwt
-MTM1ODYyMDQ3NV19
+eyJoaXN0b3J5IjpbOTcwOTkxMjc1LC0xOTY3Mzg2MDQxLDEyOT
+AwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4
+MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLD
+EyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC0xMDE5
+Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3OSwxMDE2ODI2OT
+k3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIsMTQ2Njc3MTA4OCw1
+ODUxNDYxMjldfQ==
 -->
