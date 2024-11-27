@@ -393,13 +393,13 @@ Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será
 
 #### adicionar um CD no CD-ROM
 
-Com o comando info block, pode-se notar que há um cd-rom sem CD. Para adicionar um CD/ISO nele, use o comando: `change ide-cd0 /home/rodrigo/`
+Com o comando info block, pode-se notar que há um cd-rom sem CD. Para adicionar um CD/ISO nele, use o comando: `change ide-cd0 /home/rodrigo/Download/Rocky-9.5-x86_64-minimal.iso`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTk2MzM0NiwtMTM0NjczMDEzNiwtMT
-k2NzM4NjA0MSwxMjkwMDcxOTQzLC0yNDM4NzY1NywtNDUzNjI2
-MDAsLTIxMTY1NDczODMsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0Nz
-YsLTYyMzI1MzgzMywxMjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5
-MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1NDMxOTAyLC0xODg1MT
-Q4NzksMTAxNjgyNjk5NywtMTg4NTgyNTI0NSwyMDQxODc3OTUy
-LDE0NjY3NzEwODhdfQ==
+eyJoaXN0b3J5IjpbLTE2MjgwMzA3NTEsMTY4MTk2MzM0NiwtMT
+M0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkwMDcxOTQzLC0yNDM4
+NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4Mjk0Mj
+YsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMjk0OTMxMDA0LC01
+ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1ND
+MxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNTI0
+NSwyMDQxODc3OTUyXX0=
 -->
