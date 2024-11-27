@@ -372,12 +372,14 @@ Examine a saída do comando `brclt show`, na coluna de interfaces, vai mostrar o
 ### QEMU Monitor
 
 Interface de monitoramento do QEMU. O mais comum para entrar no modo de "monitor", seria apertando as teclas `Ctrl + Alt + 2`, ou simplesmente indo no menu > `View` > `Show tabs`, para que facilite alterar entre a VM e o monitoramento.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MDA3MTk0MywtMjQzODc2NTcsLTQ1Mz
-YyNjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUx
-NDc2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LD
-ExOTI1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4
-NTE0ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nz
-k1MiwxNDY2NzcxMDg4LDU4NTE0NjEyOSwtMTM1ODYyMDQ3NSw4
-MTM0NzM3NF19
+eyJoaXN0b3J5IjpbLTQxMjgwMzg2OSwxMjkwMDcxOTQzLC0yND
+M4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4Mjk0
+MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMjk0OTMxMDA0LC
+01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwtMTg1
+NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5NywtMTg4NTgyNT
+I0NSwyMDQxODc3OTUyLDE0NjY3NzEwODgsNTg1MTQ2MTI5LC0x
+MzU4NjIwNDc1XX0=
 -->
