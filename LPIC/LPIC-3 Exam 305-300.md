@@ -408,12 +408,14 @@ Vale muito a pena chamar o `help` do **qemu monitor** para explorar outras opç�
 Vejamos um exemplo usando driver para Hard Disk usando VirtIO e uma rede também nos mesmos moldes (rede já com modo **user**): `sudo qemu-system-x86_64 -name LPIC3-CentOS9 -enable-kvm -drive file=./Downloads/64bit/CentOS9.qcow2,if=virtio -m 1024 -smp cpus=2 -net nic,model=virtio -net user`
 
 Geralmente por melhorar performance e resposta, ambiente de produção usa VirtIO
+
+O GuestA
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNz
-AyODQzMCwyODE2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5
-LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAxMzYsLT
-E5NjczODYwNDEsMTI5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYy
-NjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxND
-c2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDEx
-OTI1NzczNTldfQ==
+eyJoaXN0b3J5IjpbOTU0NjkwNDExLC0yNjIwMTE4MzEsMzA5OD
+g4MzU0LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwt
+MjEzODczNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMz
+Q2NzMwMTM2LC0xOTY3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3
+NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNi
+wtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4
+ODIyODEzOF19
 -->
