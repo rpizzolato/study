@@ -411,9 +411,9 @@ Geralmente por melhorar performance e resposta, ambiente de produção usa VirtI
 
 O [Guest Agent](https://wiki.qemu.org/Features/GuestAgent) busca implementar uma melhor interação entre o Guest e o Host, como habilitar cópia de arquivos entre eles, enviar comandos, como se fosse uma comunicação via API. Funciona por meio de um socket, que precisa previamente ser aberto. Usado com o comando `qemu-ga`
 
-Para subir uma VM utilizando esse recurso e já abrindo um socket
+Para subir uma VM utilizando esse recurso e já abrindo um socket, use: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NDI2NjU1NiwtMjYyMDExODMxLDMwOT
+eyJoaXN0b3J5IjpbMTU3OTQyNzc2NywtMjYyMDExODMxLDMwOT
 g4ODM1NCwtMjE3MDI4NDMwLDI4MTYzOTA4NiwxMzg5MjM1NTAs
 LTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0NiwtMT
 M0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkwMDcxOTQzLC0yNDM4
