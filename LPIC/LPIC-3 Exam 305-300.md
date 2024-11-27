@@ -390,12 +390,16 @@ Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será
 - `savevm NOME_DO_SNAP`: cria um snapshot da VM
 - `loadvm NOME_DO_SNAP`: volta um snapshot da VM
 - `delvm NOME_DO_SNAP`: exclui um snapshot
+
+#### adicionar um CD no CD-ROM
+
+Com o comando info block, pode-se notar que há um cd-rom sem CD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMwMzg5NzgzLC0xMzQ2NzMwMTM2LC0xOT
-Y3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYw
-MCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3Ni
-wtNjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTky
-NTc3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxND
-g3OSwxMDE2ODI2OTk3LC0xODg1ODI1MjQ1LDIwNDE4Nzc5NTIs
-MTQ2Njc3MTA4OF19
+eyJoaXN0b3J5IjpbLTE5MTE4MTMxMDYsLTEzNDY3MzAxMzYsLT
+E5NjczODYwNDEsMTI5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYy
+NjAwLC0yMTE2NTQ3MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxND
+c2LC02MjMyNTM4MzMsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDEx
+OTI1NzczNTksLTEwMTkzNzU3NTQsLTE4NTQzMTkwMiwtMTg4NT
+E0ODc5LDEwMTY4MjY5OTcsLTE4ODU4MjUyNDUsMjA0MTg3Nzk1
+MiwxNDY2NzcxMDg4XX0=
 -->
