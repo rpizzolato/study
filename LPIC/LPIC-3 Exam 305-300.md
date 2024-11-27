@@ -403,13 +403,15 @@ Vale muito a pena chamar o `help` do **qemu monitor** para explorar outras opç�
 
 ## VirtIO e QEMU Guest Agent
 
-[VirtIO](https://en.wikibooks.org/wiki/QEMU/Devices/Virtio) é uma plataforma para virtualização de IO (input/output), comum para vários hypervisors (e QEMU). Resumidamente,
+[VirtIO](https://en.wikibooks.org/wiki/QEMU/Devices/Virtio) é uma plataforma para virtualização de IO (input/output), comum para vários hypervisors (e QEMU). Resumidamente, em vez de usar os drivers padrão do QEMU, é utilizado drivers VirtIO, especialmente quando são drivers específicos para manusear alguns dispositivos.
+
+Vejamos um exemplo: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjQxODM0NzksMjgxNjM5MDg2LDEzOD
-kyMzU1MCwtMjEzODczNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYz
-MzQ2LC0xMzQ2NzMwMTM2LC0xOTY3Mzg2MDQxLDEyOTAwNzE5ND
-MsLTI0Mzg3NjU3LC00NTM2MjYwMCwtMjExNjU0NzM4MywtMTM3
-NzgyOTQyNiwtMTUwMjk1MTQ3NiwtNjIzMjUzODMzLDEyOTQ5Mz
-EwMDQsLTU4ODIyODEzOCwxMTkyNTc3MzU5LC0xMDE5Mzc1NzU0
-LC0xODU0MzE5MDJdfQ==
+eyJoaXN0b3J5IjpbOTQzNzcwMDEyLDI4MTYzOTA4NiwxMzg5Mj
+M1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0
+NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkwMDcxOTQzLC
+0yNDM4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4
+Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywxMjk0OTMxMD
+A0LC01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOTM3NTc1NCwt
+MTg1NDMxOTAyXX0=
 -->
