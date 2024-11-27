@@ -419,15 +419,16 @@ Na VM precisa instala o **qemu-guest-agent** (`apt install qemu-guest-agent`) e 
 
 ### Conceitos
 
-- **Libvirt Virtual Machine Management**: um concj
+- **Libvirt Virtual Machine Management**: um conjunto de software open-source utilizado para gerenciar diversos hypervisors e máquinas virtuais, incluindo os recursos de rede e armazenamento.
+- suporta KVM, QEMU
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE1MTc1ODY1LC0zODY5NTc0NDYsLTE0OD
-E2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0
-LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzOD
-czNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMw
-MTM2LC0xOTY3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC
-00NTM2MjYwMCwtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUw
-Mjk1MTQ3Nl19
+eyJoaXN0b3J5IjpbMTA1MjkwMTU1MywtMzg2OTU3NDQ2LC0xND
+gxNjgzNTIsMTU3OTQyNzc2NywtMjYyMDExODMxLDMwOTg4ODM1
+NCwtMjE3MDI4NDMwLDI4MTYzOTA4NiwxMzg5MjM1NTAsLTIxMz
+g3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0NiwtMTM0Njcz
+MDEzNiwtMTk2NzM4NjA0MSwxMjkwMDcxOTQzLC0yNDM4NzY1Ny
+wtNDUzNjI2MDAsLTIxMTY1NDczODMsLTEzNzc4Mjk0MjYsLTE1
+MDI5NTE0NzZdfQ==
 -->
