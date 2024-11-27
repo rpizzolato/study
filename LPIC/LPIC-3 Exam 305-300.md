@@ -398,12 +398,14 @@ Com o comando info block, pode-se notar que há um cd-rom sem CD. Para adicionar
 Posteriormente digite `info block` para confirmar que o a ISO foi associada ao CD-ROM. Logo poderá montar a ISO: `mount /dev/sr0 /media/cdrom
 
 Para retirar o CD, use: `eject ide1-cd0
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMT
-Y4MTk2MzM0NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkw
-MDcxOTQzLC0yNDM4NzY1NywtNDUzNjI2MDAsLTIxMTY1NDczOD
-MsLTEzNzc4Mjk0MjYsLTE1MDI5NTE0NzYsLTYyMzI1MzgzMywx
-Mjk0OTMxMDA0LC01ODgyMjgxMzgsMTE5MjU3NzM1OSwtMTAxOT
-M3NTc1NCwtMTg1NDMxOTAyLC0xODg1MTQ4NzksMTAxNjgyNjk5
-NywtMTg4NTgyNTI0NV19
+eyJoaXN0b3J5IjpbLTU2NzMxNDMwNSwtMjEzODczNjM0OSwtMT
+YyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3
+Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2MjYwMC
+wtMjExNjU0NzM4MywtMTM3NzgyOTQyNiwtMTUwMjk1MTQ3Niwt
+NjIzMjUzODMzLDEyOTQ5MzEwMDQsLTU4ODIyODEzOCwxMTkyNT
+c3MzU5LC0xMDE5Mzc1NzU0LC0xODU0MzE5MDIsLTE4ODUxNDg3
+OSwxMDE2ODI2OTk3XX0=
 -->
