@@ -386,10 +386,11 @@ No console de monitoramento (fica com `(qemu)`):
 #### snapshot
 
 Lembrando que esse recurso é quando usa VM `qcow2`, caso use `.vdi`, não será possível realizar snapshot
-- info snapshots: para verificar se há snapshots disponíveis
-- savevm NOME_DO_
+- `info snapshots`: para verificar se há snapshots disponíveis
+- `savevm NOME_DO_SNAP`: cria um snapshot da VM
+- `loadvm NOME_DO_SNAP`: volta um snapshot da VM
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjgyOTA4NTcsLTE5NjczODYwNDEsMT
+eyJoaXN0b3J5IjpbLTEzNDY3MzAxMzYsLTE5NjczODYwNDEsMT
 I5MDA3MTk0MywtMjQzODc2NTcsLTQ1MzYyNjAwLC0yMTE2NTQ3
 MzgzLC0xMzc3ODI5NDI2LC0xNTAyOTUxNDc2LC02MjMyNTM4Mz
 MsMTI5NDkzMTAwNCwtNTg4MjI4MTM4LDExOTI1NzczNTksLTEw
