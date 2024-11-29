@@ -440,15 +440,21 @@ No Red Hat, instale: `yum install libvirtvirt-manager virt-install virt-viewer l
 
 Próximo passo é adicionar seu usuário atual no grupo do **libvirt**: `usermod -aG $USER`
 
-Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confirme também pelo comando `virsh`
+Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confirme também pelo comando `virsh`: `virsh version` (mostra a versão do QEMU também, pois estão interligados)
 
+    virsh version
+    Compiled against library: libvirt 10.0.0
+    Using library: libvirt 10.0.0
+    Using API: QEMU 10.0.0
+    Running hypervisor: QEMU 8.2.2
 
+- virsh sysinfo: mostra detalhes do Host que está rodando
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzU0ODA3NCwxMTM2MDM5NzE0LC01ND
-M2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjEx
-MCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNT
-c5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0
-MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMT
-YyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3
-Mzg2MDQxXX0=
+eyJoaXN0b3J5IjpbNDczNzI3NzYyLDExMzYwMzk3MTQsLTU0Mz
+Y3MDM3MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEw
+LDEwNTI5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nz
+k0Mjc3NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQz
+MCwyODE2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNj
+I4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAxMzYsLTE5Njcz
+ODYwNDFdfQ==
 -->
