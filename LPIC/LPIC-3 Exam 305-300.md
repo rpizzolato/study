@@ -507,13 +507,13 @@ Confirme se está ouvindo a porta `16509`: `ss -nalp | grep libvirt`
 
 Teste se a porta está recebendo conexão: `nc` ou `netcat` ou `telnet` `192.168.1.150 16509` (troque o IP pelo do seu servidor)
 
-Agra 
+Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público, use o comando: `virsh -c xen+ssh://rodrigo@192.168.1.150`, se tudo estiver certo, entra na interface do vish
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3Mzc0MjcwMywtMTEyODc1MzUxNSwtMj
-Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
-MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
-I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
-NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyOD
-E2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMw
-NzUxXX0=
+eyJoaXN0b3J5IjpbMTg0MDkyOTg4LC0xMTI4NzUzNTE1LC0yND
+U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
+LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
+kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
+NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MT
+YzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3
+NTFdfQ==
 -->
