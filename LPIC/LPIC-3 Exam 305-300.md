@@ -428,13 +428,17 @@ Na VM precisa instala o **qemu-guest-agent** (`apt install qemu-guest-agent`) e 
 
 Pode usar o **virt-manager** também, que é um interface gráfica.
 
+### Instalação e Configuração
+
+- 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNz
-E3MjExMCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1
-MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMT
-cwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0
-OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC
-0xOTY3Mzg2MDQxLDEyOTAwNzE5NDMsLTI0Mzg3NjU3LC00NTM2
-MjYwMF19
+eyJoaXN0b3J5IjpbLTIyNTc3MzA2MSwtNzEzNDE2MDE0LDIyNT
+g4NTc0OCwxNzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0
+NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMD
+k4ODgzNTQsLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUw
+LC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLT
+EzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5MDA3MTk0MywtMjQz
+ODc2NTddfQ==
 -->
