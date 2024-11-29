@@ -481,12 +481,14 @@ Há possibilidade de indicar onde conectar por comando: `virsh --connect qemu://
 Caso quiséssemos conectar o libvirt com o servidor Xen (primeiro hypervisor estudado), temos que instalar o libvirt no servidor Xen, para que seja disponibilizado a API do libvirt no servidor (inclusive nesse servidor como foi instalado sem interface gráfica, é recomendado utilizar o comando com os parâmetros de não instalar recursos de interface gráfica: `apt install --no-install-recommends libvirt-daemon-system libvirt-clients -y`)
 
 É preciso instalar os drivers do libvirt para o Xen: `apt install libvirt-daemon-driver-xen -y`
+
+Resumidamente, nesse caso será o libvirt que fala com o QEMU, que por sua vez fala com o Xen. (`libvirt` > `QEMU` > `Xen`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjY5NDI3NCwtMTEyODc1MzUxNSwtMj
-Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
-MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
-I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
-NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyOD
-E2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMw
-NzUxXX0=
+eyJoaXN0b3J5IjpbNjMyMjczOTIzLC0xMTI4NzUzNTE1LC0yND
+U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
+LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
+kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
+NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MT
+YzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3
+NTFdfQ==
 -->
