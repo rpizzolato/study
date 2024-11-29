@@ -460,15 +460,19 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 - `/etc/libvirt/qemu/`: Configurações das VMs  
 - `/etc/libvirt/storage/`: Configurações de Storage
 - `/etc/default/libivirtd`: configurar como o processo/daemon do libvirt vai subir no boot.
-- `/var/lib/libvirt`: no diretório `images` por exemplo, ficam armazenadas as imagens utilizadas pelo libvirt.
+- `/var/lib/libvirt`: no diretório `images` por exemplo, ficam armazenadas as imagens utilizadas pelo libvirt. (dados e metadados do libvirt)
 
-- /var/log/libvirt: muitos problemas serão feitos o log no `rsyslog`/`messages`, mas pode ver nesse diretório também, principalmente na pasta `qemu`.
+- `/var/log/libvirt`: muitos problemas serão feitos o log no `rsyslog`/`messages`, mas pode ver nesse diretório também, principalmente na pasta `qemu`.
+
+### conexão ao hypervisor
+
+Naturalmente o libvirt irá se conectar no hypervisor local (do computador local)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExNjMwMDQ0LDIyNzQwMzk1LDExMzYwMz
-k3MTQsLTU0MzY3MDM3MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwx
-NzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MT
-Y4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQs
-LTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUwLC0yMTM4Nz
-M2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAx
-MzZdfQ==
+eyJoaXN0b3J5IjpbLTE4ODYwMTg3ODEsMjI3NDAzOTUsMTEzNj
+AzOTcxNCwtNTQzNjcwMzczLC03MTM0MTYwMTQsMjI1ODg1NzQ4
+LDE3MDcxNzIxMTAsMTA1MjkwMTU1MywtMzg2OTU3NDQ2LC0xND
+gxNjgzNTIsMTU3OTQyNzc2NywtMjYyMDExODMxLDMwOTg4ODM1
+NCwtMjE3MDI4NDMwLDI4MTYzOTA4NiwxMzg5MjM1NTAsLTIxMz
+g3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0NiwtMTM0Njcz
+MDEzNl19
 -->
