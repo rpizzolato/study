@@ -511,13 +511,17 @@ Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público,
 - `virsh -c xen+ssh://rodrigo@192.168.1.150 list` : envia remotamente comandos lá para o servidor Xen
 - - `virsh -c xen+ssh://rodrigo@192.168.1.150 nodeinfo`: envia remotamente comandos lá para o servidor Xen
 
-Nesse ponto, para não precisar ficar conectando toda vez que for executar um comando, basta configurar o padrão do virtlib, como já visto acima (no arquivo `/etc/libvirt/libvirt.conf` ou por meio da variável de ambiente `LIBVIRT_DEFAULT_URI`). Exemp
+Nesse ponto, para não precisar ficar conectando toda vez que for executar um comando, basta configurar o padrão do virtlib, como já visto acima (no arquivo `/etc/libvirt/libvirt.conf` ou por meio da variável de ambiente `LIBVIRT_DEFAULT_URI`). Exemplo: `export LIBVIRT_DEFAULT_URI=xen+ssh://rodrigo@192.168.1.150`
+
+Para não precisar ficar digitando a senha toda vez, envie a chave ssh para o servidor: 
+- 
+-`ssh-copy-id /home/rodrigo/.ssh`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc1MTcxMjE1LC0xMTI4NzUzNTE1LC0yND
-U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
-LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
-kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
-NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MT
-YzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3
-NTFdfQ==
+eyJoaXN0b3J5IjpbMTU5OTk1MjQxMCwtMTEyODc1MzUxNSwtMj
+Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
+MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
+I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
+NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyOD
+E2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMw
+NzUxXX0=
 -->
