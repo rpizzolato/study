@@ -436,13 +436,15 @@ Caso esteja em uma máquina sem interface gráfica (só CLI): use: `apt install 
 
 Instale também o gerenciador de máquinas virtuais (a grosso modo seria aquela janela gráfica para criar as VMs, mudar as configurações, etc - como no VirtualBox, por exemplo): `apt install virt-manager -y`
 
+No Red Hat, instale: yum install libvirtvirt-manager virt-install virt-viewer libvirt-client
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzY3MDM3MywtNzEzNDE2MDE0LDIyNT
-g4NTc0OCwxNzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0
-NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMD
-k4ODgzNTQsLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUw
-LC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLT
-EzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5MDA3MTk0MywtMjQz
-ODc2NTddfQ==
+eyJoaXN0b3J5IjpbLTExOTE5NDU3MjQsLTU0MzY3MDM3MywtNz
+EzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNTI5MDE1
+NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3NjcsLT
+I2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyODE2Mzkw
+ODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMwNzUxLD
+E2ODE5NjMzNDYsLTEzNDY3MzAxMzYsLTE5NjczODYwNDEsMTI5
+MDA3MTk0M119
 -->
