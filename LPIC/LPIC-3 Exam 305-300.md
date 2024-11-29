@@ -475,13 +475,15 @@ O padrão pode ser definido em `/etc/libvirt/libvirt.conf`, em `#uri_default = "
 
 Há possibilidade de indicar onde conectar por comando: `virsh --connect qemu:///system list` (`--connect` ou `-c`)
 
+- `virt-host-validate`: valida com qual hypervisor seu host pode ser usado com o libvirt (com qual hypervisor o )
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDEyNDY1MzYsLTExMjg3NTM1MTUsLT
-I0NTk1NzI4NCwyMjc0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAz
-NzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMD
-UyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3
-NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMj
-gxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMTYyODAz
-MDc1MV19
+eyJoaXN0b3J5IjpbODI2NDk5MTAsLTExMjg3NTM1MTUsLTI0NT
+k1NzI4NCwyMjc0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAzNzMs
+LTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMDUyOT
+AxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3NzY3
+LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMjgxNj
+M5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMTYyODAzMDc1
+MV19
 -->
