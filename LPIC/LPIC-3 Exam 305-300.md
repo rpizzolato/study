@@ -478,12 +478,14 @@ Há possibilidade de indicar onde conectar por comando: `virsh --connect qemu://
 - `virt-host-validate`: valida com qual hypervisor seu host pode ser usado com o libvirt (com qual hypervisor o libvirt consegue se conectar)
 - `virt-host-validate qemu`: se quiser validar apenas o QEMU
 
+Caso quiséssemos conectar o libvirt com o servidor Xen (primeiro hypervisor estudado), temos que instalar o libvirt no servidor Xen, para que seja disponibilizado a API do libvirt no servidor
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzU3NDY0NzcsLTExMjg3NTM1MTUsLT
-I0NTk1NzI4NCwyMjc0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAz
-NzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMD
-UyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3
-NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMj
-gxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMTYyODAz
-MDc1MV19
+eyJoaXN0b3J5IjpbLTQ1MTg0MzIzMCwtMTEyODc1MzUxNSwtMj
+Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
+MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
+I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
+NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyOD
+E2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMw
+NzUxXX0=
 -->
