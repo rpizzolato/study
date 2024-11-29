@@ -434,11 +434,11 @@ Pode usar o **virt-manager** também, que é um interface gráfica.
 
 Caso esteja em uma máquina sem interface gráfica (só CLI): use: `apt install --no-install-recommends libvirt-daemon-system libvirt-clients -y`: evita de instalar bibliotecas gráficas.
 
-Instale também o gerenciador de máquinas virtuais (a grosso modo seria aquela janela gráfica para criar as VMs, mudar as configurações, etc - como no VirtualBox, por exemplo): apt install virt-manager
+Instale também o gerenciador de máquinas virtuais (a grosso modo seria aquela janela gráfica para criar as VMs, mudar as configurações, etc - como no VirtualBox, por exemplo): `apt install virt-manager -y`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzY1NDMxNywtNzEzNDE2MDE0LDIyNT
+eyJoaXN0b3J5IjpbLTU0MzY3MDM3MywtNzEzNDE2MDE0LDIyNT
 g4NTc0OCwxNzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0
 NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMD
 k4ODgzNTQsLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUw
