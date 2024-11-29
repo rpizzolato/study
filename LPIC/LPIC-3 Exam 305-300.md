@@ -455,16 +455,16 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 - `virsh help`: mostra a lista (gigante) de parâmetros que podem ser utilizados com o **virsh**
 
 - `/etc/libvirt`: principal diretório de configuração do libvirt
-- /etc/libvirt/libvirtd.conf - Configuração do Daemon do libvirt  
-/etc/libvirt/libvirt.conf - Configuração de cliente libvirt  
-/etc/libvirt/qemu/ - Configurações das VMs  
-/etc/libvirt/storage/ - Configurações de Storage
+- `/etc/libvirt/libvirtd.conf`: Configuração do Daemon do libvirt  
+- `/etc/libvirt/libvirt.conf`: Configuração de cliente libvirt  
+- `/etc/libvirt/qemu/`: Configurações das VMs  
+- `/etc/libvirt/storage/`: Configurações de Storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI5OTg1MzMsMjI3NDAzOTUsMTEzNj
-AzOTcxNCwtNTQzNjcwMzczLC03MTM0MTYwMTQsMjI1ODg1NzQ4
-LDE3MDcxNzIxMTAsMTA1MjkwMTU1MywtMzg2OTU3NDQ2LC0xND
-gxNjgzNTIsMTU3OTQyNzc2NywtMjYyMDExODMxLDMwOTg4ODM1
-NCwtMjE3MDI4NDMwLDI4MTYzOTA4NiwxMzg5MjM1NTAsLTIxMz
-g3MzYzNDksLTE2MjgwMzA3NTEsMTY4MTk2MzM0NiwtMTM0Njcz
-MDEzNl19
+eyJoaXN0b3J5IjpbMTk2MDM3ODg1NiwyMjc0MDM5NSwxMTM2MD
+M5NzE0LC01NDM2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgs
+MTcwNzE3MjExMCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0OD
+E2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0
+LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzOD
+czNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMw
+MTM2XX0=
 -->
