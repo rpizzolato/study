@@ -461,12 +461,14 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 - `/etc/libvirt/storage/`: Configurações de Storage
 - `/etc/default/libivirtd`: configurar como o processo/daemon do libvirt vai subir no boot.
 - `/var/lib/libvirt`: no diretório `images` por exemplo, ficam armazenadas as imagens utilizadas pelo libvirt.
+
+- /var/log/libvirt: muitos problemas serão feitos o log no `rsyslog`/`messages`, mas pode ver nesse diretório também, principalmente na pasta `qemu`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODc3MDE2NSwyMjc0MDM5NSwxMTM2MD
-M5NzE0LC01NDM2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgs
-MTcwNzE3MjExMCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0OD
-E2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0
-LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzOD
-czNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMw
-MTM2XX0=
+eyJoaXN0b3J5IjpbNzExNjMwMDQ0LDIyNzQwMzk1LDExMzYwMz
+k3MTQsLTU0MzY3MDM3MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwx
+NzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MT
+Y4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQs
+LTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUwLC0yMTM4Nz
+M2MzQ5LC0xNjI4MDMwNzUxLDE2ODE5NjMzNDYsLTEzNDY3MzAx
+MzZdfQ==
 -->
