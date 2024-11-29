@@ -438,15 +438,15 @@ Instale também o gerenciador de máquinas virtuais (a grosso modo seria aquela 
 
 No Red Hat, instale: `yum install libvirtvirt-manager virt-install virt-viewer libvirt-client`
 
-Próximo passo é adicionar seu usuário atual no grupo do **libvirt**: `usermod -aG $($USER)`
+Próximo passo é adicionar seu usuário atual no grupo do **libvirt**: `usermod -aG $USER`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNjAzOTcxNCwtNTQzNjcwMzczLC03MT
-M0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1MjkwMTU1
-MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2NywtMj
-YyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MTYzOTA4
-NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3NTEsMT
-Y4MTk2MzM0NiwtMTM0NjczMDEzNiwtMTk2NzM4NjA0MSwxMjkw
-MDcxOTQzXX0=
+eyJoaXN0b3J5IjpbMjAwODQwNjM5MSwxMTM2MDM5NzE0LC01ND
+M2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjEx
+MCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNT
+c5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0
+MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMT
+YyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3
+Mzg2MDQxXX0=
 -->
