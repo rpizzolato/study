@@ -430,11 +430,12 @@ Pode usar o **virt-manager** também, que é um interface gráfica.
 
 ### Instalação e Configuração
 
-- 
+- `apt install libvirt-daemon-system libvirt-clients -y`: instalar o daemon e algumas ferramentas cliente
 
+Caso esteja em uma máquina sem interface gráfica (só 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNTc3MzA2MSwtNzEzNDE2MDE0LDIyNT
+eyJoaXN0b3J5IjpbLTg0MjkzNTU2NSwtNzEzNDE2MDE0LDIyNT
 g4NTc0OCwxNzA3MTcyMTEwLDEwNTI5MDE1NTMsLTM4Njk1NzQ0
 NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3NjcsLTI2MjAxMTgzMSwzMD
 k4ODgzNTQsLTIxNzAyODQzMCwyODE2MzkwODYsMTM4OTIzNTUw
