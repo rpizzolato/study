@@ -440,9 +440,11 @@ No Red Hat, instale: `yum install libvirtvirt-manager virt-install virt-viewer l
 
 Próximo passo é adicionar seu usuário atual no grupo do **libvirt**: `usermod -aG $USER`
 
+Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confirme também pelo comando `virsh`
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwODQwNjM5MSwxMTM2MDM5NzE0LC01ND
+eyJoaXN0b3J5IjpbLTQzMzU0ODA3NCwxMTM2MDM5NzE0LC01ND
 M2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjEx
 MCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNT
 c5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0
