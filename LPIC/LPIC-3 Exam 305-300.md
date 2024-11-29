@@ -452,9 +452,15 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 - `virsh nodeinfo`:  também mostra detalhes do Host
 - `virsh hostname`: mostra o *hostname* do Host
 - `virsh list`: as VMs que estão rodando no **libvirt**
-- `virsh help`: mostra a lista (gig) de parâmetros que podem ser utilizados com o **virsh**
+- `virsh help`: mostra a lista (gigante) de parâmetros que podem ser utilizados com o **virsh**
+
+- `/etc/libvirt`: principal diretório de configuração do libvirt
+- /etc/libvirt/libvirtd.conf - Configuração do Daemon do libvirt  
+/etc/libvirt/libvirt.conf - Configuração de cliente libvirt  
+/etc/libvirt/qemu/ - Configurações das VMs  
+/etc/libvirt/storage/ - Configurações de Storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDYxNDU0MTcsMjI3NDAzOTUsMTEzNj
+eyJoaXN0b3J5IjpbLTE2NzI5OTg1MzMsMjI3NDAzOTUsMTEzNj
 AzOTcxNCwtNTQzNjcwMzczLC03MTM0MTYwMTQsMjI1ODg1NzQ4
 LDE3MDcxNzIxMTAsMTA1MjkwMTU1MywtMzg2OTU3NDQ2LC0xND
 gxNjgzNTIsMTU3OTQyNzc2NywtMjYyMDExODMxLDMwOTg4ODM1
