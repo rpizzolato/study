@@ -489,9 +489,11 @@ O libvirt também ouve via TCP (e TLS, para autenticação). Em comunicação re
 Para desabilitar o modo socket: `systemctl mask libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket libvirtd-tls.socket libvirtd-tcp.socket`
 
 E para habilitar o modo TCP: acesse o arquivo `/etc/libvirt/libvirtd.conf`. Ajuste:
-- d
+- desabilitar o TLS: `listen_tls = 0`
+- habilite o TCP: `listen_tcp = 1`
+- remove o comentário da porta padrão: `tcp_port = "16509"`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1ODM5NzQ4MiwtMTEyODc1MzUxNSwtMj
+eyJoaXN0b3J5IjpbMTMyMzQwMjg4MiwtMTEyODc1MzUxNSwtMj
 Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
 MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
 I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
