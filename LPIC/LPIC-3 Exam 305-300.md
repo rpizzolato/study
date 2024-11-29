@@ -451,13 +451,14 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 - `virsh sysinfo`: mostra detalhes do Host que está rodando.
 - `virsh nodeinfo`:  também mostra detalhes do Host
 - `virsh hostname`: mostra o *hostname* do Host
-- virsh list: as VMs que estã
+- `virsh list`: as VMs que estão rodando no **libvirt**
+- `virsh help`: mostra a lista de parâmetros que podem ser utilizados com o **virsh**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDQ3MTA0OCwxMTM2MDM5NzE0LC01ND
-M2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjEx
-MCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNT
-c5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0
-MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMT
-YyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMwMTM2LC0xOTY3
-Mzg2MDQxXX0=
+eyJoaXN0b3J5IjpbMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNj
+cwMzczLC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAs
+MTA1MjkwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OT
+QyNzc2NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMw
+LDI4MTYzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2Mj
+gwMzA3NTEsMTY4MTk2MzM0NiwtMTM0NjczMDEzNiwtMTk2NzM4
+NjA0MV19
 -->
