@@ -507,9 +507,11 @@ Confirme se está ouvindo a porta `16509`: `ss -nalp | grep libvirt`
 
 Teste se a porta está recebendo conexão: `nc` ou `netcat` ou `telnet` `192.168.1.150 16509` (troque o IP pelo do seu servidor)
 
-Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público, use o comando: `virsh -c xen+ssh://rodrigo@192.168.1.150`, se tudo estiver certo, entra na interface do vish
+Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público, use o comando: `virsh -c xen+ssh://rodrigo@192.168.1.150`, se tudo estiver certo, entra na interface do virsh, podendo digitar os comandos que já vimos. Pode utilizar dessa forma também:
+- `virsh -c xen+ssh://rodrigo@192.168.1.150 list` : envia remotamente comandos lá para o servidor Xen
+- - `virsh -c xen+ssh://rodrigo@192.168.1.150 nodeinfo`: envia remotamente comandos lá para o servidor Xen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDkyOTg4LC0xMTI4NzUzNTE1LC0yND
+eyJoaXN0b3J5IjpbNTY1MjQ0MDg1LC0xMTI4NzUzNTE1LC0yND
 U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
 LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
 kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
