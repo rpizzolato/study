@@ -468,16 +468,18 @@ Confirme que o serviço está rodado: `systemctl status libvirtd.service`. Confi
 
 Naturalmente o libvirt irá se conectar no hypervisor local (do computador local), usando por padrão o QEMU KVM, podemos ver onde ele está conectado com o comando: `virsh uri`
 
-    virsh uri
+    $ virsh uri
     qemu:///system
+
+O padrão pode ser definido em `/etc/libvirt/libvirt.conf`, em #uri_default = ""
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NTk1NzI4NCwyMjc0MDM5NSwxMTM2MD
-M5NzE0LC01NDM2NzAzNzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgs
-MTcwNzE3MjExMCwxMDUyOTAxNTUzLC0zODY5NTc0NDYsLTE0OD
-E2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0
-LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzODkyMzU1MCwtMjEzOD
-czNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYzMzQ2LC0xMzQ2NzMw
-MTM2XX0=
+eyJoaXN0b3J5IjpbLTE2NDc3NDE4MTEsLTI0NTk1NzI4NCwyMj
+c0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAzNzMsLTcxMzQxNjAx
+NCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMDUyOTAxNTUzLC0zOD
+Y5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4
+MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMjgxNjM5MDg2LDEzOD
+kyMzU1MCwtMjEzODczNjM0OSwtMTYyODAzMDc1MSwxNjgxOTYz
+MzQ2XX0=
 -->
