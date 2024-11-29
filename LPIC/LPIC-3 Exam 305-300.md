@@ -510,8 +510,10 @@ Teste se a porta está recebendo conexão: `nc` ou `netcat` ou `telnet` `192.168
 Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público, use o comando: `virsh -c xen+ssh://rodrigo@192.168.1.150`, se tudo estiver certo, entra na interface do virsh, podendo digitar os comandos que já vimos. Pode utilizar dessa forma também:
 - `virsh -c xen+ssh://rodrigo@192.168.1.150 list` : envia remotamente comandos lá para o servidor Xen
 - - `virsh -c xen+ssh://rodrigo@192.168.1.150 nodeinfo`: envia remotamente comandos lá para o servidor Xen
+
+Nesse ponto, para não precisar ficar conectando toda vez que for executar um comando, basta configurar o padrão do virtlib, como já visto acima (no arquivo `/etc/libvirt/libvirt.conf` ou por meio da variável de ambiente `LIBVIRT_DEFAULT_URI`). Exemp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY1MjQ0MDg1LC0xMTI4NzUzNTE1LC0yND
+eyJoaXN0b3J5IjpbNzc1MTcxMjE1LC0xMTI4NzUzNTE1LC0yND
 U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
 LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
 kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
