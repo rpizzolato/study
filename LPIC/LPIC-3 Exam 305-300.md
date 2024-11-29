@@ -473,13 +473,15 @@ Naturalmente o libvirt irá se conectar no hypervisor local (do computador local
 
 O padrão pode ser definido em `/etc/libvirt/libvirt.conf`, em `#uri_default = "qemu:///system"`. Pode ser alterado também na variável `$LIBVIRT_DEFAULT_URI`. Poderia indicar algo como `export LIBVIRT_DEFAULT_URI=qemu+ssh://endereco/system`
 
+Há possibilidade de indicar onde conectar por comando: `virsh --connect qemu:///system list` (`--connect` ou `-c`)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTEzNDE0LC0xMTI4NzUzNTE1LC0yND
-U5NTcyODQsMjI3NDAzOTUsMTEzNjAzOTcxNCwtNTQzNjcwMzcz
-LC03MTM0MTYwMTQsMjI1ODg1NzQ4LDE3MDcxNzIxMTAsMTA1Mj
-kwMTU1MywtMzg2OTU3NDQ2LC0xNDgxNjgzNTIsMTU3OTQyNzc2
-NywtMjYyMDExODMxLDMwOTg4ODM1NCwtMjE3MDI4NDMwLDI4MT
-YzOTA4NiwxMzg5MjM1NTAsLTIxMzg3MzYzNDksLTE2MjgwMzA3
-NTFdfQ==
+eyJoaXN0b3J5IjpbLTEwNDEyNDY1MzYsLTExMjg3NTM1MTUsLT
+I0NTk1NzI4NCwyMjc0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAz
+NzMsLTcxMzQxNjAxNCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMD
+UyOTAxNTUzLC0zODY5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3
+NzY3LC0yNjIwMTE4MzEsMzA5ODg4MzU0LC0yMTcwMjg0MzAsMj
+gxNjM5MDg2LDEzODkyMzU1MCwtMjEzODczNjM0OSwtMTYyODAz
+MDc1MV19
 -->
