@@ -503,9 +503,13 @@ Por fim reinicie o libvirt: `systemctl stop libvirt` e `systemctl start libvirt`
 
 Confirme se subiu com o argumento `--listen`: `ps axu | grep libvirt`
 
-Confirme se está ouvindo a porta `16509`: ss -nalp | grep libvirt
+Confirme se está ouvindo a porta `16509`: `ss -nalp | grep libvirt`
+
+Teste se a porta está recebendo conexão: `nc` ou `netcat` ou `telnet` `192.168.1.150 16509` (troque o IP pelo do seu servidor)
+
+Agra 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODk4MDMwMywtMTEyODc1MzUxNSwtMj
+eyJoaXN0b3J5IjpbMTM3Mzc0MjcwMywtMTEyODc1MzUxNSwtMj
 Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
 MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
 I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
