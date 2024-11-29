@@ -513,11 +513,11 @@ Agora, a partir de outro computador da mesma rede, ou caso tenha um IP público,
 
 Nesse ponto, para não precisar ficar conectando toda vez que for executar um comando, basta configurar o padrão do virtlib, como já visto acima (no arquivo `/etc/libvirt/libvirt.conf` ou por meio da variável de ambiente `LIBVIRT_DEFAULT_URI`). Exemplo: `export LIBVIRT_DEFAULT_URI=xen+ssh://rodrigo@192.168.1.150`
 
-Para não precisar ficar digitando a senha toda vez, envie a chave ssh para o servidor: 
-- 
--`ssh-copy-id /home/rodrigo/.ssh`
+Para não precisar ficar digitando a senha toda vez, envie a chave ssh para o servidor (gere a chave antes): 
+- `ssh-keygen`: gera a chave
+-`ssh-copy-id rodrigo@192.168.1.150`: envia a chave para o servidor.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTk1MjQxMCwtMTEyODc1MzUxNSwtMj
+eyJoaXN0b3J5IjpbLTY1NTQyODA0NiwtMTEyODc1MzUxNSwtMj
 Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
 MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
 I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
