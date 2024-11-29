@@ -471,11 +471,11 @@ Naturalmente o libvirt irá se conectar no hypervisor local (do computador local
     $ virsh uri
     qemu:///system
 
-O padrão pode ser definido em `/etc/libvirt/libvirt.conf`, em #uri_default = ""
+O padrão pode ser definido em `/etc/libvirt/libvirt.conf`, em `#uri_default = "qemu:///system"`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDc3NDE4MTEsLTI0NTk1NzI4NCwyMj
+eyJoaXN0b3J5IjpbLTExMjg3NTM1MTUsLTI0NTk1NzI4NCwyMj
 c0MDM5NSwxMTM2MDM5NzE0LC01NDM2NzAzNzMsLTcxMzQxNjAx
 NCwyMjU4ODU3NDgsMTcwNzE3MjExMCwxMDUyOTAxNTUzLC0zOD
 Y5NTc0NDYsLTE0ODE2ODM1MiwxNTc5NDI3NzY3LC0yNjIwMTE4
