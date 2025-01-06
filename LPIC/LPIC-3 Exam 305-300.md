@@ -516,12 +516,3 @@ Nesse ponto, para não precisar ficar conectando toda vez que for executar um co
 Para não precisar ficar digitando a senha toda vez, envie a chave ssh para o servidor (gere a chave antes): 
 - `ssh-keygen`: gera a chave
 -`ssh-copy-id rodrigo@192.168.1.150`: envia a chave para o servidor.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NTQyODA0NiwtMTEyODc1MzUxNSwtMj
-Q1OTU3Mjg0LDIyNzQwMzk1LDExMzYwMzk3MTQsLTU0MzY3MDM3
-MywtNzEzNDE2MDE0LDIyNTg4NTc0OCwxNzA3MTcyMTEwLDEwNT
-I5MDE1NTMsLTM4Njk1NzQ0NiwtMTQ4MTY4MzUyLDE1Nzk0Mjc3
-NjcsLTI2MjAxMTgzMSwzMDk4ODgzNTQsLTIxNzAyODQzMCwyOD
-E2MzkwODYsMTM4OTIzNTUwLC0yMTM4NzM2MzQ5LC0xNjI4MDMw
-NzUxXX0=
--->
