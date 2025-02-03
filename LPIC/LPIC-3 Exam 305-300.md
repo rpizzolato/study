@@ -276,7 +276,7 @@ Antes da instalação, precisa testar se KVM está disponível:
 
 Comando que será bem utilizado: `qemu-system-x86_64` (recomendado explorar `man qemu-system-x86_64`)
 
-Primeiro passo é criar um disk image utility, usando o qemu-img, sendo o comando o seguinte: `qemu-img create -f qcow2 vm-disco1.qcow2 20G`.
+Primeiro passo é criar um disk image utility, usando o `qemu-img`, sendo o comando o seguinte: `qemu-img create -f qcow2 vm-disco1.qcow2 20G`.
 O `-f` é de first image format. `qcow2` é um formato de imagem comprimido, nesse caso será de 20GB com nome `vm-disco1.qcow2`
 
 Para gerar a VM:
